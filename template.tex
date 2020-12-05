@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sets the document class for the document
 % Openany is added to remove the book style of starting every new chapter on an odd page (not needed for reports)
-\documentclass[12pt,italian,openany,a4paper]{book}
+\documentclass[12pt,italian,a4paper]{article}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Loading packages that alter the style
 \usepackage[]{graphicx}
 \usepackage[]{color}
@@ -97,7 +97,7 @@ version={4.0},
 \graphicspath{ {figures/} }
 
 % Separates the first part of the report/thesis in Roman numerals
-\frontmatter
+%\frontmatter
 \patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}{}
 % Uncomment to stop the new chapter start at a new page
 %\usepackage{etoolbox}
@@ -149,5 +149,6 @@ version={4.0},
 	\newpage
 	
 	\pagenumbering{arabic}
+	\section{•}
 
 \end{document}
