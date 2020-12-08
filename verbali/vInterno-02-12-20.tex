@@ -93,7 +93,7 @@ version={4.0},
 % tcolorbox; Notice! add "-shell-escape" to the compile command
 \usepackage{tcolorbox}
 
-% If multiple images are to be added, a folder (path) with all the images can be added here 
+% If multiple images are to be added, a folder (path) with all the images can be added here
 \graphicspath{ {figures/} }
 
 % Separates the first part of the report/thesis in Roman numerals
@@ -107,46 +107,78 @@ version={4.0},
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Starts the document
 \begin{document}
-	
+
 	%%% Selects the language to be used for the first couple of pages
 	\selectlanguage{italian}
-	
+
 	%%%%% Adds the title page
 	\begin{titlepage}
 		\clearpage\thispagestyle{empty}
 		\centering
 		\vspace{1cm}
-		
+
 		% Titles
 		% Information about the University
 		{\
 			\textsc{Ingegneria del Software - Università degli Studi di Padova}
 		}
 		\vspace{2.5cm}
-		
+
 		% INSERIRE QUI TITOLO DOCUMENTO
 		\rule{\linewidth}{2mm} \\[0.8cm]
-		{ \LARGE \sc Template Documenti}\\[0.55cm]
+		{ \LARGE \sc Verbale Interno - 2 dicembre 2020}\\[0.55cm]
 		\rule{\linewidth}{0.6mm} \\[3.4cm]
-		
+
 		\hspace{2cm}
 		% aggiungere i campi necessari per ogni documento
 		\begin{tabular}{l p{5cm}}
 			\textbf{Gruppo} & SWException \\[10pt]
 			\textbf{Studenti} & Marco Canovese \\ & Nicole Davanzo \\ & Ivan Furlan \\ & Gianmarco Guazzo \\ & Stefano Lazzaroni \\ & Francesco Trolese \\ & Michele Veronesi \\[10pt]
 			\textbf{Email} & \texttt{swexception@outlook.com} \\[10pt]
-			\textbf{Data} & \today \\            
+			\textbf{Data} & \today \\
+			\textbf{Redattore} & Marco Canovese
 		\end{tabular}
-		
-		
+
+
 		\vfill
-		\centering \includegraphics[scale=0.18]{logo.jpg}
+		\centering \includegraphics[scale=0.17]{logo.jpg}
 	\end{titlepage}
-	\tableofcontents
-	
+	%\tableofcontents
+
 	\newpage
-	
+
 	\pagenumbering{arabic}
-	
+
+	\section*{Ordine del giorno}
+	In data 2 dicembre 2020 si è tenuta in videoconferenza una riunione con tutti i componenti del gruppo, l'ordine del giorno è stato il seguente:
+	\begin{enumerate}
+		\item Decisioni concernenti l'identità del gruppo
+		\item Analisi dei capitolati proposti, opinioni personali e criticità rilevate
+		\item Discussione relativamente alla documentazione da produrre per RR
+		\item Tecnologie ed applicativi per la produzione e gestione della documentazione di progetto
+		\item Decisioni in merito alle metodologie di versionamento
+	\end{enumerate}
+
+	\section*{Punto 1}
+	A seguito della discussione avvenuta informalmente tra i membri del gruppo si approva all’unanimità il nome del gruppo proposto da Michele Veronesi ovvero SWExeception. Nicole Davanzo si propone spontaneamente per realizzare un logo distintivo del gruppo, le proposte grafiche saranno valutate nella successiva seduta.
+	In ottemperanza a quanto previsto dal regolamento del progetto didattico è stato attivato un account email: swexception@outlook.com da utilizzare per le comunicazioni con i proponenti e comittenti
+
+	\section*{Punto 2}
+    E’ stata effettuato nuovamente un rapido brain storming sulla base delle informazioni raccolte relativamente ai tre capitolati che maggiormente si avvicinano agli interessi del gruppo alla luce anche dei seminari tecnici frequentati.
+    Si è deliberato per iniziare l’attività di analisi dei requisiti di tutti i capitolati proposti al fine di poterli valutare più oggettivamente, tale attività dovrà essere completata entro il 13 Dicembre 2020 sulla base della suddivisione dei capitolati
+
+	\section*{Punto 3}
+	Dopo aver nuovamente preso visione e comprensione del regolaemnto del progetto è stato effettuato un riepilogo della documentazione da produrre entro il giorno 11/01/2021. Si fissa in Lunedì 7/12/2020 il termine ultimo per l’approfondimento individuale della documentazione da produrre con particolare attenzione al contenuto della stessa con particolare attenzione al documento ”Norme di Progetto”
+
+	\section*{Punto 4}
+
+    Si `e deliberato di adottare il linguaggio di markup LaTeX per la stesura della documentazione di progetto. Michele Veronesi ha relazionato i membri del gruppo relativamente alle possibili soluzioni tecniche da adottare per redarre e versionare la documentazione. Tutti hanno accolto positivamente la scelta di adottare un’unica repository dedicata alla documentazione a cui connettere l’applicativo overleaf per effettuare il merge dei documenti e produrre la versione definitiva.
+
+	\section*{Punto 5}
+    E’ stato configurato un profilo dedicato al gruppo sulla piattaforma di versionamento GitHub a cui sono stati collegati gli account dei componenti del gruppo. E’ stato deciso di adottare l’approccio GitFlow rimandando eventuali altri decisioni specifiche durante la stesura del documento contenente le norme di progetto.
+
+
+	\section*{Conclusioni}
+	Viene convocato un nuovo incontro il 7/12/2020 al fine di condividere opinioni personali alla luce degli approfondimenti sulle norme di progetto.
 
 \end{document}
