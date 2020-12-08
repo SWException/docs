@@ -1,2 +1,48 @@
 \section{Studio C2}
-Scrivere qui
+Il capitolato C2 è stato presentato dall'azienda RebBabel localizzata ad Amsterdam - Paesi Bassi. Quest'ultima si occupa di consulenza ad altre start-up e sviluppo agile di applicativi web, operando in Italia e ad Amsterdam.\\
+Si tratta del capitolato scelto dal gruppo \verb|SWException|.
+
+\subsection{Informazioni generali}
+\begin{itemize}
+	\item \textbf{Nome:} EmporioLambda - piattaforma di e-commerce in stile Serverless
+	\item \textbf{Proponente$_G$:} RedBabel
+	\item \textbf{Committente$_G$:} Prof. Tullio Vardanega e Prof. Riccardo Cardin
+\end{itemize}
+
+\subsection{Descrizione del capitolato}
+L'applicazione da sviluppare consiste in una piattaforma serverless composta da microservizi, la quale implementa un template per siti e-commerce basata sui servizi AWS.\\
+In particolare ci sono 4 moduli di alto livello:
+\begin{itemize}
+	\item EML-FE$_G$: è il componente per il front-end del sito, sviluppato usando la libreria \verb|Next.js| con il linguaggio \verb|Typescript|.
+	\item EML-BE$_G$: è il componente per la parte di back-end della piattaforma, usa lo stesso linguaggio del modulo precedente basandosi sui servizi \verb|AWS Lambda|.
+	\item EML-I$_G$: è il modulo per l'integrazione dei servizi di terze parti, utili ad esempio per le operazioni di pagamento e per l'autenticazione degli utenti. Questo deve essere sviluppato tramite il framework \textit{Serverless} nello stesso linguaggio degli altri due.
+	\item EML-MON$_G$: modulo per il monitoraggio del sistema da parte dell'amministratore$_G$. I proponenti suggeriscono di implementarlo con \verb|Amazon CloudWatch|.
+\end{itemize}
+
+\subsection{Finalità del progetto}
+L'obiettivo prefissato dall'azienda proponente è quello di avere un prodotto per provare la produttività delle tecnologie coinvolte, in particolare l'architettura appena menzionata. Per farlo, viene richiesto di realizzare un prototipo del prodotto finale, quindi specializzare la piattaforma creata per un caso d'uso specifico a scelta.
+
+\subsection{Tecnologie interessate}
+Le tecnologie richieste dal proponente per la realizzazione del prodotto finale sono le seguenti:
+\begin{itemize}
+	\item \verb|AWS Lambda|: sistema Amazon che funge come Function-as-a-Service (FaaS) per la realizzazione della parte di back-end, il quale esegue codice sorgente in container gestiti e temporanei (che esistono per una singola invocazione).
+	\item \verb|Serverless framework|: si tratta di un framework web open-source scritto con \verb|Node.js|. Si basa sulla tecnologia \verb|CloudFormation| quando si esegue il deploy nei servizi AWS.
+	\item \verb|Amazon Cognito - Auth0|: sono due servizi che forniscono autenticazione con credenziali di terze parti, ad esempio quelle usate per i servizi Google.
+	\item \verb|Amazon CloudWatch|: piattaforma di monitoraggio dei servizi AWS in real-time.
+	\item \verb|TypeScript|: linguaggio di programmazione web basato su \verb|JavaScript|.
+\end{itemize}
+
+\subsection{Aspetti positivi}
+Il principale aspetto positivo del progetto è l'apprendimento dell'architettura serverless a microservizi per piattaforme web, la quale è molto innovativa e sempre più adottata oggi giorno rispetto alla tradizionale client-server.\\
+Un altro vantaggio è la possibilità di avere rapporti con un proponente di carattere Europeo, con contatti ancheal di fuori del territorio locale padovano.\\\\
+Il software che andrà rilasciato avrà applicata la licenza open-source MIT, quindi ogni membro del progetto avrà l'occasione di contribuire ad un vero e proprio progetto open-source.\\\\
+Altro cavallo di battaglia del capitolato è la chiarezza dell'esposizione dei requisiti e delle tecnologie da adottare, oltre che alla disponibilità dei proponenti a mantenere un dialogo continuo riguardo le varie attività del progetto tramite una modalità di comunicazione agile.
+
+\subsection{Criticità e fattori di rischio}
+Il maggiore aspetto positivo è anche il fattore di rischio più grande, in quanto l'intero gruppo non è familiare con nessuna delle tecnologie coinvolte, tantomento con l'architettura desiderata dal proponente.\\
+Tuttavia questa criticità è attenuata dalla disponibilità al dialogo del proponente.
+
+\subsection{Conclusioni}
+Il capitolato in questione ha attirato l'attenzione di tutti i componenti del gruppo solamente dopo un'attenta analisi dello stesso, vista la complessità di un'architettura sconosciuta. È stata acquisita una visione generale del problema più chiara, di conseguenza la decisione finale è venuta da sé.
+
+\newpage
