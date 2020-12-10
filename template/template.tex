@@ -7,6 +7,7 @@
 \usepackage{alltt}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{longtable}
 
 % Math
 \usepackage{amsmath}
@@ -120,7 +121,8 @@ version={4.0},
 		% Titles
 		% Information about the University
 		{\
-			\textsc{Ingegneria del Software - Università degli Studi di Padova}
+			\t
+extsc{Ingegneria del Software - Università degli Studi di Padova}
 		}
 		\vspace{2.5cm}
 		
@@ -142,11 +144,32 @@ version={4.0},
 		\vfill
 		\centering \includegraphics[scale=0.18]{logo.jpg}
 	\end{titlepage}
+	
+	\section*{Registro delle modifiche}
+
+\begin{center}
+	\begin{longtable}{|c|p{3.5cm}|c|p{3cm}|p{3cm}|}
+	\hline
+	\textbf{Versione} & \textbf{Descrizione} & \textbf{Data} & \textbf{Autore} & \textbf{Ruolo} \\
+	\hline
+	\endfirsthead
+
+	% ----- Modificare da qui -----
+	Num. Ver. & Attività svolta & YYYY-MM-DD & Nome Autore & Ruolo Ricoperto \\
+	\hline
+
+	\end{longtable}
+\end{center}
+
+	
+	
 	\tableofcontents
 	
 	\newpage
 	
 	\pagenumbering{arabic}
+	
+	
 	
 
 \end{document}
