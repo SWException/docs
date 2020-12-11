@@ -12,17 +12,11 @@
 
 % --------------
 
-\newcommand{\docNome}{ NOME DOCUMENTO }
+\newcommand{\docNome}{ Verbale Interno/ Esterno }
 \newcommand{\docVersione}{0.0.1}
-\newcommand{\docNomeProgetto}{ NOME PROGETTO }
+\newcommand{\docNomeProgetto}{ 01 gennaio 1970 }
 \newcommand{\docStatus}{in redazione}
 \newcommand{\docUso}{interno}
-\newcommand{\docDescrizione}{
-    \begin{center}
-    Breve descrizione del documento
-    \end{center}
-
-}
 
 % --------------
 
@@ -79,14 +73,18 @@
 \pagenumbering{arabic}
 \include{res/registro}
 
-\tableofcontents
 
 % Contenuto
 
 \newpage
-\input{res/sezioni}
+\input{res/contenuto}
 
 
+
+% Registro Decisioni
+
+\newpage
+\input{res/tracciamenti}
 
 \end{document}
 
