@@ -12,29 +12,22 @@
 
 % --------------
 
-\newcommand{\docNome}{ NOME DOCUMENTO }
+\newcommand{\docNome}{ Verbale Interno del 2020-12-07 }
 \newcommand{\docVersione}{0.0.1}
-\newcommand{\docNomeProgetto}{ NOME PROGETTO }
+\newcommand{\docNomeProgetto}{ 7 dicembre 2020 }
 \newcommand{\docStatus}{in redazione}
 \newcommand{\docUso}{interno}
-\newcommand{\docDescrizione}{
-    \begin{center}
-    Breve descrizione del documento
-    \end{center}
-}
 
 % --------------
 
 \newcommand{\docRedattori}{
-	nome cognome \\&
-    nome cognome
+	Michele Veronesi
 }
 \newcommand{\docVerificatori}{
-	nome cognome \\&
-    nome cognome
+	TODO
 }
 \newcommand{\docApprovazione}{
-    nome cognome
+    TODO
 }
 
 \newcommand{\nomeCorso}{
@@ -49,13 +42,13 @@
 
 \documentclass[11pt,a4paper,table]{article}
 
-\input{res/configurazione}
+\input{res/configurazione}    
 
 % ---------------------------
 % Dati frontespizio
 % ---------------------------
 
-\title{ \hr \huge \textsc{\docNome} \\
+\title{ \hr \huge \textsc{\docNome} \\ 
         \vspace{11pt} \large \textsc{\docNomeProgetto} \hr}
 
 \author{} % Non toccare
@@ -65,7 +58,7 @@
 % Composizione del documento
 % ---------------------------
 
-\begin{document}
+\begin{document} 
 
 % Frontespizio
 
@@ -78,14 +71,18 @@
 \pagenumbering{arabic}
 \include{res/registro}
 
-\tableofcontents
 
 % Contenuto
 
 \newpage
-\input{res/sezioni}
+\input{res/contenuto}
 
 
+
+% Registro Decisioni
+
+\newpage
+\input{res/tracciamenti}
 
 \end{document}
 
