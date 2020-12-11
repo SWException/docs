@@ -12,21 +12,19 @@
 
 % --------------
 
-\newcommand{\docNome}{ NOME DEL DOCUMENTO }
-\newcommand{\docNomeProgetto}{ NOME DEL PROGETTO }
-\newcommand{\docVersione}{0.0.0}
-\newcommand{\docStatus}{in redazione / approvato}
-\newcommand{\docUso}{interno / esterno}
+\newcommand{\docNome}{ NOME DOCUMENTO }
+\newcommand{\docVersione}{0.0.1}
+\newcommand{\docNomeProgetto}{ NOME PROGETTO }
+\newcommand{\docStatus}{in redazione}
+\newcommand{\docUso}{interno}
 \newcommand{\docDescrizione}{
-	Breve descrizione del documento
+    \begin{center}
+    Breve descrizione del documento
+    \end{center}
 }
 
 % --------------
 
-\newcommand{\docDestinatari}{
-	nome cognome \\&
-    nome cognome
-}
 \newcommand{\docRedattori}{
 	nome cognome \\&
     nome cognome
@@ -37,6 +35,10 @@
 }
 \newcommand{\docApprovazione}{
     nome cognome
+}
+
+\newcommand{\nomeCorso}{
+    Ingegneria del Software - Università degli Studi di Padova
 }
 
 % ----- NON MODIFICARE SOTTO QUESTA RIGA -----
@@ -53,7 +55,7 @@
 % Dati frontespizio
 % ---------------------------
 
-\title{\hr \huge \textsc{\docNome} \\ 
+\title{ \hr \huge \textsc{\docNome} \\ 
         \vspace{11pt} \large \textsc{\docNomeProgetto} \hr}
 
 \author{} % Non toccare
@@ -68,25 +70,22 @@
 % Frontespizio
 
 \pagenumbering{gobble}
-\DeactivateBG
 \include{res/frontespizio}
 
 % Registro delle modifiche
 
 \newpage
-\ActivateBG
 \pagenumbering{arabic}
 \include{res/registro}
 
-% Tabella dei contenuti
-
-\newpage
 \tableofcontents
 
-% Sezioni
+% Contenuto
 
 \newpage
 \input{res/sezioni}
+
+
 
 \end{document}
 
