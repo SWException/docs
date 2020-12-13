@@ -1,0 +1,54 @@
+\subsection{Gestione della configurazione}
+\subsubsection{Scopo}
+L'obiettivo del processo è quello di regolare la produzione di documenti e codice sorgente.
+Dal momento che la documentazione viene scritta in \LaTeX, come descritto nella sezione relativa
+alla documentazione, quest'ultima può essere gestita con alcuni degli strumenti con
+cui viene gestito il codice sorgente.
+
+\subsubsection{Descrizione}
+Tale processo descrive tutti gli strumenti utilizzati per la produzione di documenti, codice e diagrammi,
+oltre che le modalità di versionamento e coordinamento del gruppo.
+
+\subsubsection{Aspettative}
+I risultati attesi da questo processo sono:
+\begin{itemize}
+    \item sistematizzare la produzione di codice e documentazione
+    \item rendere uniforme l'utilizzo degli strumenti di versionamento coinvolti nel progetto
+    \item classificare i prodotti dei vari processi implementati
+\end{itemize}
+
+\subsubsection{Versionamento}
+\paragraph{Codice di versione per documenti e software}
+Il numero di versione di ogni componente del prodotto e di ogni documento è definito nel seguente formato:
+\begin{center}
+    \textbf{X.Y.Z}
+\end{center}
+dove
+\begin{itemize}
+    \item \textbf{X} indica il numero di versione approvato dal \glock{Responsabile di Progetto}. Inizialmente è a 0.
+    \item \textbf{Y} indica il numero di versione approvato dai \glock{Verificatori}. Inizialmente a 0 e riparte ad ogni
+                       incremento di \textbf{X}.
+    \item \textbf{Z} è il numero che identifica la versione in redazione. Viene quindi incrementato dai redattori
+                       ad ogni aggiunta/modifica. Inizialmente a 0 e riparte ad ogni incremento di \textbf{Z}
+\end{itemize}
+
+\paragraph{Tecnologie coinvolte}
+Per il processo di versionamento ci si affiderà al software \glock{Git} offerto come servizio dalla piattaforma \glock{GitHub}.\\
+In particolare, è stata creata un'organizzazione su tale piattaforma con il nome \verb|SWException| in cui tutti i membri del gruppo
+hanno il medesimo accesso in scrittura e lettura per tutte le repository esistenti.\\
+Per il versionamento della documentazione viene usata una repository dal nome \verb|swe-docs|, in cui vengono riposti tutti i
+documenti creati durante lo svolgimento del progetto didattico.\\
+Successivamente, visto che si andrà a creare un'applicazione a \glock{microservizi}, e dunque composta da parti fortemente indipendenti,
+verrà creata una repository per ogni modulo del prodotto.
+
+\paragraph{Struttura delle repository}
+Il lavoro in tutte le repository dovrà rispettare il \glock{GitFlow}, con o senza apposito plugin. In particolare saranno presenti i
+seguenti branch:
+\begin{itemize}
+    \item \textbf{master:} utilizzato per ospitare le versioni di rilascio. In questo ramo dovrà esserci sempre una versione del prodotto utilizzabile
+                           e pronto ad essere rilasciato in \glock{ambiente di produzione}.
+    \item \textbf{develop:} questo è il ramo utilizzato per le operazioni di sviluppo. In particolare qui convergeranno i vari \verb|feature-branch|
+                            utilizzati per la creazione delle funzionalità del modulo in oggetto. In questo ramo deve essere presente sempre e solo codice
+                            compilabile.
+    \item \textbf{feature/nome-feature:} per la creazione di ogni feature da parte dei vari membri addetti. In questi rami 
+\end{itemize}
