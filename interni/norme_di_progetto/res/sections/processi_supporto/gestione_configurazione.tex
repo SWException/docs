@@ -42,13 +42,33 @@ Successivamente, visto che si andrà a creare un'applicazione a \glock{microserv
 verrà creata una repository per ogni modulo del prodotto.
 
 \paragraph{Struttura delle repository}
-Il lavoro in tutte le repository dovrà rispettare il \glock{GitFlow}, con o senza apposito plugin. In particolare saranno presenti i
-seguenti branch:
+Ogni membro del gruppo, in tutte le repository, dovrà attenersi alle convenzioni del \glock{GitFlow}, con o senza apposito plugin a discrezione dei singoli membri.
+In particolare saranno presenti i seguenti branch:
 \begin{itemize}
     \item \textbf{master:} utilizzato per ospitare le versioni di rilascio. In questo ramo dovrà esserci sempre una versione del prodotto utilizzabile
-                           e pronto ad essere rilasciato in \glock{ambiente di produzione}.
+                           e pronto ad essere rilasciato in \glock{ambiente di produzione}. E' fatto divieto a tutti i membri del gruppo di effettuare \verb|commit|
+                           direttamente su questo ramo, tutte le modifiche dovranno seguire il percorso previsto di GitFlow.
     \item \textbf{develop:} questo è il ramo utilizzato per le operazioni di sviluppo. In particolare qui convergeranno i vari \verb|feature-branch|
                             utilizzati per la creazione delle funzionalità del modulo in oggetto. In questo ramo deve essere presente sempre e solo codice
-                            compilabile.
-    \item \textbf{feature/nome-feature:} per la creazione di ogni feature da parte dei vari membri addetti. In questi rami 
+                            compilabile e feature complete.
+    \item \textbf{feature/nome-feature:} per la creazione di ogni feature da parte dei vari membri addetti. In questi rami le feature possono anche essere
+                                         incomplete e/o non funzionanti. Una volta completata la funzionalità il ramo deve essere chiuso sia in locale che in remoto e 
+                                         convergere in develop.
+    \item \textbf{release/versione[X.Y.Z]:} ramo contenente la versione \glock{candidate-release} pronta per essere approvata dal \textit{Responsabile di Progetto} dopo
+                                            aver passato tutte le verifiche. Una volta approvata il branch deve terminare sia in locale che in remoto, convergendo in master e in develop.
+                                            Contestualmente nel branch master deve essere presente il tag di release.
+    \item \textbf{bugfix/nome-feature:} rami uscenti dal develop usati per sistemare errori rilevati successivamente alla chiusura del relativo feature-branch.
+                                       Sono usati per la correzione dell'errore trovato, una volta inserita la correzione devono convergere in develop. E' necessario
+                                       che il nome del bugfix corrisponda al nome della determinata feature a cui si rivolge la correzione.
 \end{itemize}
+Riassumendo ogni modifica al codice deve partire da un branch di feature o di bugfix, strettamente collegato ad uno o più membri del gruppo, e convergere in develop solamente dopo
+aver superato le verifiche necessarie per quella specifica attività.
+Infine può andare in master solamente quando si deciderà di effettuare una release, passando quindi per l'apposito ramo.
+Per ulteriori informazioni consultare il tutorial di Atlassian su \href{https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow}{GitFlow-Workflow}.
+
+Altrettanto importante è il tipo di file che deve essere all'interno delle repository. Queste, in ogni loro branch, potranno ospitare solo file sorgenti, ad esempio
+in formato \verb|.tex| per la documentazione. Ogni tipo di file binario, compresi i \verb|.pdf|, prodotti della compilazione dei sorgenti, dovranno essere
+ospitati nella specifica \textit{\glock{artifact repository}} alimentata dal processo di \textit{\glock{continuous delivery}}, il quale verrà avviato contestualmente
+all'inizio dello sviluppo del prodotto. Non viene invece implementato un processo di CI e CD per la stesura della documentazione, a differenza di tutte le altre repository,
+in quanto ritenuto non necessario. Ogni membro dovrà assicurarsi che il codice prodotto sia compilabile con una recente distribuzione di \LaTeX,
+sia essa \verb|MikTex| o \verb|TexLive|, prima di far convergere il proprio ramo in develop.
