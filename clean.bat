@@ -12,3 +12,4 @@ del *.toc /s
 del *.dvi /s
 del *.fls /s
 del *latexmk /s
+del *.synctex(busy) /s
