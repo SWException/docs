@@ -1,0 +1,30 @@
+\ifglsentryexists{Committente}{}%
+{%
+\gls@defglossaryentry{Committente}%
+{%
+name={Committente},%
+sort={Committente},%
+type={main},%
+first={Committente},%
+firstplural={Committentes},%
+text={Committente},%
+plural={Committentes},%
+description={Persone o gruppo di persone incaricato ad individuare il/i capitolato/i da presentare al fornitore. Chi commette, cioè ordina ad altri l'esecuzione di un lavoro o di una prestazione},%
+descriptionplural={Persone o gruppo di persone incaricato ad individuare il/i capitolato/i da presentare al fornitore. Chi commette, cioè ordina ad altri l'esecuzione di un lavoro o di una prestazione},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
