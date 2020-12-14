@@ -14,3 +14,4 @@ del *.fls /s
 del *latexmk /s
 del *.synctex(busy) /s
 del *.orig /s
+del *.glsdefs /s

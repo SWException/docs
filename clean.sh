@@ -10,3 +10,4 @@ find -type f -iname "*.gz" -exec rm -f {} \;
 find -type f -iname "*.toc" -exec rm -f {} \;
 find -type f -iname "*.out" -exec rm -f {} \;
 find -type f -iname "*.orig" -exec rm -f {} \;
+find -type f -iname "*.glsdefs" -exec rm -f {} \;
