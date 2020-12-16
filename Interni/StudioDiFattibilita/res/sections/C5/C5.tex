@@ -1,53 +1,53 @@
-\section{C5-PORTACS: piattaforma di controllo mobilità autonoma}
+\section{Studio C5}
 \subsection{Informazioni generali}
 \begin{itemize}
-\item \textbf{Nome:} PORTACS: piattaforma di controllo mobilità autonoma;
-\item \textbf{Proponente:} SanMarco Informatica;
-\item \textbf{Committente:} Prof. Tullio Vardanega e prof. Riccardo Cardin.
+    \item \textbf{Nome:} PORTACS: piattaforma di controllo mobilità autonoma;
+    \item \textbf{Proponente:} SanMarco Informatica;
+    \item \textbf{Committente:} Prof. Tullio Vardanega e Prof. Riccardo Cardin.
 \end{itemize}
 
 \subsection{Descrizione del capitolato}
-Il capitolato richiede di realizzare un \glock{\textit{real time poi oriented anti-collision system}} che permetta l’automazione nella gestione di robot, automobili e mezzi industriali che si muovono all’interno di un ambiente mappato. L’obiettivo è coordinare gli spostamenti di tutti i veicoli evitando collisioni ed eventualmente fare in modo che ogni unità raggiunga la sua destinazione compiendo il percorso più breve possibile. 
+Il capitolato richiede di realizzare un \glock{\textit{real time POI oriented anti-collision system}} che permetta l’automazione nella gestione di robot, automobili e mezzi industriali che si muovono all’interno di un ambiente mappato. L’obiettivo è coordinare gli spostamenti di tutti i veicoli evitando collisioni ed eventualmente fare in modo che ogni unità raggiunga la sua destinazione compiendo il percorso più breve possibile.
 L’azienda presenta quattro principali ambiti di utilizzo dell’applicativo:
 \begin{enumerate}
-\item l’automazione di robot camerieri, che devono muoversi tra i tavoli di un ristorante evitando gli ostacoli che si presentano lungo il percorso e portare ai clienti gli ordini provenienti dalla cucina;
-\item la gestione di auto a guida autonoma, che una volta fissati destinazione e punti intermedi del percorso necessita di un sistema che permetta di variare la sua velocità di crociera in funzione dei limiti vigenti e del traffico, riconoscendo lo stato dei semafori e la presenza di ostacoli;
-\item la geolocalizzazione dei mezzi e degli operatori all’interno di un magazzino; i mezzi si devono muovere sulle corsie lungo le quali è previsto il loro spostamento evitando collisioni. Ogni operatore, a piedi o su un mezzo ha un compito da portare a termine e varie ubicazioni intermedie da raggiungere per poter completare la sua attività. I responsabili devono essere in grado di vedere la posizione di tutte le unità che operano nel magazzino; 
-\item la geolocalizzazione nei trasporti, che necessita di un sistema real time per il tracciamento dei mezzi e dello stato delle consegne. È necessario calcolare per ogni mezzo il percorso da seguire per effettuare tutte le consegne della giornata, tornando infine al deposito di partenza.
+    \item l’automazione di robot camerieri, che devono muoversi tra i tavoli di un ristorante evitando gli ostacoli che si presentano lungo il percorso e portare ai clienti gli ordini provenienti dalla cucina;
+    \item la gestione di auto a guida autonoma, che una volta fissati destinazione e punti intermedi del percorso necessita di un sistema che permetta di variare la sua velocità di crociera in funzione dei limiti vigenti e del traffico, riconoscendo lo stato dei semafori e la presenza di ostacoli;
+    \item la geolocalizzazione dei mezzi e degli operatori all’interno di un magazzino; i mezzi si devono muovere sulle corsie lungo le quali è previsto il loro spostamento evitando collisioni. Ogni operatore, a piedi o su un mezzo, ha un compito da portare a termine e varie ubicazioni intermedie da raggiungere per poter completare la sua attività. I responsabili devono essere in grado di vedere la posizione di tutte le unità che operano nel magazzino;
+    \item la geolocalizzazione nei trasporti, che necessita di un sistema real time per il tracciamento dei mezzi e dello stato delle consegne. È necessario calcolare per ogni mezzo il percorso da seguire per effettuare tutte le consegne della giornata, tornando infine al deposito di partenza.
 \end{enumerate}
 
 \subsection{Finalità del progetto}
 L’azienda richiede che il software prodotto sia in grado di accettare in input:
 \begin{itemize}
-\item una “scacchiera” (o mappa) con la definizione delle percorrenze e dei relativi vincoli (sensi unici, numero massimo di unità contemporanee) e definizione di \textit{POI} (Point Of Interest);
-\item definizione delle N unità provviste di identificativo di sistema, velocità massima, posizione iniziale e lista dei \textit{POI} da attraversare già ordinata.
+    \item una “scacchiera” (o mappa) con la definizione delle percorrenze, dei relativi vincoli (sensi unici, numero massimo di unità contemporanee) e definizione dei \textit{POI} (Point Of Interest);
+    \item definizione delle N unità provviste di identificativo di sistema, velocità massima, posizione iniziale e lista dei \textit{POI} da attraversare già ordinata.
 \end{itemize}
-La User Interface che rappresenta ogni singola unità dovrà mostrare la direzione verso la quale all'unità viene indicato di spostarsi dal sistema centrale, il pulsante di stop/start e l’indicatore di velocità attuale.
+La User Interface che rappresenta ogni singola unità dovrà mostrare la direzione verso la quale viene indicato all'unità di spostarsi dal sistema centrale, il pulsante di stop/start e l’indicatore di velocità attuale.
 Il sistema deve indicare ad ogni unità la prossima “mossa” da fare, in funzione del prossimo \textit{POI} da raggiungere, in modo da evitare collisioni e da  (possibilmente) seguire il percorso ottimo.
-Ogni unità deve inviare al sistema centrale costantemente la propria posizione, direzione e velocità, in modo tale che il sistema centrale piloti e coordini tutte le unità per evitare incidenti e ingorghi. 
-Il sistema dovrà essere corredato da una visualizzazione in real-time della mappa e della relativa posizione delle unità. 
+Ogni unità deve inviare al sistema centrale costantemente la propria posizione, direzione e velocità, in modo tale che il sistema centrale piloti e coordini tutte le unità per evitare incidenti e ingorghi.
+Il sistema dovrà essere corredato da una visualizzazione in real-time della mappa e della relativa posizione delle unità.
 
 \subsection{Tecnologie interessate}
 Non sono state indicate particolari tecnologie per la realizzazione del capitolato. Le note tecniche da evidenziare sono:
 \begin{itemize}
-\item non vi è necessità di gestire la geolocalizzazione delle unità che sarà simulata per l’invio della posizione corrente;
-\item oltre al codice sorgente dovranno essere consegnati anche vari file \glock{\textit{Docker}} per le varie componenti del sistema.
-\end{itemize}	
+    \item non vi è necessità di gestire la geolocalizzazione delle unità che sarà simulata per l’invio della posizione corrente;
+    \item oltre al codice sorgente dovranno essere consegnati anche vari file \glock{\textit{Docker}} per le varie componenti del sistema.
+\end{itemize}
 
 \subsection{Aspetti positivi}
 \begin{itemize}
-\item Alcuni membri del gruppo hanno dimostrato interesse verso questo capitolato, ritenendo utile acquisire competenze in ambito real-time monitoring and decision making;
-\item il progetto ha dato fin da subito l’impressione di essere alla portata delle abilità del gruppo;
-\item l’azienda proponente nel corso della presentazione ha evidenziato l’opportunità di una possibile offerta di lavoro al termine del progetto.
-\end{itemize}	
+    \item Alcuni membri del gruppo hanno dimostrato interesse verso questo capitolato, ritenendo utile acquisire competenze in ambito real-time monitoring and decision making;
+    \item il progetto ha dato fin da subito l’impressione di essere alla portata delle abilità del gruppo;
+    \item l’azienda proponente nel corso della presentazione ha evidenziato l’opportunità di una possibile offerta di lavoro al termine del progetto.
+\end{itemize}
 
 \subsection{Criticità e fattori di rischio}
 \begin{itemize}
-\item Nella presentazione non è stato chiarito in maniera specifica a quali tecnologie specifiche bisognerà fare affidamento per lo sviluppo del software. Troppa libertà nelle scelte implementative potrebbe rivelarsi un’arma a doppio taglio;
-\item più gruppi rispetto ai posti disponibili hanno mostrato fin da subito interesse per il capitolato;
+    \item Nella presentazione non è stato chiarito in maniera specifica a quali tecnologie specifiche bisognerà fare affidamento per lo sviluppo del software. Troppa libertà nelle scelte implementative potrebbe rivelarsi un’arma a doppio taglio;
+    \item più gruppi rispetto ai posti disponibili hanno mostrato fin da subito interesse per il capitolato;
 \end{itemize}
 
 \subsection{Conclusioni}
-In sede di valutazione dei capitolati il progetto \textit{PORTACS} , nonostante abbia suscitato interesse per gli ambiti coinvolti nella sua realizzazione, è stato escluso in virtù della poca chiarezza sulle tecnologie da impiegare. Anche l’interesse dimostrato da molti altri gruppi ha contribuito ad orientare la scelta verso un altro capitolato. 
+In sede di valutazione dei capitolati il progetto \textit{PORTACS} , nonostante abbia suscitato interesse per gli ambiti coinvolti nella sua realizzazione, è stato escluso in virtù della poca chiarezza sulle tecnologie da impiegare. Anche l’interesse dimostrato da molti altri gruppi ha contribuito ad orientare la scelta verso un altro capitolato.
 
 
