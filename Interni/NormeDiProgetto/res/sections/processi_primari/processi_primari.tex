@@ -69,19 +69,19 @@ L'obiettivo del processo di sviluppo, in accordo con quanto scritto nello standa
 \subsubsection{Descrizione}
 Questo processo definisce le seguenti attività:
 \begin{itemize}
-  \item Analisi dei requisiti
-  \item Progettazione dell'architettura
-  \item Codifica
-  \item Test
-  \item Validazione
+  \item Processo di analisi dei requisiti
+  \item Processo di progettazione dell'architettura
+  \item Processo di codifica
+  \item Processo di testing
+  \item Processo di validazione
 \end{itemize}
 
-\subsubsection{Analisi dei requisiti}
+\subsubsection{Processo di analisi dei requisiti}
 \paragraph{Scopo}
-Lo scopo del processo di analisi dei requisiti è quello di individuare tutte le necessità dello Stakeholder e convertirli in requisiti espliciti e impliciti, nonché diretti e indiretti. Questa attività è svolta dagli analisti che come risultato redigono un documento in cui all'interno vi sono:
+Lo scopo del processo di analisi dei requisiti è quello di individuare tutte le necessità del proponente e convertirle in requisiti espliciti e impliciti, nonché diretti e indiretti. Questa attività è svolta dagli analisti che come risultato redigono un documento in cui all'interno vi sono:
 \begin{itemize}
   \item Definire lo scopo del prodotto che si andrà a realizzare
-  \item Definire le funzionalità e i requisiti concordati con lo Stakeholder
+  \item Definire le funzionalità e i requisiti concordati con il proponente
   \item Fornire ai progettisti dei riferimenti affidabili e precisi per permettere loro una progettazione architetturale accurata.
   \item Definire una base per integrare i raffinamenti che permettono un miglioramento continuo del processo di sviluppo e del prodotto
   \item Fornire ai verificatori i riferimenti per il processo di verifica
@@ -98,12 +98,49 @@ Le informazioni sopracitate sono state ricavate grazie a:
 \end{itemize}
 
 \paragraph{Aspettative}
-L'obiettivo è quello di creare un documento formale e completo contenente i requisiti richiesti e concordati con lo Stakeholder.
-\paragraph{Struttura}
+L'obiettivo è quello di creare un documento formale e completo contenente i requisiti richiesti e concordati con il proponente.
 \paragraph{Classificazione dei requisiti}
+Ogni requisito è identificato obbligatoriamente da un \textbf{Codice Identificativo} univoco che non può essere modificato nel corso del tempo e rispetta il seguente pattern: \\
+\textbf{R[Importanza][Tipologia][Codice]}
+  
+\begin{itemize}
+  \item Importanza: indica l'importanza di tale requisito attraverso i seguenti valori:
+  \begin{itemize}
+  	\item 1: requisito obbligatorio
+  	\item 2: requisito desiderabile
+  	\item 3: requisito opzionale
+  \end{itemize}
+  \item Tipologia
+  \begin{itemize}
+  	\item V: requisito di vincolo
+  	\item F: requisito funzionale
+  	\item P: requisito prestazionale
+  	\item Q: requisito di qualità
+  \end{itemize}
+  \item Codice: identificatore univoco in forma gerarchica padre/figlio. \\
+\textbf{[CodiceBase](.[CodiceSottoCaso])*} \\
+  
+  Il CodiceBase identifica il caso d'uso generico. \\
+  Il CodiceSottoCaso, che è opzionale, identifica i sotto casi.
+\end{itemize}
+
+Ogni requisito è corredato dalle seguenti informazioni:
+\begin{itemize}
+	\item Descrizione: descrizione breve e concisa del requisito.
+	\item Fonte: specifica la fonte da cui deriva il requisito
+	\begin{itemize}
+		\item Capitolato
+		\item Verbale Interno
+		\item Verbale Esterno
+		\item Caso d'uso
+	\end{itemize}
+\end{itemize}
+
 \paragraph{Classificazione dei casi d'uso}
 \paragraph{Tracciamento di requisiti e casi d'uso}
+PragmaDB? Ha senso usare uno strumento ausiliario per il tracciamento? 
 \paragraph{Metriche}
+Ha senso tenerle qui? Potrebbe essere una buona idea metterle nel PdQ
 
 \subsubsection{Progettazione dell'architettura}
 \paragraph{Scopo}
