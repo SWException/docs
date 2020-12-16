@@ -136,11 +136,8 @@ I suoi compiti sono:
     \item redigere la parte di retrospettiva del Piano di qualifica.
 \end{itemize}
 
-\paragraph{Ciclo di vita di un'attività}
-
-
 \paragraph{Assegnazione delle attività}
-Una volta che sono state individuate le attività da svolgere esse verranno aggiunte al servizio di issue-tracking-sistem proposto da GitHub.
+Una volta che sono state individuate le attività da svolgere esse verranno aggiunte dal Responsabile di progetto al servizio di issue-tracking-sistem proposto da GitHub.
 Attraverso tale sistema il responsabile di progetto può in qualunque momento valutare come il gruppo sta procedendo ad effettuare il lavoro richiesto.\\
 I compiti (Issue) vengono tipicamente auto-assegnati dai singoli componenti del gruppo. Si lascia al responsabile di progetto la facoltà di assegnare esplicitamente delle attività a una o più persone nel caso riscontri almeno uno dei seguenti punti:
 \begin{itemize}
@@ -156,6 +153,27 @@ Per evitare la situazione di interverto del responsabile di progetto i singoli m
 \end{itemize}
 I componenti del gruppo, una volta che un compito è a loro assegnato, sono tenuti a portarlo a termine entro la data prefissata, e sono responsabili della chiusura della relativa issue.
 
+\paragraph{Ciclo di vita di un'attività}
+Il ciclo di vita di una singola attività interessa tre figure:
+\begin{itemize}
+    \item responsabile di Progetto: individua i compiti da svolgere, e una volta che essi vengono svolti e verificati li approva;
+    \item assegnatario: si prende in carico una attività (o gliene viene incaricata una dal responsabile), la svolge, ed a lavoro terminato crea una pool request incaricando un soggetto per effettuare la verifica.
+    \item verificatore: controlla e verifica il lavoro che è stato svolto, dopo di che creerà un feedback all'interno della pool request con le correzioni da svolgere nel caso ce ne siano, altrimenti segnalerà completata la pool request e il lavoro in essa contenuto.
+\end{itemize}
+Le fasi del ciclo di vità di un'attività sono qui spiegate nel dettaglio:
+\begin{itemize}
+    \item individuazione del compito: dopo aver rilevato nuove necessità, il responsabile di progetto le identifica come richieste da soddisfare creando appunto un nuovo compito. Ne valuta la complessità ed eventualmente lo suddivide in compiti più piccoli. Per ognuno determina una data di scadenza e se lo ritiene necessario può individuare uno o più assegnatari;
+    \item creazione issue di esecuzione: il responsabile crea una issue su GitHub identificandola con un titolo esplicativo. Provvede ad inserire nella descrizione la data di scadenza precedentemente stabilità, ed eventualmente una breve descrizione del lavoro da svolgere;
+    \item spostamento issue in "TO-DO": il responsabile sposta la issue nella colonna "TO-DO" all'interno della board di progetto, così da identificarla come da svolgere;
+    \item spostamento issue in "IN PROGRESS": una volta che un assegnatario decide di iniziare il lavoro dopo essersi auto-assegnato la issue, o dopo che il responsabile di progetto gli abbia incaricato l'attività, provvederà a spostarla nella colonna "IN PROGRESS"; 
+    \item spostamento issue in "DONE": terminato il lavoro l'assegnatario provvederà a spostare la issue in "DONE" ed a chiudere l'issue;
+    \item creazione pool request: l'assegnatario a questo punto dovrà creare una pool request dal ramo contenente il lavoro svolto al ramo di riferimento. Dovrà poi indicare nel campo "Reviewer" un componente incaricato della verifica ed inserire la lable "da revisionare". Può aggiungere alla pool request una descrizione contenente dei commenti sul lavoro svolto se ritiene che ciò possa essere utile al controllo da parte del verificatore. Conclude inserendo la pool request all'interno della sezione "TO-DO" della board di progetto;
+    \item spostamento pool request in "IN PROGRESS": il verificatore quando inizia il lavoro di verifica sposta la pool request in "IN PROGRESS";
+    \item creazione feedback di verifica: terminata la verifica il verificatore scrive un feedback del lavoro sottopostogli, e richiede delle modifiche nel caso riscontri delle correzioni da fare. In questo caso assegna la pool request al componente del gruppo che la creata, e modifica la label in "da correggere";
+    \item correzioni: l'assegnatario dopo aver ricevuto dal verificatore un feedback sulle cose da sistemare provvederà a svolgerle. Una volta terminate le correzioni richiederà un'ulteriore verifica attraverso il tasto "re-reviews" e modificherà la lable in "da revisionare"
+    \item spostamento pool request in "DONE": se il verificatore non riscontra correzioni da fare, o quelle effettuate sono sodisfacenti, sposta la pool request in "DONE";
+    \item approvazione del lavoro: il responsabile di progetto dopo aver esaminato il lavoro lo approva, e può effettuare il merge con il ramo interesasto.
+\end{itemize}
 \paragraph{Metriche di processo}
 
 \subparagraph{Budgeted Cost of Work Scheduled - BCWS}
