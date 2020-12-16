@@ -1,0 +1,62 @@
+\subsection{Verifica}
+\subsubsection{Scopo}
+Il processo di verifica ha come obiettivo la realizzazione di prodotti corretti, completi e coesi secondo delle norme stabilite. Sia il software che la documentazione vanno incontro al processo di verifica.
+
+\subsubsection{Descrizione}
+Con la verifica si cercano e si risolvono i possibili difetti presenti all'interno della documentazione e del codice. Essa viene applicata ad ogni altro processo in esecuzione quando questo:
+\begin{enumerate}
+    \item raggiunge un livello di maturità sufficiente;
+    \item subisce dei cambiamenti significativi.
+\end{enumerate} 
+Dopo che la verifica è ultimata è possibile avviare il processo di validazione.  
+
+\subsubsection{Aspettative}
+L'input del processo di verifica è un processo già ben formato ma non necessariamente corretto; l'output è il processo stesso reso conforme alle aspettative. Questo risultato si ottiene seguendo determinati punti:
+\begin{enumerate}
+    \item la definizione di un criterio di accettazione;
+    \item la definizione delle attività di verifica;
+    \item la definizione e implementazione di test di verifica;
+    \item la correzione di eventuali difetti individuati.
+\end{enumerate}
+
+\subsubsection{Verifica della documentazione}
+L'inizio delle attività di verifica per un documento è stabilito dal \textit{Responsabile di Progetto} che ne pianifica le date di inizio e di fine e assegna il ruolo di \textit{Verificatore} ad uno o più membri del gruppo. I verificatori dovranno eseguire un'analisi accurata del documento assegnatogli con l'obiettivo di:
+\begin{enumerate}
+    \item verificare la correttezza grammaticale e la semplicità sintattica;
+    \item assicurarsi che il documento rispetti tutte le norme tipografiche descritte accuratamente in \ref{_normetipografiche};
+    \item controllare la struttura del documento;
+    \item analizzare la pertinenza dei contenuti trattati nel documento;
+\end{enumerate}
+
+\paragraph{Analisi statica}
+Questo tipo di analisi viene effettuata sul prodotto senza eseguirlo e serve per verificare che non ci siano errori. I due tipi di analisi statica sono:
+\begin{itemize}
+    \item \textbf{walkthrough}: consiste nell'analizzare il documento nella sua interezza per trovare i difetti. Viene usata principalmente nella prima fase di verifica;
+    \item \textbf{inspection}: tecnica che prevede la focalizzazione sui punti in cui si sa che si concentrano gli errori. Questo metodo è da preferire risptto a \textit{walkthrough} poiché molto meno oneroso. Tuttavia si può utilizzarlo solo dopo una fase di verifica iniziale a pettine (di tipo \textit{walktrough}) che permette di aquisiire una lista di errori comuni denominata \textit{Lista di Controllo}. 
+\end{itemize}
+
+\paragraph{Procedimento di verifica della documentazione}
+%per definire il procedimento (e fare un diagramma) bisogna che io veda la parte di processi organizzativi(pianifiazione/assegnazione dei compiti, gestione dei ticket)
+
+\subsubsection{Verifica del codice}
+% da mettere a partire da questa revisione?
+
+\subsubsection{Verifica dei requisiti}
+Anche i requisiti sono sottoposti al processo di verifica. Perché la verifica dia esito positivo è ncessario che essi:
+\begin{itemize}
+    \item siano coerenti con la loro implementazione;
+    \item abbiano un grado di complessità adeguato rispetto al tempo e alle risorse pianificate per la riuscita del progetto;
+    \item si dimostrino verificabili e quantificabili
+    \item siano coerenti con gli accordi presi con il proponente, riportati all'interno dell'\textit{Analisi dei Requisiti}.
+    \item 
+\end{itemize}
+\paragraph{Analisi statica}
+I requisiti devono rispettare le proprietà di:
+\begin{itemize}
+    \item \textbf{verificabilità}: un requisito deve essere misurabile oggettivamente;
+    \item \textbf{codice univoco}: un requisito deve essere identificato da un codice, differente per ogni requisito, in accordo con quanto descritto in; %ref al codice di riferimento  (processi primari);
+    \item \textbf{atomicità}: un requisito non deve essere divisibile. %da proapes, ma noi con i microservizi?
+\end{itemize}
+
+\subsubsection{Test}
+% è analisi dinamica, quindi riferita al codice, già da aggiungere?  
