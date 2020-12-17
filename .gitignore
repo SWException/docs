@@ -9,4 +9,5 @@
 *.dvi
 *.fls
 *.fdb_latexmk
-
+*.orig
+*.glsdefs
