@@ -60,10 +60,6 @@ In particolare saranno presenti i seguenti branch:
     \item \textbf{bugfix/nome-feature:} rami uscenti dal develop usati per sistemare errori rilevati successivamente alla chiusura del relativo feature-branch.
                                        Sono usati per la correzione dell'errore trovato, una volta inserita la correzione devono convergere in develop. E' necessario
                                        che il nome del bugfix corrisponda al nome della determinata feature a cui si rivolge la correzione.
-    \item \textbf{verifica/oggetto:} rami uscenti dal develop creati dai verificatori durante il processo di verifica su un determinato oggetto. Una volta terminata la verifica del documento
-                                     è necessario eliminare il branch e farlo convergere in develop.
-    \item \textbf{validazione/oggetto:} rami uscenti da develop creati dai Responsabili di Progetto per validare un determinato documento.
-                                        Stesso ciclo di vita dei branch di verifica.
 \end{itemize}
 Riassumendo ogni modifica al codice deve partire da un branch di feature o di bugfix, strettamente collegato ad uno o più membri del gruppo, e convergere in develop solamente dopo
 aver superato le verifiche necessarie per quella specifica attività.
