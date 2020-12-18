@@ -129,10 +129,10 @@ Ulteriori informazioni sono riportante in seguito nel paragrafo \textit{Termini 
 \paragraph{Struttura dei verbali} 
 I verbali presentano una struttura simile a quella dei documenti formali, però il file e la cartella \textit{sections} sono sostituiti da \textbf{"contenuto.text"} che svolge la stessa funzione, ossia incorporare il corpo del documento.\\
 Inoltre è presente il file \textbf{"tracciamento.text"}, il quale permette di riportare l'elenco delle decisioni.\\
-Come già riportato precedentemente i verbali essendo documenti informali non richiedo la fase di verifica e approvazione, questo comporta che non è presente nessun versionamento e nemmeno un registro delle modifiche.\\
+Come già riportato precedentemente i verbali essendo documenti informali non richiedo la fase di verifica e approvazione, questo comporta che non è presente nessun versionamento e nemmeno un registro delle modifiche.\\ %va comunque fatta la verifica e approvazione anche se è assurdo
 Le informazioni che presenta il frontespizio dei verbali sono:
 \begin{itemize}
-	\item\textbf{data}: riporta la data in cui si è svolto l'incontro
+	\item\textbf{data}: riporta la data in cui si è svolto l'incontro %data, luogo e orario non nel frontespizio ma come sezioni del corpo del documento, così facevano i rrr
 	\item\textbf{luogo}: indica la piattaforma o il luogo in cui si è svolto il meeting
 	\item\textbf{orario}: presenta l'orario in cui si è svolta la seduta
 	\item\textbf{redattore}: viene indicato il nome del componente del team incaricato di redarre il verbale
@@ -144,7 +144,7 @@ Il codice identificativo è riportato seguendo la seguente dicitura \textbf{VX-Y
 \begin{itemize}
     \item\textbf{V} : specifica che si tratta di un verbale
 	\item\textbf{X} : indica la tipologia di verbale se interno "\textbf{I}" o esterno "\textbf{E}";
-	\item\textbf{Y} : indica il numero del verbale;
+	\item\textbf{Y} : indica il numero del verbale; % i rrr, da cui abbiamo preso il template usavano qui la data e non il numero, sarebbe bene ci uniformassimo
 	\item\textbf{Z} : indica il numero della decisione presa.
 \end{itemize}
     
@@ -152,7 +152,7 @@ Il codice identificativo è riportato seguendo la seguente dicitura \textbf{VX-Y
 Per evitare che i diversi file differiscano nell'ortografia, nella tipografia e nello stile vengono descritte delle norme che permettono di ottenere l'uniformità tra i diversi documenti.
 
 \paragraph{Convenzioni per la denominazione}
-Per i nomi delle directory che contengono la documentazione si segue la convenzione \textit{PascalCase}: le parole che compongono un nome vengono unite e ciascuna viene riportata con l'iniziale maiuscola. I nomi dei file \glock{\textit{.tex}} e delle directory a una profondità maggiore delle directory con il nome dello specifico documento (e.g. \textit{res, sections, main.tex} sono definiti da soli caratteri minuscoli e, se formati da più parole, queste ultime sono concatenate senza spazi a separarle. 
+Per i nomi delle directory che contengono la documentazione si segue la convenzione \textit{PascalCase}: le parole che compongono un nome vengono unite e ciascuna viene riportata con l'iniziale maiuscola. I nomi dei file \glock{\textit{.tex}} e delle directory a una profondità maggiore delle directory con il nome dello specifico documento (e.g. \textit{res, sections, main.tex} sono definiti da soli caratteri minuscoli e, se formati da più parole, queste ultime sono separate da un underscore, in accordo con la convenzione \textit{snake_case}. 
 
 \paragraph{Stile del testo}
 Gli stili di testo utilizzati nella documentazione sono:
@@ -282,6 +282,8 @@ Per i diagrammi sono stati usati diversi software a seconda del tipo di diagramm
 Web app gratuita integrabile con \glock{Google Drive}, per realizzare casi d'uso, diagrammi ER e grafici UML. Rende possibile anche il versionamento dei file prodotti.
 \subparagraph{\textit{Gantt project}}
 Applicazione open source per costruire diagrammi di Gantt, usati largamente nella fase di pianificazioni e presenti nel \textit{Piano di Progetto}.
+\subparagraph{\textit{Google Drive}}
+Per la conservazione degli artefatti annessi alla documentazione (e.g. documenti compilati e immagini presenti all'interno della documentazione) e di qualunque altro file utile viene utilizzato \textit{Google Drive}, tramite l'account Gogle dellìorganizzazione \textit{SWException}. 
 
 \subsubsection{Verifica ortografica}
 Per la verifica ortografica si utilizzano gli strumenti di correzione ortografica messi a disposizione dagli editor di testo che segnalano in maniera automatica gli errori sottolineando con colore rosso le parole non appartenenti al dizionario delle lingue selezionate come lingue del documento.
