@@ -152,7 +152,7 @@ Il codice identificativo è riportato seguendo la seguente dicitura \textbf{VX-Y
 Per evitare che i diversi file differiscano nell'ortografia, nella tipografia e nello stile vengono descritte delle norme che permettono di ottenere l'uniformità tra i diversi documenti.
 
 \paragraph{Convenzioni per la denominazione}
-Per i nomi delle directory che contengono la documentazione si segue la convenzione \textit{PascalCase}: le parole che compongono un nome vengono unite e ciascuna viene riportata con l'iniziale maiuscola. I nomi dei file \glock{\textit{.tex}} e delle directory a una profondità maggiore delle directory con il nome dello specifico documento (e.g. \textit{res, sections, main.tex} sono definiti da soli caratteri minuscoli e, se formati da più parole, queste ultime sono separate da un underscore, in accordo con la convenzione \textit{snake_case}. 
+Per i nomi delle directory che contengono la documentazione si segue la convenzione \textit{PascalCase}: le parole che compongono un nome vengono unite e ciascuna viene riportata con l'iniziale maiuscola. I nomi dei file \glock{\textit{.tex}} e delle directory a una profondità maggiore delle directory con il nome dello specifico documento (e.g. \textit{res, sections, main.tex}) sono definiti da soli caratteri minuscoli e, se formati da più parole, queste sono separate da un underscore, in accordo con la convenzione \textit{snake\_case}.
 
 \paragraph{Stile del testo}
 Gli stili di testo utilizzati nella documentazione sono:
@@ -194,7 +194,7 @@ Negli item di un elenco nella forma "\textit{nome dell'elemento - descrizione de
 Per l'indicazione delle date e degli orari si seguono le convenzioni stabilite dallo standard \glock{ISO 8601}. \\
 Il formato utilizzato per le date è:
 \begin{center}
-    [YYYY]-[MM]-[DD]
+    \textbf{[YYYY]-[MM]-[DD]}
 \end{center}
     dove:
     \begin{itemize}
@@ -204,7 +204,7 @@ Il formato utilizzato per le date è:
     \end{itemize}
 Il formato con cui vengono indicati gli orari è:
 \begin{center}
-    [HH]:[MM]
+    \textbf{[HH]:[MM]}
 \end{center} 
 dove:
 \begin{itemize}
@@ -279,11 +279,11 @@ Viene lasciata libertà sulla scelta dell'editor di testo da utilizzare poiché 
 \paragraph{Diagrammi}
 Per i diagrammi sono stati usati diversi software a seconda del tipo di diagramma da rappresentare.
 \subparagraph{\textit{Draw.io}}
-Web app gratuita integrabile con \glock{Google Drive}, per realizzare casi d'uso, diagrammi ER e grafici UML. Rende possibile anche il versionamento dei file prodotti.
+Web app gratuita integrabile con \glock{Google Drive}, per realizzare casi d'uso, diagrammi e \glock{grafici UML}. Rende possibile anche il versionamento dei file prodotti.
 \subparagraph{\textit{Gantt project}}
-Applicazione open source per costruire diagrammi di Gantt, usati largamente nella fase di pianificazioni e presenti nel \textit{Piano di Progetto}.
+Applicazione open source per costruire \glock{diagrammi di Gantt}, usati largamente nella fase di pianificazioni e presenti nel \textit{Piano di Progetto}.
 \subparagraph{\textit{Google Drive}}
-Per la conservazione degli artefatti annessi alla documentazione (e.g. documenti compilati e immagini presenti all'interno della documentazione) e di qualunque altro file utile viene utilizzato \textit{Google Drive}, tramite l'account Gogle dellìorganizzazione \textit{SWException}. 
+Per la conservazione degli artefatti annessi alla documentazione (e.g. documenti compilati e immagini presenti all'interno della documentazione) e di qualunque altro file utile viene utilizzato \textit{Google Drive}, tramite l'account Gogle dell'organizzazione \textit{SWException}. 
 
 \subsubsection{Verifica ortografica}
 Per la verifica ortografica si utilizzano gli strumenti di correzione ortografica messi a disposizione dagli editor di testo che segnalano in maniera automatica gli errori sottolineando con colore rosso le parole non appartenenti al dizionario delle lingue selezionate come lingue del documento.
