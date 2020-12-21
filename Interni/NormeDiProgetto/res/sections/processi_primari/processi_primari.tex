@@ -3,10 +3,10 @@
 
 \subsection{Processi di fornitura}
 \subsubsection{Scopo} 
-Secondo lo standard ISO/IEC/IEEE 12207:2017 lo scopo del processo di fornitura è quello di consegnare all'acquirente un prodotto o servizio che soddisfa i requisiti richiesti.  Il fornitore determina l'esistenza di un acquirente che necessità di un prodotto o servizio e definisce una strategia di fornitura di quanto richiesto, dopo averne analizzato i rischi e le criticità mediante la redazione di uno Studio di Fattibilità.
-Il fornitore deve inoltre definire un accordo contrattuale che sancisca i rapporti con il committente ed in particolare l'accettazione da parte di quest'ultimo dei requisiti e delle tempistiche di consegna.  Si potrà quindi dare avvio alla fase esecutiva stabilendo le procedure e risorse che andranno definite nel Piano di Progetto.
+Secondo lo standard ISO/IEC/IEEE 12207:2017 lo scopo del processo di fornitura è quello di consegnare all'acquirente un prodotto o servizio che soddisfa i requisiti richiesti.  Il fornitore determina l'esistenza di un acquirente che necessita di un prodotto o servizio e definisce una strategia di fornitura di quanto richiesto, dopo averne analizzato i rischi e le criticità mediante la redazione di uno Studio di Fattibilità.
+Il fornitore deve inoltre definire un accordo contrattuale che sancisca i rapporti con il committente ed in particolare l'accettazione da parte di quest'ultimo dei requisiti e delle tempistiche di consegna.  Si potrà quindi dare avvio alla parte esecutiva stabilendo le procedure e risorse che andranno definite nel Piano di Progetto.
 
-Il processo di fornitura è composto dalle seguenti fasi:
+Il processo di fornitura è composto dalle seguenti attività:
 \begin{itemize}
 \item Avvio
 \item Approntamento di risposte alle richieste
@@ -18,7 +18,7 @@ Il processo di fornitura è composto dalle seguenti fasi:
 \end{itemize}
 
 \subsubsection{Descrizione}
-Questa sezione include le norme che i membri del gruppo SWException devono rispettare in tutte le fasi di progettazione, sviluppo e consegna del prodotto EmporioLambada al fine di diventare fornitori nei confronti del proponente Red Babel e dei committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin.
+Questa sezione include le norme che i membri del gruppo SWException devono rispettare in tutte le attività di progettazione, sviluppo e consegna del prodotto EmporioLambada al fine di diventare fornitori nei confronti del proponente Red Babel e dei committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin.
 \subsubsection{Aspettative}
 Il gruppo intende avviare e intrattenere un costante dialogo con il proponente per avere un feedback continuativo sul lavoro svolto ed in particolare:
 \begin{itemize}
@@ -69,11 +69,10 @@ L'obiettivo del processo di sviluppo, in accordo con quanto scritto nello standa
 \subsubsection{Descrizione}
 Questo processo definisce le seguenti attività:
 \begin{itemize}
-  \item Processo di analisi dei requisiti
-  \item Processo di progettazione dell'architettura
-  \item Processo di codifica
+  \item analisi dei requisiti
+  \item progettazione dell'architettura
+  \item codifica
 \end{itemize}
-\textbf{ATTENZIONE, I RRR PARLANO DI ATTIVITA' E NON PROCESSI, DA RIVEDERE INSIEME}
 \subsubsection{Processo di analisi dei requisiti}
 \paragraph{Scopo}
 Lo scopo del processo di analisi dei requisiti è quello di individuare tutte le necessità del proponente e convertirle in requisiti espliciti e impliciti, nonché diretti e indiretti. Questa attività è svolta dagli analisti che come risultato redigono un documento in cui all'interno vi sono:
@@ -165,7 +164,6 @@ Ogni caso d'uso è corredato delle seguenti informazioni:
 \end{itemize}
 
 \paragraph{Tracciamento di requisiti e casi d'uso}
-PragmaDB? Ha senso usare uno strumento ausiliario per il tracciamento? 
 
 \subsubsection{Progettazione dell'architettura}
 \paragraph{Scopo}
@@ -182,29 +180,25 @@ Le parti principali sono le seguenti:
 \begin{itemize}
 \item Diagrammi delle attività
 \item Diagrammi delle classi
-\item Diagrammi delle package
-\item Diagrammi delle casi d'uso
-\item Diagrammi delle sequenza
+\item Diagrammi dei package
+\item Diagrammi dei casi d'uso
+\item Diagrammi di sequenza
 \end{itemize}
 \item \textbf{Tecnologie utilizzate}: devono essere descritte le tecnologie che si prevede di utilizzare nel progetto specificandone pregi e difetti;
 \item \textbf{Design pattern}: devono essere descritti i design pattern utilizzati per realizzare l'architettura corredati da una descrizione, anche grafica, che ne descriva il significato e la struttura;
 \item \textbf{Tracciamento delle componenti}: ogni requisito deve riferirsi al componente che lo soddisfa;
 \item \textbf{Test di integrazione}: l'unione delle parti permette di verificare che ogni componente del sistema funzioni nella maniera voluta.
-\end{itemize}
-
-\textbf{Product baseline ?? HA SENSO SUDDIVIDERE COSI'?}
-
-Redatta dal progettista, dovrà includere:
-
-\begin{itemize}
-\item \textbf{definizione delle classi}: ogni classe dovrà essere descritta in modo breve e coinciso;
-\item \textbf{tracciamento delle classi}: ogni requisito deve essere tracciato in modo che per ognuno esista una classe che lo soddisfi;
-\item \textbf{test di unità}: devono essere definiti al fine di verificare che le parti funzionino individualmente nel modo stabilito.
+\item \textbf{Product baseline}: Redatta dal progettista, dovrà includere:
+    \begin{itemize}
+        \item \textbf{definizione delle classi}: ogni classe dovrà essere descritta in modo breve e coinciso;
+        \item \textbf{tracciamento delle classi}: ogni requisito deve essere tracciato in modo che per ognuno esista una classe che lo soddisfi;
+        \item \textbf{test di unità}: devono essere definiti al fine di verificare che le parti funzionino individualmente nel modo stabilito.
+        \end{itemize}
 \end{itemize}
 
 \subsubsection{Codifica}
 \paragraph{Scopo}
-Questa attività ha lo scopo di normare l'effettiva realizzazione del prodotto software.  In questa fase si concretizza attraverso la programmazione quanto è stato progettato.
+Questa sezione ha lo scopo di normare l'effettiva realizzazione del prodotto software.  In questa fase si concretizza attraverso la programmazione quanto è stato progettato.
 
 \paragraph{Descrizione}
 La scrittura del codice dovrà perseguire gli obiettivi di qualità definiti nel Piano di Qualifica.
