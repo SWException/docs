@@ -9,20 +9,20 @@
 % Ogni documento ha un preciso ruolo all'interno della documentazione. E' però necessario suddividerli in aree distinte:
 
 \subsubsection{Scopo}
-In questo capitolo ci occuperemo di illustrare tutte le regole e gli standard che disciplinano la documentazione. Questo permetterà che ogni documento risulti dal punto di vista grafico e organizzativo coerente.
+In questo capitolo ci occuperemo di illustrare tutte le regole e gli standard che disciplinano la documentazione. Questo permetterà che ogni documento risulti coerente dal punto di vista grafico e organizzativo.
 \subsubsection{Descrizione}
-Le prossime sezioni illustreranno nei dettagli le norme di redazione di ogni documento.
+Le prossime sezioni illustreranno nei dettagli le norme per la redazione di ogni documento.
 Le regole di seguito riportate devo essere seguite da tutti i membri del gruppo durante tutte le fasi di lavoro.
 
 \subsubsection{Aspettative}
 Il team si aspetta che questo processo porti a una redazione ottimale della documentazione necessaria per lo svolgimento del progetto.
 
 \subsubsection{Ciclo di vita}
-Ogni documento passa 3 fase  diverse nel suo ciclo di vita:
+Ogni documento passa 3 fasi  diverse nel suo ciclo di vita:
 \begin{itemize}
-\item\textbf{redazione}: si tratta della vera e propria creazione del documento, il quale deve rispettare tutte le norme imposte in questo documento, partendo dalla struttura del template alla modalità di scrittura. Verranno incaricati dei \glock{redattori} che si occuperanno di questo compito.
-\item\textbf{verifica}: in questa fase vengono assegnati dei \glock{verificatori} che hanno il compito di controllare che il lavoro fatto dai redattori sia coerente con le norme e gli obiettivi riguardanti la tipologia di documento redatto. I verificatori hanno inoltre il compito di riferire ai redattori le eventuali modifiche da apportare. 
-\item\textbf{approvazione}:il \glock{responsabile} di progetto deve approvare il documento inviatogli con esito positivo dai verificatori e procedere al rilascio di esso.
+\item\textbf{Redazione}: si tratta della vera e propria creazione del documento, il quale deve rispettare tutte le norme imposte in questo documento, partendo dalla struttura del template alla modalità di scrittura. Verranno incaricati dei \glock{redattori} che si occuperanno di questo compito.
+\item\textbf{Verifica}: in questa fase vengono assegnati dei \glock{verificatori} che hanno il compito di controllare che il lavoro fatto dai redattori sia coerente con le norme e gli obiettivi riguardanti la tipologia di documento redatto. I verificatori hanno inoltre il compito di riferire ai redattori le eventuali modifiche da apportare. 
+\item\textbf{Approvazione}:il \glock{responsabile} di progetto deve approvare il documento inviatogli con esito positivo dai verificatori e procedere al rilascio di esso.
 \end{itemize}
 Un ulteriore fase che un documento può riportare nel proprio ciclo di vita è il \textbf{versionamento}, ovvero nel caso in cui siano necessarie delle modifiche dopo il rilascio del documento da parte del responsabile. Nel caso in cui questo avvenga il documento modificato deve in seguito rivivere le fasi di verifica e approvazione.
 
@@ -49,16 +49,16 @@ Tra questi documenti troviamo:
 Quelli esterni invece sono di interesse per \glock{committenti} e \glock{proponente}, infatti vengono consegnati loro nell'ultima versione.
 Tra questi troviamo:
 \begin{itemize}
-\item\textbf{Piano di progetto}: pianificazione delle attività che il team dovrà svolgere, indicando come avverrà lo sfruttamento delle risorse;
+\item\textbf{Piano di progetto}: pianificazione delle attività che il team dovrà svolgere, indicando come avverrà l'utilizzo delle risorse;
 \item\textbf{Piano di qualifica}: contiene tutti gli standard e le metriche da utilizzare per la valutazione della qualità;
-\item\textbf{Glossario}: contiene un elenco di tutti quei termini che ricorrono nei documenti e che necessitano di una definizione esplicita;
-\item\textbf{Analisi dei requisiti}: vengono descritti tutti i requisiti che il prodotto finale dovrà contenere. 
+\item\textbf{Glossario}: contiene un elenco di tutti i termini che ricorrono nei documenti e che necessitano di una definizione esplicita;
+\item\textbf{Analisi dei requisiti}: vengono descritti tutti i requisiti che il prodotto finale dovrà soddisfare. 
 \end{itemize}
-Quando si tratta di documenti formali può accadere che questi abbiano più versioni, in questo caso si considera come corrente quella approvata dal Responsabile del progetto più recentemente.
+Quando si tratta di documenti formali può accadere che questi abbiano più versioni, in questo caso si considera come corrente quella approvata più recentemente dal Responsabile del progetto.
 
 \paragraph{Documenti informali} 
 I documenti che appartengono a questa tipologia sono i \textbf{verbali}.
-Il team ha deciso di sottoporre questi documenti alla fase di verifica e approvazione per avere una maggiore sicurezza su quanto riportato.\\
+Il team ha deciso di sottoporre questi documenti alla fase di verifica e approvazione per avere una maggiore affidabilità su quanto riportato.\\
 I verbali \textbf{interni} sono di interesse per i componenti del team, aiutano a ricapitolare le decisioni prese durante i meeting.\\
 Quelli \textbf{esterni} invece riguardano le riunioni a cui partecipano anche i committenti e/o il proponente.
 
@@ -70,7 +70,7 @@ La documentazione è suddivisa in diverse directory, ognuna delle quali riporta 
 Per la stesura della documentazione il team ha deciso di utilizzare \glock{LATEX}, che permette di organizzare efficacemente le informazioni e allo stesso tempo di standardizzare le norme tipografiche e di formattazione.
 
 \paragraph{Struttura dei documenti formali}
-Ogni directory di un determinato\\ documento contiene un file chiamato \textbf{"main.tex"} che ha il compito di raggruppare tutte le sezioni ed i comandi necessari per la compilazione.\\
+Ogni directory di un determinato documento contiene un file chiamato \textbf{"main.tex"} che ha il compito di raggruppare tutte le sezioni ed i comandi necessari per la compilazione.\\
 All'interno della cartella \textit{res} sono presenti i seguenti file:
 \begin{itemize}
 	\item \textbf{"configurazione.tex"}: dirige l'importazione dei \glock{pacchetti};
@@ -86,7 +86,7 @@ Inoltre si trovano all'interno della \textit{res}, per quanto riguarda la docume
 
 \subparagraph{Frontespizio}
 Come già anticipato, il frontespizio permette di illustrare tutti i dati principali del documento.\\
-Sono sempre presenti il logo, il nome del gruppo ed il nome del documento.
+Sono sempre presenti il logo, il nome del gruppo ed il titolo del documento.
 Le informazioni sono così impostate:
 \begin{itemize}
 	\item\textbf{versione}: indica la versione attuale del documento;
@@ -110,8 +110,8 @@ Per ogni cambiamento la tabella riporta:
 \end{itemize}
 
 \subparagraph{Indice}
-Il team ha concordato che l'inserimento di un indice avrebbe favorito la lettura del documento, aiutando il lettore ad orientarsi.
-Esso si presenta con una classica struttura gerartica, infatti sono riportate tutte le sezione, ognuna delle quali presenta le relative sottosezioni, i paragrafi e i sotto paragrafi.
+Il team ha concordato che l'inserimento di un indice avrebbe facilitato la lettura del documento, aiutando il lettore ad orientarsi.
+Esso si presenta con una classica struttura gerarchica, infatti sono riportate tutte le sezioni, ognuna delle quali presenta le relative sottosezioni, i paragrafi e i sotto paragrafi.
 
 \subparagraph{Contenuto principale}
 La formattazione del contenuto principale delle pagine della documentazione è così stilato:
@@ -119,11 +119,11 @@ La formattazione del contenuto principale delle pagine della documentazione è c
 	\item a sinistra in alto è presente il nome del documento e la sua versione;
 	\item a destra il capitolo in cui ci si trova;
 	\item segue tutto il corpo del documento;
-	\item nel footer è indicato il numero della pagina attuale su il numero totale delle pagine del documento in questione. 
+	\item nel piè di pagina è indicato il numero della pagina attuale su il numero totale delle pagine del documento in questione. 
 \end{itemize}
 
 \paragraph{Glossario}
-Il glossario permette di fornire una spiegazione funzionale per tutti quei termini che possono risultare sconosciuti per il lettore.\\
+Il glossario permette di fornire una spiegazione funzionale per tutti quei termini che possono risultare sconosciuti al lettore.\\
 Per la sua struttura si è deciso di adottare un ordine lessicografico.\\
 Ulteriori informazioni sono riportante in seguito nel paragrafo \textit{Termini di glossario}.
 
