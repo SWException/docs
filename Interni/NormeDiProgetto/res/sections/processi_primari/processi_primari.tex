@@ -72,10 +72,8 @@ Questo processo definisce le seguenti attività:
   \item Processo di analisi dei requisiti
   \item Processo di progettazione dell'architettura
   \item Processo di codifica
-  \item Processo di testing
-  \item Processo di validazione
 \end{itemize}
-
+\textbf{ATTENZIONE, I RRR PARLANO DI ATTIVITA' E NON PROCESSI, DA RIVEDERE INSIEME}
 \subsubsection{Processo di analisi dei requisiti}
 \paragraph{Scopo}
 Lo scopo del processo di analisi dei requisiti è quello di individuare tutte le necessità del proponente e convertirle in requisiti espliciti e impliciti, nonché diretti e indiretti. Questa attività è svolta dagli analisti che come risultato redigono un documento in cui all'interno vi sono:
@@ -166,14 +164,8 @@ Ogni caso d'uso è corredato delle seguenti informazioni:
 \item \textbf{Generalizzazioni}
 \end{itemize}
 
-
-
-
-
 \paragraph{Tracciamento di requisiti e casi d'uso}
 PragmaDB? Ha senso usare uno strumento ausiliario per il tracciamento? 
-\paragraph{Metriche}
-Ha senso tenerle qui? Potrebbe essere una buona idea metterle nel PdQ
 
 \subsubsection{Progettazione dell'architettura}
 \paragraph{Scopo}
@@ -184,22 +176,23 @@ Le parti principali sono le seguenti:
 \begin{itemize}
 \item \textbf{Technology baseline}: contiene le specifiche della progettazione ad alto livello del prodotto e delle sue componenti, l'elenco dei diagrammi UML che saranno utilizzati per la realizzazione dell'architettura e i test di verifica;
 
-\item \textbf{Product baseline}: dettaglia ulteriormente l'attività di progettazione,  integrando ciò che è riportato nella Technology baseline..  Definisce i test necessari alla verifica. 
-\end{itemize}
+\item \textbf{Product baseline}: dettaglia ulteriormente l'attività di progettazione,  integrando ciò che è riportato nella Technology baseline. Definisce i test necessari alla verifica.
 
-\textbf{Technology baseline}
-
-Redatta dal progettista, dovrà includere:
-
+\item \textbf{Diagrammi UML}: diagrammi che permettono una facile comprensione della soluzione progettuale redatta dai progettisti. Saranno disponibili:
 \begin{itemize}
-\item \textbf{Diagrammi UML}: diagrammi delle classi, dei package, di attività, di sequenza; HELP PER FARE SUB ITEM!!! 
+\item Diagrammi delle attività
+\item Diagrammi delle classi
+\item Diagrammi delle package
+\item Diagrammi delle casi d'uso
+\item Diagrammi delle sequenza
+\end{itemize}
 \item \textbf{Tecnologie utilizzate}: devono essere descritte le tecnologie che si prevede di utilizzare nel progetto specificandone pregi e difetti;
 \item \textbf{Design pattern}: devono essere descritti i design pattern utilizzati per realizzare l'architettura corredati da una descrizione, anche grafica, che ne descriva il significato e la struttura;
 \item \textbf{Tracciamento delle componenti}: ogni requisito deve riferirsi al componente che lo soddisfa;
 \item \textbf{Test di integrazione}: l'unione delle parti permette di verificare che ogni componente del sistema funzioni nella maniera voluta.
 \end{itemize}
 
-\textbf{Product baseline}
+\textbf{Product baseline ?? HA SENSO SUDDIVIDERE COSI'?}
 
 Redatta dal progettista, dovrà includere:
 
@@ -209,28 +202,17 @@ Redatta dal progettista, dovrà includere:
 \item \textbf{test di unità}: devono essere definiti al fine di verificare che le parti funzionino individualmente nel modo stabilito.
 \end{itemize}
 
-\paragraph{Aspettative}
-\paragraph{Design Patterns}
-\paragraph{Diagrammi UML}
-\paragraph{Test}
-
 \subsubsection{Codifica}
 \paragraph{Scopo}
-Questa attività ha come scopo quello di normare la realizzazione del prodotto software.  In questa fase i programmatori concretizzano la soluzione codificando l'architettura ad alto livello pensata dai progettisti.
-\paragraph{Descrizione}
-La scrittura del codice dovrà rispettare quanto stabilito nella documentazione di prodotto. Dovrà obbligatoriamente perseguire gli obiettivi di qualità definiti nel Piano di Qualifica.
-\paragraph{Aspettative}
-Obiettivo dell'attività è la creazione del prodotto software conforme alle aspettative e richieste del proponente.  L'adozione di regole specifiche in questa fase è fondamentale per perseguire gli obiettivi di qualità e poter agevolare le successive fasi di manutenzione.
-
-\paragraph{Stile di codifica}
-
-\subsubsection{Test}
-\paragraph{Scopo}
 Questa attività ha lo scopo di normare l'effettiva realizzazione del prodotto software.  In questa fase si concretizza attraverso la programmazione quanto è stato progettato.
+
 \paragraph{Descrizione}
 La scrittura del codice dovrà perseguire gli obiettivi di qualità definiti nel Piano di Qualifica.
 
-\textbf{Stile di Codifica}
+\paragraph{Aspettative}
+Obiettivo dell'attività è la creazione del prodotto software conforme alle aspettative e richieste del proponente.  L'adozione di regole specifiche in questa fase è fondamentale per perseguire gli obiettivi di qualità e poter agevolare le successive fasi di manutenzione.
+
+\paragraph{Stile di Codifica}
 Ciascun programmatore è tenuto a rispettare le seguenti norme:
 
 \begin{itemize}
@@ -248,18 +230,8 @@ Ciascun programmatore è tenuto a rispettare le seguenti norme:
 
 
 
-\paragraph{Aspettative}
-
-\subsubsection{Validazione}
-\paragraph{Scopo}
-\paragraph{Descrizione}
-\paragraph{Aspettative}
-
 \subsubsection{Metriche}
-\paragraph{???? tipo di metrica che andremo ad usare}
-
-\subsubsection{Strumenti}
-\paragraph{Scopo}
+\paragraph{tipi di metrica che andremo ad usare}
 
 
 
