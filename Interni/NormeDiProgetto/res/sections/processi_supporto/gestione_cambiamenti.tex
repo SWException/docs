@@ -4,8 +4,8 @@ La finalità di questo processo è assicurare una gestione appropriata, affidabi
 dei cambiamenti attuati per sopperire a mancanze e adattare tutti gli altri processi durante tutto lo sviluppo del progetto.
 
 \subsubsection{Aspettative}
-Con l'avvio del processo di gestione dei cambiamenti, il gruppo di lavoro di aspetta la riduzione dei costi provocati da un cambiamento
-del \textit{way of working}, riuscendo ad elaborare risposte in tempi brevi ai vari problemi che possono sorgere a livello gestionale.
+Con l'avvio del processo di gestione dei cambiamenti, il gruppo di lavoro si aspetta la minimizzazione dei costi provocati da un cambiamento
+del \textit{way of working}, riuscendo ad elaborare risposte in tempi brevi ai vari problemi che potrebbero sorgere a livello gestionale.
 
 \subsubsection{Denominazione dei cambiamenti}
 Per garantire il tracciamento, viene assegnato un codice univoco a tutti i cambiamenti, così formato:
@@ -14,7 +14,7 @@ Per garantire il tracciamento, viene assegnato un codice univoco a tutti i cambi
         \begin{center}
             \textbf{CA[PR]-[DOC/ART]-[codice prodotto][X]}
         \end{center}
-        in particolare \textbf{DOC} per i documenti e \textbf{ART} per il codice sorgente dell'applicazione.
+        in particolare \textbf{DOC} per i documenti e \textbf{ART} per il codice sorgente dell'applicazione;
     \item Per i processi
         \begin{center}
             \textbf{CA[PR]-ATT-[nome attività][X]}
@@ -26,12 +26,12 @@ In entrambi i casi, il parametro \textbf{[X]} indica un numero intero che increm
  Il parametro \textbf[PR] sta ad indicare la priorità, rappresentata da un numero compreso nell'insieme
  \[\{x \in \mathbb{N}_0 \ | \  x \% 5 = 0 \} \]
  ovvero l'insieme dei multipli di 5 non negativi. In casi eccezionali, possono essere assegnati numeri interi positivi non multipli di 5,
- in modo da inserire il cambiamento nella giusta posizione. Questa prassi non deve comunque entrare nella normalità, è necessario che si cerchi
+ in modo da inserire il cambiamento nella giusta posizione. Questa prassi non deve comunque entrare nella normalità,  è preferibile che si cerchi
  di assegnare le priorità con cautela.
 
  \subsubsection{Prassi generale}
  Le issue rappresentanti i vari cambiamenti seguono il ciclo di vita generale dei ticket.
- Al termine dello svolgimento di ogni attività, parte la verifica su questa appena terminata, la quale porta ad un'accettazione
-del lavoro svolto o ad un rigetto. Nel primo caso si procede con la validazione, nel secondo caso il verificatore riapre il ticket inserendo i commenti
+ Al termine dello svolgimento di ogni attività,  parte la verifica della stessa,  la quale porta ad un'accettazione o ad un rigetto
+del lavoro svolto.  Nel primo caso si procede con la validazione, nel secondo caso il verificatore riapre il ticket inserendo i commenti
 che esplicano il motivo del rifiuto. Nel caso in cui chi ha svolto l'attività non sia in accordo con il verificatore ci sarà un meeting tra i due, se anche
 dopo questo i due si trovano in disaccordo interviene il \textit{Responsabile di Progetto}, che prenderà la decisione finale.

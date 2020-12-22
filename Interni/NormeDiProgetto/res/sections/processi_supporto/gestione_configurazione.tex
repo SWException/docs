@@ -12,9 +12,9 @@ oltre che le modalità di versionamento e coordinamento del gruppo.
 \subsubsection{Aspettative}
 I risultati attesi da questo processo sono:
 \begin{itemize}
-    \item sistematizzare la produzione di codice e documentazione
-    \item rendere uniforme l'utilizzo degli strumenti di versionamento coinvolti nel progetto
-    \item classificare i prodotti dei vari processi implementati
+    \item standardizzare la produzione di codice e documentazione;
+    \item rendere uniforme l'utilizzo degli strumenti di versionamento coinvolti nel progetto;
+    \item classificare i prodotti dei vari processi implementati.
 \end{itemize}
 
 \subsubsection{Versionamento}
@@ -25,11 +25,11 @@ Il numero di versione di ogni componente del prodotto e di ogni documento è def
 \end{center}
 dove
 \begin{itemize}
-    \item \textbf{[X]} indica il numero di versione approvato dal \glock{Responsabile di Progetto}. Inizialmente è a 0.
+    \item \textbf{[X]} indica il numero di versione approvato dal \glock{Responsabile di Progetto}. Inizialmente è a 0;
     \item \textbf{[Y]} indica il numero di versione approvato dai \glock{Verificatori}. Inizialmente a 0 e riparte ad ogni
-                       incremento di \textbf{[X]}.
+                       incremento di \textbf{[X]};
     \item \textbf{[Z]} è il numero che identifica la versione in redazione. Viene quindi incrementato dai redattori
-                       ad ogni aggiunta/modifica. Inizialmente a 0 e riparte ad ogni incremento di \textbf{[Y]}
+                       ad ogni aggiunta/modifica. Inizialmente a 0 e riparte ad ogni incremento di \textbf{[Y]}.
 \end{itemize}
 
 \paragraph{Tecnologie coinvolte}
@@ -38,7 +38,7 @@ In particolare, è stata creata un'organizzazione su tale piattaforma con il nom
 hanno il medesimo accesso in scrittura e lettura per tutte le repository esistenti.\\
 Per il versionamento della documentazione viene usata una repository dal nome \verb|swe-docs|, in cui vengono riposti tutti i
 documenti creati durante lo svolgimento del progetto didattico.\\
-Successivamente, visto che si andrà a creare un'applicazione a \glock{microservizi}, e dunque composta da parti fortemente indipendenti,
+Successivamente,  considerato che si andrà a creare un'applicazione a \glock{microservizi}, e dunque composta da parti fortemente indipendenti,
 verrà creata una repository per ogni modulo del prodotto.
 
 \paragraph{Struttura delle repository}
@@ -47,16 +47,16 @@ In particolare saranno presenti i seguenti branch:
 \begin{itemize}
     \item \textbf{master:} utilizzato per ospitare le versioni di rilascio. In questo ramo dovrà esserci sempre una versione del prodotto utilizzabile
                            e pronto ad essere rilasciato in \glock{ambiente di produzione}. E' fatto divieto a tutti i membri del gruppo di effettuare \verb|commit|
-                           direttamente su questo ramo, tutte le modifiche dovranno seguire il percorso previsto di GitFlow.
+                           direttamente su questo ramo, tutte le modifiche dovranno seguire il percorso previsto di GitFlow;
     \item \textbf{develop:} questo è il ramo utilizzato per le operazioni di sviluppo. In particolare qui convergeranno i vari \verb|feature-branch|
                             utilizzati per la creazione delle funzionalità del modulo in oggetto. In questo ramo deve essere presente sempre e solo codice
-                            compilabile e feature complete.
+                            compilabile e feature complete;
     \item \textbf{feature/nome-feature:} per la creazione di ogni feature da parte dei vari membri addetti. In questi rami le feature possono anche essere
                                          incomplete e/o non funzionanti. Una volta completata la funzionalità il ramo deve essere chiuso sia in locale che in remoto e 
-                                         convergere in develop.
+                                         convergere in develop;
     \item \textbf{release/versione[X.Y.Z]:} ramo contenente la versione \glock{candidate-release} pronta per essere approvata dal \textit{Responsabile di Progetto} dopo
                                             aver passato tutte le verifiche. Una volta approvata il branch deve terminare sia in locale che in remoto, convergendo in master e in develop.
-                                            Contestualmente nel branch master deve essere presente il tag di release.
+                                            Contestualmente nel branch master deve essere presente il tag di release;
     \item \textbf{bugfix/nome-feature:} rami uscenti dal develop usati per sistemare errori rilevati successivamente alla chiusura del relativo feature-branch.
                                        Sono usati per la correzione dell'errore trovato, una volta inserita la correzione devono convergere in develop. E' necessario
                                        che il nome del bugfix corrisponda al nome della determinata feature a cui si rivolge la correzione.
