@@ -1,0 +1,95 @@
+% ---------------------------
+%	  	  [ Verbale ]
+%	----------------------
+%	    SWException
+%  Progetto di SWE (2020-21)
+%    Template by Maxelweb (te vansi un spritz)
+%       patch by ftrole & lambda_claus
+%			3nj0y!
+% ---------------------------
+
+% Configurazione primaria del documento
+
+% --------------
+
+\newcommand{\docNome}{ ANALISI DEI REQUISITI }
+\newcommand{\docVersione}{0.0.1}
+\newcommand{\docNomeProgetto}{ EmporioLambda: piattaforma di e-commerce in stile Serverless }
+\newcommand{\docStatus}{in redazione}
+\newcommand{\docUso}{interno}
+\newcommand{\docDescrizione}{
+    \begin{center}
+    Documento di definizione delle strategie di verifica e validazione
+    \end{center}
+}
+
+% --------------
+
+\newcommand{\docRedattori}{
+	Stefano Lazzaroni \\&
+    Marco Canovese \\&
+    Michele Veronesi \\&
+    Nicole Davanzo
+}
+\newcommand{\docVerificatori}{
+	nome cognome \\&
+    nome cognome
+}
+\newcommand{\docApprovazione}{
+    nome cognome
+}
+
+\newcommand{\nomeCorso}{
+    Ingegneria del Software - Università degli Studi di Padova
+}
+
+% ----- NON MODIFICARE SOTTO QUESTA RIGA -----
+
+% ---------------------------
+% Configurazioni
+% ---------------------------
+
+\documentclass[11pt,a4paper,table]{article}
+
+\input{res/configurazione}    
+
+% ---------------------------
+% Dati frontespizio
+% ---------------------------
+
+\title{ \hr \huge \textsc{\docNome} \\ 
+        \vspace{11pt} \large \textsc{\docNomeProgetto} \hr}
+
+\author{} % Non toccare
+\date{} % Non toccare
+
+% ---------------------------
+% Composizione del documento
+% ---------------------------
+
+\begin{document} 
+
+% Frontespizio
+
+\pagenumbering{gobble}
+\include{res/frontespizio}
+
+% Registro delle modifiche
+
+\newpage
+\pagenumbering{arabic}
+\include{res/registro}
+
+\tableofcontents
+
+% Contenuto
+
+\newpage
+\input{res/sezioni}
+
+
+
+\end{document}
+
+
+% EOF
