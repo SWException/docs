@@ -1,4 +1,4 @@
-name: SWE Docs Checker
+name: Docs Checker
 
 on: 
   pull_request:
