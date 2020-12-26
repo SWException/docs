@@ -4,9 +4,6 @@ on:
   pull_request:
     branches:
       - develop
-    paths:
-      - 'Interni/**'
-      - 'Template/**'
 
 jobs:
   build_check:
