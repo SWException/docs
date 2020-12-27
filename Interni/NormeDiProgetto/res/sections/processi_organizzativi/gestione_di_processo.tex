@@ -1,6 +1,6 @@
 \section{Processi organizzativi}
 
-\subsection{Gestione di processo}
+\subsection{Gestione di processo} \label{_gestioneDiProcesso}
 
 \subsubsection{Scopo}
 Secondo lo standard ISO-12207\_1995 la gestione di processo contiene le attività e i compiti generici che vengono impiegati per gestire i vari processi.\\
@@ -23,7 +23,7 @@ In questo processo discuteremo delle seguenti attività:
     \item pianificazione di risorse, tempi e costi.
 \end{itemize}
 
-\subsubsection{Coordinamento}
+\subsubsection{Coordinamento} \label{_gestioneDiProcesso_coordinamento}
 L'attività di coordinamento consente di gestire la comunicazione sia interna che esterna, e le riunioni. Ciò viene fatto attraverso comportamenti precisi che ogni membro del gruppo deve avere per l'intera durata del processo.
 
 \paragraph{Comunicazioni}
@@ -64,7 +64,7 @@ Per ogni riunione, sia essa interna od esterna, verrà nominata una persona inca
 \subparagraph{Riunioni esterne}
 Sono svolte con i proponenti o committenti, e si terranno su GMeet per riunioni con i proponenti e su Zoom per quelle con i committenti. Il link per il collegamento verrà comunicato dai soggetti esterni nel momento in cui si pianifica un incontro con essi.
 
-\subsubsection{Pianificazione}
+\subsubsection{Pianificazione} \label{_gestioneDiProcesso_pianificazione}
 Questa sezione ha lo scopo di definire come si intende pianificare il lavoro che c'è da svolgere, come vengono assegnati i compiti tra i membri del gruppo, e in cosa consistono i singoli ruoli.
 
 \paragraph{Ruoli di progetto}
@@ -169,7 +169,7 @@ Il ciclo di vita di una singola attività interessa tre figure:
 Le fasi del ciclo di vità di un'attività sono qui spiegate nel dettaglio:
 \begin{itemize}
     \item \textbf{individuazione del compito}: dopo aver rilevato nuove necessità, il responsabile di progetto le identifica come richieste da soddisfare creando appunto un nuovo compito. Ne valuta la complessità ed eventualmente lo suddivide in compiti più piccoli. Per ognuno determina una data di scadenza e se lo ritiene necessario può individuare uno o più assegnatari;
-    \item \textbf{creazione issue di esecuzione}: il responsabile crea una issue su GitHub secondo quanto riportato nel capitolo sulla "Gestione dei cambiamenti". Provvede ad inserire nella descrizione la data di scadenza precedentemente stabilità, ed eventualmente una breve descrizione del lavoro da svolgere;
+    \item \textbf{creazione issue di esecuzione}: il responsabile crea una issue su GitHub secondo quanto riportato in \ref{_gestioneDeiCambiamenti}. Provvede ad inserire nella descrizione la data di scadenza precedentemente stabilità, ed eventualmente una breve descrizione del lavoro da svolgere;
     \item \textbf{spostamento issue in "TO-DO"}: il responsabile sposta la issue nella colonna "TO-DO" all'interno della board di progetto, così da identificarla come da svolgere;
     \item \textbf{spostamento issue in "IN PROGRESS"}: una volta che un assegnatario decide di iniziare il lavoro dopo essersi autoassegnato la issue, o dopo che il responsabile di progetto gli abbia incaricato l'attività, provvederà a spostarla nella colonna "IN PROGRESS";
     \item \textbf{spostamento issue in "DONE"}: terminato il lavoro l'assegnatario provvederà a spostare la issue in "DONE" ed a chiudere la issue;
@@ -177,8 +177,8 @@ Le fasi del ciclo di vità di un'attività sono qui spiegate nel dettaglio:
     \item \textbf{spostamento pull request in "IN PROGRESS"}: il verificatore quando inizia il lavoro di verifica sposta la pull request in "IN PROGRESS";
     \item \textbf{creazione feedback di verifica}: terminata la verifica il verificatore scrive un feedback del lavoro sottopostogli, e richiede delle modifiche nel caso riscontri delle correzioni da fare. In questo caso assegna la pull request al componente del gruppo che la creata, e modifica la label in "da correggere";
     \item \textbf{svolgimento modifiche}: l'assegnatario dopo aver ricevuto dal verificatore un feedback sulle cose da sistemare provvederà a svolgerle. Una volta terminate le correzioni richiederà un'ulteriore verifica attraverso il tasto "re-reviews" e modificherà la lable in "da revisionare";
-    \item \textbf{spostamento pull request in "DONE"}: se il verificatore non riscontra correzioni da fare, o quelle effettuate sono sodisfacenti, sposta la pull request in "DONE" ed elimina l'etichetta ad essa applicata;
-    \item \textbf{approvazione del lavoro}: il responsabile di progetto dopo aver esaminato il lavoro lo approva effettuando il merge con il ramo interessato. Nel fare ciò dovrà selezionare l'opzione "Squash and marge" ed assegnare un titolo significativo al commit.
+    \item \textbf{spostamento pull request in "DONE"}: se il verificatore non riscontra correzioni da fare, o quelle effettuate sono sodisfacenti, effettua il merge sul develop selezionando l'opzione "Squash and merge" e assegnare un titolo significativo al commit. Infine sposta la pull request in "DONE";
+    \item \textbf{approvazione del lavoro}: il responsabile di progetto dopo aver esaminato il lavoro lo approverà successivamente effettuando una pull request al ramo master.
 \end{itemize}
 \paragraph{Metriche di processo}
 Per poter monitorare adeguatamente la pianificazione di risorse, tempi e costi del progetto vengono utilizzate le seguenti metriche:
