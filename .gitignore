@@ -11,3 +11,5 @@
 *.fdb_latexmk
 *.orig
 *.glsdefs
+
+.vscode/*
