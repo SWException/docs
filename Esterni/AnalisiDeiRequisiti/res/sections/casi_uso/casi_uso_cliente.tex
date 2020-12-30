@@ -1,5 +1,5 @@
-\subsection{Casi d'uso cliente}
-\subsubsection{UC1 - Visualizzazione contenuti informativi}
+\subsection{UC1 - Visualizzazione contenuti informativi}
+\label{UC1}
 \begin{itemize}
     \item \textbf{Attore Primario:} cliente generico;
     \item \textbf{Descrizione:} il cliente vuole accedere alle informazioni riguardanti la piattaforma e il venditore;
@@ -11,7 +11,8 @@
     \end{enumerate}
 \end{itemize}
 
-\subsubsection{UC2 - Scelta categoria}
+\subsection{UC2 - Scelta categoria}
+\label{UC2}
 \begin{itemize}
     \item \textbf{Attore Primario:} cliente generico;
     \item \textbf{Descrizione:} il cliente vuole visualizzare tutti i prodotti riguardanti una determinata categoria;
@@ -20,11 +21,14 @@
     \item \textbf{Postcondizione:} il cliente visualizza tutti i prodotti relativi alla categoria selezionata;
     \item \textbf{Scenario principale:}
     \begin{enumerate}
-        \item il cliente entra in una pagina dove è presente la scelta di una categoria, la seleziona, viene reindirizzato ad una pagina di visualizzazione prodotto (PLP) e visualizza i prodotti desiderati (UC4);
+        \item il cliente entra in una pagina dove è presente la scelta di una categoria;
+        \item seleziona una categoria;
+        \item viene reindirizzato ad una pagina di visualizzazione prodotto (PLP) e visualizza i prodotti desiderati (\hyperref[UC4]{UC4});
     \end{enumerate}
 \end{itemize}
 
-\subsubsection{UC3 - Ricerca}
+\subsection{UC3 - Ricerca}
+\label{UC3}
 \begin{itemize}
     \item \textbf{Attore Primario:} cliente generico;
     \item \textbf{Descrizione:} il cliente vuole visualizzare i prodotti che contengono nel nome prodotto una determinata parola
@@ -33,16 +37,17 @@
     \item \textbf{Postcondizione:} il cliente visualizza tutti i prodotti che contengono la determinata stringa nel nome;
     \item \textbf{Scenario principale:}
     \begin{enumerate}
-        \item il cliente entra in una pagina dove è permessa la ricerca di un prodotto, inserisce la parola da cercare e viene reindirizzato ad una pagina di visualizzazione prodotto (PLP) e visualizza i prodotti desiderati (UC4);
+        \item il cliente entra in una pagina dove è permessa la ricerca di un prodotto, inserisce la parola da cercare e viene reindirizzato ad una pagina di visualizzazione prodotto (PLP) e visualizza i prodotti desiderati (\hyperref[UC4]{UC4});
     \end{enumerate}
 \end{itemize}
 
-\subsubsection{UC4 - Visualizzazione lista prodotti (PLP)}
+\subsection{UC4 - Visualizzazione lista prodotti (PLP)}
+\label{UC4}
 \begin{itemize}
     \item \textbf{Attore Primario:} cliente generico;
     \item \textbf{Descrizione:} questa pagina visualizza tutti i prodotti che corrispondono ad una categoria o che corrispondono ad una parola cercata;
-    \item \textbf{Precondizione:} il cliente sceglie uno dei due modi per accedere alla PLP (UC2 e UC3);
-    \item \textbf{Postcondizione:} il cliente visualizza i prodotti che corrispondono alla scelta
+    \item \textbf{Precondizione:} il cliente sceglie uno dei due modi per accedere alla PLP (\hyperref[UC2]{UC2} e \hyperref[UC3]{UC3});
+    \item \textbf{Postcondizione:} il cliente visualizza i prodotti che corrispondono alla scelta;
     \item \textbf{Scenario principale:}
     \begin{enumerate}
         \item il cliente può visualizzare tutti i prodotti che corrispondono alle politiche di visualizzazione;
@@ -53,15 +58,37 @@
     \end{itemize}
 \end{itemize}
 
-\paragraph{UC4.1 - Filtri}
+\subsubsection{UC4.1 - Filtri}
+\label{UC4.1}
 \begin{itemize}
     \item \textbf{Attore Primario:} cliente generico;
-    \item \textbf{Descrizione:} questa pagina visualizza tutti i prodotti che corrispondono ad una categoria o che corrispondono ad una parola cercata;
-    \item \textbf{Precondizione:} il cliente sceglie uno dei due modi per accedere alla PLP (UC2 e UC3);
+    \item \textbf{Descrizione:} il cliente può inserire ulteriori filtri per raffinare la visualizzazione dei prodotti;
+    \item \textbf{Precondizione:} il cliente si deve trovare in una PLP (UC4);
+    \item \textbf{Postcondizione:} il cliente visualizza i prodotti con i filtri aggiornati;
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+        \item il cliente seleziona il filtro;
+        \item il cliente modifica il valore del filtro;
+        \item il cliente visualizza i prodotti secondo le nuove politiche; 
+    \end{enumerate}
+    \item \textbf{Specializzazioni: }
+    \begin{itemize}
+        \item il cliente filtra i prodotti per prezzo (\hyperref[UC4.1.1]{UC4.1.1});
+        \item il cliente filtra i prodotti per categoria (\hyperref[UC4.1.2]{UC4.1.2});
+    \end{itemize}
+\end{itemize}
+
+\paragraph{UC4.1.1 - Inserimento filtro prezzo}
+\label{UC4.1.1}
+\begin{itemize}
+    \item \textbf{Attore Primario:} cliente generico;
+    \item \textbf{Descrizione:} questa funzionalità permette al cliente di filtrare i prodotti visualizzati per prezzo;
+    \item \textbf{Precondizione:} il cliente si deve trovare in una PLP (\hyperref[UC4]{UC4});
     \item \textbf{Postcondizione:} il cliente visualizza i prodotti che corrispondono alla scelta
     \item \textbf{Scenario principale:}
     \begin{enumerate}
-        \item il cliente può visualizzare tutti i prodotti che corrispondono alle politiche di visualizzazione;
+        \item il cliente inserisce l'intervallo di prezzo desiderato;
+        \item il cliente visualizza i prodotti che corrispondono alla scelta;
     \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{itemize}
@@ -69,15 +96,17 @@
     \end{itemize}
 \end{itemize}
 
-\subparagraph{UC4.1.1 - Inserimento filtro prezzo}
+\paragraph{UC4.1.2 - Inserimento filtro categoria}
+\label{UC4.1.2}
 \begin{itemize}
     \item \textbf{Attore Primario:} cliente generico;
     \item \textbf{Descrizione:} questa pagina visualizza tutti i prodotti che corrispondono ad una categoria o che corrispondono ad una parola cercata;
-    \item \textbf{Precondizione:} il cliente sceglie uno dei due modi per accedere alla PLP (UC2 e UC3);
+    \item \textbf{Precondizione:} il cliente sceglie uno dei due modi per accedere alla PLP (\hyperref[UC2]{UC2} e \hyperref[UC3]{UC3});
     \item \textbf{Postcondizione:} il cliente visualizza i prodotti che corrispondono alla scelta
     \item \textbf{Scenario principale:}
     \begin{enumerate}
-        \item il cliente può visualizzare tutti i prodotti che corrispondono alle politiche di visualizzazione;
+        \item il cliente inserisce una nuova categoria o modifica una nuova esistente;
+        \item il cliente visualizza i prodotti che corrispondono alla scelta;
     \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{itemize}
@@ -85,23 +114,39 @@
     \end{itemize}
 \end{itemize}
 
-\subparagraph{UC4.1.1 - Inserimento filtro categoria}
+\subsection{UC5 - Apertura dettagli prodotto}
+\label{UC5}
 \begin{itemize}
     \item \textbf{Attore Primario:} cliente generico;
-    \item \textbf{Descrizione:} questa pagina visualizza tutti i prodotti che corrispondono ad una categoria o che corrispondono ad una parola cercata;
-    \item \textbf{Precondizione:} il cliente sceglie uno dei due modi per accedere alla PLP (UC2 e UC3);
-    \item \textbf{Postcondizione:} il cliente visualizza i prodotti che corrispondono alla scelta
+    \item \textbf{Descrizione:} questa pagina visualizza tutti i dettagli del prodotto;
+    \item \textbf{Precondizione:} il cliente deve trovarsi in una pagina dove la visualizzazione dei dettagli del prodotto sia permessa;
+    \item \textbf{Postcondizione:} il cliente visualizza tutti i dettagli del prodotto;
     \item \textbf{Scenario principale:}
     \begin{enumerate}
-        \item il cliente può visualizzare tutti i prodotti che corrispondono alle politiche di visualizzazione;
+        \item il cliente visualizza tutti i dettagli del prodotto;
     \end{enumerate}
-    \item \textbf{Estensioni:}
+\end{itemize}
+
+\subsection{UC6 - Aggiunta prodotto al carrello}
+\label{UC6}
+\begin{itemize}
+    \item \textbf{Attore Primario:} 
+    \item \textbf{Descrizione:}
+    \item \textbf{Precondizione:}
+    \item \textbf{Input:}
+    \item \textbf{Postcondizione:}
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+        \item 
+    \end{enumerate}
+    \item \textbf{Inclusioni:}
     \begin{itemize}
-        \item la pagina visualizza una PLP vuota perché nessun prodotto corrisponde alle politiche di visualizzazione;
+        \item
     \end{itemize}
 \end{itemize}
 
-\subsubsection{UC5 - Apertura dettagli prodotto}
+\subsection{UC7 - Gestione carrello}
+\label{UC7}
 \begin{itemize}
     \item \textbf{Attore Primario:} 
     \item \textbf{Descrizione:}
@@ -117,7 +162,9 @@
         \item
     \end{itemize}
 \end{itemize}
-\subsubsection{UC6 - Aggiunta prodotto al carrello}
+
+\subsection{UC8 - Checkout}
+\label{UC8}
 \begin{itemize}
     \item \textbf{Attore Primario:} 
     \item \textbf{Descrizione:}
@@ -133,7 +180,9 @@
         \item
     \end{itemize}
 \end{itemize}
-\subsubsection{UC7 - Gestione carrello}
+
+\subsection{UC9 - Login}
+\label{UC9}
 \begin{itemize}
     \item \textbf{Attore Primario:} 
     \item \textbf{Descrizione:}
@@ -149,7 +198,9 @@
         \item
     \end{itemize}
 \end{itemize}
-\subsubsection{UC8 - Checkout}
+
+\subsection{UC10 - Amministrazione account}
+\label{UC10}
 \begin{itemize}
     \item \textbf{Attore Primario:} 
     \item \textbf{Descrizione:}
@@ -165,7 +216,9 @@
         \item
     \end{itemize}
 \end{itemize}
-\subsubsection{UC9 - Login}
+
+\subsection{UC11 - Gestione ordini utente}
+\label{UC11}
 \begin{itemize}
     \item \textbf{Attore Primario:} 
     \item \textbf{Descrizione:}
@@ -181,39 +234,9 @@
         \item
     \end{itemize}
 \end{itemize}
-\subsubsection{UC10 - Amministrazione account}
-\begin{itemize}
-    \item \textbf{Attore Primario:} 
-    \item \textbf{Descrizione:}
-    \item \textbf{Precondizione:}
-    \item \textbf{Input:}
-    \item \textbf{Postcondizione:}
-    \item \textbf{Scenario principale:}
-    \begin{enumerate}
-        \item 
-    \end{enumerate}
-    \item \textbf{Inclusioni:}
-    \begin{itemize}
-        \item
-    \end{itemize}
-\end{itemize}
-\subsubsection{UC11 - Gestione ordini utente}
-\begin{itemize}
-    \item \textbf{Attore Primario:} 
-    \item \textbf{Descrizione:}
-    \item \textbf{Precondizione:}
-    \item \textbf{Input:}
-    \item \textbf{Postcondizione:}
-    \item \textbf{Scenario principale:}
-    \begin{enumerate}
-        \item 
-    \end{enumerate}
-    \item \textbf{Inclusioni:}
-    \begin{itemize}
-        \item
-    \end{itemize}
-\end{itemize}
-\subsubsection{UC12 - Logout cliente}
+
+\subsection{UC12 - Logout cliente}
+\label{UC12}
 \begin{itemize}
     \item \textbf{Attore Primario:} 
     \item \textbf{Descrizione:}
