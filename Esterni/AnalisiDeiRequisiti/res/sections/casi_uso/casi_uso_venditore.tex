@@ -1,4 +1,112 @@
-\subsection{UC13 - Visualizzazione dettagli ordine}
+\subsection{UC14 - Form di contatto venditore}
+\label{UC14}
+\begin{itemize}
+    \item \textbf{Attore Primario:} venditore autenticato;
+    \item \textbf{Descrizione:} il venditore deve contattare il cliente;
+    \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini \hyperref[UC15]{UC15} o nella lista clienti\hyperref[UC16]{UC16};
+    \item \textbf{Postcondizione:} il venditore deve aver contattato il cliente con successo;
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+        \item il venditore ha aperto il form di contatto;
+        \item compila il form;
+        \item il venditore contatta con successo il cliente;
+    \end{enumerate}
+\end{itemize}
+
+\subsection{UC15 - Lista ordini}
+\label{UC15}
+\begin{itemize}
+    \item \textbf{Attore Primario:} venditore autenticato;
+    \item \textbf{Descrizione:} il venditore vuole visualizzare tutta la lista degli ordini effettuati dai clienti;
+    \item \textbf{Precondizione:} il venditore deve essere loggato;
+    \item \textbf{Postcondizione:} il venditore riesce a visualizzare la lista;
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+        \item il venditore visualizza tutta la lista degli ordini effettuati dai clienti;
+         \item il venditore può modificare lo stato di un ordine \hyperref[UC15.1]{UC15.1};
+        \item il venditore può contattare il cliente che ha effettuato un determinato ordine \hyperref[UC17]{UC17};
+        \item può stampare la bolla di un ordine \hyperref[UC15.2]{UC15.2};
+        \item può visualizzare i dettagli di un determinato ordine \hyperref[UC15.3]{UC15.3}; 
+    \end{enumerate}
+\end{itemize}
+
+\subsubsection{UC15.1 - Modifica stato ordine}
+\label{UC15.1}
+\begin{itemize}
+    \item \textbf{Attore Primario:} venditore autenticato;
+    \item \textbf{Descrizione:} il venditore vuole modificare lo stato dell'ordine;
+    \item \textbf{Precondizione:} il venditore deve trovarsi nella sezione di gestione degli ordini;
+    \item \textbf{Postcondizione:} il venditore modifica lo stato di un ordine
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+        \item il venditore seleziona un ordine dalla lista;
+        \item il venditore modifica lo stato dell'ordine;
+    \end{enumerate}
+\end{itemize}
+
+
+\subsubsection{UC15.2 - Stampa bolla}
+\label{UC15.2}
+\begin{itemize}
+    \item \textbf{Attore Primario:} venditore autenticato;
+    \item \textbf{Descrizione:}il venditore vuole stampare la bolla per l'ordine;
+    \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini;
+    \item \textbf{Postcondizione:} il venditore stampa la bolla;
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+        \item il venditore seleziona un determinato ordine;
+        \item il venditore stampa la bolla;
+    \end{enumerate}
+\end{itemize}
+
+\subsubsection{UC15.3 - Visualizzazione dettagli ordine}
+\label{UC15.3}
+\begin{itemize}
+    \item \textbf{Attore Primario:} venditore autenticato;
+    \item \textbf{Descrizione:} il venditore vuole visualizzare i dettagli di un determinato ordine;
+    \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini e selezionarne uno;
+    \item \textbf{Postcondizione:} il venditore visualizza tutti i dettagli dell'ordine;
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+        \item il venditore seleziona un determinato ordine;
+        \item il venditore apre la pagina con i dettagli dell'ordine selezionato;
+    \end{enumerate}
+\end{itemize}
+
+\subsection{UC16 - Lista clienti}
+\label{UC16}
+\begin{itemize}
+    \item \textbf{Attore Primario:} venditore autenticato;
+    \item \textbf{Descrizione:} il venditore vuole visualizzare la lista dei clienti del sito;
+    \item \textbf{Precondizione:} il venditore deve essere loggato;
+    \item \textbf{Postcondizione:} il venditore visualizza tutta la lista clienti;
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+        \item il venditore visualizza la lista;
+         \item il venditore può contattare un cliente \hyperref[UC17]{UC17};
+    \end{enumerate}
+\end{itemize}
+
+\subsection{UC17 - Contatta cliente}
+\label{UC17}
+\begin{itemize}
+    \item \textbf{Attore Primario:} venditore autenticato;
+    \item \textbf{Descrizione:} il venditore deve contattare il cliente;
+    \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini \hyperref[UC15]{UC15} o nella lista dei clienti\hyperref[UC16]{UC16};;
+    \item \textbf{Postcondizione:} il venditore deve contattare con successo il cliente;
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+        \item il venditore deve contattare un cliente;
+        \item il venditore viene portato al form di contatto;
+        \item la comunicazione va a buon fine;
+    \end{enumerate}
+    \item \textbf{Inclusioni:}
+    \begin{itemize}
+        \item si apre il form di contatto del venditore \hyperref[UC14]{UC14};
+    \end{itemize}
+\end{itemize}
+
+\subsection{UC18 - Amministrazione tasse}
 \begin{itemize}
     \item \textbf{Attore Primario:} 
     \item \textbf{Descrizione:}
@@ -14,7 +122,8 @@
         \item
     \end{itemize}
 \end{itemize}
-\subsection{UC14 - Lista ordini}
+
+\subsection{UC19 - Amministrazione prodotti}
 \begin{itemize}
     \item \textbf{Attore Primario:} 
     \item \textbf{Descrizione:}
@@ -30,7 +139,8 @@
         \item
     \end{itemize}
 \end{itemize}
-\subsection{UC15 - Lista clienti}
+
+\subsection{UC20 - Amministrazione categorie}
 \begin{itemize}
     \item \textbf{Attore Primario:} 
     \item \textbf{Descrizione:}
@@ -46,7 +156,7 @@
         \item
     \end{itemize}
 \end{itemize}
-\subsection{UC16 - Amministrazione tasse}
+\subsection{UC21 - Logout venditore}
 \begin{itemize}
     \item \textbf{Attore Primario:} 
     \item \textbf{Descrizione:}
@@ -62,55 +172,7 @@
         \item
     \end{itemize}
 \end{itemize}
-\subsection{UC17 - Amministrazione prodotti}
-\begin{itemize}
-    \item \textbf{Attore Primario:} 
-    \item \textbf{Descrizione:}
-    \item \textbf{Precondizione:}
-    \item \textbf{Input:}
-    \item \textbf{Postcondizione:}
-    \item \textbf{Scenario principale:}
-    \begin{enumerate}
-        \item 
-    \end{enumerate}
-    \item \textbf{Inclusioni:}
-    \begin{itemize}
-        \item
-    \end{itemize}
-\end{itemize}
-\subsection{UC6 - Amministrazione categorie}
-\begin{itemize}
-    \item \textbf{Attore Primario:} 
-    \item \textbf{Descrizione:}
-    \item \textbf{Precondizione:}
-    \item \textbf{Input:}
-    \item \textbf{Postcondizione:}
-    \item \textbf{Scenario principale:}
-    \begin{enumerate}
-        \item 
-    \end{enumerate}
-    \item \textbf{Inclusioni:}
-    \begin{itemize}
-        \item
-    \end{itemize}
-\end{itemize}
-\subsection{UC19 - Logout venditore}
-\begin{itemize}
-    \item \textbf{Attore Primario:} 
-    \item \textbf{Descrizione:}
-    \item \textbf{Precondizione:}
-    \item \textbf{Input:}
-    \item \textbf{Postcondizione:}
-    \item \textbf{Scenario principale:}
-    \begin{enumerate}
-        \item 
-    \end{enumerate}
-    \item \textbf{Inclusioni:}
-    \begin{itemize}
-        \item
-    \end{itemize}
-\end{itemize}
-\subsection{UC20 - Login venditore}
+\subsection{UC22 - Login venditore}
 \begin{itemize}
     \item \textbf{Attore Primario:} 
     \item \textbf{Descrizione:}

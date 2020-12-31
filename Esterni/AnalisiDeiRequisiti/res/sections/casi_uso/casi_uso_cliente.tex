@@ -424,38 +424,116 @@
     \end{itemize}
 \end{itemize}
 
-\subsection{UC11 - Gestione ordini utente}
+\subsection{UC11 - Gestione ordini cliente}
 \label{UC11}
 \begin{itemize}
-    \item \textbf{Attore Primario:} 
-    \item \textbf{Descrizione:}
-    \item \textbf{Precondizione:}
-    \item \textbf{Input:}
-    \item \textbf{Postcondizione:}
+    \item \textbf{Attore Primario:} cliente autenticato;
+    \item \textbf{Descrizione:} il cliente vuole accedere all'area di gestione degli ordini;
+    \item \textbf{Precondizione:} il cliente è loggato nel sito;
+    \item \textbf{Postcondizione:} il cliente risulta nella pagina dove è presente la lista di tutti gli ordini effettuati;
     \item \textbf{Scenario principale:}
     \begin{enumerate}
-        \item 
+        \item il cliente entra nella pagina con la lista degli ordini;
+        \item il cliente può annullare l'ordine \hyperref[UC11.1]{UC11.1};
+        \item il cliente richiedere assistenza per un ordine \hyperref[UC11.2]{UC11.2};
+        \item il cliente può richiedere un reso \hyperref[UC11.3]{UC11.3};
+        \item il cliente può visualizzare il riepilogo di un determinato ordine \hyperref[UC11.4]{UC11.4};
     \end{enumerate}
-    \item \textbf{Inclusioni:}
-    \begin{itemize}
-        \item
-    \end{itemize}
+\end{itemize}
+
+\subsubsection{UC11.1 - Annullamento ordine}
+\label{UC11.1}
+\begin{itemize}
+\item \textbf{Attore Primario:} cliente autenticato;
+\item \textbf{Descrizione:} il cliente vuole annullare un ordine effettuato;
+\item \textbf{Precondizione:} il cliente deve aver effettuato un ordine e trovarsi nella sezione gestione degli ordini;
+\item \textbf{Postcondizione:} il cliente deve aver contatto il venditore per l'annullamento;
+\item \textbf{Scenario principale:}
+\begin{enumerate}
+    \item cliente sceglie ordine da annullare;
+    \item cliente viene portato al form di contatto;
+\end{enumerate}
+\item \textbf{Inclusioni:}
+\begin{itemize}
+    \item per annullare un ordine viene aperto il form di contatto che permette al cliente di contattare il venditore \hyperref[UC13]{UC13};
+\end{itemize}
+\end{itemize}
+
+\subsubsection{UC11.2 - Assistenza cliente}
+\label{UC11.2}
+\begin{itemize}
+\item \textbf{Attore Primario:} cliente autenticato;
+\item \textbf{Descrizione:} il cliente vuole contattare il venditore per un problema (errore indirizzo, domande, etc.);
+\item \textbf{Precondizione:} il cliente deve trovarsi nella pagina della gestione degli ordini e quindi aver effettuato l'ordine;
+\item \textbf{Postcondizione:}il cliente deve aver contatto il venditore per richiedere assistenza;
+\item \textbf{Scenario principale:}
+\begin{enumerate}
+    \item cliente decide di contattare l'assistenza;
+    \item cliente viene portato al form di contatto;
+\end{enumerate}
+\item \textbf{Inclusioni:}
+\begin{itemize}
+    \item per l'assistenza su un ordine viene aperto il form di contatto che permette al cliente di contattare il venditore \hyperref[UC13]{UC13};
+\end{itemize}
+\end{itemize}
+
+\subsubsection{UC11.3 - Richiesta reso}
+\label{UC11.3}
+\begin{itemize}
+\item \textbf{Attore Primario:} cliente autenticato;
+\item \textbf{Descrizione:} il cliente vuole effettuare un reso di un ordine ricevuto;
+\item \textbf{Precondizione:} il cliente deve aver effettuato un ordine, averlo ricevuto, ed essere nella pagina di gestione degli ordini
+\item \textbf{Postcondizione:} il cliente deve aver contatto il venditore per il reso;
+\item \textbf{Scenario principale:}
+\begin{enumerate}
+    \item cliente decide di effettuare un reso;
+    \item cliente viene portato al form di contatto;
+\end{enumerate}
+\item \textbf{Inclusioni:}
+\begin{itemize}
+    \item per il reso di un ordine viene aperto il form di contatto che permette al cliente di contattare il venditore \hyperref[UC13]{UC13};
+\end{itemize}
+\end{itemize}
+
+\subsubsection{UC11.4 - Riepilogo ordine}
+\label{UC11.4}
+\begin{itemize}
+\item \textbf{Attore Primario:} cliente autenticato;
+\item \textbf{Descrizione:} il cliente vuole visualizzare il riepilogo dell'ordine effettuato;
+\item \textbf{Precondizione:} il cliente deve aver effettuato l'ordine e trovarsi nella pagina di gestione degli ordini;
+\item \textbf{Postcondizione:} il cliente visualizza il riepilogo;
+\item \textbf{Scenario principale:}
+\begin{enumerate}
+    \item cliente decide di aprire il riepilogo dell'ordine;
+    \item si apre la pagina dove è presentato il riepilogo;
+\end{enumerate}
 \end{itemize}
 
 \subsection{UC12 - Logout cliente}
 \label{UC12}
 \begin{itemize}
-    \item \textbf{Attore Primario:} 
-    \item \textbf{Descrizione:}
-    \item \textbf{Precondizione:}
-    \item \textbf{Input:}
-    \item \textbf{Postcondizione:}
+    \item \textbf{Attore Primario:} cliente autenticato;
+    \item \textbf{Descrizione:} il cliente vuole uscire dal sito;
+    \item \textbf{Precondizione:} il cliente è loggato al sito;
+    \item \textbf{Postcondizione:} il cliente risulta non autenticato nel sito;
     \item \textbf{Scenario principale:}
     \begin{enumerate}
-        \item 
+        \item il cliente effettua il logout;
+        \item il cliente si ritrova nella pagina principale del sito;
     \end{enumerate}
-    \item \textbf{Inclusioni:}
-    \begin{itemize}
-        \item
-    \end{itemize}
+\end{itemize}
+
+\subsection{UC13 - Form di contatto cliente} 
+\label{UC13}
+\begin{itemize}
+    \item \textbf{Attore Primario:} cliente autenticato;
+    \item \textbf{Descrizione:} il cliente vuole/deve contattare il venditore attraverso il form di contatto;
+    \item \textbf{Precondizione:} il cliente deve trovarsi nella gestione degli ordini \hyperref[UC11]{UC11};
+    \item \textbf{Postcondizione:} il cliente riesce a contattare il venditore;
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+        \item il cliente ha aperto il form di contatto;
+        \item compila il form;
+        \item il cliente contatta con successo il venditore;
+    \end{enumerate}
 \end{itemize}
