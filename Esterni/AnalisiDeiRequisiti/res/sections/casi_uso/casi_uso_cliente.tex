@@ -130,56 +130,133 @@
 \subsection{UC6 - Aggiunta prodotto al carrello}
 \label{UC6}
 \begin{itemize}
-    \item \textbf{Attore Primario:} 
-    \item \textbf{Descrizione:}
-    \item \textbf{Precondizione:}
-    \item \textbf{Input:}
-    \item \textbf{Postcondizione:}
+    \item \textbf{Attore Primario:} Cliente generico;
+    \item \textbf{Descrizione:} questa azione serve ad aggiungere un prodotto in vendita nel sito
+                                all'interno del carrello personale utente, specificando in quale quantità;
+    \item \textbf{Precondizione:} il cliente si trova nella PDP di un prodotto;
+    \item \textbf{Input:} il cliente clicca sul pulsante "aggiungi al carrello" dopo aver selezionato la quantità (di default a 1)
+    \item \textbf{Postcondizione:} l'oggetto è stato inserito nel carrello nella quantità desiderata (se disponibile in magazzino)
     \item \textbf{Scenario principale:}
     \begin{enumerate}
-        \item 
+        \item il cliente seleziona la quantità desiderata o lascia quella di default;
+        \item il cliente clicca sul pulsante "aggiungi al carrello" o simile;
     \end{enumerate}
     \item \textbf{Inclusioni:}
     \begin{itemize}
-        \item
+        \item viene eseguito un controllo sulla quantità disponibile di quel determinato prodotto;
+    \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item in caso la quantità disponibile sia insufficiente a soddisfare la richiesta del cliente viene visualizzato un errore;
     \end{itemize}
 \end{itemize}
 
 \subsection{UC7 - Gestione carrello}
 \label{UC7}
 \begin{itemize}
-    \item \textbf{Attore Primario:} 
-    \item \textbf{Descrizione:}
-    \item \textbf{Precondizione:}
-    \item \textbf{Input:}
-    \item \textbf{Postcondizione:}
+    \item \textbf{Attore Primario:} cliente generico;
+    \item \textbf{Descrizione:} insieme di azioni atte alla gestione degli articoli già presenti nel carrello;
+    \item \textbf{Precondizione:} il cliente sta navigando il sito web;
+    \item \textbf{Input:} il cliente esegue un'operazione gestionale sul carrello;
+    \item \textbf{Postcondizione:} il cliente ha eseguito operazioni gestionali sul carrello;
+\end{itemize}
+
+\subsubsection{UC7.1 - Visualizzazione articoli}
+\label{UC7.1}
+\begin{itemize}
+    \item \textbf{Attore Primario:} cliente generico;
+    \item \textbf{Descrizione:} scenario per la visualizzazione degli articoli nel carrello;
+    \item \textbf{Precondizione:} il cliente si trova su una qualunque pagina del sito web;
+    \item \textbf{Input:} il cliente preme su un pulsante dedicato all'accesso al carrello;
+    \item \textbf{Postcondizione:} il cliente visualizza un resoconto di tutti i prodotti inseriti nel carrello durante
+                                   la sessione di utilizzo corrente (se non loggato), altrimenti il carrello mantiene la consistenza
+                                   su ogni dispositivo fino al checkout.
+\end{itemize}
+
+\subsubsection{UC7.2 - Variazione quantità articolo}
+\label{UC7.2}
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente generico;
+    \item \textbf{Descrizione:} scenario per la variazione della quantità di un singolo articolo presente nel carrello;
+    \item \textbf{Precondizione:} il cliente ha eseguito \hyperref[UC7.1]{UC7.1};
+    \item \textbf{Input:} il cliente inserisce la nuova quantità desiderata per quel determinato articolo;
+    \item \textbf{Postcondizione:} se la quantità desiderata è disponibile, viene aggiornato l'articolo nel carrello;
     \item \textbf{Scenario principale:}
-    \begin{enumerate}
-        \item 
-    \end{enumerate}
+    \begin{itemize}
+        \item il cliente seleziona la nuova quantità desiderata;
+        \item il cliente conferma la scelta
+    \end{itemize}
     \item \textbf{Inclusioni:}
     \begin{itemize}
-        \item
+        \item viene eseguito un controllo sulla quantità disponibile di quel determinato prodotto;
     \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item in caso la quantità disponibile sia insufficiente a soddisfare la richiesta del cliente viene visualizzato un errore;
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{UC7.3 - Rimozione articolo}
+\label{UC7.3}
+\begin{itemize}
+    \item \textbf{Attore Primario:} cliente generico;
+    \item \textbf{Descrizione:} scenario per la rimozione di un articolo dal carrello;
+    \item \textbf{Precondizione:} il cliente ha eseguito \hyperref[UC7.1]{UC7.1};
+    \item \textbf{Input:} il cliente preme su un pulsante dedicato alla rimozione di un determinato articolo dal carrello;
+    \item \textbf{Postcondizione:} l'articolo selezionato non è più presente nel carrello.
 \end{itemize}
 
 \subsection{UC8 - Checkout}
 \label{UC8}
 \begin{itemize}
-    \item \textbf{Attore Primario:} 
-    \item \textbf{Descrizione:}
-    \item \textbf{Precondizione:}
-    \item \textbf{Input:}
-    \item \textbf{Postcondizione:}
+    \item \textbf{Attore Primario:} cliente generico;
+    \item \textbf{Descrizione:} caso d'uso per l'acquisto dei prodotti inseriti nel carrello;
+    \item \textbf{Precondizione:} il cliente ha eseguito \hyperref[UC7.1]{UC7.1} e il suo carrello contiene almeno un articolo;
+    \item \textbf{Input:} il cliente preme sul pulsante per avviare il checkout;
+    \item \textbf{Postcondizione:} viene emesso un ordine contenente gli articoli precedentemente inseriti nel carrello. Vengono quindi rimossi dal magazzino;
     \item \textbf{Scenario principale:}
     \begin{enumerate}
-        \item 
+        \item il cliente preme sul pulsante per avviare il checkout
+        \item inserisce gli indirizzi di spedizione o fatturazione (UC 8.1 - 8.2)
+        \item vengono aggiunti i costi della spedizione all'importo totale(UC 8.3)
+        \item si effettua il pagamento (UC 8.4)
+        \item l'ordine è stato emesso e contrassegnato come pagato
     \end{enumerate}
-    \item \textbf{Inclusioni:}
+    \item \textbf{Estensioni:}
     \begin{itemize}
-        \item
+        \item in caso di fallimento del pagamento l'ordine non viene emesso, è necessario quindi riprovare il pagamento e viene visualizzato un errore (UC 8.6);
+        \item l'utente decide di annullare il processo di checkout premendo l'apposito pulsante (UC 8.5);
     \end{itemize}
 \end{itemize}
+
+\subsubsection{UC8.1 - Inserimento indirizzo spedizione}
+\label{UC8.1}
+\begin{itemize}
+    \item \textbf{Attore Primario:} cliente generico;
+    \item \textbf{Descrizione:} scenario per l'inserimento dell'indirizzo di spedizione in fase di checkout;
+    \item \textbf{Precondizione:} il cliente ha avviato il checkout;
+    \item \textbf{Input:} il cliente inserisce i dati tramite l'apposito form oppure sceglie tra quelli personali già presenti (solo se autenticato);
+    \item \textbf{Postcondizione:} l'utente procede con la fase successiva del checkout;
+    \item \textbf{Scenario principale:}
+    \begin{itemize}
+        \item l'utente compila il form con i dati dell'indirizzo oppure ne sceglie uno tra quelli salvati (se autenticato)
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{UC8.2 - Inserimento indirizzo fatturazione}
+\label{UC8.1}
+\begin{itemize}
+    \item \textbf{Attore Primario:} cliente generico;
+    \item \textbf{Descrizione:} scenario per l'inserimento dell'indirizzo di fatturazione in fase di checkout;
+    \item \textbf{Precondizione:} il cliente ha inserito l'indirizzo di spedizione;
+    \item \textbf{Input:} il cliente inserisce i dati tramite l'apposito form oppure sceglie tra quelli personali già presenti (solo se autenticato);
+    \item \textbf{Postcondizione:} l'utente procede con la fase successiva del checkout;
+    \item \textbf{Scenario principale:}
+    \begin{itemize}
+        \item l'utente compila il form con i dati dell'indirizzo oppure ne sceglie uno tra quelli salvati (se autenticato)
+    \end{itemize}
+\end{itemize}
+
 
 \subsection{UC9 - Login}
 \label{UC9}
