@@ -12,5 +12,4 @@
 *.orig
 *.glsdefs
 *.synctex(busy)
-
 .vscode/*

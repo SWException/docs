@@ -1,0 +1,24 @@
+name: Docs Checker
+
+on: 
+  pull_request:
+    branches:
+      - develop
+  push:
+    branches:
+      - develop
+
+jobs:
+  build_check:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo content
+      uses: actions/checkout@v1
+    
+    - name: Search and Compiles Latex Files
+      uses: Jatus93/Latex-multicompiler@v1.0
+      with:
+        path_to_list: .github/filesList
+        artifact: false
