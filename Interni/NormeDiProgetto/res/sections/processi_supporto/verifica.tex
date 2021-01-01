@@ -5,8 +5,8 @@ Il processo di verifica ha come obiettivo la realizzazione di prodotti corretti,
 \subsubsection{Descrizione}
 Con la verifica si cercano e  risolvono i possibili difetti presenti all'interno della documentazione e del codice. Essa viene applicata ad ogni altro processo in esecuzione quando questo:
 \begin{enumerate}
-    \item raggiunge un livello di maturità sufficiente;
-    \item subisce dei cambiamenti significativi.
+    \item Raggiunge un livello di maturità sufficiente;
+    \item Subisce dei cambiamenti significativi.
 \end{enumerate}
 Dopo che la verifica è ultimata è possibile avviare il processo di validazione.
 
@@ -22,17 +22,17 @@ L'input del processo di verifica è un processo già ben formato ma non necessar
 \subsubsection{Verifica della documentazione}
 L'inizio delle attività di verifica per un documento è stabilito dal \textit{Responsabile di Progetto} che ne pianifica le date di inizio e di fine e assegna il ruolo di \textit{Verificatore} ad uno o più membri del gruppo. I verificatori dovranno eseguire un'analisi accurata del documento assegnatogli con l'obiettivo di:
 \begin{enumerate}
-    \item verificare la correttezza grammaticale e la semplicità sintattica;
-    \item assicurarsi che il documento rispetti tutte le norme tipografiche descritte accuratamente in \ref{_normetipografiche};
-    \item controllare la struttura del documento;
-    \item analizzare la pertinenza dei contenuti trattati nel documento.
+    \item Verificare la correttezza grammaticale e la semplicità sintattica;
+    \item Assicurarsi che il documento rispetti tutte le norme tipografiche descritte accuratamente in \ref{_normetipografiche};
+    \item Controllare la struttura del documento;
+    \item Analizzare la pertinenza dei contenuti trattati nel documento.
 \end{enumerate}
 
 \paragraph{Analisi statica}
 Questo tipo di analisi viene effettuata sul prodotto senza eseguirlo e serve per verificare che non ci siano errori. I due tipi di analisi statica sono:
 \begin{itemize}
-    \item \textbf{walkthrough}: consiste nell'analizzare il documento nella sua interezza per trovare i difetti. Viene usata principalmente nella prima fase di verifica;
-    \item \textbf{inspection}: tecnica che prevede la focalizzazione sui punti in cui si sa che si concentrano gli errori. Questo metodo è da preferire rispetto a \textit{walkthrough} poiché molto meno oneroso. Tuttavia si può utilizzarlo solo dopo una fase di verifica iniziale a pettine (di tipo \textit{walktrough}) che permette di acquisire una lista di errori comuni denominata \textit{Lista di Controllo}.
+    \item \textbf{Walkthrough}: consiste nell'analizzare il documento nella sua interezza per trovare i difetti. Viene usata principalmente nella prima fase di verifica;
+    \item \textbf{Inspection}: tecnica che prevede la focalizzazione sui punti in cui si sa che si concentrano gli errori. Questo metodo è da preferire rispetto a \textit{walkthrough} poiché molto meno oneroso. Tuttavia si può utilizzarlo solo dopo una fase di verifica iniziale a pettine (di tipo \textit{walktrough}) che permette di acquisire una lista di errori comuni denominata \textit{Lista di Controllo}.
 \end{itemize}
 
 \paragraph{Procedimento di verifica della documentazione}
@@ -45,8 +45,8 @@ Il processo di verifica viene gestito con il meccanismo delle pull request, una 
 \subsubsection{Verifica del codice}
 Il codice viene verificato con test automatici e con misurazioni quantificabili specificate all'interno del \dext{Piano di qualifica}. Il codice quindi deve obbedire a questi criteri:
 \begin{itemize}
-    \item deve essere corretto rispetto ai test definiti e alle metriche adottate per quantificare la sua qualità;
-    \item deve derivare dai requisiti richiesti in \dext{analisi dei requisiti}.
+    \item Deve essere corretto rispetto ai test definiti e alle metriche adottate per quantificare la sua qualità;
+    \item Deve derivare dai requisiti richiesti in \dext{analisi dei requisiti}.
 \end{itemize}
 
 \paragraph{Analisi statica}
@@ -56,16 +56,16 @@ Anche per il codice, come per la documentazione, la prima fase di verifica sarà
 L'analisi dinamica prevede la verifica del codice mirata a rilevare gli errori mentre questo è in fase di esecuzione.  Questa fase è caratterizzata dall'esecuzione di una batteria di test per verificare il corretto funzionamento del codice prodotto.\\
 Ogni test eseguito deve essere:
 \begin{itemize}
-    \item \textbf{decidibile}: sempre in grado di terminare restituendo un feedback binario (riuscito/ fallito);
-    \item \textbf{ripetibile}: dato un certo input e delle precondizioni fissate, deve produrre sempre lo stesso output per ogni prova effettuata.
+    \item \textbf{Decidibile}: sempre in grado di terminare restituendo un feedback binario (riuscito/ fallito);
+    \item \textbf{Ripetibile}: dato un certo input e delle precondizioni fissate, deve produrre sempre lo stesso output per ogni prova effettuata.
 \end{itemize}
 Ogni test presenta i seguenti parametri:
 \begin{itemize}
-    \item \textbf{ambiente}: caratteristiche hardware e software sulle quali viene eseguito il test;
-    \item \textbf{stato iniziale}: lo stato del software al momento dell'avvio del test;
-    \item \textbf{input}: dati in ingresso inseriti;
-    \item \textbf{output}: dati in uscita attesi;
-    \item \textbf{ulteriori istruzioni}: ulteriori informazioni sulla configurazione iniziale, sull'interpretazione dei risultati ottenuti e sugli eventuali effetti collaterali che l'esecuzione può produrre.
+    \item \textbf{Ambiente}: caratteristiche hardware e software sulle quali viene eseguito il test;
+    \item \textbf{Stato iniziale}: lo stato del software al momento dell'avvio del test;
+    \item \textbf{Input}: dati in ingresso inseriti;
+    \item \textbf{Output}: dati in uscita attesi;
+    \item \textbf{Ulteriori istruzioni}: ulteriori informazioni sulla configurazione iniziale, sull'interpretazione dei risultati ottenuti e sugli eventuali effetti collaterali che l'esecuzione può produrre.
 \end{itemize}
 Per il formato di output di un test è da preferirsi un file di log che esponga in maniera chiara e immediata i risultati.
 
@@ -73,18 +73,18 @@ Per il formato di output di un test è da preferirsi un file di log che esponga 
 Anche i requisiti sono sottoposti al processo di verifica. Perché la verifica dia esito positivo è necessario che essi:
 
 \begin{itemize}
-    \item siano coerenti con la loro implementazione;
-    \item abbiano un grado di complessità adeguato rispetto al tempo e alle risorse pianificate per la riuscita del progetto;
-    \item si dimostrino verificabili e quantificabili
-    \item siano coerenti con gli accordi presi con il proponente, riportati all'interno dell'\dext{analisi dei Requisiti}.
+    \item Siano coerenti con la loro implementazione;
+    \item Abbiano un grado di complessità adeguato rispetto al tempo e alle risorse pianificate per la riuscita del progetto;
+    \item Si dimostrino verificabili e quantificabili;
+    \item Siano coerenti con gli accordi presi con il proponente, riportati all'interno dell'\dext{analisi dei Requisiti}.
 \end{itemize}
 
 \paragraph{Analisi statica}
 I requisiti devono rispettare le proprietà di:
 \begin{itemize}
-    \item \textbf{verificabilità}: un requisito deve essere misurabile oggettivamente;
-    \item \textbf{codice univoco}: un requisito deve essere identificato da un codice, differente per ogni requisito, in accordo con quanto descritto in \ref{_classificazioneRequisiti}
-    \item \textbf{atomicità}: un requisito non deve essere divisibile. %da proapes, ma noi con i microservizi?
+    \item \textbf{Verificabilità}: un requisito deve essere misurabile oggettivamente;
+    \item \textbf{Codice univoco}: un requisito deve essere identificato da un codice, differente per ogni requisito, in accordo con quanto descritto in \ref{_classificazioneRequisiti};
+    \item \textbf{Atomicità}: un requisito non deve essere divisibile.
 \end{itemize}
 
 % \subsubsection{Test}
