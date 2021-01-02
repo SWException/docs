@@ -1,7 +1,31 @@
 \appendix
 \section{Metriche di qualità}
 
-\subsection{Metriche per la qualità del processo}
+\subsection{Metriche per la qualità del processo} \label{_metricheprocesso}
+
+\subsubsection{MPR-DOC1: Budgeted Cost of Work Scheduled (BCWS)} \label{_MPR-DOC1}
+Rappresenta il costo pianificato in euro per realizzare le attività di progetto alla data corrente.
+
+\subsubsection{MPR-DOC2: Actual Cost of Work Performed (ACWP)} \label{_MPR-DOC2}
+Rappresenta il costo effettivamente sostenuto in euro alla data corrente.
+
+\subsubsection{MPR-DOC3: Budgeted Cost of Work Performed (BCWP)} \label{_MPR-DOC3}
+Rappresenta il valore in euro delle attività realizzate alla data corrente.
+
+\subsubsection{MPR-DOC4: Cost Variance (CV)} \label{_MPR-DOC4}
+Indica se il valore realmente maturato è maggiore, uguale o minore rispetto al costo effettivo.
+\begin{itemize}
+    \item \textbf{Formula}: $CV = BCWP - ACWP$;
+    \item \textbf{Risultato}: se $CV > 0$ significa che il progetto produce con maggior efficienza (minor costo) rispetto a quanto pianificato, viceversa se negativo.
+\end{itemize}
+
+\subsubsection{MPR-DOC5: Schedule Variance (SV)} \label{_MPR-DOC5}
+Indica se si è in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto pianificate nella baseline.
+\begin{itemize}
+    \item \textbf{Formula}: $SV = BCWP - BCWS$;
+    \item \textbf{Risultato}: se $SV > 0$ significa che il progetto sta producendo con maggior velocità a quanto pianificato, viceversa se negativo.
+\end{itemize}
+
 
 \subsection{Metriche per la qualità del prodotto} \label{_metricheprodotto}
 Per quantificare la qualità del prodotto vengono adottate le metriche descritte in questa sezione.
