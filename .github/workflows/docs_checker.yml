@@ -21,4 +21,4 @@ jobs:
       uses: Jatus93/Latex-multicompiler@v1.0
       with:
         path_to_list: .github/filesList
-        artifact: false
+        artifact: true
