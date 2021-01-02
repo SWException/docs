@@ -24,7 +24,7 @@
     \begin{enumerate}
         \item il venditore visualizza tutta la lista degli ordini effettuati dai clienti;
          \item il venditore può modificare lo stato di un ordine \hyperref[UC15.1]{UC15.1};
-        \item il venditore può contattare il cliente che ha effettuato un determinato ordine \hyperref[UC22]{UC22};
+        \item il venditore può contattare il cliente che ha effettuato un determinato ordine \hyperref[UC21]{UC21};
         \item può stampare la bolla di un ordine \hyperref[UC15.2]{UC15.2};
         \item può visualizzare i dettagli di un determinato ordine \hyperref[UC15.3]{UC15.3}; 
     \end{enumerate}
@@ -83,7 +83,7 @@
     \item \textbf{Scenario principale:}
     \begin{enumerate}
         \item il venditore visualizza la lista;
-         \item il venditore può contattare un cliente \hyperref[UC22]{UC22};
+         \item il venditore può contattare un cliente \hyperref[UC12]{UC21};
     \end{enumerate}
 \end{itemize}
 
@@ -268,23 +268,8 @@
     \end{enumerate}
 \end{itemize}
 
-\subsection{UC21 - Login venditore}
-\begin{itemize}
-    \item \textbf{Attore Primario:} venditore non autenticato;
-    \item \textbf{Descrizione:} autenticazione del venditore nel backoffice;
-    \item \textbf{Precondizione:} il venditore non è ancora autenticato;
-    \item \textbf{Input:} credenziali di accesso;
-    \item \textbf{Postcondizione:} il venditore è autenticato o rimane non autenticato visualizzando errore
-    \item \textbf{Scenario principale:}
-    \begin{enumerate}
-        \item il venditore inserisci i dati di login
-        \item conferma il login;
-    \end{enumerate}
-\end{itemize}
-
-
-\subsection{UC22 - Contatta cliente}
-\label{UC22}
+\subsection{UC21 - Contatta cliente}
+\label{UC21}
 \begin{itemize}
     \item \textbf{Attore Primario:} venditore autenticato;
     \item \textbf{Descrizione:} il venditore deve contattare il cliente;
@@ -300,4 +285,18 @@
     \begin{itemize}
         \item si apre il form di contatto del venditore \hyperref[UC14]{UC14};
     \end{itemize}
+\end{itemize}
+
+\subsection{UC22 - Login venditore}
+\begin{itemize}
+    \item \textbf{Attore Primario:} venditore non autenticato;
+    \item \textbf{Descrizione:} autenticazione del venditore nel backoffice;
+    \item \textbf{Precondizione:} il venditore non è ancora autenticato;
+    \item \textbf{Input:} credenziali di accesso;
+    \item \textbf{Postcondizione:} il venditore è autenticato o rimane non autenticato visualizzando errore
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+        \item il venditore inserisci i dati di login
+        \item conferma il login;
+    \end{enumerate}
 \end{itemize}
