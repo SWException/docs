@@ -1,0 +1,47 @@
+\section{Informazioni}
+\textbf{Data}: 2020-12-28\\
+\textbf{Orario}: 17:45-18:45\\
+\textbf{Luogo}: Google Meet\\\\
+\textbf{Partecipanti}:\begin{list}{*}{\setlength{\itemsep}{0cm}}
+	\item Marco Canovese
+	\item Nicole Davanzo
+	\item Ivan Furlan
+	\item Gianmarco Guazzo
+	\item Stefano Lazzaroni
+	\item Francesco Trolese
+	\item Michele Veronesi
+	\item RebBabel
+\end{list}
+
+\section{Introduzione}
+In data 2020-12-28 si è tenuto il secondo incontro con i proponenti del capitolato C2-\textit{Emporio Lambda}.
+Tutti i membri del gruppo \textit{SWException} risultano presenti all'incontro che si è svolto in modalità videoconferenza su Google Meet.
+
+\subsection{Ordine del giorno}
+\begin{enumerate}
+  	\item Discussione sugli attori individuati;
+    \item Discussione sui casi d'uso individuati .
+ 
+\end{enumerate}
+
+\section{Svolgimento}
+
+
+\subsection{Discussione sugli attori individuati}
+Il gruppo ha esposto ai proponenti i principali attori individuati nel sistema che si andrà a produrre. 
+I proponenti chiariscono che il ruolo di amministratore non è da prevedere all'interno della piattaforma in quanto in un ambiente di produzione questo ruolo viene svolto dal fornitore.
+
+\subsection{Discussione sui casi d'uso individuati}
+I membri del gruppo \textit{SWException} hanno presentato rapidamente i casi d'uso individuati sino a quel momento per avviare una discussione critica con i proponenti al fine di individuare eventuali mancanze ed in particolare rimuovere ciò che ritenevano superfluo,  in particolare:
+\begin{itemize}
+
+\item Non è necessario prevedere un caso d'uso per l'effettuazione di ordini di prova in quanto il venditore assumerà che tutto funzioni correttamente in quanto già testato dal fornitore;
+\item L'account amministratore non dovrà avere accesso al negozio ma solo limitatamente alla parte di backoffice ed è necessario prevedere due pagine di autenticazioni separate per clienti e per venditori;
+\item I proponenti chiariscono che è necessario prevedere la possibilità di avere più utenti di ruolo venditore all'interno del sistema che sono creati dall'amministratore; 
+\item I proponenti chiariscono che la gestione degli utenti non è richiesta salvo per le operazioni di recupero password dimenticata che devono essere previste da un caso d'uso apposito;
+\item E' stato richiesto da parte dei proponenti di prevedere che la possibilità di aggiungere prodotti al carrello sia permessa solamente agli utenti autenticati;
+\item Viene considerata superflua la gestione dei codici promozionali i proponenti richiedono di rimuovere il caso d'uso;
+\item I proponenti consigliano di utilizzare contentfull come CMS;
+\item I proponenti preferirebbero una navigazione basata su categorie e/o tag anzichè su una barra di ricerca.
+
+\end{itemize}
