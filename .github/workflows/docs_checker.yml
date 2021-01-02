@@ -17,10 +17,13 @@ jobs:
     - name: Checkout repo content
       uses: actions/checkout@v1
     
-    - name: Search and Compiles Latex Files
+    - name: Search Latex Files
+      run: find . -name "main.tex" | sed -e 's/\/main.tex//g' | sed -e 's/\.\///g' > filesList
+    
+    - name: Compiles Latex Files
       uses: Jatus93/Latex-multicompiler@v1.0
       with:
-        path_to_list: .github/filesList
+        path_to_list: filesList
         artifact: true
     
     - name: GulpeaseCheck
@@ -51,3 +54,4 @@ jobs:
       with:
         name: spell-check-errors
         path: Documents/spellCheck/ # path/to/artifact
+
