@@ -23,8 +23,20 @@ jobs:
         path_to_list: .github/filesList
         artifact: true
     
-    - name: Caricare artefatti
+    - name: GulpeaseCheck
+      uses: Jatus93/GulpeaseAction@master
+      with:
+        directory: Documents/
+    
+    - name: SpellCheck
+      uses: Jatus93/spellCheck@master
+      with:
+        directory: ./Documents
+        languages: "en_GB;en_US;italiano"
+    
+    - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
         name: pdf-artifact
         path: Documents/ # path/to/artifact
+    
