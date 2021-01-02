@@ -34,9 +34,20 @@ jobs:
         directory: ./Documents
         languages: "en_GB;en_US;italiano"
     
-    - name: Upload artifact
+    - name: Upload artifact PDF
       uses: actions/upload-artifact@v2
       with:
         name: pdf-artifact
-        path: Documents/ # path/to/artifact
+        path: Documents/*.pdf # path/to/artifact
     
+    - name: Upload artifact Gulpease
+      uses: actions/upload-artifact@v2
+      with:
+        name: gulpease
+        path: Documents/Gulpease/ # path/to/artifact
+        
+    - name: Upload artifact SpellCheck
+      uses: actions/upload-artifact@v2
+      with:
+        name: spell-check-errors
+        path: Documents/spellCheck/ # path/to/artifact
