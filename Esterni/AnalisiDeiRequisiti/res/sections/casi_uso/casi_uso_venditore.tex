@@ -1,128 +1,302 @@
-\subsection{UC13 - Visualizzazione dettagli ordine}
+\subsection{UC14 - Form di contatto venditore}
+\label{UC14}
 \begin{itemize}
-    \item \textbf{Attore Primario:} 
-    \item \textbf{Descrizione:}
-    \item \textbf{Precondizione:}
-    \item \textbf{Input:}
-    \item \textbf{Postcondizione:}
+    \item \textbf{Attore Primario:} venditore autenticato;
+    \item \textbf{Descrizione:} il venditore deve contattare il cliente;
+    \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini \hyperref[UC15]{UC15} o nella lista clienti\hyperref[UC16]{UC16};
+    \item \textbf{Postcondizione:} il venditore deve aver contattato il cliente con successo;
     \item \textbf{Scenario principale:}
     \begin{enumerate}
-        \item 
+        \item il venditore ha aperto il form di contatto;
+        \item compila il form;
+        \item il venditore contatta con successo il cliente;
+    \end{enumerate}
+\end{itemize}
+
+\subsection{UC15 - Lista ordini}
+\label{UC15}
+\begin{itemize}
+    \item \textbf{Attore Primario:} venditore autenticato;
+    \item \textbf{Descrizione:} il venditore vuole visualizzare tutta la lista degli ordini effettuati dai clienti;
+    \item \textbf{Precondizione:} il venditore deve essere loggato;
+    \item \textbf{Postcondizione:} il venditore riesce a visualizzare la lista;
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+        \item il venditore visualizza tutta la lista degli ordini effettuati dai clienti;
+         \item il venditore può modificare lo stato di un ordine \hyperref[UC15.1]{UC15.1};
+        \item il venditore può contattare il cliente che ha effettuato un determinato ordine \hyperref[UC21]{UC21};
+        \item può stampare la bolla di un ordine \hyperref[UC15.2]{UC15.2};
+        \item può visualizzare i dettagli di un determinato ordine \hyperref[UC15.3]{UC15.3}; 
+    \end{enumerate}
+\end{itemize}
+
+\subsubsection{UC15.1 - Modifica stato ordine}
+\label{UC15.1}
+\begin{itemize}
+    \item \textbf{Attore Primario:} venditore autenticato;
+    \item \textbf{Descrizione:} il venditore vuole modificare lo stato dell'ordine;
+    \item \textbf{Precondizione:} il venditore deve trovarsi nella sezione di gestione degli ordini;
+    \item \textbf{Postcondizione:} il venditore modifica lo stato di un ordine
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+        \item il venditore seleziona un ordine dalla lista;
+        \item il venditore modifica lo stato dell'ordine;
+    \end{enumerate}
+\end{itemize}
+
+
+\subsubsection{UC15.2 - Stampa bolla}
+\label{UC15.2}
+\begin{itemize}
+    \item \textbf{Attore Primario:} venditore autenticato;
+    \item \textbf{Descrizione:}il venditore vuole stampare la bolla per l'ordine;
+    \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini;
+    \item \textbf{Postcondizione:} il venditore stampa la bolla;
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+        \item il venditore seleziona un determinato ordine;
+        \item il venditore stampa la bolla;
+    \end{enumerate}
+\end{itemize}
+
+\subsubsection{UC15.3 - Visualizzazione dettagli ordine}
+\label{UC15.3}
+\begin{itemize}
+    \item \textbf{Attore Primario:} venditore autenticato;
+    \item \textbf{Descrizione:} il venditore vuole visualizzare i dettagli di un determinato ordine;
+    \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini e selezionarne uno;
+    \item \textbf{Postcondizione:} il venditore visualizza tutti i dettagli dell'ordine;
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+        \item il venditore seleziona un determinato ordine;
+        \item il venditore apre la pagina con i dettagli dell'ordine selezionato;
+    \end{enumerate}
+\end{itemize}
+
+\subsection{UC16 - Lista clienti}
+\label{UC16}
+\begin{itemize}
+    \item \textbf{Attore Primario:} venditore autenticato;
+    \item \textbf{Descrizione:} il venditore vuole visualizzare la lista dei clienti del sito;
+    \item \textbf{Precondizione:} il venditore deve essere loggato;
+    \item \textbf{Postcondizione:} il venditore visualizza tutta la lista clienti;
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+        \item il venditore visualizza la lista;
+         \item il venditore può contattare un cliente \hyperref[UC12]{UC21};
+    \end{enumerate}
+\end{itemize}
+
+\subsection{UC17 - Amministrazione tasse}
+\begin{itemize}
+    \item \textbf{Attore Primario:} venditore autenticato
+    \item \textbf{Descrizione:} Il venditore ha possibilità di gestire le operazioni relative all’amministrazione della tassazione dei prodotti 
+    \item \textbf{Precondizione:} il venditore ha cliccato nel bottone relativo alla gestione delle tasse all’interno della dashboard venditore.
+    \item \textbf{Input:}
+    \item \textbf{Postcondizione:} il venditore ha visione della tabella relativa alle aliquote IVA già presenti nel sistema e può intraprendere una delle azioni disponibili.
+    \item \textbf{Scenario principale:} Il venditore ha cliccato nel bottone relativo alla gestione delle tasse e ha visione della tabella riepilogativa delle varie aliquote IVA presenti nel sistema, può scegliere di effettuare una delle seguenti azioni 
+    \begin{enumerate}
+        \item Aggiunta aliquote IVA;
+        \item Rimozione aliquote IVA;
+        \item Modifica aliquota IVA.
+    \end{enumerate}
+\end{itemize}
+
+
+\subsubsection{UC17.1 - Aggiunta aliquota IVA}
+\begin{itemize}
+    \item \textbf{Attore Primario:}  venditore autenticato
+    \item \textbf{Descrizione:} Il venditore aggiunge una nuova aliquota IVA  
+    \item \textbf{Precondizione:} il venditore ha cliccato nel bottone per effettuare l’inserimento di una nuova aliquota
+    \item \textbf{Postcondizione:} il venditore ha inserito i campi richiesti ovvero la percentuale IVA e la relativa descrizione e ne ha confermato l’inserimento cliccando l’apposito pulsante.
+    \item \textbf{Scenario principale:} Il venditore ha cliccato nel bottone di aggiunta aliquota, posto nella pagina di amministrazione della tassazione e gli viene richiesto di inserire:
+    \begin{enumerate}
+        \item Inserimento percentuale IVA;
+        \item Inserimento descrizione aliquota.
+    \end{enumerate}
+\end{itemize}
+
+
+\subsubsection{UC17.2 - Modifica aliquota IVA}
+\begin{itemize}
+    \item \textbf{Attore Primario:}  venditore autenticato
+    \item \textbf{Descrizione:} Il venditore effettua la modifica di una aliquota IVA già presente nel sistema;
+    \item \textbf{Precondizione:} Pre-condizione: il venditore ha cliccato nel bottone per effettuare la modifica di un’aliquota IVA;
+    \item \textbf{Postcondizione:} il venditore ha effettuato una, entrambe o nessuna delle azioni possibili di modifica. 
+    \item \textbf{Scenario principale:} Il venditore ha cliccato nel bottone di modifica di un’aliquota IVA già presente nel sistema per apportare delle modifiche, può quindi effettuare le seguenti azioni
+    \begin{enumerate}
+        \item Modificare percentuale IVA;
+        \item Modificare descrizione aliquota.
+    \end{enumerate}
+\end{itemize}
+
+
+
+\subsection{UC18 - Amministrazione prodotti}
+\begin{itemize}
+    \item \textbf{Attore Primario:}  venditore autenticato.
+    \item \textbf{Descrizione:} Il venditore ha possibilità di visualizzare l’elenco prodotti inseriti nel sistema e di effettuare una delle azioni rese disponibili.
+    \item \textbf{Precondizione:} il venditore ha cliccato nel bottone relativo alla gestione dei prodotti all’interno della dashboard venditore.
+    \item \textbf{Input:}
+    \item \textbf{Postcondizione:} il venditore ha visione della tabella relativa dei prodotti già presenti nel sistema e può intraprendere una delle azioni disponibili.
+    \item \textbf{Scenario principale:} Il venditore ha cliccato nel bottone relativo alla gestione dei prodotti e ha visione della tabella riepilogativa dei vari prodotti presenti nel sistema, può scegliere di effettuare una delle seguenti azioni 
+    \begin{enumerate}
+        \item Aggiunta prodotto;
+        \item Modifica prodotto;
+        \item Rimuovi prodotto;
+        \item Aggiorna giacenza.
+    \end{enumerate}
+\end{itemize}
+
+
+\subsubsection{UC18.2 - Aggiunta prodotto}
+\begin{itemize}
+    \item \textbf{Attore Primario:}  venditore autenticato.
+    \item \textbf{Descrizione:} Il venditore ha possibilità di aggiungere un nuovo prodotto all’interno del portale.
+    \item \textbf{Precondizione:} il venditore  si trova nella pagina di gestione prodotti e ha cliccato il bottone per inserire un nuovo articolo;
+    \item \textbf{Input:} dati prodotto
+    \item \textbf{Postcondizione:} il venditore ha completato i campi richiesti e confermato il salvataggio dei dati;
+    \item \textbf{Scenario principale:} Il venditore ha cliccato nel bottone per inserire un nuovo prodotto all’interno del catalogo prodotti gestito dal sistema, le azioni da completare sono: 
+    \begin{enumerate}
+        \item Inserimento titolo prodotto;
+        \item Inserimento descrizione prodotto;
+        \item Inserimento immagine prodotto;
+        \item Selezione categorie prodotto;
+        \item Inserimento prezzo netto prodotto;
+        \item Selezione aliquota IVA;
+        \item Selezione stato visibilità prodotto; 
+        \item Aggiungi attributi prodotto;
+        \item Salvataggio.
+    \end{enumerate}
+\end{itemize}
+
+
+\subsubsection{UC18.3 - Modifica  prodotto}
+\begin{itemize}
+    \item \textbf{Attore Primario:}  venditore autenticato.
+    \item \textbf{Descrizione:} Il venditore ha possibilità di modificare un prodotto già inserito nel sistema.
+    \item \textbf{Precondizione:} il venditore  si trova nella pagina di gestione prodotti e ha cliccato il bottone per modificare un articolo;
+    \item \textbf{Input:} dati prodotto
+    \item \textbf{Postcondizione:} il venditore ha effettuato una delle azioni proposte;
+    \item \textbf{Scenario principale:} Il venditore ha cliccato nel bottone per modificare un prodotto all’interno del catalogo prodotti gestito dal sistema, le azioni che potrebbe attuare sono: 
+    \begin{enumerate}
+        \item Modifica titolo prodotto;
+        \item Modifica descrizione prodotto;
+        \item Modifica immagine prodotto;
+        \item Modifica categorie prodotto;
+        \item Modifica prezzo netto prodotto;
+        \item Modifica aliquota IVA;
+        \item Modifica stato visibilità prodotto; 
+        \item Modifica attributi prodotto;
+        \item Salvataggio.
+    \end{enumerate}
+\end{itemize}
+
+\subsubsection{UC18.4 - Rimovi  prodotto}
+\begin{itemize}
+    \item \textbf{Attore Primario:}  venditore autenticato.
+    \item \textbf{Descrizione:} Il venditore può rimuovere un prodotto
+    \item \textbf{Precondizione:} il sistema rende disponibile, nella tabella di riepilogo prodotti, un apposito pulsante per la rimozione del prodotto.
+    \item \textbf{Postcondizione:} l’utente ha cliccato il pulsante per la rimozione del prodotto. 
+    \item \textbf{Scenario principale:} l’utente può rimuovere un prodotto selezionando l’apposito pulsante di rimozione
+   
+\end{itemize}
+
+
+\subsubsection{UC18.5 - Aggiorna giacenza}
+\begin{itemize}
+    \item \textbf{Attore Primario:}  venditore autenticato.
+    \item \textbf{Descrizione:}Il venditore può aggiornare la giacenza del prodotto nel magazzino
+    \item \textbf{Precondizione:} il sistema rende disponibile il pulsante per l’aggiornamento della giacenza che visualizza un campo in cui l’utente può inserire il dato aggiornato 
+    \item \textbf{Input:} dato nuova giacenza
+    \item \textbf{Postcondizione:} l’utente ha cliccato il pulsante per l’aggiornamento della giacenza e ha inserito il dato aggiornato. 
+    \item \textbf{Scenario principale:} l’utente visualizza la tabella riepilogativa dei prodotti e aggiorna il dato relativo alla giacenza di un prodotto
+   
+\end{itemize}
+
+
+\subsection{UC19 - Amministrazione categorie}
+\begin{itemize}
+    \item \textbf{Attore Primario:}  venditore autenticato.
+    \item \textbf{Descrizione:}  Il venditore può visualizzare e gestire le categorie di prodotto.
+    \item \textbf{Precondizione:}  il venditore ha cliccato nella pulsante per accedere alla gestione delle categorie prodotto.
+    \item \textbf{Postcondizione:} l’utente visualizza la tabella riepilogativa delle categorie prodotto presenti nel sistema.
+    \item \textbf{Scenario principale:} visualizza la tabella riepilogativa delle categorie prodotto già presenti nel sistema e può intraprendere una delle seguenti azioni
+    \begin{enumerate}
+        \item Aggiungi categoria;
+        \item Modifica categoria;
+        \item Rimuovi categoria;
+    \end{enumerate}
+\end{itemize}
+
+\subsubsection{UC19.1 - Aggiungi categoria}
+\begin{itemize}
+    \item \textbf{Attore Primario:}  venditore autenticato.
+    \item \textbf{Descrizione:}  Il venditore può aggiungere una categoria.
+    \item \textbf{Precondizione:} il venditore ha cliccato nel pulsante per aggiungere una nuova categoria di prodotto.
+    \item \textbf{Input:} nome della categoria
+    \item \textbf{Postcondizione:} l’utente ha visualizzato il form di inserimento e compilato i dati richiesti.
+    \item \textbf{Scenario principale:} il venditore ha cliccato sul pulsante di inserimento nuova categoria disponibile nella pagina di gestione categorie.  Le azioni che dovrà compiere sono
+    \begin{enumerate}
+        \item Inserimento nome categoria;
+        \item Salvataggio;
+    \end{enumerate}
+\end{itemize}
+
+\subsubsection{UC19.2 - Rimuovi categoria}
+\begin{itemize}
+    \item \textbf{Attore Primario:}  venditore autenticato.
+    \item \textbf{Descrizione:}  Il venditore può rimuovere una categoria.
+    \item \textbf{Precondizione:} il venditore ha cliccato nel pulsante per rimuovere una nuova categoria di prodotto.
+    \item \textbf{Postcondizione:} Il sistema ha rimosso la categoria selezionata dall'utente per l'eliminazione
+    \item \textbf{Scenario principale:} il venditore ha cliccato sul pulsante di rimozione categoria disponibile nella pagina di gestione categorie. 
+ 
+\end{itemize}
+
+
+
+
+\subsection{UC20 - Logout venditore}
+\begin{itemize}
+    \item \textbf{Attore Primario:} venditore autenticato;
+    \item \textbf{Descrizione:} logout venditore dal backoffice;
+    \item \textbf{Precondizione:} il venditore è autenticato;
+    \item \textbf{Postcondizione:} il venditore non è più autenticato nel backoffice;
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+        \item il venditore clicca su logout.
+    \end{enumerate}
+\end{itemize}
+
+\subsection{UC21 - Contatta cliente}
+\label{UC21}
+\begin{itemize}
+    \item \textbf{Attore Primario:} venditore autenticato;
+    \item \textbf{Descrizione:} il venditore deve contattare il cliente;
+    \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini \hyperref[UC15]{UC15} o nella lista dei clienti\hyperref[UC16]{UC16};;
+    \item \textbf{Postcondizione:} il venditore deve contattare con successo il cliente;
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+        \item il venditore deve contattare un cliente;
+        \item il venditore viene portato al form di contatto;
+        \item la comunicazione va a buon fine;
     \end{enumerate}
     \item \textbf{Inclusioni:}
     \begin{itemize}
-        \item
+        \item si apre il form di contatto del venditore \hyperref[UC14]{UC14};
     \end{itemize}
 \end{itemize}
-\subsection{UC14 - Lista ordini}
+
+\subsection{UC22 - Login venditore}
 \begin{itemize}
-    \item \textbf{Attore Primario:} 
-    \item \textbf{Descrizione:}
-    \item \textbf{Precondizione:}
-    \item \textbf{Input:}
-    \item \textbf{Postcondizione:}
+    \item \textbf{Attore Primario:} venditore non autenticato;
+    \item \textbf{Descrizione:} autenticazione del venditore nel backoffice;
+    \item \textbf{Precondizione:} il venditore non è ancora autenticato;
+    \item \textbf{Input:} credenziali di accesso;
+    \item \textbf{Postcondizione:} il venditore è autenticato o rimane non autenticato visualizzando errore
     \item \textbf{Scenario principale:}
     \begin{enumerate}
-        \item 
+        \item il venditore inserisci i dati di login
+        \item conferma il login;
     \end{enumerate}
-    \item \textbf{Inclusioni:}
-    \begin{itemize}
-        \item
-    \end{itemize}
-\end{itemize}
-\subsection{UC15 - Lista clienti}
-\begin{itemize}
-    \item \textbf{Attore Primario:} 
-    \item \textbf{Descrizione:}
-    \item \textbf{Precondizione:}
-    \item \textbf{Input:}
-    \item \textbf{Postcondizione:}
-    \item \textbf{Scenario principale:}
-    \begin{enumerate}
-        \item 
-    \end{enumerate}
-    \item \textbf{Inclusioni:}
-    \begin{itemize}
-        \item
-    \end{itemize}
-\end{itemize}
-\subsection{UC16 - Amministrazione tasse}
-\begin{itemize}
-    \item \textbf{Attore Primario:} 
-    \item \textbf{Descrizione:}
-    \item \textbf{Precondizione:}
-    \item \textbf{Input:}
-    \item \textbf{Postcondizione:}
-    \item \textbf{Scenario principale:}
-    \begin{enumerate}
-        \item 
-    \end{enumerate}
-    \item \textbf{Inclusioni:}
-    \begin{itemize}
-        \item
-    \end{itemize}
-\end{itemize}
-\subsection{UC17 - Amministrazione prodotti}
-\begin{itemize}
-    \item \textbf{Attore Primario:} 
-    \item \textbf{Descrizione:}
-    \item \textbf{Precondizione:}
-    \item \textbf{Input:}
-    \item \textbf{Postcondizione:}
-    \item \textbf{Scenario principale:}
-    \begin{enumerate}
-        \item 
-    \end{enumerate}
-    \item \textbf{Inclusioni:}
-    \begin{itemize}
-        \item
-    \end{itemize}
-\end{itemize}
-\subsection{UC6 - Amministrazione categorie}
-\begin{itemize}
-    \item \textbf{Attore Primario:} 
-    \item \textbf{Descrizione:}
-    \item \textbf{Precondizione:}
-    \item \textbf{Input:}
-    \item \textbf{Postcondizione:}
-    \item \textbf{Scenario principale:}
-    \begin{enumerate}
-        \item 
-    \end{enumerate}
-    \item \textbf{Inclusioni:}
-    \begin{itemize}
-        \item
-    \end{itemize}
-\end{itemize}
-\subsection{UC19 - Logout venditore}
-\begin{itemize}
-    \item \textbf{Attore Primario:} 
-    \item \textbf{Descrizione:}
-    \item \textbf{Precondizione:}
-    \item \textbf{Input:}
-    \item \textbf{Postcondizione:}
-    \item \textbf{Scenario principale:}
-    \begin{enumerate}
-        \item 
-    \end{enumerate}
-    \item \textbf{Inclusioni:}
-    \begin{itemize}
-        \item
-    \end{itemize}
-\end{itemize}
-\subsection{UC20 - Login venditore}
-\begin{itemize}
-    \item \textbf{Attore Primario:} 
-    \item \textbf{Descrizione:}
-    \item \textbf{Precondizione:}
-    \item \textbf{Input:}
-    \item \textbf{Postcondizione:}
-    \item \textbf{Scenario principale:}
-    \begin{enumerate}
-        \item 
-    \end{enumerate}
-    \item \textbf{Inclusioni:}
-    \begin{itemize}
-        \item
-    \end{itemize}
 \end{itemize}
