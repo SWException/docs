@@ -16,18 +16,19 @@
 
 \section{Requisiti}
 
-% Come riportato nelle norme di progetto:
-% Requisiti nella forma: R[Importanza][Tipologia][Codice]
-
-% R[1|2|3][V|F|P|Q][[CodiceBase](.[CodiceSottoCaso])*]
-
-% Importanza: (1 - obbligatorio), (2 - desiderabile), (3 - opzionale)
-% Tipologia: (V - requisito di vincolo), (F - requisito funzionale), (P - requisito prestazionale), (Q - requisito di qualità)
-
 % comandi per le tabelle
 \newcommand{\req}[3]{\textbf{R#1#2#3}}
 \newcommand{\sreq}[3]{{\color{gray} R#1#2#3}}
 \newcommand{\row}{ \\ \hline}
+
+%contatore dei requisiti
+\newcounter{CR} % Contatore Requisiti 
+\setcounter{CR}{0}
+\newcounter{CSR} % Contatore Sotto-Requisiti
+\setcounter{CSR}{0}
+\newcommand{\stepCR}[0]{\stepcounter{CR}\setcounter{CSR}{0}\arabic{CR}}
+\newcommand{\stepsubCR}{\stepcounter{CSR}\arabic{CR}.\arabic{CSR}}
+\newcommand{\resetCR}{\setcounter{CR}{0}\setcounter{CSR}{0}}
 
 \subsection{Introduzione}
 In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisiti del progetto suddivisi per tipologia. Ciascun requisito possiede un codice identificativo stabilito in accordo con quanto scritto nelle \dext{Norme di Progetto v1.0.0}.
@@ -48,8 +49,12 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \endlastfoot
 
         %requisiti ivan
-        \req{1}{F}{1} & L'utente deve poter visualizzare le informazione sul venditore & \hyperref[UC1]{UC1} \row
-        \sreq{1}{F}{1.1} & L'utente deve poter visualizzare le informazioni di contatto del venditore & \hyperref[UC1]{UC1}  \row
+        \req{1}{F}{\stepCR} & L'utente deve poter visualizzare le informazione sul venditore & \hyperref[UC1]{UC1} \row
+        \sreq{1}{F}{\stepsubCR} & L'utente deve poter visualizzare le informazioni di contatto del venditore & \hyperref[UC1]{UC1}  \row
+        \sreq{1}{F}{\stepsubCR} & L'utente deve poter visualizzare le informazioni di contatto del venditore & \hyperref[UC1]{UC1}  \row
+        \req{1}{F}{\stepCR} & L'utente deve poter visualizzare le informazione sul venditore & \hyperref[UC1]{UC1} \row
+        \sreq{1}{F}{\stepsubCR} & L'utente deve poter visualizzare le informazioni di contatto del venditore & \hyperref[UC1]{UC1}  \row
+        \sreq{1}{F}{\stepsubCR} & L'utente deve poter visualizzare le informazioni di contatto del venditore & \hyperref[UC1]{UC1}  \row
 
         %requisiti gianmarco
 
@@ -60,6 +65,7 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
     \end{longtable}
 \end{center}
 
+\resetCR
 \subsection{Requisiti di qualità}
 \begin{center}
     \rowcolors{1}{lightest-grayest}{blue!20}
@@ -75,8 +81,8 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \endfoot
         \endlastfoot
 
-        \req{1}{Q}{1}         & L'utente deve potersi autenticare per accedere alla web app     & \hyperref[UC1]{UC1}  \row
-        \sreq{2}{Q}{1.1}      & L'utente deve poter usufruire dell'autenticazione a due fattori & \hyperref[UC1]{UC1}  \row
+        \req{1}{Q}{\stepCR}         & L'utente deve potersi autenticare per accedere alla web app     & \hyperref[UC1]{UC1}  \row
+        \sreq{2}{Q}{\stepsubCR}      & L'utente deve poter usufruire dell'autenticazione a due fattori & \hyperref[UC1]{UC1}  \row
         %requisiti ivan
 
         %requisiti gianmarco
@@ -88,6 +94,7 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
     \end{longtable}
 \end{center}
 
+\resetCR
 \subsection{Requisiti di vincolo}
 \begin{center}
     \rowcolors{1}{lightest-grayest}{blue!20}
@@ -103,8 +110,8 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \endfoot
         \endlastfoot
 
-        \req{1}{V}{1}         & L'utente deve potersi autenticare per accedere alla web app     & \hyperref[UC1]{UC1}  \row
-        \sreq{2}{V}{1.1}      & L'utente deve poter usufruire dell'autenticazione a due fattori & \hyperref[UC1]{UC1}  \row
+        \req{1}{V}{\stepCR}         & L'utente deve potersi autenticare per accedere alla web app     & \hyperref[UC1]{UC1}  \row
+        \sreq{2}{V}{\stepsubCR}      & L'utente deve poter usufruire dell'autenticazione a due fattori & \hyperref[UC1]{UC1}  \row
         %requisiti ivan
 
         %requisiti gianmarco
@@ -116,6 +123,7 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
     \end{longtable}
 \end{center}
 
+\resetCR
 \subsection{Requisiti prestazionali}
 \begin{center}
     \rowcolors{1}{lightest-grayest}{blue!20}
@@ -131,8 +139,8 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \endfoot
         \endlastfoot
 
-        \req{1}{P}{1}         & L'utente deve potersi autenticare per accedere alla web app     & \hyperref[UC1]{UC1}  \row
-        \sreq{2}{P}{1.1}      & L'utente deve poter usufruire dell'autenticazione a due fattori & \hyperref[UC1]{UC1}  \row
+        \req{1}{P}{\stepCR}         & L'utente deve potersi autenticare per accedere alla web app     & \hyperref[UC1]{UC1}  \row
+        \sreq{2}{P}{\stepsubCR}      & L'utente deve poter usufruire dell'autenticazione a due fattori & \hyperref[UC1]{UC1}  \row
         %requisiti ivan
 
         %requisiti gianmarco
