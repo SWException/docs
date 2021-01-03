@@ -1,5 +1,5 @@
 % ---------------------------
-%	  	  [ Documento ]
+%	  	  [ Verbale ]
 %	----------------------
 %	    SWException
 %  Progetto di SWE (2020-21)
@@ -12,32 +12,25 @@
 
 % --------------
 
-\newcommand{\docNome}{ Studio di Fattibilità}
-\newcommand{\docVersione}{0.2.0}
-\newcommand{\docNomeProgetto}{ EmporioLambda: piattaforma di e-commerce in stile Serverless }
-\newcommand{\docStatus}{in redazione}
+\newcommand{\docNome}{ Verbale Interno del 2020-12-17 }
+\newcommand{\docVersione}{0.1.0}
+\newcommand{\docStatus}{verificato}
 \newcommand{\docUso}{interno}
-\newcommand{\docDescrizione}{
-    \begin{center}
-    Raccolta degli studi di fattibilità di tutti i capitolati
-    \end{center}
-}
-\newcommand{\docDestinatari}{
-    SWException \\&
-    prof. Tullio Vardanega \\&
-    prof. Riccardo Cardin
-}
 
 % --------------
 
 \newcommand{\docRedattori}{
-    Marco Canovese \\& Gianmarco Guazzo \\& Stefano Lazzaroni \\& Francesco Trolese \\& Michele Veronesi
+	Guazzo Gianmarco
 }
 \newcommand{\docVerificatori}{
-	Ivan Furlan \\& Nicole Davanzo
+	Michele Veronesi
 }
 \newcommand{\docApprovazione}{
-    Francesco Trolese
+    nome cognome
+}
+
+\newcommand{\docNomeProgetto}{
+    EmporioLambda: piattaforma e-commerce in stile serverless
 }
 
 \newcommand{\nomeCorso}{
@@ -52,13 +45,13 @@
 
 \documentclass[11pt,a4paper,table]{article}
 
-\input{res/configurazione}
+\input{res/configurazione}    
 
 % ---------------------------
 % Dati frontespizio
 % ---------------------------
 
-\title{ \hr \huge \textsc{\docNome} \\
+\title{ \hr \huge \textsc{\docNome} \\ 
         \vspace{11pt} \large \textsc{\docNomeProgetto} \hr}
 
 \author{} % Non toccare
@@ -68,7 +61,7 @@
 % Composizione del documento
 % ---------------------------
 
-\begin{document}
+\begin{document} 
 
 % Frontespizio
 
@@ -81,14 +74,18 @@
 \pagenumbering{arabic}
 \include{res/registro}
 
-\tableofcontents
 
 % Contenuto
 
 \newpage
-\input{res/sezioni}
+\input{res/contenuto}
 
 
+
+% Registro Decisioni
+
+\newpage
+\input{res/tracciamenti}
 
 \end{document}
 
