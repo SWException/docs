@@ -62,6 +62,23 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \sreq{1}{F} & L'utente deve poter  & \hyperref[UC2]{UC2} \row
 
         %requisiti gianmarco
+        \req{1}{F} & L'utente deve poter fare il checkout dei prodotti nel carrello & \hyperref[UC8]{UC8} \row
+        \sreq{2}{F} & Il sistema deve visualizzare un messaggio d'errore se si prova a fare il checkout con il carrello vuoto & \hyperref[UC8]{UC8} \row
+        \sreq{1}{F} & L'utente può selezionare l'indirizzo di consegna e fatturazione da quelli salvati & \hyperref[UC8.1]{UC8.1}\hyperref[UC8.2]{UC8.2} \row
+        \sreq{1}{F} & L'utente deve poter inserire l'indirizzo di fatturazione & \hyperref[UC8.1]{UC8.1} \row
+        \sreq{1}{F} & L'utente deve poter inserire l'indirizzo di consegna & \hyperref[UC8.2]{UC8.2} \row
+        \sreq{1}{F} & L'utente deve poter visualizzare i costi di spedizione & \hyperref[UC8.3]{UC8.3}\row
+        \sreq{1}{F} & L'utente deve poter utilizzare il provider esterno di pagamenti & \hyperref[UC8.4]{UC8.4}\row
+        \sreq{1}{F} & L'utente deve poter selezionare il metodo di pagamento preferito & \hyperref[UC8.4]{UC8.4}\row
+        \sreq{1}{F} & Il sistema deve avvisare il cliente che il pagamento non è stato completato & \hyperref[UC8.5]{UC8.5}\row
+        \sreq{1}{F} & L'utente deve poter inserire nuovamente gli estremi per il metodo di pagamento dopo l'errore & \hyperref[UC8.5]{UC8.5}\row
+        \sreq{1}{F} & Il sistema deve avvisare il cliente dell'avvenuto pagamento e della rimozione delle merci dal magazzino & \hyperref[UC8.6]{UC8.6}\row
+        \req{1}{F} & L'utente deve poter fare il login per accedere alla webapp & \hyperref[UC9]{UC9}\row
+        \sreq{1}{F} & Il sistema deve mostrare all'utente autenticato la HomePage & \hyperref[UC9]{UC9}\row
+        \sreq{1}{F} & Il sistema deve fare il display nell'errore di autenticazione & \hyperref[UC9]{UC9}\row
+        \sreq{1}{F} & L'utente deve poter inserire nuovamente le credenziali dopo l'errore & \hyperref[UC9]{UC9}\row
+        \req{1}{F} & Il cliente loggato deve poter fare il logout & \hyperref[UC14]{UC14}\row
+        \sreq{1}{F} & Il sistema deve riportare il cliente nella HomePage da utente non autenticato & \hyperref[UC14]{UC14}\row
 
         %requisiti francesco
         \req{1}{F} & Il venditore deve poter visualizzare e modificare la lista degli ordini effettuati dai clienti & \hyperref[UC15]{UC15} \row
@@ -125,6 +142,20 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         %requisiti ivan
 
         %requisiti gianmarco
+        \req{3}{Q} & Il sistema deve visualizzare un messaggio d'errore se si prova a fare il checkout con il carrello vuoto & \hyperref[UC8]{UC8} \row
+        \sreq{1}{Q} & L'utente può selezionare l'indirizzo di consegna e fatturazione da quelli salvati & \hyperref[UC8.1]{UC8.1}\hyperref[UC8.2]{UC8.2} \row
+        \sreq{2}{Q} & L'utente può copiare l'indirizzo di consegna direttamente da quello di fatturazione & \hyperref[UC8.2]{UC8.2} \row
+        \sreq{1}{Q} & L'utente deve poter inserire l'indirizzo di fatturazione & \hyperref[UC8.1]{UC8.1} \row
+        \sreq{1}{Q} & L'utente deve poter inserire l'indirizzo di consegna & \hyperref[UC8.2]{UC8.2} \row
+        %\sreq{3}{Q} & Il sistema deve controllare se l'indirizzo inserito è giusto & \hyperref[UC8.2]{UC8.2}\row
+        \sreq{1}{Q} & L'utente deve poter visualizzare i costi di spedizione & \hyperref[UC8.3]{UC8.3}\row
+        \sreq{1}{Q} & L'utente deve poter selezionare il metodo di pagamento preferito & \hyperref[UC8.4]{UC8.4}\row
+        \sreq{1}{Q} & L'utente deve poter inserire nuovamente gli estremi per il metodo di pagamento dopo l'errore & \hyperref[UC8.5]{UC8.5}\row
+        \sreq{1}{Q} & Il sistema deve avvisare il cliente dell'avvenuto pagamento e della rimozione delle merci dal magazzino & \hyperref[UC8.6]{UC8.6}\row
+        \req{1}{Q} & Il sistema deve mostrare all'utente autenticato la HomePage & \hyperref[UC9]{UC9}\row
+        \sreq{1}{Q} & Il sistema deve fare il display nell'errore di autenticazione & \hyperref[UC9]{UC9}\row
+        \sreq{1}{Q} & L'utente deve poter inserire nuovamente le credenziali dopo l'errore & \hyperref[UC9]{UC9}\row
+        \req{1}{Q} & Il sistema deve riportare il cliente nella HomePage da utente non autenticato & \hyperref[UC14]{UC14}\row
 
         %requisiti francesco
         \req{1}{Q} & Il prodotto deve essere sviluppato rispettando quanto stabilito nelle \dext{Norme di Progetto v1.0.0} & Decisione interna \row
@@ -154,6 +185,18 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         %requisiti ivan
 
         %requisiti gianmarco
+        %\req{1}{V} & L'utente deve poter fare il checkout dei prodotti nel carrello & \hyperref[UC8]{UC8} \row
+        %\sreq{1}{V} & L'utente deve poter inserire l'indirizzo di fatturazione & \hyperref[UC8.1]{UC8.1} \row
+        %\sreq{1}{V} & L'utente deve poter inserire l'indirizzo di consegna & \hyperref[UC8.2]{UC8.2} \row
+        %\sreq{3}{V} & Il sistema deve controllare se l'indirizzo inserito è giusto & \hyperref[UC8.2]{UC8.2}\row
+        %\sreq{1}{V} & L'utente deve poter visualizzare i costi di spedizione & \hyperref[UC8.3]{UC8.3}\row
+        %\sreq{1}{V} & L'utente deve poter utilizzare il provider esterno di pagamenti & \hyperref[UC8.4]{UC8.4}\row
+        %\sreq{1}{V} & L'utente deve poter selezionare il metodo di pagamento preferito & \hyperref[UC8.4]{UC8.4}\row
+        %\sreq{1}{V} & Il sistema deve avvisare il cliente che il pagamento non è stato completato & \hyperref[UC8.5]{UC8.5}\row
+        %\sreq{1}{V} & L'utente deve poter inserire nuovamente gli estremi per il metodo di pagamento dopo l'errore & \hyperref[UC8.5]{UC8.5}\row
+        %\sreq{1}{V} & Il sistema deve avvisare il cliente dell'avvenuto pagamento e della rimozione delle merci dal magazzino & \hyperref[UC8.6]{UC8.6}\row
+        %\req{1}{V} & L'utente deve poter fare il login per accedere alla webapp & \hyperref[UC9]{UC9}\row
+        %\sreq{1}{V} & L'utente deve poter inserire nuovamente le credenziali dopo l'errore & \hyperref[UC9]{UC9}\row
 
         %requisiti francesco
 
