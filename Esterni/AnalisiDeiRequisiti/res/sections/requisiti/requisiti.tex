@@ -14,32 +14,74 @@
 %       Codice
 %   	        [CodiceBase].[CodiceSottoRequisito]
 
-\section{Requisiti}
+\section{Requisiti} \label{_requisiti}
 
 %contatore dei requisiti
 \newcounter{CR} % Contatore Requisiti 
 \setcounter{CR}{0}
 \newcounter{CSR} % Contatore Sotto-Requisiti
 \setcounter{CSR}{0}
-\newcommand{\stepCR}[0]{\stepcounter{CR}\setcounter{CSR}{0}\arabic{CR}}
-\newcommand{\valueCR}[0]{\arabic{CR}}
-\newcommand{\stepsubCR}{\stepcounter{CSR}\arabic{CR}.\arabic{CSR}}
-\newcommand{\valuesubCR}[0]{\arabic{CR}.\arabic{CSR}}
-\newcommand{\resetCR}{\setcounter{CR}{0}\setcounter{CSR}{0}}
+\newcommand{\stepCR}[0]{\stepcounter{CR}\setcounter{CSR}{0}} % incrementa il contatore CR
+\newcommand{\valueCR}[0]{\arabic{CR}} % ritorna il valore del contatore CR
+\newcommand{\stepsubCR}{\stepcounter{CSR}} % incrementa il contatore CSR
+\newcommand{\valuesubCR}[0]{\arabic{CR}.\arabic{CSR}} % ritorna il valore del contatore CSR
+\newcommand{\resetCR}{\setcounter{CR}{0}\setcounter{CSR}{0}}  % resetta il contatore CR e CSR
 
-% comandi per le tabelle
+% comandi per formattare il codice dei requisiti
 \newcommand{\creazioneCodiceRequisito}[3]{\textbf{R#1#2#3}}
-\newcommand{\creazioneCodiceSottoRequisito}[3]{{\color{gray} R#1#2#3}}
+\newcommand{\creazioneCodiceSottoRequisito}[3]{\textcolor{black!75}{R#1#2#3}}
 
-\newcommand{\req}[2]{\creazioneCodiceRequisito{#1}{#2}{\stepCR}}
-\newcommand{\sreq}[2]{\creazioneCodiceSottoRequisito{#1}{#2}{\stepsubCR}}
+%comando per creare i codici dei requisiti e una lable per poi riferirsi ad esso
+\makeatletter
+\newcommand{\creazioneCodiceRequisitoConLabel}[3]{%
+  \phantomsection
+  \creazioneCodiceRequisito{#1}{#2}{#3}\def\@currentlabel{\creazioneCodiceRequisito{#1}{#2}{#3}}\label{Req#2#3}%
+}
+\makeatother
 
-\newcommand{\row}{ \\ \hline}
+% comando per creare i codici dei sottorequisiti e una lable per poi riferirsi ad esso
+\makeatletter
+\newcommand{\creazioneCodiceSottoRequisitoConLabel}[3]{%
+  \phantomsection
+  \creazioneCodiceSottoRequisito{#1}{#2}{#3}\def\@currentlabel{\creazioneCodiceSottoRequisito{#1}{#2}{#3}}\label{Req#2#3}%
+}
+\makeatother
+
+% comandi che generano automaticamente i codici dei requisiti e le relative lable
+% PARAMETRO 1: Importanza
+% PARAMETRO 2: Tipologia
+\newcommand{\req}[2]{\stepCR\creazioneCodiceRequisitoConLabel{#1}{#2}{\valueCR}}
+\newcommand{\sreq}[2]{\stepsubCR\creazioneCodiceSottoRequisitoConLabel{#1}{#2}{\valuesubCR}}
+
+% comando per riferirsi ad un requisito riportando anche il codice completo di esso
+% PARAMETRO 1: Tipologia
+% PARAMETRO 2: Codice numerico (Es: 1.2, 5, 7.1, ...)
+\newcommand{\refreqID}[2]{\ref{Req#1#2}}
+
+% comandi che generano automaticamente i riferimenti ai requisiti con il contatore
+% PARAMETRO 1: Tipologia
+\newcommand{\refreq}[1]{\stepCR\refreqID{#1}{\valueCR}}
+\newcommand{\refsreq}[1]{\stepsubCR\refreqID{#1}{\valuesubCR}}
+
+%comando per riferirsi ad uno o più User Cases che hanno la lable uguale al codice (Es: UC2.2)
+% PARAMETRO 1: Lista di User Cases separati da una virgola
+\newcommand{\refUserCase}[1]{
+    \foreach [count=\i] \ucref in {#1}{\ifnum\i=1\hyperref[\ucref]{\ucref}\else, \hyperref[\ucref]{\ucref}\fi}
+}
+
+% comando per riferirsi ad una lista di requisito riportando anche i codici completi di essi
+% PARAMETRO 1: Tipologia dei requisiti riportati nella lista al paarametro 2
+% PARAMETRO 2: lista dei Codici numerici dei requisiti separati da una virgola (Es: 1.2, 5, 7.1, ...)
+\newcommand{\refRequisiti}[2]{
+    \foreach [count=\i] \reqID in {#2}{\ifnum\i=1\refreqID{#1}{\reqID}\else, \refreqID{#1}{\reqID}\fi}
+}
+
+\newcommand{\row}{\\ \hline}
 
 \subsection{Introduzione}
 In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisiti del progetto suddivisi per tipologia. Ciascun requisito possiede un codice identificativo stabilito in accordo con quanto scritto nelle \dext{Norme di Progetto v1.0.0}.
 
-\subsection{Requisiti funzionali}
+\subsection{Requisiti funzionali} \label{_requisitiFunzionali}
 \begin{center}
     \rowcolors{1}{lightest-grayest}{blue!20}
     \begin{longtable}{|p{3cm}|p{9.85cm}|p{2cm}|}
@@ -55,11 +97,66 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \endlastfoot
 
         %requisiti ivan
-        \req{1}{F} & L'utente deve poter visualizzare le informazione sul venditore & \hyperref[UC1]{UC1} \row
-        \sreq{1}{F} & L'utente deve poter visualizzare le informazioni di contatto del venditore & \hyperref[UC1]{UC1}  \row
-        \req{1}{F} & L'utente deve poter visualizzare i prodotti di una singola categoria & \hyperref[UC2]{UC2} \row
-        \sreq{1}{F} & L'utente deve poter  & \hyperref[UC2]{UC2} \row
-        \sreq{1}{F} & L'utente deve poter  & \hyperref[UC2]{UC2} \row
+        %1
+        \req{1}{F} & Il cliente deve poter visualizzare le informazione sul venditore & \refUserCase{UC1} \row
+        \sreq{1}{F} & Il cliente deve poter visualizzare le informazioni di contatto del venditore & \refUserCase{UC1} \row
+        %2
+        \req{1}{F} & Il cliente deve poter selezionare una categoria & \refUserCase{UC2} \row
+        \sreq{2}{F} & Il cliente deve visualizzare un messaggio se non ci sono articoli nella categoria selezionata & \refUserCase{UC2, UC4} \row
+        %3
+        \req{1}{F} & Il cliente deve poter ricercare il nome di un articolo & \refUserCase{UC3} \row
+        \sreq{2}{F} & Il cliente deve visualizzare un messaggio se non ci sono articoli corrispondenti alla ricerca & \refUserCase{UC3, UC4} \row
+        %4
+        \req{1}{F} & Il cliente deve poter visualizzare una PLP & \refUserCase{UC4} \row
+        \sreq{1}{F} & Il cliente deve poter visualizzare il prezzo VAT inc. degli articoli nella PLP & \refUserCase{UC4} \row
+        \sreq{1}{F} & Il cliente deve poter visualizzare il nome degli articoli nella PLP & \refUserCase{UC4} \row
+        \sreq{2}{F} & Il cliente deve poter visualizzare una foto per articolo nella PLP & \refUserCase{UC4} \row
+        \sreq{3}{F} & Il cliente deve poter visualizzare la disponibilità/indisponibilità degli articoli nella PLP & \refUserCase{UC4} \row
+        %5
+        \req{3}{F} & Il cliente deve poter ordinare la PLP & \refUserCase{UC4} \row
+        \sreq{3}{F} & Il cliente deve poter ordinare la PLP per prezzo crescente & \refUserCase{UC4} \row
+        \sreq{3}{F} & Il cliente deve poter ordinare la PLP per prezzo decrescente & \refUserCase{UC4} \row
+        \sreq{3}{F} & Il cliente deve poter ordinare la PLP per nome & \refUserCase{UC4} \row
+        %6
+        \req{1}{F} & Il cliente deve poter applicare dei filtri alla PLP & \refUserCase{UC4.1} \row
+        \sreq{1}{F} & Il cliente deve poter impostare un prezzo massimo & \refUserCase{UC4.1.1} \row
+        \sreq{1}{F} & Il cliente deve poter impostare un prezzo minimo & \refUserCase{UC4.1.1} \row
+        \sreq{1}{F} & Il cliente deve poter impostare un filtro su una categoria & \refUserCase{UC4.1.2} \row
+        \sreq{1}{F} & Il cliente deve poter rimuovere tutti i filtri applicati & \refUserCase{UC4.1} \row
+        \sreq{2}{F} & Il cliente deve visualizzare un messaggio se non ci sono articoli corrispondenti ai filtri applicati & \refUserCase{UC4.1.1, UC4.1.2} \row
+        \sreq{3}{F} & Il cliente deve poter impostare un filtro con una lista di categorie & \refUserCase{UC4.1.2} \row
+        \sreq{3}{F} & Il cliente deve poter rimuovere un filtro già applicato & \refUserCase{UC4.1} \row
+        \sreq{3}{F} & Il cliente deve poter modificare un filtro già applicato & \refUserCase{UC4.1} \row
+        %7
+        \req{1}{F} & Il cliente deve poter aprire i dettagli di un articolo & \refUserCase{UC5} \row
+        \sreq{1}{F} & Il cliente deve poter visualizzare una foto del articolo & \refUserCase{UC5} \row
+        \sreq{1}{F} & Il cliente deve poter visualizzare la disponibilità/indisponibilità del articolo & \refUserCase{UC5} \row
+        \sreq{2}{F} & Il cliente deve poter visualizzare più di una foto del articolo & \refUserCase{UC5} \row
+        \sreq{3}{F} & Il cliente deve poter visualizzare le varianti del articolo & \refUserCase{UC5} \row
+        %8
+        \req{1}{F} & Il cliente deve poter aggiungere un articolo al carrello & \refUserCase{UC5, UC6} \row
+        \sreq{1}{F} & Il cliente deve poter selezionare la quantità da aggiungere & \refUserCase{UC6} \row
+        \sreq{1}{F} & Il cliente deve visualizzare un messaggio se la quantità desiderata non è disponibile & \refUserCase{UC6} \row
+        \sreq{2}{F} & Il cliente deve poter aggiungere di default un solo articolo se non specifica la quantità & \refUserCase{UC6} \row
+        %9
+        \req{1}{F} & Il cliente autenticato deve poter avere il carrello sincronizzato tra i suoi dispositivi & \refUserCase{UC7.1} \row
+        \sreq{1}{F} & Il cliente che si autentica deve poter recuperare il carrello iniziato prima dell'autenticazione & \refUserCase{UC7.1} \row
+        %10
+        \req{1}{F} & Il cliente deve poter visualizzare il carrello & \refUserCase{UC7.2} \row
+        \sreq{1}{F} & Il cliente deve poter visualizzare tutti gli articoli presenti & \refUserCase{UC7.2} \row
+        \sreq{1}{F} & Il cliente deve poter visualizzare la quantità degli articoli presenti & \refUserCase{UC7.2} \row
+        \sreq{1}{F} & Il cliente deve poter visualizzare il costo totale del carrello & \refUserCase{UC7.2} \row
+        \sreq{1}{F} & Il cliente deve poter visualizzare il costo dei singoli articoli presenti & \refUserCase{UC7.2} \row
+        \sreq{2}{F} & Il cliente deve visualizzare un messaggio se il carrello è vuoto & \refUserCase{UC7.2} \row
+        %11
+        \req{1}{F} & Il cliente deve poter modificare la quantità di un articolo nel carrello & \refUserCase{UC7.3} \row
+        \sreq{1}{F} & Il cliente deve poter aumentare la quantità di un articolo nel carrello & \refUserCase{UC7.3} \row
+        \sreq{1}{F} & Il cliente deve poter diminuire la quantità di un articolo nel carrello & \refUserCase{UC7.3} \row
+        \sreq{1}{F} & Il cliente deve visualizzare un messaggio se la quantità richiesta non è disponibile & \refUserCase{UC7.3} \row
+        %12
+        \req{1}{F} & Il cliente deve poter eliminare un articolo dal carrello & \refUserCase{UC7.4} \row
+        %13
+        \req{1}{F} & Il cliente deve poter eliminare tutti gli articoli dal carrello & \refUserCase{UC7.4} \row
 
         %requisiti gianmarco
         \req{1}{F} & L'utente deve poter fare il checkout dei prodotti nel carrello & \hyperref[UC8]{UC8} \row
@@ -112,10 +209,7 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \sreq{1}{F} & Il venditore deve poter modificare il nome di una categoria di prodotti & \hyperref[UC19.3]{UC19.3} \row
         \req{1}{F} & Il venditore deve poter effettuare il login & \hyperref[UC22]{UC22} \row
         \req{1}{F} & Il venditore deve poter effettuare il logout & \hyperref[UC20]{UC20} \row
- 
-
-
-
+        
         \rowcolor{white}
         \caption{Requisiti funzionali con rispettiva descrizione e fonte}
     \end{longtable}
@@ -137,25 +231,23 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \endfoot
         \endlastfoot
 
-        \req{1}{Q} & L'utente deve potersi autenticare per accedere alla web app & \hyperref[UC1]{UC1} \row
-        \sreq{1}{Q} & L'utente deve poter usufruire dell'autenticazione a due fattori & \hyperref[UC1]{UC1} \row
         %requisiti ivan
 
         %requisiti gianmarco
-        \req{3}{Q} & Il sistema deve visualizzare un messaggio d'errore se si prova a fare il checkout con il carrello vuoto & \hyperref[UC8]{UC8} \row
-        \sreq{1}{Q} & L'utente può selezionare l'indirizzo di consegna e fatturazione da quelli salvati & \hyperref[UC8.1]{UC8.1}\hyperref[UC8.2]{UC8.2} \row
-        \sreq{2}{Q} & L'utente può copiare l'indirizzo di consegna direttamente da quello di fatturazione & \hyperref[UC8.2]{UC8.2} \row
-        \sreq{1}{Q} & L'utente deve poter inserire l'indirizzo di fatturazione & \hyperref[UC8.1]{UC8.1} \row
-        \sreq{1}{Q} & L'utente deve poter inserire l'indirizzo di consegna & \hyperref[UC8.2]{UC8.2} \row
+        %\req{3}{Q} & Il sistema deve visualizzare un messaggio d'errore se si prova a fare il checkout con il carrello vuoto & \hyperref[UC8]{UC8} \row
+        %\sreq{1}{Q} & L'utente può selezionare l'indirizzo di consegna e fatturazione da quelli salvati & \hyperref[UC8.1]{UC8.1}\hyperref[UC8.2]{UC8.2} \row
+        %\sreq{2}{Q} & L'utente può copiare l'indirizzo di consegna direttamente da quello di fatturazione & \hyperref[UC8.2]{UC8.2} \row
+        %\sreq{1}{Q} & L'utente deve poter inserire l'indirizzo di fatturazione & \hyperref[UC8.1]{UC8.1} \row
+        %\sreq{1}{Q} & L'utente deve poter inserire l'indirizzo di consegna & \hyperref[UC8.2]{UC8.2} \row
         %\sreq{3}{Q} & Il sistema deve controllare se l'indirizzo inserito è giusto & \hyperref[UC8.2]{UC8.2}\row
-        \sreq{1}{Q} & L'utente deve poter visualizzare i costi di spedizione & \hyperref[UC8.3]{UC8.3}\row
-        \sreq{1}{Q} & L'utente deve poter selezionare il metodo di pagamento preferito & \hyperref[UC8.4]{UC8.4}\row
-        \sreq{1}{Q} & L'utente deve poter inserire nuovamente gli estremi per il metodo di pagamento dopo l'errore & \hyperref[UC8.5]{UC8.5}\row
-        \sreq{1}{Q} & Il sistema deve avvisare il cliente dell'avvenuto pagamento e della rimozione delle merci dal magazzino & \hyperref[UC8.6]{UC8.6}\row
-        \req{1}{Q} & Il sistema deve mostrare all'utente autenticato la HomePage & \hyperref[UC9]{UC9}\row
-        \sreq{1}{Q} & Il sistema deve fare il display nell'errore di autenticazione & \hyperref[UC9]{UC9}\row
-        \sreq{1}{Q} & L'utente deve poter inserire nuovamente le credenziali dopo l'errore & \hyperref[UC9]{UC9}\row
-        \req{1}{Q} & Il sistema deve riportare il cliente nella HomePage da utente non autenticato & \hyperref[UC14]{UC14}\row
+        %\sreq{1}{Q} & L'utente deve poter visualizzare i costi di spedizione & \hyperref[UC8.3]{UC8.3}\row
+        %\sreq{1}{Q} & L'utente deve poter selezionare il metodo di pagamento preferito & \hyperref[UC8.4]{UC8.4}\row
+        %\sreq{1}{Q} & L'utente deve poter inserire nuovamente gli estremi per il metodo di pagamento dopo l'errore & \hyperref[UC8.5]{UC8.5}\row
+        %\sreq{1}{Q} & Il sistema deve avvisare il cliente dell'avvenuto pagamento e della rimozione delle merci dal magazzino & \hyperref[UC8.6]{UC8.6}\row
+        %\req{1}{Q} & Il sistema deve mostrare all'utente autenticato la HomePage & \hyperref[UC9]{UC9}\row
+        %\sreq{1}{Q} & Il sistema deve fare il display nell'errore di autenticazione & \hyperref[UC9]{UC9}\row
+        %\sreq{1}{Q} & L'utente deve poter inserire nuovamente le credenziali dopo l'errore & \hyperref[UC9]{UC9}\row
+        %\req{1}{Q} & Il sistema deve riportare il cliente nella HomePage da utente non autenticato & \hyperref[UC14]{UC14}\row
 
         %requisiti francesco
         \req{1}{Q} & Il prodotto deve essere sviluppato rispettando quanto stabilito nelle \dext{Norme di Progetto v1.0.0} & Decisione interna \row
@@ -180,8 +272,6 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \endfoot
         \endlastfoot
 
-        \req{1}{V} & L'utente deve potersi autenticare per accedere alla web app & \hyperref[UC1]{UC1} \row
-        \sreq{1}{V} & L'utente deve poter usufruire dell'autenticazione a due fattori & \hyperref[UC1]{UC1} \row
         %requisiti ivan
 
         %requisiti gianmarco
@@ -221,8 +311,6 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \endfoot
         \endlastfoot
 
-        \req{1}{P} & L'utente deve potersi autenticare per accedere alla web app & \hyperref[UC1]{UC1} \row
-        \sreq{1}{P} & L'utente deve poter usufruire dell'autenticazione a due fattori & \hyperref[UC1]{UC1} \row
         %requisiti ivan
 
         %requisiti gianmarco
