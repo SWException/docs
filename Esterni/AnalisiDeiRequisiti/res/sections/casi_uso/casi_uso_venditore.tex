@@ -3,7 +3,7 @@
 \begin{itemize}
     \item \textbf{Attore Primario:} venditore autenticato;
     \item \textbf{Descrizione:} il venditore deve contattare il cliente;
-    \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini \hyperref[UC15]{UC15} o nella lista clienti\hyperref[UC16]{UC16};
+    \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini \hyperref[UC16]{UC16} o nella lista clienti\hyperref[UC18]{UC18};
     \item \textbf{Postcondizione:} il venditore deve aver contattato il cliente con successo;
     \item \textbf{Scenario principale:}
     \begin{enumerate}
@@ -334,27 +334,9 @@
     \item \textbf{Postcondizione:} il venditore non è più autenticato nel backoffice e si trova sulla pagina per login del venditore;
 \end{itemize}
 
-\subsection{UC23 - Contatta cliente}
-\label{UC23}
-\begin{itemize}
-    \item \textbf{Attore Primario:} venditore autenticato;
-    \item \textbf{Descrizione:} il venditore deve contattare il cliente;
-    \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini \hyperref[UC15]{UC15} o nella lista dei clienti\hyperref[UC16]{UC16};;
-    \item \textbf{Postcondizione:} il venditore deve contattare con successo il cliente;
-    \item \textbf{Scenario principale:}
-    \begin{enumerate}
-        \item il venditore deve contattare un cliente;
-        \item il venditore viene portato al form di contatto;
-        \item la comunicazione va a buon fine;
-    \end{enumerate}
-    \item \textbf{Inclusioni:}
-    \begin{itemize}
-        \item si apre il form di contatto del venditore \hyperref[UC14]{UC14};
-    \end{itemize}
-\end{itemize}
 
-\subsection{UC24 - Login venditore}
-\label{UC24}
+\subsection{UC23 - Login venditore}
+\label{UC23}
 \begin{itemize}
     \item \textbf{Attore Primario:} venditore non autenticato;
     \item \textbf{Descrizione:} autenticazione del venditore nel backoffice;
