@@ -501,10 +501,10 @@
     \item \textbf{Scenario principale:}
     \begin{enumerate}
         \item il cliente entra nella pagina con la lista degli ordini;
-        \item il cliente può annullare l'ordine;
-        \item il cliente richiedere assistenza per un ordine;
-        \item il cliente può richiedere un reso;
-        \item il cliente può visualizzare il riepilogo di un determinato ordine;
+        \item il cliente può annullare l'ordine (\hyperref[UC13.1]{UC13.1});
+        \item il cliente richiedere assistenza per un ordine (\hyperref[UC13.2]{UC13.2});
+        \item il cliente può richiedere un reso (\hyperref[UC13.3]{UC13.3});
+        \item il cliente può visualizzare il riepilogo di un determinato ordine (\hyperref[UC13.4]{UC13.4});
     \end{enumerate}
 \end{itemize}
 
@@ -522,7 +522,7 @@
 \end{enumerate}
 \item \textbf{Inclusioni:}
 \begin{itemize}
-    \item per annullare un ordine viene aperto il form di contatto che permette al cliente di contattare il venditore \hyperref[UC13]{UC13};
+    \item per annullare un ordine viene aperto il form di contatto che permette al cliente di contattare il venditore (\hyperref[UC15]{UC15});
 \end{itemize}
 \end{itemize}
 
@@ -540,7 +540,7 @@
 \end{enumerate}
 \item \textbf{Inclusioni:}
 \begin{itemize}
-    \item per l'assistenza su un ordine viene aperto il form di contatto che permette al cliente di contattare il venditore \hyperref[UC13]{UC13};
+    \item per l'assistenza su un ordine viene aperto il form di contatto che permette al cliente di contattare il venditore (\hyperref[UC15]{UC15});
 \end{itemize}
 \end{itemize}
 
@@ -558,7 +558,7 @@
 \end{enumerate}
 \item \textbf{Inclusioni:}
 \begin{itemize}
-    \item per il reso di un ordine viene aperto il form di contatto che permette al cliente di contattare il venditore \hyperref[UC13]{UC13};
+    \item per il reso di un ordine viene aperto il form di contatto che permette al cliente di contattare il venditore (\hyperref[UC15]{UC15});
 \end{itemize}
 \end{itemize}
 
@@ -590,12 +590,12 @@
     \end{enumerate}
 \end{itemize}
 
-\subsection{UC14 - Form di contatto cliente} 
-\label{UC14}
+\subsection{UC15 - Contatta venditore} 
+\label{UC15}
 \begin{itemize}
     \item \textbf{Attore Primario:} cliente autenticato;
     \item \textbf{Descrizione:} il cliente vuole/deve contattare il venditore attraverso il form di contatto;
-    \item \textbf{Precondizione:} il cliente deve trovarsi nella gestione degli ordini \hyperref[UC11]{UC11};
+    \item \textbf{Precondizione:} il cliente deve trovarsi nella gestione degli ordini (\hyperref[UC13]{UC13});
     \item \textbf{Postcondizione:} il cliente riesce a contattare il venditore;
     \item \textbf{Scenario principale:}
     \begin{enumerate}

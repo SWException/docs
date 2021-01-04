@@ -1,9 +1,9 @@
-\subsection{UC15 - Form di contatto venditore}
-\label{UC15}
+\subsection{UC16 - Contatta cliente}
+\label{UC16}
 \begin{itemize}
     \item \textbf{Attore Primario:} venditore autenticato;
     \item \textbf{Descrizione:} il venditore deve contattare il cliente;
-    \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini \hyperref[UC16]{UC16} o nella lista clienti\hyperref[UC18]{UC18};
+    \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini \hyperref[UC17]{UC17} o nella lista clienti\hyperref[UC18]{UC18};
     \item \textbf{Postcondizione:} il venditore deve aver contattato il cliente con successo;
     \item \textbf{Scenario principale:}
     \begin{enumerate}
@@ -13,8 +13,8 @@
     \end{enumerate}
 \end{itemize}
 
-\subsection{UC16 - Lista ordini}
-\label{UC16}
+\subsection{UC17 - Lista ordini}
+\label{UC17}
 \begin{itemize}
     \item \textbf{Attore Primario:} venditore autenticato;
     \item \textbf{Descrizione:} il venditore vuole visualizzare tutta la lista degli ordini effettuati dai clienti;
@@ -23,10 +23,10 @@
     \item \textbf{Scenario principale:}
     \begin{enumerate}
         \item il venditore visualizza tutta la lista degli ordini effettuati dai clienti;
-         \item il venditore può modificare lo stato di un ordine \hyperref[UC15.1]{UC15.1};
-        \item il venditore può contattare il cliente che ha effettuato un determinato ordine \hyperref[UC21]{UC21};
-        \item può stampare la bolla di un ordine \hyperref[UC15.2]{UC15.2};
-        \item può visualizzare i dettagli di un determinato ordine \hyperref[UC15.3]{UC15.3}; 
+         \item il venditore può modificare lo stato di un ordine (\hyperref[UC17.1]{UC17.1});
+        \item il venditore può contattare il cliente che ha effettuato un determinato ordine (\hyperref[UC16]{UC16});
+        \item può stampare la bolla di un ordine (\hyperref[UC17.2]{UC17.2});
+        \item può visualizzare i dettagli di un determinato ordine (\hyperref[UC17.3]{UC17.3}); 
     \end{enumerate}
 \end{itemize}
 
@@ -83,7 +83,7 @@
     \item \textbf{Scenario principale:}
     \begin{enumerate}
         \item il venditore visualizza la lista;
-         \item il venditore può contattare un cliente \hyperref[UC12]{UC21};
+         \item il venditore può contattare un cliente (\hyperref[UC16]{UC16});
     \end{enumerate}
 \end{itemize}
 
