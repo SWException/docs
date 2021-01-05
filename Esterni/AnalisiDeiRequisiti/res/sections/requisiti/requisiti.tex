@@ -65,9 +65,7 @@
 
 %comando per riferirsi ad uno o più User Cases che hanno la lable uguale al codice (Es: UC2.2)
 % PARAMETRO 1: Lista di User Cases separati da una virgola
-\newcommand{\refUserCase}[1]{
-    \foreach [count=\i] \ucref in {#1}{\ifnum\i=1\hyperref[\ucref]{\ucref}\else, \hyperref[\ucref]{\ucref}\fi}
-}
+\newcommand{\refUserCase}[1]{\foreach [count=\i] \ucref in {#1}{\ifnum\i=1\hyperref[\ucref]{\ucref}\else, \hyperref[\ucref]{\ucref}\fi}}
 
 % comando per riferirsi ad una lista di requisito riportando anche i codici completi di essi
 % PARAMETRO 1: Tipologia dei requisiti riportati nella lista al paarametro 2
@@ -82,7 +80,7 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
 \subsection{Requisiti funzionali} \label{_requisitiFunzionali}
 \begin{center}
     \rowcolors{1}{lightest-grayest}{blue!20}
-    \begin{longtable}{|p{3cm}|p{9.85cm}|p{2cm}|}
+    \begin{longtable}{|p{2.5cm}|p{10.35cm}|p{2cm}|}
         \hline
         \rowcolor{lighter-grayer}
         \textbf{ID Requisito} & \textbf{Descrizione} & \textbf{Fonti} \\
@@ -96,20 +94,25 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
 
         %requisiti ivan
         %1
-        \req{1}{F} & Il cliente deve poter visualizzare le informazione sul venditore & \refUserCase{UC1} \row
+        \req{1}{F} & Il cliente deve poter visualizzare in HomePage ciò che il sito offre & \refUserCase{UC1} \row
+        \sreq{1}{F} & Il cliente deve poter visualizzare le informazione sul venditore & \refUserCase{UC1} \row
         \sreq{1}{F} & Il cliente deve poter visualizzare le informazioni di contatto del venditore & \refUserCase{UC1} \row
+        \sreq{1}{F} & Il cliente deve visualizzare i prodotti in vetrina & \refUserCase{UC1} \row %vetrina: messi in evidenza/in promozione
+        \sreq{1}{F} & Il cliente deve poter navigare alla pagina del carrello & Capitolato \row
         %2
         \req{1}{F} & Il cliente deve poter selezionare una categoria & \refUserCase{UC2} \row
-        \sreq{2}{F} & Il cliente deve visualizzare un messaggio se non ci sono articoli nella categoria selezionata & \refUserCase{UC2, UC4} \row
+        \sreq{2}{F} & Il cliente deve visualizzare un messaggio se non ci sono prodotti nella categoria selezionata & \refUserCase{UC2, UC4} \row
         %3
-        \req{1}{F} & Il cliente deve poter ricercare il nome di un articolo & \refUserCase{UC3} \row
-        \sreq{2}{F} & Il cliente deve visualizzare un messaggio se non ci sono articoli corrispondenti alla ricerca & \refUserCase{UC3, UC4} \row
+        \req{1}{F} & Il cliente deve poter ricercare il nome di un prodotto & \refUserCase{UC3} \row
+        \sreq{2}{F} & Il cliente deve visualizzare un messaggio se non ci sono prodotti corrispondenti alla ricerca & \refUserCase{UC3, UC4} \row
         %4
         \req{1}{F} & Il cliente deve poter visualizzare una PLP & \refUserCase{UC4} \row
-        \sreq{1}{F} & Il cliente deve poter visualizzare il prezzo VAT inc. degli articoli nella PLP & \refUserCase{UC4} \row
-        \sreq{1}{F} & Il cliente deve poter visualizzare il nome degli articoli nella PLP & \refUserCase{UC4} \row
-        \sreq{2}{F} & Il cliente deve poter visualizzare una foto per articolo nella PLP & \refUserCase{UC4} \row
-        \sreq{3}{F} & Il cliente deve poter visualizzare la disponibilità/indisponibilità degli articoli nella PLP & \refUserCase{UC4} \row
+        \sreq{1}{F} & Il cliente deve poter accedere alle relative PDP & \refUserCase{UC4} \row
+        \sreq{1}{F} & Il cliente deve visualizzare il prezzo VAT inc. dei prodotti nella PLP & \refUserCase{UC4} \row
+        \sreq{1}{F} & Il cliente deve visualizzare il nome dei prodotti nella PLP & \refUserCase{UC4} \row
+        \sreq{1}{F} & Il cliente deve poter navigare alla pagina del carrello & Capitolato \row
+        \sreq{2}{F} & Il cliente deve visualizzare una foto per prodotto nella PLP & \refUserCase{UC4} \row
+        \sreq{3}{F} & Il cliente deve visualizzare la disponibilità/indisponibilità dei prodotti nella PLP & \refUserCase{UC4} \row
         %5
         \req{3}{F} & Il cliente deve poter ordinare la PLP & \refUserCase{UC4} \row
         \sreq{3}{F} & Il cliente deve poter ordinare la PLP per prezzo crescente & \refUserCase{UC4} \row
@@ -121,42 +124,49 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \sreq{1}{F} & Il cliente deve poter impostare un prezzo minimo & \refUserCase{UC4.1.1} \row
         \sreq{1}{F} & Il cliente deve poter impostare un filtro su una categoria & \refUserCase{UC4.1.2} \row
         \sreq{1}{F} & Il cliente deve poter rimuovere tutti i filtri applicati & \refUserCase{UC4.1} \row
-        \sreq{2}{F} & Il cliente deve visualizzare un messaggio se non ci sono articoli corrispondenti ai filtri applicati & \refUserCase{UC4.1.1, UC4.1.2} \row
+        \sreq{2}{F} & Il cliente deve poter modificare un filtro già applicato & \refUserCase{UC4.1} \row
+        \sreq{2}{F} & Il cliente deve visualizzare un messaggio se non ci sono prodotti corrispondenti ai filtri applicati & \refUserCase{UC4.1.1, UC4.1.2} \row
+        \sreq{3}{F} & Il cliente deve poter rimuovere un singolo filtro già applicato & \refUserCase{UC4.1} \row
         \sreq{3}{F} & Il cliente deve poter impostare un filtro con una lista di categorie & \refUserCase{UC4.1.2} \row
-        \sreq{3}{F} & Il cliente deve poter rimuovere un filtro già applicato & \refUserCase{UC4.1} \row
-        \sreq{3}{F} & Il cliente deve poter modificare un filtro già applicato & \refUserCase{UC4.1} \row
         %7
-        \req{1}{F} & Il cliente deve poter aprire i dettagli di un articolo & \refUserCase{UC5} \row
-        \sreq{1}{F} & Il cliente deve poter visualizzare una foto del articolo & \refUserCase{UC5} \row
-        \sreq{1}{F} & Il cliente deve poter visualizzare la disponibilità/indisponibilità del articolo & \refUserCase{UC5} \row
-        \sreq{2}{F} & Il cliente deve poter visualizzare più di una foto del articolo & \refUserCase{UC5} \row
-        \sreq{3}{F} & Il cliente deve poter visualizzare le varianti del articolo & \refUserCase{UC5} \row
+        \req{1}{F} & Il cliente deve poter aprire i dettagli di un prodotto & \refUserCase{UC5} \row
+        \sreq{1}{F} & Il cliente deve visualizzare una descrizione del prodotto & \refUserCase{UC5} \row
+        \sreq{1}{F} & Il cliente deve visualizzare una foto del prodotto & \refUserCase{UC5} \row
+        \sreq{1}{F} & Il cliente deve visualizzare la disponibilità/indisponibilità del prodotto & \refUserCase{UC5} \row
+        \sreq{1}{F} & Il cliente deve visualizzare il prezzo del prodotto & \refUserCase{UC5} \row
+        \sreq{1}{F} & Il cliente deve visualizzare la VAT applicata al prodotto & \refUserCase{UC5} \row
+        \sreq{1}{F} & Il cliente deve poter navigare alla pagina del carrello & Capitolato \row
+        \sreq{2}{F} & Il cliente deve poter visualizzare più di una foto del prodotto & \refUserCase{UC5} \row
+        \sreq{3}{F} & Il cliente deve poter visualizzare le varianti del prodotto & \refUserCase{UC5} \row
+        \sreq{3}{F} & Il cliente deve poter visualizzare se ha già aggiunto il prodotto al carrello & \refUserCase{UC5} \row
         %8
-        \req{1}{F} & Il cliente deve poter aggiungere un articolo al carrello & \refUserCase{UC5, UC6} \row
+        \req{1}{F} & Il cliente nella PDP deve poter aggiungere un prodotto al carrello & \refUserCase{UC5, UC6} \row
         \sreq{1}{F} & Il cliente deve poter selezionare la quantità da aggiungere & \refUserCase{UC6} \row
         \sreq{1}{F} & Il cliente deve visualizzare un messaggio se la quantità desiderata non è disponibile & \refUserCase{UC6} \row
-        \sreq{2}{F} & Il cliente deve poter aggiungere di default un solo articolo se non specifica la quantità & \refUserCase{UC6} \row
+        \sreq{2}{F} & Il cliente deve poter aggiungere di default un solo prodotto se non specifica la quantità & \refUserCase{UC6} \row
         %9
-        \req{1}{F} & Il cliente autenticato deve poter avere il carrello sincronizzato tra i suoi dispositivi & \refUserCase{UC7.1} \row
-        \sreq{1}{F} & Il cliente che si autentica deve poter recuperare il carrello iniziato prima dell'autenticazione & \refUserCase{UC7.1} \row
+        \req{1}{F} & Il cliente autenticato deve avere il carrello sincronizzato tra i suoi dispositivi & \refUserCase{UC7.1} \row
+        \sreq{1}{F} & Il cliente che si autentica deve ritrovarsi importato automaticamente il carrello iniziato prima dell'autenticazione & \refUserCase{UC7.1}, decisione interna \row
         %10
         \req{1}{F} & Il cliente deve poter visualizzare il carrello & \refUserCase{UC7.2} \row
-        \sreq{1}{F} & Il cliente deve poter visualizzare tutti gli articoli presenti & \refUserCase{UC7.2} \row
-        \sreq{1}{F} & Il cliente deve poter visualizzare la quantità degli articoli presenti & \refUserCase{UC7.2} \row
-        \sreq{1}{F} & Il cliente deve poter visualizzare il costo totale del carrello & \refUserCase{UC7.2} \row
-        \sreq{1}{F} & Il cliente deve poter visualizzare il costo dei singoli articoli presenti & \refUserCase{UC7.2} \row
+        \sreq{1}{F} & Il cliente deve visualizzare tutti i prodotti presenti & \refUserCase{UC7.2} \row
+        \sreq{1}{F} & Il cliente deve visualizzare la quantità dei prodotti presenti & \refUserCase{UC7.2} \row
+        \sreq{1}{F} & Il cliente deve visualizzare il costo totale del carrello & \refUserCase{UC7.2} \row
+        \sreq{1}{F} & Il cliente deve visualizzare il costo dei singoli prodotti presenti & \refUserCase{UC7.2} \row
+        \sreq{1}{F} & Il cliente deve visualizzare il costo totale della VAT & \refUserCase{UC7.2}, capitolato \row
         \sreq{2}{F} & Il cliente deve visualizzare un messaggio se il carrello è vuoto & \refUserCase{UC7.2} \row
         %11
-        \req{1}{F} & Il cliente deve poter modificare la quantità di un articolo nel carrello & \refUserCase{UC7.3} \row
-        \sreq{1}{F} & Il cliente deve poter aumentare la quantità di un articolo nel carrello & \refUserCase{UC7.3} \row
-        \sreq{1}{F} & Il cliente deve poter diminuire la quantità di un articolo nel carrello & \refUserCase{UC7.3} \row
-        \sreq{1}{F} & Il cliente deve visualizzare un messaggio se la quantità richiesta non è disponibile & \refUserCase{UC7.3} \row
+        \req{1}{F} & Il cliente deve poter modificare la quantità di un prodotto nel carrello & \refUserCase{UC7.3} \row
+        \sreq{1}{F} & Il cliente deve poter aumentare la quantità di un prodotto nel carrello & \refUserCase{UC7.3} \row
+        \sreq{1}{F} & Il cliente deve poter diminuire la quantità di un prodotto nel carrello & \refUserCase{UC7.3} \row
+        \sreq{1}{F} & Il cliente che aumenta la quantità deve visualizzare un messaggio se la quantità richiesta non è disponibile & \refUserCase{UC7.3} \row
         %12
-        \req{1}{F} & Il cliente deve poter eliminare un articolo dal carrello & \refUserCase{UC7.4} \row
+        \req{1}{F} & Il cliente deve poter eliminare un prodotto dal carrello & \refUserCase{UC7.4} \row
         %13
-        \req{1}{F} & Il cliente deve poter eliminare tutti gli articoli dal carrello & \refUserCase{UC7.4} \row
+        \req{1}{F} & Il cliente deve poter eliminare tutti i prodotti dal carrello & \refUserCase{UC7.4} \row
 
         %requisiti gianmarco
+        
         \req{1}{F} & L'utente deve poter fare il checkout dei prodotti nel carrello & \refUserCase{UC8} \row
         \sreq{2}{F} & Il sistema deve visualizzare un messaggio d'errore se si prova a fare il checkout con il carrello vuoto & \refUserCase{UC8} \row
         \sreq{1}{F} & L'utente può selezionare l'indirizzo di consegna e fatturazione da quelli salvati & \refUserCase{UC8.1, UC8.2} \row
@@ -168,18 +178,22 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \sreq{1}{F} & Il sistema deve avvisare il cliente che il pagamento non è stato completato & \refUserCase{UC8.5}\row
         \sreq{1}{F} & L'utente deve poter inserire nuovamente gli estremi per il metodo di pagamento dopo l'errore & \refUserCase{UC8.5}\row
         \sreq{1}{F} & Il sistema deve avvisare il cliente dell'avvenuto pagamento e della rimozione delle merci dal magazzino & \refUserCase{UC8.6}\row
+        
         \req{1}{F} & L'utente deve poter fare il login per accedere alla webapp & \refUserCase{UC9}\row
         \sreq{1}{F} & Il sistema deve mostrare all'utente autenticato la HomePage & \refUserCase{UC9}\row
         \sreq{1}{F} & Il sistema deve fare il display nell'errore di autenticazione & \refUserCase{UC9}\row
         \sreq{1}{F} & L'utente deve poter inserire nuovamente le credenziali dopo l'errore & \refUserCase{UC9}\row
+        
         \req{1}{F} & L'utente non autenticato deve potersi registrare & \refUserCase{UC10}\row
         \sreq{1}{F} & Il sistema deve visualizzare un messaggio d'errore se la registrazione non è andata a buon fine &\refUserCase{UC10}\row
         \sreq{1}{F} & Il sistema deve visuale un errore se l'inserimento della password o della email non rispetta i parametri richiesti &\refUserCase{UC10}\row
         \sreq{1}{F} & L'utente deve ricevere l'email di conferma per la creazione dell'account &\refUserCase{UC10}\row      
+        
         \req{1}{F} & L'utente deve poter reimpostare la password & \refUserCase{UC11}\row
         \sreq{1}{F} & L'utente deve ricevere una mail con il link per reimpostare la password &\refUserCase{UC11}\row
         \sreq{1}{F} & Il sistema deve visualizzare un errore se l'inserimento della password non rispetta i parametri richiesti &\refUserCase{UC11}\row
         \sreq{1}{F} & Il sistema deve confermare il cambio di password avvenuto con successo &\refUserCase{UC11}\row       
+        
         \req{1}{F} & Il cliente deve poter gestire il suo account & \refUserCase{UC12}\row
         \sreq{1}{F} & L'utente deve poter inserire un nuovo indirizzo & \refUserCase{UC12.1}\row
         \sreq{2}{F} & Il sistema deve fare il display dell'errore nell'inserimento di un indirizzo & \refUserCase{UC12.1}\row
@@ -192,32 +206,39 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \sreq{1}{F} & Il cliente deve poter modificare la password del suo account & \refUserCase{UC12.5}\row
         \sreq{1}{F} & Il sistema deve fare il display dell'errore se le password inserite non sono corrette & \refUserCase{UC12.5}\row
         \sreq{1}{F} & Il sistema deve confermare il successo nel cambio della password & \refUserCase{UC12.5}\row        
+        
         \req{1}{F} & L'utente deve poter gestire i propri ordini & \refUserCase{UC13}\row
         \sreq{1}{F} & Il cliente deve poter compilare il form per contattare il venditore & \refUserCase{UC13.1, UC13.2, UC13.3} \row
         \sreq{1}{F} & Il cliente deve poter annullare un ordine &\refUserCase{UC13.1}\row
         \sreq{1}{F} & Il cliente deve poter segnalare dei problemi nell'ordine &\refUserCase{UC13.2}\row
         \sreq{1}{F} & Il cliente deve poter richiedere il reso dell'ordine &\refUserCase{UC13.3}\row
         \sreq{1}{F} & Il cliente deve poter visualizzare il riepilogo di un ordine &\refUserCase{UC13.4}\row       
+        
         \req{1}{F} & Il cliente loggato deve poter fare il logout & \refUserCase{UC14}\row
         \sreq{1}{F} & Il sistema deve riportare il cliente nella HomePage da utente non autenticato &\refUserCase{UC14}\row
 
         %requisiti francesco
+        
         \req{1}{F} & Il cliente deve poter contattare il venditore attraverso un form & \refUserCase{UC15} \row
+        
         \req{1}{F} & Il venditore deve poter visualizzare e modificare la lista degli ordini effettuati dai clienti & \refUserCase{UC17} \row
         \sreq{2}{F} & Il venditore deve poter cercare un ordine presente nel sistema & \refUserCase{UC17} \row
         \sreq{2}{F} & Il venditore deve avere a disposizione dei filtri per ordinare gli ordini  & \refUserCase{UC17} \row
         \sreq{1}{F} & Il venditore deve poter modificare lo stato di un ordine  & \refUserCase{UC17.1} \row
         \sreq{1}{F} & Il venditore deve poter stampare la bolla per un ordine  & \refUserCase{UC17.2} \row
         \sreq{1}{F} & Il venditore deve poter visualizzare i dettagli di un determinato ordine  & \refUserCase{UC17.3} \row
+        
         \req{1}{F} & Il venditore deve poter visualizzare la lista dei clienti del sito & \refUserCase{UC18} \row
         \sreq{2}{F} & Il venditore deve poter cercare un cliente presente nel sistema & \refUserCase{UC18} \row
         \sreq{2}{F} & Il venditore deve avere a disposizione dei filtri per ordinare i clienti  & \refUserCase{UC18} \row
         \sreq{1}{F} & Il venditore deve potere contattare il cliente tramite un form  & \refUserCase{UC16} \row
+        
         \req{1}{F} & Il venditore deve poter gestire le aliquote IVA per la tassazione dei prodotti & \refUserCase{UC19} \row
         \sreq{1}{F} & Il venditore deve poter visualizzare le aliquote IVA già presenti nel sistema & \refUserCase{UC19} \row
         \sreq{1}{F} & Il venditore deve poter aggiungere un'aliquota IVA impostandone la percentuale e una breve descrizione & \refUserCase{UC19.1} \row
         \sreq{1}{F} & Il venditore deve poter modificare percentuale e descrizione delle aliquote IVA già presenti nel sistema & \refUserCase{UC19.2} \row
         \sreq{1}{F} & Il venditore deve poter eliminare un'aliquota IVA presente nel sistema & \refUserCase{UC19.3} \row
+        
         \req{1}{F} & Il venditore deve poter gestire i prodotti del sistema & \refUserCase{UC20} \row
         \sreq{2}{F} & Il venditore deve poter cercare un prodotto presente nel sistema & \refUserCase{UC20} \row
         \sreq{2}{F} & Il venditore deve avere a disposizione dei filtri per ordinare i prodotti del negozio & \refUserCase{UC20}  \row
@@ -226,11 +247,14 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \sreq{1}{F} & Il venditore deve compilare tutti i campi obbligatori del form per aggiungere un prodotto al negozio & \refUserCase{UC20.1}  \row
         \sreq{1}{F} & Il venditore deve poter modificare un prodotto presente nel sistema, aggiornando i campi già presenti e/o inserendone di nuovi & \refUserCase{UC20.2}  \row
         \sreq{1}{F} & Il venditore deve poter eliminare un prodotto presente nel sistema & \refUserCase{UC20.3}  \row
+        
         \req{1}{F} & Il venditore deve poter gestire le categorie di prodotti & \refUserCase{UC21}  \row
         \sreq{1}{F} & Il venditore deve poter aggiungere una categoria di prodotti impostandone il nome & \refUserCase{UC21.1} \row
         \sreq{1}{F} & Il venditore deve poter rimuovere una categoria di prodotti & \refUserCase{UC21.3} \row
         \sreq{1}{F} & Il venditore deve poter modificare il nome di una categoria di prodotti & \refUserCase{UC21.2} \row
+        
         \req{1}{F} & Il venditore deve poter effettuare il login & \refUserCase{UC23} \row
+        
         \req{1}{F} & Il venditore deve poter effettuare il logout & \refUserCase{UC22} \row
         
         \rowcolor{white}
@@ -259,7 +283,9 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         %requisiti gianmarco
 
         %requisiti francesco
+        
         \req{1}{Q} & Il prodotto deve essere sviluppato rispettando quanto stabilito nelle \dext{Norme di Progetto v1.0.0} & Decisione interna \row
+        
         \rowcolor{white}
         \caption{Requisiti di qualità con rispettiva descrizione e fonte}
     \end{longtable}
@@ -286,33 +312,35 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         %requisiti gianmarco
 
         %requisiti francesco
+        
         \req{1}{V} & Il linguaggio di programmazione usato per sviluppare il progetto deve essere \glock{TypeScript} adottando un promise/async-await centric approach & Capitolato \row
         
         \req{1}{V} & \glock{EML-FE} deve essere implementato utilizzando il framework \glock{Next.js} e il linguaggio TypeScript & Capitolato \row
         \sreq{1}{V} & Il componente \textit{EML-FE} deve fungere da \glock{Backend For Frontend (BFF)} & Capitolato\row
         
         \req{1}{V} & \glock{EML-I} e \glock{EML-BE} devono essere implementate utilizzando il framework \glock{Serverless} e il linguaggio TypeScript & Capitolato \row
-
+        
         \req{1}{V} & La distribuzione di \glock{EML-BE} deve essere fatta tramite \glock{AWS} utilizzando \glock{AWS Lambda} come unica unità computazionale & Capitolato \row
-
+        
         \req{2}{V} & \glock{EML-MON} deve essere implementato utilizzando \glock{Amazon Cloudwatch} & Capitolato \row
-
+        
         \req{1}{V} & Come provider per i pagamenti deve essere utilizzato \glock{Stripe} & Capitolato \row
-
+        
         \req{1}{V} & Deve essere usato \glock{ESLint} come \glock{linter} per TypeScript & Capitolato \row
-
+        
         \req{1}{V} & Con il codice sorgente deve essere consegnata anche la documentazione necessaria all'utente finale per utilizzare il sistema e allo sviluppatore per gestire i moduli che compongono il sistema & Capitolato \row
-
+        
         \req{2}{V} & Il codice deve essere pubblicato e versionato utilizzando \glock{GitHub} o \glock{GitLab} & Capitolato \row
-
+        
         \req{1}{V} & Come \glock{identity Manager} deve essere utilizzato un servizio esterno & Capitolato, decisione interna \row
         \sreq{2}{V} & Come identity Manager deve essere utilizzato \glock{Auth0} & Capitolato \row
-
+        
         \req{2}{V} & Il sistema deve integrare un \glock{Content Management System (CMS)} & Capitolato, decisione interna \row
+        
         \req{2}{V} & Il CMS suggerito è \glock{contentful} & Capitolato \row
-
+        
         \req{1}{V} & Il sistema dove essere distribuito con licenza MIT, l'organizzazione \textit{SWEXCEPTION} ne detiene il copyright & Capitolato\row
-
+        
         \req{1}{V} & Red Babel deve essere menzionato nel README delle repositories del progetto & Capitolato \row
 
         \rowcolor{white}
