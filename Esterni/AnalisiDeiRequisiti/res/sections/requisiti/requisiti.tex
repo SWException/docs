@@ -72,9 +72,7 @@
 % comando per riferirsi ad una lista di requisito riportando anche i codici completi di essi
 % PARAMETRO 1: Tipologia dei requisiti riportati nella lista al paarametro 2
 % PARAMETRO 2: lista dei Codici numerici dei requisiti separati da una virgola (Es: 1.2, 5, 7.1, ...)
-\newcommand{\refRequisiti}[2]{
-    \foreach [count=\i] \reqID in {#2}{\ifnum\i=1\refreqID{#1}{\reqID}\else, \refreqID{#1}{\reqID}\fi}
-}
+\newcommand{\refRequisiti}[2]{\foreach [count=\i] \reqID in {#2}{\ifnum\i=1\refreqID{#1}{\reqID}\else, \refreqID{#1}{\reqID}\fi}}
 
 \newcommand{\row}{\\ \hline}
 
@@ -161,7 +159,7 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         %requisiti gianmarco
         \req{1}{F} & L'utente deve poter fare il checkout dei prodotti nel carrello & \refUserCase{UC8} \row
         \sreq{2}{F} & Il sistema deve visualizzare un messaggio d'errore se si prova a fare il checkout con il carrello vuoto & \refUserCase{UC8} \row
-        \sreq{1}{F} & L'utente può selezionare l'indirizzo di consegna e fatturazione da quelli salvati & \refUserCase{UC8.1}\refUserCase{UC8.2} \row
+        \sreq{1}{F} & L'utente può selezionare l'indirizzo di consegna e fatturazione da quelli salvati & \refUserCase{UC8.1, UC8.2} \row
         \sreq{1}{F} & L'utente deve poter inserire l'indirizzo di fatturazione & \refUserCase{UC8.1} \row
         \sreq{1}{F} & L'utente deve poter inserire l'indirizzo di consegna & \refUserCase{UC8.2} \row
         \sreq{1}{F} & L'utente deve poter visualizzare i costi di spedizione & \refUserCase{UC8.3}\row
@@ -195,7 +193,7 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \sreq{1}{F} & Il sistema deve fare il display dell'errore se le password inserite non sono corrette & \refUserCase{UC12.5}\row
         \sreq{1}{F} & Il sistema deve confermare il successo nel cambio della password & \refUserCase{UC12.5}\row        
         \req{1}{F} & L'utente deve poter gestire i propri ordini & \refUserCase{UC13}\row
-        \sreq{1}{F} & Il cliente deve poter compilare il form per contattare il venditore & \refUserCase{UC13.1} \refUserCase{UC13.2} \refUserCase{UC13.3} \row
+        \sreq{1}{F} & Il cliente deve poter compilare il form per contattare il venditore & \refUserCase{UC13.1, UC13.2, UC13.3} \row
         \sreq{1}{F} & Il cliente deve poter annullare un ordine &\refUserCase{UC13.1}\row
         \sreq{1}{F} & Il cliente deve poter segnalare dei problemi nell'ordine &\refUserCase{UC13.2}\row
         \sreq{1}{F} & Il cliente deve poter richiedere il reso dell'ordine &\refUserCase{UC13.3}\row
@@ -259,20 +257,6 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         %requisiti ivan
 
         %requisiti gianmarco
-        %\req{3}{Q} & Il sistema deve visualizzare un messaggio d'errore se si prova a fare il checkout con il carrello vuoto & \hyperref[UC8]{UC8} \row
-        %\sreq{1}{Q} & L'utente può selezionare l'indirizzo di consegna e fatturazione da quelli salvati & \hyperref[UC8.1]{UC8.1}\hyperref[UC8.2]{UC8.2} \row
-        %\sreq{2}{Q} & L'utente può copiare l'indirizzo di consegna direttamente da quello di fatturazione & \hyperref[UC8.2]{UC8.2} \row
-        %\sreq{1}{Q} & L'utente deve poter inserire l'indirizzo di fatturazione & \hyperref[UC8.1]{UC8.1} \row
-        %\sreq{1}{Q} & L'utente deve poter inserire l'indirizzo di consegna & \hyperref[UC8.2]{UC8.2} \row
-        %\sreq{3}{Q} & Il sistema deve controllare se l'indirizzo inserito è giusto & \hyperref[UC8.2]{UC8.2}\row
-        %\sreq{1}{Q} & L'utente deve poter visualizzare i costi di spedizione & \hyperref[UC8.3]{UC8.3}\row
-        %\sreq{1}{Q} & L'utente deve poter selezionare il metodo di pagamento preferito & \hyperref[UC8.4]{UC8.4}\row
-        %\sreq{1}{Q} & L'utente deve poter inserire nuovamente gli estremi per il metodo di pagamento dopo l'errore & \hyperref[UC8.5]{UC8.5}\row
-        %\sreq{1}{Q} & Il sistema deve avvisare il cliente dell'avvenuto pagamento e della rimozione delle merci dal magazzino & \hyperref[UC8.6]{UC8.6}\row
-        %\req{1}{Q} & Il sistema deve mostrare all'utente autenticato la HomePage & \hyperref[UC9]{UC9}\row
-        %\sreq{1}{Q} & Il sistema deve fare il display nell'errore di autenticazione & \hyperref[UC9]{UC9}\row
-        %\sreq{1}{Q} & L'utente deve poter inserire nuovamente le credenziali dopo l'errore & \hyperref[UC9]{UC9}\row
-        %\req{1}{Q} & Il sistema deve riportare il cliente nella HomePage da utente non autenticato & \hyperref[UC14]{UC14}\row
 
         %requisiti francesco
         \req{1}{Q} & Il prodotto deve essere sviluppato rispettando quanto stabilito nelle \dext{Norme di Progetto v1.0.0} & Decisione interna \row
@@ -300,20 +284,36 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         %requisiti ivan
 
         %requisiti gianmarco
-        %\req{1}{V} & L'utente deve poter fare il checkout dei prodotti nel carrello & \hyperref[UC8]{UC8} \row
-        %\sreq{1}{V} & L'utente deve poter inserire l'indirizzo di fatturazione & \hyperref[UC8.1]{UC8.1} \row
-        %\sreq{1}{V} & L'utente deve poter inserire l'indirizzo di consegna & \hyperref[UC8.2]{UC8.2} \row
-        %\sreq{3}{V} & Il sistema deve controllare se l'indirizzo inserito è giusto & \hyperref[UC8.2]{UC8.2}\row
-        %\sreq{1}{V} & L'utente deve poter visualizzare i costi di spedizione & \hyperref[UC8.3]{UC8.3}\row
-        %\sreq{1}{V} & L'utente deve poter utilizzare il provider esterno di pagamenti & \hyperref[UC8.4]{UC8.4}\row
-        %\sreq{1}{V} & L'utente deve poter selezionare il metodo di pagamento preferito & \hyperref[UC8.4]{UC8.4}\row
-        %\sreq{1}{V} & Il sistema deve avvisare il cliente che il pagamento non è stato completato & \hyperref[UC8.5]{UC8.5}\row
-        %\sreq{1}{V} & L'utente deve poter inserire nuovamente gli estremi per il metodo di pagamento dopo l'errore & \hyperref[UC8.5]{UC8.5}\row
-        %\sreq{1}{V} & Il sistema deve avvisare il cliente dell'avvenuto pagamento e della rimozione delle merci dal magazzino & \hyperref[UC8.6]{UC8.6}\row
-        %\req{1}{V} & L'utente deve poter fare il login per accedere alla webapp & \hyperref[UC9]{UC9}\row
-        %\sreq{1}{V} & L'utente deve poter inserire nuovamente le credenziali dopo l'errore & \hyperref[UC9]{UC9}\row
 
         %requisiti francesco
+        \req{1}{V} & Il linguaggio di programmazione usato per sviluppare il progetto deve essere \glock{TypeScript} adottando un promise/async-await centric approach & Capitolato \row
+        
+        \req{1}{V} & \glock{EML-FE} deve essere implementato utilizzando il framework \glock{Next.js} e il linguaggio TypeScript & Capitolato \row
+        \sreq{1}{V} & Il componente \textit{EML-FE} deve fungere da \glock{Backend For Frontend (BFF)} & Capitolato\row
+        
+        \req{1}{V} & \glock{EML-I} e \glock{EML-BE} devono essere implementate utilizzando il framework \glock{Serverless} e il linguaggio TypeScript & Capitolato \row
+
+        \req{1}{V} & La distribuzione di \glock{EML-BE} deve essere fatta tramite \glock{AWS} utilizzando \glock{AWS Lambda} come unica unità computazionale & Capitolato \row
+
+        \req{2}{V} & \glock{EML-MON} deve essere implementato utilizzando \glock{Amazon Cloudwatch} & Capitolato \row
+
+        \req{1}{V} & Come provider per i pagamenti deve essere utilizzato \glock{Stripe} & Capitolato \row
+
+        \req{1}{V} & Deve essere usato \glock{ESLint} come \glock{linter} per TypeScript & Capitolato \row
+
+        \req{1}{V} & Con il codice sorgente deve essere consegnata anche la documentazione necessaria all'utente finale per utilizzare il sistema e allo sviluppatore per gestire i moduli che compongono il sistema & Capitolato \row
+
+        \req{2}{V} & Il codice deve essere pubblicato e versionato utilizzando \glock{GitHub} o \glock{GitLab} & Capitolato \row
+
+        \req{1}{V} & Come \glock{identity Manager} deve essere utilizzato un servizio esterno & Capitolato, decisione interna \row
+        \sreq{2}{V} & Come identity Manager deve essere utilizzato \glock{Auth0} & Capitolato \row
+
+        \req{2}{V} & Il sistema deve integrare un \glock{Content Management System (CMS)} & Capitolato, decisione interna \row
+        \req{2}{V} & Il CMS suggerito è \glock{contentful} & Capitolato \row
+
+        \req{1}{V} & Il sistema dove essere distribuito con licenza MIT, l'organizzazione \textit{SWEXCEPTION} ne detiene il copyright & Capitolato\row
+
+        \req{1}{V} & Red Babel deve essere menzionato nel README delle repositories del progetto & Capitolato \row
 
         \rowcolor{white}
         \caption{Requisiti di vincolo con rispettiva descrizione e fonte}
