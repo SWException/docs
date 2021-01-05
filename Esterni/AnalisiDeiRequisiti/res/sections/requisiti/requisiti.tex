@@ -159,23 +159,49 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \req{1}{F} & Il cliente deve poter eliminare tutti gli articoli dal carrello & \refUserCase{UC7.4} \row
 
         %requisiti gianmarco
-        \req{1}{F} & L'utente deve poter fare il checkout dei prodotti nel carrello & \hyperref[UC8]{UC8} \row
-        \sreq{2}{F} & Il sistema deve visualizzare un messaggio d'errore se si prova a fare il checkout con il carrello vuoto & \hyperref[UC8]{UC8} \row
-        \sreq{1}{F} & L'utente può selezionare l'indirizzo di consegna e fatturazione da quelli salvati & \hyperref[UC8.1]{UC8.1}\hyperref[UC8.2]{UC8.2} \row
-        \sreq{1}{F} & L'utente deve poter inserire l'indirizzo di fatturazione & \hyperref[UC8.1]{UC8.1} \row
-        \sreq{1}{F} & L'utente deve poter inserire l'indirizzo di consegna & \hyperref[UC8.2]{UC8.2} \row
-        \sreq{1}{F} & L'utente deve poter visualizzare i costi di spedizione & \hyperref[UC8.3]{UC8.3}\row
-        \sreq{1}{F} & L'utente deve poter utilizzare il provider esterno di pagamenti & \hyperref[UC8.4]{UC8.4}\row
-        \sreq{1}{F} & L'utente deve poter selezionare il metodo di pagamento preferito & \hyperref[UC8.4]{UC8.4}\row
-        \sreq{1}{F} & Il sistema deve avvisare il cliente che il pagamento non è stato completato & \hyperref[UC8.5]{UC8.5}\row
-        \sreq{1}{F} & L'utente deve poter inserire nuovamente gli estremi per il metodo di pagamento dopo l'errore & \hyperref[UC8.5]{UC8.5}\row
-        \sreq{1}{F} & Il sistema deve avvisare il cliente dell'avvenuto pagamento e della rimozione delle merci dal magazzino & \hyperref[UC8.6]{UC8.6}\row
-        \req{1}{F} & L'utente deve poter fare il login per accedere alla webapp & \hyperref[UC9]{UC9}\row
-        \sreq{1}{F} & Il sistema deve mostrare all'utente autenticato la HomePage & \hyperref[UC9]{UC9}\row
-        \sreq{1}{F} & Il sistema deve fare il display nell'errore di autenticazione & \hyperref[UC9]{UC9}\row
-        \sreq{1}{F} & L'utente deve poter inserire nuovamente le credenziali dopo l'errore & \hyperref[UC9]{UC9}\row
-        \req{1}{F} & Il cliente loggato deve poter fare il logout & \hyperref[UC14]{UC14}\row
-        \sreq{1}{F} & Il sistema deve riportare il cliente nella HomePage da utente non autenticato & \hyperref[UC14]{UC14}\row
+        \req{1}{F} & L'utente deve poter fare il checkout dei prodotti nel carrello & \refUserCase{UC8} \row
+        \sreq{2}{F} & Il sistema deve visualizzare un messaggio d'errore se si prova a fare il checkout con il carrello vuoto & \refUserCase{UC8} \row
+        \sreq{1}{F} & L'utente può selezionare l'indirizzo di consegna e fatturazione da quelli salvati & \refUserCase{UC8.1}\refUserCase{UC8.2} \row
+        \sreq{1}{F} & L'utente deve poter inserire l'indirizzo di fatturazione & \refUserCase{UC8.1} \row
+        \sreq{1}{F} & L'utente deve poter inserire l'indirizzo di consegna & \refUserCase{UC8.2} \row
+        \sreq{1}{F} & L'utente deve poter visualizzare i costi di spedizione & \refUserCase{UC8.3}\row
+        \sreq{1}{F} & L'utente deve poter utilizzare il provider esterno di pagamenti & \refUserCase{UC8.4}\row
+        \sreq{1}{F} & L'utente deve poter selezionare il metodo di pagamento preferito & \refUserCase{UC8.4}\row
+        \sreq{1}{F} & Il sistema deve avvisare il cliente che il pagamento non è stato completato & \refUserCase{UC8.5}\row
+        \sreq{1}{F} & L'utente deve poter inserire nuovamente gli estremi per il metodo di pagamento dopo l'errore & \refUserCase{UC8.5}\row
+        \sreq{1}{F} & Il sistema deve avvisare il cliente dell'avvenuto pagamento e della rimozione delle merci dal magazzino & \refUserCase{UC8.6}\row
+        \req{1}{F} & L'utente deve poter fare il login per accedere alla webapp & \refUserCase{UC9}\row
+        \sreq{1}{F} & Il sistema deve mostrare all'utente autenticato la HomePage & \refUserCase{UC9}\row
+        \sreq{1}{F} & Il sistema deve fare il display nell'errore di autenticazione & \refUserCase{UC9}\row
+        \sreq{1}{F} & L'utente deve poter inserire nuovamente le credenziali dopo l'errore & \refUserCase{UC9}\row
+        \req{1}{F} & L'utente non autenticato deve potersi registrare & \refUserCase{UC10}\row
+        \sreq{1}{F} & Il sistema deve visualizzare un messaggio d'errore se la registrazione non è andata a buon fine &\refUserCase{UC10}\row
+        \sreq{1}{F} & Il sistema deve visuale un errore se l'inserimento della password o della email non rispetta i parametri richiesti &\refUserCase{UC10}\row
+        \sreq{1}{F} & L'utente deve ricevere l'email di conferma per la creazione dell'account &\refUserCase{UC10}\row      
+        \req{1}{F} & L'utente deve poter reimpostare la password & \refUserCase{UC11}\row
+        \sreq{1}{F} & L'utente deve ricevere una mail con il link per reimpostare la password &\refUserCase{UC11}\row
+        \sreq{1}{F} & Il sistema deve visualizzare un errore se l'inserimento della password non rispetta i parametri richiesti &\refUserCase{UC11}\row
+        \sreq{1}{F} & Il sistema deve confermare il cambio di password avvenuto con successo &\refUserCase{UC11}\row       
+        \req{1}{F} & Il cliente deve poter gestire il suo account & \refUserCase{UC12}\row
+        \sreq{1}{F} & L'utente deve poter inserire un nuovo indirizzo & \refUserCase{UC12.1}\row
+        \sreq{2}{F} & Il sistema deve fare il display dell'errore nell'inserimento di un indirizzo & \refUserCase{UC12.1}\row
+        \sreq{1}{F} & Il cliente deve poter eliminare un indirizzo scelto & \refUserCase{UC12.2}\row
+        \sreq{2}{F} & Il cliente deve poter richiedere la cancellazione del suo account & \refUserCase{UC12.3}\row
+        \sreq{2}{F} & Il sistema deve fare il display con la conferma dell'apertura di un ticket per l'assistenza & \refUserCase{UC12.3}\row
+        \sreq{1}{F} &Il cliente deve poter modificare l'email del suo account & \refUserCase{UC12.4}\row
+        \sreq{1}{F} & Il sistema deve fare il display dell'errore se le email inserite non sono corrette & \refUserCase{UC12.4}\row
+        \sreq{1}{F} & Il sistema deve confermare il successo nel cambio dell'email & \refUserCase{UC12.4}\row
+        \sreq{1}{F} & Il cliente deve poter modificare la password del suo account & \refUserCase{UC12.5}\row
+        \sreq{1}{F} & Il sistema deve fare il display dell'errore se le password inserite non sono corrette & \refUserCase{UC12.5}\row
+        \sreq{1}{F} & Il sistema deve confermare il successo nel cambio della password & \refUserCase{UC12.5}\row        
+        \req{1}{F} & L'utente deve poter gestire i propri ordini & \refUserCase{UC13}\row
+        \sreq{1}{F} & Il cliente deve poter compilare il form per contattare il venditore & \refUserCase{UC13.1} \refUserCase{UC13.2} \refUserCase{UC13.3} \row
+        \sreq{1}{F} & Il cliente deve poter annullare un ordine &\refUserCase{UC13.1}\row
+        \sreq{1}{F} & Il cliente deve poter segnalare dei problemi nell'ordine &\refUserCase{UC13.2}\row
+        \sreq{1}{F} & Il cliente deve poter richiedere il reso dell'ordine &\refUserCase{UC13.3}\row
+        \sreq{1}{F} & Il cliente deve poter visualizzare il riepilogo di un ordine &\refUserCase{UC13.4}\row       
+        \req{1}{F} & Il cliente loggato deve poter fare il logout & \refUserCase{UC14}\row
+        \sreq{1}{F} & Il sistema deve riportare il cliente nella HomePage da utente non autenticato &\refUserCase{UC14}\row
 
         %requisiti francesco
         \req{1}{F} & Il venditore deve poter visualizzare e modificare la lista degli ordini effettuati dai clienti & \hyperref[UC15]{UC15} \row
