@@ -1,8 +1,7 @@
 \section{Qualità del Prodotto}
 Per prodotti si intende tutto ciò che è utilizzabile nell'ambito di questo progetto si intendono prodotti i documenti e il software.
 
-\subsection{Prodotti}
-\subsubsection{Documenti}
+\subsection{Documenti}
 I documenti vengono rilasciati durante tutto lo sviluppo del progetto, sono ad utilizzo interno o esterno.
 
 \subsubsection{Metriche}
@@ -37,45 +36,62 @@ La verifica della qualità del software è effettuata mediante le metriche indiv
 
 
 \subsubsection{Metriche interne}
-\paragraph{Funzionalità - Aderenza agli Standard}
-Per \textit{Funzionalità} del prodotto software si intende la capacità di soddisfare i requisiti funzionali richiesti e le necessità degli utenti.
-
+Per la valutazione qualitativa del codice prodotto si considerano le seguenti metriche interne:
 \begin{itemize}
-    \item \textbf{Codice:} 
-    \item \textbf{Descrizione:} Misura il livello di aderenza agli standard delle funzioni ed interfacce sviluppate;
-    \item \textbf{Attributo di riferimento:} Aderenza alle funzionalità;
-    \item \textbf{Sigla:}
-    \item \textbf{Formula:}
-    \item \textbf{Range di valori che può assumere:}
+    \item complessità ciclomatica;
+    \item complessità delle espressioni booleane;
+    \item lunghezza delle righe di codice.
 \end{itemize}
 
-
-\paragraph{Affidabilità - Rilevamento dei difetti}
-Per \textit{Affidabilità} si intende la capacità di predire se il prodotto software potrà soddisfare i requisti prescritti per l'affidabilità.
-
+\paragraph{Complessità ciclomatica}
 \begin{itemize}
-    \item \textbf{Codice:} 
-    \item \textbf{Descrizione:} Misura in percentuale l'efficacia nel rilevare i difetti presenti nel software durante la fase di sviluppo;
-    \item \textbf{Attributo di riferimento:} Maturità;
+    \item \textbf{Codice:}
+    \item \textbf{Descrizione:} indice che serve a monitorare la complessità del codice prodotto, ovvero il numero di cammini del flusso linearmente indipendenti;
+    \item \textbf{Attributo di riferimento:} valore ritornato dal processo automatizzato di analisi statica del codice, il quale includerà l'analisi della complessità ciclomatica;
     \item \textbf{Sigla:}
-    \item \textbf{Formula:}
-    \item \textbf{Range di valori che può assumere:}
+    \item \textbf{Formula:} la complessità ciclomatica di un programma strutturato è definita in riferimento ad un grafo diretto contenente i blocchi
+    base di un programma con un arco tra due blocchi se il controllo può passare dal primo al secondo (il "grafo di controllo di flusso"). La complessità è
+    quindi definita come:
+            \[
+                v(G)=e-n+2\cdot p
+            \]
+    dove:
+        \begin{itemize}
+            \item $v(G)$ è la complessità ciclomatica del grafo G;
+            \item $e$ è il numero di archi del grafo;
+            \item $n$ è il numero di nodi del grafo;
+            \item $p$ è il numero di componenti connesse.
+        \end{itemize}
+    \item \textbf{Range di valori che può assumere:} $\{x \in \mathbb{N} \}$;
+    \item \textbf{Range di valori accettabili:} per mantenere una buona qualità del software è necessario che il valore di questa metrica non superi
+    10 per ogni modulo.
 \end{itemize}
 
-
-\paragraph{Usabilità - Validità dei dati d'input}
-Per \textit{usabilità} si iintende la capacità del prodotto sftware di essere comprensibile, di poter essere usato facilmente in ogni sua parte da qualsiasi utente.
-
+\paragraph{Complessità espressioni booleane}
 \begin{itemize}
-    \item \textbf{Codice:} 
-    \item \textbf{Descrizione:} Misura in percentuale la correttezza dei dati forniti in input all'applicazione;
-    \item \textbf{Attributo di riferimento:} Operabilità;
+    \item \textbf{Codice:}
+    \item \textbf{Descrizione:} indice che serve a monitorare la complessità delle espressioni logiche condizionali, ovvero per definire un tetto massimo per il
+                                numero di operatori booleani all'interno di una singola espressione;
+    \item \textbf{Attributo di riferimento:} valore ritornato dal processo automatizzato di analisi statica del codice, il quale includerà l'analisi della complessità delle espressioni booleane;
     \item \textbf{Sigla:}
-    \item \textbf{Formula:}
-    \item \textbf{Range di valori che può assumere:}
+    \item \textbf{Formula:} si contano il numero di operatori logici presenti all'interno di una singola espressione;
+    \item \textbf{Range di valori che può assumere:} $\{x \in \mathbb{N} \}$;
+    \item \textbf{Range di valori accettabili:} per mantenere una buona qualità del software è necessario che il valore di questa metrica non superi
+    3 per ogni espressione presente nel codice.
 \end{itemize}
 
-
+\paragraph{Lunghezza delle righe di codice}
+\begin{itemize}
+    \item \textbf{Codice:}
+    \item \textbf{Descrizione:} indice che serve a monitorare la lunghezza delle righe di codice;
+    \item \textbf{Attributo di riferimento:} valore ritornato dal processo automatizzato di analisi statica del codice, il quale includerà un report sulla lunghezza delle righe di codice
+                                            (ovvero segnala quando una o più righe superano la lunghezza massima);
+    \item \textbf{Sigla:}
+    \item \textbf{Formula:} si contano il numero di caratteri presenti su una singola riga di codice;
+    \item \textbf{Range di valori che può assumere:} $\{x \in \mathbb{N}_0 \}$;
+    \item \textbf{Range di valori accettabili:} per mantenere una buona qualità del software è necessario che il valore di questa metrica non superi
+    80 per ogni riga di codice.
+\end{itemize}
 
 
 \subsubsection{Metriche esterne}
