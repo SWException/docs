@@ -27,8 +27,8 @@ Indica se si è in linea, in anticipo o in ritardo rispetto alla schedulazione d
 \end{itemize}
 
 
-\subsection{Metriche per la qualità del prodotto} \label{_metricheprodotto}
-Per quantificare la qualità del prodotto vengono adottate le metriche descritte in questa sezione.
+\subsection{Metriche per la qualità della documentazione} \label{_metricheprodotto}
+Per quantificare la qualità della documentazione vengono adottate le metriche descritte in questa sezione.
 \subsubsection{MPD-DOC1: Indice di Gulpease}
 Indice che individua il grado di leggibilità di un testo in lingua italiana mediante la formula:
 \begin{center}
@@ -48,3 +48,37 @@ Questa metrica permette di misurare la correttezza lessicografica del documento 
     \textit{CORT=\# errori ortografici}
 \end{center}
 Se CORT=0 allora il documento non ha errori ortografici, se CORT>0 il documento presenta errori.
+
+\subsection{Metriche per la qualità del codice sorgente} \label{_metricheCodiceSorgenteApp}
+Per misurare la qualità del codice sorgente prodotto vengono adottate le seguenti metriche.
+
+\subsubsection{MPD-ART1: Complessità ciclomatica}
+La complessità ciclomatica di un programma strutturato è definita in riferimento ad un grafo diretto
+contenente i blocchi base di un programma con un arco tra due blocchi se il controllo può passare dal
+primo al secondo (il "grafo di controllo di flusso"). La complessità è quindi definita come:
+\[
+    v(G) = e − n + 2 \cdot p  
+\]
+dove:
+\begin{itemize}
+    \item $v(G)$ è la complessità ciclomatica del grafo G, ed ha un valore in $\mathbb{N}$;
+    \item $e$ è il numero di archi del grafo, ha un valore in $\mathbb{N}$;
+    \item $n$ è il numero di nodi del grafo, ha un valore in $\mathbb{N}$;
+    \item $p$ è il numero di componenti connesse, ha un valore in $\mathbb{N}$.
+\end{itemize}
+
+\subsubsection{MPD-ART2: Complessità espressioni booleane}
+Questo è un indice necessario a tenere sotto controllo la complessità delle espressioni booleane e, di conseguenza, la complessità ciclomatica.
+Si sintetizza nel massimo numero di operatori logici presenti in una singola espressione booleana.\\
+Il suo calcolo è banale, e consiste nel conteggio degli operatori logici.
+
+\subsubsection{MPD-ART3: Lunghezza delle righe di codice}
+Indice che misura la lunghezza di una singola riga di codice. Serve a garantire la leggibilità di esso anche in schermi
+con dimensioni e risoluzione minori.\\
+Si ottiene contando i caratteri di ogni singola riga, ci si assicura quindi che il valore ottenuto per ognuna stia sotto il valore
+definito nel piano di qualifica.
+
+\subsubsection{MPD-ART4: Code coverage}
+Con questo indice si misura la percentuale di righe di codice coperte dai test automatici.\\
+È necessario cercare di avere la massima copertura possibile per ogni modulo, in quanto codice non testato
+può provocare comportamenti indesiderati e/o imprevisti dell'artefatto. La definizione della soglia minima viene rimandata al piano di qualifica.
