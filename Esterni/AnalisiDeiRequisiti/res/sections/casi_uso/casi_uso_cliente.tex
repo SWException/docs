@@ -161,20 +161,8 @@
     \item \textbf{Postcondizione:} il cliente ha eseguito operazioni gestionali sul carrello;
 \end{itemize}
 
-\subsubsection{UC7.1 - Sincronizzazione carrello}
+\subsubsection{UC7.1 - Visualizzazione articoli}
 \label{UC7.1}
-\begin{itemize}
-    \item \textbf{Attore primario:} cliente autenticato;
-    \item \textbf{Descrizione:} insieme di azioni atte alla gestione degli articoli già presenti nel carrello con
-                                persistenza tra le diverse sessioni di utilizzo con lo stesso profilo utente anche su dispositivi diversi;
-    \item \textbf{Precondizione:} il cliente sta navigando il sito web avendo effettuato il login;
-    \item \textbf{Input:} il cliente esegue un'operazione gestionale sul carrello;
-    \item \textbf{Postcondizione:} il cliente ha eseguito operazioni gestionali sul carrello e questa è stata sincronizzata in remoto,
-                                   in modo che si mantenga la consistenza dei dati tra diverse sessioni.
-\end{itemize}
-
-\subsubsection{UC7.2 - Visualizzazione articoli}
-\label{UC7.2}
 \begin{itemize}
     \item \textbf{Attore Primario:} cliente generico;
     \item \textbf{Descrizione:} scenario per la visualizzazione degli articoli nel carrello;
@@ -185,8 +173,8 @@
                                    su ogni dispositivo fino al checkout.
 \end{itemize}
 
-\subsubsection{UC7.3 - Variazione quantità articolo}
-\label{UC7.3}
+\subsubsection{UC7.2 - Variazione quantità articolo}
+\label{UC7.2}
 \begin{itemize}
     \item \textbf{Attore primario:} cliente generico;
     \item \textbf{Descrizione:} scenario per la variazione della quantità di un singolo articolo presente nel carrello;
@@ -208,8 +196,8 @@
     \end{itemize}
 \end{itemize}
 
-\subsubsection{UC7.4 - Rimozione articolo}
-\label{UC7.4}
+\subsubsection{UC7.3 - Rimozione articolo}
+\label{UC7.3}
 \begin{itemize}
     \item \textbf{Attore Primario:} cliente generico;
     \item \textbf{Descrizione:} scenario per la rimozione di un articolo dal carrello;
@@ -281,6 +269,17 @@
             \item riutilizzare l'indirizzo di fatturazione precedentemente inserito.
         \end{itemize}
     \end{itemize}
+\end{itemize}
+
+\subsubsection{UC8.3 - Calcolo costi spedizione}
+\label{UC8.3}
+\begin{itemize}
+    \item \textbf{Attore Primario:} sito EmporioLambda;
+    \item \textbf{Descrizione:} scenario per il calcolo dei costi di spedizione durante il checkout;
+    \item \textbf{Precondizione:} il cliente ha avviato il checkout;
+    \item \textbf{Input:} il cliente inserisce l'indirizzo di spedizione;
+    \item \textbf{Postcondizione:} i costi di spedizione sono stati aggiunti al totale dell'ordine da pagare
+                                   (si aggiunge un valore fisso di 10 euro).
 \end{itemize}
 
 \subsubsection{UC8.4 - Pagamento con servizio di terze parti}
