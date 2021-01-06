@@ -419,6 +419,24 @@ Per garantire uniformità, si è deciso di denominare le \glock{metriche} nel se
 La dicitura \textbf{DOC} sta ad indicare i documenti mentre \textbf{S} i prodotti software.
 In tutti i casi, il parametro \textbf{[X]} indica un numero intero che stabilisce la metrica, la numerazione inizia da 1.
 
+\subsubsection{Denominazione test}
+\label{_denominazioneTest}
+I test di unità, integrazione, sistema e collaudo sono identificati con il seguente pattern di codici:
+\[
+    T[X][Y]    
+\]
+dove:
+\begin{itemize}
+    \item \textbf{[X]} assume i seguenti valori:
+    \begin{itemize}
+        \item U per i test di unità;
+        \item I per i test di integrazione;
+        \item S per i test di sistema;
+        \item C per i test di collaudo.
+    \end{itemize}
+    \item \textbf{[Y]} è un numero intero incrementale che parte da 1, ed è univoco per ogni \textbf{[X]}.
+\end{itemize}
+
 \subsubsection{Denominazione obiettivi}
 Per la denominazione degli obiettivi, il team ha concordato:
 \begin{itemize}
