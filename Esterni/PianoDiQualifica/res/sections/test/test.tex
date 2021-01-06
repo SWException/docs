@@ -4,7 +4,26 @@
 \newcommand{\valueCTS}[0]{\stepCTS TS\arabic{CTS}} % ritorna il valore del contatore CTS incrementato di 1
 \newcommand{\resetCTS}[0]{\setcounter{CTS}{0}}
 \resetCTS
-\section{Specifica dei test}
+
+\section{Strategia di testing}
+La strategia di testing adottata dal gruppo è basata sul modello a V la quale stabilisce una stretta correlazione tra l'attività di testing prevista e la sua rispettiva attività nella parte sinistra \\
+
+
+		\begin{figure}[!htb]
+			\centering
+			\includegraphics[scale=0.50]{res/images/vtestmodel.png}	
+			\caption{Modello a V}
+		\end{figure}
+	
+
+	
+	
+	
+
+
+
+
+\subsection{Specifica dei test}
 \begin{itemize}
     \item \textbf{Test di unità:} si effettua per verificare il corretto comportamento di un singolo componente del programma in modo indipendente da altre unità;
     \item \textbf{Test di integrazione:} si effettua per verificare la corretta integrazione tra due o più unità distinte;
@@ -19,6 +38,9 @@ Allo stato attuale non è possibile definire quali test saranno realizzati si ri
 
 I test di sistema devono assicurare il soddisfacimento dei requisiti individuati nel documento Analisi dei erquisiti. 
 Di seguito l'elenco dei test di sistema individuati.
+
+
+
 
 \begin{center}
 	\rowcolors{1}{white}{blue!20}
