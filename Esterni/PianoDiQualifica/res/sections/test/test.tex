@@ -148,6 +148,7 @@ Di seguito l'elenco dei test di sistema individuati.
 		\item nel caso in cui i due inserimenti non corrispondano e/o la password non rispetti i requisiti di sicurezza si mostri il relativo messaggio d'errore;
 		\item nel caso in cui si inseriscano dei dati validi, mostrare il messaggio di conferma cambio password.
 	\end{enumerate} \\
+	\valueCTS & Amministrazione account cliente - gestione indirizzi & Verificare che:
 	\begin{enumerate}
 		\item si possa inserire un nuovo indirizzo e che questo sia utilizzabile durante il processo di checkout; 
 		\item nel caso in cui si inserisca un indirizzo non valido (e.g. campi obbligatori vuoti) si mostri un messaggio di errore e si permetta la modifica immediata dei dati inseriti;
@@ -206,6 +207,7 @@ Di seguito l'elenco dei test di sistema individuati.
 
 
 \subsection{Tracciamento test di sistema - requisiti}
+\resetCTS
 
 \begin{center}
 	\rowcolors{1}{white}{blue!20}
@@ -217,104 +219,63 @@ Di seguito l'elenco dei test di sistema individuati.
 	\endfirsthead
 
 	% ----- MARCO -----
-
-
 	\hline
-	TS1 & R1F1, R1F1.1, R1F1.2  \\
-	TS2 & R1F2, R1F2.1 \\
-	TS3 & R1F3, R1F3.1 \\
-	TS4 & R1F4, R1F4.1 \\
-	TS5 & R1F5, R1F5.1, R1F5.2, R1F5.3, R1F5.4, R1F5.5, R1F5.6 \\
-	TS6 & R1F6, R1F6.1, R1F6.2, R1F6.3 \\
-	TS7 & R1F7, R1F7.1, R1F7.2, R1F7.3, R1F7.4, R1F7.5, R1F7.6, R1F7.7, R1F7.8 \\
-	TS8 & R1F8, R1F8.1, R1F8.2, R1F8.3, R1F8.4, R1F8.5, R1F8.6, R1F8.7, R1F8.8, R1F8.9 \\
-	TS9 & R1F9, R1F8.1, R1F8.2, R1F8.3 \\
-	TS10 & R1F10, R1F10.1 \\
-
-	
-	\hline
-	
-	
-
-	\hline
-
-	\end{longtable}
-\end{center}
-
-\begin{center}
-	\rowcolors{1}{white}{blue!20}
-	\begin{longtable}{|c|c|}
-	\hline
-	\rowcolor{lighter-grayer}
-	\textbf{Test di sistema} & \textbf{Requisiti} \\
-	\hline
-	\endfirsthead
+	\valueCTS & R1F1 \\
+	\valueCTS & R1F2 \\
+	\valueCTS & R1F3 \\
+	\valueCTS & R1F4 \\
+	\valueCTS & R1F5 \\
+	\valueCTS & R1F6 \\
+	\valueCTS & R1F7 \\
+	\valueCTS & R1F8 \\
+	\valueCTS & R1F9 \\
+	\valueCTS & R1F10 \\
 
 	% ----- MICHELE -----
-
-	
-	\hline
-	TS2.1 & R1F11  \\
-	TS2.2 & R1F12 \\
-	TS2.3 & R1F13 \\
-	TS2.4 & R1F14 \\
-	TS2.5 & R1F14 \\
-	TS2.6 & R1F15 \\
-	TS2.7 & R1F16 \\
-	TS2.8 & R1F17 \\
-	TS2.9 & R1F18 \\
-	TS2.10 & R1F18 \\
-	TS2.11 & R1F18 \\
-	\hline
-
-	\end{longtable}
-\end{center}
-
-
-\begin{center}
-	\rowcolors{1}{white}{blue!20}
-	\begin{longtable}{|c|c|}
-	\hline
-	\rowcolor{lighter-grayer}
-	\textbf{Test di sistema} & \textbf{Requisiti} \\
-	\hline
-	\endfirsthead
+	\valueCTS & R1F11  \\
+	\valueCTS & R1F12 \\
+	\valueCTS & R1F13 \\
+	\valueCTS & R1F14 \\
+	\valueCTS & R1F14 \\
+	\valueCTS & R1F15 \\
+	\valueCTS & R1F16 \\
+	\valueCTS & R1F17 \\
+	\valueCTS & R1F18 \\
+	\valueCTS & R1F18 \\
+	\valueCTS & R1F18 \\
 
 	% ----- STEFANO -----
-
-	
-	\hline
-	TS3.1 &  R1F19 \\
-	TS3.2 &  R1F19 \\
-	TS3.3 &  R1F20 \\
-	TS3.4 &  R1F21 \\
-	TS3.5 &  R1F22 \\
-	TS3.6 &  R2F22.1 R2F22.2 \\
-	TS3.7 &  R1F22.3 \\
-	TS3.8 &  R1F22.4 \\
-	TS3.9 &  R1F22.5 \\
-	TS3.10 & R1F23 \\
-	TS3.11 & R2F23.1 \\
-	TS3.12 & R2F23.2 \\
-	TS3.13 & R1F23.3 \\
-	TS3.14 & R1F24 \\
-	TS3.15 & R1F24.1 \\
-	TS3.16 & R1F24.2 \\
-	TS3.17 & R1F24.3 \\
-	TS3.18 & R1F24.4 \\
-	TS3.19 & R1F25 \\
-	TS3.20 & R2F25.1 \\
-	TS3.21 & R2F25.2 \\
-	TS3.22 & R1F25.4 \\
-	TS3.23 & R1F25.6 \\
-	TS3.24 & R1F25.7 \\
-	TS3.25 & R1F25.8 \\
-	TS3.26 & R1F26 \\
-	TS3.27 & R1F26.1 \\
-	TS3.28 & R1F26.2 \\
-	TS3.29 & R1F26.3  \\
-	TS3.30 & R1F27 \\
-	TS3.31 & R1F28 \\
+	\valueCTS &  R1F19 \\
+	\valueCTS &  R1F19 \\
+	\valueCTS &  R1F20 \\
+	\valueCTS &  R1F21 \\
+	\valueCTS &  R1F22 \\
+	\valueCTS &  R2F22.1 R2F22.2 \\
+	\valueCTS &  R1F22.3 \\
+	\valueCTS &  R1F22.4 \\
+	\valueCTS &  R1F22.5 \\
+	\valueCTS& R1F23 \\
+	\valueCTS & R2F23.1 \\
+	\valueCTS & R2F23.2 \\
+	\valueCTS & R1F23.3 \\
+	\valueCTS & R1F24 \\
+	\valueCTS & R1F24.1 \\
+	\valueCTS & R1F24.2 \\
+	\valueCTS & R1F24.3 \\
+	\valueCTS & R1F24.4 \\
+	\valueCTS & R1F25 \\
+	\valueCTS & R2F25.1 \\
+	\valueCTS & R2F25.2 \\
+	\valueCTS & R1F25.4 \\
+	\valueCTS & R1F25.6 \\
+	\valueCTS & R1F25.7 \\
+	\valueCTS & R1F25.8 \\
+	\valueCTS & R1F26 \\
+	\valueCTS & R1F26.1 \\
+	\valueCTS & R1F26.2 \\
+	\valueCTS & R1F26.3  \\
+	\valueCTS & R1F27 \\
+	\valueCTS & R1F28 \\
 	\hline
 
 	\end{longtable}
