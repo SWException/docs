@@ -110,15 +110,12 @@ Di seguito l'elenco dei test di sistema individuati.
 	\begin{enumerate}
 		\item tutti gli elementi nel carrello possano essere rimossi.
 	\end{enumerate} \\
-	\valueCTS & Processo di checkout - inserimento indirizzi e calcolo spedizione & Verificare che:
+	\valueCTS & Processo di checkout & Verificare che:
 	\begin{enumerate}
 		\item il messaggio mostri un errore se si avvia il checkout con carrello vuoto;
 		\item si possano inserire indirizzi di fatturazione e spedizione da form e da quelli salvati (se autenticato);
 		\item l'indirizzo di spedizione possa essere copiato con un click da quello scelto per la fatturazione;
 		\item vengano aggiunti e visualizzati i costi di spedizione al totale dell'ordine, dopo aver scelto l'indirizzo di spedizione. 
-	\end{enumerate} \\
-	\valueCTS & Processo di checkout - pagamento & Verificare che:
-	\begin{enumerate}
 		\item il sistema di pagamento con il provider esterno possa essere utilizzato per concludere il checkout;
 		\item nel caso di fallimento del pagamento, il sistema mostri in modo chiaro che il pagamento non è andato a buon fine e l'ordine non è stato emesso;
 		\item nel caso di fallimento del pagamento, si possa riprovare immediatamente;
@@ -167,7 +164,6 @@ Di seguito l'elenco dei test di sistema individuati.
 		\item il sistema si comporti per il cambio password come nel processo di registrazione. 
 	\end{enumerate} \\
 
-	\hline
 	\valueCTS & Verifica gestione propri ordini & Si verifichi che il cliente possa gestire i propri ordini  \\
 	\valueCTS & Verifica gestione propri ordini & Si verifichi che il cliente possa contattare il venditore tramite i form per annullare l'ordine, segnalare problemi dell'ordine, chiedere il reso \\
 	\valueCTS & Verifica logout cliente & Si verifichi che il cliente loggato possa effettuare il logout e che venga riportato alla home page \\
