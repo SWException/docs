@@ -138,7 +138,7 @@ Ogni requisito è corredato dalle seguenti informazioni:
         \end{itemize}
 \end{itemize}
 
-\paragraph{Classificazione dei casi d'uso}
+\paragraph{Classificazione dei casi d'uso} \label{_classificazioneCasiUso}
 Ogni caso d'uso è identificato obbligatoriamente da un codice identificativo univoco che non può essere modificato nel corso del tempo e rispetta il seguente pattern:
 	\begin{center}
 	\textbf{UC[CodiceBase].[CodiceSottoCaso]}
@@ -160,17 +160,16 @@ Ogni caso d'uso è corredato delle seguenti informazioni:
   \item \textbf{Descrizione testuale}: descrizione testuale del caso d'uso in maniera coincisa;
   \item \textbf{Attori}: descrizione degli attori individuati che interagiscono con il sistema;
   \item \textbf{Precondizione}: stato del sistema prima del verificarsi di quanto descritto nel caso d'uso;
-  \item \textbf{Input esterno}: eventuale input esterno fornito dall'attore;
+  \item \textbf{Input}: eventuale input esterno fornito dall'attore;
   \item \textbf{Postcondizione}: stato del sistema dopo il verificarsi del caso d'uso;
-  \item \textbf{Output}: eventuale output del sistema;
-  \item \textbf{Flusso degli eventi}: elenco degli eventi che interessano il caso d'uso;
-  \item \textbf{Flusso Alternativo}: eventuale elenco degli eventi che possono manifestarsi durante l'esecuzione del caso d'uso a seguito di un evento imprevisto che causa un'alterazione del normale flusso degli eventi;
-  \item \textbf{Estensioni}: eventuale elenco di estensioni coinvolte;
+  %\item \textbf{Output}: eventuale output del sistema;
+  \item \textbf{Scenario principale}: elenco numerato del flusso degli eventi riferendosi eventualmente anche ad altri casi d'uso;
   \item \textbf{Inclusioni}: eventuale elenco di inclusioni coinvolte;
+  \item \textbf{Estensioni}: eventuale elenco degli eventi che possono manifestarsi durante l'esecuzione del caso d'uso a seguito di un evento imprevisto che causa un'alterazione del normale flusso degli eventi;
   \item \textbf{Generalizzazioni}: spiegazione di una generalizzazione effettuata.
 \end{itemize}
 
-\paragraph{Classificazione dei rischi}
+\paragraph{Classificazione dei rischi} \label{_classificazioneDeiRischi}
 Di seguito viene presentata la modalità di identificazione dei rischi, in cui ad ogni rischio viene associato un codice unico in forma:
 \begin{center}
 	\textbf{RS[Tipologia][Numero]}

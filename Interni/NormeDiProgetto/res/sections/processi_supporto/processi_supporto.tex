@@ -6,7 +6,7 @@
 % \subsubsection{Compilazione}
 % Per la compilazione di un qualsiasi documento del progetto è necessario aprire tramite Texmaker il file main.tex della documentazione che si vuole produrre. Successivamente, assicurandosi che il menu a tendina relativo al compilatore da usare sia settato a "Compilazione rapida", tramite lo shortcut F1 (su piattaforme Windows e Linux) si procede alla compilazione di tutto il documento.
 % \subsubsection{Tipologie}
-% Ogni documento ha un preciso ruolo all'interno della documentazione. E' però necessario suddividerli in aree distinte:
+% Ogni documento ha un preciso ruolo all'interno della documentazione. È però necessario suddividerli in aree distinte:
 
 \subsubsection{Scopo}
 In questo capitolo ci occuperemo di illustrare tutte le regole e gli standard che disciplinano la documentazione. Questo permetterà che ogni documento risulti coerente dal punto di vista grafico e organizzativo.
@@ -343,7 +343,7 @@ Ogni membro del gruppo, in tutte le repository, dovrà attenersi alle convenzion
 In particolare saranno presenti i seguenti branch:
 \begin{itemize}
     \item \textbf{master:} utilizzato per ospitare le versioni di rilascio. In questo ramo dovrà esserci sempre una versione del prodotto utilizzabile
-                           e pronto ad essere rilasciato in \glock{ambiente di produzione}. E' fatto divieto a tutti i membri del gruppo di effettuare \verb|commit|
+                           e pronto ad essere rilasciato in \glock{ambiente di produzione}. È fatto divieto a tutti i membri del gruppo di effettuare \verb|commit|
                            direttamente su questo ramo, tutte le modifiche dovranno seguire il percorso previsto di GitFlow;
     \item \textbf{develop:} questo è il ramo utilizzato per le operazioni di sviluppo. In particolare qui convergeranno i vari \verb|feature-branch|
                             utilizzati per la creazione delle funzionalità del modulo in oggetto. In questo ramo deve essere presente sempre e solo codice
@@ -355,7 +355,7 @@ In particolare saranno presenti i seguenti branch:
                                             aver passato tutte le verifiche. Una volta approvata il branch deve terminare sia in locale che in remoto, convergendo in master e in develop.
                                             Contestualmente nel branch master deve essere presente il tag di release;
     \item \textbf{bugfix/nome-feature:} rami uscenti dal develop usati per sistemare errori rilevati successivamente alla chiusura del relativo feature-branch.
-                                       Sono usati per la correzione dell'errore trovato, una volta inserita la correzione devono convergere in develop. E' necessario
+                                       Sono usati per la correzione dell'errore trovato, una volta inserita la correzione devono convergere in develop. È necessario
                                        che il nome del bugfix corrisponda al nome della determinata feature a cui si rivolge la correzione.
 \end{itemize}
 Riassumendo ogni modifica al codice deve partire da un branch di feature o di bugfix, strettamente collegato ad uno o più membri del gruppo, e convergere in develop solamente dopo
@@ -371,6 +371,10 @@ sia essa \verb|MikTex| o \verb|TexLive|, prima di far convergere il proprio ramo
 innesca un workflow di \glock{GitHub Action} denominato \textit{Docs Checker} il cui scopo è quello di compilare il sorgente \LaTeX di tutti i documenti presenti nel ramo develop
 restituendo l'esito della compilazione. Oltre a ciò vengono prodotti dei file di testo contenenti l'indice di Gulpease ed eventuali errori di ortografia presenti nei documenti.
 Questo costituisce un ulteriore controllo mirato al mantenimento della qualità del materiale presente nella repository.
+
+\paragraph{Creazione dei codici identificativi in \LaTeX} \label{_numerazioneCodiciIdentificativi}
+Per la numerazione dei codici identificativi descritti in \ref{_classificazioneRequisiti}, \ref{_classificazioneCasiUso}, \ref{_classificazioneDeiRischi} e \ref{_denominazioneTest}, verranno utilizzati dei comandi \LaTeX{} creati appositamente nei relativi file. Essi permettono di effettuare la numerazione in automatico, così che la rimozione, aggiunta o modifica dell'ordine dei codici non comporti un'ulteriore modifica alla numerazione degli altri codici.
+
 
 \subsection{Gestione di qualità} \label{_gestioneDiQualita}
 
@@ -541,7 +545,7 @@ Questo tipo di analisi viene effettuata sul prodotto senza eseguirlo e serve per
     \includegraphics[width=\linewidth]{res/images/processo_verifica.png}
     \caption{Processo di verifica  dei documenti}
 \end{figure}
-Il processo di verifica viene gestito con il meccanismo delle pull request, una sorta di issue avanzata messa a disposizione da \glock{Github} descritto in dettaglio in \ref{_cicloVitaAttivita}.
+Il processo di verifica viene gestito con il meccanismo delle pull request, una sorta di issue avanzata messa a disposizione da \glock{Github} descritto in dettaglio in \ref{_cicloVitaTicket}.
 
 \subsubsection{Verifica del codice}
 Il codice viene verificato con test automatici e con misurazioni quantificabili specificate all'interno del \dext{Piano di qualifica}. Il codice quindi deve obbedire a questi criteri:
