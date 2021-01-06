@@ -22,7 +22,7 @@ Ogni documento può trovarsi in 3 stati diversi nel suo ciclo di vita:
 \begin{itemize}
     \item\textbf{Redazione}: si tratta della vera e propria creazione del documento, il quale deve rispettare tutte le norme imposte in questo documento, partendo dalla struttura del template alla modalità di scrittura. Verranno incaricati dei \glock{redattori} che si occuperanno di questo compito;
     \item\textbf{Verifica}: in questo stato vengono assegnati dei \glock{verificatori} che hanno il compito di controllare che il lavoro fatto dai redattori sia coerente con le norme e gli obiettivi riguardanti la tipologia di documento redatto. I verificatori hanno inoltre il compito di riferire ai redattori le eventuali modifiche da apportare;
-    \item\textbf{Approvazione}:il \glock{responsabile} di progetto deve approvare il documento inviatogli con esito positivo dai verificatori e procedere al rilascio di esso.
+    \item\textbf{Approvazione}:il \glock{responsabile di progetto} deve approvare il documento inviatogli con esito positivo dai verificatori e procedere al rilascio di esso.
 \end{itemize}
 
 \subsubsection{Classificazione dei documenti}
@@ -41,10 +41,10 @@ I documenti formali e informali sono a loro volta suddivisi in:
 I documenti interni sono tutti quelli che interessano i membri del team e che gli aiutano nelle scelte e nella programmazione della redazione dei successivi documenti.
 Tra questi documenti troviamo:
 \begin{itemize}
-    \item\textbf{Studio di fattibilità}: vengono presentati brevemente i diversi \glock{capitolati} proposti, indicando per ognuno la sua finalità, le tecnologie da utilizzare, gli aspetti positivi e le criticità. Viene inoltre esposto la motivazione della decisione del capitolato;
+    \item\textbf{Studio di fattibilità}: vengono presentati brevemente i diversi capitolati proposti, indicando per ognuno la sua finalità, le tecnologie da utilizzare, gli aspetti positivi e le criticità. Viene inoltre esposto la motivazione della decisione del capitolato;
     \item\textbf{Norme di progetto}: si tratta del seguente documento, esso contiene tutte le norme e le regole che tutti i membri del team devono seguire.
 \end{itemize}
-Quelli esterni invece sono di interesse per \glock{committenti} e \glock{proponente}, infatti vengono consegnati loro nell'ultima versione.
+Quelli esterni invece sono di interesse per committenti e proponente, infatti vengono consegnati loro nell'ultima versione.
 Tra questi troviamo:
 \begin{itemize}
     \item\textbf{Piano di progetto}: pianificazione delle attività che il team dovrà svolgere, indicando come avverrà l'utilizzo delle risorse;
@@ -52,7 +52,7 @@ Tra questi troviamo:
     \item\textbf{Glossario}: contiene un elenco di tutti i termini che ricorrono nei documenti e che necessitano di una definizione esplicita;
     \item\textbf{Analisi dei requisiti}: vengono descritti tutti i requisiti che il prodotto finale dovrà soddisfare.
 \end{itemize}
-Quando si tratta di documenti formali può accadere che questi abbiano più versioni, in questo caso si considera come corrente quella approvata più recentemente dal Responsabile del progetto.
+Quando si tratta di documenti formali può accadere che questi abbiano più versioni, in questo caso si considera come corrente quella approvata più recentemente dal responsabile del progetto.
 
 \paragraph{Documenti informali}
 I documenti che appartengono a questa tipologia sono i \textbf{verbali}.
@@ -282,11 +282,11 @@ Queste metriche sono descritte approfonditamente in \ref{_metricheprodotto}.
 \paragraph{Latex}
 Per la scrittura dei documenti si è scelto di usare \LaTeX, linguaggio di markup che si basa sul programma di tipografia digitale \TeX . Questo permette di redigere documenti templatizzati, coesi, coerenti e in maniera collaborativa tramite l'adozione del VCS git.
 \paragraph{Editor di testo}
-Viene lasciata libertà sulla scelta dell'editor di testo da utilizzare poiché i componenti del gruppo hanno manifestato preferenze diverse. Gli strumenti che prevalgono sono \textit{TexMaker} e \textit{Visual Studio Code}, utilizzato con l'ausilio del plugin \textit{LaTeX Workshop}.
+Viene lasciata libertà sulla scelta dell'editor di testo da utilizzare poiché i componenti del gruppo hanno manifestato preferenze diverse. Gli strumenti che prevalgono sono \textit{\glock{TexMaker}} e \textit{\glock{Visual Studio Code}}, utilizzato con l'ausilio del plugin \textit{LaTeX Workshop}.
 \paragraph{Diagrammi}
 Per i diagrammi sono stati usati diversi software a seconda del tipo di diagramma da rappresentare.
 \subparagraph{\textit{Draw.io}}
-Web app gratuita integrabile con \glock{Google Drive}, per realizzare casi d'uso, diagrammi e \glock{grafici UML}. Rende possibile anche il versionamento dei file prodotti.
+Web app gratuita integrabile con \glock{Google Drive}, per realizzare casi d'uso, diagrammi e grafici UML. Rende possibile anche il versionamento dei file prodotti.
 \subparagraph{\textit{Gantt project}}
 Applicazione open source per costruire \glock{diagrammi di Gantt}, usati largamente nelle attività di pianificazione e presenti nel \textit{Piano di Progetto}.
 \subparagraph{\textit{Google Drive}}
@@ -322,8 +322,8 @@ Il numero di versione di ogni componente del prodotto e di ogni documento è def
 \end{center}
 dove
 \begin{itemize}
-    \item \textbf{[X]} indica il numero di versione approvato dal \glock{Responsabile di Progetto}. Inizialmente è a 0;
-    \item \textbf{[Y]} indica il numero di versione approvato dai \glock{Verificatori}. Inizialmente a 0 e riparte ad ogni
+    \item \textbf{[X]} indica il numero di versione approvato dal responsabile di progetto. Inizialmente è a 0;
+    \item \textbf{[Y]} indica il numero di versione approvato dai verificatori. Inizialmente a 0 e riparte ad ogni
                        incremento di \textbf{[X]};
     \item \textbf{[Z]} è il numero che identifica la versione in redazione. Viene quindi incrementato dai redattori
                        ad ogni aggiunta/modifica. Inizialmente a 0 e riparte ad ogni incremento di \textbf{[Y]}.
@@ -331,9 +331,9 @@ dove
 
 \paragraph{Tecnologie coinvolte}
 Per il processo di versionamento ci si affiderà al software \glock{Git} offerto come servizio dalla piattaforma \glock{GitHub}.\\
-In particolare, è stata creata un'organizzazione su tale piattaforma con il nome \verb|SWException| in cui tutti i membri del gruppo
+In particolare, è stata creata un'organizzazione su tale piattaforma con il nome \textit{SWException} in cui tutti i membri del gruppo
 hanno il medesimo accesso in scrittura e lettura per tutte le repository esistenti.\\
-Per il versionamento della documentazione viene usata una repository dal nome \verb|swe-docs|, in cui vengono riposti tutti i
+Per il versionamento della documentazione viene usata una repository dal nome \textit{swe-docs}, in cui vengono riposti tutti i
 documenti creati durante lo svolgimento del progetto didattico.\\
 Successivamente,  considerato che si andrà a creare un'applicazione a \glock{microservizi}, e dunque composta da parti fortemente indipendenti,
 verrà creata una repository per ogni modulo del prodotto.
@@ -343,15 +343,15 @@ Ogni membro del gruppo, in tutte le repository, dovrà attenersi alle convenzion
 In particolare saranno presenti i seguenti branch:
 \begin{itemize}
     \item \textbf{master:} utilizzato per ospitare le versioni di rilascio. In questo ramo dovrà esserci sempre una versione del prodotto utilizzabile
-                           e pronto ad essere rilasciato in \glock{ambiente di produzione}. È fatto divieto a tutti i membri del gruppo di effettuare \verb|commit|
+                           e pronto ad essere rilasciato in ambiente di produzione. È fatto divieto a tutti i membri del gruppo di effettuare \textit{commit}
                            direttamente su questo ramo, tutte le modifiche dovranno seguire il percorso previsto di GitFlow;
-    \item \textbf{develop:} questo è il ramo utilizzato per le operazioni di sviluppo. In particolare qui convergeranno i vari \verb|feature-branch|
+    \item \textbf{develop:} questo è il ramo utilizzato per le operazioni di sviluppo. In particolare qui convergeranno i vari \textit{feature-branch}
                             utilizzati per la creazione delle funzionalità del modulo in oggetto. In questo ramo deve essere presente sempre e solo codice
                             compilabile e feature complete;
     \item \textbf{feature/nome-feature:} per la creazione di ogni feature da parte dei vari membri addetti. In questi rami le feature possono anche essere
                                          incomplete e/o non funzionanti. Una volta completata la funzionalità il ramo deve essere chiuso sia in locale che in remoto e 
                                          convergere in develop;
-    \item \textbf{release/versione[X.Y.Z]:} ramo contenente la versione \glock{candidate-release} pronta per essere approvata dal \textit{Responsabile di Progetto} dopo
+    \item \textbf{release/versione[X.Y.Z]:} ramo contenente la versione \glock{candidate-release} pronta per essere approvata dal \textit{responsabile di progetto} dopo
                                             aver passato tutte le verifiche. Una volta approvata il branch deve terminare sia in locale che in remoto, convergendo in master e in develop.
                                             Contestualmente nel branch master deve essere presente il tag di release;
     \item \textbf{bugfix/nome-feature:} rami uscenti dal develop usati per sistemare errori rilevati successivamente alla chiusura del relativo feature-branch.
@@ -364,7 +364,7 @@ Infine può andare in master solamente quando si deciderà di effettuare una rel
 Per ulteriori informazioni consultare il tutorial di Atlassian su \href{https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow}{GitFlow-Workflow}.
 
 Altrettanto importante è il tipo di file che deve essere all'interno delle repository. Queste, in ogni loro branch, potranno ospitare solo file sorgenti, ad esempio
-in formato \verb|.tex| per la documentazione. Ogni tipo di file binario, compresi i \verb|.pdf|, prodotti della compilazione dei sorgenti, dovranno essere
+in formato \textit{.tex} per la documentazione. Ogni tipo di file binario, compresi i \textit{.pdf}, prodotti della compilazione dei sorgenti, dovranno essere
 ospitati nella specifica \textit{\glock{artifact repository}} alimentata dal processo di \textit{\glock{continuous delivery}}, il quale verrà avviato contestualmente
 all'inizio dello sviluppo del prodotto. Ogni membro dovrà assicurarsi che il codice prodotto sia compilabile con una recente distribuzione di \LaTeX,
 sia essa \verb|MikTex| o \verb|TexLive|, prima di far convergere il proprio ramo in develop. In ogni caso l'azione di push su un qualsiasi ramo e il merge di una pull request sul ramo develop
@@ -405,7 +405,7 @@ Il processo di gestione della qualità si articola nelle seguenti attività:
 
 
 \subsubsection{Denominazione metriche}
-Per garantire uniformità, si è deciso di denominare le \glock{metriche} nel seguente modo:
+Per garantire uniformità, si è deciso di denominare le metriche nel seguente modo:
 \begin{itemize}
     \item Per i prodotti:
           \begin{center}
@@ -545,7 +545,7 @@ Questo tipo di analisi viene effettuata sul prodotto senza eseguirlo e serve per
     \includegraphics[width=\linewidth]{res/images/processo_verifica.png}
     \caption{Processo di verifica  dei documenti}
 \end{figure}
-Il processo di verifica viene gestito con il meccanismo delle pull request, una sorta di issue avanzata messa a disposizione da \glock{Github} descritto in dettaglio in \ref{_cicloVitaTicket}.
+Il processo di verifica viene gestito con il meccanismo delle pull request, una sorta di issue avanzata messa a disposizione da \textit{Github} descritto in dettaglio in \ref{_cicloVitaTicket}.
 
 \subsubsection{Verifica del codice}
 Il codice viene verificato con test automatici e con misurazioni quantificabili specificate all'interno del \dext{Piano di qualifica}. Il codice quindi deve obbedire a questi criteri:
