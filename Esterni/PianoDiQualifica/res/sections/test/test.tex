@@ -22,7 +22,7 @@ Di seguito l'elenco dei test di sistema individuati.
 
 \begin{center}
 	\rowcolors{1}{white}{blue!20}
-	\begin{longtable}{p{1cm}|p{6.85cm}|p{7cm}|}
+	\begin{longtable}{p{1cm}|p{4.85cm}|p{9cm}|}
 	\hline
 	\rowcolor{lighter-grayer}
 	\textbf{Codice} & \textbf{Titolo} & \textbf{Descrizione} \\
@@ -164,39 +164,58 @@ Di seguito l'elenco dei test di sistema individuati.
 		\item il sistema si comporti per il cambio password come nel processo di registrazione. 
 	\end{enumerate} \\
 
-	\valueCTS & Verifica gestione propri ordini & Si verifichi che il cliente possa gestire i propri ordini  \\
-	\valueCTS & Verifica gestione propri ordini & Si verifichi che il cliente possa contattare il venditore tramite i form per annullare l'ordine, segnalare problemi dell'ordine, chiedere il reso \\
-	\valueCTS & Verifica logout cliente & Si verifichi che il cliente loggato possa effettuare il logout e che venga riportato alla home page \\
-	\valueCTS & Verifica contatto venditore & Si verifichi che il cliente possa contattare il venditore tramite l'apposito form  \\
-	\valueCTS & Verifica dashboard ordini venditore & Si verifichi che il venditore possa visualizzare e modificare la lista degli ordini ricevuti \\
-	\valueCTS & Verifica dashboard ordini venditore & Si verifichi che il venditore possa cercare un ordine presente nel sistema \\
-	\valueCTS & Verifica dashboard ordini venditore & Si verifichi che il venditore possa modificare lo stato di un ordine  \\
-	\valueCTS & Verifica dashboard ordini venditore & Si verifichi che il venditore possa stampare la bolla per un ordine  \\
-	\valueCTS & Verifica dashboard ordini venditore & Si verifichi che il venditore possa visualizzare i dettagli di un ordine \\
-	\valueCTS & Verifica dashboard clienti venditore & Si verifichi che il venditore possa visualizzare la lista dei clienti \\
-	\valueCTS & Verifica dashboard clienti venditore & Si verifichi che il venditore possa cercare un determinato cliente nel sistema \\
-	\valueCTS & Verifica dashboard clienti venditore & Si verifichi che il venditore possa ordinare i clienti con determinati filtri \\
-	\valueCTS & Verifica dashboard clienti venditore & Si verifichi che il venditore possa contattare il cliente tramite un form \\
-	\valueCTS & Verifica dashboard aliquote venditore & Si verifichi che il venditore possa gestire le aliquote IVA per la tassazione dei prodotti \\
-	\valueCTS & Verifica dashboard aliquote venditore & Si verifichi che il venditore possa visualizzare le aliquote IVA già presenti nel sistema \\
-	\valueCTS & Verifica dashboard aliquote venditore & Si verifichi che il venditore possa aggiungere un'aliquota IVA \\
-	\valueCTS & Verifica dashboard aliquote venditore & Si verifichi che il venditore possa modificare un'aliquota IVA \\
-	\valueCTS & Verifica dashboard aliquote venditore & Si verifichi che il venditore possa eliminare un'aliquota IVA già presente nel sistema \\
-	\valueCTS & Verifica dashboard prodotti venditore & Si verifichi che il venditore possa visualizzare la lista dei prodotti inseriti nel sistema \\
-	\valueCTS & Verifica dashboard prodotti venditore & Si verifichi che il venditore possa cercare un prodotto presente nel sistema \\
-	\valueCTS & Verifica dashboard prodotti venditore & Si verifichi che il venditore possa filtrare i prodotti \\
-	\valueCTS & Verifica dashboard prodotti venditore & Si verifichi che il venditore possa aggiungere un prodotto al sistema dopo aver compilato tutti i campi obbligatori del prodotto \\
-	\valueCTS & Verifica dashboard prodotti venditore & Si verifichi che il venditore possa modificare un prodotto aggiornando i campi già presenti\\
-	\valueCTS & Verifica dashboard prodotti venditore & Si verifichi che il venditore possa eliminare un prodotto presente nel sistema\\
-	\valueCTS & Verifica dashboard prodotti venditore & Si verifichi che il venditore possa selezionare i prodotti da mostrare nella HomePage cliente \\
-	\valueCTS & Verifica dashboard categorie venditore & Si verifichi che il venditore possa visualizzare tutte le categorie presenti nel sistema \\
-	\valueCTS & Verifica dashboard categorie venditore & Si verifichi che il venditore possa aggiungere una categoria di prodotti impostando il nome \\
-	\valueCTS & Verifica dashboard categorie venditore & Si verifichi che il venditore possa rimuovere una categoria di prodotti \\
-	\valueCTS & Verifica dashboard categorie venditore & Si verifichi che il venditore possa modificare il nome di una categoria già esistente nel sistema \\
-	\valueCTS & Verifica login venditore & Si verifichi che il venditore possa effettuare il login \\
-	\valueCTS & Verifica logout venditore & Si verifichi che il venditore possa effettuare il logout \\
+	\valueCTS & Verifica gestione propri ordini & Verificare che:
+	\begin{enumerate}
+		\item il cliente possa gestire i propri ordini;
+		\item il cliente possa contattare il venditore tramite i form per:
+		\begin{enumerate}
+			\item annullare l'ordine;
+			\item segnalare problemi dell'ordine;
+			\item chiedere il reso;
+		\end{enumerate}
+	\end{enumerate} \\
+	\valueCTS & Verifica logout cliente & Verificare che il cliente loggato possa effettuare il logout e che venga riportato alla home page \\
+	\valueCTS & Verifica contatto venditore & Verificare che il cliente possa contattare il venditore tramite l'apposito form  \\
+	\valueCTS & Verifica dashboard ordini venditore & Verificare che:
+	\begin{enumerate}
+		\item il venditore possa visualizzare e modificare la lista degli ordini ricevuti;
+		\item il venditore possa cercare un ordine presente nel sistema;
+		\item il venditore possa modificare lo stato di un ordine;
+		\item il venditore possa stampare la bolla per un ordine;
+		\item il venditore possa visualizzare i dettagli di un ordine;
+		\item il venditore possa visualizzare la lista dei clienti;
+		\item il venditore possa cercare un determinato cliente nel sistema;
+		\item il venditore possa ordinare i clienti con determinati filtri;
+		\item il venditore possa contattare il cliente tramite un form;
+	\end{enumerate} \\
+	\valueCTS & Verifica dashboard aliquote venditore & Verificare che:
+	\begin{enumerate}
+		\item il venditore possa gestire le aliquote IVA per la tassazione dei prodotti;
+		\item il venditore possa visualizzare le aliquote IVA già presenti nel sistema;
+		\item il venditore possa aggiungere un'aliquota IVA;
+		\item il venditore possa modificare un'aliquota IVA;
+		\item il venditore possa eliminare un'aliquota IVA già presente nel sistema;
+	\end{enumerate} \\
+	\valueCTS & Verifica dashboard prodotti venditore & Verificare che:
+	\begin{enumerate}
+		\item il venditore possa visualizzare la lista dei prodotti inseriti nel sistema;
+		\item il venditore possa cercare un prodotto presente nel sistema;
+		\item il venditore possa filtrare i prodotti;
+		\item il venditore possa aggiungere un prodotto al sistema dopo aver compilato tutti i campi obbligatori del prodotto;
+		\item il venditore possa modificare un prodotto aggiornando i campi già presenti;
+		\item il venditore possa eliminare un prodotto presente nel sistema;
+		\item il venditore possa selezionare i prodotti da mostrare nella HomePage cliente;
+	\end{enumerate} \\
+	\valueCTS & Verifica dashboard categorie venditore & Verificare che:
+	\begin{enumerate}
+		\item il venditore possa visualizzare tutte le categorie presenti nel sistema;
+		\item il venditore possa aggiungere una categoria di prodotti impostando il nome;
+		\item il venditore possa rimuovere una categoria di prodotti;
+		\item il venditore possa modificare il nome di una categoria già esistente nel sistema;
+	\end{enumerate} \\
+	\valueCTS & Verifica login venditore & Verificare che il venditore possa effettuare il login \\
+	\valueCTS & Verifica login venditore & Verificare che il venditore possa effettuare il logout \\
 	\hline
-
 	\end{longtable}
 \end{center}
 
