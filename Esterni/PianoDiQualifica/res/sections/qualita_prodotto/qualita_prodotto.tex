@@ -5,10 +5,11 @@ Per prodotti si intende tutto ciò che è utilizzabile nell'ambito di questo pro
 I documenti vengono rilasciati durante tutto lo sviluppo del progetto, sono ad utilizzo interno o esterno.
 
 \subsubsection{Metriche}
-\begin{itemize}
-    \item \textbf{Indice di Gulpease:}
+
+ 
     \paragraph{Indice di Gulpease}
 \begin{itemize}
+\item \textbf{Codice:} MPD-D1;
 \item \textbf{Descrizione:} questo indice, inventato nel 1988, ha come obiettivo descrivere la leggibilità di un testo in lingua italiana in maniera numerica, compresa tra 0 e 100, dove 0 è la leggibilità più bassa e 100 la leggibilità più alta. 
 \item \textbf{Formula:} \[\textit{Indice Gulpease} = \frac{\textit{300 * (numero delle frasi) - 10 * (nuemro delle lettere)}}{\textit{(numero delle parole)}}\]
 \item \textbf{Valori:}
@@ -16,8 +17,13 @@ I documenti vengono rilasciati durante tutto lo sviluppo del progetto, sono ad u
         \item \textbf{Accettabile:} $40 \leq$ Indice Gulpease $\leq 10$
         \item \textbf{Otimale:} $80 \leq$ Indice Gulpease $\leq 100$
     \end{itemize}
+
+   
 \end{itemize}
-    \item \textbf{Correttezza ortografica:}
+
+\paragraph{Correttezza ortografica}
+\begin{itemize}
+    \item \textbf{Codice:} MPD-D2;
 \end{itemize}
 
 \subsubsection{Obiettivi}
@@ -47,7 +53,7 @@ Per la valutazione qualitativa del codice prodotto si considerano le seguenti me
 
 \paragraph{Complessità ciclomatica}
 \begin{itemize}
-    \item \textbf{Codice:} MPD-ART1;
+    \item \textbf{Codice:} MPD-S1;
     \item \textbf{Attributo di riferimento:} valore ritornato dal processo automatizzato di analisi statica del codice, il quale includerà l'analisi della complessità ciclomatica;
     \item \textbf{Formula:} \[ v(G)=e-n+2\cdot p \]
     \item \textbf{Range di valori che può assumere:} $\{x \in \mathbb{N} \}$;
@@ -57,7 +63,7 @@ Per la valutazione qualitativa del codice prodotto si considerano le seguenti me
 
 \paragraph{Complessità espressioni booleane}
 \begin{itemize}
-    \item \textbf{Codice:} MPD-ART2;
+    \item \textbf{Codice:} MPD-S2;
     \item \textbf{Attributo di riferimento:} valore ritornato dal processo automatizzato di analisi statica del codice, il quale includerà l'analisi della complessità delle espressioni booleane;
     \item \textbf{Formula:} si contano il numero di operatori logici presenti all'interno di una singola espressione;
     \item \textbf{Range di valori che può assumere:} $\{x \in \mathbb{N} \}$;
@@ -67,7 +73,7 @@ Per la valutazione qualitativa del codice prodotto si considerano le seguenti me
 
 \paragraph{Lunghezza delle righe di codice}
 \begin{itemize}
-    \item \textbf{Codice:} MPD-ART3;
+    \item \textbf{Codice:} MPD-S3;
     \item \textbf{Attributo di riferimento:} valore ritornato dal processo automatizzato di analisi statica del codice, il quale includerà un report sulla lunghezza delle righe di codice
                                             (ovvero segnala quando una o più righe superano la lunghezza massima);
     \item \textbf{Formula:} si contano il numero di caratteri presenti su una singola riga di codice;
@@ -78,7 +84,7 @@ Per la valutazione qualitativa del codice prodotto si considerano le seguenti me
 
 \paragraph{Code coverage}
 \begin{itemize}
-    \item \textbf{Codice:} MPD-ART4;
+    \item \textbf{Codice:} MPD-S4;
     \item \textbf{Attributo di riferimento:} valore ritornato dal processo automatizzato di analisi statica del codice, il quale includerà un report sulla lunghezza delle righe di codice
                                             (ovvero segnala quando una o più righe superano la lunghezza massima);
     \item \textbf{Formula:} si contano il numero di caratteri presenti su una singola riga di codice;
