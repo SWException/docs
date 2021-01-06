@@ -13,3 +13,5 @@
 *.glsdefs
 *.synctex(busy)
 .vscode/*
+*.lof
+*.lot
