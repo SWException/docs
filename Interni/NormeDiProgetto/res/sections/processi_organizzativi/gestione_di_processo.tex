@@ -157,7 +157,7 @@ I componenti del gruppo, una volta che un compito è a loro assegnato, sono tenu
 
 \paragraph{Ciclo di vita di un'attività} \label{_cicloVitaAttivita}
 \begin{center}
-    \includegraphics[scale=0.8]{res/images/ciclo_vita_ticket.png}
+    \includegraphics[scale=0.8]{res/images/ciclo_vita_ticket.jpg}
 \end{center}
 Il ciclo di vita di una singola attività interessa tre figure:
 \begin{itemize}
@@ -173,10 +173,10 @@ Le fasi del ciclo di vità di un'attività sono qui spiegate nel dettaglio:
     \item \textbf{Spostamento issue in "TO-DO"}: il responsabile sposta la issue nella colonna "TO-DO" all'interno della board di progetto, così da identificarla come da svolgere;
     \item \textbf{Spostamento issue in "IN PROGRESS"}: una volta che un assegnatario decide di iniziare il lavoro dopo essersi autoassegnato la issue, o dopo che il responsabile di progetto gli abbia incaricato l'attività, provvederà a spostarla nella colonna "IN PROGRESS";
     \item \textbf{Spostamento issue in "DONE"}: terminato il lavoro l'assegnatario provvederà a spostare la issue in "DONE" ed a chiudere la issue;
-    \item \textbf{Creazione pull request}: l'assegnatario a questo punto dovrà creare una pull request dal ramo contenente il lavoro svolto al ramo dove dovranno essere applicate queste modifiche. Dovrà poi indicare nel campo "Reviewer" un componente incaricato della verifica ed inserire la lable "da revisionare". Può aggiungere alla pull request una descrizione contenente dei commenti sul lavoro svolto se ritiene che ciò possa essere utile al controllo da parte del verificatore. Conclude inserendo la pull request all'interno della sezione "TO-DO" della board di progetto;
+    \item \textbf{Creazione pull request}: il responsabile a questo punto dovrà creare una pull request dal ramo contenente il lavoro svolto al ramo dove dovranno essere applicate queste modifiche. Dovrà poi indicare nel campo "Reviewer" un componente incaricato della verifica ed inserire la label "da revisionare". Può aggiungere alla pull request una descrizione contenente dei commenti sul lavoro svolto se ritiene che ciò possa essere utile al controllo da parte del verificatore. Conclude inserendo la pull request all'interno della sezione "TO-DO" della board di progetto;
     \item \textbf{Spostamento pull request in "IN PROGRESS"}: il verificatore quando inizia il lavoro di verifica sposta la pull request in "IN PROGRESS";
-    \item \textbf{Creazione feedback di verifica}: terminata la verifica il verificatore scrive un feedback del lavoro sottopostogli, e richiede delle modifiche nel caso riscontri delle correzioni da fare. In questo caso assegna la pull request al componente del gruppo che la creata, e modifica la label in "da correggere";
-    \item \textbf{Svolgimento modifiche}: l'assegnatario dopo aver ricevuto dal verificatore un feedback sulle cose da sistemare provvederà a svolgerle. Una volta terminate le correzioni richiederà un'ulteriore verifica attraverso il tasto "re-reviews" e modificherà la lable in "da revisionare";
+    \item \textbf{Creazione feedback di verifica}: terminata la verifica il verificatore scrive un feedback del lavoro sottopostogli, e richiede delle modifiche nel caso riscontri delle correzioni da fare. In questo caso assegna la pull request al componente del gruppo che l'ha creata, e modifica la label in "da correggere";
+    \item \textbf{Svolgimento modifiche}: l'assegnatario dopo aver ricevuto dal verificatore un feedback sulle cose da sistemare provvederà a svolgerle. Una volta terminate le correzioni richiederà un'ulteriore verifica attraverso il tasto "re-reviews" e modificherà la label in "da revisionare";
     \item \textbf{Spostamento pull request in "DONE"}: se il verificatore non riscontra correzioni da fare, o quelle effettuate sono soddisfacenti, effettua il merge sul develop selezionando l'opzione "Squash and merge" e assegnare un titolo significativo al commit. Infine sposta la pull request in "DONE";
     \item \textbf{Approvazione del lavoro}: il responsabile di progetto dopo aver esaminato il lavoro lo approverà successivamente effettuando una pull request al ramo master.
 \end{itemize}
