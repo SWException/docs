@@ -16,7 +16,11 @@ Di seguito l'elenco dei test di sistema individuati.
 
 \begin{center}
 	\rowcolors{1}{white}{blue!20}
+<<<<<<< HEAD
+	\begin{longtable}{|p{1cm}|p{6.85cm}|p{7cm}|}
+=======
 	\begin{longtable}{p{1cm}|p{6.85cm}|p{7cm}|}
+>>>>>>> ffcca3448424da8d4f51ace38bbb0a02d7ec4c2a
 	\hline
 	\rowcolor{lighter-grayer}
 	\textbf{Codice} & \textbf{Titolo} & \textbf{Descrizione} \\
@@ -89,7 +93,7 @@ Di seguito l'elenco dei test di sistema individuati.
 
 \begin{center}
 	\rowcolors{1}{white}{blue!20}
-	\begin{longtable}{|c|c|c|}
+	\begin{longtable}{|p{1cm}|p{6.85cm}|p{7cm}|}
 	\hline
 	\rowcolor{lighter-grayer}
 	\textbf{Codice} & \textbf{Titolo} & \textbf{Descrizione} \\
@@ -100,9 +104,54 @@ Di seguito l'elenco dei test di sistema individuati.
 
 
 	\hline
-	TS1 & Autenticazione utente & Verificare che l'utente non autenticato possa  \\
-	TS2 & Autenticazione utente & Verificare che l'utente non autenticato possa  \\
-
+	TS2.1 & Apertura pagina carrello & Verificare che: (1) i prodotti inseriti precedentemente vengano visualizzati nella giusta quantità;
+													   (2) il totale dell'ordine sia corretto (solo prodotti, senza tasse e spedizione);
+													   (3) il totale dell'ordine con le tasse aggiunte sia corretto;
+													   (4) si possa vedere il costo dei singoli prodotti;
+													   (5) si visualizzi il messaggio di carrello vuoto nel caso in cui lo sia. \\
+	TS2.2 & Modifica quantità prodotti nel carrello & Verificare che:
+													   (1) si possa aumentare e diminuire la quantità di un singolo articolo nel carrello;
+													   (2) in caso di aumento, se la quantità richiesta non è disponibile, venga visualizzato il giusto messaggio di errore;
+													   (3) si possa eliminare un singolo articolo.  \\
+	TS2.3 & Svuotare il carrello & Verificare che: (1) tutti gli elementi nel carrello possano essere rimossi. \\
+	TS2.4 & Processo di checkout - inserimento indirizzi e calcolo spedizione & Verificare che:
+												   (1) il messaggio mostri un errore se si avvia il checkout con carrello vuoto;
+												   (2) si possano inserire indirizzi di fatturazione e spedizione da form e da quelli salvati (se autenticato);
+												   (3) l'indirizzo di spedizione possa essere copiato con un click da quello scelto per la fatturazione;
+												   (4) vengano aggiunti e visualizzati i costi di spedizione al totale dell'ordine, dopo aver scelto l'indirizzo di spedizione. \\
+	TS2.5 & Processo di checkout - pagamento & Verificare che:
+												   (1) il sistema di pagamento con il provider esterno possa essere utilizzato per concludere il checkout;
+												   (2) nel caso di fallimento del pagamento, il sistema mostri in modo chiaro che il pagamento non è andato a buon fine e l'ordine non è stato emesso;
+												   (3) nel caso di fallimento del pagamento, si possa riprovare immediatamente;
+												   (4) in caso di successo del pagamento, si avvisa il cliente dell'avvenuto ordine, vengono scalate le merci acquistate dal magazzino e il venditore possa gestire l'ordine. \\
+	TS2.6 & Login cliente & Verificare che: (1) il sistema di login cliente permetta di autenticarsi all'applicazione con un profilo già registrato, inserendo le corrette credenziali;
+											(2) il cliente possa navigare tutto il sito mantenendo la sessione di login;
+											(3) in caso di credenziali errate, venga mostrato il relativo messaggio di errore e si permetta di riprovare nell'immediato. \\
+	TS2.7 & Registrazione cliente & Verificare che: (1) un cliente non autenticato possa avviare il processo di registrazione;
+													(2) nel caso in cui il doppio inserimento dell'email fallisca (e.g. non corrisponde) si visualizzi il relativo messaggio d'errore;
+													(3) nel caso in cui il doppio inserimento della password fallisca (e.g. non corrisponde) si visualizzi il relativo messaggio d'errore;
+													(4) nel caso in cui la password non rispetti i requisiti minimi di sicurezza si visualizzi il relativo messaggio d'errore;
+													(5) nel caso in cui esista già un utente con la stessa email si visualizzi il relativo messaggio d'errore;
+													(6) nel caso in cui tutto vada a buon fine, arrivi l'email per la verifica dell'indirizzo inserito;
+													(7) il click sul link di conferma ricevuto abiliti l'account appena registrato \\
+	TS2.8 & Recupero password cliente & Verificare che:
+													(1) durante il processo di login si possa avviare quello per il recupero della password;
+													(2) si riceva il link per la reimpostazione della password al proprio indirizzo email, nel caso si richieda;
+													(3) cliccando il link ricevuto si possa inserire la password con un doppio inserimento;
+													(4) nel caso in cui i due inserimenti non corrispondano e/o la password non rispetti i requisiti di sicurezza si mostri il relativo messaggio d'errore;
+													(5) nel caso in cui si inseriscano dei dati validi, mostrare il messaggio di conferma cambio password. \\
+	TS2.9 & Amministrazione account cliente - gestione indirizzi & Verificare che:
+													(1) si possa inserire un nuovo indirizzo e che questo sia utilizzabile durante il processo di checkout; 
+													(2) nel caso in cui si inserisca un indirizzo non valido (e.g. campi obbligatori vuoti) si mostri un messaggio di errore e si permetta la modifica immediata dei dati inseriti;
+													(3) si possa eliminare un indirizzo precedentemente inserito; \\
+	TS2.10 & Amministrazione account cliente - assistenza & Verificare che:
+													(1) il cliente possa aprire un ticket di assistenza e che questo sia gestibile dal venditore;
+													(2) il cliente possa avviare la richiesta di cancellazione account tramite un apposito tipo di ticket di assistenza. \\
+	TS2.11 & Amministrazione account cliente - modifica dati login & Verificare che:
+													(1) il cliente possa cambiare indirizzo email;
+													(2) il sistema si comporti per il cambio email come nel processo di registrazione;
+													(3) il cliente possa cambiare password inserendo quella vecchia;
+													(4) il sistema si comporti per il cambio password come nel processo di registrazione. \\
 	\hline
 
 	\end{longtable}
@@ -110,7 +159,11 @@ Di seguito l'elenco dei test di sistema individuati.
 
 \begin{center}
 	\rowcolors{1}{white}{blue!20}
+<<<<<<< HEAD
+	\begin{longtable}{|p{1cm}|p{6.85cm}|p{7cm}|}
+=======
 	\begin{longtable}{p{1cm}|p{6.85cm}|p{7cm}|}
+>>>>>>> ffcca3448424da8d4f51ace38bbb0a02d7ec4c2a
 	\hline
 	\rowcolor{lighter-grayer}
 	\textbf{Codice} & \textbf{Titolo} & \textbf{Descrizione} \\
@@ -127,7 +180,7 @@ Di seguito l'elenco dei test di sistema individuati.
 	TS3.4 & Verifica contatto venditore & Si verifichi che il cliente possa contattare il venditore tramite l'apposito form  \\
 	TS3.5 & Verifica dashboard ordini venditore & Si verifichi che il venditore possa visualizzare e modificare la lista degli ordini ricevuti \\
 	TS3.6 & Verifica dashboard ordini venditore & Si verifichi che il venditore possa cercare un ordine presente nel sistema \\
-	TS3.7 & Verifica dashboard ordini venditore & Si verifichi che il venditore possa modoficare lo stato di un ordine  \\
+	TS3.7 & Verifica dashboard ordini venditore & Si verifichi che il venditore possa modificare lo stato di un ordine  \\
 	TS3.8 & Verifica dashboard ordini venditore & Si verifichi che il venditore possa stampare la bolla per un ordine  \\
 	TS3.9 & Verifica dashboard ordini venditore & Si verifichi che il venditore possa visualizzare i dettagli di un ordine \\
 	TS3.10 & Verifica dashboard clienti venditore & Si verifichi che il venditore possa visualizzare la lista dei clienti \\
@@ -206,10 +259,25 @@ Di seguito l'elenco dei test di sistema individuati.
 	% ----- MICHELE -----
 
 	
+<<<<<<< HEAD
+	\hline
+	TS2.1 & R1F11  \\
+	TS2.2 & R1F12 \\
+	TS2.3 & R1F13 \\
+	TS2.4 & R1F14 \\
+	TS2.5 & R1F14 \\
+	TS2.6 & R1F15 \\
+	TS2.7 & R1F16 \\
+	TS2.8 & R1F17 \\
+	TS2.9 & R1F18 \\
+	TS2.10 & R1F18 \\
+	TS2.11 & R1F18 \\
+=======
 	
 	R1F1 & TSA1  \\
 	REQ2 & TSA1 \\
 
+>>>>>>> ffcca3448424da8d4f51ace38bbb0a02d7ec4c2a
 	\hline
 
 	\end{longtable}
