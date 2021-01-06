@@ -13,8 +13,8 @@ I documenti vengono rilasciati durante tutto lo sviluppo del progetto, sono ad u
 \item \textbf{Formula:} \[\textit{Indice Gulpease} = \frac{\textit{300 * (numero delle frasi) - 10 * (nuemro delle lettere)}}{\textit{(numero delle parole)}}\]
 \item \textbf{Valori:}
     \begin{itemize}
-        \item \textbf{Accettabile:} 40 < Indice Gulpease < 100
-        \item \textbf{Otimale:} 80 < Indice Gulpease < 100
+        \item \textbf{Accettabile:} $40 \leq$ Indice Gulpease $\leq 10$
+        \item \textbf{Otimale:} $80 \leq$ Indice Gulpease $\leq 100$
     \end{itemize}
 \end{itemize}
     \item \textbf{Correttezza ortografica:}
@@ -36,32 +36,20 @@ La verifica della qualità del software è effettuata mediante le metriche indiv
 
 
 \subsubsection{Metriche interne}
+\label{_metricheQualitaCodice}
 Per la valutazione qualitativa del codice prodotto si considerano le seguenti metriche interne:
 \begin{itemize}
     \item complessità ciclomatica;
     \item complessità delle espressioni booleane;
-    \item lunghezza delle righe di codice.
+    \item lunghezza delle righe di codice;
+    \item code coverage.
 \end{itemize}
 
 \paragraph{Complessità ciclomatica}
 \begin{itemize}
-    \item \textbf{Codice:}
-    \item \textbf{Descrizione:} indice che serve a monitorare la complessità del codice prodotto, ovvero il numero di cammini del flusso linearmente indipendenti;
+    \item \textbf{Codice:} MPD-ART1;
     \item \textbf{Attributo di riferimento:} valore ritornato dal processo automatizzato di analisi statica del codice, il quale includerà l'analisi della complessità ciclomatica;
-    \item \textbf{Sigla:}
-    \item \textbf{Formula:} la complessità ciclomatica di un programma strutturato è definita in riferimento ad un grafo diretto contenente i blocchi
-    base di un programma con un arco tra due blocchi se il controllo può passare dal primo al secondo (il "grafo di controllo di flusso"). La complessità è
-    quindi definita come:
-            \[
-                v(G)=e-n+2\cdot p
-            \]
-    dove:
-        \begin{itemize}
-            \item $v(G)$ è la complessità ciclomatica del grafo G;
-            \item $e$ è il numero di archi del grafo;
-            \item $n$ è il numero di nodi del grafo;
-            \item $p$ è il numero di componenti connesse.
-        \end{itemize}
+    \item \textbf{Formula:} \[ v(G)=e-n+2\cdot p \]
     \item \textbf{Range di valori che può assumere:} $\{x \in \mathbb{N} \}$;
     \item \textbf{Range di valori accettabili:} per mantenere una buona qualità del software è necessario che il valore di questa metrica non superi
     10 per ogni modulo.
@@ -69,11 +57,8 @@ Per la valutazione qualitativa del codice prodotto si considerano le seguenti me
 
 \paragraph{Complessità espressioni booleane}
 \begin{itemize}
-    \item \textbf{Codice:}
-    \item \textbf{Descrizione:} indice che serve a monitorare la complessità delle espressioni logiche condizionali, ovvero per definire un tetto massimo per il
-                                numero di operatori booleani all'interno di una singola espressione;
+    \item \textbf{Codice:} MPD-ART2;
     \item \textbf{Attributo di riferimento:} valore ritornato dal processo automatizzato di analisi statica del codice, il quale includerà l'analisi della complessità delle espressioni booleane;
-    \item \textbf{Sigla:}
     \item \textbf{Formula:} si contano il numero di operatori logici presenti all'interno di una singola espressione;
     \item \textbf{Range di valori che può assumere:} $\{x \in \mathbb{N} \}$;
     \item \textbf{Range di valori accettabili:} per mantenere una buona qualità del software è necessario che il valore di questa metrica non superi
@@ -82,11 +67,20 @@ Per la valutazione qualitativa del codice prodotto si considerano le seguenti me
 
 \paragraph{Lunghezza delle righe di codice}
 \begin{itemize}
-    \item \textbf{Codice:}
-    \item \textbf{Descrizione:} indice che serve a monitorare la lunghezza delle righe di codice;
+    \item \textbf{Codice:} MPD-ART3;
     \item \textbf{Attributo di riferimento:} valore ritornato dal processo automatizzato di analisi statica del codice, il quale includerà un report sulla lunghezza delle righe di codice
                                             (ovvero segnala quando una o più righe superano la lunghezza massima);
-    \item \textbf{Sigla:}
+    \item \textbf{Formula:} si contano il numero di caratteri presenti su una singola riga di codice;
+    \item \textbf{Range di valori che può assumere:} $\{x \in \mathbb{N}_0 \}$;
+    \item \textbf{Range di valori accettabili:} per mantenere una buona qualità del software è necessario che il valore di questa metrica non superi
+    80 per ogni riga di codice.
+\end{itemize}
+
+\paragraph{Code coverage}
+\begin{itemize}
+    \item \textbf{Codice:} MPD-ART4;
+    \item \textbf{Attributo di riferimento:} valore ritornato dal processo automatizzato di analisi statica del codice, il quale includerà un report sulla lunghezza delle righe di codice
+                                            (ovvero segnala quando una o più righe superano la lunghezza massima);
     \item \textbf{Formula:} si contano il numero di caratteri presenti su una singola riga di codice;
     \item \textbf{Range di valori che può assumere:} $\{x \in \mathbb{N}_0 \}$;
     \item \textbf{Range di valori accettabili:} per mantenere una buona qualità del software è necessario che il valore di questa metrica non superi
@@ -110,7 +104,7 @@ Per \textit{affidabilità} si intende la capacità del prodotto software di aver
 
 
 \paragraph{Usabilità - Profondità strutturale dell'interfaccia}
-Per \textit{usabilità} si iintende la capacità del prodotto sftware di essere comprensibile, di poter essere usato facilmente in ogni sua parte da qualsiasi utente.
+Per \textit{usabilità} si intende la capacità del prodotto software di essere comprensibile, di poter essere usato facilmente in ogni sua parte da qualsiasi utente.
 
 \begin{itemize}
     \item \textbf{Codice:} 
