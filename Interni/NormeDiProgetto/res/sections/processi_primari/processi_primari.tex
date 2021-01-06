@@ -57,25 +57,8 @@ Deve essere redatto un Piano di Progetto da seguire durante lo svolgimento del p
 
 \subsubsection{Piano di Qualifica}
 \label{_pianoDiQualifica}
-La stesura di questo documento è demandata ai progettisti per quanto concerne la scelta di opportune strategie in grado di garantire efficacia e qualità nei processi e prodotti e ai verificatori per quanto riguarda la documentazione dell'esito delle prove effettuate secondo quanto stabilito. \\\\
-Il codice delle metriche di qualità sarà cosi composto:
-\begin{center}
-  \textbf{MP[X]-[Y][Z]}
-\end{center}
-dove:
-\begin{itemize}
-  \item \textbf{[X]} assume i seguenti valori:
-  \begin{itemize}
-    \item R se è una metrica per la qualità dei processi;
-    \item D se è una metrica per la qualità del prodotto.
-  \end{itemize}
-  \item \textbf{[Y]} assume i seguenti valori:
-  \begin{itemize}
-    \item DOC se la metrica è relativa alla documentazione;
-    \item ART se la metrica è relativa ad un artefatto software.
-  \end{itemize}
-  \item \textbf{[Z]} è un numero intero che parte da 1 ed incrementa ad ogni aggiunta di metrica per lo stesso tipo.
-\end{itemize}
+La stesura di questo documento è demandata ai progettisti per quanto concerne la scelta di opportune strategie in grado di garantire efficacia e qualità nei processi e prodotti e ai verificatori per quanto riguarda la documentazione dell'esito delle prove effettuate secondo quanto stabilito.
+
 
 \subsection{Processi di sviluppo}
 \label{_processiDiSviluppo}
@@ -259,14 +242,14 @@ Ciascun programmatore è tenuto a rispettare le seguenti norme:
   \item \textbf{Lingua}: i nomi di variabili, costruttori, metodi, classi e commenti vanno scritti in lingua inglese.
 \end{itemize}
 
-\subsubsection{Metriche}
+\paragraph{Metriche}
 \label{_metricheQualitaCodice}
 In questa sezione verranno elencate le metriche finora individuate per mantenere una buona qualità del codice:
 \begin{itemize}
-  \item complessità ciclomatica: MPD-ART1;
-  \item complessità delle espressioni booleane: MPD-ART2;
-  \item lunghezza delle righe di codice: MPD-ART3;
-  \item copertura del codice da parte dei test automatici (code coverage): MPD-ART4.
+  \item complessità ciclomatica: MPD-S1;
+  \item complessità delle espressioni booleane: MPD-S2;
+  \item lunghezza delle righe di codice: MPD-S3;
+  \item copertura del codice da parte dei test automatici (code coverage): MPD-S4.
 \end{itemize}
 
-Le metriche sopra elencate sono spiegate nel dettaglio nell'appendice \ref{_metricheCodiceSorgente}.
+Le metriche sopra elencate sono spiegate nel dettaglio nell'appendice \ref{_metricheCodiceSorgenteApp}.

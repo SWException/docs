@@ -50,9 +50,9 @@ Questa metrica permette di misurare la correttezza lessicografica del documento 
 Se CORT=0 allora il documento non ha errori ortografici, se CORT>0 il documento presenta errori.
 
 \subsection{Metriche per la qualità del codice sorgente} \label{_metricheCodiceSorgenteApp}
-Per misurare la qualità del codice sorgente prodotto vengono adottate le seguenti metriche.
+Per misurare la qualità del codice sorgente prodotto vengono adottate le seguenti metriche, come introdotto in \ref{_metricheQualitaCodice}
 
-\subsubsection{MPD-ART1: Complessità ciclomatica}
+\subsubsection{MPD-S1: Complessità ciclomatica}
 La complessità ciclomatica di un programma strutturato è definita in riferimento ad un grafo diretto
 contenente i blocchi base di un programma con un arco tra due blocchi se il controllo può passare dal
 primo al secondo (il "grafo di controllo di flusso"). La complessità è quindi definita come:
@@ -67,18 +67,18 @@ dove:
     \item $p$ è il numero di componenti connesse, ha un valore in $\mathbb{N}$.
 \end{itemize}
 
-\subsubsection{MPD-ART2: Complessità espressioni booleane}
+\subsubsection{MPD-S2: Complessità espressioni booleane}
 Questo è un indice necessario a tenere sotto controllo la complessità delle espressioni booleane e, di conseguenza, la complessità ciclomatica.
 Si sintetizza nel massimo numero di operatori logici presenti in una singola espressione booleana.\\
 Il suo calcolo è banale, e consiste nel conteggio degli operatori logici.
 
-\subsubsection{MPD-ART3: Lunghezza delle righe di codice}
+\subsubsection{MPD-S3: Lunghezza delle righe di codice}
 Indice che misura la lunghezza di una singola riga di codice. Serve a garantire la leggibilità di esso anche in schermi
 con dimensioni e risoluzione minori.\\
 Si ottiene contando i caratteri di ogni singola riga, ci si assicura quindi che il valore ottenuto per ognuna stia sotto il valore
 definito nel piano di qualifica.
 
-\subsubsection{MPD-ART4: Code coverage}
+\subsubsection{MPD-S4: Code coverage}
 Con questo indice si misura la percentuale di righe di codice coperte dai test automatici.\\
 È necessario cercare di avere la massima copertura possibile per ogni modulo, in quanto codice non testato
 può provocare comportamenti indesiderati e/o imprevisti dell'artefatto. La definizione della soglia minima viene rimandata al piano di qualifica.
