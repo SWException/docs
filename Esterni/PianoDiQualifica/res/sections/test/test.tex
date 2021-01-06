@@ -1,9 +1,15 @@
+
+\newcounter{CTS} % Contatore Test
+\newcommand{\stepCTS}[0]{\stepcounter{CTS}} % incrementa il contatore CTS
+\newcommand{\valueCTS}[0]{\stepCTS TS\arabic{CTS}} % ritorna il valore del contatore CTS incrementato di 1
+\newcommand{\resetCTS}[0]{\setcounter{CTS}{0}}
+\resetCTS
 \section{Specifica dei test}
 \begin{itemize}
     \item \textbf{Test di unità:} si effettua per verificare il corretto comportamento di un singolo componente del programma in modo indipendente da altre unità;
     \item \textbf{Test di integrazione:} si effettua per verificare la corretta integrazione tra due o più unità distinte;
     \item \textbf{Test di sistema:} verificano la funzionalità dell'interno sistema verificando il soddisfacimento dei requisiti obbligatori;
-    \item \textbf{Test di accettazione:} vengono eseguiti in collaborazione con il comittente prima di procedere al rilascio.
+    \item \textbf{Test di accettazione:} vengono eseguiti in collaborazione con il committente prima di procedere al rilascio.
 \end{itemize}
 
 Allo stato attuale non è possibile definire quali test saranno realizzati si rimanda ad una versione del presente documento successiva all'attività di progettazione
@@ -27,175 +33,171 @@ Di seguito l'elenco dei test di sistema individuati.
 
 
 	\hline
-	TS1 & Visualizzazione homepage e carrello & Verificare che un utente generico possa: \begin{enumerate}
+	
+	\valueCTS & Visualizzazione homepage e carrello & Verificare che un utente generico possa:
+	\begin{enumerate}
 		\item  visualizzare la homepage ed i prodotti in evidenza in essa contenuti;
 		\item  raggiungere e visualizzare la pagina del carrello da ogni pagina dell'applicativo.
 	\end{enumerate} \\
 
-	TS2 & Visualizzazione informazioni venditore & Verificare che un utente generico possa visualizzare la pagina contenente le informazioni relative al venditore che includono la ragione sociale e i contatti. \\
+	\valueCTS & Visualizzazione informazioni venditore & Verificare che un utente generico possa visualizzare la pagina contenente le informazioni relative al venditore che includono la ragione sociale e i contatti. \\
 
-	TS3 & Funzionalità menù categorie & Verificare che un utente generico: \begin{enumerate}
+	\valueCTS & Funzionalità menù categorie & Verificare che un utente generico: 
+	\begin{enumerate}
 		\item  possa cliccare in una delle voci del menù delle categorie ;
 		\item  riceva un messaggio di errore se non vi sono prodotti all'interno della categoria selezionata;
 	\end{enumerate} \\
 
-	TS4 & Funzionalità ricerca & Verificare che un utente generico: \begin{enumerate}
+	\valueCTS & Funzionalità ricerca & Verificare che un utente generico: 
+	\begin{enumerate}
 		\item  possa cercare un prodotto mediante il proprio nome utilizzando la funzionalità di ricerca;
 		\item  riceva un messaggio di errore se non vi sono prodotti che soddisfano la query di ricerca;
 	\end{enumerate} \\
 
 
-	TS5 & Visualizzazione PLP & Verificare che un utente generico possa: \begin{enumerate}
+	\valueCTS & Visualizzazione PLP & Verificare che un utente generico possa: 
+	\begin{enumerate}
 		\item  visualizzare una PLP;
 		\item  visualizzare la lista prodotti con le relative immagini, titolo e prezzo IVA inclusa;
 		\item  visualizzare la disponibilità o meno dei prodotti elencati;
 		\item  cliccare in un prodotto per accedere alla relativa PDP.
 	\end{enumerate} \\
 
-	TS6 & Ordinamento prodotti PLP & Verificare che un utente generico possa: \begin{enumerate}
+	\valueCTS & Ordinamento prodotti PLP & Verificare che un utente generico possa: 
+	\begin{enumerate}
 		\item  ordinare i prodotti della PLP per prezzo crescente o decrescente;
 		\item  ordinare i prodotti della PLP per ordine alfabetico.
 	\end{enumerate} \\
 
-	TS7 & Filtri PLP & Verificare che un utente generico possa: \begin{enumerate}
+	\valueCTS & Filtri PLP & Verificare che un utente generico possa: 
+	\begin{enumerate}
 		\item  applicare, modificare e rimuovere uno o più filtri di visualizzazione prodotti basati su un prezzo minimo e/o massimo;
 		\item  applicare, modificare e rimuovere uno o più filtri basati su una categoria;
 		\item  visualizzare un messaggio di errore nel caso nessun prodotto soddisfi i filtri applicati;
 	\end{enumerate} \\
 
-	TS8 & Visualizzazione PDP & Verificare che un utente generico possa visualizzare : \begin{enumerate}
+	\valueCTS & Visualizzazione PDP & Verificare che un utente generico possa visualizzare: 
+	\begin{enumerate}
 		\item   la PDP di un prodotto contenente la descrizione ed una o più foto del prodotto;
 		\item   la disponibilità o meno del prodotto;
 		\item   il prezzo del prodotto IVA inclusa;
 		\item   se ha già aggiunto l'articolo nel carrello.
 	\end{enumerate} \\
 
-	TS9 & Aggiunta a carrello & Verificare che un utente generico possa : \begin{enumerate}
+	\valueCTS & Aggiunta a carrello & Verificare che un utente generico possa : 
+	\begin{enumerate}
 		\item   aggiungere un prodotto al carrello potendo specificare la quantità;
 		\item   visualizzare un errore nel caso voglia aggiungere al carrello una quantità maggiore di quella disponibile;
-	
 	\end{enumerate} \\
 
-	TS10 & Sincronizzazione carrello & Verificare che un utente autenticato possa recuperare il proprio carrello da qualsiasi dispositivo esso faccia il login.\\
+	\valueCTS & Sincronizzazione carrello & Verificare che un utente autenticato possa recuperare il proprio carrello da qualsiasi dispositivo esso faccia il login.\\
 
-
-
-
-
-	\hline
-
-	\end{longtable}
-\end{center}
-
-\begin{center}
-	\rowcolors{1}{white}{blue!20}
-	\begin{longtable}{|p{1cm}|p{6.85cm}|p{7cm}|}
-	\hline
-	\rowcolor{lighter-grayer}
-	\textbf{Codice} & \textbf{Titolo} & \textbf{Descrizione} \\
-	\hline
-	\endfirsthead
-
-	% ----- MICHELE -----
-
-
-	\hline
-	TS2.1 & Apertura pagina carrello & Verificare che: (1) i prodotti inseriti precedentemente vengano visualizzati nella giusta quantità;
-													   (2) il totale dell'ordine sia corretto (solo prodotti, senza tasse e spedizione);
-													   (3) il totale dell'ordine con le tasse aggiunte sia corretto;
-													   (4) si possa vedere il costo dei singoli prodotti;
-													   (5) si visualizzi il messaggio di carrello vuoto nel caso in cui lo sia. \\
-	TS2.2 & Modifica quantità prodotti nel carrello & Verificare che:
-													   (1) si possa aumentare e diminuire la quantità di un singolo articolo nel carrello;
-													   (2) in caso di aumento, se la quantità richiesta non è disponibile, venga visualizzato il giusto messaggio di errore;
-													   (3) si possa eliminare un singolo articolo.  \\
-	TS2.3 & Svuotare il carrello & Verificare che: (1) tutti gli elementi nel carrello possano essere rimossi. \\
-	TS2.4 & Processo di checkout - inserimento indirizzi e calcolo spedizione & Verificare che:
-												   (1) il messaggio mostri un errore se si avvia il checkout con carrello vuoto;
-												   (2) si possano inserire indirizzi di fatturazione e spedizione da form e da quelli salvati (se autenticato);
-												   (3) l'indirizzo di spedizione possa essere copiato con un click da quello scelto per la fatturazione;
-												   (4) vengano aggiunti e visualizzati i costi di spedizione al totale dell'ordine, dopo aver scelto l'indirizzo di spedizione. \\
-	TS2.5 & Processo di checkout - pagamento & Verificare che:
-												   (1) il sistema di pagamento con il provider esterno possa essere utilizzato per concludere il checkout;
-												   (2) nel caso di fallimento del pagamento, il sistema mostri in modo chiaro che il pagamento non è andato a buon fine e l'ordine non è stato emesso;
-												   (3) nel caso di fallimento del pagamento, si possa riprovare immediatamente;
-												   (4) in caso di successo del pagamento, si avvisa il cliente dell'avvenuto ordine, vengono scalate le merci acquistate dal magazzino e il venditore possa gestire l'ordine. \\
-	TS2.6 & Login cliente & Verificare che: (1) il sistema di login cliente permetta di autenticarsi all'applicazione con un profilo già registrato, inserendo le corrette credenziali;
-											(2) il cliente possa navigare tutto il sito mantenendo la sessione di login;
-											(3) in caso di credenziali errate, venga mostrato il relativo messaggio di errore e si permetta di riprovare nell'immediato. \\
-	TS2.7 & Registrazione cliente & Verificare che: (1) un cliente non autenticato possa avviare il processo di registrazione;
-													(2) nel caso in cui il doppio inserimento dell'email fallisca (e.g. non corrisponde) si visualizzi il relativo messaggio d'errore;
-													(3) nel caso in cui il doppio inserimento della password fallisca (e.g. non corrisponde) si visualizzi il relativo messaggio d'errore;
-													(4) nel caso in cui la password non rispetti i requisiti minimi di sicurezza si visualizzi il relativo messaggio d'errore;
-													(5) nel caso in cui esista già un utente con la stessa email si visualizzi il relativo messaggio d'errore;
-													(6) nel caso in cui tutto vada a buon fine, arrivi l'email per la verifica dell'indirizzo inserito;
-													(7) il click sul link di conferma ricevuto abiliti l'account appena registrato \\
-	TS2.8 & Recupero password cliente & Verificare che:
-													(1) durante il processo di login si possa avviare quello per il recupero della password;
-													(2) si riceva il link per la reimpostazione della password al proprio indirizzo email, nel caso si richieda;
-													(3) cliccando il link ricevuto si possa inserire la password con un doppio inserimento;
-													(4) nel caso in cui i due inserimenti non corrispondano e/o la password non rispetti i requisiti di sicurezza si mostri il relativo messaggio d'errore;
-													(5) nel caso in cui si inseriscano dei dati validi, mostrare il messaggio di conferma cambio password. \\
-	TS2.9 & Amministrazione account cliente - gestione indirizzi & Verificare che:
-													(1) si possa inserire un nuovo indirizzo e che questo sia utilizzabile durante il processo di checkout; 
-													(2) nel caso in cui si inserisca un indirizzo non valido (e.g. campi obbligatori vuoti) si mostri un messaggio di errore e si permetta la modifica immediata dei dati inseriti;
-													(3) si possa eliminare un indirizzo precedentemente inserito; \\
-	TS2.10 & Amministrazione account cliente - assistenza & Verificare che:
-													(1) il cliente possa aprire un ticket di assistenza e che questo sia gestibile dal venditore;
-													(2) il cliente possa avviare la richiesta di cancellazione account tramite un apposito tipo di ticket di assistenza. \\
-	TS2.11 & Amministrazione account cliente - modifica dati login & Verificare che:
-													(1) il cliente possa cambiare indirizzo email;
-													(2) il sistema si comporti per il cambio email come nel processo di registrazione;
-													(3) il cliente possa cambiare password inserendo quella vecchia;
-													(4) il sistema si comporti per il cambio password come nel processo di registrazione. \\
-	\hline
-
-	\end{longtable}
-\end{center}
-
-\begin{center}
-	\rowcolors{1}{white}{blue!20}
-	\begin{longtable}{p{1cm}|p{6.85cm}|p{7cm}|}
-	\hline
-	\rowcolor{lighter-grayer}
-	\textbf{Codice} & \textbf{Titolo} & \textbf{Descrizione} \\
-	\hline
-	\endfirsthead
-
-	% ----- STEFANO -----
+	\valueCTS & Apertura pagina carrello & Verificare che: 
+	\begin{enumerate}
+		\item i prodotti inseriti precedentemente vengano visualizzati nella giusta quantità;
+		\item il totale dell'ordine sia corretto (solo prodotti, senza tasse e spedizione);
+		\item il totale dell'ordine con le tasse aggiunte sia corretto;
+		\item si possa vedere il costo dei singoli prodotti;
+		\item si visualizzi il messaggio di carrello vuoto nel caso in cui lo sia.
+	\end{enumerate} \\
+	\valueCTS & Modifica quantità prodotti nel carrello & Verificare che:
+	\begin{enumerate}
+		\item si possa aumentare e diminuire la quantità di un singolo articolo nel carrello;
+		\item in caso di aumento, se la quantità richiesta non è disponibile, venga visualizzato il giusto messaggio di errore;
+		\item si possa eliminare un singolo articolo.
+	\end{enumerate}\\
+	\valueCTS & Svuotare il carrello & Verificare che:
+	\begin{enumerate}
+		\item tutti gli elementi nel carrello possano essere rimossi.
+	\end{enumerate} \\
+	\valueCTS & Processo di checkout - inserimento indirizzi e calcolo spedizione & Verificare che:
+	\begin{enumerate}
+		\item il messaggio mostri un errore se si avvia il checkout con carrello vuoto;
+		\item si possano inserire indirizzi di fatturazione e spedizione da form e da quelli salvati (se autenticato);
+		\item l'indirizzo di spedizione possa essere copiato con un click da quello scelto per la fatturazione;
+		\item vengano aggiunti e visualizzati i costi di spedizione al totale dell'ordine, dopo aver scelto l'indirizzo di spedizione. 
+	\end{enumerate} \\
+	\valueCTS & Processo di checkout - pagamento & Verificare che:
+	\begin{enumerate}
+		\item il sistema di pagamento con il provider esterno possa essere utilizzato per concludere il checkout;
+		\item nel caso di fallimento del pagamento, il sistema mostri in modo chiaro che il pagamento non è andato a buon fine e l'ordine non è stato emesso;
+		\item nel caso di fallimento del pagamento, si possa riprovare immediatamente;
+		\item in caso di successo del pagamento, si avvisa il cliente dell'avvenuto ordine, vengono scalate le merci acquistate dal magazzino e il venditore possa gestire l'ordine.
+	\end{enumerate} \\
+	\valueCTS & Login cliente & Verificare che:
+	\begin{enumerate}
+		\item il sistema di login cliente permetta di autenticarsi all'applicazione con un profilo già registrato, inserendo le corrette credenziali;
+		\item il cliente possa navigare tutto il sito mantenendo la sessione di login;
+		\item in caso di credenziali errate, venga mostrato il relativo messaggio di errore e si permetta di riprovare nell'immediato.
+	\end{enumerate} \\
+	\valueCTS & Registrazione cliente & Verificare che:
+	\begin{enumerate}
+		\item un cliente non autenticato possa avviare il processo di registrazione;
+		\item nel caso in cui il doppio inserimento dell'email fallisca (e.g. non corrisponde) si visualizzi il relativo messaggio d'errore;
+		\item nel caso in cui il doppio inserimento della password fallisca (e.g. non corrisponde) si visualizzi il relativo messaggio d'errore;
+		\item nel caso in cui la password non rispetti i requisiti minimi di sicurezza si visualizzi il relativo messaggio d'errore;
+		\item nel caso in cui esista già un utente con la stessa email si visualizzi il relativo messaggio d'errore;
+		\item nel caso in cui tutto vada a buon fine, arrivi l'email per la verifica dell'indirizzo inserito;
+		\item il click sul link di conferma ricevuto abiliti l'account appena registrato.
+	\end{enumerate} \\
+	\valueCTS & Recupero password cliente & Verificare che:
+	\begin{enumerate}
+		\item durante il processo di login si possa avviare quello per il recupero della password;
+		\item si riceva il link per la reimpostazione della password al proprio indirizzo email, nel caso si richieda;
+		\item cliccando il link ricevuto si possa inserire la password con un doppio inserimento;
+		\item nel caso in cui i due inserimenti non corrispondano e/o la password non rispetti i requisiti di sicurezza si mostri il relativo messaggio d'errore;
+		\item nel caso in cui si inseriscano dei dati validi, mostrare il messaggio di conferma cambio password.
+	\end{enumerate} \\
+	\begin{enumerate}
+		\item si possa inserire un nuovo indirizzo e che questo sia utilizzabile durante il processo di checkout; 
+		\item nel caso in cui si inserisca un indirizzo non valido (e.g. campi obbligatori vuoti) si mostri un messaggio di errore e si permetta la modifica immediata dei dati inseriti;
+		\item si possa eliminare un indirizzo precedentemente inserito.
+	\end{enumerate} \\
+	\valueCTS & Amministrazione account cliente - assistenza & Verificare che:
+	\begin{enumerate}
+		\item il cliente possa aprire un ticket di assistenza e che questo sia gestibile dal venditore;
+		\item il cliente possa avviare la richiesta di cancellazione account tramite un apposito tipo di ticket di assistenza.
+	\end{enumerate} \\
+	\valueCTS & Amministrazione account cliente - modifica dati login & Verificare che:
+	\begin{enumerate}
+		\item il cliente possa cambiare indirizzo email;
+		\item il sistema si comporti per il cambio email come nel processo di registrazione;
+		\item il cliente possa cambiare password inserendo quella vecchia;
+		\item il sistema si comporti per il cambio password come nel processo di registrazione. 
+	\end{enumerate} \\
 
 	\hline
-	TS3.1 & Verifica gestione propri ordini & Si verifichi che il cliente possa gestire i propri ordini  \\
-	TS3.2 & Verifica gestione propri ordini & Si verifichi che il cliente possa contattare il venditore tramite i form per annullare l'ordine, segnalare problemi dell'ordine, chiedere il reso \\
-	TS3.3 & Verifica logout cliente & Si verifichi che il cliente loggato possa effettuare il logout e che venga riportato alla home page \\
-	TS3.4 & Verifica contatto venditore & Si verifichi che il cliente possa contattare il venditore tramite l'apposito form  \\
-	TS3.5 & Verifica dashboard ordini venditore & Si verifichi che il venditore possa visualizzare e modificare la lista degli ordini ricevuti \\
-	TS3.6 & Verifica dashboard ordini venditore & Si verifichi che il venditore possa cercare un ordine presente nel sistema \\
-	TS3.7 & Verifica dashboard ordini venditore & Si verifichi che il venditore possa modificare lo stato di un ordine  \\
-	TS3.8 & Verifica dashboard ordini venditore & Si verifichi che il venditore possa stampare la bolla per un ordine  \\
-	TS3.9 & Verifica dashboard ordini venditore & Si verifichi che il venditore possa visualizzare i dettagli di un ordine \\
-	TS3.10 & Verifica dashboard clienti venditore & Si verifichi che il venditore possa visualizzare la lista dei clienti \\
-	TS3.11 & Verifica dashboard clienti venditore & Si verifichi che il venditore possa cercare un determinato cliente nel sistema \\
-	TS3.12 & Verifica dashboard clienti venditore & Si verifichi che il venditore possa ordinare i clienti con determinati filtri \\
-	TS3.13 & Verifica dashboard clienti venditore & Si verifichi che il venditore possa contattare il cliente tramite un form \\
-	TS3.14 & Verifica dashboard aliquote venditore & Si verifichi che il venditore possa gestire le aliquote IVA per la tassazione dei prodotti \\
-	TS3.15 & Verifica dashboard aliquote venditore & Si verifichi che il venditore possa visualizzare le aliquote IVA già presenti nel sistema \\
-	TS3.16 & Verifica dashboard aliquote venditore & Si verifichi che il venditore possa aggiungere un'aliquota IVA \\
-	TS3.17 & Verifica dashboard aliquote venditore & Si verifichi che il venditore possa modificare un'aliquota IVA \\
-	TS3.18 & Verifica dashboard aliquote venditore & Si verifichi che il venditore possa eliminare un'aliquota IVA già presente nel sistema \\
-	TS3.19 & Verifica dashboard prodotti venditore & Si verifichi che il venditore possa visualizzare la lista dei prodotti inseriti nel sistema \\
-	TS3.20 & Verifica dashboard prodotti venditore & Si verifichi che il venditore possa cercare un prodotto presente nel sistema \\
-	TS3.21 & Verifica dashboard prodotti venditore & Si verifichi che il venditore possa filtrare i prodotti \\
-	TS3.22 & Verifica dashboard prodotti venditore & Si verifichi che il venditore possa aggiungere un prodotto al sistema dopo aver compilato tutti i campi obbligatori del prodotto \\
-	TS3.23 & Verifica dashboard prodotti venditore & Si verifichi che il venditore possa modificare un prodotto aggiornando i campi già presenti\\
-	TS3.24 & Verifica dashboard prodotti venditore & Si verifichi che il venditore possa eliminare un prodotto presente nel sistema\\
-	TS3.25 & Verifica dashboard prodotti venditore & Si verifichi che il venditore possa selezionare i prodotti da mostrare nella HomePage cliente \\
-	TS3.26 & Verifica dashboard categorie venditore & Si verifichi che il venditore possa visualizzare tutte le categorie presenti nel sistema \\
-	TS3.27 & Verifica dashboard categorie venditore & Si verifichi che il venditore possa aggiungere una categoria di prodotti impostando il nome \\
-	TS3.28 & Verifica dashboard categorie venditore & Si verifichi che il venditore possa rimuovere una categoria di prodottti \\
-	TS3.29 & Verifica dashboard categorie venditore & Si verifichi che il venditore possa modificare il nome di una categoria già esistente nel sistema \\
-	TS3.30 & Verifica login venditore & Si verifichi che il venditore possa effettuare il login \\
-	TS3.31 & Verifica logout venditore & Si verifichi che il venditore possa effettuare il logout \\
+	\valueCTS & Verifica gestione propri ordini & Si verifichi che il cliente possa gestire i propri ordini  \\
+	\valueCTS& Verifica gestione propri ordini & Si verifichi che il cliente possa contattare il venditore tramite i form per annullare l'ordine, segnalare problemi dell'ordine, chiedere il reso \\
+	\valueCTS & Verifica logout cliente & Si verifichi che il cliente loggato possa effettuare il logout e che venga riportato alla home page \\
+	\valueCTS & Verifica contatto venditore & Si verifichi che il cliente possa contattare il venditore tramite l'apposito form  \\
+	\valueCTS& Verifica dashboard ordini venditore & Si verifichi che il venditore possa visualizzare e modificare la lista degli ordini ricevuti \\
+	\valueCTS & Verifica dashboard ordini venditore & Si verifichi che il venditore possa cercare un ordine presente nel sistema \\
+	\valueCTS & Verifica dashboard ordini venditore & Si verifichi che il venditore possa modificare lo stato di un ordine  \\
+	\valueCTS & Verifica dashboard ordini venditore & Si verifichi che il venditore possa stampare la bolla per un ordine  \\
+	\valueCTS & Verifica dashboard ordini venditore & Si verifichi che il venditore possa visualizzare i dettagli di un ordine \\
+	\valueCTS & Verifica dashboard clienti venditore & Si verifichi che il venditore possa visualizzare la lista dei clienti \\
+	\valueCTS & Verifica dashboard clienti venditore & Si verifichi che il venditore possa cercare un determinato cliente nel sistema \\
+	\valueCTS & Verifica dashboard clienti venditore & Si verifichi che il venditore possa ordinare i clienti con determinati filtri \\
+	\valueCTS & Verifica dashboard clienti venditore & Si verifichi che il venditore possa contattare il cliente tramite un form \\
+	\valueCTS & Verifica dashboard aliquote venditore & Si verifichi che il venditore possa gestire le aliquote IVA per la tassazione dei prodotti \\
+	\valueCTS & Verifica dashboard aliquote venditore & Si verifichi che il venditore possa visualizzare le aliquote IVA già presenti nel sistema \\
+	\valueCTS & Verifica dashboard aliquote venditore & Si verifichi che il venditore possa aggiungere un'aliquota IVA \\
+	\valueCTS & Verifica dashboard aliquote venditore & Si verifichi che il venditore possa modificare un'aliquota IVA \\
+	\valueCTS & Verifica dashboard aliquote venditore & Si verifichi che il venditore possa eliminare un'aliquota IVA già presente nel sistema \\
+	\valueCTS & Verifica dashboard prodotti venditore & Si verifichi che il venditore possa visualizzare la lista dei prodotti inseriti nel sistema \\
+	\valueCTS& Verifica dashboard prodotti venditore & Si verifichi che il venditore possa cercare un prodotto presente nel sistema \\
+	\valueCTS & Verifica dashboard prodotti venditore & Si verifichi che il venditore possa filtrare i prodotti \\
+	\valueCTS & Verifica dashboard prodotti venditore & Si verifichi che il venditore possa aggiungere un prodotto al sistema dopo aver compilato tutti i campi obbligatori del prodotto \\
+	\valueCTS & Verifica dashboard prodotti venditore & Si verifichi che il venditore possa modificare un prodotto aggiornando i campi già presenti\\
+	\valueCTS & Verifica dashboard prodotti venditore & Si verifichi che il venditore possa eliminare un prodotto presente nel sistema\\
+	\valueCTS & Verifica dashboard prodotti venditore & Si verifichi che il venditore possa selezionare i prodotti da mostrare nella HomePage cliente \\
+	\valueCTS & Verifica dashboard categorie venditore & Si verifichi che il venditore possa visualizzare tutte le categorie presenti nel sistema \\
+	\valueCTS & Verifica dashboard categorie venditore & Si verifichi che il venditore possa aggiungere una categoria di prodotti impostando il nome \\
+	\valueCTS & Verifica dashboard categorie venditore & Si verifichi che il venditore possa rimuovere una categoria di prodotti \\
+	\valueCTS & Verifica dashboard categorie venditore & Si verifichi che il venditore possa modificare il nome di una categoria già esistente nel sistema \\
+	\valueCTS & Verifica login venditore & Si verifichi che il venditore possa effettuare il login \\
+	\valueCTS & Verifica logout venditore & Si verifichi che il venditore possa effettuare il logout \\
 	\hline
 
 	\end{longtable}
