@@ -27,27 +27,50 @@ Indica se si è in linea, in anticipo o in ritardo rispetto alla schedulazione d
 \end{itemize}
 
 
-\subsection{Metriche per la qualità della documentazione} \label{_metricheprodotto}
+\subsubsection{MPR-DOC6: Requisiti obbligatori soddisfatti (PROS)} \label{_MPR-DOC6}
+Indica la percentuale di requisiti obbligatori soddisfatti rispetto a quanti ne sono stati individuati.
+\begin{itemize}
+    \item \textbf{Formula}: \(\frac{Numero\ requisiti\ obbligatori\ soddisfatti}{Numero\ requisiti\  obbligatori\ individuati}*100\)
+    
+\end{itemize}
+
+\subsubsection{MPR-DOC7: Requisiti opzionali non  soddisfatti (RONS )} \label{_MPR-DOC7}
+Indica la percentuale di requisiti opzionali che non sono stati soddisfatti rispetto a quanti ne sono stati individuati.
+\begin{itemize}
+    \item \textbf{Formula}: \(\frac{Numero\ requisiti\ opzionali\ non\ soddisfatti}{Numero\ requisiti\  opzionali\ individuati}*100\)
+    
+\end{itemize}
+
+\subsubsection{MPR-DOC8: Requisiti desiderabili non soddisfatti (RDNS)} \label{_MPR-DOC8}
+Indica la percentuale di requisiti desiderabili che non sono stati  soddisfatti rispetto a quanti ne sono stati individuati.
+\begin{itemize}
+    \item \textbf{Formula}: \(\frac{Numero\ requisiti\ desiderabili\ non\ soddisfatti}{Numero\ desiderabili\  obbligatori\ individuati}*100\)
+    
+\end{itemize}
+
+\subsubsection{MPR-DOC9: Rischi non previsti ma avvenuti (RNPA)} \label{_MPR-DOC9}
+Indica il numero di rischi non previsti ma che si sono presentanti nel corso del progetto.
+
+
+
+
+
+
+\subsection{Metriche per la qualità della documentazione (GULP)} \label{_metricheprodotto}
 Per quantificare la qualità della documentazione vengono adottate le metriche descritte in questa sezione.
 \subsubsection{MPD-DOC1: Indice di Gulpease}
 Indice che individua il grado di leggibilità di un testo in lingua italiana mediante la formula:
 \begin{center}
     \(GULP=89+\frac{300(totale\; frasi)-10(totale\; lettere)}{totale\; parole}\)
 \end{center}
-I valori ottenuti sono da interpretare secondo questi criteri:
-\begin{itemize}
-    \item \textbf{GULP < 80}: leggibilità difficile per un utente con licenza elementare;
-    \item \textbf{GULP < 60}: leggibilità difficile per un utente con licenza media;
-    \item \textbf{GULP < 40}: leggibilità difficile per un utente con diploma di scuola secondaria di secondo grado;
-    \item \textbf{GULP \(\sim\) 0} leggibilità difficile per chiunque.
-\end{itemize}
+
 
 \subsubsection{MPD-DOC2: Correttezza ortografica (CORT)}
 Questa metrica permette di misurare la correttezza lessicografica del documento mediante un numero intero ottenuto come:
 \begin{center}
     \textit{CORT=\# errori ortografici}
 \end{center}
-Se CORT=0 allora il documento non ha errori ortografici, se CORT>0 il documento presenta errori.
+
 
 \subsection{Metriche per la qualità del codice sorgente} \label{_metricheCodiceSorgenteApp}
 Per misurare la qualità del codice sorgente prodotto vengono adottate le seguenti metriche, come introdotto in \ref{_metricheQualitaCodice}
