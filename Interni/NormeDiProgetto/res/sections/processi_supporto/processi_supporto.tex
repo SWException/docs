@@ -322,11 +322,12 @@ Il numero di versione di ogni componente del prodotto e di ogni documento è def
 \end{center}
 dove
 \begin{itemize}
-    \item \textbf{[X]} indica il numero di versione approvato dal responsabile di progetto. Inizialmente è a 0;
-    \item \textbf{[Y]} indica il numero di versione approvato dai verificatori. Inizialmente a 0 e riparte ad ogni
-                       incremento di \textbf{[X]};
-    \item \textbf{[Z]} è il numero che identifica la versione in redazione. Viene quindi incrementato dai redattori
-                       ad ogni aggiunta/modifica. Inizialmente a 0 e riparte ad ogni incremento di \textbf{[Y]}.
+    \item \textbf{[X]} indica il numero di versione approvato dal responsabile di progetto; inizialmente è a 0;
+    \item \textbf{[Y]} indica il numero di un incremento consistente dopo la precedente approvazione; questo numero parte da
+                       0 e incrementa di 1 ad ogni parte di documento aggiunta e modificata da un redattore e contestualmente verificata da un verificatore,
+                       viene azzerato ogni qualvolta incrementa \textbf{[X]};
+    \item \textbf{[Z]} indica il numero di un incremento minore (e.g. la correzione di un errore ortografico, la modifica di un singolo paragrafo, ...);
+                       anche questo cominica da 0 e viene azzerato quando si incrementa il valore di \textbf{[Y]}.
 \end{itemize}
 
 \paragraph{Tecnologie coinvolte}
