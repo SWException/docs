@@ -161,12 +161,12 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \sreq{1}{F} & Il cliente che aumenta la quantità deve visualizzare un messaggio se la quantità richiesta non è disponibile & \refUserCase{UC7.2} \row
         \sreq{1}{F} & Il cliente deve poter eliminare un prodotto dal carrello & \refUserCase{UC7.3} \row
         %
-        \req{1}{F} & Il cliente deve poter eliminare tutti i prodotti dal carrello & \refUserCase{UC7.3} \row
+        \req{3}{F} & Il cliente deve poter eliminare tutti i prodotti dal carrello & \refUserCase{UC7.3} \row
 
         %requisiti gianmarco
         
         \req{1}{F} & Il cliente deve poter fare il checkout dei prodotti nel carrello & \refUserCase{UC8} \row
-        \sreq{2}{F} & Il sistema deve visualizzare un messaggio d'errore se si prova a fare il checkout con il carrello vuoto & \refUserCase{UC8} \row
+        \sreq{2}{F} & Il sistema deve visualizzare un messaggio d'errore se uno o più oggetti nel carrello non sono più disponibili & \refUserCase{UC8} \row
         \sreq{1}{F} & Il cliente può selezionare l'indirizzo di consegna e fatturazione da quelli salvati & \refUserCase{UC8.1, UC8.2} \row
         \sreq{1}{F} & Il cliente deve poter inserire l'indirizzo di fatturazione & \refUserCase{UC8.1} \row
         \sreq{1}{F} & Il cliente deve poter inserire l'indirizzo di consegna & \refUserCase{UC8.2} \row
@@ -183,9 +183,10 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \sreq{1}{F} & Il cliente deve poter inserire nuovamente le credenziali dopo l'errore & \refUserCase{UC9}\row
         
         \req{1}{F} & Il cliente non autenticato deve potersi registrare & \refUserCase{UC10}\row
-        \sreq{1}{F} & Il sistema deve visualizzare un messaggio d'errore se la registrazione non è andata a buon fine &\refUserCase{UC10}\row
-        \sreq{1}{F} & Il sistema deve visuale un errore se l'inserimento della password o della email non rispetta i parametri richiesti &\refUserCase{UC10}\row
-        \sreq{1}{F} & Il cliente deve ricevere l'email di conferma per la creazione dell'account &\refUserCase{UC10}\row      
+        \sreq{1}{F} & Il sistema deve visualizzare un messaggio d'errore se la mail inserita non è corretta &\refUserCase{UC10}\row
+        \sreq{1}{F} & Il sistema deve visualizzare un messaggio d'errore se la password non supera la lunghezza minima o se non corrisponde a quella inserita precedentemente &\refUserCase{UC10}\row
+        \sreq{1}{F} & Il cliente deve ricevere l'email di conferma per la creazione dell'account &\refUserCase{UC10}\row 
+        \sreq{1}{F} & Il sistema deve visualizzare un messaggio d'errore se è scaduto il tempo per cliccare sul link nella mail di conferma &\refUserCase{UC10}\row     
         
         \req{1}{F} & Il cliente deve poter reimpostare la password & \refUserCase{UC11}\row
         \sreq{1}{F} & Il cliente deve ricevere una mail con il link per reimpostare la password &\refUserCase{UC11}\row
