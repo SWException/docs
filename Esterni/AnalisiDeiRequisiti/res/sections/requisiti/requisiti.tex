@@ -93,10 +93,10 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \endlastfoot
 
         %requisiti ivan
-        %1
+        %
         \req{1}{F} & Il cliente deve poter visualizzare in HomePage ciò che il sito offre & Capitolato \row
         \sreq{1}{F} & Il cliente deve visualizzare i prodotti messi in evidenza & Capitolato \row 
-        \sreq{1}{F} & Il cliente deve poter navigare alla pagina del carrello & Capitolato \row
+        \sreq{1}{F} & Il cliente deve poter navigare alla pagina del carrello da qualunque altra pagina presente nel sito & Capitolato \row
         %
         \req{1}{F} & Il cliente deve poter visualizzare le informazione sul venditore & \refUserCase{UC1} \row
         \sreq{1}{F} & Il cliente deve poter visualizzare le informazioni di contatto del venditore & \refUserCase{UC1} \row
@@ -109,9 +109,8 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         %
         \req{1}{F} & Il cliente deve poter visualizzare una PLP & \refUserCase{UC4} \row
         \sreq{1}{F} & Il cliente deve poter accedere alle relative PDP & \refUserCase{UC4} \row
-        \sreq{1}{F} & Il cliente deve visualizzare il prezzo VAT inc. dei prodotti nella PLP & \refUserCase{UC4} \row
+        \sreq{1}{F} & Il cliente deve visualizzare il prezzo IVA inc. dei prodotti nella PLP & \refUserCase{UC4} \row
         \sreq{1}{F} & Il cliente deve visualizzare il nome dei prodotti nella PLP & \refUserCase{UC4} \row
-        \sreq{1}{F} & Il cliente deve poter navigare alla pagina del carrello & Capitolato \row
         \sreq{2}{F} & Il cliente deve visualizzare una foto per prodotto nella PLP & \refUserCase{UC4} \row
         \sreq{3}{F} & Il cliente deve visualizzare la disponibilità/indisponibilità dei prodotti nella PLP & \refUserCase{UC4} \row
         %
@@ -130,13 +129,12 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \sreq{3}{F} & Il cliente deve poter rimuovere un singolo filtro già applicato & \refUserCase{UC4.1} \row
         \sreq{3}{F} & Il cliente deve poter impostare un filtro con una lista di categorie & \refUserCase{UC4.1.2} \row
         %
-        \req{1}{F} & Il cliente deve poter aprire i dettagli di un prodotto & \refUserCase{UC5} \row
+        \req{1}{F} & Il cliente deve poter aprire i dettagli di un prodotto (PDP) & \refUserCase{UC5} \row
         \sreq{1}{F} & Il cliente deve visualizzare una descrizione del prodotto & \refUserCase{UC5} \row
         \sreq{1}{F} & Il cliente deve visualizzare una foto del prodotto & \refUserCase{UC5} \row
         \sreq{1}{F} & Il cliente deve visualizzare la disponibilità/indisponibilità del prodotto & \refUserCase{UC5} \row
         \sreq{1}{F} & Il cliente deve visualizzare il prezzo del prodotto & \refUserCase{UC5} \row
-        \sreq{1}{F} & Il cliente deve visualizzare la VAT applicata al prodotto & \refUserCase{UC5} \row
-        \sreq{1}{F} & Il cliente deve poter navigare alla pagina del carrello & Capitolato \row
+        \sreq{1}{F} & Il cliente deve visualizzare l'IVA applicata al prodotto & \refUserCase{UC5} \row
         \sreq{2}{F} & Il cliente deve poter visualizzare più di una foto del prodotto & \refUserCase{UC5} \row
         \sreq{3}{F} & Il cliente deve poter visualizzare le varianti del prodotto & \refUserCase{UC5} \row
         \sreq{3}{F} & Il cliente deve poter visualizzare se ha già aggiunto il prodotto al carrello & \refUserCase{UC5} \row
@@ -154,7 +152,7 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \sreq{1}{F} & Il cliente deve visualizzare la quantità dei prodotti presenti & \refUserCase{UC7.1} \row
         \sreq{1}{F} & Il cliente deve visualizzare il costo totale del carrello & \refUserCase{UC7.1} \row
         \sreq{1}{F} & Il cliente deve visualizzare il costo dei singoli prodotti presenti & \refUserCase{UC7.1} \row
-        \sreq{1}{F} & Il cliente deve visualizzare il costo totale della VAT & \refUserCase{UC7.1}, capitolato \row
+        \sreq{1}{F} & Il cliente deve visualizzare il costo totale dell'IVA & \refUserCase{UC7.1}, capitolato \row
         \sreq{2}{F} & Il cliente deve visualizzare un messaggio se il carrello è vuoto & \refUserCase{UC7.1} \row
         %
         \req{1}{F} & Il cliente deve poter modificare la quantità di un prodotto nel carrello & \refUserCase{UC7.2} \row
@@ -180,7 +178,7 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \sreq{1}{F} & Il sistema deve avvisare il cliente dell'avvenuto pagamento e della rimozione delle merci dal magazzino & \refUserCase{UC8.6}\row
         
         \req{1}{F} & Il cliente deve poter fare il login per accedere alla webapp & \refUserCase{UC9}\row
-        \sreq{1}{F} & Il sistema deve mostrare all'utente autenticato la HomePage & \refUserCase{UC9}\row
+        \sreq{1}{F} & Il sistema deve mostrare al cliente autenticato la HomePage & \refUserCase{UC9}\row
         \sreq{1}{F} & Il sistema deve fare il display nell'errore di autenticazione & \refUserCase{UC9}\row
         \sreq{1}{F} & Il cliente deve poter inserire nuovamente le credenziali dopo l'errore & \refUserCase{UC9}\row
         

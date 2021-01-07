@@ -11,7 +11,7 @@
     \item \textbf{Postcondizione:} il cliente visualizza le informazioni relative alla pagina scelta;
     \item \textbf{Scenario principale:}
     \begin{enumerate}
-        \item l'utente si collega alla piattaforma e naviga fino alla pagina scelta;
+        \item il cliente si collega alla piattaforma e naviga fino alla pagina scelta.
     \end{enumerate}
 \end{itemize}
 
@@ -29,7 +29,7 @@
     \begin{enumerate}
         \item il cliente entra in una pagina dove è presente la scelta di una categoria;
         \item seleziona una categoria;
-        \item viene reindirizzato ad una pagina di visualizzazione prodotto (PLP) e visualizza i prodotti desiderati (\hyperref[UC4]{UC4});
+        \item viene reindirizzato ad una pagina di visualizzazione prodotto (PLP) e visualizza i prodotti desiderati (\hyperref[UC4]{UC4}).
     \end{enumerate}
 \end{itemize}
 
@@ -39,13 +39,13 @@
 \labelUserCase
 \begin{itemize}
     \item \textbf{Attore Primario:} cliente generico;
-    \item \textbf{Descrizione:} il cliente vuole visualizzare i prodotti che contengono nel nome prodotto una determinata parola
+    \item \textbf{Descrizione:} il cliente vuole visualizzare i prodotti che contengono nel nome prodotto una determinata parola;
     \item \textbf{Precondizione:} il cliente si trova in una pagina dove funzione di ricerca è permessa;
     \item \textbf{Input:} una stringa;
     \item \textbf{Postcondizione:} il cliente visualizza tutti i prodotti che contengono la determinata stringa nel nome;
     \item \textbf{Scenario principale:}
     \begin{enumerate}
-        \item il cliente entra in una pagina dove è permessa la ricerca di un prodotto, inserisce la parola da cercare e viene reindirizzato ad una pagina di visualizzazione prodotto (PLP) e visualizza i prodotti desiderati (\hyperref[UC4]{UC4});
+        \item il cliente entra in una pagina dove è permessa la ricerca di un prodotto, inserisce la parola da cercare e viene reindirizzato ad una pagina di visualizzazione prodotto (PLP) e visualizza i prodotti desiderati (\hyperref[UC4]{UC4}).
     \end{enumerate}
 \end{itemize}
 
@@ -64,7 +64,7 @@
     \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{itemize}
-        \item la pagina visualizza una PLP vuota perché nessun prodotto corrisponde alle politiche di visualizzazione;
+        \item la pagina visualizza una PLP vuota perché nessun prodotto corrisponde alle politiche di visualizzazione.
     \end{itemize}
 \end{itemize}
 
@@ -86,7 +86,7 @@
     \item \textbf{Specializzazioni: }
     \begin{itemize}
         \item il cliente filtra i prodotti per prezzo (\hyperref[UC4.1.1]{UC4.1.1});
-        \item il cliente filtra i prodotti per categoria (\hyperref[UC4.1.2]{UC4.1.2});
+        \item il cliente filtra i prodotti per categoria (\hyperref[UC4.1.2]{UC4.1.2}).
     \end{itemize}
 \end{itemize}
 
@@ -98,7 +98,7 @@
     \item \textbf{Attore Primario:} cliente generico;
     \item \textbf{Descrizione:} questa funzionalità permette al cliente di filtrare i prodotti visualizzati per prezzo;
     \item \textbf{Precondizione:} il cliente si deve trovare in una PLP (\hyperref[UC4]{UC4});
-    \item \textbf{Postcondizione:} il cliente visualizza i prodotti che corrispondono alla scelta
+    \item \textbf{Postcondizione:} il cliente visualizza i prodotti che corrispondono alla scelta;
     \item \textbf{Scenario principale:}
     \begin{enumerate}
         \item il cliente inserisce l'intervallo di prezzo desiderato;
@@ -106,7 +106,7 @@
     \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{itemize}
-        \item la pagina visualizza una PLP vuota perché nessun prodotto corrisponde alle politiche di visualizzazione;
+        \item la pagina visualizza una PLP vuota perché nessun prodotto corrisponde alle politiche di visualizzazione.
     \end{itemize}
 \end{itemize}
 
@@ -118,7 +118,7 @@
     \item \textbf{Attore Primario:} cliente generico;
     \item \textbf{Descrizione:} questa pagina visualizza tutti i prodotti che corrispondono ad una categoria o che corrispondono ad una parola cercata;
     \item \textbf{Precondizione:} il cliente sceglie uno dei due modi per accedere alla PLP (\hyperref[UC2]{UC2} e \hyperref[UC3]{UC3});
-    \item \textbf{Postcondizione:} il cliente visualizza i prodotti che corrispondono alla scelta
+    \item \textbf{Postcondizione:} il cliente visualizza i prodotti che corrispondono alla scelta;
     \item \textbf{Scenario principale:}
     \begin{enumerate}
         \item il cliente inserisce una nuova categoria o modifica una nuova esistente;
@@ -126,7 +126,7 @@
     \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{itemize}
-        \item la pagina visualizza una PLP vuota perché nessun prodotto corrisponde alle politiche di visualizzazione;
+        \item la pagina visualizza una PLP vuota perché nessun prodotto corrisponde alle politiche di visualizzazione.
     \end{itemize}
 \end{itemize}
 
@@ -141,7 +141,7 @@
     \item \textbf{Postcondizione:} il cliente visualizza tutti i dettagli del prodotto;
     \item \textbf{Scenario principale:}
     \begin{enumerate}
-        \item il cliente visualizza tutti i dettagli del prodotto;
+        \item il cliente visualizza tutti i dettagli del prodotto.
     \end{enumerate}
 \end{itemize}
 
@@ -150,12 +150,12 @@
 \subsection{\valueUserCase - Aggiunta prodotto al carrello}
 \labelUserCase
 \begin{itemize}
-    \item \textbf{Attore Primario:} Cliente generico;
+    \item \textbf{Attore Primario:} cliente generico;
     \item \textbf{Descrizione:} questa azione serve ad aggiungere un prodotto in vendita nel sito
-                                all'interno del carrello personale utente, specificando in quale quantità;
+                                all'interno del carrello personale del cliente, specificando in quale quantità;
     \item \textbf{Precondizione:} il cliente si trova nella PDP di un prodotto;
-    \item \textbf{Input:} il cliente clicca sul pulsante "aggiungi al carrello" dopo aver selezionato la quantità (di default a 1)
-    \item \textbf{Postcondizione:} l'oggetto è stato inserito nel carrello nella quantità desiderata (se disponibile in magazzino)
+    \item \textbf{Input:} il cliente clicca sul pulsante "aggiungi al carrello" dopo aver selezionato la quantità (di default a 1);
+    \item \textbf{Postcondizione:} l'oggetto è stato inserito nel carrello nella quantità desiderata (se disponibile in magazzino);
     \item \textbf{Scenario principale:}
     \begin{enumerate}
         \item il cliente seleziona la quantità desiderata o lascia quella di default;
@@ -167,7 +167,7 @@
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
-        \item in caso la quantità disponibile sia insufficiente a soddisfare la richiesta del cliente viene visualizzato un errore;
+        \item in caso la quantità disponibile sia insufficiente a soddisfare la richiesta del cliente viene visualizzato un errore.
     \end{itemize}
 \end{itemize}
 
@@ -208,17 +208,17 @@
     \item \textbf{Input:} il cliente inserisce la nuova quantità desiderata per quel determinato articolo;
     \item \textbf{Postcondizione:} se la quantità desiderata è disponibile, viene aggiornato l'articolo nel carrello;
     \item \textbf{Scenario principale:}
-    \begin{itemize}
+    \begin{enumerate}
         \item il cliente seleziona la nuova quantità desiderata;
-        \item il cliente conferma la scelta
-    \end{itemize}
+        \item il cliente conferma la scelta;
+    \end{enumerate}
     \item \textbf{Inclusioni:}
     \begin{itemize}
         \item viene eseguito un controllo sulla quantità disponibile di quel determinato prodotto;
     \end{itemize}
     \item \textbf{Estensioni:}
     \begin{itemize}
-        \item in caso la quantità disponibile sia insufficiente a soddisfare la richiesta del cliente viene visualizzato un errore;
+        \item in caso la quantità disponibile sia insufficiente a soddisfare la richiesta del cliente viene visualizzato un errore.
     \end{itemize}
 \end{itemize}
 
@@ -251,16 +251,16 @@
     \item \textbf{Postcondizione:} viene emesso un ordine contenente gli articoli precedentemente inseriti nel carrello. Vengono quindi rimossi dal magazzino;
     \item \textbf{Scenario principale:}
     \begin{enumerate}
-        \item il cliente preme sul pulsante per avviare il checkout
-        \item inserisce gli indirizzi di fatturazione e spedizione (UC 8.1 - 8.2)
-        \item vengono aggiunti i costi della spedizione all'importo totale(UC 8.3), definiti come importo fisso;
-        \item si effettua il pagamento (UC 8.4)
-        \item l'ordine è stato emesso e contrassegnato come pagato
+        \item il cliente preme sul pulsante per avviare il checkout;
+        \item inserisce gli indirizzi di fatturazione e spedizione (\hyperref[UC8.1]{UC8.1} - \hyperref[UC8.2]{8.2});
+        \item vengono aggiunti i costi della spedizione all'importo totale(\hyperref[UC8.3]{UC8.3}), definiti come importo fisso;
+        \item si effettua il pagamento (\hyperref[UC8.4]{UC8.4});
+        \item l'ordine è stato emesso e contrassegnato come pagato;
     \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{itemize}
-        \item in caso di fallimento del pagamento l'ordine non viene emesso, è necessario quindi riprovare il pagamento e viene visualizzato un errore (UC 8.6);
-        \item l'utente decide di annullare il processo di checkout premendo l'apposito pulsante (UC 8.5);
+        \item in caso di fallimento del pagamento l'ordine non viene emesso, è necessario quindi riprovare il pagamento e viene visualizzato un errore (\hyperref[UC8.6]{UC8.6});
+        \item il cliente decide di annullare il processo di checkout premendo l'apposito pulsante (\hyperref[UC8.5]{UC8.5});
     \end{itemize}
 \end{itemize}
 
@@ -273,15 +273,15 @@
     \item \textbf{Descrizione:} scenario per l'inserimento dell'indirizzo di fatturazione in fase di checkout;
     \item \textbf{Precondizione:} il cliente ha avviato il processo di checkout;
     \item \textbf{Input:} il cliente inserisce i dati tramite l'apposito form oppure sceglie tra quelli personali già presenti (solo se autenticato);
-    \item \textbf{Postcondizione:} l'utente procede con la fase successiva del checkout;
+    \item \textbf{Postcondizione:} il cliente procede con la fase successiva del checkout;
     \item \textbf{Scenario principale:}
-    \begin{itemize}
-        \item l'utente ha 2 modi per inserire l'informazione:
+    \begin{enumerate}
+        \item il cliente ha 2 modi per inserire l'informazione:
         \begin{itemize}
             \item compilare il relativo form;
             \item scegliere tra gli indirizzi salvati (solo se autenticato).
         \end{itemize}
-    \end{itemize}
+    \end{enumerate}
 \end{itemize}
 
 %8.2
@@ -293,16 +293,16 @@
     \item \textbf{Descrizione:} scenario per l'inserimento dell'indirizzo di spedizione in fase di checkout;
     \item \textbf{Precondizione:} il cliente ha avviato il checkout;
     \item \textbf{Input:} il cliente inserisce i dati tramite l'apposito form oppure sceglie tra quelli personali già presenti (solo se autenticato);
-    \item \textbf{Postcondizione:} l'utente procede con la fase successiva del checkout;
+    \item \textbf{Postcondizione:} il cliente procede con la fase successiva del checkout;
     \item \textbf{Scenario principale:}
-    \begin{itemize}
-        \item l'utente ha 3 modi per inserire l'informazione:
+    \begin{enumerate}
+        \item il cliente ha 3 modi per inserire l'informazione:
         \begin{itemize}
             \item compilare il relativo form;
             \item scegliere tra gli indirizzi salvati (solo se autenticato);
             \item riutilizzare l'indirizzo di fatturazione precedentemente inserito.
         \end{itemize}
-    \end{itemize}
+    \end{enumerate}
 \end{itemize}
 
 %8.3
@@ -330,11 +330,14 @@
     \item \textbf{Input:} il cliente preme sul pulsante per pagare;
     \item \textbf{Postcondizione:} il pagamento è stato eseguito e l'ordine viene emesso. Vengono quindi rimosse dal magazzino le merci acquistate;
     \item \textbf{Scenario principale:}
-    \begin{itemize}
+    \begin{enumerate}
         \item il cliente premendo sul pulsante per eseguire il pagamento viene rimandato alla piattaforma esterna;
         \item esegue il pagamento interagendo con il servizio esterno;
-        \item in caso di pagamento riuscito l'ordine viene emesso e le merci acquistate vengono rimosse dal magazzino (UC8.6);
-        \item in caso di pagamento fallito viene visualizzato un errore (UC8.5) e si offre la possibilità di riprovare premendo di nuovo sul tasto per eseguire il pagamento.
+        \item in caso di pagamento riuscito l'ordine viene emesso e le merci acquistate vengono rimosse dal magazzino (\hyperref[UC8.6]{UC8.6});
+    \end{enumerate}
+    \item \textbf{Estensioni:} 
+    \begin{itemize}
+        \item in caso di pagamento fallito viene visualizzato un errore (\hyperref[UC8.5]{UC8.5}) e si offre la possibilità di riprovare premendo di nuovo sul tasto per eseguire il pagamento.
     \end{itemize}
 \end{itemize}
 
@@ -378,13 +381,13 @@
         \item il cliente inserisce i dati di login (es. username e password);
         \item invia i dati inseriti;
         \item i dati vengono verificati dal gestire esterno;
-        \item se i dati sono corretti e identificato un profilo utente il cliente è autenticato con questo profilo.
+        \item se i dati sono corretti e identificato un profilo utente il cliente è autenticato con questo profilo;
     \end{enumerate}
     \item \textbf{Estensioni:}
-    \begin{itemize}
+    \begin{enumerate}
         \item il gestore delle credenziali restituisce un errore indicante che i dati inseriti sono errati;
         \item viene quindi chiesto di reinserire le credenziali, contestualmente si visualizza un messaggio di errore.
-    \end{itemize}
+    \end{enumerate}
 \end{itemize}
 
 %10
@@ -399,15 +402,15 @@
     \item \textbf{Input:} il cliente inserisce ed invia i dati per la registrazione;
     \item \textbf{Postcondizione:} il cliente è autenticato con il nuovo profilo appena inserito nel sistema;
     \item \textbf{Scenario principale:}
-    \begin{itemize}
+    \begin{enumerate}
         \item il cliente inserisce l'email, la quale verrà utilizzata per contattarlo e per identificare univocamente l'utente nel sistema;
         \item il cliente reinserisce l'email per conferma;
         \item il cliente inserisce una password che rispetti i requisiti minimi di sicurezza;
         \item il cliente reinserisce la stessa password per conferma.
         \item i dati vengono inviati al servizio di terze parti per la gestione dei dati di login;
-        \item arriva un'email contenente un link per la verifica all'indirizzo indicato (se questo non era già presente a sistema);
+        \item arriva un'email al cliente contenente un link per la verifica all'indirizzo indicato;
         \item il cliente deve premere su quel link per attivare l'account entro una finestra di tempo limitata.
-    \end{itemize}
+    \end{enumerate}
     \item \textbf{Estensioni:} la registrazione fallisce se:
     \begin{itemize}
         \item nel sistema esiste già un cliente con la stessa email;
@@ -429,14 +432,14 @@
     \item \textbf{Input:} il cliente si accorge di aver dimenticato la password di accesso e preme sul pulsante per la reimpostazione;
     \item \textbf{Postcondizione:} il cliente ha modificato la sua password e può effettuare il login;
     \item \textbf{Scenario principale:}
-    \begin{itemize}
+    \begin{enumerate}
         \item il cliente chiede la reimpostazione della password;
         \item riceve tramite email un link per la reimpostazione valido entro un certo limite di tempo;
         \item preme sul link e viene portato su una pagina per l'inserimento della password;
         \item inserisce la nuova password;
         \item reinserisce la password per conferma;
         \item invia i dati inseriti al gestore delle credenziali.
-    \end{itemize}
+    \end{enumerate}
     \item \textbf{Estensioni:} la reimpostazione della password fallisce se:
     \begin{itemize}
         \item le password inserite non corrispondono;
@@ -458,7 +461,7 @@
     \item \textbf{Descrizione:} caso d'uso per la gestione del profilo utente di un cliente;
     \item \textbf{Precondizione:} il cliente ha eseguito il login (\hyperref[UC9]{UC9}) e si trova sulla pagina per la gestione del profilo;
     \item \textbf{Input:} il cliente avvia un'operazione di gestione profilo;
-    \item \textbf{Postcondizione:} il cliente ha modificato il suo profilo o richiesto la modifica al venditore;
+    \item \textbf{Postcondizione:} il cliente ha modificato il suo profilo o richiesto la modifica al venditore.
 \end{itemize}
 
 %12.1
@@ -472,10 +475,10 @@
     \item \textbf{Input:} il cliente seleziona l'opzione per inserire un nuovo indirizzo;
     \item \textbf{Postcondizione:} nel sistema esiste l'indirizzo inserito dal cliente;
     \item \textbf{Scenario principale:}
-    \begin{itemize}
+    \begin{enumerate}
         \item il cliente compila il form per l'inserimento dell'indirizzo;
-        \item invia quindi i dati.
-    \end{itemize}
+        \item il cliente invia quindi i dati.
+    \end{enumerate}
 \end{itemize}
 
 %12.2
@@ -499,7 +502,7 @@
     \item \textbf{Descrizione:} scenario per la richiesta di cancellazione del profilo cliente al venditore;
     \item \textbf{Precondizione:} il cliente ha eseguito il login (\hyperref[UC9]{UC9}) e si trova sulla pagina per la gestione del profilo;
     \item \textbf{Input:} il cliente sceglie l'opzione per aprire un ticket di assistenza e richiedere la cancellazione dell'account;
-    \item \textbf{Postcondizione:} è stato aperto un ticket di assistenza nella piattaforma, il venditore quindi provvederà a gestirlo opportunamente;
+    \item \textbf{Postcondizione:} è stato aperto un ticket di assistenza nella piattaforma, il venditore quindi provvederà a gestirlo opportunamente.
 \end{itemize}
 
 %12.4
@@ -513,12 +516,12 @@
     \item \textbf{Input:} il cliente sceglie l'opzione per modificare l'email che lo identifica univocamente all'interno del sito;
     \item \textbf{Postcondizione:} l'email è stata modificata con quella nuova inserita;
     \item \textbf{Scenario principale:}
-    \begin{itemize}
+    \begin{enumerate}
         \item il cliente inserisce l'email nel campo apposito;
         \item il cliente reinserisce la stessa email in un altro campo per la verifica;
-        \item invia quindi i dati inseriti;
+        \item il cliente invia quindi i dati inseriti;
         \item si ripete il processo di verifica email spiegato nel caso d'uso della registrazione.
-    \end{itemize}
+    \end{enumerate}
     \item \textbf{Estensioni:} la modifica dell'email fallisce se:
     \begin{itemize}
         \item i due indirizzi email non corrispondono;
@@ -537,12 +540,12 @@
     \item \textbf{Input:} il cliente seleziona l'opzione per modificare la password di accesso;
     \item \textbf{Postcondizione:} la password di accesso al sistema per quel cliente è stata modificata;
     \item \textbf{Scenario principale:}
-    \begin{itemize}
+    \begin{enumerate}
         \item il cliente inserisce la vecchia password;
         \item il cliente inserisce la nuova password;
         \item il cliente reinserisce la nuova password;
-        \item invia quindi i dati inseriti.
-    \end{itemize}
+        \item il cliente invia quindi i dati inseriti.
+    \end{enumerate}
     \item \textbf{Estensioni:} la modifica della password fallisce se:
     \begin{itemize}
         \item le password inserite non corrispondono;
@@ -563,9 +566,9 @@
     \begin{enumerate}
         \item il cliente entra nella pagina con la lista degli ordini;
         \item il cliente può annullare l'ordine (\hyperref[UC13.1]{UC13.1});
-        \item il cliente richiedere assistenza per un ordine (\hyperref[UC13.2]{UC13.2});
+        \item il cliente può richiedere assistenza per un ordine (\hyperref[UC13.2]{UC13.2});
         \item il cliente può richiedere un reso (\hyperref[UC13.3]{UC13.3});
-        \item il cliente può visualizzare il riepilogo di un determinato ordine (\hyperref[UC13.4]{UC13.4});
+        \item il cliente può visualizzare il riepilogo di un determinato ordine (\hyperref[UC13.4]{UC13.4}).
     \end{enumerate}
 \end{itemize}
 
@@ -580,12 +583,12 @@
 \item \textbf{Postcondizione:} il cliente deve aver contatto il venditore per l'annullamento;
 \item \textbf{Scenario principale:}
 \begin{enumerate}
-    \item cliente sceglie ordine da annullare;
-    \item cliente viene portato al form di contatto;
+    \item il cliente sceglie ordine da annullare;
+    \item il cliente viene portato al form di contatto;
 \end{enumerate}
 \item \textbf{Inclusioni:}
 \begin{itemize}
-    \item per annullare un ordine viene aperto il form di contatto che permette al cliente di contattare il venditore (\hyperref[UC15]{UC15});
+    \item per annullare un ordine viene aperto il form di contatto che permette al cliente di contattare il venditore (\hyperref[UC15]{UC15}).
 \end{itemize}
 \end{itemize}
 
@@ -600,12 +603,12 @@
 \item \textbf{Postcondizione:}il cliente deve aver contatto il venditore per richiedere assistenza;
 \item \textbf{Scenario principale:}
 \begin{enumerate}
-    \item cliente decide di contattare l'assistenza;
-    \item cliente viene portato al form di contatto;
+    \item il cliente decide di contattare l'assistenza;
+    \item il cliente viene portato al form di contatto;
 \end{enumerate}
 \item \textbf{Inclusioni:}
 \begin{itemize}
-    \item per l'assistenza su un ordine viene aperto il form di contatto che permette al cliente di contattare il venditore (\hyperref[UC15]{UC15});
+    \item per l'assistenza su un ordine viene aperto il form di contatto che permette al cliente di contattare il venditore (\hyperref[UC15]{UC15}).
 \end{itemize}
 \end{itemize}
 
@@ -616,16 +619,16 @@
 \begin{itemize}
 \item \textbf{Attore Primario:} cliente autenticato;
 \item \textbf{Descrizione:} il cliente vuole effettuare un reso di un ordine ricevuto;
-\item \textbf{Precondizione:} il cliente deve aver effettuato un ordine, averlo ricevuto, ed essere nella pagina di gestione degli ordini
+\item \textbf{Precondizione:} il cliente deve aver effettuato un ordine, averlo ricevuto, ed essere nella pagina di gestione degli ordini;
 \item \textbf{Postcondizione:} il cliente deve aver contatto il venditore per il reso;
 \item \textbf{Scenario principale:}
 \begin{enumerate}
-    \item cliente decide di effettuare un reso;
-    \item cliente viene portato al form di contatto;
+    \item il cliente decide di effettuare un reso;
+    \item il cliente viene portato al form di contatto;
 \end{enumerate}
 \item \textbf{Inclusioni:}
 \begin{itemize}
-    \item per il reso di un ordine viene aperto il form di contatto che permette al cliente di contattare il venditore (\hyperref[UC15]{UC15});
+    \item per il reso di un ordine viene aperto il form di contatto che permette al cliente di contattare il venditore (\hyperref[UC15]{UC15}).
 \end{itemize}
 \end{itemize}
 
@@ -640,8 +643,8 @@
 \item \textbf{Postcondizione:} il cliente visualizza il riepilogo;
 \item \textbf{Scenario principale:}
 \begin{enumerate}
-    \item cliente decide di aprire il riepilogo dell'ordine;
-    \item si apre la pagina dove è presentato il riepilogo;
+    \item il cliente decide di aprire il riepilogo dell'ordine;
+    \item si apre la pagina dove è presentato il riepilogo.
 \end{enumerate}
 \end{itemize}
 
@@ -657,7 +660,7 @@
     \item \textbf{Scenario principale:}
     \begin{enumerate}
         \item il cliente effettua il logout;
-        \item il cliente si ritrova nella pagina principale del sito;
+        \item il cliente si ritrova nella pagina principale del sito.
     \end{enumerate}
 \end{itemize}
 
@@ -673,7 +676,7 @@
     \item \textbf{Scenario principale:}
     \begin{enumerate}
         \item il cliente ha aperto il form di contatto;
-        \item compila il form;
-        \item il cliente contatta con successo il venditore;
+        \item il cliente compila il form;
+        \item il cliente contatta con successo il venditore.
     \end{enumerate}
 \end{itemize}
