@@ -209,6 +209,7 @@
         \item Aggiungi attributi SEO prodotto;
         \item Inserimento dati giacenza magazzino del prodotto;
         \item Visualizzazione in home (dato che indica se visualizzare o meno il prodotto in vetrina);
+        \item Inserimento giacenza prodotto;
         \item Salvataggio.
     \end{enumerate}
     \item \textbf{Estensione:}
@@ -239,6 +240,7 @@
         \item Modifica stato visibilità prodotto; 
         \item Modifica attributi SEO prodotto;
         \item Modifica visualizzazione in home (togliere o aggiungere il prodotto dalla home);
+        \item Modifica giacenza prodotto.
         \item Salvataggio.
     \end{enumerate}
     \item \textbf{Estensione:}
@@ -260,22 +262,6 @@
     \item \textbf{Postcondizione:} il prodotto selezionato non è più presente nel sistema 
 \end{itemize}
 
-%20.4
-\stepsubUserCase
-\subsubsection{\valuesubUserCase- Aggiorna giacenza}
-\labelsubUserCase
-\begin{itemize}
-    \item \textbf{Attore Primario:}  venditore autenticato.
-    \item \textbf{Descrizione:}Il venditore può aggiornare la giacenza del prodotto nel magazzino
-    \item \textbf{Precondizione:} il venditore si trova sulla pagina di amministrazione prodotti
-    \item \textbf{Input:} inserimento nuovo dato quantità per un determinato prodotto
-    \item \textbf{Postcondizione:} il prodotto è stato con il nuovo dato di giacenza
-    \item \textbf{Scenario principale:} l’utente visualizza la tabella riepilogativa dei prodotti e aggiorna il dato relativo alla giacenza di un prodotto
-    \item \textbf{Estensione:}
-    \begin{itemize}
-        \item la quantità inserita non è valida (es. negativa o valore testuale), la modifica fallisce
-    \end{itemize}
-\end{itemize}
 
 %21
 \stepUserCase
