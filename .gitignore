@@ -13,3 +13,5 @@
 *.glsdefs
 
 .vscode/*
+*.lot
+*.lof
