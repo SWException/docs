@@ -34,16 +34,16 @@ I documenti formali e informali sono a loro volta suddivisi in:
 I documenti interni sono tutti quelli che interessano i membri del team e che gli aiutano nelle scelte e nella programmazione della redazione dei successivi documenti.
 Tra questi documenti troviamo:
 \begin{itemize}
-    \item\textbf{Studio di fattibilità}: vengono presentati brevemente i diversi capitolati proposti, indicando per ognuno la sua finalità, le tecnologie da utilizzare, gli aspetti positivi e le criticità. Viene inoltre esposto la motivazione della decisione del capitolato;
-    \item\textbf{Norme di progetto}: si tratta del seguente documento, esso contiene tutte le norme e le regole che tutti i membri del team devono seguire.
+    \item\textbf{Studio di Fattibilità}: vengono presentati brevemente i diversi capitolati proposti, indicando per ognuno la sua finalità, le tecnologie da utilizzare, gli aspetti positivi e le criticità. Viene inoltre esposto la motivazione della decisione del capitolato;
+    \item\textbf{Norme di Progetto}: si tratta del seguente documento, esso contiene tutte le norme e le regole che tutti i membri del team devono seguire.
 \end{itemize}
 Quelli esterni invece sono di interesse per committenti e proponente, infatti vengono consegnati loro nell'ultima versione.
 Tra questi troviamo:
 \begin{itemize}
-    \item\textbf{Piano di progetto}: pianificazione delle attività che il team dovrà svolgere, indicando come avverrà l'utilizzo delle risorse;
-    \item\textbf{Piano di qualifica}: contiene tutti gli standard e le metriche da utilizzare per la valutazione della qualità;
+    \item\textbf{Piano di Progetto}: pianificazione delle attività che il team dovrà svolgere, indicando come avverrà l'utilizzo delle risorse;
+    \item\textbf{Piano di Qualifica}: contiene tutti gli standard e le metriche da utilizzare per la valutazione della qualità;
     \item\textbf{Glossario}: contiene un elenco di tutti i termini che ricorrono nei documenti e che necessitano di una definizione esplicita;
-    \item\textbf{Analisi dei requisiti}: vengono descritti tutti i requisiti che il prodotto finale dovrà soddisfare.
+    \item\textbf{Analisi dei Requisiti}: vengono descritti tutti i requisiti che il prodotto finale dovrà soddisfare.
 \end{itemize}
 Quando si tratta di documenti formali può accadere che questi abbiano più versioni, in questo caso si considera come corrente quella approvata più recentemente dal responsabile del progetto.
 
@@ -164,7 +164,7 @@ Gli stili di testo utilizzati nella documentazione sono:
 \end{itemize}
 
 \paragraph{Termini di glossario}
-I termini non immediatamente comprensibili (che nella documentazione spesso corrispondono ai termini appartenenti alla sfera semantica dell'informatica) sono contrassegnati dal pedice \glock{} (e.g. \glock{parola}) la prima volta che appaiono in ogni sezione. Se un termine appare più volte all'interno della stessa sezione solo la prima occorrenza dovrà essere seguita dal pedice \glock{}. Il simbolo indica che il termine contrassegnato può essere trovato, seguito dalla sua definizione, all'interno del \dext{Glossario}. In questo documento le voci sono riportate in ordine alfabetico.  
+I termini non immediatamente comprensibili (che nella documentazione spesso corrispondono ai termini appartenenti alla sfera semantica dell'informatica) sono contrassegnati dal pedice \glock{} (e.g. \glock{parola}) la prima volta che appaiono in ogni sezione. Se un termine appare più volte all'interno della stessa sezione solo la prima occorrenza dovrà essere seguita dal pedice \glock{}. Il simbolo indica che il termine contrassegnato può essere trovato, seguito dalla sua definizione, all'interno del \dext{Glossario v1.0.0}. In questo documento le voci sono riportate in ordine alfabetico.  
 
 \paragraph{Elementi testuali}
 Nella fase di redazione della documentazione è necessario attenersi alle convenzioni stilistiche esposte di seguito.
@@ -213,7 +213,7 @@ dove:
 \end{itemize}
 Le ore e i minuti devono comparire sempre in doppia cifra (qualora ore e/o minuti siano in singola cifra si antepone uno zero). 
 \subparagraph{Sigle}
-Le sigle sono indicate con le iniziali di ogni parola maiuscole. Se nella sigla compare l'iniziale di una preposizione,articolo o congiunzione, questa è riportata in carattere minuscolo.
+Le sigle sono indicate con le iniziali di ogni parola maiuscole. Se nella sigla compare l'iniziale di una preposizione, articolo o congiunzione, questa è riportata in carattere minuscolo.
 Le sigle utilizzate nei documenti del progetto sono:
 \begin{itemize}
     \item Relative ai nomi dei documenti:
@@ -376,7 +376,7 @@ Per la numerazione dei codici identificativi descritti in \S\ref{_classificazion
 La finalità è quella di garantire la qualità prestabilita di prodotti e processi da sviluppare, rispettando le richieste del proponente.
 
 \subsubsection{Descrizione}
-Per esporre i valori di soglia delle metriche e gli standard da applicare al progetto, è stato introdotto il documento \textit{Piano di qualifica}.
+Per esporre i valori di soglia delle metriche e gli standard da applicare al progetto, è stato introdotto il documento \dext{Piano di Qualifica v1.0.0}.
 In questa sezione ci proponiamo di illustrare come avviene il processo di gestione della qualità e l'istanziamento di un processo.
 
 \subsubsection{Aspettative}
@@ -542,10 +542,10 @@ Questo tipo di analisi viene effettuata sul prodotto senza eseguirlo e serve per
 Il processo di verifica viene gestito con il meccanismo delle pull request, una sorta di issue avanzata messa a disposizione da \textit{Github} descritto in dettaglio in \S\ref{_cicloVitaTicket}.
 
 \subsubsection{Verifica del codice}
-Il codice viene verificato con test automatici e con misurazioni quantificabili specificate all'interno del \dext{Piano di qualifica}. Il codice quindi deve obbedire a questi criteri:
+Il codice viene verificato con test automatici e con misurazioni quantificabili specificate all'interno del \dext{Piano di Qualifica v1.0.0}. Il codice quindi deve obbedire a questi criteri:
 \begin{itemize}
     \item Deve essere corretto rispetto ai test definiti e alle metriche adottate per quantificare la sua qualità;
-    \item Deve derivare dai requisiti richiesti in \dext{analisi dei requisiti}.
+    \item Deve derivare dai requisiti richiesti in \dext{Analisi dei Requisiti v1.0.0}.
 \end{itemize}
 
 \paragraph{Analisi statica}
@@ -575,7 +575,7 @@ Anche i requisiti sono sottoposti al processo di verifica. Perché la verifica d
     \item Siano coerenti con la loro implementazione;
     \item Abbiano un grado di complessità adeguato rispetto al tempo e alle risorse pianificate per la riuscita del progetto;
     \item Si dimostrino verificabili e quantificabili;
-    \item Siano coerenti con gli accordi presi con il proponente, riportati all'interno dell'\dext{analisi dei Requisiti}.
+    \item Siano coerenti con gli accordi presi con il proponente, riportati all'interno dell'\dext{Analisi dei Requisiti v1.0.0}.
 \end{itemize}
 
 \paragraph{Analisi statica}
@@ -587,7 +587,7 @@ I requisiti devono rispettare le proprietà di:
 \end{itemize}
 
 \subsubsection{Test}
-I test costituiscono l'attività fondamentale dell'analisi dinamica: permettono di individuare i bug e di dimostrare che l'applicativo sviluppato è conforme rispetto a tutti i requisiti concordati nell'\dext{analisi dei requisiti}.\\
+I test costituiscono l'attività fondamentale dell'analisi dinamica: permettono di individuare i bug e di dimostrare che l'applicativo sviluppato è conforme rispetto a tutti i requisiti concordati nell'\dext{Analisi dei Requisiti v1.0.0}.\\
 Verranno implementati tipi di test descritti di seguito, ognuno con uno scopo diverso e con un oggetto di verifica differente.
 \paragraph{Test di unità}
 Consiste nel testare la partizione più piccola di software: l'unità. Il corretto funzionamento di ogni unità deve essere testato prima di procedere alla sua integrazione.
@@ -598,8 +598,8 @@ Necessari per testare che le diverse unità si interfaccino correttamente: quest
 Verranno normati e considerati nel processo di progettazione.
 
 \paragraph{Test di sistema}
-Dopo che tutte le unità sono state testate ed è stata testata la loro integrazione viene eseguito il test dell'intero sistema. In questa fase si verifica che tutte le componenti interagiscano nel modo atteso e che l'applicazione soddisfi ciò che è stato definito nell'\dext{analisi dei requisiti}.
-I test di sistema dell'applicazione EmporioLambda saranno implementati con \glock{Selenium} e sono stati definiti nel \dext{Piano di qualifica v1.0.0} durante il processo di analisi dei requisiti.
+Dopo che tutte le unità sono state testate ed è stata testata la loro integrazione viene eseguito il test dell'intero sistema. In questa fase si verifica che tutte le componenti interagiscano nel modo atteso e che l'applicazione soddisfi ciò che è stato definito nell'\dext{Analisi dei Requisiti v1.0.0}.
+I test di sistema dell'applicazione EmporioLambda saranno implementati con \glock{Selenium} e sono stati definiti nel \dext{Piano di Qualifica v1.0.0} durante il processo di analisi dei requisiti.
 
 \paragraph{Test di regressione}
 Quando una o più unità vengono modificate si esegue questa tipologia di test che serve per accertarsi che le funzionalità precedentemente implementate e testate non siano state danneggiate dai cambiamenti apportati al software.
