@@ -13,3 +13,5 @@
 *.glsdefs
 *.vs
 .vscode/*
+*.tof
+*.toc
