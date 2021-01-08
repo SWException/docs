@@ -26,7 +26,7 @@ La strategia di testing adottata dal gruppo è basata sul modello a V la quale s
 
 \subsection{Test di sistema}
 
-I test di sistema devono assicurare il soddisfacimento dei requisiti individuati nel documento Analisi dei erquisiti. 
+I test di sistema devono assicurare il soddisfacimento dei requisiti individuati nel documento \dext{Analisi dei Requisiti}. 
 Di seguito l'elenco dei test di sistema individuati.
 
 \newpage
@@ -40,8 +40,11 @@ Di seguito l'elenco dei test di sistema individuati.
 	\textbf{Codice} & \textbf{Titolo} & \textbf{Descrizione} \\
 	\hline
 	\endfirsthead
-
-	% ----- MARCO -----
+	\hline
+	\multicolumn{3}{|c|}{\textit{Continua nella pagina successiva...}} \\
+	\hline
+	\endfoot
+	\endlastfoot
 
 
 	\hline
@@ -56,14 +59,14 @@ Di seguito l'elenco dei test di sistema individuati.
 
 	\valueCTS & Funzionalità menù categorie & Verificare che un utente generico: 
 	\begin{enumerate}
-		\item  possa cliccare in una delle voci del menù delle categorie ;
-		\item  riceva un messaggio di errore se non vi sono prodotti all'interno della categoria selezionata;
+		\item  possa cliccare in una delle voci del menù delle categorie;
+		\item  riceva un messaggio di errore se non vi sono prodotti all'interno della categoria selezionata.
 	\end{enumerate} \\
 
 	\valueCTS & Funzionalità ricerca & Verificare che un utente generico: 
 	\begin{enumerate}
 		\item  possa cercare un prodotto mediante il proprio nome utilizzando la funzionalità di ricerca;
-		\item  riceva un messaggio di errore se non vi sono prodotti che soddisfano la query di ricerca;
+		\item  riceva un messaggio di errore se non vi sono prodotti che soddisfano la query di ricerca.
 	\end{enumerate} \\
 
 
@@ -85,7 +88,7 @@ Di seguito l'elenco dei test di sistema individuati.
 	\begin{enumerate}
 		\item  applicare, modificare e rimuovere uno o più filtri di visualizzazione prodotti basati su un prezzo minimo e/o massimo;
 		\item  applicare, modificare e rimuovere uno o più filtri basati su una categoria;
-		\item  visualizzare un messaggio di errore nel caso nessun prodotto soddisfi i filtri applicati;
+		\item  visualizzare un messaggio di errore nel caso nessun prodotto soddisfi i filtri applicati.
 	\end{enumerate} \\
 
 	\valueCTS & Visualizzazione PDP & Verificare che un utente generico possa visualizzare: 
@@ -99,7 +102,7 @@ Di seguito l'elenco dei test di sistema individuati.
 	\valueCTS & Aggiunta a carrello & Verificare che un utente generico possa : 
 	\begin{enumerate}
 		\item   aggiungere un prodotto al carrello potendo specificare la quantità;
-		\item   visualizzare un errore nel caso voglia aggiungere al carrello una quantità maggiore di quella disponibile;
+		\item   visualizzare un errore nel caso voglia aggiungere al carrello una quantità maggiore di quella disponibile.
 	\end{enumerate} \\
 
 	\valueCTS & Sincronizzazione carrello & Verificare che un utente autenticato possa recuperare il proprio carrello da qualsiasi dispositivo esso faccia il login.\\
@@ -118,10 +121,7 @@ Di seguito l'elenco dei test di sistema individuati.
 		\item in caso di aumento, se la quantità richiesta non è disponibile, venga visualizzato il giusto messaggio di errore;
 		\item si possa eliminare un singolo articolo.
 	\end{enumerate}\\
-	\valueCTS & Svuotare il carrello & Verificare che:
-	\begin{enumerate}
-		\item tutti gli elementi nel carrello possano essere rimossi.
-	\end{enumerate} \\
+	\valueCTS & Svuotare il carrello & Verificare che tutti gli elementi nel carrello possano essere rimossi. \\
 	\valueCTS & Processo di checkout & Verificare che:
 	\begin{enumerate}
 		\item il messaggio mostri un errore se si avvia il checkout con carrello vuoto;
@@ -183,7 +183,7 @@ Di seguito l'elenco dei test di sistema individuati.
 		\begin{enumerate}
 			\item annullare l'ordine;
 			\item segnalare problemi dell'ordine;
-			\item chiedere il reso;
+			\item chiedere il reso.
 		\end{enumerate}
 	\end{enumerate} \\
 	\valueCTS & Verifica logout cliente & Verificare che il cliente loggato possa effettuare il logout e che venga riportato alla home page \\
@@ -198,7 +198,7 @@ Di seguito l'elenco dei test di sistema individuati.
 		\item il venditore possa visualizzare la lista dei clienti;
 		\item il venditore possa cercare un determinato cliente nel sistema;
 		\item il venditore possa ordinare i clienti con determinati filtri;
-		\item il venditore possa contattare il cliente tramite un form;
+		\item il venditore possa contattare il cliente tramite un form.
 	\end{enumerate} \\
 	\valueCTS & Verifica dashboard aliquote venditore & Verificare che:
 	\begin{enumerate}
@@ -206,7 +206,7 @@ Di seguito l'elenco dei test di sistema individuati.
 		\item il venditore possa visualizzare le aliquote IVA già presenti nel sistema;
 		\item il venditore possa aggiungere un'aliquota IVA;
 		\item il venditore possa modificare un'aliquota IVA;
-		\item il venditore possa eliminare un'aliquota IVA già presente nel sistema;
+		\item il venditore possa eliminare un'aliquota IVA già presente nel sistema.
 	\end{enumerate} \\
 	\valueCTS & Verifica dashboard prodotti venditore & Verificare che:
 	\begin{enumerate}
@@ -216,14 +216,14 @@ Di seguito l'elenco dei test di sistema individuati.
 		\item il venditore possa aggiungere un prodotto al sistema dopo aver compilato tutti i campi obbligatori del prodotto;
 		\item il venditore possa modificare un prodotto aggiornando i campi già presenti;
 		\item il venditore possa eliminare un prodotto presente nel sistema;
-		\item il venditore possa selezionare i prodotti da mostrare nella HomePage cliente;
+		\item il venditore possa selezionare i prodotti da mostrare nella HomePage cliente.
 	\end{enumerate} \\
 	\valueCTS & Verifica dashboard categorie venditore & Verificare che:
 	\begin{enumerate}
 		\item il venditore possa visualizzare tutte le categorie presenti nel sistema;
 		\item il venditore possa aggiungere una categoria di prodotti impostando il nome;
 		\item il venditore possa rimuovere una categoria di prodotti;
-		\item il venditore possa modificare il nome di una categoria già esistente nel sistema;
+		\item il venditore possa modificare il nome di una categoria già esistente nel sistema.
 	\end{enumerate} \\
 	\valueCTS & Verifica login venditore & Verificare che il venditore possa effettuare il login \\
 	\valueCTS & Verifica login venditore & Verificare che il venditore possa effettuare il logout \\
@@ -237,14 +237,18 @@ Di seguito l'elenco dei test di sistema individuati.
 \resetCTS
 \begin{center}
 	\rowcolors{1}{white}{blue!20}
-	\begin{longtable}{|c|c|}
+	\begin{longtable}{c|c|}
 	\hline
 	\rowcolor{lighter-grayer}
 	\textbf{Test di sistema} & \textbf{Requisiti} \\
 	\hline
 	\endfirsthead
+	\hline
+	\multicolumn{2}{|c|}{\textit{Continua nella pagina successiva...}} \\
+	\hline
+	\endfoot
+	\endlastfoot
 
-	% ----- MARCO -----
 	\hline
 	\valueCTS & R1F1 \\
 	\valueCTS & R1F2 \\
@@ -257,7 +261,6 @@ Di seguito l'elenco dei test di sistema individuati.
 	\valueCTS & R1F9 \\
 	\valueCTS & R1F10 \\
 
-	% ----- MICHELE -----
 	\valueCTS & R1F11  \\
 	\valueCTS & R1F12 \\
 	\valueCTS & R1F13 \\
@@ -269,7 +272,6 @@ Di seguito l'elenco dei test di sistema individuati.
 	\valueCTS & R1F18 \\
 	\valueCTS & R1F18 \\
 
-	% ----- STEFANO -----
 	\valueCTS & R1F19 \\
 	\valueCTS & R1F20 \\
 	\valueCTS & R1F21 \\
