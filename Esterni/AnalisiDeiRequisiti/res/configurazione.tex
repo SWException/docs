@@ -145,3 +145,60 @@
 \newcommand{\dext}[1]{#1\textsubscript{\textit{D}}}
 
 \newcommand{\glock}[1]{#1\textsubscript{\textit{G}}}
+
+
+%contatore dei requisiti
+\newcounter{CR} % Contatore Requisiti 
+\setcounter{CR}{0}
+\newcounter{CSR} % Contatore Sotto-Requisiti
+\setcounter{CSR}{0}
+\newcommand{\stepCR}[0]{\stepcounter{CR}\setcounter{CSR}{0}} % incrementa il contatore CR
+\newcommand{\valueCR}[0]{\arabic{CR}} % ritorna il valore del contatore CR
+\newcommand{\stepsubCR}{\stepcounter{CSR}} % incrementa il contatore CSR
+\newcommand{\valuesubCR}[0]{\arabic{CR}.\arabic{CSR}} % ritorna il valore del contatore CSR
+\newcommand{\resetCR}{\setcounter{CR}{0}\setcounter{CSR}{0}}  % resetta il contatore CR e CSR
+
+% comandi per formattare il codice dei requisiti
+\newcommand{\creazioneCodiceRequisito}[3]{\textbf{R#1#2#3}}
+\newcommand{\creazioneCodiceSottoRequisito}[3]{\textcolor{black!75}{R#1#2#3}}
+
+%comando per creare i codici dei requisiti e una lable per poi riferirsi ad esso
+\makeatletter
+\newcommand{\creazioneCodiceRequisitoConLabel}[3]{%
+  \phantomsection
+  \creazioneCodiceRequisito{#1}{#2}{#3}\def\@currentlabel{\creazioneCodiceRequisito{#1}{#2}{#3}}\label{Req#2#3}%
+}
+\makeatother
+
+% comando per creare i codici dei sottorequisiti e una lable per poi riferirsi ad esso
+\makeatletter
+\newcommand{\creazioneCodiceSottoRequisitoConLabel}[3]{%
+  \phantomsection
+  \creazioneCodiceSottoRequisito{#1}{#2}{#3}\def\@currentlabel{\creazioneCodiceSottoRequisito{#1}{#2}{#3}}\label{Req#2#3}%
+}
+\makeatother
+
+% comandi che generano automaticamente i codici dei requisiti e le relative lable
+% PARAMETRO 1: Importanza
+% PARAMETRO 2: Tipologia
+\newcommand{\req}[2]{\stepCR\creazioneCodiceRequisitoConLabel{#1}{#2}{\valueCR}}
+\newcommand{\sreq}[2]{\stepsubCR\creazioneCodiceSottoRequisitoConLabel{#1}{#2}{\valuesubCR}}
+
+% comando per riferirsi ad un requisito riportando anche il codice completo di esso
+% PARAMETRO 1: Tipologia
+% PARAMETRO 2: Codice numerico (Es: 1.2, 5, 7.1, ...)
+\newcommand{\refreqID}[2]{\ref{Req#1#2}}
+
+% comandi che generano automaticamente i riferimenti ai requisiti con il contatore
+% PARAMETRO 1: Tipologia
+\newcommand{\refreq}[1]{\stepCR\refreqID{#1}{\valueCR}}
+\newcommand{\refsreq}[1]{\stepsubCR\refreqID{#1}{\valuesubCR}}
+
+%comando per riferirsi ad uno o più User Cases che hanno la lable uguale al codice (Es: UC2.2)
+% PARAMETRO 1: Lista di User Cases separati da una virgola
+\newcommand{\refUserCase}[1]{\foreach [count=\i] \ucref in {#1}{\ifnum\i=1\hyperref[\ucref]{\ucref}\else, \hyperref[\ucref]{\ucref}\fi}}
+
+% comando per riferirsi ad una lista di requisito riportando anche i codici completi di essi
+% PARAMETRO 1: Tipologia dei requisiti riportati nella lista al parametro 2
+% PARAMETRO 2: lista dei Codici numerici dei requisiti separati da una virgola (Es: 1.2, 5, 7.1, ...)
+\newcommand{\refRequisiti}[2]{\foreach [count=\i] \reqID in {#2}{\ifnum\i=1\refreqID{#1}{\reqID}\else, \refreqID{#1}{\reqID}\fi}}

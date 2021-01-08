@@ -16,62 +16,6 @@
 
 \section{Requisiti} \label{_requisiti}
 
-%contatore dei requisiti
-\newcounter{CR} % Contatore Requisiti 
-\setcounter{CR}{0}
-\newcounter{CSR} % Contatore Sotto-Requisiti
-\setcounter{CSR}{0}
-\newcommand{\stepCR}[0]{\stepcounter{CR}\setcounter{CSR}{0}} % incrementa il contatore CR
-\newcommand{\valueCR}[0]{\arabic{CR}} % ritorna il valore del contatore CR
-\newcommand{\stepsubCR}{\stepcounter{CSR}} % incrementa il contatore CSR
-\newcommand{\valuesubCR}[0]{\arabic{CR}.\arabic{CSR}} % ritorna il valore del contatore CSR
-\newcommand{\resetCR}{\setcounter{CR}{0}\setcounter{CSR}{0}}  % resetta il contatore CR e CSR
-
-% comandi per formattare il codice dei requisiti
-\newcommand{\creazioneCodiceRequisito}[3]{\textbf{R#1#2#3}}
-\newcommand{\creazioneCodiceSottoRequisito}[3]{\textcolor{black!75}{R#1#2#3}}
-
-%comando per creare i codici dei requisiti e una lable per poi riferirsi ad esso
-\makeatletter
-\newcommand{\creazioneCodiceRequisitoConLabel}[3]{%
-  \phantomsection
-  \creazioneCodiceRequisito{#1}{#2}{#3}\def\@currentlabel{\creazioneCodiceRequisito{#1}{#2}{#3}}\label{Req#2#3}%
-}
-\makeatother
-
-% comando per creare i codici dei sottorequisiti e una lable per poi riferirsi ad esso
-\makeatletter
-\newcommand{\creazioneCodiceSottoRequisitoConLabel}[3]{%
-  \phantomsection
-  \creazioneCodiceSottoRequisito{#1}{#2}{#3}\def\@currentlabel{\creazioneCodiceSottoRequisito{#1}{#2}{#3}}\label{Req#2#3}%
-}
-\makeatother
-
-% comandi che generano automaticamente i codici dei requisiti e le relative lable
-% PARAMETRO 1: Importanza
-% PARAMETRO 2: Tipologia
-\newcommand{\req}[2]{\stepCR\creazioneCodiceRequisitoConLabel{#1}{#2}{\valueCR}}
-\newcommand{\sreq}[2]{\stepsubCR\creazioneCodiceSottoRequisitoConLabel{#1}{#2}{\valuesubCR}}
-
-% comando per riferirsi ad un requisito riportando anche il codice completo di esso
-% PARAMETRO 1: Tipologia
-% PARAMETRO 2: Codice numerico (Es: 1.2, 5, 7.1, ...)
-\newcommand{\refreqID}[2]{\ref{Req#1#2}}
-
-% comandi che generano automaticamente i riferimenti ai requisiti con il contatore
-% PARAMETRO 1: Tipologia
-\newcommand{\refreq}[1]{\stepCR\refreqID{#1}{\valueCR}}
-\newcommand{\refsreq}[1]{\stepsubCR\refreqID{#1}{\valuesubCR}}
-
-%comando per riferirsi ad uno o più User Cases che hanno la lable uguale al codice (Es: UC2.2)
-% PARAMETRO 1: Lista di User Cases separati da una virgola
-\newcommand{\refUserCase}[1]{\foreach [count=\i] \ucref in {#1}{\ifnum\i=1\hyperref[\ucref]{\ucref}\else, \hyperref[\ucref]{\ucref}\fi}}
-
-% comando per riferirsi ad una lista di requisito riportando anche i codici completi di essi
-% PARAMETRO 1: Tipologia dei requisiti riportati nella lista al parametro 2
-% PARAMETRO 2: lista dei Codici numerici dei requisiti separati da una virgola (Es: 1.2, 5, 7.1, ...)
-\newcommand{\refRequisiti}[2]{\foreach [count=\i] \reqID in {#2}{\ifnum\i=1\refreqID{#1}{\reqID}\else, \refreqID{#1}{\reqID}\fi}}
-
 \newcommand{\row}{\\ \hline}
 
 \subsection{Introduzione}
@@ -114,10 +58,10 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \sreq{2}{F} & Il cliente deve visualizzare una foto per prodotto nella PLP & \refUserCase{UC4} \row
         \sreq{3}{F} & Il cliente deve visualizzare la disponibilità/indisponibilità dei prodotti nella PLP & \refUserCase{UC4} \row
         %
-        \req{3}{F} & Il cliente deve poter ordinare la PLP & \refUserCase{UC4} \row
-        \sreq{3}{F} & Il cliente deve poter ordinare la PLP per prezzo crescente & \refUserCase{UC4} \row
-        \sreq{3}{F} & Il cliente deve poter ordinare la PLP per prezzo decrescente & \refUserCase{UC4} \row
-        \sreq{3}{F} & Il cliente deve poter ordinare la PLP per nome & \refUserCase{UC4} \row
+        \req{2}{F} & Il cliente deve poter ordinare la PLP & \refUserCase{UC4} \row
+        \sreq{2}{F} & Il cliente deve poter ordinare la PLP per prezzo crescente & \refUserCase{UC4} \row
+        \sreq{2}{F} & Il cliente deve poter ordinare la PLP per prezzo decrescente & \refUserCase{UC4} \row
+        \sreq{2}{F} & Il cliente deve poter ordinare la PLP per nome & \refUserCase{UC4} \row
         %
         \req{1}{F} & Il cliente deve poter applicare dei filtri alla PLP & \refUserCase{UC4.1} \row
         \sreq{1}{F} & Il cliente deve poter impostare un prezzo massimo & \refUserCase{UC4.1.1} \row
@@ -207,11 +151,11 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \sreq{1}{F} & Il sistema deve confermare il successo nel cambio della password & \refUserCase{UC12.5}\row        
         
         \req{1}{F} & Il cliente deve poter gestire i propri ordini & \refUserCase{UC13}\row
-        \sreq{1}{F} & Il cliente deve poter compilare il form per contattare il venditore & \refUserCase{UC13.1, UC13.2, UC13.3} \row
-        \sreq{1}{F} & Il cliente deve poter annullare un ordine &\refUserCase{UC13.1}\row
-        \sreq{1}{F} & Il cliente deve poter segnalare dei problemi nell'ordine &\refUserCase{UC13.2}\row
-        \sreq{1}{F} & Il cliente deve poter richiedere il reso dell'ordine &\refUserCase{UC13.3}\row
-        \sreq{1}{F} & Il cliente deve poter visualizzare il riepilogo di un ordine &\refUserCase{UC13.4}\row       
+        \sreq{1}{F} & Il cliente deve poter compilare un form contenente il numero del relativo ordine per contattare il venditore in caso di reso, annullamento o problemi & \refUserCase{UC13.1, UC13.2, UC13.3} \row
+        \sreq{1}{F} & Il cliente deve poter annullare un ordine & \refUserCase{UC13.1}\row
+        \sreq{1}{F} & Il cliente deve poter segnalare dei problemi nell'ordine & \refUserCase{UC13.2}\row
+        \sreq{1}{F} & Il cliente deve poter richiedere il reso dell'ordine & \refUserCase{UC13.3}\row
+        \sreq{1}{F} & Il cliente deve poter visualizzare il riepilogo di un ordine & \refUserCase{UC13.4}\row       
         
         \req{1}{F} & Il cliente loggato deve poter fare il logout & \refUserCase{UC14}\row
         \sreq{1}{F} & Il sistema deve riportare il cliente nella HomePage da utente non autenticato &\refUserCase{UC14}\row
@@ -221,7 +165,7 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \req{1}{F} & Il cliente deve poter contattare il venditore attraverso un form & \refUserCase{UC15} \row
         
         \req{1}{F} & Il venditore deve poter visualizzare e modificare la lista degli ordini effettuati dai clienti & \refUserCase{UC17} \row
-        \sreq{2}{F} & Il venditore deve poter cercare un ordine presente nel sistema & \refUserCase{UC17} \row
+        \sreq{1}{F} & Il venditore deve poter cercare un ordine presente nel sistema & \refUserCase{UC17} \row
         \sreq{2}{F} & Il venditore deve avere a disposizione dei filtri per affinare l'elenco degli ordini  & \refUserCase{UC17} \row
         \sreq{2}{F} & Il venditore deve avere a disposizione una funzionalità per ordinare gli ordini  & \refUserCase{UC17} \row
         \sreq{1}{F} & Il venditore deve poter modificare lo stato di un ordine  & \refUserCase{UC17.1} \row
@@ -250,11 +194,14 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \sreq{1}{F} & Il venditore deve poter modificare un prodotto presente nel sistema, aggiornando i campi già presenti e/o inserendone di nuovi & \refUserCase{UC20.2}  \row
         \sreq{1}{F} & Il venditore deve poter eliminare un prodotto presente nel sistema & \refUserCase{UC20.3}  \row
         \sreq{1}{F} & Il venditore deve poter selezionare i prodotti da mostrare in HomePage al cliente & Capitolato \row        
+        
         \req{1}{F} & Il venditore deve poter gestire le categorie di prodotti & \refUserCase{UC21}  \row
         \sreq{1}{F} & Il venditore deve poter aggiungere una categoria di prodotti impostandone il nome & \refUserCase{UC21.1} \row
         \sreq{1}{F} & Il venditore deve poter rimuovere una categoria di prodotti & \refUserCase{UC21.3} \row
         \sreq{1}{F} & Il venditore deve poter modificare il nome di una categoria di prodotti & \refUserCase{UC21.2} \row  
+        
         \req{1}{F} & Il venditore deve poter effettuare il login & \refUserCase{UC23} \row  
+        
         \req{1}{F} & Il venditore deve poter effettuare il logout & \refUserCase{UC22} \row
         
         \rowcolor{white}
@@ -263,7 +210,7 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
 \end{center}
 
 \resetCR
-\subsection{Requisiti di qualità}
+\subsection{Requisiti di qualità} \label{_reqQualita}
 \begin{center}
     \rowcolors{1}{lightest-grayest}{blue!20}
     \begin{longtable}{|p{3cm}|p{9.85cm}|p{2cm}|}
@@ -293,7 +240,7 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
 \end{center}
 
 \resetCR
-\subsection{Requisiti di vincolo}
+\subsection{Requisiti di vincolo} \label{_reqVincolo}
 \begin{center}
     \rowcolors{1}{lightest-grayest}{blue!20}
     \begin{longtable}{|p{3cm}|p{9.85cm}|p{2cm}|}

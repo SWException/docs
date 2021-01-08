@@ -584,7 +584,7 @@
 \item \textbf{Scenario principale:}
 \begin{enumerate}
     \item il cliente sceglie ordine da annullare;
-    \item il cliente viene portato al form di contatto;
+    \item il cliente viene portato al form di contatto dove sarà già precompilato il numero dell'ordine che si desidera annullare;
 \end{enumerate}
 \item \textbf{Inclusioni:}
 \begin{itemize}
@@ -600,11 +600,11 @@
 \item \textbf{Attore Primario:} cliente autenticato;
 \item \textbf{Descrizione:} il cliente vuole contattare il venditore per un problema (errore indirizzo, domande, etc.);
 \item \textbf{Precondizione:} il cliente deve trovarsi nella pagina della gestione degli ordini e quindi aver effettuato l'ordine;
-\item \textbf{Postcondizione:}il cliente deve aver contatto il venditore per richiedere assistenza;
+\item \textbf{Postcondizione:} il cliente deve aver contatto il venditore per richiedere assistenza;
 \item \textbf{Scenario principale:}
 \begin{enumerate}
     \item il cliente decide di contattare l'assistenza;
-    \item il cliente viene portato al form di contatto;
+    \item il cliente viene portato al form di contatto dove sarà già precompilato il numero dell'ordine al quale si desidera chiedere assistenza;
 \end{enumerate}
 \item \textbf{Inclusioni:}
 \begin{itemize}
@@ -624,7 +624,7 @@
 \item \textbf{Scenario principale:}
 \begin{enumerate}
     \item il cliente decide di effettuare un reso;
-    \item il cliente viene portato al form di contatto;
+    \item il cliente viene portato al form di contatto dove sarà già precompilato il numero dell'ordine di cui si desidera effettuare il reso;
 \end{enumerate}
 \item \textbf{Inclusioni:}
 \begin{itemize}
@@ -669,14 +669,15 @@
 \subsection{\valueUserCase - Contatta venditore} 
 \labelUserCase
 \begin{itemize}
-    \item \textbf{Attore Primario:} cliente autenticato;
+    \item \textbf{Attore Primario:} cliente generico;
     \item \textbf{Descrizione:} il cliente vuole/deve contattare il venditore attraverso il form di contatto;
-    \item \textbf{Precondizione:} il cliente deve trovarsi nella gestione degli ordini (\hyperref[UC13]{UC13});
+    \item \textbf{Precondizione:} il cliente sta navigando il sito, o arriva da \hyperref[UC13.1]{UC13.1}, \hyperref[UC13.2]{UC13.2} o \hyperref[UC13.3]{UC13.3};
     \item \textbf{Postcondizione:} il cliente riesce a contattare il venditore;
     \item \textbf{Scenario principale:}
     \begin{enumerate}
         \item il cliente ha aperto il form di contatto;
         \item il cliente compila il form;
+        \item eventualmente il cliente inserisce il numero dell'ordine a cui si vuole riferire (se non giunge da \hyperref[UC13.1]{UC13.1}, \hyperref[UC13.2]{UC13.2} o \hyperref[UC13.3]{UC13.3}, in quanto viene inserito in automatico.) ;
         \item il cliente contatta con successo il venditore.
     \end{enumerate}
 \end{itemize}
