@@ -1,7 +1,8 @@
 
 \newcounter{CTS} % Contatore Test
 \newcommand{\stepCTS}[0]{\stepcounter{CTS}} % incrementa il contatore CTS
-\newcommand{\valueCTS}[0]{\stepCTS TS\arabic{CTS}} % ritorna il valore del contatore CTS incrementato di 1
+\newcommand{\valueCTS}[0]{\stepCTS TS\arabic{CTS}\label{_TS\arabic{CTS}}} % ritorna il valore del contatore CTS incrementato di 1
+\newcommand{\refCTS}[0]{\stepCTS \hyperref[_TS\arabic{CTS}]{TS\arabic{CTS}}}
 \newcommand{\resetCTS}[0]{\setcounter{CTS}{0}}
 \resetCTS
 
@@ -252,38 +253,38 @@ La seguente tabella riporta l'associazione dei test precedentemente descritti co
 	\endlastfoot
 
 	\hline
-	\valueCTS & R1F1 \\
-	\valueCTS & R1F2 \\
-	\valueCTS & R1F3 \\
-	\valueCTS & R1F4 \\
-	\valueCTS & R1F5 \\
-	\valueCTS & R2F6 \\
-	\valueCTS & R1F7 \\
-	\valueCTS & R1F8 \\
-	\valueCTS & R1F9 \\
-	\valueCTS & R1F10 \\
+	\refCTS & R1F1 \\
+	\refCTS & R1F2 \\
+	\refCTS & R1F3 \\
+	\refCTS & R1F4 \\
+	\refCTS & R1F5 \\
+	\refCTS & R2F6 \\
+	\refCTS & R1F7 \\
+	\refCTS & R1F8 \\
+	\refCTS & R1F9 \\
+	\refCTS & R1F10 \\
 
-	\valueCTS & R1F11  \\
-	\valueCTS & R1F12 \\
-	\valueCTS & R3F13 \\
-	\valueCTS & R1F14 \\
-	\valueCTS & R1F15 \\
-	\valueCTS & R1F16 \\
-	\valueCTS & R1F17 \\
-	\valueCTS & R1F18 \\
-	\valueCTS & R1F18 \\
-	\valueCTS & R1F18 \\
+	\refCTS & R1F11  \\
+	\refCTS & R1F12 \\
+	\refCTS & R3F13 \\
+	\refCTS & R1F14 \\
+	\refCTS & R1F15 \\
+	\refCTS & R1F16 \\
+	\refCTS & R1F17 \\
+	\refCTS & R1F18 \\
+	\refCTS & R1F18 \\
+	\refCTS & R1F18 \\
 
-	\valueCTS & R1F19 \\
-	\valueCTS & R1F20 \\
-	\valueCTS & R1F21 \\
-	\valueCTS & R1F22 \\
-	\valueCTS & R1F23 \\
-	\valueCTS & R1F24 \\
-	\valueCTS & R1F25 \\
-	\valueCTS & R1F26 \\
-	\valueCTS & R1F27 \\
-	\valueCTS & R1F28 \\
+	\refCTS & R1F19 \\
+	\refCTS & R1F20 \\
+	\refCTS & R1F21 \\
+	\refCTS & R1F22 \\
+	\refCTS & R1F23 \\
+	\refCTS & R1F24 \\
+	\refCTS & R1F25 \\
+	\refCTS & R1F26 \\
+	\refCTS & R1F27 \\
+	\refCTS & R1F28 \\
 	\hline
 
 	\end{longtable}
