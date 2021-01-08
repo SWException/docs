@@ -3,52 +3,51 @@ Il capitolato C1 è stato presentato da Imola Informatica, società indipendente
 
 \subsection{Informazioni generali}
 \begin{itemize}
-	\item \textbf{Nome:} BlockCOVID - piattaforma per il monitoraggio delle presenze e delle pulizie nelle postazioni lavorative
-	\item \textbf{Proponente$_G$:} Imola Informatica
-	\item \textbf{Committente$_G$:} Prof. Tullio Vardanega e Prof. Riccardo Cardin
+	\item \textbf{Nome:} BlockCOVID - Piattaforma per il monitoraggio delle presenze e delle pulizie nelle postazioni lavorative;
+	\item \textbf{\glock{Proponente}:} Imola Informatica;
+	\item \textbf{\glock{Committente}:} Prof. Tullio Vardanega e Prof. Riccardo Cardin.
 \end{itemize}
 
 \subsection{Descrizione del capitolato}
 L'applicazione da sviluppare consiste in una piattaforma in grado di segnalare ad un server dedicato la presenza di un utente su una determinata postazione appartenente ad una stanza. \\
 In particolare la piattaforma si può suddividere in due moduli:
 \begin{itemize}
-	\item SERVER$_G$: è il componente per la gestione da admin delle impostazioni principali della piattaforma (creazione stanze, gestione postazioni e monitoraggio live)
-	\item APPLICAZIONE MOBILE$_G$: è il componente a disposizione degli utenti (dipendente/studente e utente addetto alle pulizie) del sistema, utile alla prenotazione, alla scansione e alla segnalazione in real time dello stato delle postazioni 
+	\item \glock{SERVER}: è il componente per la gestione da admin delle impostazioni principali della piattaforma (creazione stanze, gestione postazioni e monitoraggio live).
+	\item \glock{APPLICAZIONE MOBILE}: è il componente a disposizione degli utenti (dipendente/studente e utente addetto alle pulizie) del sistema, utile alla prenotazione, alla scansione e alla segnalazione in real time dello stato delle postazioni.
 \end{itemize}
 
 \subsection{Finalità del progetto}
-L'obiettivo prefissato dall'azienda proponente è quello di avere una piattaforma per il monitoraggio delle presenze all'interno di un ambiente lavorativo e/o universitario. L'ambiente sarà formato da stanze e postazioni che devono essere controllate real time da parte di due macro-tipologie di utenti (amministratore e utente). Per fare ciò si richiede lo sviluppo di un server per gestire più stanze e postazioni (admin) e di una applicazione per la prenotazione e per le informazioni più importanti realative alle postazioni (utenti).
+L'obiettivo prefissato dall'azienda proponente è quello di avere una piattaforma per il monitoraggio delle presenze all'interno di un ambiente lavorativo e/o universitario. L'ambiente sarà formato da stanze e postazioni che devono essere controllate real time da parte di due macro-tipologie di utenti (amministratore e utente). Per fare ciò si richiede lo sviluppo di un server per gestire più stanze e postazioni (admin) e di una applicazione per la prenotazione e per le informazioni più importanti relative alle postazioni (utenti).
 
 \subsection{Tecnologie interessate}
 Le tecnologie consigliate dal proponente per la realizzazione del prodotto finale sono le seguenti:
 \begin{itemize}
 	\item Backend:
-	\begin{itemize}
-		\item \verb|Java|: Java è un linguaggio di programmazione basato su classi e orientato agli oggetti progettato per avere il minor numero possibile di dipendenze di implementazione.
-		\item \verb|Python|: Python è un linguaggio di programmazione interpretato, di alto livello e generico. La filosofia di progettazione di Python enfatizza la leggibilità del codice con il suo notevole utilizzo di spazi bianchi significativi
-		\item \verb|Node.js|: Node.js è un runtime \verb|JavaScript| basato sul motore JavaScript V8 di Chrome.
-	\end{itemize}
-	\item \verb|Protocolli asincroni|: protocolli in cui la trasmissione dei dati non avviene in archi temporali prefissati ma avviene attraverso segnali intermittenti.
-	\item \verb|Blockchain|: la Blockchain è una tecnologia \verb|DLT| (Digital Ledger Technology) che sfrutta un registro distribuito tra i partecipanti ad un network per salvare e verificare dati e transazioni. La Blockchain proposta è quella di \verb|Ethereum|, una criptovaluta grazie alla quale si possono scrivere degli \verb|Smart Contract|, ossia programmi che si autoeseguono al verificarsi di determinate condizioni.
-	\item \verb|Tecnologie per il rilascio delle componenti del server|:
-	\begin{itemize}
-		\item \verb|IAAS Kubernets|: Kubernetes è un sistema di orchestrazione di contenitori open source per automatizzare la distribuzione, la scalabilità e la gestione delle applicazioni del computer.
-		\item \verb|PAAS|: Platform-As-A-Service è una categoria di servizi di cloud computing che fornisce una piattaforma che consente ai clienti di sviluppare, eseguire e gestire applicazioni senza la complessità di costruire e mantenere l'infrastruttura tipicamente associata allo sviluppo e avvio di un'app. 
-	\end{itemize}	
+	      \begin{itemize}
+		      \item \textit{Java}: è un linguaggio di programmazione basato su classi e orientato agli oggetti progettato per avere il minor numero possibile di dipendenze di implementazione.
+		      \item \textit{Python}: è un linguaggio di programmazione interpretato, di alto livello e generico. La filosofia di progettazione di Python enfatizza la leggibilità del codice con il suo notevole utilizzo di spazi bianchi significativi.
+		      \item \textit{Node.js}: è un runtime \glock{JavaScript} basato sul motore JavaScript V8 di Chrome.
+	      \end{itemize}
+	\item \textit{Protocolli asincroni}: protocolli in cui la trasmissione dei dati non avviene in archi temporali prefissati ma avviene attraverso segnali intermittenti.
+	\item \textit{Blockchain}: la Blockchain è una tecnologia \textit{DLT} (Digital Ledger Technology) che sfrutta un registro distribuito tra i partecipanti ad un network per salvare e verificare dati e transazioni. La Blockchain proposta è quella di \textit{Ethereum}, una criptovaluta grazie alla quale si possono scrivere degli \textit{Smart Contract}, ossia programmi che si autoeseguono al verificarsi di determinate condizioni.
+	\item Tecnologie per il rilascio delle componenti del server:
+	      \begin{itemize}
+		      \item \textit{IAAS Kubernets}: è un sistema di orchestrazione di contenitori open source per automatizzare la distribuzione, la scalabilità e la gestione delle applicazioni del computer.
+		      \item \textit{PAAS}: Platform-As-A-Service, è una categoria di servizi di cloud computing che fornisce una piattaforma che consente ai clienti di sviluppare, eseguire e gestire applicazioni senza la complessità di costruire e mantenere l'infrastruttura tipicamente associata allo sviluppo e avvio di un'app.
+	      \end{itemize}
 \end{itemize}
 
 \subsection{Aspetti positivi}
-I principali aspetto positivi del progetto sono l'apprendimento di tecnologie innovative come la Blockchain per la certifica dei dati e lo sviluppo di una applicazione mobile.\\
+I principali aspetti positivi del progetto sono l'apprendimento di tecnologie innovative come la Blockchain per la certificazione dei dati e lo sviluppo di un'applicazione mobile.\\
 La presentazione del capitolato è stata molto chiara e precisa, definendo fin da subito le linee guida e il funzionamento della piattaforma stessa. \\\\
-Altro aspetto positivo è la possibilità di sviluppare in parallelo un gestionale per amministratori con un'applicazione mobile per utenti.\\\\
-Infine, la possibilità di realizzare una piattaforma non solo a fine didattico ma applicabile fin da subito al mondo reale rendere è sicuramente un punto di forza del capitolato. I temi trattati sono attuali e la realizzazione richiederebbe un ottimo coordinamento data l'architettura richiesta.
-
+Altro aspetto positivo è la possibilità di sviluppare in parallelo un gestionale per gli amministratori ed un'applicazione mobile per gli utenti.\\\\
+La possibilità di realizzare una piattaforma, non solo a fine didattico ma applicabile fin da subito al mondo reale, è sicuramente un punto di forza del capitolato. Infine, i temi trattati sono attuali e la realizzazione richiederebbe un ottimo coordinamento data l'architettura richiesta.
 
 \subsection{Criticità e fattori di rischio}
 La criticità più grande per questo capitolato è la coordinazione da parte del gruppo delle varie parti che compongono il progetto. La difficoltà nello sviluppo del gestionale completo richiede un'ottima comunicazione. \\
 Altro possibile fattore di rischio è la necessità di approfondire diverse tecnologie da integrare in maniera omogenea nella stessa piattaforma.
 
 \subsection{Conclusioni}
-Il capitolato in questione ha sicuramente attirato l'attenzione del gruppo data l'attualità del progetto e le tecnologie da utilizzare. E' stato fin da subito uno dei capitolati presi in considerazione dal gruppo ma alla fine, dopo un'attenta analisi, la scelta è ricaduta sul capitalo C2. 
+Il capitolato in questione ha sicuramente attirato l'attenzione del gruppo data l'attualità del progetto e le tecnologie da utilizzare. È stato fin da subito uno dei capitolati presi in considerazione dal gruppo, ma alla fine, dopo un'attenta analisi, la scelta è ricaduta su un capitolato in cui la concorrenza con altri gruppi era inferiore.
 
 \newpage

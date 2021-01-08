@@ -12,3 +12,4 @@
 *.orig
 *.glsdefs
 *.vs
+.vscode/*

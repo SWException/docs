@@ -3,41 +3,39 @@ Il capitolato C3 è stato presentato dall'azienda SyncLab che ha 5 sedi diffuse 
 
 \subsection{Informazioni generali}
 \begin{itemize}
-    \item \textbf{Nome:} GDP - Gathering Detection Platform
-    \item \textbf{Proponente:} SyncLab
-    \item \textbf{Committente:} Prof. Tullio Vardanega e Prof. Riccardo Cardin
+    \item \textbf{Nome:} GDP - Gathering Detection Platform;
+    \item \textbf{Proponente:} SyncLab;
+    \item \textbf{Committente:} Prof. Tullio Vardanega e Prof. Riccardo Cardin.
 \end{itemize}
 
 \subsection{Descrizione del capitolato}
-L'applicazione da sviluppare consiste in una piattaforma che permetta di analizzare dei dati in ingresso e visualizzarli su una heatmap. L'applicazione deve acquisire informazioni riguardanti la presenza di un certo numero di persone in un luogo attraverso vari sensori o sorgenti di vario tipo (come telecamere, conta persone, trasporti pubblici con capienze medie per corsa, …), permettere di visualizzare i dati in una mappa in tempo reale, e deve poter fare previsioni sulla situazione futura attraverso algoritmi di machine learning. Inoltre deve essere in grado di mantenere uno storico dei dati per poterli eventualmente analizzare in futuro.
+L'applicazione da sviluppare consiste in una piattaforma che permetta di analizzare dei dati in ingresso e visualizzarli su una heatmap. L'applicazione deve acquisire informazioni riguardanti la presenza di un certo numero di persone in un luogo attraverso sensori o sorgenti di vario tipo (come telecamere, conta persone, trasporti pubblici con capienze medie per corsa, …), permettere di visualizzare i dati in una mappa in tempo reale e deve poter fare previsioni sulla situazione futura attraverso algoritmi di machine learning. Inoltre deve essere in grado di mantenere uno storico dei dati per poterli eventualmente analizzare in futuro.\\
+Oltre ai requisiti richiesti è fatta espressamente richiesta di soddisfare i seguenti vincoli:
+\begin{itemize}
+    \item implementare test con copertura $\geq 80\%$;
+    \item avere in documentazione i motivi delle scelte implementative e progettuali effettuate;
+    \item avere in documentazione i problemi ancora aperti, ed eventuali soluzioni proposte per essi.
+\end{itemize}
+Il proponente non impone tecnologie specifiche, ma ne raccomanda fortemente l’utilizzo di alcune.
 
 \subsection{Finalità del progetto}
 L'obbiettivo è avere una piattaforma che permetta attraverso l'iterazione con la mappa di riconoscere degli assembramenti e prevederne la formazione futura in una certa zona.
 
-\subsection{Vincoli}
-Oltre ai requisiti richiesti è fatta espressamente richiesta di aver soddisfatto i seguenti vincoli:
-\begin{itemize}
-    \item Implementare test con copertura >=80
-    \item Avere in documentazione i motivi delle scelte implementative e progettuali effettuate
-    \item Avere in documentazione i problemi ancora aperti, ed eventuali soluzioni proposte per essi
-    Il proponente non impone tecnologie specifiche, ma ne raccomanda fortemente l’utilizzo di alcune.
-\end{itemize}
-
 \subsection{Tecnologie interessate}
 Le tecnologie fortemente richieste dal proponente per la realizzazione del prodotto finale sono le seguenti:
 \begin{itemize}
-    \item \verb|Java|: è un linguaggio di programmazione ad alto livello, orientato agli oggetti, che si appoggia sull'omonima piattaforma software di esecuzione, specificamente progettato per essere il più possibile indipendente dalla piattaforma hardware di esecuzione.
-    \item \verb|Angular|: è un framework open source per lo sviluppo di applicazioni web, e il linguaggio di programmazione usato è TypeScript. È stato progettato per fornire uno strumento facile e veloce per sviluppare applicazioni che girano su qualunque piattaforma inclusi smartphone e tablet.
-    \item \verb|Leaflet|: è una libreria JavaScript open source utilizzata per creare delle applicazioni web che utilizzino delle mappe interattive. Permette sovrapporre ad esse degli elementi, potendo creare ad esempio una heatmap.
-    \item \verb|Pattern Publisher/Subscriber|: è un design pattern utilizzato per la comunicazione asincrona fra diversi processi, oggetti o altri agenti, e consiste nel creare un intermediario tra mittenti e destinatari.
-    \item \verb|Protocollo MQTT|: è un protocollo ISO standard (ISO/IEC PRF 20922) di messaggistica leggera di tipo Publisher/Subscriber. È stato progettato per le situazioni in cui è richiesto un basso impatto e dove la banda è limitata.
-    \item \verb|Apache Kafka|: è una piattaforma open source di stream processing. Mira a creare una piattaforma a bassa latenza ed alta velocità per la gestione di feed dati in tempo reale.
+    \item \textit{Java}: è un linguaggio di programmazione ad alto livello, orientato agli oggetti, che si appoggia sull'omonima piattaforma software di esecuzione, specificamente progettato per essere il più possibile indipendente dalla piattaforma hardware di esecuzione.
+    \item \textit{Angular}: è un framework open source per lo sviluppo di applicazioni web, e il linguaggio di programmazione usato è TypeScript. È stato progettato per fornire uno strumento facile e veloce per sviluppare applicazioni che girano su qualunque piattaforma inclusi smartphone e tablet.
+    \item \textit{Leaflet}: è una libreria JavaScript open source utilizzata per creare delle applicazioni web che utilizzino delle mappe interattive. Permette di sovrapporre ad esse degli elementi, potendo creare ad esempio una heatmap.
+    \item \textit{Pattern Publisher/Subscriber}: è un design pattern utilizzato per la comunicazione asincrona fra diversi processi, oggetti o altri agenti, e consiste nel creare un intermediario tra mittenti e destinatari.
+    \item \textit{Protocollo MQTT}: è un protocollo ISO standard (ISO/IEC PRF 20922) di messaggistica leggera di tipo Publisher/Subscriber. È stato progettato per le situazioni in cui è richiesto un basso impatto e dove la banda è limitata.
+    \item \textit{Apache Kafka}: è una piattaforma open source di stream processing. Mira a creare una piattaforma a bassa latenza ed alta velocità per la gestione di feed dati in tempo reale.
 \end{itemize}
 
 \subsection{Aspetti positivi}
 \begin{itemize}
     \item L’utilizzo delle tecnologie consigliate sono un ottima opportunità di formazione per il gruppo.
-    \item La realizzazione di un progetto software che faccia uso di machine learning è abbastanza accattivante in quanto essa è una tecnologia molto attuale, e il suo utilizzo in un progetto potrà essere utile in un futuro nell’entrare nel mondo del lavoro.
+    \item La realizzazione di un progetto software che faccia uso di machine learning è abbastanza accattivante in quanto essa è una tecnologia molto attuale, e il suo utilizzo in un progetto potrà essere utile in futuro nell’entrare nel mondo del lavoro.
 \end{itemize}
 
 \subsection{Criticità e fattori di rischio}
@@ -48,4 +46,4 @@ Le tecnologie fortemente richieste dal proponente per la realizzazione del prodo
 \end{itemize}
 
 \subsection{Conclusioni}
-Il capitolato proposto, pur avendo inizialmente attirato l'attenzione dei componenti del gruppo, dopo un'attenta analisi, il seminario proposto dal proponente, e la valutazione delle conoscenze attualmente in possesso che il progetto necessita, richiede secondo il team un'eccessiva mole di lavoro.
+Il capitolato proposto, pur avendo inizialmente attirato l'attenzione dei componenti del gruppo, dopo un'attenta analisi, il seminario proposto dal proponente e la valutazione delle conoscenze attualmente in possesso che il progetto necessita, richiede secondo il team un'eccessiva mole di lavoro.
