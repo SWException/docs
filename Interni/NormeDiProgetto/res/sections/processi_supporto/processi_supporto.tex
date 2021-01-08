@@ -1,12 +1,5 @@
 \section{Processi supporto}
 \subsection{Documentazione} \label{_processoDiDocumentazione}
-%aggiunto da @michele creando lo scheletro
-% \subsubsection{Modalità}
-% Il team ha deciso di eseguire la stesura della documentazione grazie l'ausilio di latex. Abbiamo optato per l'utilizzo in locale da parte di ogni membro dell'editor Texmaker v5.0.4 e come compilatore TexLive 2020.
-% \subsubsection{Compilazione}
-% Per la compilazione di un qualsiasi documento del progetto è necessario aprire tramite Texmaker il file main.tex della documentazione che si vuole produrre. Successivamente, assicurandosi che il menu a tendina relativo al compilatore da usare sia settato a "Compilazione rapida", tramite lo shortcut F1 (su piattaforme Windows e Linux) si procede alla compilazione di tutto il documento.
-% \subsubsection{Tipologie}
-% Ogni documento ha un preciso ruolo all'interno della documentazione. È però necessario suddividerli in aree distinte:
 
 \subsubsection{Scopo}
 In questo capitolo ci occuperemo di illustrare tutte le regole e gli standard che disciplinano la documentazione. Questo permetterà che ogni documento risulti coerente dal punto di vista grafico e organizzativo.
@@ -593,23 +586,24 @@ I requisiti devono rispettare le proprietà di:
     \item \textbf{Atomicità}: un requisito non deve essere divisibile.
 \end{itemize}
 
-% \subsubsection{Test}
-% I test costituiscono l'attività fondamentale dell'analisi dinamica: permettono di individuare i bug e di dimostrare che l'applicativo sviluppato è conforme rispetto a tutti i requisiti concordati nell'\dext{analisi dei requisiti}.\\
-% Verranno implementati tipi di test descritti di seguito, ognuno con uno scopo diverso e con un oggetto di verifica differente.
-% \paragraph{Test di unità}
-% Consiste nel testare la partizione più piccola di software: l'unità. Il corretto funzionamento di ogni unità deve essere testato prima di procedere alla sua integrazione.
+\subsubsection{Test}
+I test costituiscono l'attività fondamentale dell'analisi dinamica: permettono di individuare i bug e di dimostrare che l'applicativo sviluppato è conforme rispetto a tutti i requisiti concordati nell'\dext{analisi dei requisiti}.\\
+Verranno implementati tipi di test descritti di seguito, ognuno con uno scopo diverso e con un oggetto di verifica differente.
+\paragraph{Test di unità}
+Consiste nel testare la partizione più piccola di software: l'unità. Il corretto funzionamento di ogni unità deve essere testato prima di procedere alla sua integrazione.
+Verranno normati e implementati durante il processo di codifica.
 
-% \paragraph{Test di integrazione}
-% Necessari per testare che le diverse unità si interfaccino correttamente: questo tipo di test è eseguito in maniera ricorsiva: ogni volta che un gruppo di unità esegue in maniera corretta questo viene testato unendolo ad un altro gruppo di unità via via più grande fino ad arrivare al test di sistema.
+\paragraph{Test di integrazione}
+Necessari per testare che le diverse unità si interfaccino correttamente: questo tipo di test è eseguito in maniera ricorsiva: ogni volta che un gruppo di unità esegue in maniera corretta questo viene testato unendolo ad un altro gruppo di unità via via più grande fino ad arrivare al test di sistema.
+Verranno normati e considerati nel processo di progettazione.
 
-% \paragraph{Test di sistema}
-% Dopo che tutte le unità sono state testate ed è stata testata la loro integrazione viene eseguito il test dell'intero sistema. In questa fase si verifica che tutte le componenti interagiscano nel modo atteso e che l'applicazione soddisfi ciò che è stato definito nell'\dext{analisi dei requisiti}.
+\paragraph{Test di sistema}
+Dopo che tutte le unità sono state testate ed è stata testata la loro integrazione viene eseguito il test dell'intero sistema. In questa fase si verifica che tutte le componenti interagiscano nel modo atteso e che l'applicazione soddisfi ciò che è stato definito nell'\dext{analisi dei requisiti}.
+I test di sistema dell'applicazione EmporioLambda saranno implementati con \glock{Selenium} e sono stati definiti nel \dext{Piano di qualifica v1.0.0} durante il processo di analisi dei requisiti.
 
-% \paragraph{Test di regressione}
-% Quando una o più unità vengono modificate si esegue questa tipologia di test che serve per accertarsi che le funzionalità precedentemente implementate e testate non siano state danneggiate dai cambiamenti apportati al software.
+\paragraph{Test di regressione}
+Quando una o più unità vengono modificate si esegue questa tipologia di test che serve per accertarsi che le funzionalità precedentemente implementate e testate non siano state danneggiate dai cambiamenti apportati al software.
 
-% \subsubsection{Procedimento di verifica del codice}
-% \subsubsection{Strumenti}
 
 \subsection{Validazione}
 \label{_validazione}
