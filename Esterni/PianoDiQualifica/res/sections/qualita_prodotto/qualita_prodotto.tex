@@ -7,9 +7,8 @@ I documenti vengono rilasciati durante tutto lo sviluppo del progetto e sono ad 
 \subsubsection{Metriche}
 
  
-    \paragraph{\glock{Indice di Gulpease}}
+    \paragraph{MPD-D1: \glock{Indice di Gulpease} (GULP)}
 \begin{itemize}
-\item \textbf{Codice:} MPD-D1;
 \item \textbf{Formula:} \[\textit{Indice Gulpease} = \frac{\textit{300 * (numero delle frasi) - 10 * (numero delle lettere)}}{\textit{(numero delle parole)}}\]
 \item \textbf{Valori:}
     \begin{itemize}
@@ -20,9 +19,8 @@ I documenti vengono rilasciati durante tutto lo sviluppo del progetto e sono ad 
    
 \end{itemize}
 
-\paragraph{Correttezza ortografica}
+\paragraph{MPD-D2: Correttezza ortografica (CORT)}
 \begin{itemize}
-    \item \textbf{Codice:} MPD-D2;
     \item  \textbf{Range di valori accettabili:} 0
 \end{itemize}
 
@@ -51,43 +49,31 @@ Per la valutazione qualitativa del codice prodotto si considerano le seguenti me
     \item \glock{code coverage}.
 \end{itemize}
 
-\paragraph{Complessità ciclomatica}
+\paragraph{MPD-S1: Complessità ciclomatica (COCI)}
 \begin{itemize}
-    \item \textbf{Codice:} MPD-S1;
-    \item \textbf{Attributo di riferimento:} valore ritornato dal processo automatizzato di analisi statica del codice, il quale includerà l'analisi della complessità ciclomatica;
     \item \textbf{Formula:} \[ v(G)=e-n+2\cdot p \]
-    \item \textbf{Range di valori che può assumere:} $\{x \in \mathbb{N} \}$;
     \item \textbf{Range di valori accettabili:} per mantenere una buona qualità del software è necessario che il valore di questa metrica non superi
     10 per ogni modulo.
 \end{itemize}
 
-\paragraph{Complessità espressioni booleane}
+\paragraph{MPD-S2: Complessità espressioni booleane (COEB)}
 \begin{itemize}
-    \item \textbf{Codice:} MPD-S2;
-    \item \textbf{Attributo di riferimento:} valore ritornato dal processo automatizzato di analisi statica del codice, il quale includerà l'analisi della complessità delle espressioni booleane;
     \item \textbf{Formula:} si contano il numero di operatori logici presenti all'interno di una singola espressione;
     \item \textbf{Range di valori che può assumere:} $\{x \in \mathbb{N} \}$;
     \item \textbf{Range di valori accettabili:} per mantenere una buona qualità del software è necessario che il valore di questa metrica non superi
     3 per ogni espressione presente nel codice.
 \end{itemize}
 
-\paragraph{Lunghezza delle righe di codice}
+\paragraph{MPD-S3: Lunghezza delle righe di codice (LRC)}
 \begin{itemize}
-    \item \textbf{Codice:} MPD-S3;
-    \item \textbf{Attributo di riferimento:} valore ritornato dal processo automatizzato di analisi statica del codice, il quale includerà un report sulla lunghezza delle righe di codice
-                                            (ovvero segnala quando una o più righe superano la lunghezza massima);
-    \item \textbf{Formula:} si contano il numero di caratteri presenti su una singola riga di codice;
-    \item \textbf{Range di valori che può assumere:} $\{x \in \mathbb{N}_0 \}$;
+
     \item \textbf{Range di valori accettabili:} per mantenere una buona qualità del software è necessario che il valore di questa metrica non superi
     80 per ogni riga di codice.
 \end{itemize}
 
-\paragraph{Code coverage}
+\paragraph{MPD-S4: Code coverage (CODCO}
 \begin{itemize}
-    \item \textbf{Codice:} MPD-S4;
-    \item \textbf{Attributo di riferimento:} valore ritornato dal processo automatizzato di analisi statica del codice, il quale includerà un report sulla percentuale di righe di codice coperte dai test;
     \item \textbf{Formula:} $\frac{righe \ coperte}{righe \ totali} \cdot 100$;
-    \item \textbf{Range di valori che può assumere:} $\{0 \leq x \leq 100 \}$;
     \item \textbf{Range di valori accettabili:} si punta ad una code coverage di almeno $80\%$;
     \item \textbf{Range di valori ottimali:} l'ideale sarebbe una coverage del $100\%$.
 \end{itemize}
@@ -95,12 +81,9 @@ Per la valutazione qualitativa del codice prodotto si considerano le seguenti me
 
 \subsubsection{Metriche esterne}
 
-\paragraph{Affidabilità - Maturità dei test}
-Per \textit{affidabilità} si intende la capacità del prodotto software di avere un adeguato livello di affidabilità quando opererà.
+\paragraph{MPD-S5: Maturità dei test (MATE)}
 
 \begin{itemize}
-    \item \textbf{Codice:}  MPD-S5
-    \item \textbf{Attributo di riferimento:} Maturità;
     \item \textbf{Range di valori accettabili:}
     \begin{itemize}
         \item \textbf{Accettabile:} 100%
@@ -109,12 +92,9 @@ Per \textit{affidabilità} si intende la capacità del prodotto software di aver
 \end{itemize}
 
 
-\paragraph{Usabilità - Profondità strutturale dell'interfaccia}
-Per \textit{usabilità} si intende la capacità del prodotto software di essere comprensibile, di poter essere usato facilmente in ogni sua parte da qualsiasi utente.
+\paragraph{MPD-S6: Profondità strutturale dell'interfaccia (PSI)}
 
 \begin{itemize}
-    \item \textbf{Codice:} MPD-S6
-    \item \textbf{Attributo di riferimento:} Operabilità;
     \item \textbf{Range di valori accettabili:} 
      \begin{itemize}
         \item \textbf{Accettabile:} $1 \leq PSI \leq 5$ 
