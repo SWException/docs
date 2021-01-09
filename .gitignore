@@ -11,7 +11,7 @@
 *.fdb_latexmk
 *.orig
 *.glsdefs
-*.synctex(busy)
+*.synctex*
 .vscode/*
 *.lof
 *.lot
