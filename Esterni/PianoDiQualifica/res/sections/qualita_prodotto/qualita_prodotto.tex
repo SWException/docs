@@ -6,17 +6,14 @@ I documenti vengono rilasciati durante tutto lo sviluppo del progetto e sono ad 
 
 \subsubsection{Metriche}
 
- 
-    \paragraph{MPD-D1: \glock{Indice di Gulpease} (GULP)}
+\paragraph{MPD-D1: \glock{Indice di Gulpease} (GULP)}
 \begin{itemize}
-\item \textbf{Formula:} \[\textit{Indice Gulpease} = \frac{\textit{300 * (numero delle frasi) - 10 * (numero delle lettere)}}{\textit{(numero delle parole)}}\]
-\item \textbf{Valori:}
-    \begin{itemize}
-        \item \textbf{Accettabile:} $40 \leq$ Indice Gulpease $\leq 10$
-        \item \textbf{Otimale:} $80 \leq$ Indice Gulpease $\leq 100$
-    \end{itemize}
-
-   
+    \item \textbf{Formula:} \[\textit{Indice Gulpease} = \frac{\textit{300 * (numero delle frasi) - 10 * (numero delle lettere)}}{\textit{(numero delle parole)}}\]
+    \item \textbf{Valori:}
+          \begin{itemize}
+              \item \textbf{Accettabile:} $40 \leq Indice Gulpease \leq 100$
+              \item \textbf{Otimale:} $80 \leq Indice Gulpease \leq 100$
+          \end{itemize}
 \end{itemize}
 
 \paragraph{MPD-D2: Correttezza ortografica (CORT)}
@@ -32,15 +29,12 @@ I documenti vengono rilasciati durante tutto lo sviluppo del progetto e sono ad 
 
 \subsection{Software} \label{_metricheQualitaCodice}
 La verifica della qualità del software è effettuata mediante le metriche individuate di seguito che sono suddivise in:
-
 \begin{itemize}
     \item \textbf{Metriche interne:} permettono di valutare il comportamento del software dal lato dello sviluppatore;
     \item \textbf{Metriche esterne:} permettono di valutare il comportamento del software dal punto di vista dell'utente.
 \end{itemize}
 
-
 \subsubsection{Metriche interne}
-
 Per la valutazione qualitativa del codice prodotto si considerano le seguenti metriche interne:
 \begin{itemize}
     \item \glock{complessità ciclomatica};
@@ -53,7 +47,7 @@ Per la valutazione qualitativa del codice prodotto si considerano le seguenti me
 \begin{itemize}
     \item \textbf{Formula:} \[ v(G)=e-n+2\cdot p \]
     \item \textbf{Range di valori accettabili:} per mantenere una buona qualità del software è necessario che il valore di questa metrica non superi
-    10 per ogni modulo.
+          10 per ogni modulo.
 \end{itemize}
 
 \paragraph{MPD-S2: Complessità espressioni booleane (COEB)}
@@ -61,14 +55,13 @@ Per la valutazione qualitativa del codice prodotto si considerano le seguenti me
     \item \textbf{Formula:} si contano il numero di operatori logici presenti all'interno di una singola espressione;
     \item \textbf{Range di valori che può assumere:} $\{x \in \mathbb{N} \}$;
     \item \textbf{Range di valori accettabili:} per mantenere una buona qualità del software è necessario che il valore di questa metrica non superi
-    3 per ogni espressione presente nel codice.
+          3 per ogni espressione presente nel codice.
 \end{itemize}
 
 \paragraph{MPD-S3: Lunghezza delle righe di codice (LRC)}
 \begin{itemize}
-
     \item \textbf{Range di valori accettabili:} per mantenere una buona qualità del software è necessario che il valore di questa metrica non superi
-    80 per ogni riga di codice.
+          80 per ogni riga di codice.
 \end{itemize}
 
 \paragraph{MPD-S4: Code coverage (CODCO}
@@ -78,28 +71,22 @@ Per la valutazione qualitativa del codice prodotto si considerano le seguenti me
     \item \textbf{Range di valori ottimali:} l'ideale sarebbe una coverage del $100\%$.
 \end{itemize}
 
-
 \subsubsection{Metriche esterne}
 
 \paragraph{MPD-S5: Maturità dei test (MATE)}
-
 \begin{itemize}
     \item \textbf{Range di valori accettabili:}
-    \begin{itemize}
-        \item \textbf{Accettabile:} 100%
-       
-    \end{itemize}
+          \begin{itemize}
+              \item \textbf{Accettabile:} 100%
+          \end{itemize}
 \end{itemize}
 
-
 \paragraph{MPD-S6: Profondità strutturale dell'interfaccia (PSI)}
-
 \begin{itemize}
-    \item \textbf{Range di valori accettabili:} 
-     \begin{itemize}
-        \item \textbf{Accettabile:} $1 \leq PSI \leq 5$ 
-        \item \textbf{Ottimale:} $1 \leq PSI \leq 3$
-        
-    \end{itemize}
+    \item \textbf{Range di valori accettabili:}
+          \begin{itemize}
+              \item \textbf{Accettabile:} $1 \leq PSI \leq 5$
+              \item \textbf{Ottimale:} $1 \leq PSI \leq 3$
+          \end{itemize}
 \end{itemize}
 
