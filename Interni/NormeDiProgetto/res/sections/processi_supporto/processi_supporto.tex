@@ -3,6 +3,7 @@
 
 \subsubsection{Scopo}
 In questo capitolo ci occuperemo di illustrare tutte le regole e gli standard che disciplinano la documentazione. Questo permetterà che ogni documento risulti coerente dal punto di vista grafico e organizzativo.
+
 \subsubsection{Descrizione}
 Le prossime sezioni illustreranno nei dettagli le norme per la redazione di ogni documento.
 Le regole di seguito riportate devo essere seguite da tutti i membri del gruppo durante tutte le fasi di lavoro.
@@ -13,21 +14,21 @@ Il team si aspetta che questo processo porti a una redazione ottimale della docu
 \subsubsection{Ciclo di vita}
 Ogni documento può trovarsi in 3 stati diversi nel suo ciclo di vita:
 \begin{itemize}
-    \item\textbf{Redazione}: si tratta della vera e propria creazione del documento, il quale deve rispettare tutte le norme imposte in questo documento, partendo dalla struttura del template alla modalità di scrittura. Verranno incaricati dei \glock{redattori} che si occuperanno di questo compito;
-    \item\textbf{Verifica}: in questo stato vengono assegnati dei \glock{verificatori} che hanno il compito di controllare che il lavoro fatto dai redattori sia coerente con le norme e gli obiettivi riguardanti la tipologia di documento redatto. I verificatori hanno inoltre il compito di riferire ai redattori le eventuali modifiche da apportare;
-    \item\textbf{Approvazione}:il \glock{responsabile di progetto} deve approvare il documento inviatogli con esito positivo dai verificatori e procedere al rilascio di esso.
+    \item\textbf{redazione}: si tratta della vera e propria creazione del documento, il quale deve rispettare tutte le norme imposte in questo documento, partendo dalla struttura del template alla modalità di scrittura. Verranno incaricati dei \glock{redattori} che si occuperanno di questo compito;
+    \item\textbf{verifica}: in questo stato vengono assegnati dei \glock{verificatori} che hanno il compito di controllare che il lavoro fatto dai redattori sia coerente con le norme e gli obiettivi riguardanti la tipologia di documento redatto. I verificatori hanno inoltre il compito di riferire ai redattori le eventuali modifiche da apportare;
+    \item\textbf{approvazione}: il \glock{responsabile di progetto} deve approvare il documento inviatogli con esito positivo dai verificatori e procedere al rilascio di esso.
 \end{itemize}
 
 \subsubsection{Classificazione dei documenti}
 I documenti prodotti dal team sono di due tipologie:
 \begin{itemize}
-    \item \textbf{Formali}: sono tutti quei documenti che richiedo la verifica e l'approvazione da parte del responsabile di progetto;
-    \item\textbf{Informali}: sono quelli che permettono ai membri del gruppo di condividere informazioni sulle decisioni prese.
+    \item \textbf{formali}: sono tutti quei documenti che richiedo la verifica e l'approvazione da parte del responsabile di progetto;
+    \item \textbf{informali}: sono quelli che permettono ai membri del gruppo di condividere informazioni sulle decisioni prese.
 \end{itemize}
 I documenti formali e informali sono a loro volta suddivisi in:
 \begin{itemize}
-    \item\textbf{Interni}
-    \item\textbf{Esterni}
+    \item\textbf{interni}
+    \item\textbf{esterni}
 \end{itemize}
 
 \paragraph{Documenti formali}
@@ -64,15 +65,15 @@ Per la stesura della documentazione il team ha deciso di utilizzare \glock{LATEX
 Ogni directory di un determinato documento contiene un file chiamato \textbf{"main.tex"} che ha il compito di raggruppare tutte le sezioni ed i comandi necessari per la compilazione.\\
 All'interno della cartella \textit{res} sono presenti i seguenti file:
 \begin{itemize}
-	\item \textbf{"configurazione.tex"}: dirige l'importazione dei \glock{pacchetti};
-	\item \textbf{"frontespizio.tex"}: viene gestita l'impostazione di tutte le informazioni principali del documento;
-	\item \textbf{"registro.tex"}:gestiste la tabella delle modifiche, con l'inserimento del versionamento;
-	\item \textbf{"sezioni.tex"}:controlla la gestione delle sezioni del documento.
+    \item \textbf{"configurazione.tex"}: dirige l'importazione dei \glock{pacchetti};
+    \item \textbf{"frontespizio.tex"}: viene gestita l'impostazione di tutte le informazioni principali del documento;
+    \item \textbf{"registro.tex"}: gestiste la tabella delle modifiche, con l'inserimento del versionamento;
+    \item \textbf{"sezioni.tex"}: controlla la gestione delle sezioni del documento.
 \end{itemize}
 Inoltre si trovano all'interno della \textit{res}, per quanto riguarda la documentazione formale, altre due directory :
 \begin{itemize}
-	\item \textbf{images}: contiene le immagini da inserire;
-	\item\textbf{sections}: contiene le varie sezioni del contenuto del documento.
+    \item \textbf{images}: contiene le immagini da inserire;
+    \item\textbf{sections}: contiene le varie sezioni del contenuto del documento.
 \end{itemize}
 
 \subparagraph{Frontespizio}
@@ -80,24 +81,24 @@ Come già anticipato, il frontespizio permette di illustrare tutti i dati princi
 Sono sempre presenti il logo, il nome del gruppo ed il titolo del documento.
 Le informazioni sono così impostate:
 \begin{itemize}
-	\item\textbf{Versione}: indica la versione attuale del documento;
-	\item\textbf{Uso}: indica l'utilità del documento, può essere "interno" o "esterno";
-	\item\textbf{Stato}: indica lo stato in cui si trova il documento, può essere "in redazione" o "approvato";
-	\item\textbf{Destinatari}: indica a chi è destinato il documento;
-	\item\textbf{Redattori}: riporta i nomi di chi ha provveduto alla redazione;
-	\item\textbf{Verificatori}: riporta chi ha verificato il documento in questione;
-	\item\textbf{Approvazione}: riporta il nome del responsabile di progetto che ha approvato il documento.
+    \item\textbf{Versione}: indica la versione attuale del documento;
+    \item\textbf{Uso}: indica l'utilità del documento, può essere "interno" o "esterno";
+    \item\textbf{Stato}: indica lo stato in cui si trova il documento, può essere "in redazione" o "approvato";
+    \item\textbf{Destinatari}: indica a chi è destinato il documento;
+    \item\textbf{Redattori}: riporta i nomi di chi ha provveduto alla redazione;
+    \item\textbf{Verificatori}: riporta chi ha verificato il documento in questione;
+    \item\textbf{Approvazione}: riporta il nome del responsabile di progetto che ha approvato il documento.
 \end{itemize}
 
 \subparagraph{Registro delle modifiche}
 Questo registro permette di tracciare attraverso una rappresentazione tabellare tutte le modifiche che sono state apportate al documento. \\
 Per ogni cambiamento la tabella riporta:
 \begin{itemize}
-	\item\textbf{Versione}: indica la versione del documento relativa alla modifica;
-	\item\textbf{Descrizione}: illustra brevemente il cambiamento apportato;
-	\item\textbf{Data}: giorno in cui la modifica è stata effettuata;
-	\item\textbf{Autore}: chi ha fatto la modifica;
-	\item\textbf{Ruolo}: il ruolo di chi ha effettuato la modifica.
+    \item\textbf{Versione}: indica la versione del documento relativa alla modifica;
+    \item\textbf{Descrizione}: illustra brevemente il cambiamento apportato;
+    \item\textbf{Data}: giorno in cui la modifica è stata effettuata;
+    \item\textbf{Autore}: chi ha fatto la modifica;
+    \item\textbf{Ruolo}: il ruolo di chi ha effettuato la modifica.
 \end{itemize}
 
 \subparagraph{Indice}
@@ -107,10 +108,10 @@ Esso si presenta con una classica struttura gerarchica, infatti sono riportate t
 \subparagraph{Contenuto principale}
 La formattazione del contenuto principale delle pagine della documentazione è così stilato:
 \begin{itemize}
-	\item A sinistra in alto è presente il nome del documento e la sua versione;
-	\item A destra il capitolo in cui ci si trova;
-	\item Segue tutto il corpo del documento;
-	\item Nel piè di pagina è indicato il numero della pagina attuale su il numero totale delle pagine del documento in questione. 
+    \item a sinistra in alto è presente il nome del documento e la sua versione;
+    \item a destra il capitolo in cui ci si trova;
+    \item segue tutto il corpo del documento;
+    \item nel piè di pagina è indicato il numero della pagina attuale su il numero totale delle pagine del documento in questione.
 \end{itemize}
 
 \paragraph{Glossario}
@@ -118,17 +119,17 @@ Il glossario permette di fornire una spiegazione funzionale per tutti quei termi
 Per la sua struttura si è deciso di adottare un ordine lessicografico.\\
 Ulteriori informazioni sono riportante in seguito nel paragrafo \textit{Termini di glossario}.
 
-\paragraph{Struttura dei verbali} 
+\paragraph{Struttura dei verbali}
 I verbali presentano una struttura simile a quella dei documenti formali, però il file e la cartella \textit{sections} sono sostituiti da \textbf{"contenuto.tex"} che svolge la stessa funzione, ossia incorporare il corpo del documento.\\
 Inoltre è presente il file \textbf{"tracciamento.tex"}, il quale permette di riportare l'elenco delle decisioni.\\
 Le informazioni che presenta il frontespizio dei verbali sono:
 \begin{itemize}
-	\item\textbf{Versione}: indica la versione attuale del documento;
-	\item\textbf{Uso}: indica l'utilità del documento, può essere "interno" o "esterno";
-	\item\textbf{Stato}: indica lo stato in cui si trova il documento, può essere "in redazione" o "approvato";
-	\item\textbf{Redattori}: riporta i nomi di chi ha provveduto alla redazione;
-	\item\textbf{Verificatori}: riporta chi ha verificato il documento in questione;
-	\item\textbf{Approvazione}: riporta il nome del responsabile di progetto che ha approvato il documento.
+    \item\textbf{Versione}: indica la versione attuale del documento;
+    \item\textbf{Uso}: indica l'utilità del documento, può essere "interno" o "esterno";
+    \item\textbf{Stato}: indica lo stato in cui si trova il documento, può essere "in redazione" o "approvato";
+    \item\textbf{Redattori}: riporta i nomi di chi ha provveduto alla redazione;
+    \item\textbf{Verificatori}: riporta chi ha verificato il documento in questione;
+    \item\textbf{Approvazione}: riporta il nome del responsabile di progetto che ha approvato il documento.
 \end{itemize}
 Come per gli altri documenti è presente anche il logo del team e il titolo del documento.\\
 Nella prima pagina del corpo del verbale vengono inserite le seguenti specifiche:
@@ -143,11 +144,11 @@ Alla fine del documento è inserita una tabella per il tracciamento delle decisi
 Il codice identificativo è riportato seguendo la seguente dicitura \textbf{VX\_Y.Z}, dove:
 \begin{itemize}
     \item \textbf{V} : specifica che si tratta di un verbale;
-	\item \textbf{X} : indica la tipologia di verbale se interno "\textbf{I}" o esterno "\textbf{E}";
-	\item \textbf{Y} : indica la data del verbale nel formato YYYY-MM-DD; 
-	\item \textbf{Z} : indica il numero della decisione presa.
+    \item \textbf{X} : indica la tipologia di verbale se interno "\textbf{I}" o esterno "\textbf{E}";
+    \item \textbf{Y} : indica la data del verbale nel formato YYYY-MM-DD;
+    \item \textbf{Z} : indica il numero della decisione presa.
 \end{itemize}
-    
+
 \subsubsection{Norme tipografiche} \label{_normetipografiche}
 Per evitare che i diversi file differiscano nell'ortografia, nella tipografia e nello stile vengono stabilite delle norme che permettono di ottenere uniformità tra i diversi documenti.
 
@@ -157,110 +158,118 @@ Per i nomi delle directory che contengono la documentazione si segue la convenzi
 \paragraph{Stile del testo}
 Gli stili di testo utilizzati nella documentazione sono:
 \begin{itemize}
-\item\textbf{grassetto} per tutti i titoli, i sottotitoli, per le parole che vengono ritenute più importanti e per quelle subito seguite da una definizione;
-\item \textit{corsivo} per tutti i nomi propri (di persona, organizzazione o tecnologia), i termini tecnici e le citazioni;
-\item \texttt{monospace} per gli \glock{snippet} di codice;
-\item MAIUSCOLO per acronimi, iniziali di nomi propri e ove previsto dalle convenzioni per la denominazione sopra riportate.
+    \item \textbf{grassetto} per tutti i titoli, i sottotitoli, per le parole che vengono ritenute più importanti e per quelle subito seguite da una definizione;
+    \item \textit{corsivo} per tutti i nomi propri (di persona, organizzazione o tecnologia), i termini tecnici e le citazioni;
+    \item \texttt{monospace} per gli \glock{snippet} di codice;
+    \item MAIUSCOLO per acronimi, iniziali di nomi propri e ove previsto dalle convenzioni per la denominazione sopra riportate.
 \end{itemize}
 
 \paragraph{Termini di glossario}
-I termini non immediatamente comprensibili (che nella documentazione spesso corrispondono ai termini appartenenti alla sfera semantica dell'informatica) sono contrassegnati dal pedice \glock{} (e.g. \glock{parola}) la prima volta che appaiono in ogni sezione. Se un termine appare più volte all'interno della stessa sezione solo la prima occorrenza dovrà essere seguita dal pedice \glock{}. Il simbolo indica che il termine contrassegnato può essere trovato, seguito dalla sua definizione, all'interno del \dext{Glossario v1.0.0}. In questo documento le voci sono riportate in ordine alfabetico.  
+I termini non immediatamente comprensibili (che nella documentazione spesso corrispondono ai termini appartenenti alla sfera semantica dell'informatica) sono contrassegnati dal pedice \glock{} (e.g. \glock{parola}) la prima volta che appaiono in ogni sezione. Se un termine appare più volte all'interno della stessa sezione solo la prima occorrenza dovrà essere seguita dal pedice \glock{}. Il simbolo indica che il termine contrassegnato può essere trovato, seguito dalla sua definizione, all'interno del \dext{Glossario v1.0.0}. In questo documento le voci sono riportate in ordine alfabetico.
 
 \paragraph{Elementi testuali}
 Nella fase di redazione della documentazione è necessario attenersi alle convenzioni stilistiche esposte di seguito.
+
 \subparagraph{Elenchi puntati ed elenchi numerati}
 Ogni elemento di un elenco puntato è scandito dal simbolo "\textbullet". Per il secondo livello di annidamento si utilizza il simbolo "--", mentre per il terzo livello "$\ast$". Di seguito la rappresentazione di questa convenzione.
 \begin{itemize}
     \item elemento;
-    \begin{itemize}
-        \item sotto-elemento;
-        \begin{itemize}
-            \item sotto-sotto-elemento.
-        \end{itemize}
-    \end{itemize}
+          \begin{itemize}
+              \item sotto-elemento;
+                    \begin{itemize}
+                        \item sotto-sotto-elemento.
+                    \end{itemize}
+          \end{itemize}
 \end{itemize}
 Gli elementi del primo livello di un elenco numerato sono identificati da numeri arabi seguiti da punto fermo, gli elementi del secondo livello da lettere dell'alfabeto tra parentesi tonde e quelli del terzo livello da numeri romani minuscoli seguiti da  un punto fermo. Di seguito si trova un esempio di quanto descritto.
 \begin{enumerate}
     \item elemento 1;
-    \begin{enumerate}
-        \item elemento 1.1;
-        \begin{enumerate}
-            \item elemento 1.1.1.
-        \end{enumerate}
-    \end{enumerate}
+          \begin{enumerate}
+              \item elemento 1.1;
+                    \begin{enumerate}
+                        \item elemento 1.1.1.
+                    \end{enumerate}
+          \end{enumerate}
 \end{enumerate}
 Negli elementi di un elenco nella forma "\textit{nome dell'elemento - descrizione dell'elemento}"  il primo elemento è rappresentato con testo in grassetto, il secondo con caratteri normali.
+
 \subparagraph{Formato di data e ora}
 Per l'indicazione delle date e degli orari si seguono le convenzioni stabilite dallo standard \glock{ISO 8601}. \\
+
 Il formato utilizzato per le date è:
 \begin{center}
     \textbf{[YYYY]-[MM]-[DD]}
 \end{center}
-    dove:
-    \begin{itemize}
-        \item \textbf{[YYYY]} corrisponde al numero dell'anno secondo il calendario gregoriano;
-        \item \textbf{[MM]} corrisponde al numero del mese;
-        \item \textbf{[DD]} corrisponde al numero del giorno.
-    \end{itemize}
+dove:
+\begin{itemize}
+    \item \textbf{[YYYY]} corrisponde al numero dell'anno secondo il calendario gregoriano;
+    \item \textbf{[MM]} corrisponde al numero del mese;
+    \item \textbf{[DD]} corrisponde al numero del giorno.
+\end{itemize}
+
 Il formato con cui vengono indicati gli orari è:
 \begin{center}
     \textbf{[HH]:[MM]}
-\end{center} 
+\end{center}
 dove:
 \begin{itemize}
     \item \textbf{[HH]} rappresenta le ore;
     \item \textbf{[MM]} rappresenta i minuti.
 \end{itemize}
-Le ore e i minuti devono comparire sempre in doppia cifra (qualora ore e/o minuti siano in singola cifra si antepone uno zero). 
+Le ore e i minuti devono comparire sempre in doppia cifra (qualora ore e/o minuti siano in singola cifra si antepone uno zero).
+
 \subparagraph{Sigle}
 Le sigle sono indicate con le iniziali di ogni parola maiuscole. Se nella sigla compare l'iniziale di una preposizione, articolo o congiunzione, questa è riportata in carattere minuscolo.
 Le sigle utilizzate nei documenti del progetto sono:
 \begin{itemize}
     \item Relative ai nomi dei documenti:
-    \begin{itemize}
-        \item \textbf{Analisi dei Requisiti}: AdR;
-        \item \textbf{Piano di Progetto}: PdP;
-        \item \textbf{Norme di Progetto}: NdP;
-        \item \textbf{Piano di Qualifica}: PdQ;
-        \item \textbf{Studio di Fattibilità}: SdF;
-        \item \textbf{Verbali Interni}: VI;
-        \item \textbf{Verbali Esterni}: VE;
-        \item \textbf{Glossario}: G.
-        % da aggiungere i manuali in seguito
-    \end{itemize}
+          \begin{itemize}
+              \item \textbf{Analisi dei Requisiti}: AdR;
+              \item \textbf{Piano di Progetto}: PdP;
+              \item \textbf{Norme di Progetto}: NdP;
+              \item \textbf{Piano di Qualifica}: PdQ;
+              \item \textbf{Studio di Fattibilità}: SdF;
+              \item \textbf{Verbali Interni}: VI;
+              \item \textbf{Verbali Esterni}: VE;
+              \item \textbf{Glossario}: G.
+                    % da aggiungere i manuali in seguito
+          \end{itemize}
     \item Relative alle \glock{revisioni} del progetto previste dai committenti:
-    \begin{itemize}
-        \item \textbf{Revisione dei Requisiti}: RR;
-        \item \textbf{Revisione di Progettazione}: RP;
-        \item \textbf{Revisione di Qualifica}: RQ;
-        \item \textbf{Revisione di Accettazione}: RA.
-    \end{itemize}
+          \begin{itemize}
+              \item \textbf{Revisione dei Requisiti}: RR;
+              \item \textbf{Revisione di Progettazione}: RP;
+              \item \textbf{Revisione di Qualifica}: RQ;
+              \item \textbf{Revisione di Accettazione}: RA.
+          \end{itemize}
     \item Relative ai ruoli del progetto:
-    \begin{itemize}
-        \item \textbf{Analista}: AN;
-        \item \textbf{Verificatore}: VE;
-        \item \textbf{Amministratore}: AM;
-        \item \textbf{Responsabile di progetto}: RE;
-        \item \textbf{Programmatore}: PR;
-        \item \textbf{Progettista}: PT.
-    \end{itemize}
-    Altre sigle utilizzate sono:
-    \begin{itemize}
-        \item \textbf{VCS}: \glock{Version Control System}.
-        %inserire qui altre sigle usate
-    \end{itemize}
+          \begin{itemize}
+              \item \textbf{Analista}: AN;
+              \item \textbf{Verificatore}: VE;
+              \item \textbf{Amministratore}: AM;
+              \item \textbf{Responsabile di progetto}: RE;
+              \item \textbf{Programmatore}: PR;
+              \item \textbf{Progettista}: PT.
+          \end{itemize}
+          Altre sigle utilizzate sono:
+          \begin{itemize}
+              \item \textbf{VCS}: \glock{Version Control System}.
+                    %inserire qui altre sigle usate
+          \end{itemize}
 \end{itemize}
 
 \paragraph{Elementi grafici}
 Qui di seguito vengono esposte le norme per la rappresentazione di elementi grafici all'interno della documentazione.
+
 \subparagraph{Immagini}
 Le immagini compaiono tutte centrate rispetto al testo e sono tutte accompagnate da una didascalia che descrive il loro contenuto.
+
 \subparagraph{Tabelle}
 Le tabelle sono centrate rispetto al testo. Ognuna di esse è accompagnata da una didascalia che inizia con l'identificativo della tabella:
 \begin{center}
     Tabella[X]
 \end{center}
 dove [X] indica il numero assoluto progressivo della tabella all'interno del documento. Ad esso segue la  didascalia.  A tale convenzione fanno eccezione la tabella del registro delle modifiche presente in ogni documento e il registro delle decisioni presente nei documenti di tipo \textit{Verbale} che sono sprovviste di didascalia.
+
 \subparagraph{Grafici UML}
 I grafici in linguaggio \glock{UML} sono inseriti come immagini.
 
@@ -274,16 +283,21 @@ Queste metriche sono descritte approfonditamente in \S\ref{_metricheprodotto}.
 \subsubsection{Strumenti}
 \paragraph{Latex}
 Per la scrittura dei documenti si è scelto di usare \LaTeX, linguaggio di markup che si basa sul programma di tipografia digitale \TeX . Questo permette di redigere documenti templatizzati, coesi, coerenti e in maniera collaborativa tramite l'adozione del VCS git.
+
 \paragraph{Editor di testo}
 Viene lasciata libertà sulla scelta dell'editor di testo da utilizzare poiché i componenti del gruppo hanno manifestato preferenze diverse. Gli strumenti che prevalgono sono \textit{\glock{TexMaker}} e \textit{\glock{Visual Studio Code}}, utilizzato con l'ausilio del plugin \textit{LaTeX Workshop}.
+
 \paragraph{Diagrammi}
 Per i diagrammi sono stati usati diversi software a seconda del tipo di diagramma da rappresentare.
+
 \subparagraph{\textit{Draw.io}}
 Web app gratuita integrabile con \glock{Google Drive}, per realizzare casi d'uso, diagrammi e grafici UML. Rende possibile anche il versionamento dei file prodotti.
+
 \subparagraph{\textit{Gantt project}}
 Applicazione open source per costruire \glock{diagrammi di Gantt}, usati largamente nelle attività di pianificazione e presenti nel \textit{Piano di Progetto}.
+
 \subparagraph{\textit{Google Drive}}
-Per la conservazione degli artefatti annessi alla documentazione (e.g. documenti compilati e immagini presenti all'interno della documentazione) e di qualunque altro file utile viene utilizzato \textit{Google Drive}, tramite l'account Google dell'organizzazione \textit{SWException}. 
+Per la conservazione degli artefatti annessi alla documentazione (e.g. documenti compilati e immagini presenti all'interno della documentazione) e di qualunque altro file utile viene utilizzato \textit{Google Drive}, tramite l'account Google dell'organizzazione \textit{SWException}.
 
 \subsubsection{Verifica ortografica}
 Per la verifica ortografica si utilizzano gli strumenti di correzione ortografica messi a disposizione dagli editor di testo che segnalano in maniera automatica gli errori sottolineando con colore rosso le parole non appartenenti al dizionario delle lingue selezionate come presenti nel documento.
@@ -302,9 +316,9 @@ oltre che le modalità di versionamento e coordinamento del gruppo.
 \subsubsection{Aspettative}
 I risultati attesi da questo processo sono:
 \begin{itemize}
-    \item Standardizzare la produzione di codice e documentazione;
-    \item Rendere uniforme l'utilizzo degli strumenti di versionamento coinvolti nel progetto;
-    \item Classificare i prodotti dei vari processi implementati.
+    \item standardizzare la produzione di codice e documentazione;
+    \item rendere uniforme l'utilizzo degli strumenti di versionamento coinvolti nel progetto;
+    \item classificare i prodotti dei vari processi implementati.
 \end{itemize}
 
 \subsubsection{Versionamento}
@@ -317,10 +331,10 @@ dove
 \begin{itemize}
     \item \textbf{[X]} indica il numero di versione approvato dal responsabile di progetto; inizialmente è a 0;
     \item \textbf{[Y]} indica il numero di un incremento consistente dopo la precedente approvazione; questo numero parte da
-                       0 e incrementa di 1 ad ogni parte di documento aggiunta e modificata da un redattore e contestualmente verificata da un verificatore,
-                       viene azzerato ogni qualvolta incrementa \textbf{[X]};
+          0 e incrementa di 1 ad ogni parte di documento aggiunta e modificata da un redattore e contestualmente verificata da un verificatore,
+          viene azzerato ogni qualvolta incrementa \textbf{[X]};
     \item \textbf{[Z]} indica il numero di un incremento minore (e.g. la correzione di un errore ortografico, la modifica di un singolo paragrafo, ...);
-                       anche questo cominica da 0 e viene azzerato quando si incrementa il valore di \textbf{[Y]}.
+          anche questo cominica da 0 e viene azzerato quando si incrementa il valore di \textbf{[Y]}.
 \end{itemize}
 
 \paragraph{Tecnologie coinvolte}
@@ -337,20 +351,20 @@ Ogni membro del gruppo, in tutte le repository, dovrà attenersi alle convenzion
 In particolare saranno presenti i seguenti branch:
 \begin{itemize}
     \item \textbf{master:} utilizzato per ospitare le versioni di rilascio. In questo ramo dovrà esserci sempre una versione del prodotto utilizzabile
-                           e pronto ad essere rilasciato in ambiente di produzione. È fatto divieto a tutti i membri del gruppo di effettuare \textit{commit}
-                           direttamente su questo ramo, tutte le modifiche dovranno seguire il percorso previsto di GitFlow;
+          e pronto ad essere rilasciato in ambiente di produzione. È fatto divieto a tutti i membri del gruppo di effettuare \textit{commit}
+          direttamente su questo ramo, tutte le modifiche dovranno seguire il percorso previsto di GitFlow;
     \item \textbf{develop:} questo è il ramo utilizzato per le operazioni di sviluppo. In particolare qui convergeranno i vari \textit{feature-branch}
-                            utilizzati per la creazione delle funzionalità del modulo in oggetto. In questo ramo deve essere presente sempre e solo codice
-                            compilabile e feature complete;
+          utilizzati per la creazione delle funzionalità del modulo in oggetto. In questo ramo deve essere presente sempre e solo codice
+          compilabile e feature complete;
     \item \textbf{feature/nome-feature:} per la creazione di ogni feature da parte dei vari membri addetti. In questi rami le feature possono anche essere
-                                         incomplete e/o non funzionanti. Una volta completata la funzionalità il ramo deve essere chiuso sia in locale che in remoto e 
-                                         convergere in develop;
+          incomplete e/o non funzionanti. Una volta completata la funzionalità il ramo deve essere chiuso sia in locale che in remoto e
+          convergere in develop;
     \item \textbf{release/versione[X.Y.Z]:} ramo contenente la versione \glock{candidate-release} pronta per essere approvata dal \textit{responsabile di progetto} dopo
-                                            aver passato tutte le verifiche. Una volta approvata il branch deve terminare sia in locale che in remoto, convergendo in master e in develop.
-                                            Contestualmente nel branch master deve essere presente il tag di release;
+          aver passato tutte le verifiche. Una volta approvata il branch deve terminare sia in locale che in remoto, convergendo in master e in develop.
+          Contestualmente nel branch master deve essere presente il tag di release;
     \item \textbf{bugfix/nome-feature:} rami uscenti dal develop usati per sistemare errori rilevati successivamente alla chiusura del relativo feature-branch.
-                                       Sono usati per la correzione dell'errore trovato, una volta inserita la correzione devono convergere in develop. È necessario
-                                       che il nome del bugfix corrisponda al nome della determinata feature a cui si rivolge la correzione.
+          Sono usati per la correzione dell'errore trovato, una volta inserita la correzione devono convergere in develop. È necessario
+          che il nome del bugfix corrisponda al nome della determinata feature a cui si rivolge la correzione.
 \end{itemize}
 Riassumendo ogni modifica al codice deve partire da un branch di feature o di bugfix, strettamente collegato ad uno o più membri del gruppo, e convergere in develop solamente dopo
 aver superato le verifiche necessarie per quella specifica attività.
@@ -383,18 +397,18 @@ In questa sezione ci proponiamo di illustrare come avviene il processo di gestio
 Dalla gestione della qualità, il team prevede di soddisfare a pieno le aspettative del proponente, rispettando gli standard di qualità con esso  precedentemente concordati.\\
 Per ottenere ciò il team si aspetta:
 \begin{itemize}
-    \item Organizzare le attività e i processi in modo efficace e prolifico, conseguendo la qualità attesa;
-    \item Raggiungere la qualità di prodotto prevista dal proponente, verificandone l'effettiva qualità.
+    \item organizzare le attività e i processi in modo efficace e prolifico, conseguendo la qualità attesa;
+    \item raggiungere la qualità di prodotto prevista dal proponente, verificandone l'effettiva qualità.
 \end{itemize}
 
 
 \subsubsection{Processo gestione della qualità}
 Il processo di gestione della qualità si articola nelle seguenti attività:
 \begin{itemize}
-    \item\textbf{Studio}: il team individua l'obiettivo che ogni lavoro deve perseguire, studiando la quantità di risorse che esso richiederebbe;
-    \item \textbf{Regolamentazione}: vengono stabilite le strategie da adottare per conseguire la qualità prestabilita, organizzando le risorse a disposizione;
-    \item\textbf{Attuazione}: viene eseguito quanto scelto in precedenza. Questa fase permette di ottenere dei risultati concreti che possiamo verificare nella fase successiva;
-    \item\textbf{Valutazione}: si verifica se i risultati ottenuti rispettano gli standard precedentemente richiesti.
+    \item\textbf{studio}: il team individua l'obiettivo che ogni lavoro deve perseguire, studiando la quantità di risorse che esso richiederebbe;
+    \item \textbf{regolamentazione}: vengono stabilite le strategie da adottare per conseguire la qualità prestabilita, organizzando le risorse a disposizione;
+    \item\textbf{attuazione}: viene eseguito quanto scelto in precedenza. Questa fase permette di ottenere dei risultati concreti che possiamo verificare nella fase successiva;
+    \item\textbf{valutazione}: si verifica se i risultati ottenuti rispettano gli standard precedentemente richiesti.
 \end{itemize}
 
 
@@ -421,28 +435,28 @@ In tutti i casi, il parametro \textbf{[X]} indica un numero intero che stabilisc
 \label{_denominazioneTest}
 I test di unità, integrazione, sistema e collaudo sono identificati con il seguente pattern di codici:
 \[
-    T[X][Y]    
+    T[X][Y]
 \]
 dove:
 \begin{itemize}
     \item \textbf{[X]} assume i seguenti valori:
-    \begin{itemize}
-        \item U per i test di unità;
-        \item I per i test di integrazione;
-        \item S per i test di sistema;
-        \item C per i test di collaudo.
-    \end{itemize}
+          \begin{itemize}
+              \item U per i test di unità;
+              \item I per i test di integrazione;
+              \item S per i test di sistema;
+              \item C per i test di collaudo.
+          \end{itemize}
     \item \textbf{[Y]} è un numero intero incrementale che parte da 1, ed è univoco per ogni \textbf{[X]}.
 \end{itemize}
 
 \subsubsection{Denominazione obiettivi}
 Per la denominazione degli obiettivi, il team ha concordato:
 \begin{itemize}
-    \item Per i prodotti:
+    \item per i prodotti:
           \begin{center}
               \textbf{O[PD]-[DOC/S][X]}
           \end{center}
-    \item Per i processi:
+    \item per i processi:
           \begin{center}
               \textbf{O[PR]-[DOC/S][X]}
           \end{center}
@@ -453,9 +467,9 @@ In tutti i casi, il parametro \textbf{[X]} indica un numero intero che stabilisc
 \subsubsection{Istanziazione di un processo}
 Quando un componente del team istanzia un nuovo processo, bisogna che verifichi i seguenti punti:
 \begin{itemize}
-    \item Il processo che si sta istanziando deve avere un unico obiettivo,  ovvero non deve sovrapporsi con quelli di altri processi  in sviluppo;
-    \item Avviare una preventiva analisi dei rischi;
-    \item Controllore e gestire le risorse a disposizione, in modo da aver un utilizzo ottimale.
+    \item il processo che si sta istanziando deve avere un unico obiettivo,  ovvero non deve sovrapporsi con quelli di altri processi  in sviluppo;
+    \item avviare una preventiva analisi dei rischi;
+    \item controllore e gestire le risorse a disposizione, in modo da aver un utilizzo ottimale.
 \end{itemize}
 Per gestire nel migliore dei modi le risorse è necessario fin da subito porre una data per il termine del processo.
 
@@ -471,28 +485,28 @@ del \textit{way of working}, riuscendo ad elaborare risposte in tempi brevi ai v
 \subsubsection{Denominazione dei cambiamenti}
 Per garantire il tracciamento, viene assegnato un codice univoco a tutti i cambiamenti, così formato:
 \begin{itemize}
-    \item Per i prodotti (documenti/artefatti)
-        \begin{center}
-            \textbf{CA[PR]-[DOC/ART]-[codice prodotto][X]}
-        \end{center}
-        in particolare \textbf{DOC} per i documenti e \textbf{ART} per il codice sorgente dell'applicazione;
-    \item Per i processi
-        \begin{center}
-            \textbf{CA[PR]-ATT-[nome attività][X]}
-        \end{center}
-        dove il nome dell'attività viene scritto per intero.
+    \item per i prodotti (documenti/artefatti)
+          \begin{center}
+              \textbf{CA[PR]-[DOC/ART]-[codice prodotto][X]}
+          \end{center}
+          in particolare \textbf{DOC} per i documenti e \textbf{ART} per il codice sorgente dell'applicazione;
+    \item per i processi
+          \begin{center}
+              \textbf{CA[PR]-ATT-[nome attività][X]}
+          \end{center}
+          dove il nome dell'attività viene scritto per intero.
 \end{itemize}
 In entrambi i casi, il parametro \textbf{[X]} indica un numero intero che incrementa ad ogni cambiamento su quel determinato prodotto/processo,
- con valore iniziale 1.\\
- Il parametro \textbf[PR] sta ad indicare la priorità, rappresentata da un numero compreso nell'insieme
- \[\{x \in \mathbb{N}_0 \ | \  x \% 5 = 0 \} \]
- ovvero l'insieme dei multipli di 5 non negativi. In casi eccezionali, possono essere assegnati numeri interi positivi non multipli di 5,
- in modo da inserire il cambiamento nella giusta posizione. Questa prassi non deve comunque entrare nella normalità,  è preferibile che si cerchi
- di assegnare le priorità con cautela.
+con valore iniziale 1.\\
+Il parametro \textbf[PR] sta ad indicare la priorità, rappresentata da un numero compreso nell'insieme
+\[\{x \in \mathbb{N}_0 \ | \  x \% 5 = 0 \} \]
+ovvero l'insieme dei multipli di 5 non negativi. In casi eccezionali, possono essere assegnati numeri interi positivi non multipli di 5,
+in modo da inserire il cambiamento nella giusta posizione. Questa prassi non deve comunque entrare nella normalità,  è preferibile che si cerchi
+di assegnare le priorità con cautela.
 
- \subsubsection{Prassi generale}
- Le issue rappresentanti i vari cambiamenti seguono il ciclo di vita generale dei ticket.
- Al termine dello svolgimento di ogni attività,  parte la verifica della stessa,  la quale porta ad un'accettazione o ad un rigetto
+\subsubsection{Prassi generale}
+Le issue rappresentanti i vari cambiamenti seguono il ciclo di vita generale dei ticket.
+Al termine dello svolgimento di ogni attività,  parte la verifica della stessa,  la quale porta ad un'accettazione o ad un rigetto
 del lavoro svolto.  Nel primo caso si procede con la validazione, nel secondo caso il verificatore riapre il ticket inserendo i commenti
 che esplicano il motivo del rifiuto. Nel caso in cui chi ha svolto l'attività non sia in accordo con il verificatore ci sarà un meeting tra i due, se anche
 dopo questo i due si trovano in disaccordo interviene il \textit{Responsabile di Progetto}, che prenderà la decisione finale.
@@ -504,27 +518,27 @@ Il processo di verifica ha come obiettivo la realizzazione di prodotti corretti,
 \subsubsection{Descrizione}
 Con la verifica si cercano e  risolvono i possibili difetti presenti all'interno della documentazione e del codice. Essa viene applicata ad ogni altro processo in esecuzione quando questo:
 \begin{enumerate}
-    \item Raggiunge un livello di maturità sufficiente;
-    \item Subisce dei cambiamenti significativi.
+    \item raggiunge un livello di maturità sufficiente;
+    \item subisce dei cambiamenti significativi.
 \end{enumerate}
 Dopo che la verifica è ultimata è possibile avviare il processo di validazione.
 
 \subsubsection{Aspettative}
 L'input del processo di verifica è un processo già ben formato ma non necessariamente corretto; l'output è il processo stesso reso conforme alle aspettative. Questo risultato si ottiene seguendo determinati punti:
 \begin{enumerate}
-    \item Definizione di un criterio di accettazione;
-    \item Definizione delle attività di verifica;
-    \item Definizione e implementazione di test di verifica;
-    \item Correzione di eventuali difetti individuati.
+    \item definizione di un criterio di accettazione;
+    \item definizione delle attività di verifica;
+    \item definizione e implementazione di test di verifica;
+    \item correzione di eventuali difetti individuati.
 \end{enumerate}
 
 \subsubsection{Verifica della documentazione}
 L'inizio delle attività di verifica per un documento è stabilito dal \textit{Responsabile di Progetto} che ne pianifica le date di inizio e di fine e assegna il ruolo di \textit{Verificatore} ad uno o più membri del gruppo. I verificatori dovranno eseguire un'analisi accurata del documento assegnatogli con l'obiettivo di:
 \begin{enumerate}
-    \item Verificare la correttezza grammaticale e la semplicità sintattica;
-    \item Assicurarsi che il documento rispetti tutte le norme tipografiche descritte accuratamente in \S\ref{_normetipografiche};
-    \item Controllare la struttura del documento;
-    \item Analizzare la pertinenza dei contenuti trattati nel documento.
+    \item verificare la correttezza grammaticale e la semplicità sintattica;
+    \item assicurarsi che il documento rispetti tutte le norme tipografiche descritte accuratamente in \S\ref{_normetipografiche};
+    \item controllare la struttura del documento;
+    \item analizzare la pertinenza dei contenuti trattati nel documento.
 \end{enumerate}
 
 \paragraph{Analisi statica}
@@ -544,8 +558,8 @@ Il processo di verifica viene gestito con il meccanismo delle pull request, una 
 \subsubsection{Verifica del codice}
 Il codice viene verificato con test automatici e con misurazioni quantificabili specificate all'interno del \dext{Piano di Qualifica v1.0.0}. Il codice quindi deve obbedire a questi criteri:
 \begin{itemize}
-    \item Deve essere corretto rispetto ai test definiti e alle metriche adottate per quantificare la sua qualità;
-    \item Deve derivare dai requisiti richiesti in \dext{Analisi dei Requisiti v1.0.0}.
+    \item deve essere corretto rispetto ai test definiti e alle metriche adottate per quantificare la sua qualità;
+    \item deve derivare dai requisiti richiesti in \dext{Analisi dei Requisiti v1.0.0}.
 \end{itemize}
 
 \paragraph{Analisi statica}
@@ -555,8 +569,8 @@ Anche per il codice, come per la documentazione, la prima fase di verifica sarà
 L'analisi dinamica prevede la verifica del codice mirata a rilevare gli errori mentre questo è in fase di esecuzione.  Questa fase è caratterizzata dall'esecuzione di una batteria di test per verificare il corretto funzionamento del codice prodotto.\\
 Ogni test eseguito deve essere:
 \begin{itemize}
-    \item \textbf{Decidibile}: sempre in grado di terminare restituendo un feedback binario (riuscito/ fallito);
-    \item \textbf{Ripetibile}: dato un certo input e delle precondizioni fissate, deve produrre sempre lo stesso output per ogni prova effettuata.
+    \item \textbf{decidibile}: sempre in grado di terminare restituendo un feedback binario (riuscito/ fallito);
+    \item \textbf{ripetibile}: dato un certo input e delle precondizioni fissate, deve produrre sempre lo stesso output per ogni prova effettuata.
 \end{itemize}
 Ogni test presenta i seguenti parametri:
 \begin{itemize}
@@ -572,18 +586,18 @@ Per il formato di output di un test è da preferirsi un file di log che esponga 
 Anche i requisiti sono sottoposti al processo di verifica. Perché la verifica dia esito positivo è necessario che essi:
 
 \begin{itemize}
-    \item Siano coerenti con la loro implementazione;
-    \item Abbiano un grado di complessità adeguato rispetto al tempo e alle risorse pianificate per la riuscita del progetto;
-    \item Si dimostrino verificabili e quantificabili;
-    \item Siano coerenti con gli accordi presi con il proponente, riportati all'interno dell'\dext{Analisi dei Requisiti v1.0.0}.
+    \item siano coerenti con la loro implementazione;
+    \item abbiano un grado di complessità adeguato rispetto al tempo e alle risorse pianificate per la riuscita del progetto;
+    \item si dimostrino verificabili e quantificabili;
+    \item siano coerenti con gli accordi presi con il proponente, riportati all'interno dell'\dext{Analisi dei Requisiti v1.0.0}.
 \end{itemize}
 
 \paragraph{Analisi statica}
 I requisiti devono rispettare le proprietà di:
 \begin{itemize}
-    \item \textbf{Verificabilità}: un requisito deve essere misurabile oggettivamente;
-    \item \textbf{Codice univoco}: un requisito deve essere identificato da un codice, differente per ogni requisito, in accordo con quanto descritto in \S\ref{_classificazioneRequisiti};
-    \item \textbf{Atomicità}: un requisito non deve essere divisibile.
+    \item \textbf{verificabilità}: un requisito deve essere misurabile oggettivamente;
+    \item \textbf{codice univoco}: un requisito deve essere identificato da un codice, differente per ogni requisito, in accordo con quanto descritto in \S\ref{_classificazioneRequisiti};
+    \item \textbf{atomicità}: un requisito non deve essere divisibile.
 \end{itemize}
 
 \subsubsection{Test}
@@ -619,10 +633,10 @@ se accettare e quindi approvare il prodotto oppure rigettarlo, indicando quali v
 \subsubsection{Aspettative}
 Per avviare il processo di validazione devono essere presenti questi elementi:
 \begin{itemize}
-    \item Identificazione degli elementi da validare (documenti e/o codice sorgente);
-    \item Adottare una strategia di validazione che permetta di riutilizzare le procedure usate
+    \item identificazione degli elementi da validare (documenti e/o codice sorgente);
+    \item adottare una strategia di validazione che permetta di riutilizzare le procedure usate
           per la validazione;
-    \item Valutazione dei risultati rispetto alle attese.
+    \item valutazione dei risultati rispetto alle attese.
 \end{itemize}
 
 \subsubsection{Validazione dei documenti}
