@@ -15,3 +15,8 @@
 .vscode/*
 *.lot
 *.lof
+
+*.vs
+.vscode/*
+*.lot
+
