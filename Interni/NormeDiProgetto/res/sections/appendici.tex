@@ -45,10 +45,10 @@ Indica la percentuale di requisiti desiderabili che non sono stati  soddisfatti 
 \subsubsection{MPR-9: Rischi non previsti ma avvenuti (RNPA)} \label{_MPR-9}
 Indica il numero di rischi non previsti ma che si sono presentanti nel corso del progetto.
 
-\subsection{Metriche per la qualità della documentazione (GULP)} \label{_metricheprodotto}
+\subsection{Metriche per la qualità della documentazione} \label{_metricheprodotto}
 Per quantificare la qualità della documentazione vengono adottate le metriche descritte in questa sezione.
 
-\subsubsection{MPD-DOC1: Indice di Gulpease}
+\subsubsection{MPD-DOC1: Indice di Gulpease (GULP)}
 Indice che individua il grado di leggibilità di un testo in lingua italiana mediante la formula:
 \begin{center}
     \(GULP=89+\frac{300(totale\; frasi)-10(totale\; lettere)}{totale\; parole}\)
@@ -63,7 +63,7 @@ Questa metrica permette di misurare la correttezza lessicografica del documento 
 \subsection{Metriche per la qualità del codice sorgente} \label{_metricheCodiceSorgenteApp}
 Per misurare la qualità del codice sorgente prodotto vengono adottate le seguenti metriche, come introdotto in \S\ref{_metricheQualitaCodice}
 
-\subsubsection{MPD-S1: Complessità ciclomatica}
+\subsubsection{MPD-S1: Complessità ciclomatica (COCI)}
 La complessità ciclomatica di un programma strutturato è definita in riferimento ad un grafo diretto
 contenente i blocchi base di un programma con un arco tra due blocchi se il controllo può passare dal
 primo al secondo (il "grafo di controllo di flusso"). La complessità è quindi definita come:
@@ -78,24 +78,24 @@ dove:
     \item $p$ è il numero di componenti connesse, ha un valore in $\mathbb{N}$.
 \end{itemize}
 
-\subsubsection{MPD-S2: Complessità espressioni booleane}
+\subsubsection{MPD-S2: Complessità espressioni booleane (COEB)}
 Questo è un indice necessario a tenere sotto controllo la complessità delle espressioni booleane e, di conseguenza, la complessità ciclomatica.
 Si sintetizza nel massimo numero di operatori logici presenti in una singola espressione booleana.\\
 Il suo calcolo è banale, e consiste nel conteggio degli operatori logici.
 
-\subsubsection{MPD-S3: Lunghezza delle righe di codice}
+\subsubsection{MPD-S3: Lunghezza delle righe di codice (LRC)}
 Indice che misura la lunghezza di una singola riga di codice. Serve a garantire la leggibilità di esso anche in schermi
 con dimensioni e risoluzione minori.\\
 Si ottiene contando i caratteri di ogni singola riga, ci si assicura quindi che il valore ottenuto per ognuna stia sotto il valore
 definito nel Piano di Qualifica.
 
-\subsubsection{MPD-S4: Code coverage}
+\subsubsection{MPD-S4: Code coverage (CODCO)}
 Con questo indice si misura la percentuale di righe di codice coperte dai test automatici.\\
 È necessario cercare di avere la massima copertura possibile per ogni modulo, in quanto codice non testato
 può provocare comportamenti indesiderati e/o imprevisti dell'artefatto. La definizione della soglia minima viene rimandata al \dext{Piano di Qualifica v1.0.0}.
 
 
-\subsubsection{MPD-S5: Maturità dei test (MT)}
+\subsubsection{MPD-S5: Maturità dei test (MATE)}
 Misura la percentuale di casi di test eseguiti con successo rispetto al numero totale previsto per garantire una copertura minima dei requisiti;
 \begin{itemize}
     \item \textbf{Formula}: \(\frac{casi\ test\ eseguiti\ con\ successo}{casi\ test\ previsti}*100\)
