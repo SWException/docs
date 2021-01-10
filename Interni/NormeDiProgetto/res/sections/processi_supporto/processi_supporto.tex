@@ -19,6 +19,13 @@ Ogni documento può trovarsi in 3 stati diversi nel suo ciclo di vita:
     \item\textbf{approvazione}: il \glock{responsabile di progetto} deve approvare il documento inviatogli con esito positivo dai verificatori e procedere al rilascio di esso.
 \end{itemize}
 
+\subsubsection{Nomenclatura dei documenti}
+I documenti prodotti devono essere in formato pdf e con la seguente nomenclatura:
+\begin{center}
+    \textbf{NomeDelDocumento\_X.Y.Z.pdf}
+\end{center}
+dove x, y e z indicano il numero della versione corrente.
+
 \subsubsection{Classificazione dei documenti}
 I documenti prodotti dal team sono di due tipologie:
 \begin{itemize}
@@ -97,8 +104,7 @@ Per ogni cambiamento la tabella riporta:
     \item\textbf{Versione}: indica la versione del documento relativa alla modifica;
     \item\textbf{Descrizione}: illustra brevemente il cambiamento apportato;
     \item\textbf{Data}: giorno in cui la modifica è stata effettuata;
-    \item\textbf{Autore}: chi ha fatto la modifica;
-    \item\textbf{Ruolo}: il ruolo di chi ha effettuato la modifica.
+    \item\textbf{Autore - Verificatore}: chi ha fatto la modifica;
 \end{itemize}
 
 \subparagraph{Indice}
@@ -434,9 +440,9 @@ In tutti i casi, il parametro \textbf{[X]} indica un numero intero che stabilisc
 \subsubsection{Denominazione test}
 \label{_denominazioneTest}
 I test di unità, integrazione, sistema e collaudo sono identificati con il seguente pattern di codici:
-\[
-    T[X][Y]
-\]
+\begin{center}
+    \textbf{T[X][Y]}
+\end{center}
 dove:
 \begin{itemize}
     \item \textbf{[X]} assume i seguenti valori:
@@ -449,6 +455,7 @@ dove:
     \item \textbf{[Y]} è un numero intero incrementale che parte da 1, ed è univoco per ogni \textbf{[X]}.
 \end{itemize}
 
+\iffalse % maledetto latex che non ha i commenti multiriga
 \subsubsection{Denominazione obiettivi}
 Per la denominazione degli obiettivi, il team ha concordato:
 \begin{itemize}
@@ -463,6 +470,7 @@ Per la denominazione degli obiettivi, il team ha concordato:
 \end{itemize}
 La dicitura \textbf{DOC} sta ad indicare i documenti mentre \textbf{S} i prodotti software.
 In tutti i casi, il parametro \textbf{[X]} indica un numero intero che stabilisce la metrica, la numerazione inizia da 1.
+\fi
 
 \subsubsection{Istanziazione di un processo}
 Quando un componente del team istanzia un nuovo processo, bisogna che verifichi i seguenti punti:
@@ -476,11 +484,13 @@ Per gestire nel migliore dei modi le risorse è necessario fin da subito porre u
 \subsection{Gestione dei cambiamenti} \label{_gestioneDeiCambiamenti}
 \subsubsection{Scopo}
 La finalità di questo processo è assicurare una gestione appropriata, affidabile e tracciata
-dei cambiamenti attuati per sopperire a mancanze e adattare tutti gli altri processi durante tutto lo sviluppo del progetto.
+dei cambiamenti attuati per sopperire a mancanze e adattare tutti i processi e gli artefatti durante lo sviluppo del progetto.
 
 \subsubsection{Aspettative}
 Con l'avvio del processo di gestione dei cambiamenti, il gruppo di lavoro si aspetta la minimizzazione dei costi provocati da un cambiamento
 del \textit{way of working}, riuscendo ad elaborare risposte in tempi brevi ai vari problemi che potrebbero sorgere a livello gestionale.
+Inoltre questo processo assicura l'incapsulamento di tutte le informazioni relative a quel cambiamento, di conseguenza è norma del progetto adottare le 
+pratiche qui definite nella gestione dell'Issue Tracking System.
 
 \subsubsection{Denominazione dei cambiamenti}
 Per garantire il tracciamento, viene assegnato un codice univoco a tutti i cambiamenti, così formato:
