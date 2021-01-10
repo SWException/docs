@@ -1,2 +1,249 @@
 \section{Processi primari}
-Scrivere qui
+
+\subsection{Processi di fornitura}
+\label{_processiDiFornitura}
+\subsubsection{Scopo}
+Secondo lo standard ISO/IEC/IEEE 12207:1995 lo scopo del processo di fornitura è quello di consegnare all'acquirente un prodotto o servizio che soddisfa i requisiti richiesti.  Il fornitore determina l'esistenza di un acquirente che necessita di un prodotto o servizio e definisce una strategia di fornitura di quanto richiesto, dopo averne analizzato i rischi e le criticità mediante la redazione di uno Studio di Fattibilità.
+Il fornitore deve inoltre definire un accordo contrattuale che sancisca i rapporti con il \glock{committente} ed in particolare l'accettazione da parte di quest'ultimo dei requisiti e delle tempistiche di consegna.  Si potrà quindi dare avvio alla parte esecutiva stabilendo le procedure e risorse che andranno definite nel \dext{PianoDiProgetto\_1.0.0}.
+
+Il processo di fornitura è composto dalle seguenti attività:
+\begin{itemize}
+  \item avvio;
+  \item approntamento di risposte alle richieste;
+  \item contrattazione;
+  \item pianificazione;
+  \item esecuzione e controllo;
+  \item revisione e valutazione;
+  \item consegna e completamento.
+\end{itemize}
+
+\subsubsection{Descrizione}
+Questa sezione include le norme che i membri del gruppo SWException devono rispettare in tutte le attività di progettazione, sviluppo e consegna del prodotto EmporioLambada al fine di diventare fornitori nei confronti del \glock{proponente} Red Babel e dei committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin.
+\subsubsection{Aspettative}
+Il gruppo intende avviare e intrattenere un costante dialogo con il proponente per avere un feedback continuativo sul lavoro svolto ed in particolare:
+\begin{itemize}
+  \item determinare i bisogni che il committente si prefigge di soddisfare mediante il prodotto finale;
+  \item stabilire vincoli sui requisiti richiesti;
+  \item stimare le tempistiche di lavoro ed i costi;
+  \item effettuare una verifica continua del lavoro;
+  \item prevenire in anticipo eventuali ambiguità o incertezze in merito al prodotto;
+  \item concordare scelte relative alla qualifica del prodotto.
+\end{itemize}
+
+\subsubsection{Studio di Fattibilità}
+\label{_studioDiFattibilita}
+A seguito della presentazione dei \glock{capitolati} d'appalto da parte dei proponenti il Responsbile di Progetto organizza riunioni tra i membri del gruppo al fine di condividere internamente opinioni sui capitolati stessi.
+Lo Studio di Fattibilità è redatto dagli analisti e per ogni capitolato deve indicare:
+\begin{itemize}
+  \item \textbf{Informazioni generali:} ovvero un elenco di informazioni di base che identifichino il progetto, il proponente e il committente;
+  \item \textbf{Descrizione del capitolato:}  evidenziando le caratteristiche principali per il prodotto e gli obiettivi dello stesso;
+  \item \textbf{Finalità del progetto:} le finalità richieste dal capitolato;
+  \item \textbf{Tecnologie interessate:} le tecnologie da impiegare nello svolgimento del progetto;
+  \item \textbf{Aspetti Positivi:} constatati in fase di analisi sulla base delle informazioni reperite in favore delle tecnologie richieste e del contesto di applicazione del prodotto finale;
+  \item \textbf{Criticità e fattori di rischio:} esposizione di eventuali criticità o possibili tali rilevate nella fase di analisi contestualmente agli aspetti positivi del punto precedente;
+  \item \textbf{Conclusioni:} riassunto delle ragioni per cui il gruppo ha deciso di accettare o meno il capitolato in esame.
+\end{itemize}
+
+\subsubsection{PianoDiProgetto}
+Deve essere redatto un piano di progetto da seguire durante lo svolgimento del progetto, in particolare deve contenere:
+
+\begin{itemize}
+  \item \textbf{Analisi dei Rischi:} vengono analizzati approfonditamente i rischi che potrebbero presentarsi e vengono preventivate delle modalità di mitigazione degli stessi. Viene inoltre stimata la probabilità con la quale questi possono presentarsi e il loro livello di gravità;
+  \item \textbf{Modello di Sviluppo:} descrizione del modello di sviluppo adottato;
+  \item \textbf{Pianificazione:} descrizione della pianificazione preventiva dei tempi e delle attività del progetto;
+  \item \textbf{Preventivo e consuntivo:}  viene fornita una stima del lavoro necessario per ciascuna fase ottenendo un preventivo per il costo totale,  fornendo un consuntivo di periodo relativo all'andamento rispetto a quanto preventivato.
+\end{itemize}
+
+\subsubsection{Piano di Qualifica}
+\label{_pianoDiQualifica}
+La stesura di questo documento è demandata ai progettisti per quanto concerne la scelta di opportune strategie in grado di garantire efficacia e qualità nei processi e prodotti e ai verificatori per quanto riguarda la documentazione dell'esito delle prove effettuate secondo quanto stabilito.
+
+
+\subsection{Processi di sviluppo}
+\label{_processiDiSviluppo}
+\subsubsection{Scopo}
+
+L'obiettivo del processo di sviluppo, in accordo con quanto scritto nello standard ISO/IEC/IEEE 12207:1995, è quello di trasformare i requisiti, l'architettura e il design in azioni che permettono la creazione di un prodotto che rispetti i requisiti prestabiliti.
+
+\subsubsection{Descrizione}
+Questo processo definisce le seguenti attività:
+\begin{itemize}
+  \item Analisi dei Requisiti;
+  \item Progettazione dell'architettura;
+  \item Codifica.
+\end{itemize}
+\subsubsection{Processo di Analisi dei Requisiti}
+\label{_processoAnalisiDeiRequisiti}
+\paragraph{Scopo}
+Lo scopo del processo di analisi dei requisiti è quello di individuare tutte le necessità del proponente e convertirle in requisiti espliciti e impliciti, nonché diretti e indiretti. Questa attività è svolta dagli analisti che come risultato redigono un documento in cui all'interno vi sono indicazioni su come:
+\begin{itemize}
+  \item definire lo scopo del prodotto che si andrà a realizzare;
+  \item definire le funzionalità e i requisiti concordati con il proponente;
+  \item fornire ai progettisti dei riferimenti affidabili e precisi per permettere loro una progettazione architetturale accurata;
+  \item definire una base per integrare i raffinamenti che permettono un miglioramento continuo del processo di sviluppo e del prodotto;
+  \item fornire ai verificatori i riferimenti per il processo di verifica;
+  \item fornire una stima oraria del lavoro per definire una stima dei costi.
+\end{itemize}
+
+\paragraph{Descrizione}
+Le informazioni sopracitate sono state ricavate grazie a:
+\begin{itemize}
+  \item capitolato d'appalto;
+  \item verbali esterni;
+  \item verbali interni;
+  \item \glock{casi d'uso}.
+\end{itemize}
+
+\paragraph{Aspettative}
+L'obiettivo è quello di creare un documento formale e completo contenente i \glock{requisiti} richiesti e concordati con il proponente.
+
+\paragraph{Classificazione dei requisiti} \label{_classificazioneRequisiti}
+Ogni requisito è identificato obbligatoriamente da un codice identificativo univoco che non può essere modificato nel corso del tempo e rispetta il seguente pattern: \\
+\textbf{R[Importanza][Tipologia][Codice]}
+
+\begin{itemize}
+  \item 	\textbf{Importanza} : indica l'importanza di tale requisito attraverso i seguenti valori:
+        \begin{itemize}
+          \item 1: requisito obbligatorio;
+          \item 2: requisito desiderabile;
+          \item 3: requisito opzionale.
+        \end{itemize}
+  \item \textbf{Tipologia}
+        \begin{itemize}
+          \item V: requisito di vincolo;
+          \item F: requisito funzionale;
+          \item P: requisito prestazionale;
+          \item Q: requisito di qualità.
+        \end{itemize}
+  \item \textbf{Codice}: identificatore univoco in forma gerarchica padre/figlio.
+        \begin{center}
+          \textbf{[CodiceBase](.[CodiceSottoCaso])*} \\
+        \end{center}
+
+
+        Il CodiceBase identifica il caso d'uso generico. \\
+        Il CodiceSottoCaso, che è opzionale, identifica i sotto casi.
+\end{itemize}
+
+Ogni requisito è corredato dalle seguenti informazioni:
+\begin{itemize}
+  \item \textbf{Descrizione}: descrizione breve e concisa del requisito;
+  \item \textbf{Fonte}: specifica la fonte da cui deriva il requisito:
+        \begin{itemize}
+          \item capitolato;
+          \item verbale interno;
+          \item verbale esterno;
+          \item caso d'uso.
+        \end{itemize}
+\end{itemize}
+
+\paragraph{Classificazione dei casi d'uso} \label{_classificazioneCasiUso}
+Ogni caso d'uso è identificato obbligatoriamente da un codice identificativo univoco che non può essere modificato nel corso del tempo e rispetta il seguente pattern:
+\begin{center}
+  \textbf{UC[CodiceBase].[CodiceSottoCaso]}
+\end{center}
+
+dove:
+
+\begin{itemize}
+  \item \textbf{CodiceBase}: numero che identifica il caso d'uso generico;
+  \item \textbf{CodiceSottoCaso}: numero progressivo che identifica i sottocasi.  Può a sua volta includere altri livelli.
+\end{itemize}
+
+Ogni caso d'uso è corredato delle seguenti informazioni:
+
+\begin{itemize}
+  \item \textbf{Identificativo}: codice univoco formato secondo il pattern sopra illustrato;
+  \item \textbf{Nome}: stringa testuale che identifica velocemente il caso d'uso;
+  \item \textbf{Descrizione schematica}: rappresentazione grafica opzionale attraverso UML al fine di rendere rapidamente comprensibile il sistema in esame e gli attori in esso coinvolti;
+  \item \textbf{Descrizione testuale}: descrizione testuale del caso d'uso in maniera coincisa;
+  \item \textbf{Attori}: descrizione degli attori individuati che interagiscono con il sistema;
+  \item \textbf{Precondizione}: stato del sistema prima del verificarsi di quanto descritto nel caso d'uso;
+  \item \textbf{Input}: eventuale input esterno fornito dall'attore;
+  \item \textbf{Postcondizione}: stato del sistema dopo il verificarsi del caso d'uso;
+  \item \textbf{Scenario principale}: elenco numerato del flusso degli eventi riferendosi eventualmente anche ad altri casi d'uso;
+  \item \textbf{Inclusioni}: eventuale elenco di inclusioni coinvolte;
+  \item \textbf{Estensioni}: eventuale elenco degli eventi che possono manifestarsi durante l'esecuzione del caso d'uso a seguito di un evento imprevisto che causa un'alterazione del normale flusso degli eventi;
+  \item \textbf{Generalizzazioni}: spiegazione di una generalizzazione effettuata.
+\end{itemize}
+
+\paragraph{Classificazione dei rischi} \label{_classificazioneDeiRischi}
+Di seguito viene presentata la modalità di identificazione dei rischi, in cui ad ogni rischio viene associato un codice unico in forma:
+\begin{center}
+  \textbf{RS[Tipologia][Numero]}
+\end{center}
+Dove:
+\begin{itemize}
+  \item \textbf{Tipologia}: lettera univoca che definisce i tipi di rischi identificati.
+        \newline Possono essere: personale (P), tecnologico (T), organizzativo (O) e di requisito (R);
+  \item \textbf{Numero}: identifica la successione dei rischi di una tipologia precisa.
+\end{itemize}
+
+\subsubsection{Progettazione dell'architettura}
+\paragraph{Scopo}
+L'attività di progettazione si basa su quanto svolto nel processo di analisi dei requisiti per definire le caratteristiche del prodotto software in grado di soddisfare i requisiti imposti dal proponente.  Tale fase deve garantire la qualità del prodotto sviluppato ed organizzare, ottimizzando l'uso delle risorse, la fase implementativa sezionando il problema in unità di complessità ridotta al fine di facilitare il lavoro di programmazione.
+
+\paragraph{Descrizione}
+Le parti principali sono le seguenti:
+\begin{itemize}
+  \item \textbf{Technology baseline}: contiene le specifiche della progettazione ad alto livello del prodotto e delle sue componenti, l'elenco dei diagrammi UML che saranno utilizzati per la realizzazione dell'architettura e i test di verifica;
+
+  \item \textbf{Product baseline}: dettaglia ulteriormente l'attività di progettazione, integrando ciò che è riportato nella Technology baseline. Definisce i test necessari alla verifica;
+
+  \item \textbf{Diagrammi UML}: diagrammi che permettono una facile comprensione della soluzione progettuale redatta dai progettisti. Saranno disponibili:
+        \begin{itemize}
+          \item diagrammi delle attività;
+          \item diagrammi delle classi;
+          \item diagrammi dei package;
+          \item diagrammi dei casi d'uso;
+          \item diagrammi di sequenza.
+        \end{itemize}
+  \item \textbf{Tecnologie utilizzate}: devono essere descritte le tecnologie che si prevede di utilizzare nel progetto specificandone pregi e difetti;
+  \item \textbf{\glock{Design pattern}}: devono essere descritti i design pattern utilizzati per realizzare l'architettura corredati da una descrizione, anche grafica, che ne descriva il significato e la struttura;
+  \item \textbf{Tracciamento delle componenti}: ogni requisito deve riferirsi al componente che lo soddisfa;
+  \item \textbf{Test di integrazione}: l'unione delle parti permette di verificare che ogni componente del sistema funzioni nella maniera voluta;
+  \item \textbf{Product baseline}: redatta dal progettista, dovrà includere:
+        \begin{itemize}
+          \item \textbf{definizione delle classi}: ogni classe dovrà essere descritta in modo breve e coinciso;
+          \item \textbf{tracciamento delle classi}: ogni requisito deve essere tracciato in modo che per ognuno esista una classe che lo soddisfi;
+          \item \textbf{test di unità}: devono essere definiti al fine di verificare che le parti funzionino individualmente nel modo stabilito.
+        \end{itemize}
+\end{itemize}
+
+\subsubsection{Codifica}
+\paragraph{Scopo}
+Questa sezione ha lo scopo di normare l'effettiva realizzazione del prodotto software.  In questo processo si concretizza attraverso la programmazione quanto è stato progettato.
+
+\paragraph{Descrizione}
+La scrittura del codice dovrà perseguire gli obiettivi di qualità definiti nel \dext{PianoDiQualifica\_1.0.0}.
+
+\paragraph{Aspettative}
+Obiettivo dell'attività è la creazione del prodotto software conforme alle aspettative e richieste del proponente.  L'adozione di regole specifiche in questa fase è fondamentale per perseguire gli obiettivi di qualità e poter agevolare le successive fasi di manutenzione.
+
+\paragraph{Stile di Codifica}
+Ciascun programmatore è tenuto a rispettare le seguenti norme:
+
+\begin{itemize}
+  \item \textbf{indentazione}: i blocchi innestati devono essere correttamente indentati, usando per ciascun livello di indentazione quattro (4) spazi (fanno eccezione i commenti).  Tale norma può essere facilmente perseguita mediante un' opportuna configurazione dell'editor di codice;
+  \item \textbf{parentesizzazione}: si stabilisce che le parentisi di delimitazione dei costrutti vanno inserite in linea e non al di sotto di essi;
+  \item \textbf{scrittura dei metodi}: se possibile è auspicabile che tutti i metodi rispettino le seguenti norme ove possibile:
+        \begin{itemize}
+          \item prima lettera del nome minuscolo utilizzando una notazione "camel case" per le successive parole;
+          \item tra il nome del metodo e l'eventuale parentesi di apertura deve essere inserita una singola spaziatura;
+        \end{itemize}
+  \item \textbf{classi}: i nomi delle classi devono iniziare sempre con una lettera maiuscola;
+  \item \textbf{costanti}: i nome delle costanti devono essere tutti in maiuscolo;
+  \item \textbf{lingua}: i nomi di variabili, costruttori, metodi, classi e commenti vanno scritti in lingua inglese.
+\end{itemize}
+
+\paragraph{Metriche}
+\label{_metricheQualitaCodice}
+In questa sezione verranno elencate le \glock{metriche} finora individuate per mantenere una buona qualità del codice:
+\begin{itemize}
+  \item complessità ciclomatica: MPD-S1;
+  \item complessità delle espressioni booleane: MPD-S2;
+  \item lunghezza delle righe di codice: MPD-S3;
+  \item copertura del codice da parte dei test automatici (code coverage): MPD-S4.
+\end{itemize}
+
+Le metriche sopra elencate sono spiegate nel dettaglio nell'appendice \S\ref{_metricheCodiceSorgenteApp}.
