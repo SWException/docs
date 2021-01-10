@@ -17,8 +17,41 @@ jobs:
     - name: Checkout repo content
       uses: actions/checkout@v1
     
-    - name: Search and Compiles Latex Files
+    - name: Search Latex Files
+      run: find . -name "main.tex" | sed -e 's/\/main.tex//g' | sed -e 's/\.\///g' > filesList
+    
+    - name: Compiles Latex Files
       uses: Jatus93/Latex-multicompiler@v1.0
       with:
-        path_to_list: .github/filesList
-        artifact: false
+        path_to_list: filesList
+        artifact: true
+    
+    - name: GulpeaseCheck
+      uses: Jatus93/GulpeaseAction@master
+      with:
+        directory: Documents/
+    
+    - name: SpellCheck
+      uses: Jatus93/spellCheck@master
+      with:
+        directory: ./Documents
+        languages: "en_GB;en_US;italiano"
+    
+    - name: Upload artifact PDF
+      uses: actions/upload-artifact@v2
+      with:
+        name: pdf-artifact
+        path: Documents/*.pdf # path/to/artifact
+    
+    - name: Upload artifact Gulpease
+      uses: actions/upload-artifact@v2
+      with:
+        name: gulpease
+        path: Documents/Gulpease/ # path/to/artifact
+        
+    - name: Upload artifact SpellCheck
+      uses: actions/upload-artifact@v2
+      with:
+        name: spell-check-errors
+        path: Documents/spellCheck/ # path/to/artifact
+
