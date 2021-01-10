@@ -1,5 +1,5 @@
 % ---------------------------
-%	  	  [ Verbale ]
+%	  	  [ Piano di qualifica ]
 %	----------------------
 %	    SWException
 %  Progetto di SWE (2020-21)
@@ -12,30 +12,37 @@
 
 % --------------
 
-\newcommand{\docNome}{ Verbale Interno del 2020-12-14 }
-\newcommand{\docVersione}{0.1.0}
-\newcommand{\docStatus}{verificato}
-\newcommand{\docUso}{interno}
+\newcommand{\docNome}{ PIANO DI QUALIFICA }
+\newcommand{\docVersione}{1.0.0}
+\newcommand{\docNomeProgetto}{ EmporioLambda: piattaforma di e-commerce in stile Serverless }
+\newcommand{\docStatus}{approvato}
+\newcommand{\docUso}{esterno}
+\newcommand{\docDescrizione}{
+    \begin{center}
+    Documento di definizione delle strategie di verifica e validazione
+    \end{center}
+}
 
 % --------------
 
 \newcommand{\docRedattori}{
-	Nicole Davanzo
+	Marco Canovese \\&
+    Michele Veronesi \\&
+    Gianmarco Guazzo
+    
 }
 \newcommand{\docVerificatori}{
-	Michele Veronesi
+	Stefano Lazzaroni \\&
+    Francesco Trolese
 }
 \newcommand{\docApprovazione}{
-    TODO
-}
-
-\newcommand{\docNomeProgetto}{
-    EmporioLambda: piattaforma e-commerce in stile serverless
+    Nicole Davanzo
 }
 
 \newcommand{\nomeCorso}{
     Ingegneria del Software - Università degli Studi di Padova
 }
+
 % ----- NON MODIFICARE SOTTO QUESTA RIGA -----
 
 % ---------------------------
@@ -71,20 +78,19 @@
 
 \newpage
 \pagenumbering{arabic}
+\addtocounter{table}{-1}
 \include{res/registro}
 
+\tableofcontents
+\listoffigures
+\listoftables
 
 % Contenuto
 
 \newpage
-\input{res/contenuto}
+\input{res/sezioni}
 
 
-
-% Registro Decisioni
-
-\newpage
-\input{res/tracciamenti}
 
 \end{document}
 
