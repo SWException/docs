@@ -1,5 +1,5 @@
 % ---------------------------
-%	  	  [ Verbale ]
+%	  	  [ Norme di progetto ]
 %	----------------------
 %	    SWException
 %  Progetto di SWE (2020-21)
@@ -12,29 +12,33 @@
 
 % --------------
 
-\newcommand{\docNome}{ NOME DOCUMENTO }
-\newcommand{\docVersione}{0.0.1}
-\newcommand{\docNomeProgetto}{ NOME PROGETTO }
-\newcommand{\docStatus}{in redazione}
+
+\newcommand{\docNome}{ NORME DI PROGETTO }
+\newcommand{\docVersione}{1.0.0}
+\newcommand{\docNomeProgetto}{ EmporioLambda: piattaforma di e-commerce in stile Serverless }
+\newcommand{\docStatus}{approvato}
 \newcommand{\docUso}{interno}
 \newcommand{\docDescrizione}{
     \begin{center}
-    Breve descrizione del documento
+    Documento di definizione del \textit{Way of Working}
     \end{center}
+
 }
 
 % --------------
 
 \newcommand{\docRedattori}{
-	nome cognome \\&
-    nome cognome
+    Marco Canovese \\&
+    Ivan Furlan \\&
+    Nicole Davanzo
 }
 \newcommand{\docVerificatori}{
-	nome cognome \\&
-    nome cognome
+    Michele Veronesi \\&
+    Gianmarco Guazzo \\&
+    Stefano Lazzaroni
 }
 \newcommand{\docApprovazione}{
-    nome cognome
+    Francesco Trolese
 }
 
 \newcommand{\nomeCorso}{
@@ -46,16 +50,16 @@
 % ---------------------------
 % Configurazioni
 % ---------------------------
-
+\DeclareUnicodeCharacter{2212}{-}
 \documentclass[11pt,a4paper,table]{article}
 
-\input{res/configurazione}    
+\input{res/configurazione}
 
 % ---------------------------
 % Dati frontespizio
 % ---------------------------
 
-\title{ \hr \huge \textsc{\docNome} \\ 
+\title{ \hr \huge \textsc{\docNome} \\
         \vspace{11pt} \large \textsc{\docNomeProgetto} \hr}
 
 \author{} % Non toccare
@@ -65,7 +69,7 @@
 % Composizione del documento
 % ---------------------------
 
-\begin{document} 
+\begin{document}
 
 % Frontespizio
 
@@ -79,6 +83,7 @@
 \include{res/registro}
 
 \tableofcontents
+\listoffigures
 
 % Contenuto
 
