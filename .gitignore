@@ -11,11 +11,7 @@
 *.fdb_latexmk
 *.orig
 *.glsdefs
-
-.vscode/*
-*.lot
-*.lof
 *.vs
 .vscode/*
-*.lof
 *.lot
+*.lof
