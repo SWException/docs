@@ -12,4 +12,3 @@ find . -type f -name "*.out" -delete;
 find . -type f -name "*.orig" -delete;
 find . -type f -name "*.lof" -delete;
 find . -type f -name "*.lot" -delete;
-
