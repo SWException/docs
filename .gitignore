@@ -11,7 +11,14 @@
 *.fdb_latexmk
 *.orig
 *.glsdefs
+<<<<<<< HEAD
+
+.vscode/*
+*.lot
+*.lof
+=======
 *.vs
 .vscode/*
 *.lof
 *.lot
+>>>>>>> develop
