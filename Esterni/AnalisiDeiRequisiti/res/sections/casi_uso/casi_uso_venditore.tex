@@ -86,7 +86,7 @@
 
 %17.4
 \stepsubUserCase
-\subsubsection{\valuesubUserCase- Ricerca lista ordini}
+\subsubsection{\valuesubUserCase- Ricerca nella lista ordini}
 \labelsubUserCase
 \begin{itemize}
     \item \textbf{Attore Primario:} venditore autenticato;
@@ -100,6 +100,46 @@
         \end{enumerate}
 \end{itemize}
 
+%17.5
+\stepsubUserCase
+\subsubsection{\valuesubUserCase - Filtri}
+\labelsubUserCase
+\begin{itemize}
+    \item \textbf{Attore Primario:} venditore autenticato;
+    \item \textbf{Descrizione:} il venditore può inserire ulteriori filtri per raffinare la visualizzazione degli ordini;
+    \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini;
+    \item \textbf{Postcondizione:} il venditore visualizza la lista degli ordini aggiornata con i filtri applicati;
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il venditore seleziona il filtro;
+              \item il venditore modifica il valore del filtro;
+              \item il venditore visualizza i prodotti secondo le nuove politiche;
+          \end{enumerate}
+    \item \textbf{Specializzazioni: }
+          \begin{itemize}
+              \item il venditore filtra gli ordini per lo stato (\hyperref[UC17.5.1]{UC17.5.1});
+          \end{itemize}
+\end{itemize}
+
+%17.5.1
+\stepsubsubUserCase
+\paragraph{\valuesubsubUserCase - Inserimento filtro stato ordine}
+\labelsubsubUserCase
+\begin{itemize}
+    \item \textbf{Attore Primario:} venditore autenticato;
+    \item \textbf{Descrizione:} questa funzionalità permette al venditore di filtrare gli ordini visualizzati per stato;
+    \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini;
+    \item \textbf{Postcondizione:} il venditore visualizza la lista degli ordini aggiornata con il filtro applicato;
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il venditore seleziona lo stato desiderato;
+              \item il venditore visualizza gli ordini che corrispondono alla scelta;
+          \end{enumerate}
+    \item \textbf{Estensioni:}
+          \begin{itemize}
+              \item la pagina visualizza una lista vuota perché nessun prodotto corrisponde alle politiche di visualizzazione.
+          \end{itemize}
+\end{itemize}
 
 %18
 \stepUserCase
