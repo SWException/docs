@@ -62,6 +62,7 @@
           \begin{enumerate}
               \item il cliente può visualizzare tutti i prodotti che corrispondono alle politiche di visualizzazione;
               \item il cliente può applicare ulteriori filtri (\hyperref[UC4.1]{UC4.1});
+              \item il cliente può ordinare i prodotti per prezzo.
           \end{enumerate}
     \item \textbf{Estensioni:}
           \begin{itemize}
@@ -129,6 +130,22 @@
           \begin{itemize}
               \item la pagina visualizza una PLP vuota perché nessun prodotto corrisponde alle politiche di visualizzazione.
           \end{itemize}
+\end{itemize}
+
+%4.2
+\stepsubUserCase
+\subsubsection{\valuesubUserCase - Ordinamento prodotti per prezzo}
+\labelsubUserCase
+\begin{itemize}
+    \item \textbf{Attore Primario:} cliente generico;
+    \item \textbf{Descrizione:} il cliente può ordinare i prodotti per prezzo crescente o decrescente;
+    \item \textbf{Precondizione:} il cliente si deve trovare in una PLP (\hyperref[UC4]{UC4});
+    \item \textbf{Postcondizione:} il cliente visualizza i prodotti ordinati;
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il cliente seleziona se ordinare per prezzo crescente o decrescente;
+              \item il cliente visualizza la lista prodotti ordinata.
+          \end{enumerate}
 \end{itemize}
 
 %5
