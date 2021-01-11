@@ -32,7 +32,7 @@
               \item il venditore può contattare il cliente che ha effettuato un determinato ordine (\hyperref[UC16]{UC16});
               \item il venditore può stampare la bolla di un ordine (\hyperref[UC17.2]{UC17.2});
               \item il venditore può visualizzare i dettagli di un determinato ordine (\hyperref[UC17.3]{UC17.3}).
-              \item il venditore può ordinare la lista (\hyperref[UC17.4]{UC17.4}) 
+              \item il venditore può cercare un determinato ordine nella lista (\hyperref[UC17.4]{UC17.4}) 
             \end{enumerate}
 \end{itemize}
 
@@ -86,19 +86,20 @@
 
 %17.4
 \stepsubUserCase
-\subsubsection{\valuesubUserCase- Ordinamento lista ordini}
+\subsubsection{\valuesubUserCase- Ricerca lista ordini}
 \labelsubUserCase
 \begin{itemize}
     \item \textbf{Attore Primario:} venditore autenticato;
-    \item \textbf{Descrizione}: il venditore vuole ordinare la lista degli ordini per un determinato campo;
+    \item \textbf{Descrizione}: il venditore vuole cercare un determinato ordine all'interno della lista;
     \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini;
-    \item \textbf{Postcondizione:} il venditore visualizza la lista secondo l'ordinamento richiesto;
+    \item \textbf{Postcondizione:} il venditore visualizza l'ordine richiesto;
     \item \textbf{Scenario principale:}
         \begin{enumerate}
-            \item il venditore seleziona il campo desiderato per l'ordinamento;
-            \item il venditore visualizza la lista ordinata.
+            \item il venditore inserisce il campo desiderato per la ricerca;
+            \item il venditore visualizza l'ordine richiesto.
         \end{enumerate}
 \end{itemize}
+
 
 %18
 \stepUserCase
