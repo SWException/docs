@@ -598,7 +598,8 @@
     \item \textbf{Attore prmario:} cliente autenticato;
     \item \textbf{Descrizione:} il cliente vuole annullare un ordine effettuato;
     \item \textbf{Precondizione:} il cliente deve aver effettuato un ordine e trovarsi nella sezione gestione degli ordini;
-    \item \textbf{Postcondizione:} il cliente deve aver contatto il venditore per l'annullamento;
+    \item \textbf{Input:} il cliente clicca sul pulsante per l'annullamento dell'ordine;
+    \item \textbf{Postcondizione:} il cliente ha contatto il venditore per l'annullamento;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
               \item il cliente sceglie ordine da annullare;
@@ -618,7 +619,8 @@
     \item \textbf{Attore prmario:} cliente autenticato;
     \item \textbf{Descrizione:} il cliente vuole contattare il venditore per un problema (errore indirizzo, domande, etc.);
     \item \textbf{Precondizione:} il cliente deve trovarsi nella pagina della gestione degli ordini e quindi aver effettuato l'ordine;
-    \item \textbf{Postcondizione:} il cliente deve aver contatto il venditore per richiedere assistenza;
+    \item \textbf{Input:} il cliente clicca sul pulsante per l'assistenza;
+    \item \textbf{Postcondizione:} il cliente ha contatto il venditore per richiedere assistenza;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
               \item il cliente decide di contattare l'assistenza;
@@ -638,7 +640,8 @@
     \item \textbf{Attore prmario:} cliente autenticato;
     \item \textbf{Descrizione:} il cliente vuole effettuare un reso di un ordine ricevuto;
     \item \textbf{Precondizione:} il cliente deve aver effettuato un ordine, averlo ricevuto, ed essere nella pagina di gestione degli ordini;
-    \item \textbf{Postcondizione:} il cliente deve aver contatto il venditore per il reso;
+    \item \textbf{Input:} il cliente clicca sul pulsante per il reso dell'ordine;
+    \item \textbf{Postcondizione:} il cliente ha contatto il venditore per il reso;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
               \item il cliente decide di effettuare un reso;
@@ -657,7 +660,8 @@
 \begin{itemize}
     \item \textbf{Attore prmario:} cliente autenticato;
     \item \textbf{Descrizione:} il cliente vuole visualizzare il riepilogo dell'ordine effettuato;
-    \item \textbf{Precondizione:} il cliente deve aver effettuato l'ordine e trovarsi nella pagina di gestione degli ordini;
+    \item \textbf{Precondizione:} il cliente ha effettuato l'ordine e deve trovarsi nella pagina di gestione degli ordini;
+    \item \textbf{Input:} il cliente clicca sul pulsante per la visualizzazione del riepilogo dell'ordine;
     \item \textbf{Postcondizione:} il cliente visualizza il riepilogo;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
@@ -672,8 +676,9 @@
 \labelUserCase
 \begin{itemize}
     \item \textbf{Attore prmario:} cliente autenticato;
-    \item \textbf{Descrizione:} il cliente vuole uscire dal sito;
+    \item \textbf{Descrizione:} il cliente vuole effettuare il logout;
     \item \textbf{Precondizione:} il cliente è autenticato al sito;
+    \item \textbf{Input:} il cliente clicca sul pulsante per il logout;
     \item \textbf{Postcondizione:} il cliente risulta non autenticato nel sito;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
@@ -688,7 +693,7 @@
 \labelUserCase
 \begin{itemize}
     \item \textbf{Attore prmario:} cliente generico;
-    \item \textbf{Descrizione:} il cliente vuole/deve contattare il venditore attraverso il form di contatto;
+    \item \textbf{Descrizione:} il cliente vuole contattare il venditore attraverso il form di contatto;
     \item \textbf{Precondizione:} il cliente sta navigando il sito, o arriva da \hyperref[UC13.1]{UC13.1}, \hyperref[UC13.2]{UC13.2} o \hyperref[UC13.3]{UC13.3};
     \item \textbf{Postcondizione:} il cliente riesce a contattare il venditore;
     \item \textbf{Scenario principale:}
@@ -707,9 +712,9 @@
 \labelUserCase
 \begin{itemize}
     \item \textbf{Attore prmario:} venditore autenticato;
-    \item \textbf{Descrizione:} il venditore deve contattare il cliente;
+    \item \textbf{Descrizione:} il venditore deve poter contattare il cliente;
     \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini (\hyperref[UC17]{UC17}) o nella lista clienti (\hyperref[UC18]{UC18});
-    \item \textbf{Postcondizione:} il venditore deve aver contattato il cliente con successo;
+    \item \textbf{Postcondizione:} il venditore ha contattato il cliente con successo;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
               \item il venditore ha aperto il form di contatto;
@@ -726,6 +731,7 @@
     \item \textbf{Attore prmario:} venditore autenticato;
     \item \textbf{Descrizione:} il venditore vuole visualizzare tutta la lista degli ordini effettuati dai clienti;
     \item \textbf{Precondizione:} il venditore deve essere autenticato;
+    \item \textbf{Input:} il venditore clicca sul pulsante per la lista degli ordini;
     \item \textbf{Postcondizione:} il venditore riesce a visualizzare la lista;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
@@ -744,9 +750,10 @@
 \labelsubUserCase
 \begin{itemize}
     \item \textbf{Attore prmario:} venditore autenticato;
-    \item \textbf{Descrizione:} il venditore vuole modificare lo stato dell'ordine;
+    \item \textbf{Descrizione:} il venditore vuole modificare lo stato di un ordine;
     \item \textbf{Precondizione:} il venditore deve trovarsi nella sezione di gestione degli ordini;
-    \item \textbf{Postcondizione:} il venditore modifica lo stato di un ordine;
+    \item \textbf{Input:} il venditore sceglie un ordine a cui modifica lo stato;
+    \item \textbf{Postcondizione:} il venditore ha modificato lo stato dell'ordine scelto;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
               \item il venditore seleziona un ordine dalla lista;
@@ -762,7 +769,8 @@
     \item \textbf{Attore prmario:} venditore autenticato;
     \item \textbf{Descrizione:} il venditore vuole stampare la bolla per l'ordine;
     \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini;
-    \item \textbf{Postcondizione:} il venditore stampa la bolla;
+    \item \textbf{Input:} il venditore sceglie un ordine di cui stampare la bolla;
+    \item \textbf{Postcondizione:} il venditore ha stampato la bolla;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
               \item il venditore seleziona un determinato ordine;
@@ -778,6 +786,7 @@
     \item \textbf{Attore prmario:} venditore autenticato;
     \item \textbf{Descrizione:} il venditore vuole visualizzare i dettagli di un determinato ordine;
     \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini e selezionarne uno;
+    \item \textbf{Input:} il venditore sceglie un ordine di cui visualizzarne i dettagli;
     \item \textbf{Postcondizione:} il venditore visualizza tutti i dettagli dell'ordine;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
@@ -794,6 +803,7 @@
     \item \textbf{Attore prmario:} venditore autenticato;
     \item \textbf{Descrizione}: il venditore vuole cercare un determinato ordine all'interno della lista;
     \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini;
+    \item \textbf{Input:} il venditore inserisce il numero dell'ordine da cercare;
     \item \textbf{Postcondizione:} il venditore visualizza l'ordine richiesto;
     \item \textbf{Scenario principale:}
         \begin{enumerate}
@@ -814,30 +824,32 @@
     \item \textbf{Attore prmario:} venditore autenticato;
     \item \textbf{Descrizione:} il venditore vuole visualizzare la lista dei clienti del sito;
     \item \textbf{Precondizione:} il venditore deve essere autenticato;
+    \item \textbf{Input:} il venditore clicca sul pulsante per accedere alla lista clienti;
     \item \textbf{Postcondizione:} il venditore visualizza tutta la lista clienti;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
               \item il venditore visualizza la lista;
               \item il venditore può contattare un cliente (\hyperref[UC16]{UC16}):
-              \item il venditore può ricercare un cliente tramite la sua email.
+              \item il venditore può ricercare un cliente tramite la sua e-mail (\hyperref[UC18.1]{UC18.1}).
           \end{enumerate}
 \end{itemize}
 
 %18.1
 \stepsubUserCase
-\subsubsection{\valuesubUserCase- Ricerca cliente}
+\subsubsection{\valuesubUserCase- Ricerca cliente tramite e-mail}
 \labelsubUserCase
 \begin{itemize}
     \item \textbf{Attore prmario:} venditore autenticato;
-    \item \textbf{Descrizione:} il venditore ricercare un cliente iscritto alla piattaforma;
+    \item \textbf{Descrizione:} il venditore ricerca un cliente iscritto alla piattaforma;
     \item \textbf{Precondizione:} il venditore deve trovarsi nella lista clienti;
-    \item \textbf{Postcondizione:} il venditore visualizza il cliente ricercato;
+    \item \textbf{Input:} inserisce l'e-mail da ricercare;
+    \item \textbf{Postcondizione:} il venditore visualizza il risultato della ricerca;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
               \item il venditore inserisce l'email del cliente nell'apposito form;
               \item il venditore visualizza il cliente.
           \end{enumerate}
-    \item \textbf{Estensioni:} nel caso in cui l'email inserita non rappresenti nessun cliente, dev'essere visualizzato il relativo messaggio d'errore.
+    \item \textbf{Estensioni:} nel caso in cui l'e-mail inserita non rappresenti nessun cliente, dev'essere visualizzato il relativo messaggio d'errore.
 \end{itemize}
 
 
@@ -884,7 +896,7 @@
 \begin{itemize}
     \item \textbf{Attore prmario:} venditore autenticato;
     \item \textbf{Descrizione:} il venditore effettua la modifica di una aliquota IVA già presente nel sistema;
-    \item \textbf{Precondizione:} il venditore ha cliccato nel bottone per effettuare la modifica di un’aliquota IVA;
+    \item \textbf{Precondizione:} il venditore si trova sulla pagina per la gestione delle aliquote IVA ed è presente almeno un'aliquota nel sistema;
     \item \textbf{Input:} il venditore preme su un pulsante dedicato alla modifica di un'aliquota IVA;
     \item \textbf{Postcondizione:} è stata modificata l'aliquota IVA selezionata;
     \item \textbf{Scenario principale:} il venditore ha cliccato nel bottone di modifica di un’aliquota IVA già presente nel sistema per apportare delle modifiche, può quindi effettuare le seguenti azioni:
@@ -901,9 +913,9 @@
 \begin{itemize}
     \item \textbf{Attore prmario:} venditore autenticato;
     \item \textbf{Descrizione:} il venditore effettua l'eliminazione di una aliquota IVA già presente nel sistema;
-    \item \textbf{Precondizione:} il venditore ha cliccato nel bottone per effettuare la modifica di un’aliquota IVA;
+    \item \textbf{Precondizione:} il venditore si trova sulla pagina per la gestione delle aliquote IVA ed è presente almeno un'aliquota nel sistema;
     \item \textbf{Input:} il venditore preme su un pulsante dedicato all'eliminazione di un'aliquota IVA;
-    \item \textbf{Postcondizione:} l'aliquota IVA selezionata è stata modificata;
+    \item \textbf{Postcondizione:} l'aliquota IVA selezionata è stata eliminata;
     \item \textbf{Scenario principale:} il venditore ha cliccato nel bottone per eliminare un’aliquota IVA già presente nel sistema ed essa viene eliminata.
 \end{itemize}
 
@@ -916,15 +928,14 @@
     \item \textbf{Descrizione:} il venditore ha possibilità di visualizzare l’elenco prodotti inseriti nel sistema e di effettuare una delle azioni rese disponibili;
     \item \textbf{Precondizione:} il venditore si trova nella dashboard di amministrazione;
     \item \textbf{Input:} il venditore preme sul pulsante per l'accesso alla pagina di amministrazione prodotti;
-    \item \textbf{Postcondizione:} il venditore ha visione della tabella relativa dei prodotti già presenti nel sistema e può intraprendere una delle azioni disponibili;
+    \item \textbf{Postcondizione:} il venditore ha visione della tabella relativa dei prodotti già presenti nel sistema;
     \item \textbf{Scenario principale:} il venditore ha cliccato nel bottone relativo alla gestione dei prodotti e ha visione della tabella riepilogativa dei vari prodotti presenti nel sistema, può scegliere di effettuare una delle seguenti azioni:
           \begin{enumerate}
               \item aggiunta prodotto (\hyperref[UC20.1]{UC20.1});
               \item modifica prodotto (\hyperref[UC20.2]{UC20.2});
               \item rimozione prodotto (\hyperref[UC20.3]{UC20.3});
               \item ricerca prodotto per nome (\hyperref[UC20.4]{UC20.4});
-              \item applicazione filtri prodotti (\hyperref[UC20.5]{UC20.5});
-              \item aggiorna giacenza.
+              \item applicazione filtri prodotti (\hyperref[UC20.5]{UC20.5}).
           \end{enumerate}
 \end{itemize}
 
@@ -1009,7 +1020,7 @@
 \labelsubUserCase
 \begin{itemize}
     \item \textbf{Attore prmario:} venditore autenticato;
-    \item \textbf{Descrizione:} il venditore filtrare i prodotti;
+    \item \textbf{Descrizione:} il venditore può filtrare i prodotti;
     \item \textbf{Precondizione:} il venditore si trova nella pagina di amministrazione prodotti;
     \item \textbf{Input:} il venditore seleziona un filtro;
     \item \textbf{Postcondizione:} si visualizzano i prodotti che rispettano le condizioni;
@@ -1130,7 +1141,7 @@
     \item \textbf{Attore prmario:} venditore non autenticato;
     \item \textbf{Descrizione:} autenticazione del venditore nel backoffice;
     \item \textbf{Precondizione:} il venditore non è autenticato;
-    \item \textbf{Input:} il venditore chiede di accedere al backoffice inserendo il link al portale di amministrazione;
+    \item \textbf{Input:} il venditore inserisce le credenziali;
     \item \textbf{Postcondizione:} il venditore è autenticato;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
