@@ -6,7 +6,7 @@
 \begin{itemize}
     \item \textbf{Attore Primario:} venditore autenticato;
     \item \textbf{Descrizione:} il venditore deve contattare il cliente;
-    \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini \hyperref[UC17]{UC17} o nella lista clienti\hyperref[UC18]{UC18};
+    \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini (\hyperref[UC17]{UC17}) o nella lista clienti (\hyperref[UC18]{UC18});
     \item \textbf{Postcondizione:} il venditore deve aver contattato il cliente con successo;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
@@ -30,9 +30,10 @@
               \item il venditore visualizza tutta la lista degli ordini effettuati dai clienti;
               \item il venditore può modificare lo stato di un ordine (\hyperref[UC17.1]{UC17.1});
               \item il venditore può contattare il cliente che ha effettuato un determinato ordine (\hyperref[UC16]{UC16});
-              \item può stampare la bolla di un ordine (\hyperref[UC17.2]{UC17.2});
-              \item può visualizzare i dettagli di un determinato ordine (\hyperref[UC17.3]{UC17.3}).
-          \end{enumerate}
+              \item il venditore può stampare la bolla di un ordine (\hyperref[UC17.2]{UC17.2});
+              \item il venditore può visualizzare i dettagli di un determinato ordine (\hyperref[UC17.3]{UC17.3}).
+              \item il venditore può ordinare la lista (\hyperref[UC17.4]{UC17.4}) 
+            \end{enumerate}
 \end{itemize}
 
 %17.1
@@ -83,6 +84,22 @@
           \end{enumerate}
 \end{itemize}
 
+%17.4
+\stepsubUserCase
+\subsubsection{\valuesubUserCase- Ordinamento lista ordini}
+\labelsubUserCase
+\begin{itemize}
+    \item \textbf{Attore Primario:} venditore autenticato;
+    \item \textbf{Descrizione}: il venditore vuole ordinare la lista degli ordini per un determinato campo;
+    \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini;
+    \item \textbf{Postcondizione:} il venditore visualizza la lista secondo l'ordinamento richiesto;
+    \item \textbf{Scenario principale:}
+        \begin{enumerate}
+            \item il venditore seleziona il campo desiderato per l'ordinamento;
+            \item il venditore visualizza la lista ordinata.
+        \end{enumerate}
+\end{itemize}
+
 %18
 \stepUserCase
 \subsection{\valueUserCase - Lista clienti}
@@ -111,9 +128,9 @@
     \item \textbf{Postcondizione:} il venditore ha visione della tabella relativa alle aliquote IVA già presenti nel sistema e può intraprendere una delle azioni disponibili;
     \item \textbf{Scenario principale:} il venditore ha cliccato nel bottone relativo alla gestione delle tasse e ha visione della tabella riepilogativa delle varie aliquote IVA presenti nel sistema, può scegliere di effettuare una delle seguenti azioni:
           \begin{enumerate}
-              \item aggiunta aliquote IVA;
-              \item rimozione aliquote IVA;
-              \item modifica aliquota IVA.
+              \item aggiunta aliquote IVA (\hyperref[UC19.1]{UC19.1});
+              \item rimozione aliquote IVA (\hyperref[UC19.2]{UC19.2});
+              \item modifica aliquota IVA (\hyperref[UC19.3]{UC19.3}).
           \end{enumerate}
 \end{itemize}
 
@@ -176,9 +193,9 @@
     \item \textbf{Postcondizione:} il venditore ha visione della tabella relativa dei prodotti già presenti nel sistema e può intraprendere una delle azioni disponibili;
     \item \textbf{Scenario principale:} il venditore ha cliccato nel bottone relativo alla gestione dei prodotti e ha visione della tabella riepilogativa dei vari prodotti presenti nel sistema, può scegliere di effettuare una delle seguenti azioni:
           \begin{enumerate}
-              \item aggiunta prodotto;
-              \item modifica prodotto;
-              \item rimuovi prodotto;
+              \item aggiunta prodotto (\hyperref[UC20.1]{UC20.1});
+              \item modifica prodotto (\hyperref[UC20.2]{UC20.2});
+              \item rimuovi prodotto (\hyperref[UC20.3]{UC20.3});
               \item aggiorna giacenza.
           \end{enumerate}
 \end{itemize}
@@ -271,9 +288,9 @@
     \item \textbf{Postcondizione:} il venditore visualizza la tabella riepilogativa delle categorie prodotto presenti nel sistema;
     \item \textbf{Scenario principale:} il venditore visualizza la tabella riepilogativa delle categorie prodotto già presenti nel sistema e può intraprendere una delle seguenti azioni:
           \begin{enumerate}
-              \item aggiungi categoria;
-              \item modifica categoria;
-              \item rimuovi categoria.
+              \item aggiungi categoria (\hyperref[UC21.1]{UC21.1});
+              \item modifica categoria (\hyperref[UC21.2]{UC21.2});
+              \item rimuovi categoria (\hyperref[UC21.3]{UC21.3}).
           \end{enumerate}
 \end{itemize}
 
