@@ -1,0 +1,98 @@
+% ---------------------------
+%	  	  [ Norme di progetto ]
+%	----------------------
+%	    SWException
+%  Progetto di SWE (2020-21)
+%    Template by Maxelweb (te vansi un spritz)
+%       patch by ftrole & lambda_claus
+%			3nj0y!
+% ---------------------------
+
+% Configurazione primaria del documento
+
+% --------------
+
+
+\newcommand{\docNome}{ NORME DI PROGETTO }
+\newcommand{\docVersione}{1.0.0}
+\newcommand{\docNomeProgetto}{ EmporioLambda: piattaforma di e-commerce in stile Serverless }
+\newcommand{\docStatus}{approvato}
+\newcommand{\docUso}{interno}
+\newcommand{\docDescrizione}{
+    \begin{center}
+    Documento di definizione del \textit{Way of Working}
+    \end{center}
+
+}
+
+% --------------
+
+\newcommand{\docRedattori}{
+    Marco Canovese \\&
+    Ivan Furlan \\&
+    Nicole Davanzo
+}
+\newcommand{\docVerificatori}{
+    Michele Veronesi \\&
+    Gianmarco Guazzo \\&
+    Stefano Lazzaroni
+}
+\newcommand{\docApprovazione}{
+    Francesco Trolese
+}
+
+\newcommand{\nomeCorso}{
+    Ingegneria del Software - Università degli Studi di Padova
+}
+
+% ----- NON MODIFICARE SOTTO QUESTA RIGA -----
+
+% ---------------------------
+% Configurazioni
+% ---------------------------
+\DeclareUnicodeCharacter{2212}{-}
+\documentclass[11pt,a4paper,table]{article}
+
+\input{res/configurazione}
+
+% ---------------------------
+% Dati frontespizio
+% ---------------------------
+
+\title{ \hr \huge \textsc{\docNome} \\
+        \vspace{11pt} \large \textsc{\docNomeProgetto} \hr}
+
+\author{} % Non toccare
+\date{} % Non toccare
+
+% ---------------------------
+% Composizione del documento
+% ---------------------------
+
+\begin{document}
+
+% Frontespizio
+
+\pagenumbering{gobble}
+\include{res/frontespizio}
+
+% Registro delle modifiche
+
+\newpage
+\pagenumbering{arabic}
+\include{res/registro}
+
+\tableofcontents
+\listoffigures
+
+% Contenuto
+
+\newpage
+\input{res/sezioni}
+
+
+
+\end{document}
+
+
+% EOF

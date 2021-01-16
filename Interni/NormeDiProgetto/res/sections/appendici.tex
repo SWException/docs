@@ -1,0 +1,105 @@
+\appendix
+\section{Metriche di qualità}
+
+\subsection{Metriche per la qualità del processo} \label{_metricheprocesso}
+
+\subsubsection{MPR-1: Budgeted Cost of Work Scheduled (BCWS)} \label{_MPR-1}
+Rappresenta il costo pianificato in euro per realizzare le attività di progetto alla data corrente.
+
+\subsubsection{MPR-2: Actual Cost of Work Performed (ACWP)} \label{_MPR-2}
+Rappresenta il costo effettivamente sostenuto in euro alla data corrente.
+
+\subsubsection{MPR-3: Budgeted Cost of Work Performed (BCWP)} \label{_MPR-3}
+Rappresenta il valore in euro delle attività realizzate alla data corrente.
+
+\subsubsection{MPR-4: Cost Variance (CV)} \label{_MPR-4}
+Indica se il valore realmente maturato è maggiore, uguale o minore rispetto al costo effettivo.
+\begin{itemize}
+    \item \textbf{Formula}: $CV = BCWP - ACWP$;
+\end{itemize}
+
+\subsubsection{MPR-5: Schedule Variance (SV)} \label{_MPR-5}
+Indica se si è in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto pianificate nella baseline.
+\begin{itemize}
+    \item \textbf{Formula}: $SV = BCWP - BCWS$;
+\end{itemize}
+
+\subsubsection{MPR-6: Requisiti obbligatori soddisfatti (PROS)} \label{_MPR-6}
+Indica la percentuale di requisiti obbligatori soddisfatti rispetto a quanti ne sono stati individuati.
+\begin{itemize}
+    \item \textbf{Formula}: \(\frac{Numero\ requisiti\ obbligatori\ soddisfatti}{Numero\ requisiti\  obbligatori\ individuati}*100\)
+\end{itemize}
+
+\subsubsection{MPR-7: Requisiti opzionali non  soddisfatti (RONS )} \label{_MPR-7}
+Indica la percentuale di requisiti opzionali che non sono stati soddisfatti rispetto a quanti ne sono stati individuati.
+\begin{itemize}
+    \item \textbf{Formula}: \(\frac{Numero\ requisiti\ opzionali\ non\ soddisfatti}{Numero\ requisiti\  opzionali\ individuati}*100\)
+\end{itemize}
+
+\subsubsection{MPR-8: Requisiti desiderabili non soddisfatti (RDNS)} \label{_MPR-8}
+Indica la percentuale di requisiti desiderabili che non sono stati  soddisfatti rispetto a quanti ne sono stati individuati.
+\begin{itemize}
+    \item \textbf{Formula}: \(\frac{Numero\ requisiti\ desiderabili\ non\ soddisfatti}{Numero\ desiderabili\  obbligatori\ individuati}*100\)
+\end{itemize}
+
+\subsubsection{MPR-9: Rischi non previsti ma avvenuti (RNPA)} \label{_MPR-9}
+Indica il numero di rischi non previsti ma che si sono presentanti nel corso del progetto.
+
+\subsection{Metriche per la qualità della documentazione} \label{_metricheprodotto}
+Per quantificare la qualità della documentazione vengono adottate le metriche descritte in questa sezione.
+
+\subsubsection{MPD-DOC1: Indice di Gulpease (GULP)}
+Indice che individua il grado di leggibilità di un testo in lingua italiana mediante la formula:
+\begin{center}
+    \(GULP=89+\frac{300(totale\; frasi)-10(totale\; lettere)}{totale\; parole}\)
+\end{center}
+
+\subsubsection{MPD-DOC2: Correttezza ortografica (CORT)}
+Questa metrica permette di misurare la correttezza lessicografica del documento mediante un numero intero ottenuto come:
+\begin{center}
+    \textit{CORT=\# errori ortografici}
+\end{center}
+
+\subsection{Metriche per la qualità del codice sorgente} \label{_metricheCodiceSorgenteApp}
+Per misurare la qualità del codice sorgente prodotto vengono adottate le seguenti metriche, come introdotto in \S\ref{_metricheQualitaCodice}
+
+\subsubsection{MPD-S1: Complessità ciclomatica (COCI)}
+La complessità ciclomatica di un programma strutturato è definita in riferimento ad un grafo diretto
+contenente i blocchi base di un programma con un arco tra due blocchi se il controllo può passare dal
+primo al secondo (il "grafo di controllo di flusso"). La complessità è quindi definita come:
+\[
+    v(G) = e − n + 2 \cdot p
+\]
+dove:
+\begin{itemize}
+    \item $v(G)$ è la complessità ciclomatica del grafo G, ed ha un valore in $\mathbb{N}$;
+    \item $e$ è il numero di archi del grafo, ha un valore in $\mathbb{N}$;
+    \item $n$ è il numero di nodi del grafo, ha un valore in $\mathbb{N}$;
+    \item $p$ è il numero di componenti connesse, ha un valore in $\mathbb{N}$.
+\end{itemize}
+
+\subsubsection{MPD-S2: Complessità espressioni booleane (COEB)}
+Questo è un indice necessario a tenere sotto controllo la complessità delle espressioni booleane e, di conseguenza, la complessità ciclomatica.
+Si sintetizza nel massimo numero di operatori logici presenti in una singola espressione booleana.\\
+Il suo calcolo è banale, e consiste nel conteggio degli operatori logici.
+
+\subsubsection{MPD-S3: Lunghezza delle righe di codice (LRC)}
+Indice che misura la lunghezza di una singola riga di codice. Serve a garantire la leggibilità di esso anche in schermi
+con dimensioni e risoluzione minori.\\
+Si ottiene contando i caratteri di ogni singola riga, ci si assicura quindi che il valore ottenuto per ognuna stia sotto il valore
+definito nel \dext{PianoDiQualifica\_1.0.0}.
+
+\subsubsection{MPD-S4: Code coverage (CODCO)}
+Con questo indice si misura la percentuale di righe di codice coperte dai test automatici.\\
+È necessario cercare di avere la massima copertura possibile per ogni modulo, in quanto codice non testato
+può provocare comportamenti indesiderati e/o imprevisti dell'artefatto. La definizione della soglia minima viene rimandata al \dext{PianoDiQualifica\_1.0.0}.
+
+
+\subsubsection{MPD-S5: Maturità dei test (MATE)}
+Misura la percentuale di casi di test eseguiti con successo rispetto al numero totale previsto per garantire una copertura minima dei requisiti;
+\begin{itemize}
+    \item \textbf{Formula}: \(\frac{casi\ test\ eseguiti\ con\ successo}{casi\ test\ previsti}*100\)
+\end{itemize}
+
+\subsubsection{MPD-S6: Profondità strutturale dell'interfaccia (PSI)}
+Valore corrispondente alla profondità strutturale dell'interfaccia utente che valuta il numero di passaggi da compiere per raggiungere la funzionalità desiderata.

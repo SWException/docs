@@ -1,0 +1,45 @@
+% !TeX root = ../../../main.tex
+\section{Modello di sviluppo} \label{_modelloDiSviluppo}
+\subsection{Motivazioni}
+Per poter produrre un software che rispetti le richieste del proponente bisogna adottare un modello di sviluppo in grado di effettuare la pianificazione in base alle caratteristiche richieste imponendo dei vincoli alla pianificazione stessa. La scelta del modello di sviluppo è un'attività molto importante perché pone dei vincoli ai componenti del gruppo, aiutandoli nella sviluppo e fornendo delle direttive precise per ogni periodo temporale. L'obbiettivo principale del gruppo è fornire un software di qualità, il quale deve riflettere l'organizzazione data dal modello scelto e il raggiungimento degli obbiettivi fissati dal modello stesso.
+\newline
+Partendo da queste considerazioni e valutando la natura del progetto è stato adottato il \textbf{modello di sviluppo incrementale}, il quale prevede lo sviluppo del prodotto tramite incrementi multipli e successivi. I rilasci hanno l’obbiettivo di
+aggiungere funzionalità separate e accessorie a un sistema funzionante in cui sono presenti requisiti di base.
+\newline
+Nel modello di sviluppo incrementale i requisiti vengono classificati in base alla loro importanza strategica a livello di sistema. Viene fatta inizialmente una analisi preliminare per identificare i requisiti fondamentali rispetto a quelli opzionali. Il modello scelto prende in considerazione prima i requisiti più importanti, che sono da trattare fin dai primi incrementi, in modo da renderli chiari nel minor tempo possibile per creare un'infrastruttura stabile su cui sviluppare caratteristiche del sistema successive. Gli incrementi successivi coprono, quindi, requisiti meno importanti che hanno necessariamente più tempo per integrarsi col sistema.
+\subsection{Vantaggi modello di sviluppo Incrementale}
+I vantaggi del modello di sviluppo incrementale sono i seguenti:
+\begin{itemize}
+	\item ogni incremento produce valore aggiunto, rendendo disponibili un'insieme di funzionalità subito disponibili per l'utilizzo e chiarendo meglio i requisiti per gli incrementi successivi;
+	\item le funzionalità principali vengono sviluppate all'inizio con i primi incrementi in modo da fornire una base solida su cui adottare i successivi incrementi;
+	\item l'analisi dei requisiti e la progettazione architetturale vengono svolte una volta sola per stabilire fin da subito i requisiti fondamentali;
+	\item vengono decisi preventivamente il numero di incrementi che il gruppo si pone come punto di riferimento in modo da assegnare ad ogni componente un obbiettivo specifico;
+	\item gli errori in caso di un rilascio fallace sono facilmente individuabili e risolvibili in tempi stretti fornendo anche la possibilità di ritornare allo stato funzionale precedente.
+\end{itemize}
+
+\subsection{Incrementi pianificati}
+
+Si prevede di andare a svolgere \textbf{6 incrementi} con l'obbiettivo di poter integrare tutte le funzionalità richieste dal proponente entro le scadenze. Di seguito viene presentata una tabella riassuntiva per gli incrementi identificati con una breve descrizione e l'insieme di requisiti che necessita.
+
+\begin{center}
+	\rowcolors{1}{lightest-grayest}{blue!20}
+	\begin{longtable}{|p{2.5cm}|p{6.5cm}|p{6cm}|}
+		\hline
+		\rowcolor{lighter-grayer}
+		\textbf{Nome}  & \textbf{Descrizione sintetica}                                                & \textbf{Requisiti} \\
+		\hline
+		\endfirsthead
+		\hline
+		\hline
+		\endfoot
+		\endlastfoot
+		\hline
+		I Incremento   & Progettazione e prima codifica del Proof of Concept                           & R1F1 R1F5 R1F8 R1F9 R1F11                 \\
+		II Incremento  & Miglioramento del primo Prof of Concept attraverso il raffinamento del codice & R2F6 R1F7 R1F10 R1F12 R1F13 R1F15 R1F16 R1F19 R1F20                 \\
+		III Incremento & Progettazione delle funzionalità non implementate nel Proof of Concept        & R1F2 R1F3 R1F4 R1F14 R1F17 R1F18                  \\
+		IV Incremento  & Prima versione del prodotto pronta                                            & R1F21 R1F22 R1F23            \\
+		V Incremento   & Fine codifica e raffinamento del prodotto                                     & R1F24 R1F25 R1F26                 \\ \hline
+		\rowcolor{white}
+		\caption{Riassunto degli incrementi pianificati}
+	\end{longtable}
+\end{center}
