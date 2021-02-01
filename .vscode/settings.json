@@ -1,0 +1,20 @@
+{
+    // Parole aggiuntive per dizionario dell'estensione "Code Spell Checker" e "Italian - Code Spell Checker"
+    "cSpell.words": [ 
+        "swexception"
+    ],
+    // Lista di file da non visualizzare nella scheda Explorer di vscode
+    "files.exclude": {
+        "**/*.lot": true,
+        "**/*.lof": true,
+        "**/*.aux": true,
+        "**/*.fls": true,
+        "**/*.out": true,
+        "**/*.synctex.gz": true,
+        "**/*.synctex(busy)": true,
+        "**/*.toc": true,
+        "**/*.fdb_latexmk": true,
+        "**/*.filesList": true,
+        "**/*.gitkeep": true
+    }
+}

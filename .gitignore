@@ -11,10 +11,10 @@
 *.fdb_latexmk
 *.orig
 *.glsdefs
-
 *.vs
 .vscode/*
 *.lot
 *.lof
 .filesList
 PDF/
+!.vscode/settings.json
