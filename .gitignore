@@ -15,3 +15,6 @@
 .vscode/*
 *.lot
 *.lof
+.filesList
+PDF/
+!.vscode/settings.json
