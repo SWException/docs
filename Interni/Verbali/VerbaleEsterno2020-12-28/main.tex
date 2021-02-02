@@ -12,7 +12,9 @@
 
 % --------------
 
-\newcommand{\docNome}{ Verbale Esterno del 2020-12-28}
+\newcommand{\pathToTemplate}{../../../Template/Verbale}
+
+\newcommand{\docNome}{Verbale Esterno del 2020-12-28}
 \newcommand{\docVersione}{1.0.0}
 \newcommand{\docStatus}{approvato}
 \newcommand{\docUso}{interno}
@@ -66,7 +68,7 @@
 % Frontespizio
 
 \pagenumbering{gobble}
-\include{res/frontespizio}
+\input{\pathToTemplate/res/frontespizio.tex}
 
 % Registro delle modifiche
 
