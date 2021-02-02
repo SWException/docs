@@ -13,5 +13,8 @@
 *.glsdefs
 *.vs
 .vscode/*
-*.lof
 *.lot
+*.lof
+.filesList
+PDF/
+!.vscode/settings.json

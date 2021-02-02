@@ -1,0 +1,18 @@
+\input{\pathToTemplate/res/configurazione}
+% Aggiungere o modificare di seguito eventuali configuraioni valide solo per questo documento
+
+\usepackage{tocloft}
+
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % Aggiunge la linea di punti fino al numero di pagina
+\makeatletter
+    \renewcommand{\cftsecpresnum}{\begin{lrbox}{\@tempboxa}} % Rimuove il numero del capitolo e aggiunge "Lettera: "
+    \renewcommand{\cftsecaftersnum}{\end{lrbox}}
+\makeatother
+
+\titleformat{\section} % Rimuove il numero di sezione dalla sezione
+{\normalfont\LARGE\bfseries}{}{0pt}{}
+
+% Impostazione sottotitolo di quarto livello e quinto livello
+
+\setcounter{secnumdepth}{1}
+\setcounter{tocdepth}{1}
