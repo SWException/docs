@@ -283,12 +283,20 @@ dove [X] indica il numero assoluto progressivo della tabella all'interno del doc
 \subparagraph{Grafici UML}
 I grafici in linguaggio \glock{UML} sono inseriti come immagini.
 
-\subsubsection{Metriche}
-\begin{itemize}
-    \item MPD-DOC1: indice di Gulpease, leggibilità del testo;
-    \item MPD-DOC2: indice correttezza ortografica (CORT).
-\end{itemize}
-Queste metriche sono descritte approfonditamente in \S\ref{_metricheprodotto}.
+
+\paragraph{MPD-DOC1: Indice di Gulpease (GULP)}
+Indice che individua il grado di leggibilità di un testo in lingua italiana mediante la formula:
+\begin{center}
+    \(GULP=89+\frac{300(totale\; frasi)-10(totale\; lettere)}{totale\; parole}\)
+\end{center}
+
+\paragraph{MPD-DOC2: Correttezza ortografica (CORT)}
+Questa metrica permette di misurare la correttezza lessicografica del documento mediante un numero intero ottenuto come:
+\begin{center}
+    \textit{CORT=\# errori ortografici}
+\end{center}
+
+
 
 \subsubsection{Strumenti}
 \paragraph{Latex}
@@ -658,6 +666,15 @@ Per avviare il processo di validazione devono essere presenti questi elementi:
     \includegraphics[width=\linewidth]{res/images/processo_validazione.png}
     \caption{Processo di validazione documenti}
 \end{figure}
+
+\paragraph{MPD-S5: Maturità dei test (MATE)}
+Misura la percentuale di casi di test eseguiti con successo rispetto al numero totale previsto per garantire una copertura minima dei requisiti;
+\begin{itemize}
+    \item \textbf{Formula}: \(\frac{casi\ test\ eseguiti\ con\ successo}{casi\ test\ previsti}*100\)
+\end{itemize}
+
+
+
 
 % \subsubsection{Attività per la validazione}
 
