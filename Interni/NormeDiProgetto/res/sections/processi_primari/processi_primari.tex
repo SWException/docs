@@ -236,7 +236,11 @@ Ciascun programmatore è tenuto a rispettare le seguenti norme:
   \item \textbf{lingua}: i nomi di variabili, costruttori, metodi, classi e commenti vanno scritti in lingua inglese.
 \end{itemize}
 
-\paragraph{MPD-S1: Complessità ciclomatica (COCI)}
+\paragraph{Metriche}
+\label{_metricheQualitaCodice}
+In questa sezione verranno elencate le \glock{metriche} finora individuate per mantenere una buona qualità del codice:
+
+\subparagraph{MPD-S1: Complessità ciclomatica (COCI)}
 La complessità ciclomatica di un programma strutturato è definita in riferimento ad un grafo diretto
 contenente i blocchi base di un programma con un arco tra due blocchi se il controllo può passare dal
 primo al secondo (il "grafo di controllo di flusso"). La complessità è quindi definita come:
@@ -251,21 +255,18 @@ dove:
     \item $p$ è il numero di componenti connesse, ha un valore in $\mathbb{N}$.
 \end{itemize}
 
-\paragraph{MPD-S2: Complessità espressioni booleane (COEB)}
+\subparagraph{MPD-S2: Complessità espressioni booleane (COEB)}
 Questo è un indice necessario a tenere sotto controllo la complessità delle espressioni booleane e, di conseguenza, la complessità ciclomatica.
 Si sintetizza nel massimo numero di operatori logici presenti in una singola espressione booleana.\\
 Il suo calcolo è banale, e consiste nel conteggio degli operatori logici.
 
-\paragraph{MPD-S3: Lunghezza delle righe di codice (LRC)}
+\subparagraph{MPD-S3: Lunghezza delle righe di codice (LRC)}
 Indice che misura la lunghezza di una singola riga di codice. Serve a garantire la leggibilità di esso anche in schermi
 con dimensioni e risoluzione minori.\\
 Si ottiene contando i caratteri di ogni singola riga, ci si assicura quindi che il valore ottenuto per ognuna stia sotto il valore
 definito nel \dext{PianoDiQualifica\_1.0.0}.
 
-\paragraph{MPD-S4: Code coverage (CODCO)}
+\subparagraph{MPD-S4: Code coverage (CODCO)}
 Con questo indice si misura la percentuale di righe di codice coperte dai test automatici.\\
 È necessario cercare di avere la massima copertura possibile per ogni modulo, in quanto codice non testato
 può provocare comportamenti indesiderati e/o imprevisti dell'artefatto. La definizione della soglia minima viene rimandata al \dext{PianoDiQualifica\_1.0.0}.
-
-
-Le metriche sopra elencate sono spiegate nel dettaglio nell'appendice \S\ref{_metricheCodiceSorgenteApp}.
