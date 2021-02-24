@@ -185,28 +185,40 @@ Durante questa fase saranno presenti i seguenti ruoli:
 
 \subsubsection{Periodi e attività}
 
-\paragraph[Primo periodo]{Primo periodo - \textnormal{Miglioramento documenti con indicazioni ricevute}}
+\paragraph[Secondo periodo]{Primo periodo - \textnormal{Familiarizzazione con le tecnologie}}
 \begin{itemize}
     \item [] \textbf{Inizio:} 2021-01-19
-    \item [] \textbf{Fine:} 2021-01-23
+    \item [] \textbf{Fine:} 2021-01-25
     \item [] \textbf{Attività}
           \begin{itemize}
-              \item \textbf{Normazione:} revisione ed eventuale aggiornamento delle norme di progetto;
-              \item \textbf{Piano di qualità:} revisione ed eventuale aggiornamento del piano di qualifica;
-              \item \textbf{Analisi dei requisiti:} revisione ed eventuali modifiche in base al feedback ricevuto dai committenti;
+              \item \textbf{Ricerca:} studio delle principali tecnologie da utilizzare:
+                    \begin{itemize}
+                        \item Serverless Framework
+                        \item AWS DynamoDB
+                        \item AWS Cognito
+                        \item AWS Lambda
+                        \item AWS S3
+                        \item AWS CloudFront
+                    \end{itemize}
+              \item \textbf{Progettazione:} progettazione delle principali componenti per il frontend lato cliente;
               \item \textbf{Verifica:} controllo della qualità dei prodotti sviluppati in questo periodo.
           \end{itemize}
 \end{itemize}
 
-\paragraph[Secondo periodo]{Secondo periodo - \textnormal{Progettazione architetturale}}
+\paragraph[Primo periodo]{Secondo periodo - \textnormal{Miglioramento documenti e aggiornamento pianificazione}}
 \begin{itemize}
-    \item [] \textbf{Inizio:} 2021-01-24
+    \item [] \textbf{Inizio:} 2021-01-26
     \item [] \textbf{Fine:} 2021-02-05
     \item [] \textbf{Attività}
           \begin{itemize}
-              \item \textbf{Progettazione:} progettazione architetturale e del proof of concept;
-              \item \textbf{Pianificazione:} aggiornamento della pianificazione delle fasi successive;
-              \item \textbf{Ricerca:} studio sul funzionamento degli strumenti e delle tecnologie che verranno utilizzate (Es. AWS);
+              \item \textbf{Documentazione:} revisione ed eventuale aggiornamento della documentazione secondo il feedback ricevuto dai committenti;
+              \item \textbf{Ricerca:} studio delle principali tecnologie da utilizzare:
+                    \begin{itemize}
+                        \item AWS ApiGateway
+                        \item Stripe
+                    \end{itemize}
+              \item \textbf{Progettazione:} progettazione API lato cliente per il PoC;
+              \item \textbf{Pianificazione:} aggiornamento della pianificazione in seguito allo studio delle tecnologie interessate;
               \item \textbf{Verifica:} controllo della qualità dei prodotti sviluppati in questo periodo.
           \end{itemize}
 \end{itemize}
@@ -224,7 +236,7 @@ Durante questa fase saranno presenti i seguenti ruoli:
 \begin{itemize}
     \item []\textbf{Inizio:} 2021-02-06
     \item []\textbf{Fine:} 2021-03-01
-    \item []\textbf{Descrizione:} continuare la progettazione e implementare il proof of concept.
+    \item []\textbf{Descrizione:} in questa prima fase di sviluppo si andranno a utilizare le principali tecnologie coinvolte e per ognuna di esse si implementeranno solo alcune funzionalità per il PoC.
 \end{itemize}
 
 \subsubsection{Ruoli attivi}
@@ -240,17 +252,26 @@ Durante questa fase saranno presenti i seguenti ruoli:
 
 \subsubsection{Periodi e attività}
 
-\paragraph[Incremento I]{Incremento I - \textnormal{Progettazione e codifica delle componenti del PoC}}
+\paragraph[Incremento I]{Incremento I}
 \begin{itemize}
     \item [] \textbf{Inizio:} 2021-02-06
-    \item [] \textbf{Fine:} 2021-02-21
+    \item [] \textbf{Fine:} 2021-02-12
+    \item [] \textbf{Descrizione:} configurare il backend per l'utilizzo di DynamoDB e Cognito, ed implementare le pagine statiche del PoC.
     \item [] \textbf{Attività}
           \begin{itemize}
               \item \textbf{Analisi tecnologie da utilizzare;}
               \item \textbf{Progettazione;}
-              \item \textbf{Codifica:} codifica del proof of concept;
-              \item \textbf{Verifica:} controllo della qualità dei prodotti sviluppati in questo periodo.
+              \item \textbf{Codifica BE:}
+                    \begin{itemize}
+                        \item configurazione di AWS Cognito con Serverless;
+                        \item configurazione di DynamoDB con Serverless;
+                    \end{itemize}
+              \item \textbf{Codifica FE:}
+                    \begin{itemize}
+                        \item creazione delle pagine statiche con next.js (Home e PDP);
+                    \end{itemize}
           \end{itemize}
+    \item \textbf{Verifica:} controllo della qualità dei prodotti sviluppati in questo periodo.
 \end{itemize}
 
 \begin{figure}[H]
@@ -260,17 +281,24 @@ Durante questa fase saranno presenti i seguenti ruoli:
     \label{fig:_Gantt incremento I}
 \end{figure}
 
-\paragraph[Incremento II]{Incremento II - \textnormal{Raffinamento del PoC}}
+\paragraph[Incremento II]{Incremento II}
 \begin{itemize}
-    \item [] \textbf{Inizio:} 2021-02-22
-    \item [] \textbf{Fine:} 2021-03-01
+    \item [] \textbf{Inizio:} 2021-02-13
+    \item [] \textbf{Fine:} 2021-02-23
+    \item [] \textbf{Descrizione:} implementazione delle API necessarie per il PoC e la gestione dell'autenticazione del cliente nel frontend.
     \item [] \textbf{Attività}
           \begin{itemize}
               \item \textbf{Progettazione;}
-              \item \textbf{Codifica:} fine codifica e raffinamento del proof of concept;
-              \item \textbf{Aggiornamento della pianificazione;}
-              \item \textbf{Preparazione presentazione:} preparazione della presentazione per la revisione di progettazione;
-              \item \textbf{Stesura lettera di presentazione;}
+              \item \textbf{Codifica BE:}
+                    \begin{itemize}
+                        \item implementazione API per visualizzare il carrello di un utente;
+                        \item implementazione API per checkout con Stripe;
+                    \end{itemize}
+              \item \textbf{Codifica FE:}
+                    \begin{itemize}
+                        \item implementazione di registrazione, login e logout utilizzando Cognito;
+                        \item configurazione del deploy del FE su AWS con Serverless;
+                    \end{itemize}
               \item \textbf{Verifica:} controllo della qualità dei prodotti sviluppati in questo periodo.
           \end{itemize}
 \end{itemize}
@@ -280,6 +308,37 @@ Durante questa fase saranno presenti i seguenti ruoli:
     \includegraphics[width=1\linewidth]{res/images/pianificazione/incremento_2.png}
     \caption{Diagramma di Gantt dell'incremento II}
     \label{fig:_Gantt incremento II}
+\end{figure}
+
+\paragraph[Incremento III]{Incremento III}
+\begin{itemize}
+    \item [] \textbf{Inizio:} 2021-02-24
+    \item [] \textbf{Fine:} 2021-03-01
+    \item [] \textbf{Descrizione:} implementazione del carrello e del processo di checkout.
+    \item [] \textbf{Attività}
+          \begin{itemize}
+              \item \textbf{Progettazione;}
+              \item \textbf{Codifica BE:}
+                    \begin{itemize}
+                        \item controllo dell'autenticazione dell'utente nelle API attraverso cognito;
+                    \end{itemize}
+              \item \textbf{Codifica FE:}
+                    \begin{itemize}
+                        \item implementazione del carrello;
+                        \item implementazione del checkout;
+                    \end{itemize}
+              \item \textbf{Pianificazione:} aggiornamento della pianificazione basandosi sul lavoro svolto per la realizzazione del PoC;
+              \item \textbf{Preparazione presentazione:} preparazione della presentazione per la TB e per la revisione di progettazione;
+              \item \textbf{Stesura lettera di presentazione;}
+              \item \textbf{Verifica:} controllo della qualità dei prodotti sviluppati in questo periodo.
+          \end{itemize}
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{res/images/pianificazione/incremento_3.png}
+    \caption{Diagramma di Gantt dell'incremento III}
+    \label{fig:_Gantt incremento III}
 \end{figure}
 
 \begin{figure}[H]
@@ -297,7 +356,7 @@ Durante questa fase saranno presenti i seguenti ruoli:
 \begin{itemize}
     \item []\textbf{Inizio:} 2021-03-02
     \item []\textbf{Fine:} 2021-04-02
-    \item []\textbf{Descrizione:} effettuare una progettazione completa delle funzionalità mancanti ed effettuare una prima implementazione del prodotto.
+    \item []\textbf{Descrizione:} effettuare una implementazione del prodotto che soddisfi tutte le principali funzionalità richieste.
 \end{itemize}
 
 \subsubsection{Ruoli attivi}
@@ -313,41 +372,30 @@ Durante questa fase saranno presenti i seguenti ruoli:
 
 \subsubsection{Periodi e attività}
 
-\paragraph[Incremento III]{Incremento III}
-\begin{itemize}
-    \item [] \textbf{Inizio:} 2021-03-02
-    \item [] \textbf{Fine:} 2021-03-20
-    \item [] \textbf{Attività}
-          \begin{itemize}
-              \item \textbf{Progettazione:} progettazione delle funzionalità non implementate nel PoC;
-              \item \textbf{Analisi tecnologie da utilizzare;}
-              \item \textbf{Aggiornamento della pianificazione;}
-              \item \textbf{Normazione:} revisione ed eventuale aggiornamento delle norme di progetto;
-              \item \textbf{Piano di qualità:} revisione ed eventuale aggiornamento del piano di qualifica;
-              \item \textbf{Codifica:} codifica incrementando il PoC;
-              \item \textbf{Manuale utente:} prima stesura;
-              \item \textbf{Verifica:} controllo della qualità dei prodotti sviluppati in questo periodo.
-          \end{itemize}
-\end{itemize}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{res/images/pianificazione/incremento_3.png}
-    \caption{Diagramma di Gantt dell'incremento III}
-    \label{fig:_Gantt incremento III}
-\end{figure}
-
 \paragraph[Incremento IV]{Incremento IV}
 \begin{itemize}
-    \item [] \textbf{Inizio:} 2021-03-21
-    \item [] \textbf{Fine:} 2021-04-02
+    \item [] \textbf{Inizio:} 2021-03-02
+    \item [] \textbf{Fine:} 2021-03-10
+    \item [] \textbf{Descrizione:} sviluppo delle principali API utili al FE, ed inizio del frontend del venditore implementando il login.
     \item [] \textbf{Attività}
           \begin{itemize}
-              \item \textbf{Progettazione;}
-              \item \textbf{Codifica:} codifica di una prima versione del prodotto;
-              \item \textbf{Manuale utente:} aggiornamento;
-              \item \textbf{Preparazione presentazione:} preparazione della presentazione per la revisione di qualifica;
-              \item \textbf{Stesura lettera di presentazione;}
+              \item \textbf{Analisi tecnologie da utilizzare;}
+              \item \textbf{Progettazione:}
+                    \begin{itemize}
+                        \item progettazione delle API lato cliente;
+                        \item progettazione pagine lato venditore;
+                    \end{itemize}
+              \item \textbf{Codifica BE:}
+                    \begin{itemize}
+                        \item implementazione API per la PLP;
+                        \item implementazione API per la PDP;
+                        \item implementazione API per visualizzare la lista ordini di un cliente;
+                    \end{itemize}
+              \item \textbf{Codifica FE:}
+                    \begin{itemize}
+                        \item implementazione struttura delle pagine lato venditore;
+                        \item implementazione login lato venditore;
+                    \end{itemize}
               \item \textbf{Verifica:} controllo della qualità dei prodotti sviluppati in questo periodo.
           \end{itemize}
 \end{itemize}
@@ -357,6 +405,103 @@ Durante questa fase saranno presenti i seguenti ruoli:
     \includegraphics[width=1\linewidth]{res/images/pianificazione/incremento_4.png}
     \caption{Diagramma di Gantt dell'incremento IV}
     \label{fig:_Gantt incremento IV}
+\end{figure}
+
+\paragraph[Incremento V]{Incremento V}
+\begin{itemize}
+    \item [] \textbf{Inizio:} 2021-03-11
+    \item [] \textbf{Fine:} 2021-03-15
+    \item [] \textbf{Descrizione:} implementazione PLP e PDP.
+    \item [] \textbf{Attività}
+          \begin{itemize}
+              \item \textbf{Documentazione:} revisione ed eventuale aggiornamento dei documenti;
+              \item \textbf{Progettazione:} progettazione PLP e PDP;
+              \item \textbf{Codifica BE:}
+                    \begin{itemize}
+                        \item aggiungere funzionalità di filtro e ricerca alle API;
+                        \item implementazione API per visualizzare e gestire un ordine lato cliente;
+                    \end{itemize}
+              \item \textbf{Codifica FE:}
+                    \begin{itemize}
+                        \item implementazione PLP;
+                        \item implementazione PDP;
+                    \end{itemize}
+              \item \textbf{Manuale utente:} inizio stesura;
+              \item \textbf{Verifica:} controllo della qualità dei prodotti sviluppati in questo periodo.
+          \end{itemize}
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{res/images/pianificazione/incremento_5.png}
+    \caption{Diagramma di Gantt dell'incremento V}
+    \label{fig:_Gantt incremento V}
+\end{figure}
+
+\paragraph[Incremento VI]{Incremento VI}
+\begin{itemize}
+    \item [] \textbf{Inizio:} 2021-03-16
+    \item [] \textbf{Fine:} 2021-03-21
+    \item [] \textbf{Descrizione:} implementazione gestione ordini lato cliente ed inizio implementazioni API lato venditore.
+    \item [] \textbf{Attività}
+          \begin{itemize}
+              \item \textbf{Progettazione:}
+                    \begin{itemize}
+                        \item progettazione API lato venditore;
+                        \item progettazione pagine gestione ordini;
+                    \end{itemize}
+              \item \textbf{Codifica BE:}
+                    \begin{itemize}
+                        \item implementazione API per gestire il profilo utente;
+                        \item implementazione API gestione prodotti lato venditore;
+                    \end{itemize}
+              \item \textbf{Codifica FE:}
+                    \begin{itemize}
+                        \item implementazione pagina lista ordini;
+                        \item implementazione pagina dettaglio ordine;
+                    \end{itemize}
+              \item \textbf{Verifica:} controllo della qualità dei prodotti sviluppati in questo periodo.
+          \end{itemize}
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{res/images/pianificazione/incremento_6.png}
+    \caption{Diagramma di Gantt dell'incremento VI}
+    \label{fig:_Gantt incremento VI}
+\end{figure}
+
+\paragraph[Incremento VII]{Incremento VII}
+\begin{itemize}
+    \item [] \textbf{Inizio:} 2021-03-22
+    \item [] \textbf{Fine:} 2021-04-02
+    \item [] \textbf{Descrizione:} fine implementazione FE lato cliente ed implementazione gestione prodotti lato venditore.
+    \item [] \textbf{Attività}
+          \begin{itemize}
+              \item \textbf{Progettazione:} progettazione pagine gestione prodotti lato venditore;
+              \item \textbf{Codifica BE:}
+                    \begin{itemize}
+                        \item implementazione API per gestire categorie e clienti lato venditore;
+                    \end{itemize}
+              \item \textbf{Codifica FE:}
+                    \begin{itemize}
+                        \item implementazione pagina gestione profilo utente lato cliente;
+                        \item implementazione gestione prodotti lato venditore;
+                    \end{itemize}
+              \item \textbf{Manuale utente:} aggiornamento;
+              \item \textbf{Piano di qualità:} revisione ed eventuale aggiornamento del piano di qualifica;
+              \item \textbf{Preparazione presentazione:} preparazione della presentazione per la revisione di qualifica;
+              \item \textbf{Stesura lettera di presentazione;}
+              \item \textbf{Aggiornamento della pianificazione;}
+              \item \textbf{Verifica:} controllo della qualità dei prodotti sviluppati in questo periodo.
+          \end{itemize}
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{res/images/pianificazione/incremento_7.png}
+    \caption{Diagramma di Gantt dell'incremento VII}
+    \label{fig:_Gantt incremento VII}
 \end{figure}
 
 \begin{figure}[H]
@@ -373,8 +518,8 @@ Durante questa fase saranno presenti i seguenti ruoli:
 \subsection{Termine implementazione e raffinamento generale} \label{_pianificazioneTermineImplementazione}
 \begin{itemize}
     \item [] \textbf{Inizio:} 2021-04-03
-    \item [] \textbf{Fine:} 2021-04-25
-    \item [] \textbf{Descrizione:} completare e raffinare l'implementazione del prodotto.
+    \item [] \textbf{Fine:} 2021-04-22
+    \item [] \textbf{Descrizione:} completare l'implementazione del prodotto con le funzionalità mancanti raffinando ciò che è stato svolto precedentemente.
 \end{itemize}
 
 \subsubsection{Ruoli attivi}
@@ -389,15 +534,44 @@ Durante questa fase saranno presenti i seguenti ruoli:
 
 \subsubsection{Periodi e attività}
 
-\paragraph[Incremento V]{Incremento V}
+\paragraph[Incremento VIII]{Incremento VIII}
 \begin{itemize}
     \item [] \textbf{Inizio:} 2021-04-03
-    \item [] \textbf{Fine:} 2021-04-25
+    \item [] \textbf{Fine:} 2021-04-16
+    \item [] \textbf{Descrizione:} implementazione gestione ordini lato venditore.
+    \item [] \textbf{Attività}
+          \begin{itemize}
+              \item \textbf{Progettazione:} progettazione pagine gestione ordini lato venditore
+              \item \textbf{Codifica BE:}
+                    \begin{itemize}
+                        \item implementazione API per gestire gli ordini lato venditore;
+                    \end{itemize}
+              \item \textbf{Codifica FE:}
+                    \begin{itemize}
+                        \item implementazione gestione ordini lato venditore;
+                    \end{itemize}
+              \item \textbf{Manuale utente:} aggiornamento;
+              \item \textbf{Verifica:} controllo della qualità dei prodotti sviluppati in questo periodo.
+          \end{itemize}
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{res/images/pianificazione/incremento_8.png}
+    \caption{Diagramma di Gantt dell'incremento VIII}
+    \label{fig:_Gantt incremento VIII}
+\end{figure}
+
+\paragraph[Incremento IX]{Incremento IX}
+\begin{itemize}
+    \item [] \textbf{Inizio:} 2021-04-17
+    \item [] \textbf{Fine:} 2021-04-22
+    \item [] \textbf{Descrizione:} fine implementazione funzionalità mancanti lato venditore.
     \item [] \textbf{Attività}
           \begin{itemize}
               \item \textbf{Aggiornamento della pianificazione;}
               \item \textbf{Piano di qualità:} revisione ed eventuale aggiornamento del piano di qualifica;
-              \item \textbf{Progettazione:} completamento;
+              \item \textbf{Progettazione;}
               \item \textbf{Codifica:} fine codifica e raffinamento del prodotto;
               \item \textbf{Manuale utente:} stesura finale;
               \item \textbf{Verifica:} controllo della qualità dei prodotti sviluppati in questo periodo.
@@ -406,9 +580,9 @@ Durante questa fase saranno presenti i seguenti ruoli:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{res/images/pianificazione/incremento_5.png}
-    \caption{Diagramma di Gantt dell'incremento V}
-    \label{fig:_Gantt incremento V}
+    \includegraphics[width=1\linewidth]{res/images/pianificazione/incremento_9.png}
+    \caption{Diagramma di Gantt dell'incremento IX}
+    \label{fig:_Gantt incremento IX}
 \end{figure}
 
 \begin{figure}[H]
@@ -422,8 +596,8 @@ Durante questa fase saranno presenti i seguenti ruoli:
 
 \subsection{Validazione e collaudo} \label{_pianificazioneValidazioneCollaudo}
 \begin{itemize}
-    \item [] \textbf{Inizio:} 2021-04-26
-    \item [] \textbf{Fine:} 2021-05-10
+    \item [] \textbf{Inizio:} 2021-04-23
+    \item [] \textbf{Fine:} 2021-05-03
     \item [] \textbf{Descrizione:} verificare e collaudare il prodotto.
 \end{itemize}
 
@@ -441,8 +615,8 @@ Durante questa fase saranno presenti i seguenti ruoli:
 
 \paragraph[Unico periodo]{Unico periodo}
 \begin{itemize}
-    \item [] \textbf{Inizio:} 2021-04-20
-    \item [] \textbf{Fine:} 2021-05-10
+    \item [] \textbf{Inizio:} 2021-04-23
+    \item [] \textbf{Fine:} 2021-05-03
     \item [] \textbf{Attività}
           \begin{itemize}
               \item \textbf{Aggiornamento della pianificazione;}
