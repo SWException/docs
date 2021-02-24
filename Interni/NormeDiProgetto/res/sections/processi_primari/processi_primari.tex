@@ -179,6 +179,24 @@ Dove:
   \item \textbf{Numero}: identifica la successione dei rischi di una tipologia precisa.
 \end{itemize}
 
+
+\subsubsection{Metriche}
+
+\paragraph{MPD-DOC1: Indice di Gulpease (GULP)}
+Indice che individua il grado di leggibilità di un testo in lingua italiana mediante la formula:
+\begin{center}
+    \(GULP=89+\frac{300(totale\; frasi)-10(totale\; lettere)}{totale\; parole}\)
+\end{center}
+
+\paragraph{MPD-DOC2: Correttezza ortografica (CORT)}
+Questa metrica permette di misurare la correttezza lessicografica del documento mediante un numero intero ottenuto come:
+\begin{center}
+    \textit{CORT=\# errori ortografici}
+\end{center}
+
+
+
+
 \subsubsection{Progettazione dell'architettura}
 \paragraph{Scopo}
 L'attività di progettazione si basa su quanto svolto nel processo di analisi dei requisiti per definire le caratteristiche del prodotto software in grado di soddisfare i requisiti imposti dal proponente.  Tale fase deve garantire la qualità del prodotto sviluppato ed organizzare, ottimizzando l'uso delle risorse, la fase implementativa sezionando il problema in unità di complessità ridotta al fine di facilitare il lavoro di programmazione.
@@ -270,3 +288,6 @@ definito nel \dext{PianoDiQualifica\_1.0.0}.
 Con questo indice si misura la percentuale di righe di codice coperte dai test automatici.\\
 È necessario cercare di avere la massima copertura possibile per ogni modulo, in quanto codice non testato
 può provocare comportamenti indesiderati e/o imprevisti dell'artefatto. La definizione della soglia minima viene rimandata al \dext{PianoDiQualifica\_1.0.0}.
+
+\subparagraph{MPD-S6: Profondità strutturale dell'interfaccia (PSI)}
+Valore corrispondente alla profondità strutturale dell'interfaccia utente che valuta il numero di passaggi da compiere per raggiungere la funzionalità desiderata.
