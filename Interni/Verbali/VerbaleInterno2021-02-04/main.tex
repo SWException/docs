@@ -1,0 +1,94 @@
+% ---------------------------
+%	  	  [ Verbale ]
+%	----------------------
+%	    SWException
+%  Progetto di SWE (2020-21)
+%    Template by Maxelweb (te vansi un spritz)
+%       patch by ftrole & lambda_claus
+%			3nj0y!
+% ---------------------------
+
+% Configurazione primaria del documento
+
+% --------------
+
+\newcommand{\pathToTemplate}{../../../Template/Verbale}
+
+\newcommand{\docNome}{ Verbale Interno del 2021-02-04 }
+\newcommand{\docVersione}{1.0.0}
+\newcommand{\docStatus}{approvato}
+\newcommand{\docUso}{interno}
+
+% --------------
+
+\newcommand{\docRedattori}{
+	Michele Veronesi
+}
+\newcommand{\docVerificatori}{
+	Francesco Trolese
+}
+\newcommand{\docApprovazione}{
+    Marco Canovese
+}
+
+\newcommand{\docNomeProgetto}{
+    EmporioLambda: piattaforma e-commerce in stile serverless
+}
+
+\newcommand{\nomeCorso}{
+    Ingegneria del Software - Università degli Studi di Padova
+}
+% ----- NON MODIFICARE SOTTO QUESTA RIGA -----
+
+% ---------------------------
+% Configurazioni
+% ---------------------------
+
+\documentclass[11pt,a4paper,table]{article}
+
+\input{res/configurazione}    
+
+% ---------------------------
+% Dati frontespizio
+% ---------------------------
+
+\title{ \hr \huge \textsc{\docNome} \\ 
+        \vspace{11pt} \large \textsc{\docNomeProgetto} \hr}
+
+\author{} % Non toccare
+\date{} % Non toccare
+
+% ---------------------------
+% Composizione del documento
+% ---------------------------
+
+\begin{document}
+
+% Frontespizio
+
+\pagenumbering{gobble}
+\input{\pathToTemplate/res/frontespizio.tex}
+
+% Registro delle modifiche
+
+\newpage
+\pagenumbering{arabic}
+\include{res/registro}
+
+
+% Contenuto
+
+\newpage
+\input{res/contenuto}
+
+
+
+% Registro Decisioni
+
+\newpage
+\input{res/tracciamenti}
+
+\end{document}
+
+
+% EOF
