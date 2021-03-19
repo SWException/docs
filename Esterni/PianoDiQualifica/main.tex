@@ -12,8 +12,10 @@
 
 % --------------
 
+\newcommand{\pathToTemplate}{../../Template/Documento}
+
 \newcommand{\docNome}{ PIANO DI QUALIFICA }
-\newcommand{\docVersione}{1.0.0}
+\newcommand{\docVersione}{2.0.0}
 \newcommand{\docNomeProgetto}{ EmporioLambda: piattaforma di e-commerce in stile Serverless }
 \newcommand{\docStatus}{approvato}
 \newcommand{\docUso}{esterno}
@@ -27,16 +29,16 @@
 
 \newcommand{\docRedattori}{
 	Marco Canovese \\&
-    Michele Veronesi \\&
-    Gianmarco Guazzo
+    Ivan Furlan 
+    
     
 }
 \newcommand{\docVerificatori}{
-	Stefano Lazzaroni \\&
-    Francesco Trolese
+	Michele Veronesi \\&
+    Gianmarco Guazzo
 }
 \newcommand{\docApprovazione}{
-    Nicole Davanzo
+    Ivan Furlan
 }
 
 \newcommand{\nomeCorso}{
@@ -72,7 +74,7 @@
 % Frontespizio
 
 \pagenumbering{gobble}
-\include{res/frontespizio}
+\input{\pathToTemplate/res/frontespizio.tex}
 
 % Registro delle modifiche
 

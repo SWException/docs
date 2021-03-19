@@ -12,8 +12,10 @@
 
 % --------------
 
+\newcommand{\pathToTemplate}{../../Template/Documento}
+
 \newcommand{\docNome}{ Glossario }
-\newcommand{\docVersione}{1.0.0}
+\newcommand{\docVersione}{2.0.0}
 \newcommand{\docNomeProgetto}{ EmporioLambda: piattaforma e-commerce in stile ServerLess }
 \newcommand{\docStatus}{approvato}
 \newcommand{\docUso}{esterno}
@@ -21,11 +23,9 @@
 % --------------
 
 \newcommand{\docRedattori}{
-	Nicole Davanzo \\&
     Stefano Lazzaroni
 }
 \newcommand{\docVerificatori}{
-	Francesco Trolese \\&
     Michele Veronesi
 }
 \newcommand{\docApprovazione}{
@@ -65,7 +65,7 @@
 % Frontespizio
 
 \pagenumbering{gobble}
-\include{res/frontespizio}
+\input{\pathToTemplate/res/frontespizio.tex}
 
 % Registro delle modifiche
 

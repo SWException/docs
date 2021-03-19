@@ -7,7 +7,7 @@ In questa sezione viene indicato il consumo effettivo di ore per ogni periodo di
 	\item \textbf{negativo}:  se la spesa effettiva è maggiore di quella preventivata.
 \end{itemize}
 
-\subsection{Periodo di analisi dei requisiti} \label{_consuntivoAnalisiDeiRequisiti}
+\subsection{Fase di analisi dei requisiti} \label{_consuntivoAnalisiDeiRequisiti}
 Le ore di lavoro di questa fase sono considerate ore di investimento quindi non sono rendicontate.
 
 \rowcolors{1}{lightest-grayest}{blue!20}
@@ -50,10 +50,302 @@ Le ore di lavoro di questa fase sono considerate ore di investimento quindi non 
 \subsubsection{Conclusioni}
 Come si evince dalla tabella sono state impiegate più ore di quanto preventivato nei ruoli di \textit{Amministratore}, \textit{Analista} e \textit{Verificatore} per i seguenti motivi:
 \begin{itemize}
-	\item \textbf{Amministratore di Progetto}: le \dext{NormeDiProgetto\_1.0.0} hanno subito durante questo periodo numerosi aggiornamenti che hanno fatto si che le ore necessarie a ricoprire questo ruolo aumentassero;
-	\item \textbf{Analista}: la redazione dell'\dext{AnalisiDeiRequisiti\_1.0.0} ha richiesto più tempo del previsto;
+	\item \textbf{Amministratore di Progetto}: le \dext{NormeDiProgetto\_2.0.0} hanno subito durante questo periodo numerosi aggiornamenti che hanno fatto si che le ore necessarie a ricoprire questo ruolo aumentassero;
+	\item \textbf{Analista}: la redazione dell'\dext{AnalisiDeiRequisiti\_2.0.0} ha richiesto più tempo del previsto;
 	\item \textbf{Verificatore}: le ripetute modifiche subite dai documenti nominati ai punti precedenti hanno avuto come conseguenza anche l'aumento del tempo richiesto per questo ruolo.
 \end{itemize}
 
 \subsubsection{Preventivo a finire}
 Il leggero aumento di risorse impiegate rispetto al consuntivo non è ritenuto un problema in quanto la fase di analisi non è rendicontata. Inoltre il surplus di tempo utilizzato in questo periodo ha permesso di gettare delle solide fondamenta per le fasi successive del progetto.
+
+
+\subsection{Fase di consolidamento dei requisiti} \label{_consuntivoConsolidamentoDeiRequisiti}
+Le ore di lavoro di questa fase sono considerate ore di investimento quindi non sono rendicontate.
+
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|l|c|c|c|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Ruolo}             & \textbf{Ore} & \textbf{Costo in €} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Responsabile               & 4           & 120,00              \\
+	\hline
+	\hline
+	Amministratore             & 5       & 100,00      \\
+	\hline
+	\hline
+	Analista                   & 13       & 325,00   \\
+	\hline
+	\hline
+	Progettista                & -            & -                   \\
+	\hline
+	\hline
+	Programmatore              & -            & -                   \\
+	\hline
+	\hline
+	Verificatore               & 13       & 195,00    \\
+	\hline
+	\textbf{Totale Preventivo} & 35          & 740,00            \\
+	\hline
+	\hline
+	\textbf{Totale Consuntivo} & 35          & 740,00            \\
+	\hline
+	\hline
+	\textbf{Differenza}        & -           & -            \\
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il consuntivo della fase di consolidamento dei requisiti}
+\end{longtable}
+\subsubsection{Conclusioni}
+Come si evince dalla tabella sono state impiegate esattamente lo stesso numero di ore preventivate. Ciò è stato possibile grazie alla cura nell'analisi e la verifica adottate nella fase precedente. Il piccolo surplus di risorse impiegate nella fase di analisi ha permesso di lavorare più agevolmente e velocemente in questa fase.
+
+\subsubsection{Preventivo a finire}
+Poiché le risorse utilizzate in questa fase corrispondono esattamente a quanto preventivato e visto che le due fasi concluse non verranno rendicontate, non si ritiene necessario effettuare alcuna modifica al preventivo a finire.
+
+
+\subsection{Fase di progettazione della technology baseline} \label{_consuntivoTB}
+Le ore di lavoro di questa fase sono relative ai due periodi descritti in \S\ref{_pianificazioneProgettazioneTechnologyBaseline}.
+
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|l|c|c|c|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Ruolo}             & \textbf{Ore} & \textbf{Costo in €} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Responsabile               & 6(-1)           & 180,00(-30)              \\
+	\hline
+	\hline
+	Amministratore             & 15       & 300,00      \\
+	\hline
+	\hline
+	Analista                   & 25       & 625,00   \\
+	\hline
+	\hline
+	Progettista                & 22            & 484,00              \\
+	\hline
+	\hline
+	Programmatore              & -            & -                   \\
+	\hline
+	\hline
+	Verificatore               & 16(+1)       & 240,00(+15,00)    \\
+	\hline
+	\textbf{Totale Preventivo} & 84          & 1.844,00            \\
+	\hline
+	\hline
+	\textbf{Totale Consuntivo} & 84          & 1.829,00            \\
+	\hline
+	\hline
+	\textbf{Differenza}        & -           & -15,00           \\
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il consuntivo della fase di progettazione della technology baseline}
+\end{longtable}
+\subsubsection{Conclusioni}
+Come si evince dalla tabella sono state impiegate esattamente lo stesso numero di ore preventivate. Tuttavia è stato necessario effettuare una modifica sulla distribuzione delle ore tra i ruoli. In particolare:
+\begin{itemize}
+	\item \textbf{Responsabile}: i compiti destinati a questa figura  sono stati svolti più velocemente di quanto preventivato. Pertanto si è scelto di utilizzare l'ora avanzata dall'impiego di questo ruolo in altre attività;
+	\item  \textbf{Verificatore}: il tempo necessario a validare le numerose modifiche effettuate durante la progettazione, causate dalla scarsa esperienza dei membri del gruppo con le tecnologie utilizzate, si è rivelato insufficiente. Pertanto l'ora di avanzo ottenuta per quanto spiegato al punto sopra è stata assegnata per attività di verifica.
+\end{itemize}
+
+\subsubsection{Preventivo a finire}
+Poiché il monte ore utilizzato in questa fase corrisponde a quanto preventivato, vista la scarsa differenza tra preventivo e consuntivo (di € 15,00), che evidenzia in ogni caso un risparmio del gruppo, ritenuto che le risorse risparmiate potranno essere investite nella fase successiva, non si ritiene necessario effettuare alcuna modifica sostanziale al preventivo.
+
+
+
+\subsection{Fase di Progettazione e codifica del proof of Concept} \label{_consuntivoPoC}
+Le ore di lavoro di questa fase sono relative ai due periodi descritti in \S\ref{_pianificazioneCodificaPoC}.
+Le sezioni seguenti riportano i consuntivi di periodo relativi ai diversi incrementi di questa fase.
+
+\subsubsection{I incremento} \label{_consuntivoPoC1}
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|l|c|c|c|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Ruolo}             & \textbf{Ore} & \textbf{Costo in €} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Responsabile               & 7           & 210,00              \\
+	\hline
+	\hline
+	Amministratore             & 11(+1)       & 220,00(+20,00)      \\
+	\hline
+	\hline
+	Analista                   & -       & -   \\
+	\hline
+	\hline
+	Progettista                & 16(-1)            & 352,00(-22,00)              \\
+	\hline
+	\hline
+	Programmatore              & 10            & 150,00                   \\
+	\hline
+	\hline
+	Verificatore               & 12       & 180,00    \\
+	\hline
+	\textbf{Totale Preventivo} & 56          & 1.114,00            \\
+	\hline
+	\hline
+	\textbf{Totale Consuntivo} & 56          & 1.112,00            \\
+	\hline
+	\hline
+	\textbf{Differenza}        & -           & -2,00           \\
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il consuntivo del I incremento}
+\end{longtable}
+\paragraph{Conclusioni}
+Come si evince dalla tabella sono state impiegate esattamente lo stesso numero di ore preventivate. Tuttavia è stato necessario effettuare una modifica sulla distribuzione delle ore tra i ruoli. In particolare:
+begin\begin{itemize}
+	\item \textbf{Progettista}: è stata sottratta un'ora a questo ruolo in quanto il lavoro di progettazione svolto nella fase di progettazione della technology baseline si è rivelato utile a ottenere un risparmio orario in questo incremento;
+	\item \textbf{Amministratore}: si è scelto di investire le ore avanzate dalla progettazione nel ruolo di amministratore. Questo ha permesso di aggiornare efficacemente le \dext{NormeDiProgetto\_2.0.0} in modo da normare rigidamente il processo di codifica appena iniziato.
+\end{itemize} 
+
+\paragraph{Preventivo a finire}
+Poiché il monte ore utilizzato in questa fase corrisponde a quanto preventivato, vista la scarsa differenza tra preventivo e consuntivo (di € 2,00), che evidenzia in ogni caso un risparmio del gruppo rispetto al preventivo, ritenuto che le risorse risparmiate potranno essere investite nei successivi incrementi di questa fase, non si ritiene necessario effettuare alcuna modifica sostanziale al preventivo.
+
+\subsubsection{II incremento}\label{_consuntivoPoC2}
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|l|c|c|c|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Ruolo}             & \textbf{Ore} & \textbf{Costo in €} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Responsabile               & 6           & 180,00              \\
+	\hline
+	\hline
+	Amministratore             & 6       & 120,00      \\
+	\hline
+	\hline
+	Analista                   & 3       & 75,00   \\
+	\hline
+	\hline
+	Progettista                & 9(-1)            & 198,00(-22,00)              \\
+	\hline
+	\hline
+	Programmatore              & 22(+1)            & 330,00(+15,00)                   \\
+	\hline
+	\hline
+	Verificatore               & 17       & 255,00    \\
+	\hline
+	\textbf{Totale Preventivo} & 63          & 1.165,00            \\
+	\hline
+	\hline
+	\textbf{Totale Consuntivo} & 63          & 1.158,00            \\
+	\hline
+	\hline
+	\textbf{Differenza}        & -           & -7,00           \\
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il consuntivo del II incremento}
+\end{longtable}
+\paragraph{Conclusioni}
+Come si evince dalla tabella sono state impiegate esattamente lo stesso numero di ore preventivate. Tuttavia è stato necessario effettuare una modifica sulla distribuzione delle ore tra i ruoli. In particolare:
+begin\begin{itemize}
+	\item \textbf{Progettista}: è stata sottratta un'ora a questo ruolo in quanto il lavoro di progettazione svolto nella fase di progettazione della technology baseline si è rivelato utile a ottenere un risparmio orario in questo incremento;
+	\item \textbf{Programmatore}: si è scelto di investire le ore avanzate dalla progettazione nel ruolo di programmatore. L'implementazione delle tecnologie utilizzate per il backend, infatti, ha richiesto più tempo di quanto preventivato.
+\end{itemize} 
+
+\paragraph{Preventivo a finire}
+Poiché il monte ore utilizzato in questa fase corrisponde a quanto preventivato, vista la scarsa differenza tra preventivo e consuntivo (di € 7,00), che evidenzia in ogni caso un risparmio del gruppo rispetto al preventivo, ritenuto che le risorse risparmiate potranno essere investite nei successivi incrementi di questa fase, non si ritiene necessario effettuare alcuna modifica sostanziale al preventivo.
+
+\subsubsection{III incremento}\label{_consuntivoPoC3}
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|l|c|c|c|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Ruolo}             & \textbf{Ore} & \textbf{Costo in €} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Responsabile               & 4(+1)           & 120,00(+30,00)              \\
+	\hline
+	\hline
+	Amministratore             & 1       & 20,00      \\
+	\hline
+	\hline
+	Analista                   & 5       & 125,00   \\
+	\hline
+	\hline
+	Progettista                & 15            & 330,00              \\
+	\hline
+	\hline
+	Programmatore              & 14(-2)            & 210,00(-30,00)                   \\
+	\hline
+	\hline
+	Verificatore               & 10(+1)       & 150,00(+15,00)    \\
+	\hline
+	\textbf{Totale Preventivo} & 49          & 940,00            \\
+	\hline
+	\hline
+	\textbf{Totale Consuntivo} & 49          & 955,00            \\
+	\hline
+	\hline
+	\textbf{Differenza}        & -           & +15,00           \\
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il consuntivo del II incremento}
+\end{longtable}
+\paragraph{Conclusioni}
+Come si evince dalla tabella sono state impiegate esattamente lo stesso numero di ore preventivate. Tuttavia è stato necessario effettuare una modifica sulla distribuzione delle ore tra i ruoli. In particolare:
+begin\begin{itemize}
+	\item \textbf{Progettista}: sono state sottratte due ore a questo ruolo in quanto il lavoro di progettazione svolto nella fase di progettazione della technology baseline e nei due incrementi precedenti si è rivelato utile a ottenere un risparmio orario in questo incremento;
+	\item \textbf{Programmatore}: si è scelto di investire le ore avanzate dalla progettazione nel ruolo di programmatore. L'ultimazione del codice del frontend, infatti, ha richiesto più tempo di quanto preventivato;
+	\item \textbf{Responsabile}: è stata necessaria un'ora in più per aggiustare la pianificazione delle fasi future del progetto, visto quando riscontrato fino a questo momento.
+\end{itemize} 
+
+\paragraph{Preventivo a finire}
+Poiché il monte ore utilizzato in questa fase corrisponde a quanto preventivato, vista la scarsa differenza tra preventivo e consuntivo (di € 15,00), pur costituendo questa uno sforamento rispetto al preventivo, non si ritiene necessario effettuare alcuna modifica sostanziale al preventivo. Inoltre, l'eccesso nel consumo di risorse in questo incremento è totalmente ammortizzato dal risparmio accumulato dagli incrementi precedenti, come è possibile evincere da \S\ref{riepilogoPAF}.
+
+\subsubsection{Riepilogo del preventivo a finire}\label{riepilogoPAF}
+
+La tabella seguente riporta il preventivo a finire, alla luce dei periodi consuntivati.
+
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|p{6cm}|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Periodo}             & \textbf{Preventivo in €} & \textbf{Consuntivo in €} & \textbf{Differenza in €} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Analisi dei requisiti            & 4.430,00        & 4.625,00  & +195,00   \\ 
+	\hline
+	\hline
+	Consolidamento dei requisiti     & 740,00        & 740,00    & -  \\ 
+	\hline
+	\hline
+	Progettazione Technology Baseline      & 1.844,00       & 1.829,00  & -15,00  \\
+	\hline
+	\hline
+	Progettazione e codifica Proof of Concept - I incremento      & 1.114,00            & 1.112,00   & -2,00          \\
+	\hline
+	\hline
+	Progettazione e codifica Proof of Concept - II incremento     & 1.165,00            & 1.158,00 & -7,00           \\
+	\hline
+	\hline
+	Progettazione e codifica Proof of Concept - III incremento    & 940,00       & 955,00  & +15,00   \\
+	\hline
+	\textbf{Totale } & 18.469,00     & 18.655,00   &  +186,00       \\
+	\hline
+	\hline
+	\textbf{Totale rendicontato} & 13.299,00       & 13.290,00     & -9,00     \\
+	\hline
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il preventivo a finire}
+\end{longtable}
+
+Come si può notare, nonostante il totale non rendicontato si discosti di € 186 da quanto preventivato, il totale rendicontato si riporta molto vicino alla stima iniziale del preventivo. Lo scarto ammonta ad € 9 rispetto al preventivo, cifra che risulta costituire un risparmio del gruppo rispetto alle previsioni. \\
+Visto che in seguito ai periodi non rendicontati, in cui, come spiegato in \S\ref{_consuntivoAnalisiDeiRequisiti}, le attività che hanno portato allo sforamento hanno contribuito a gettare delle solide basi per il progetto, non vi sono stati altri sostanziali scostamenti rispetto al preventivo, non si ritiene necessario apportare modifiche al preventivo in \S\ref{_preventivo}.
