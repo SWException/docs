@@ -1,10 +1,10 @@
 \section{Resoconto attività di verifica} \label{_resocontoVerifica}
 
-\subsection{Revisione dei requisiti}
+\subsection{Analisi e consolidamento dei requisiti}
 
 \subsubsection{Analisi statica dei documenti}
 Tutta la documentazione prodotta in ingresso alla Revisione dei Requisiti è stata sottoposta ad una meticolosa attività di verifica
-basata su quanto previsto all'interno del documento delle norme di progetto.
+basata su quanto previsto all'interno del documento delle \dext{NormeDiProgetto\_1.0.0}.
 Questa attività è stata espletata dai verificatori.
 
 \subsubsection{Analisi automatizzata dei documenti}
@@ -53,4 +53,78 @@ Per quanto riguarda i verbali redatti in occasione dei meeting tra i membri del 
     \end{center}
 \end{center}
 
+\newpage
+\subsection{Progettazione e codifica della proof of concept} 
 
+\subsubsection{Analisi statica e automatizzata dei documenti}\label{resocontoProgettazione}
+Tutta la documentazione prodotta in ingresso alla Revisione di Progettazione è stata sottoposta ad una meticolosa attività di verifica
+basata su quanto previsto all'interno del documento delle \dext{NormeDiProgetto\_2.0.0}.
+Questa attività è stata espletata dai verificatori.
+Come avvenuto per la Revisione dei Requisiti tutta la documentazione è stata sottoposta ad analisi automatizzata.
+La correttezza ortografica si è mantenuta stabile sul valore nullo.
+
+\begin{center}
+    \begin{figure}[!htb]
+        \centering
+        \includegraphics[scale=0.60]{res/images/grafico_gulpease_rp.png}
+        \caption{Grafico Indice di Gulpease}
+    \end{figure}
+    \begin{center}
+        \rowcolors{2}{white}{blue!20}
+        \begin{longtable}{|c|c|}
+            \hline
+            \rowcolor{lighter-grayer}
+            \textbf{Documento}         & \textbf{Indice di Gulpease} \\
+            \hline
+            \endfirsthead
+
+            \hline
+            Verbale Interno 2021-01-20 & 60                          \\
+            Verbale Interno 2021-01-04 & 65                          \\     
+            Verbale Esterno 2021-02-15 & 63                          \\           
+            \hline
+            \rowcolor{white}
+            \caption{Indice di Gulpease dei verbali}
+        \end{longtable}
+    \end{center}
+\end{center}
+
+\subsubsection{Dettaglio delle verifiche di processo}
+
+\paragraph{MPR-1: Budgeted Cost of Work Scheduled (BCWS)}\label{_BCWS}
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{res/images/metriche_costi/BCWS.png}
+    \caption{Grafico contenente il costo preventivato in euro per periodo}
+\end{figure}
+
+\paragraph{MPR-2: Actual Cost of Work Performed (ACWP)}\label{_ACWP}
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{res/images/metriche_costi/ACWP.png}
+    \caption{Grafico contenente il costo effettivo in euro per periodo}
+\end{figure}
+\newpage
+
+\paragraph{MPR-3: Budgeted Cost of Work Performed (BCWP)}\label{_BCWP}
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{res/images/metriche_costi/BCWP.png}
+    \caption{Grafico contenente il valore del prodotto in euro per periodo}
+\end{figure}
+
+
+
+\paragraph{MPR-4: Cost Variance (CV)}\label{_CV}
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{res/images/metriche_costi/CV.png}
+    \caption{Grafico contenente il valore del cost variance per periodo}
+\end{figure}
+\newpage
+\paragraph{MPR-5: Schedule Variance (SV)}\label{_SV}
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{res/images/metriche_costi/SV.png}
+    \caption{Grafico contenente il valore dello schedule variance per periodo}
+\end{figure} 
