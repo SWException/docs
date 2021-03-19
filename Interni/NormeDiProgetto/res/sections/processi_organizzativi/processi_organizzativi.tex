@@ -182,16 +182,29 @@ Le fasi del ciclo di vità di un ticket sono qui spiegate nel dettaglio.
     \item \textbf{Spostamento pull request in "DONE"}: se il verificatore non riscontra correzioni da fare, o quelle effettuate sono soddisfacenti, effettua il merge sul develop selezionando l'opzione "Squash and merge" e assegnare un titolo significativo al commit. Infine sposta la pull request in "DONE".
     \item \textbf{Approvazione del lavoro}: il responsabile di progetto dopo aver esaminato il lavoro lo approverà successivamente effettuando una pull request al ramo master.
 \end{itemize}
-\paragraph{Metriche di processo}
-Per poter monitorare adeguatamente la pianificazione di risorse, tempi e costi del progetto vengono utilizzate le seguenti metriche:
+
+\paragraph{Metriche di processo} \label{_metricheprocesso}
+\subparagraph{MPR-1: Budgeted Cost of Work Scheduled (BCWS)} \label{_MPR-1}
+Rappresenta il costo pianificato in euro per realizzare le attività di progetto alla data corrente.
+
+\subparagraph{MPR-2: Actual Cost of Work Performed (ACWP)} \label{_MPR-2}
+Rappresenta il costo effettivamente sostenuto in euro alla data corrente.
+
+\subparagraph{MPR-3: Budgeted Cost of Work Performed (BCWP)} \label{_MPR-3}
+Rappresenta il valore in euro delle attività realizzate alla data corrente.
+
+\subparagraph{MPR-4: Cost Variance (CV)} \label{_MPR-4}
+Indica se il valore realmente maturato è maggiore, uguale o minore rispetto al costo effettivo.
 \begin{itemize}
-    \item \hyperref[_MPR-1]{\textbf{MPR-1:} Budgeted Cost of Work Scheduled (BCWS)};
-    \item \hyperref[_MPR-2]{\textbf{MPR-2:} Actual Cost of Work Performed (ACWP)};
-    \item \hyperref[_MPR-3]{\textbf{MPR-3:} Budgeted Cost of Work Performed (BCWP)};
-    \item \hyperref[_MPR-4]{\textbf{MPR-4:} Cost Variance (CV)};
-    \item \hyperref[_MPR-5]{\textbf{MPR-5:} Schedule Variance (SV)}.
+    \item \textbf{Formula}: $CV = BCWP - ACWP$;
 \end{itemize}
-Esse sono descritte più nel dettaglio in \S\ref{_metricheprocesso}
+
+\subparagraph{MPR-5: Schedule Variance (SV)} \label{_MPR-5}
+Indica se si è in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto pianificate nella baseline.
+\begin{itemize}
+    \item \textbf{Formula}: $SV = BCWP - BCWS$;
+\end{itemize}
+
 
 \subsection{Gestione dell'Infrastruttura} \label{_gestioneInfrastruttura}
 \subsubsection{Scopo}
