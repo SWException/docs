@@ -19,7 +19,7 @@ I vantaggi del modello di sviluppo incrementale sono i seguenti:
 
 \subsection{Incrementi pianificati}
 
-Si prevede di andare a svolgere \textbf{6 incrementi} con l'obbiettivo di poter integrare tutte le funzionalità richieste dal proponente entro le scadenze. Di seguito viene presentata una tabella riassuntiva per gli incrementi identificati con una breve descrizione e l'insieme di requisiti che necessita.
+Si prevede di andare a svolgere \textbf{9 incrementi} con l'obbiettivo di poter integrare tutte le funzionalità richieste dal proponente entro le scadenze. Di seguito viene presentata una tabella riassuntiva per gli incrementi identificati con una breve descrizione e l'insieme di requisiti che necessita.
 
 \begin{center}
 	\rowcolors{1}{lightest-grayest}{blue!20}
@@ -34,11 +34,17 @@ Si prevede di andare a svolgere \textbf{6 incrementi} con l'obbiettivo di poter 
 		\endfoot
 		\endlastfoot
 		\hline
-		I Incremento   & Progettazione e prima codifica del Proof of Concept                           & R1F1 R1F5 R1F8 R1F9 R1F11                 \\
-		II Incremento  & Miglioramento del primo Prof of Concept attraverso il raffinamento del codice & R2F6 R1F7 R1F10 R1F12 R1F13 R1F15 R1F16 R1F19 R1F20                 \\
-		III Incremento & Progettazione delle funzionalità non implementate nel Proof of Concept        & R1F2 R1F3 R1F4 R1F14 R1F17 R1F18                  \\
-		IV Incremento  & Prima versione del prodotto pronta                                            & R1F21 R1F22 R1F23            \\
-		V Incremento   & Fine codifica e raffinamento del prodotto                                     & R1F24 R1F25 R1F26                 \\ \hline
+		I Incremento   & Prima codifica delle componenti del backend e del frontend del Proof of Concept & R1F1 \\
+		II Incremento  & Implementazione delle \glock{API} necessarie per il \glock{PoC} e dell'autenticazione utente & R1F15 R1F16 R1F17 R1F20  \\
+		III Incremento & Implementazione di carrello e funzionalità per il checkout   & R1F11 R1F10 \\
+		IV Incremento  & Inizio dello sviluppo delle funzionalità del venditore & R1F21 R1F23 R1F25 R1F26 R1F27 R1F28          \\
+		V Incremento   & Implementazione di \glock{PLP} e \glock{PDP}  & R1F3 R1F4 R1F5 R1F8 \\
+		VI Incremento   & Implementazione degli ordini lato cliente   & R1F9 R1F12 R1F13 R1F14 \\
+		VII Incremento   & Fine implementazione funzionalità cliente ed implementazione gestione prodotti del venditore     &  R1F2 R2F6 R1F7 R1F18 R1F19 \\
+		VIII Incremento   & Implementazione gestione ordini lato venditore & R1F22    \\
+		IX Incremento   & Raffinamento frontend e implementazione ultime funzionalità lato venditore & R1F24     \\
+		
+		 \hline
 		\rowcolor{white}
 		\caption{Riassunto degli incrementi pianificati}
 	\end{longtable}

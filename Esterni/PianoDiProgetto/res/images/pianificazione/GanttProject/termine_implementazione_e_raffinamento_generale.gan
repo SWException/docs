@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Termine implementazione e raffinamento generale" company="" webLink="http://" view-date="2021-03-28" view-index="0" gantt-divider-location="636" resource-divider-location="300" version="2.8.11" locale="it">
+<?xml version="1.0" encoding="UTF-8"?><project name="Termine implementazione e raffinamento generale" company="" webLink="http://" view-date="2021-04-02" view-index="0" gantt-divider-location="638" resource-divider-location="300" version="2.8.11" locale="it">
     <description/>
-    <view zooming-state="default:4" id="gantt-chart">
-        <field id="tpd3" name="Nome" width="417" order="0"/>
+    <view zooming-state="default:3" id="gantt-chart">
+        <field id="tpd3" name="Nome" width="422" order="0"/>
         <field id="tpd4" name="Data d'inizio" width="107" order="1"/>
-        <field id="tpd5" name="Data di fine" width="108" order="2"/>
+        <field id="tpd5" name="Data di fine" width="105" order="2"/>
         <option id="taskLabelUp" value=""/>
         <option id="taskLabelRight" value=""/>
     </view>
@@ -35,15 +35,22 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="0" name="Termine implementazione e raffinamento generale" meeting="false" start="2021-04-03" duration="23" complete="0" expand="true">
-            <task id="1" name="Incremento V" color="#000000" meeting="false" start="2021-04-03" duration="23" complete="0" expand="true">
-                <task id="3" name="RQ" color="#8cb6ce" meeting="true" start="2021-04-07" duration="0" complete="0" thirdDate="2021-03-22" thirdDate-constraint="0" expand="true"/>
-                <task id="5" name="Aggiornamento della pianificazione" color="#8cb6ce" meeting="false" start="2021-04-03" duration="3" complete="0" expand="true"/>
-                <task id="7" name="Progettazione" color="#8cb6ce" meeting="false" start="2021-04-03" duration="8" complete="0" expand="true"/>
-                <task id="9" name="Codifica" color="#8cb6ce" meeting="false" start="2021-04-05" duration="17" complete="0" expand="true"/>
-                <task id="11" name="Piano di qualità" color="#8cb6ce" meeting="false" start="2021-04-12" duration="4" complete="0" thirdDate="2021-04-07" thirdDate-constraint="0" expand="true"/>
-                <task id="13" name="Manuale utente" color="#8cb6ce" meeting="false" start="2021-04-19" duration="5" complete="0" expand="true"/>
-                <task id="15" name="Verifica" color="#8cb6ce" meeting="false" start="2021-04-09" duration="17" complete="0" expand="true"/>
+        <task id="0" name="Termine implementazione e raffinamento generale" meeting="false" start="2021-04-03" duration="20" complete="0" expand="true">
+            <task id="1" name="Incremento VIII" color="#000000" meeting="false" start="2021-04-03" duration="14" complete="0" expand="true">
+                <depend id="12" type="2" difference="0" hardness="Strong"/>
+                <task id="3" name="Progettazione" color="#8cb6ce" meeting="false" start="2021-04-03" duration="7" complete="0" expand="true"/>
+                <task id="5" name="Codifica BE" color="#8cb6ce" meeting="false" start="2021-04-04" duration="7" complete="0" expand="true"/>
+                <task id="7" name="Codifica FE" color="#8cb6ce" meeting="false" start="2021-04-08" duration="8" complete="0" expand="true"/>
+                <task id="9" name="Manuale utente" color="#8cb6ce" meeting="false" start="2021-04-08" duration="9" complete="0" expand="true"/>
+                <task id="11" name="Verifica" color="#8cb6ce" meeting="false" start="2021-04-04" duration="13" complete="0" expand="true"/>
+            </task>
+            <task id="12" name="Incremento IX" color="#000000" meeting="false" start="2021-04-17" duration="6" complete="0" expand="true">
+                <task id="13" name="Progettazione" color="#8cb6ce" meeting="false" start="2021-04-17" duration="1" complete="0" expand="true"/>
+                <task id="14" name="Codifica" color="#8cb6ce" meeting="false" start="2021-04-17" duration="3" complete="0" expand="true"/>
+                <task id="15" name="Manuale utente" color="#8cb6ce" meeting="false" start="2021-04-17" duration="5" complete="0" expand="true"/>
+                <task id="16" name="Piano di qualità" color="#8cb6ce" meeting="false" start="2021-04-20" duration="2" complete="0" thirdDate="2021-04-07" thirdDate-constraint="0" expand="true"/>
+                <task id="17" name="Aggiornamento della pianificazione" color="#8cb6ce" meeting="false" start="2021-04-21" duration="2" complete="0" expand="true"/>
+                <task id="18" name="Verifica" color="#8cb6ce" meeting="false" start="2021-04-17" duration="6" complete="0" expand="true"/>
             </task>
         </task>
     </tasks>
