@@ -1,0 +1,69 @@
+\section{Informazioni}
+\textbf{Data}: 2021-02-04\\
+\textbf{Orario}: 14:30 - 15:30\\
+\textbf{Luogo}: Zoom\\\\
+\textbf{Partecipanti}:\begin{list}{*}{\setlength{\itemsep}{0cm}}
+	\item Marco Canovese
+	\item Nicole Davanzo
+	\item Ivan Furlan
+	\item Gianmarco Guazzo
+	\item Francesco Trolese
+	\item Michele Veronesi
+	\item Stefano Lazzaroni
+\end{list}
+
+\section{Introduzione}
+In data 2021-02-04 si è tenuta in videoconferenza una riunione con tutti i componenti del gruppo al fine di definire la struttura del Proof of Concept da presentare nel colloquio di Technology Baseline.
+
+\subsection{Ordine del giorno}
+\begin{enumerate}
+    \item Definizione delle tecnologie coinvolte nel PoC;
+    \item Assegnazione delle tecnologie ai vari componenti del gruppo;
+    \item Definizione della struttura del PoC.
+\end{enumerate}
+
+\section{Svolgimento}
+
+\subsection{Definizione delle tecnologie coinvolte nel PoC}
+Dall'analisi del capitolato C2 e una discussione tra i membri del gruppo basata sulle conoscenze pregresse, anche se scarse, delle tecnologie menzionate dal proponente, si è deciso
+di adottare le seguenti tecnologie.
+
+\subsubsection{Tecnologie comuni tra tutti i moduli}
+\begin{itemize}
+	\item Come linguaggio di programmazione si userà TypeScript, il quale è una versione avanzata di JavaScript con controllo statico dei tipi;
+	\item Per la gestione della configurazione e il deploy nell'infrastruttura cloud di AWS ci si affiderà al framework Serverless;
+	\item Per l'esecuzione delle API generate si userà il servizio AWS Lambda, il quale calcola il costo di utilizzo solamente in base al tempo di esecuzione delle API;
+	\item Per esportare le API ci si affiderà al servizio di AWS API Gateway.
+\end{itemize}
+
+\subsubsection{EML-FE}
+Per il modulo del front-end si utilizzerà la libreria Next.js. In particolare perché ha una perfetta integrazione con TypeScript,
+oltre che una serie di altri vantaggi.
+
+\subsubsection{EML-BE}
+Per il modulo del back-end si è deciso di adottare le seguenti tecnologie:
+\begin{itemize}
+	\item Per la persistenza dei dati ci si affiderà al database DynamoDB di Amazon, il quale si basa sulla tecnologia NoSQL;
+	\item Per la gestione delle credenziali degli utilizzatori della piattaforma si utilizzerà Amazon Cognito, questo anche per evitare alcuni problemi di sicurezza;
+	\item Per la gestione dei pagamenti si adotterà Stripe, in questo modo non ci si dovrà preoccupare di rispettare gli stretti standard di sicurezza imposti alle piattaforme che elaborano i pagamenti elettronici direttamente.
+\end{itemize}
+
+\subsection{Assegnazione delle tecnologie ai vari componenti del gruppo}
+Visto e considerato che alcuni membri del gruppo hanno già una certa familiarità con le tecnologie sopra menzionate, si è deciso di suddividere l'apprendimento e approfondimento di ciascuna nel seguente modo:
+\begin{itemize}
+	\item A Nicole Davanzo, Francesco Trolese e Michele Veronesi viene assegnato il linguaggio TypeScript, il framework Serverless e in generale l'apprendimento dello stile di programmazione asincrono richiesto per il back end;
+	\item A Marco Canovese e Ivan Furlan viene affidato l'apprendimento delle tecnologie Cognito e Stripe;
+	\item Stefano Lazzaroni e Gianmarco Guazzo vengono incaricati di comprendere l'architettura e le tecnologie per il modulo del front end, viste anche le conoscenze pregresse di Guazzo sulle tecnologie coinvolte in questa parte dell'applicazione.
+\end{itemize}
+
+\subsection{Definizione della struttura del PoC}
+La struttura del PoC dovrà essere il più semplice possibile, toccando la maggior parte, se non tutte, delle tecnologie sopra menzionate.
+Di conseguenza la struttura definita dal gruppo è la seguente:
+\begin{itemize}
+	\item Una home page con elementi mock (ovvero che non si trovano nella base di dati). Da questa è possibile effettuare il login e la registrazione;
+	\item L'implementazione di Amazon Cognito per la gestione delle credenziali, ovvero registrazione, autenticazione e recupero password;
+	\item La visualizzazione di un carrello già impostato in DynamoDB e associato ad un preciso utente (già registrato);
+	\item La possibilità di eseguire il pagamento con Stripe del suddetto carrello.
+\end{itemize}
+
+%IMPORTANTE: ricordare di compilare il registro delle decisioni prese (file tracciamenti.tex)
