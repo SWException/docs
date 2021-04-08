@@ -29,6 +29,26 @@ It is extremely configurable to support a wide variety of use cases. Most common
 Swagger is an Interface Description Language for describing RESTful APIs expressed using JSON. Swagger is used together with a set of open-source software tools to design, build, document, and use RESTful web services. Swagger includes automated documentation, code generation (into many programming languages), and test-case generation.
 
 
+\subsection{Architecture}
+We created a serverless and microservices oriented architecture. Each microservice is hosted in a different repository, with it's own persistence layer and CI rules.
+The microservices created and their respective responsabilities are:
+\begin{itemize}
+    \item products: you can find the repo \href{https://github.com/SWException/products}{here}; it provides CRUD functionalities for products managment,
+                    like create a new product, modify an existing one, etc... It has also the responsibiloty to manage images associated to a product, which are 
+                    stored in a Amazon S3 bucket;
+    \item carts: you can find the repo \href{https://github.com/SWException/carts}{here}; it has the responsibility to manage carts of all users and guests that
+                 added some products to their carts. Carts are identified by the user ID (provided by Amazon Cognito), so it communicates with users microservice for each call.
+                 Each cart contain only an array of tuples composed by a products ID and a quantity (integer);
+    \item orders: you can find the repo \href{https://github.com/SWException/orders}{here}; it has the responsibility to provide CRUD functionalities for orders information.
+                  It also has to provide API's to start and complete checkout process, communicating with Stripe to generate a payment intent;
+    \item users: you can find the repo \href{https://github.com/SWException/users}{here}; it provide the functionality to check a Cognito's token JWT to other microservices.
+                 It also provides to the frontend service the possibility to get the customers list and details about a specific customer;
+    \item categories: you can find the repo \href{https://github.com/SWException/categories}{here}; it provides CRUD functionalities to manage categories information.
+                      This is called, for example, each time that someone asks for product details to the products microservice;
+    \item taxes: you can find the repo \href{https://github.com/SWException/taxes}{here}; it provides CRUD functionalities to manage taxes information;
+    \item addresses: you can find the repo \href{https://github.com/SWException/addresses}{here}; it provides CRUD functionalities to manage addresses information.
+\end{itemize}
+
 \subsection{Sequence diagrams}
 In this section we'll provide sequence diagrams for explaining how microservices communicates between each others
 when certains API's are called from the fronend service.
