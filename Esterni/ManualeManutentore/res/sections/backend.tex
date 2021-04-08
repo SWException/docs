@@ -20,8 +20,6 @@ TypeScript is a programming language developed and maintained by Microsoft. It i
 JSON (JavaScript Object Notation) is an open standard file format, and data interchange format, that uses human-readable text to store and transmit data objects consisting of attribute–value pairs and array data types (or any other serializable value). It is a very common data format, with a diverse range of applications, such as serving as a replacement for XML in AJAX systems.
 
 
-
-
 \subsubsection{DynamoDB}
 Amazon DynamoDB is a fully managed proprietary NoSQL database service that supports key-value and document data structures and is offered by Amazon.com as part of the Amazon Web Services portfolio
 \subsubsection{Npm}
@@ -29,3 +27,23 @@ npm is the package manager for the Node JavaScript platform. It puts modules in 
 It is extremely configurable to support a wide variety of use cases. Most commonly, it is used to publish, discover, install, and develop node programs.
 \subsubsection{Swagger}
 Swagger is an Interface Description Language for describing RESTful APIs expressed using JSON. Swagger is used together with a set of open-source software tools to design, build, document, and use RESTful web services. Swagger includes automated documentation, code generation (into many programming languages), and test-case generation.
+
+
+\subsection{Sequence diagrams}
+In this section we'll provide sequence diagrams for explaining how microservices communicates between each others
+when certains API's are called from the fronend service.
+
+\subsubsection{Checkout}
+\begin{figure}[H]
+    \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/checkout.jpg}
+\end{figure}
+
+\subsubsection{Carts}
+\begin{figure}[H]
+    \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/carts.jpg}
+\end{figure}
+
+\subsubsection{Products}
+\begin{figure}[H]
+    \includegraphics[width=0.7\textwidth]{res/images/sequence-diagrams/products.jpg}
+\end{figure}
