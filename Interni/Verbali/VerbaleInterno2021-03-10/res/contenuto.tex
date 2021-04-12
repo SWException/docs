@@ -1,7 +1,7 @@
 \section{Informazioni}
-\textbf{Data}:\\
-\textbf{Orario}: 14:30-15:30\\
-\textbf{Luogo}:\\\\
+\textbf{Data}: 2021-03-10 \\
+\textbf{Orario}: 14:30-15:30 \\
+\textbf{Luogo}: Piattaforma online Zoom \\\\
 \textbf{Partecipanti}:\begin{list}{*}{\setlength{\itemsep}{0cm}}
 	\item Marco Canovese
 	\item Nicole Davanzo
@@ -15,14 +15,31 @@
 %Scrivere qui data e luogo dell'incontro (nel nostro caso la piattaforma usata) e i presenti all'incontro
 \subsection{Ordine del giorno}
 \begin{enumerate}
-	\item %scrivere qui come elenco numerato i punti all'ordine del giorno
+	\item Definizione attività per progettazione architetturale
+	\item Definizione team di sviluppo e relativa allocazione risorse
+	\item Livello di riuso del PoC
 \end{enumerate}
 
 \section{Svolgimento}
-\subsection{Punto ordine del giorno} % una subsection per ogni punto all'ordine del giorno
-% riassunto di quanto discusso per l'ordine del giorno a cui si sta facendo riferimento
+\subsection{Definizione attività per progettazione architetturale}
+Vengono definite le attività da eseguire al fine di ottenere un'architettura dell'applicazione che si andrà a sviluppare.
+Per quanto riguarda il backend sarà necessario identificare quali sono le chiamate API, definendo quali risposte e a che tipo di chiamata
+ogni API dovrà rispondere. Sarà inoltre necessario ragionare sull'architettura interna del backend, questa attività viene posticipata a quando il team
+avrà più conoscenze circa le architetture serverless a microservizi.\\
+Per quanto riguarda il frontend, ci si baserà sulle conoscenze pregresse di un membro del gruppo, il quale ha già usato queste tecnologie in ambito aziendale.
+
+\subsection{Definizione team di sviluppo e relativa allocazione risorse}
+Al fine di espletare le attività di cui sopra vengono allocate le seguenti risorse:
+\begin{itemize}
+	\item quattro membri del gruppo sono designate per la definizione delle scelte architetturali del backend e la definizione dei contratti delle API. Questi sono Canovese, Furlan, Trolese e Veronesi;
+	\item i restanti tre membri del gruppo sono invece assegnati alla definizione delle scelte architetturali per il frontend.
+\end{itemize}
+La priorità per il team addetto al backend sarà la definizione dei contratti API esposte al frontend seguendo il paradigma REST ed API-first.
+Queste saranno definite usando lo standard openAPI, in modo da poter generare dei mock automatici e permettere al team frontend di testare le scelte architetturali su queste API "finte".
+
+\subsection{Livello di riuso del PoC}
+Il codice prodotto nella Proof of Concept creata per la Technology Baseline verrà quasi completamente riutilizzato, visto che si trattava di una piccola quantità di lavoro, necessaria solamente alla compresione
+delle tecnologie, è improbabile che intralci qualche scelta architetturale successiva.
 
 \section{Conclusione}
-% riportare, se già stabilita, la data presunta della riunione successiva
-
-%IMPORTANTE: ricordare di compilare il registro delle decisioni prese (file tracciamenti.tex)
+Il team prevede di tenere un meeting con il proponente al fine di mostrare lo stato di avanzamento dei lavori e ricevere un feedback nella settimana p.v. La data precisa è ancora da definire.
