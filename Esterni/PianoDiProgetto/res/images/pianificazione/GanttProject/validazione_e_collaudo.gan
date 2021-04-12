@@ -39,9 +39,9 @@
             <depend id="16" type="2" difference="0" hardness="Strong"/>
             <task id="1" name="Unico periodo" meeting="false" start="2021-05-04" duration="7" complete="0" expand="true">
                 <depend id="16" type="2" difference="0" hardness="Strong"/>
-                <task id="2" name="Aggiornamento della pianificazione" meeting="false" start="2021-05-04" duration="2" complete="0" expand="true"/>
-                <task id="3" name="Codifica" meeting="false" start="2021-05-05" duration="4" complete="0" expand="true"/>
+                <task id="3" name="Codifica" meeting="false" start="2021-05-04" duration="4" complete="0" expand="true"/>
                 <task id="4" name="Manuali" color="#8cb6ce" meeting="false" start="2021-05-05" duration="4" complete="0" thirdDate="2021-05-05" thirdDate-constraint="0" expand="true"/>
+                <task id="17" name="Documenti" meeting="false" start="2021-05-05" duration="4" complete="0" expand="true"/>
                 <task id="5" name="Preparazione presentazione" meeting="false" start="2021-05-09" duration="2" complete="0" expand="true"/>
                 <task id="6" name="Stesura lettera di presentazione" meeting="false" start="2021-05-10" duration="1" complete="0" expand="true"/>
                 <task id="7" name="Verifica" meeting="false" start="2021-05-04" duration="7" complete="0" expand="true"/>
