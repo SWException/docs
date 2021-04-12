@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Validazione e collaudo" company="" webLink="http://" view-date="2021-04-21" view-index="0" gantt-divider-location="588" resource-divider-location="300" version="2.8.11" locale="it">
+<?xml version="1.0" encoding="UTF-8"?><project name="Validazione e collaudo" company="" webLink="http://" view-date="2021-05-01" view-index="0" gantt-divider-location="588" resource-divider-location="300" version="2.8.11" locale="it">
     <description/>
     <view zooming-state="default:3" id="gantt-chart">
         <field id="tpd3" name="Nome" width="356" order="0"/>
@@ -35,19 +35,19 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="0" name="Validazione e collaudo" meeting="false" start="2021-04-26" duration="14" complete="0" expand="true">
+        <task id="0" name="Validazione e collaudo" meeting="false" start="2021-05-04" duration="7" complete="0" expand="true">
             <depend id="16" type="2" difference="0" hardness="Strong"/>
-            <task id="1" name="Unico periodo" meeting="false" start="2021-04-26" duration="14" complete="0" expand="true">
+            <task id="1" name="Unico periodo" meeting="false" start="2021-05-04" duration="7" complete="0" expand="true">
                 <depend id="16" type="2" difference="0" hardness="Strong"/>
-                <task id="2" name="Aggiornamento della pianificazione" meeting="false" start="2021-04-26" duration="3" complete="0" expand="true"/>
-                <task id="3" name="Codifica" meeting="false" start="2021-04-27" duration="5" complete="0" expand="true"/>
-                <task id="4" name="Manuale utente" meeting="false" start="2021-04-30" duration="6" complete="0" expand="true"/>
-                <task id="6" name="Stesura lettera di presentazione" meeting="false" start="2021-05-06" duration="1" complete="0" expand="true"/>
-                <task id="5" name="Preparazione presentazione" meeting="false" start="2021-05-06" duration="2" complete="0" expand="true"/>
-                <task id="7" name="Verifica" meeting="false" start="2021-04-27" duration="13" complete="0" expand="true"/>
+                <task id="2" name="Aggiornamento della pianificazione" meeting="false" start="2021-05-04" duration="2" complete="0" expand="true"/>
+                <task id="3" name="Codifica" meeting="false" start="2021-05-05" duration="4" complete="0" expand="true"/>
+                <task id="4" name="Manuali" color="#8cb6ce" meeting="false" start="2021-05-05" duration="4" complete="0" thirdDate="2021-05-05" thirdDate-constraint="0" expand="true"/>
+                <task id="5" name="Preparazione presentazione" meeting="false" start="2021-05-09" duration="2" complete="0" expand="true"/>
+                <task id="6" name="Stesura lettera di presentazione" meeting="false" start="2021-05-10" duration="1" complete="0" expand="true"/>
+                <task id="7" name="Verifica" meeting="false" start="2021-05-04" duration="7" complete="0" expand="true"/>
             </task>
         </task>
-        <task id="16" name="RA" color="#8cb6ce" meeting="true" start="2021-05-10" duration="0" complete="0" thirdDate="2021-04-18" thirdDate-constraint="0" expand="true"/>
+        <task id="16" name="RA" color="#8cb6ce" meeting="true" start="2021-05-11" duration="0" complete="0" thirdDate="2021-04-18" thirdDate-constraint="0" expand="true"/>
     </tasks>
     <resources/>
     <allocations/>

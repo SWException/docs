@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2021-03-13" view-index="0" gantt-divider-location="400" resource-divider-location="300" version="2.8.11" locale="it">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2021-03-20" view-index="0" gantt-divider-location="446" resource-divider-location="300" version="2.8.11" locale="it">
     <description/>
     <view zooming-state="default:1" id="gantt-chart">
-        <field id="tpd3" name="Nome" width="182" order="0"/>
-        <field id="tpd4" name="Data d'inizio" width="109" order="1"/>
-        <field id="tpd5" name="Data di fine" width="105" order="2"/>
+        <field id="tpd3" name="Nome" width="230" order="0"/>
+        <field id="tpd4" name="Data d'inizio" width="108" order="1"/>
+        <field id="tpd5" name="Data di fine" width="104" order="2"/>
         <option id="taskLabelUp" value=""/>
         <option id="taskLabelRight" value=""/>
     </view>
@@ -35,11 +35,12 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="1" name="Incremento VI" color="#000000" meeting="false" start="2021-03-16" duration="6" complete="0" expand="true">
-            <task id="5" name="Progettazione" color="#8cb6ce" meeting="false" start="2021-03-16" duration="2" complete="0" thirdDate="2021-03-04" thirdDate-constraint="0" expand="true"/>
-            <task id="13" name="Codifica BE" color="#8cb6ce" meeting="false" start="2021-03-17" duration="5" complete="0" expand="true"/>
-            <task id="19" name="Codifica FE" meeting="false" start="2021-03-17" duration="4" complete="0" expand="true"/>
-            <task id="17" name="Verifica" color="#8cb6ce" meeting="false" start="2021-03-17" duration="5" complete="0" expand="true"/>
+        <task id="1" name="Incremento VI" color="#000000" meeting="false" start="2021-03-21" duration="11" complete="0" expand="true">
+            <task id="5" name="Progettazione" color="#8cb6ce" meeting="false" start="2021-03-21" duration="3" complete="0" thirdDate="2021-03-04" thirdDate-constraint="0" expand="true"/>
+            <task id="13" name="Codifica BE" color="#8cb6ce" meeting="false" start="2021-03-23" duration="5" complete="0" expand="true"/>
+            <task id="19" name="Codifica FE" meeting="false" start="2021-03-24" duration="6" complete="0" expand="true"/>
+            <task id="20" name="Manuale manutentore" meeting="false" start="2021-03-30" duration="2" complete="0" expand="true"/>
+            <task id="17" name="Verifica" color="#8cb6ce" meeting="false" start="2021-03-23" duration="9" complete="0" expand="true"/>
         </task>
     </tasks>
     <resources/>
