@@ -18,386 +18,7 @@ Per riportare i ruoli nelle tabelle, essi sono abbreviati con le seguenti sigle:
 \end{itemize}
 
 \subsection{Fase di analisi dei requisiti}
-La fase è composta da quattro periodi caratterizzati dalla distribuzione oraria descritta di seguito.
 
-\subsubsection{I periodo}
-\paragraph{Prospetto orario}
-Durante il primo periodo la distribuzione oraria sarà la seguente:
-
-\rowcolors{1}{lightest-grayest}{blue!20}
-\begin{longtable}{|l|c|c|c|c|c|c|c|}
-	\hline
-	\rowcolor{lighter-grayer}
-	\textbf{Nome}     & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
-	\hline
-	\endfirsthead
-
-	\hline
-	Marco Canovese    & 0           & 3           & 3           & 0           & 0           & 0           & 6               \\
-	\hline
-	\hline
-	Nicole Davanzo    & 2           & 1           & 3           & 0           & 0           & 0           & 6               \\
-	\hline
-	\hline
-	Ivan Furlan       & 0           & 4           & 2           & 0           & 0           & 0           & 6               \\
-	\hline
-	\hline
-	Gianmarco Guazzo  & 2           & 2           & 2           & 0           & 0           & 0           & 6               \\
-	\hline
-	\hline
-	Stefano Lazzaroni & 2           & 0           & 4           & 0           & 0           & 0           & 6               \\
-	\hline
-	\hline
-	Francesco Trolese & 1           & 3           & 2           & 0           & 0           & 0           & 6               \\
-	\hline
-	\hline
-	Michele Veronesi  & 0           & 4           & 2           & 0           & 0           & 0           & 6               \\
-	\hline
-	\hline
-	Totale            & 7           & 17          & 18          & 0           & 0           & 0           & 42              \\
-	\hline
-	\rowcolor{white}
-	\caption{Tabella contenente il prospetto orario preventivato per il primo periodo}
-\end{longtable}
-
-
-La tabella può essere riassunta nel seguente istogramma:
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_analisi/1-1.png}
-	\caption{Diagramma ore/ruolo componenti nel primo periodo}
-	\label{fig:diagramma suddivisione ruoli primo periodo analisi}
-\end{figure}
-
-\paragraph{Prospetto economico}
-In base al prospetto orario, quello economico sarà il seguente:
-
-\rowcolors{1}{lightest-grayest}{blue!20}
-\begin{longtable}{|l|c|c|c|c|c|c|c|}
-	\hline
-	\rowcolor{lighter-grayer}
-	\textbf{Ruolo}  & \textbf{Ore} & \textbf{Costo in €} \\
-	\hline
-	\endfirsthead
-
-	\hline
-	Responsabile    & 7            & 210,00              \\
-	\hline
-	\hline
-	Amministratore  & 17           & 340,00              \\
-	\hline
-	\hline
-	Analista        & 18           & 450,00              \\
-	\hline
-	\hline
-	Progettista     & -            & -                   \\
-	\hline
-	\hline
-	Programmatore   & -            & -                   \\
-	\hline
-	\hline
-	Verificatore    & -            & -                   \\
-	\hline
-	\textbf{Totale} & 42           & 1.000,00            \\
-	\hline
-	\rowcolor{white}
-	\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario}
-\end{longtable}
-\pagebreak
-
-La tabella può essere riassunta nel seguente areogramma:
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_analisi/1-2.png}
-	\caption{Diagramma percentuale ore/ruolo nel primo periodo}
-	\label{fig:diagramma costi ruolo  primo periodo analisi}
-\end{figure}
-
-\subsubsection{II periodo}
-\paragraph{Prospetto orario}
-Durante il secondo periodo la distribuzione oraria sarà la seguente:
-
-\rowcolors{1}{lightest-grayest}{blue!20}
-\begin{longtable}{|l|c|c|c|c|c|c|c|}
-	\hline
-	\rowcolor{lighter-grayer}
-	\textbf{Nome}     & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
-	\hline
-	\endfirsthead
-
-	\hline
-	Marco Canovese    & 0           & 4           & 2           & 0           & 0           & 2           & 8               \\
-	\hline
-	\hline
-	Nicole Davanzo    & 2           & 0           & 3           & 0           & 0           & 3           & 8               \\
-	\hline
-	\hline
-	Ivan Furlan       & 0           & 2           & 2           & 0           & 0           & 4           & 8               \\
-	\hline
-	\hline
-	Gianmarco Guazzo  & 1           & 3           & 3           & 0           & 0           & 1           & 8               \\
-	\hline
-	\hline
-	Stefano Lazzaroni & 2           & 0           & 1           & 0           & 0           & 5           & 8               \\
-	\hline
-	\hline
-	Francesco Trolese & 2           & 2           & 0           & 0           & 0           & 4           & 8               \\
-	\hline
-	\hline
-	Michele Veronesi  & 0           & 2           & 2           & 0           & 0           & 4           & 8               \\
-	\hline
-	\hline
-	Totale            & 7           & 13          & 13          & 0           & 0           & 23          & 56              \\
-	\hline
-	\rowcolor{white}
-	\caption{Tabella contenente il prospetto orario preventivato per il secondo periodo}
-\end{longtable}
-
-
-La tabella può essere riassunta nel seguente istogramma:
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_analisi/2-1.png}
-	\caption{Diagramma ore/ruolo componenti nel secondo periodo}
-	\label{fig:diagramma suddivisione ruoli secondo periodo analisi}
-\end{figure}
-
-\paragraph{Prospetto economico}
-In base al prospetto orario, quello economico sarà il seguente:
-
-\rowcolors{1}{lightest-grayest}{blue!20}
-\begin{longtable}{|l|c|c|c|c|c|c|c|}
-	\hline
-	\rowcolor{lighter-grayer}
-	\textbf{Ruolo}  & \textbf{Ore} & \textbf{Costo in €} \\
-	\hline
-	\endfirsthead
-
-	\hline
-	Responsabile    & 7            & 210,00              \\
-	\hline
-	\hline
-	Amministratore  & 13           & 260,00              \\
-	\hline
-	\hline
-	Analista        & 13           & 325,00              \\
-	\hline
-	\hline
-	Progettista     & -            & -                   \\
-	\hline
-	\hline
-	Programmatore   & -            & -                   \\
-	\hline
-	\hline
-	Verificatore    & 23           & 345,00              \\
-	\hline
-	\hline
-	\textbf{Totale} & 56           & 1.140,00            \\
-	\hline
-	\rowcolor{white}
-	\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario}
-\end{longtable}
-\pagebreak
-
-La tabella può essere riassunta nel seguente areogramma:
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_analisi/2-2.png}
-	\caption{Diagramma percentuale ore/ruolo nel secondo periodo}
-	\label{fig:diagramma costi ruolo secondo periodo analisi}
-\end{figure}
-
-\subsubsection{III periodo}
-\paragraph{Prospetto orario}
-Durante il terzo periodo la distribuzione oraria sarà la seguente:
-
-\rowcolors{1}{lightest-grayest}{blue!20}
-\begin{longtable}{|l|c|c|c|c|c|c|c|}
-	\hline
-	\rowcolor{lighter-grayer}
-	\textbf{Nome}     & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
-	\hline
-	\endfirsthead
-
-	\hline
-	Marco Canovese    & 0           & 2           & 0           & 0           & 0           & 6           & 8               \\
-	\hline
-	\hline
-	Nicole Davanzo    & 2           & 0           & 3           & 0           & 0           & 3           & 8               \\
-	\hline
-	\hline
-	Ivan Furlan       & 0           & 1           & 2           & 0           & 0           & 5           & 8               \\
-	\hline
-	\hline
-	Gianmarco Guazzo  & 1           & 1           & 4           & 0           & 0           & 2           & 8               \\
-	\hline
-	\hline
-	Stefano Lazzaroni & 3           & 0           & 3           & 0           & 0           & 2           & 8               \\
-	\hline
-	\hline
-	Francesco Trolese & 0           & 0           & 3           & 0           & 0           & 5           & 8               \\
-	\hline
-	\hline
-	Michele Veronesi  & 0           & 0           & 2           & 0           & 0           & 6           & 8               \\
-	\hline
-	\hline
-	Totale            & 6           & 4           & 17          & 0           & 0           & 29          & 56              \\
-	\hline
-	\rowcolor{white}
-	\caption{Tabella contenente il prospetto orario preventivato per il terzo periodo}
-\end{longtable}
-
-
-La tabella può essere riassunta nel seguente istogramma:
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_analisi/3-1.png}
-	\caption{Diagramma ore/ruolo componenti nel terzo periodo}
-	\label{fig:diagramma suddivisione ruoli terzo periodo analisi}
-\end{figure}
-
-\paragraph{Prospetto economico}
-In base al prospetto orario, quello economico sarà il seguente:
-
-\rowcolors{1}{lightest-grayest}{blue!20}
-\begin{longtable}{|l|c|c|c|c|c|c|c|}
-	\hline
-	\rowcolor{lighter-grayer}
-	\textbf{Ruolo}  & \textbf{Ore} & \textbf{Costo in €} \\
-	\hline
-	\endfirsthead
-
-	\hline
-	Responsabile    & 6            & 180,00              \\
-	\hline
-	\hline
-	Amministratore  & 4            & 80,00               \\
-	\hline
-	\hline
-	Analista        & 17           & 425,00              \\
-	\hline
-	\hline
-	Progettista     & -            & -                   \\
-	\hline
-	\hline
-	Programmatore   & -            & -                   \\
-	\hline
-	\hline
-	Verificatore    & 29           & 435,00              \\
-	\hline
-	\textbf{Totale} & 56           & 1.120,00            \\
-	\hline
-	\rowcolor{white}
-	\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario}
-\end{longtable}
-\pagebreak
-
-La tabella può essere riassunta nel seguente areogramma:
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_analisi/3-2.png}
-	\caption{Diagramma percentuale ore/ruolo nel terzo periodo}
-	\label{fig:diagramma costi ruolo terzo periodo analisi}
-\end{figure}
-
-\subsubsection{IV periodo}
-\paragraph{Prospetto orario}
-Durante il quarto periodo la distribuzione oraria sarà la seguente:
-
-\rowcolors{1}{lightest-grayest}{blue!20}
-\begin{longtable}{|l|c|c|c|c|c|c|c|}
-	\hline
-	\rowcolor{lighter-grayer}
-	\textbf{Nome}     & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
-	\hline
-	\endfirsthead
-
-	\hline
-	Marco Canovese    & 0           & 1           & 3           & 0           & 0           & 4           & 8               \\
-	\hline
-	\hline
-	Nicole Davanzo    & 2           & 0           & 3           & 0           & 0           & 3           & 8               \\
-	\hline
-	\hline
-	Ivan Furlan       & 0           & 0           & 5           & 0           & 0           & 3           & 8               \\
-	\hline
-	\hline
-	Gianmarco Guazzo  & 0           & 0           & 2           & 0           & 0           & 6           & 8               \\
-	\hline
-	\hline
-	Stefano Lazzaroni & 1           & 0           & 4           & 0           & 0           & 3           & 8               \\
-	\hline
-	\hline
-	Francesco Trolese & 4           & 0           & 2           & 0           & 0           & 2           & 8               \\
-	\hline
-	\hline
-	Michele Veronesi  & 0           & 0           & 3           & 0           & 0           & 5           & 8               \\
-	\hline
-	\hline
-	Totale            & 7           & 1           & 22          & 0           & 0           & 26          & 56              \\
-	\hline
-	\rowcolor{white}
-	\caption{Tabella contenente il prospetto orario preventivato per il quarto periodo}
-\end{longtable}
-
-
-La tabella può essere riassunta nel seguente istogramma:
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_analisi/4-1.png}
-	\caption{Diagramma ore/ruolo componenti nel quarto periodo}
-	\label{fig:diagramma suddivisione ruoli quarto periodo analisi}
-\end{figure}
-
-\paragraph{Prospetto economico}
-In base al prospetto orario, quello economico sarà il seguente:
-
-\rowcolors{1}{lightest-grayest}{blue!20}
-\begin{longtable}{|l|c|c|c|c|c|c|c|}
-	\hline
-	\rowcolor{lighter-grayer}
-	\textbf{Ruolo}  & \textbf{Ore} & \textbf{Costo in €} \\
-	\hline
-	\endfirsthead
-
-	\hline
-	Responsabile    & 7            & 210,00              \\
-	\hline
-	\hline
-	Amministratore  & 1            & 20,00               \\
-	\hline
-	\hline
-	Analista        & 22           & 550,00              \\
-	\hline
-	\hline
-	Progettista     & -            & -                   \\
-	\hline
-	\hline
-	Programmatore   & -            & -                   \\
-	\hline
-	\hline
-	Verificatore    & 26           & 390,00              \\
-	\hline
-	\textbf{Totale} & 56           & 1.170,00            \\
-	\hline
-	\rowcolor{white}
-	\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario}
-\end{longtable}
-\pagebreak
-
-La tabella può essere riassunta nel seguente areogramma:
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_analisi/4-2.png}
-	\caption{Diagramma percentuale ore/ruolo nel quarto periodo}
-	\label{fig:diagramma costi ruolo quarto periodo analisi}
-\end{figure}
-
-\subsubsection{Fase complessiva}
 \paragraph{Prospetto orario}
 Durante la fase di analisi dei requisiti la distribuzione oraria complessiva sarà la seguente:
 
@@ -682,7 +303,293 @@ La tabella può essere riassunta nel seguente areogramma:
 \end{figure}
 
 \subsection{Fase di progettazione e codifica del Proof of Concept}
-\subsubsection{Prospetto orario}
+La fase è composta da tre incrementi caratterizzati dalla distribuzione oraria descritta di seguito.
+
+\subsubsection{I incremento}
+\paragraph{Prospetto orario}
+Durante il I incremento la distribuzione oraria sarà la seguente:
+
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|l|c|c|c|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Nome}     & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Marco Canovese    & 2           & 0           & 0           & 4           & 0           & 2           & 8               \\
+	\hline
+	\hline
+	Nicole Davanzo    & 0           & 3           & 0           & 0           & 0           & 5           & 8               \\
+	\hline
+	\hline
+	Ivan Furlan       & 2           & 2           & 0           & 0           & 2           & 2           & 8               \\
+	\hline
+	\hline
+	Gianmarco Guazzo  & 0           & 3           & 0           & 3           & 2           & 0           & 8               \\
+	\hline
+	\hline
+	Stefano Lazzaroni & 0           & 0           & 0           & 4           & 3           & 1           & 8               \\
+	\hline
+	\hline
+	Francesco Trolese & 0           & 2           & 0           & 4           & 0           & 2           & 8               \\
+	\hline
+	\hline
+	Michele Veronesi  & 3           & 0           & 0           & 2           & 3           & 0           & 8               \\
+	\hline
+	\hline
+	Totale            & 7           & 10          & 0          & 17           & 10           & 12           & 56              \\
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il prospetto orario preventivato per il I incremento}
+\end{longtable}
+
+
+La tabella può essere riassunta nel seguente istogramma:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_poc/1-1.png}
+	\caption{Diagramma ore/ruolo componenti nel I incremento}
+	\label{fig:diagramma suddivisione ruoli I incremento}
+\end{figure}
+
+\paragraph{Prospetto economico}
+In base al prospetto orario, quello economico sarà il seguente:
+
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|l|c|c|c|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Ruolo}  & \textbf{Ore} & \textbf{Costo in €} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Responsabile    & 7            & 210,00              \\
+	\hline
+	\hline
+	Amministratore  & 10           & 200,00              \\
+	\hline
+	\hline
+	Analista        & 0           & 00,00              \\
+	\hline
+	\hline
+	Progettista     & 17            & 374,00                   \\
+	\hline
+	\hline
+	Programmatore   & 10            & 150,00                   \\
+	\hline
+	\hline
+	Verificatore    & 12            & 180,00                   \\
+	\hline
+	\textbf{Totale} & 56           & 1.114,00            \\
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario}
+\end{longtable}
+\pagebreak
+
+La tabella può essere riassunta nel seguente areogramma:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_poc/1-2.png}
+	\caption{Diagramma percentuale ore/ruolo nel I incremento}
+	\label{fig:diagramma costi ruolo  I incremento}
+\end{figure}
+
+\subsubsection{II incremento}
+\paragraph{Prospetto orario}
+Durante il II incremento la distribuzione oraria sarà la seguente:
+
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|l|c|c|c|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Nome}     & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Marco Canovese    & 2           & 0           & 0           & 2           & 3           & 2           & 9               \\
+	\hline
+	\hline
+	Nicole Davanzo    & 0           & 1           & 0           & 2           & 4           & 2           & 9               \\
+	\hline
+	\hline
+	Ivan Furlan       & 1           & 1           & 0           & 0           & 4           & 3           & 9               \\
+	\hline
+	\hline
+	Gianmarco Guazzo  & 1           & 2           & 0           & 2           & 2           & 2           & 9               \\
+	\hline
+	\hline
+	Stefano Lazzaroni & 0           & 2           & 0           & 2           & 3           & 2           & 9               \\
+	\hline
+	\hline
+	Francesco Trolese & 0           & 0           & 3           & 2           & 2           & 2           & 9               \\
+	\hline
+	\hline
+	Michele Veronesi  & 2           & 0           & 0           & 0           & 3           & 4           & 9               \\
+	\hline
+	\hline
+	Totale            & 6           & 6          & 3          & 10           & 21           & 17          & 63              \\
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il prospetto orario preventivato per il II incremento}
+\end{longtable}
+
+
+La tabella può essere riassunta nel seguente istogramma:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_poc/2-1.png}
+	\caption{Diagramma ore/ruolo componenti nel II incremento}
+	\label{fig:diagramma suddivisione ruoli II incremento}
+\end{figure}
+
+\paragraph{Prospetto economico}
+In base al prospetto orario, quello economico sarà il seguente:
+
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|l|c|c|c|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Ruolo}  & \textbf{Ore} & \textbf{Costo in €} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Responsabile    & 6            & 180,00              \\
+	\hline
+	\hline
+	Amministratore  & 6           & 120,00              \\
+	\hline
+	\hline
+	Analista        & 3           & 75,00              \\
+	\hline
+	\hline
+	Progettista     & 10            & 220,00                   \\
+	\hline
+	\hline
+	Programmatore   & 21            & 315,00                   \\
+	\hline
+	\hline
+	Verificatore    & 17           & 255,00              \\
+	\hline
+	\hline
+	\textbf{Totale} & 63           & 1.165,00            \\
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario}
+\end{longtable}
+\pagebreak
+
+La tabella può essere riassunta nel seguente areogramma:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_poc/2-2.png}
+	\caption{Diagramma percentuale ore/ruolo nel II incremento}
+	\label{fig:diagramma costi ruolo II incremento}
+\end{figure}
+
+\subsubsection{III incremento}
+\paragraph{Prospetto orario}
+Durante il III incremento la distribuzione oraria sarà la seguente:
+
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|l|c|c|c|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Nome}     & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Marco Canovese    & 0           & 0           & 0           & 1           & 6           & 0           & 7               \\
+	\hline
+	\hline
+	Nicole Davanzo    & 0           & 1           & 0           & 6           & 0           & 0           & 7               \\
+	\hline
+	\hline
+	Ivan Furlan       & 1           & 0           & 0           & 0           & 2           & 4           & 7               \\
+	\hline
+	\hline
+	Gianmarco Guazzo  & 2           & 0           & 0           & 3           & 1           & 1           & 7               \\
+	\hline
+	\hline
+	Stefano Lazzaroni & 0           & 0           & 0           & 3           & 0           & 4           & 7               \\
+	\hline
+	\hline
+	Francesco Trolese & 0           & 0           & 0           & 0           & 7           & 0           & 7               \\
+	\hline
+	\hline
+	Michele Veronesi  & 0           & 0           & 5           & 2           & 0           & 0           & 7               \\
+	\hline
+	\hline
+	Totale            & 3           & 1           & 5          & 15           & 16           & 9          & 49              \\
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il prospetto orario preventivato per il III incremento}
+\end{longtable}
+
+
+La tabella può essere riassunta nel seguente istogramma:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_poc/3-1.png}
+	\caption{Diagramma ore/ruolo componenti nel III incremento}
+	\label{fig:diagramma suddivisione ruoli III incremento}
+\end{figure}
+
+\paragraph{Prospetto economico}
+In base al prospetto orario, quello economico sarà il seguente:
+
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|l|c|c|c|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Ruolo}  & \textbf{Ore} & \textbf{Costo in €} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Responsabile    & 3            & 90,00              \\
+	\hline
+	\hline
+	Amministratore  & 1            & 20,00               \\
+	\hline
+	\hline
+	Analista        & 5           & 125,00              \\
+	\hline
+	\hline
+	Progettista     & 15            & 330,00                   \\
+	\hline
+	\hline
+	Programmatore   & 16            & 240,00                   \\
+	\hline
+	\hline
+	Verificatore    & 9           & 135,00              \\
+	\hline
+	\textbf{Totale} & 49           & 940,00            \\
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario}
+\end{longtable}
+\pagebreak
+
+La tabella può essere riassunta nel seguente areogramma:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_poc/3-2.png}
+	\caption{Diagramma percentuale ore/ruolo nel III incremento}
+	\label{fig:diagramma costi ruolo III incremento}
+\end{figure}
+
+\subsubsection{Fase complessiva}
+\paragraph{Prospetto orario}
 Durante la fase di progettazione della proof of concept la distribuzione oraria sarà la seguente:
 
 \rowcolors{1}{lightest-grayest}{blue!20}
@@ -731,7 +638,7 @@ La tabella può essere riassunta nel seguente istogramma:
 	\label{fig:diagramma suddivisione ruoli fase progettazione della proof of concept}
 \end{figure}
 
-\subsubsection{Prospetto economico}
+\paragraph{Prospetto economico}
 In base al prospetto orario, quello economico sarà il seguente:
 
 \rowcolors{1}{lightest-grayest}{blue!20}
@@ -777,7 +684,387 @@ La tabella può essere riassunta nel seguente areogramma:
 \end{figure}
 
 \subsection{Fase di progettazione completa e prima implementazione di base}
-\subsubsection{Prospetto orario}
+La fase è composta da quattro incrementi caratterizzati dalla distribuzione oraria descritta di seguito.
+
+\subsubsection{IV incremento}
+\paragraph{Prospetto orario}
+Durante il IV incremento la distribuzione oraria sarà la seguente:
+
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|l|c|c|c|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Nome}     & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Marco Canovese    & 2           & 0           & 0           & 5           & 0           & 0           & 7               \\
+	\hline
+	\hline
+	Nicole Davanzo    & 0           & 0           & 0           & 0           & 5           & 2           & 7               \\
+	\hline
+	\hline
+	Ivan Furlan       & 0           & 0           & 0           & 1           & 2           & 4           & 7               \\
+	\hline
+	\hline
+	Gianmarco Guazzo  & 0           & 0           & 0           & 6           & 0           & 1           & 7               \\
+	\hline
+	\hline
+	Stefano Lazzaroni & 1           & 0           & 0           & 3           & 1           & 2           & 7               \\
+	\hline
+	\hline
+	Francesco Trolese & 2           & 0           & 0           & 0           & 1           & 4           & 7               \\
+	\hline
+	\hline
+	Michele Veronesi  & 0           & 5           & 0           & 0           & 2           & 0           & 7               \\
+	\hline
+	\hline
+	Totale            & 5           & 5          & 0          & 15           & 11           & 13           & 49              \\
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il prospetto orario preventivato per il IV incremento}
+\end{longtable}
+
+
+La tabella può essere riassunta nel seguente istogramma:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_implementazione/1-1.png}
+	\caption{Diagramma ore/ruolo componenti nel IV incremento}
+	\label{fig:diagramma suddivisione ruoli IV incremento}
+\end{figure}
+
+\paragraph{Prospetto economico}
+In base al prospetto orario, quello economico sarà il seguente:
+
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|l|c|c|c|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Ruolo}  & \textbf{Ore} & \textbf{Costo in €} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Responsabile    & 5            & 150,00              \\
+	\hline
+	\hline
+	Amministratore  & 5           & 100,00              \\
+	\hline
+	\hline
+	Analista        & 0           & 00,00              \\
+	\hline
+	\hline
+	Progettista     & 15            & 330,00                   \\
+	\hline
+	\hline
+	Programmatore   & 11            & 165,00                   \\
+	\hline
+	\hline
+	Verificatore    & 13            & 195,00                   \\
+	\hline
+	\textbf{Totale} & 49           & 940,00            \\
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario}
+\end{longtable}
+\pagebreak
+
+La tabella può essere riassunta nel seguente areogramma:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_implementazione/1-2.png}
+	\caption{Diagramma percentuale ore/ruolo nel IV incremento}
+	\label{fig:diagramma costi ruolo  IV incremento}
+\end{figure}
+
+\subsubsection{V incremento}
+\paragraph{Prospetto orario}
+Durante il V incremento la distribuzione oraria sarà la seguente:
+
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|l|c|c|c|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Nome}     & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Marco Canovese    & 0           & 0           & 0           & 0           & 4           & 0           & 4               \\
+	\hline
+	\hline
+	Nicole Davanzo    & 2           & 0           & 3           & 0           & 3           & 1           & 4               \\
+	\hline
+	\hline
+	Ivan Furlan       & 0           & 0           & 0           & 2           & 0           & 2           & 4               \\
+	\hline
+	\hline
+	Gianmarco Guazzo  & 0           & 0           & 0           & 1           & 0           & 3           & 4               \\
+	\hline
+	\hline
+	Stefano Lazzaroni & 0           & 0           & 0           & 1           & 0           & 3           & 4               \\
+	\hline
+	\hline
+	Francesco Trolese & 0           & 0           & 0           & 2           & 0           & 2           & 4               \\
+	\hline
+	\hline
+	Michele Veronesi  & 0           & 0           & 0           & 0           & 4           & 0           & 4               \\
+	\hline
+	\hline
+	Totale            & 0           & 0          & 0          & 6           & 11           & 11          & 28              \\
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il prospetto orario preventivato per il V incremento}
+\end{longtable}
+
+
+La tabella può essere riassunta nel seguente istogramma:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_implementazione/2-1.png}
+	\caption{Diagramma ore/ruolo componenti nel V incremento}
+	\label{fig:diagramma suddivisione ruoli V incremento}
+\end{figure}
+
+\paragraph{Prospetto economico}
+In base al prospetto orario, quello economico sarà il seguente:
+
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|l|c|c|c|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Ruolo}  & \textbf{Ore} & \textbf{Costo in €} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Responsabile    & 0            & 00,00              \\
+	\hline
+	\hline
+	Amministratore  & 0           & 00,00              \\
+	\hline
+	\hline
+	Analista        & 0           & 00,00              \\
+	\hline
+	\hline
+	Progettista     & 6            & 132,00                   \\
+	\hline
+	\hline
+	Programmatore   & 11            & 165,00                   \\
+	\hline
+	\hline
+	Verificatore    & 11           & 165,00              \\
+	\hline
+	\hline
+	\textbf{Totale} & 28           & 462,00            \\
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario}
+\end{longtable}
+\pagebreak
+
+La tabella può essere riassunta nel seguente areogramma:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_implementazione/2-2.png}
+	\caption{Diagramma percentuale ore/ruolo nel V incremento}
+	\label{fig:diagramma costi ruolo V incremento}
+\end{figure}
+
+\subsubsection{VI incremento}
+\paragraph{Prospetto orario}
+Durante il VI incremento la distribuzione oraria sarà la seguente:
+
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|l|c|c|c|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Nome}     & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Marco Canovese    & 0           & 0           & 0           & 0           & 0           & 4           & 4               \\
+	\hline
+	\hline
+	Nicole Davanzo    & 0           & 0           & 0           & 0           & 4           & 0           & 4               \\
+	\hline
+	\hline
+	Ivan Furlan       & 0           & 0           & 0           & 4           & 0           & 0           & 4               \\
+	\hline
+	\hline
+	Gianmarco Guazzo  & 0           & 0           & 4           & 0           & 0           & 0           & 4               \\
+	\hline
+	\hline
+	Stefano Lazzaroni & 1           & 0           & 0           & 1           & 2           & 0           & 4               \\
+	\hline
+	\hline
+	Francesco Trolese & 0           & 0           & 0           & 4           & 0           & 0           & 4               \\
+	\hline
+	\hline
+	Michele Veronesi  & 0           & 2           & 0           & 0           & 2           & 0           & 4               \\
+	\hline
+	\hline
+	Totale            & 1           & 2           & 4          & 9           & 8           & 4          & 28              \\
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il prospetto orario preventivato per il VI incremento}
+\end{longtable}
+
+
+La tabella può essere riassunta nel seguente istogramma:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_implementazione/3-1.png}
+	\caption{Diagramma ore/ruolo componenti nel VI incremento}
+	\label{fig:diagramma suddivisione ruoli VI incremento}
+\end{figure}
+
+\paragraph{Prospetto economico}
+In base al prospetto orario, quello economico sarà il seguente:
+
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|l|c|c|c|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Ruolo}  & \textbf{Ore} & \textbf{Costo in €} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Responsabile    & 1            & 30,00              \\
+	\hline
+	\hline
+	Amministratore  & 2            & 40,00               \\
+	\hline
+	\hline
+	Analista        & 4           & 100,00              \\
+	\hline
+	\hline
+	Progettista     & 9            & 198,00                   \\
+	\hline
+	\hline
+	Programmatore   & 8            & 120,00                   \\
+	\hline
+	\hline
+	Verificatore    & 4           & 60,00              \\
+	\hline
+	\textbf{Totale} & 28           & 548,00            \\
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario}
+\end{longtable}
+\pagebreak
+
+La tabella può essere riassunta nel seguente areogramma:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_implementazione/3-2.png}
+	\caption{Diagramma percentuale ore/ruolo nel VI incremento}
+	\label{fig:diagramma costi ruolo VI incremento}
+\end{figure}
+
+\subsubsection{VII incremento}
+\paragraph{Prospetto orario}
+Durante il VII incremento la distribuzione oraria sarà la seguente:
+
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|l|c|c|c|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Nome}     & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Marco Canovese    & 0           & 0           & 2           & 0           & 5           & 0           & 7               \\
+	\hline
+	\hline
+	Nicole Davanzo    & 0           & 0           & 0           & 0           & 0           & 7           & 7               \\
+	\hline
+	\hline
+	Ivan Furlan       & 0           & 0           & 0           & 0           & 4           & 3           & 7               \\
+	\hline
+	\hline
+	Gianmarco Guazzo  & 0           & 0           & 0           & 2           & 4           & 1           & 7               \\
+	\hline
+	\hline
+	Stefano Lazzaroni & 0           & 2           & 0           & 0           & 0           & 5           & 7               \\
+	\hline
+	\hline
+	Francesco Trolese & 2           & 2           & 0           & 0           & 2           & 1           & 7               \\
+	\hline
+	\hline
+	Michele Veronesi  & 0           & 0           & 0           & 3           & 4           & 0           & 7               \\
+	\hline
+	\hline
+	Totale            & 2           & 4           & 2          & 5           & 19           & 17          & 49              \\
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il prospetto orario preventivato per il VII incremento}
+\end{longtable}
+
+
+La tabella può essere riassunta nel seguente istogramma:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_implementazione/4-1.png}
+	\caption{Diagramma ore/ruolo componenti nel VII incremento}
+	\label{fig:diagramma suddivisione ruoli VII incremento}
+\end{figure}
+
+\paragraph{Prospetto economico}
+In base al prospetto orario, quello economico sarà il seguente:
+
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|l|c|c|c|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Ruolo}  & \textbf{Ore} & \textbf{Costo in €} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Responsabile    & 2            & 60,00              \\
+	\hline
+	\hline
+	Amministratore  & 4            & 80,00               \\
+	\hline
+	\hline
+	Analista        & 2           & 50,00              \\
+	\hline
+	\hline
+	Progettista     & 5            & 110,00                   \\
+	\hline
+	\hline
+	Programmatore   & 19            & 285,00                   \\
+	\hline
+	\hline
+	Verificatore    & 17           & 255,00              \\
+	\hline
+	\textbf{Totale} & 49           & 840,00            \\
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario}
+\end{longtable}
+\pagebreak
+
+La tabella può essere riassunta nel seguente areogramma:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_implementazione/4-2.png}
+	\caption{Diagramma percentuale ore/ruolo nel VII incremento}
+	\label{fig:diagramma costi ruolo VII incremento}
+\end{figure}
+
+\subsubsection{Fase complessiva}
+\paragraph{Prospetto orario}
 Durante la fase di progettazione completa e prima implementazione di base la distribuzione oraria sarà la seguente:
 
 \rowcolors{1}{lightest-grayest}{blue!20}
@@ -826,7 +1113,7 @@ La tabella può essere riassunta nel seguente istogramma:
 	\label{fig:diagramma suddivisione ruoli fase progettazione completa e prima implementazione di base}
 \end{figure}
 
-\subsubsection{Prospetto economico}
+\paragraph{Prospetto economico}
 In base al prospetto orario, quello economico sarà il seguente:
 
 \rowcolors{1}{lightest-grayest}{blue!20}
@@ -872,7 +1159,199 @@ La tabella può essere riassunta nel seguente areogramma:
 \end{figure}
 
 \subsection{Termine implementazione e raffinamento generale}
-\subsubsection{Prospetto orario}
+La fase è composta da due incrementi caratterizzati dalla distribuzione oraria descritta di seguito.
+
+\subsubsection{VIII incremento}
+\paragraph{Prospetto orario}
+Durante il VIII incremento la distribuzione oraria sarà la seguente:
+
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|l|c|c|c|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Nome}     & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Marco Canovese    & 0           & 0           & 0           & 6           & 6           & 8           & 20               \\
+	\hline
+	\hline
+	Nicole Davanzo    & 1           & 3           & 0           & 6           & 4           & 6           & 20            \\
+	\hline
+	\hline
+	Ivan Furlan       & 0           & 2           & 0           & 6           & 7           & 5           & 20               \\
+	\hline
+	\hline
+	Gianmarco Guazzo  & 2           & 0           & 0           & 4           & 7           & 7           & 20               \\
+	\hline
+	\hline
+	Stefano Lazzaroni & 0           & 0           & 0           & 7           & 7           & 6           & 20               \\
+	\hline
+	\hline
+	Francesco Trolese & 0           & 0           & 0           & 5           & 8           & 7           & 20               \\
+	\hline
+	\hline
+	Michele Veronesi  & 2           & 0           & 0           & 8           & 2           & 8           & 20               \\
+	\hline
+	\hline
+	Totale            & 5           & 5          & 0          & 42           & 41           & 47           & 140              \\
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il prospetto orario preventivato per il VIII incremento}
+\end{longtable}
+
+
+La tabella può essere riassunta nel seguente istogramma:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_termineimp/1-1.png}
+	\caption{Diagramma ore/ruolo componenti nel VIII incremento}
+	\label{fig:diagramma suddivisione ruoli VIII incremento}
+\end{figure}
+
+\paragraph{Prospetto economico}
+In base al prospetto orario, quello economico sarà il seguente:
+
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|l|c|c|c|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Ruolo}  & \textbf{Ore} & \textbf{Costo in €} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Responsabile    & 5            & 150,00              \\
+	\hline
+	\hline
+	Amministratore  & 5           & 100,00              \\
+	\hline
+	\hline
+	Analista        & 0           & 00,00              \\
+	\hline
+	\hline
+	Progettista     & 42            & 924,00                   \\
+	\hline
+	\hline
+	Programmatore   & 41            & 615,00                   \\
+	\hline
+	\hline
+	Verificatore    & 47            & 705,00                   \\
+	\hline
+	\textbf{Totale} & 140           & 2.494,00            \\
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario}
+\end{longtable}
+\pagebreak
+
+La tabella può essere riassunta nel seguente areogramma:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_termineimp/1-2.png}
+	\caption{Diagramma percentuale ore/ruolo nel VIII incremento}
+	\label{fig:diagramma costi ruolo  VIII incremento}
+\end{figure}
+
+\subsubsection{IX incremento}
+\paragraph{Prospetto orario}
+Durante il IX incremento la distribuzione oraria sarà la seguente:
+
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|l|c|c|c|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Nome}     & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pg} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Marco Canovese    & 0           & 0           & 0           & 2           & 2           & 4           & 8               \\
+	\hline
+	\hline
+	Nicole Davanzo    & 0           & 2           & 0           & 2           & 0           & 4           & 8               \\
+	\hline
+	\hline
+	Ivan Furlan       & 0           & 1           & 0           & 2           & 4           & 1           & 8               \\
+	\hline
+	\hline
+	Gianmarco Guazzo  & 2           & 0           & 0           & 2           & 2           & 2           & 8               \\
+	\hline
+	\hline
+	Stefano Lazzaroni & 0           & 0           & 0           & 2           & 2           & 4           & 8               \\
+	\hline
+	\hline
+	Francesco Trolese & 0           & 0           & 0           & 2           & 3           & 3           & 8               \\
+	\hline
+	\hline
+	Michele Veronesi  & 1           & 0           & 0           & 3           & 1           & 3           & 8               \\
+	\hline
+	\hline
+	Totale            & 3           & 3          & 0          & 15           & 14           & 21          & 56              \\
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il prospetto orario preventivato per il IX incremento}
+\end{longtable}
+
+
+La tabella può essere riassunta nel seguente istogramma:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_termineimp/2-1.png}
+	\caption{Diagramma ore/ruolo componenti nel IX incremento}
+	\label{fig:diagramma suddivisione ruoli IX incremento}
+\end{figure}
+
+\paragraph{Prospetto economico}
+In base al prospetto orario, quello economico sarà il seguente:
+
+\rowcolors{1}{lightest-grayest}{blue!20}
+\begin{longtable}{|l|c|c|c|c|c|c|c|}
+	\hline
+	\rowcolor{lighter-grayer}
+	\textbf{Ruolo}  & \textbf{Ore} & \textbf{Costo in €} \\
+	\hline
+	\endfirsthead
+
+	\hline
+	Responsabile    & 3            & 90,00              \\
+	\hline
+	\hline
+	Amministratore  & 3           & 60,00              \\
+	\hline
+	\hline
+	Analista        & 0           & 00,00              \\
+	\hline
+	\hline
+	Progettista     & 15            & 330,00                   \\
+	\hline
+	\hline
+	Programmatore   & 14            & 210,00                   \\
+	\hline
+	\hline
+	Verificatore    & 21           & 315,00              \\
+	\hline
+	\hline
+	\textbf{Totale} & 56           & 1.005,00            \\
+	\hline
+	\rowcolor{white}
+	\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario}
+\end{longtable}
+\pagebreak
+
+La tabella può essere riassunta nel seguente areogramma:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{res/images/preventivo/dettaglio_termineimp/2-2.png}
+	\caption{Diagramma percentuale ore/ruolo nel IX incremento}
+	\label{fig:diagramma costi ruolo IX incremento}
+\end{figure}
+\subsubsection{Fase complessiva}
+
+\paragraph{Prospetto orario}
 Durante la fase di termine dell'implementazione e raffinamento generale la distribuzione oraria sarà la seguente:
 
 \rowcolors{1}{lightest-grayest}{blue!20}
@@ -921,7 +1400,7 @@ La tabella può essere riassunta nel seguente istogramma:
 	\label{fig:diagramma suddivisione ruoli fase Termine dell'implementazione e raffinamento generale}
 \end{figure}
 
-\subsubsection{Prospetto economico}
+\paragraph{Prospetto economico}
 In base al prospetto orario, quello economico sarà il seguente:
 
 \rowcolors{1}{lightest-grayest}{blue!20}

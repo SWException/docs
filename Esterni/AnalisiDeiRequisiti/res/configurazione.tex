@@ -56,3 +56,21 @@
 % PARAMETRO 1: Tipologia dei requisiti riportati nella lista al parametro 2
 % PARAMETRO 2: lista dei Codici numerici dei requisiti separati da una virgola (Es: 1.2, 5, 7.1, ...)
 \newcommand{\refRequisiti}[2]{\foreach [count=\i] \reqID in {#2}{\ifnum\i=1\refreqID{#1}{\reqID}\else, \refreqID{#1}{\reqID}\fi}}
+
+%contatore dei UserCases
+\newcounter{CUC} % Contatore UserCases 
+\newcounter{CSUC} % Contatore Sotto-UserCases
+\newcounter{CSSUC} % Contatore Sotto-Sotto-UserCases
+\newcommand{\stepUserCase}[0]{\stepcounter{CUC}\setcounter{CSUC}{0}\setcounter{CSSUC}{0}} % incrementa il contatore CUC
+\newcommand{\stepsubUserCase}[0]{\stepcounter{CSUC}\setcounter{CSSUC}{0}} % incrementa il contatore CSUC
+\newcommand{\stepsubsubUserCase}[0]{\stepcounter{CSSUC}} % incrementa il contatore CSSUC
+\newcommand{\valueUserCase}[0]{UC\arabic{CUC} } % ritorna il valore del contatore CUC
+\newcommand{\valuesubUserCase}[0]{UC\arabic{CUC}.\arabic{CSUC} } % ritorna il valore del contatore CSUC
+\newcommand{\valuesubsubUserCase}[0]{UC\arabic{CUC}.\arabic{CSUC}.\arabic{CSSUC} } % ritorna il valore del contatore CSSUC
+\newcommand{\valueUC}[0]{UC\arabic{CUC}} % ritorna il valore del contatore CUC senza spazio finale
+\newcommand{\valuesubUC}[0]{UC\arabic{CUC}.\arabic{CSUC}} % ritorna il valore del contatore CSUC senza spazio finale
+\newcommand{\valuesubsubUC}[0]{UC\arabic{CUC}.\arabic{CSUC}.\arabic{CSSUC}} % ritorna il valore del contatore CSSUC senza spazio finale
+\newcommand{\resetCUC}[0]{\setcounter{CUC}{0}\setcounter{CSUC}{0}\setcounter{CSSUC}{0}}  % resetta il contatore CUC e CSUC
+\newcommand{\labelUserCase}[0]{\label{UC\arabic{CUC}}}
+\newcommand{\labelsubUserCase}[0]{\label{UC\arabic{CUC}.\arabic{CSUC}}}
+\newcommand{\labelsubsubUserCase}[0]{\label{UC\arabic{CUC}.\arabic{CSUC}.\arabic{CSSUC}}}

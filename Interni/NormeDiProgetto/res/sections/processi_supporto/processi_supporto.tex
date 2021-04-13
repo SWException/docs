@@ -124,7 +124,7 @@ La formattazione del contenuto principale delle pagine della documentazione è c
 \paragraph{Glossario}
 Il glossario permette di fornire una spiegazione funzionale per tutti quei termini che possono risultare sconosciuti al lettore.\\
 Per la sua struttura si è deciso di adottare un ordine lessicografico.\\
-Ulteriori informazioni sono riportante in seguito nel paragrafo \ref{_terminiDiGlossario}.
+Ulteriori informazioni sono riportante in seguito nel paragrafo \S\ref{_terminiDiGlossario}.
 
 \paragraph{Struttura dei verbali}
 I verbali presentano una struttura simile a quella dei documenti formali, però il file e la cartella \textit{sections} sono sostituiti da \textbf{"contenuto.tex"} che svolge la stessa funzione, ossia incorporare il corpo del documento.\\
@@ -172,7 +172,7 @@ Gli stili di testo utilizzati nella documentazione sono:
 \end{itemize}
 
 \paragraph{Termini di glossario} \label{_terminiDiGlossario}
-I termini non immediatamente comprensibili (che nella documentazione spesso corrispondono ai termini appartenenti alla sfera semantica dell'informatica) sono contrassegnati dal pedice \glock{} (e.g. \glock{parola}) la prima volta che appaiono in ogni sezione. Se un termine appare più volte all'interno della stessa sezione solo la prima occorrenza dovrà essere seguita dal pedice \glock{}. Il simbolo indica che il termine contrassegnato può essere trovato, seguito dalla sua definizione, all'interno del \dext{Glossario\_1.0.0}. In questo documento le voci sono riportate in ordine alfabetico.
+I termini non immediatamente comprensibili (che nella documentazione spesso corrispondono ai termini appartenenti alla sfera semantica dell'informatica) sono contrassegnati dal pedice \glock{} (e.g. \glock{parola}) la prima volta che appaiono in ogni sezione. Se un termine appare più volte all'interno della stessa sezione solo la prima occorrenza dovrà essere seguita dal pedice \glock{}. Il simbolo indica che il termine contrassegnato può essere trovato, seguito dalla sua definizione, all'interno del \dext{Glossario\_2.0.0}. In questo documento le voci sono riportate in ordine alfabetico.
 
 \paragraph{Elementi testuali}
 Nella fase di redazione della documentazione è necessario attenersi alle convenzioni stilistiche esposte di seguito.
@@ -280,12 +280,30 @@ dove [X] indica il numero assoluto progressivo della tabella all'interno del doc
 \subparagraph{Grafici UML}
 I grafici in linguaggio \glock{UML} sono inseriti come immagini.
 
+
 \subsubsection{Metriche}
-\begin{itemize}
-    \item MPD-DOC1: indice di Gulpease, leggibilità del testo;
-    \item MPD-DOC2: indice correttezza ortografica (CORT).
-\end{itemize}
-Queste metriche sono descritte approfonditamente in \S\ref{_metricheprodotto}.
+
+\paragraph{MPR-6: Requisiti obbligatori soddisfatti (PROS)}\label{_MPR-6}
+Indica la percentuale di requisiti obbligatori soddisfatti rispetto a quanti ne sono stati individuati.
+\begin{center}
+    \item \textbf{Formula}: \(\frac{Numero\ requisiti\ obbligatori\ soddisfatti}{Numero\ requisiti\  obbligatori\ individuati}*100\)
+\end{center}
+
+\paragraph{MPR-7: Requisiti opzionali non  soddisfatti (RONS )} \label{_MPR-7}
+Indica la percentuale di requisiti opzionali che non sono stati soddisfatti rispetto a quanti ne sono stati individuati.
+\begin{center}
+    \item \textbf{Formula}: \(\frac{Numero\ requisiti\ opzionali\ non\ soddisfatti}{Numero\ requisiti\  opzionali\ individuati}*100\)
+\end{center}
+
+\paragraph{MPR-8: Requisiti desiderabili non soddisfatti (RDNS)} \label{_MPR-8}
+Indica la percentuale di requisiti desiderabili che non sono stati  soddisfatti rispetto a quanti ne sono stati individuati.
+\begin{center}
+    \item \textbf{Formula}: \(\frac{Numero\ requisiti\ desiderabili\ non\ soddisfatti}{Numero\ desiderabili\  obbligatori\ individuati}*100\)
+\end{center}
+
+\paragraph{MPR-9: Rischi non previsti ma avvenuti (RNPA)} \label{_MPR-9}
+Indica il numero di rischi non previsti ma che si sono presentanti nel corso del progetto.
+
 
 \subsubsection{Strumenti}
 \paragraph{Latex}
@@ -301,7 +319,7 @@ Per i diagrammi sono stati usati diversi software a seconda del tipo di diagramm
 Web app gratuita integrabile con \glock{Google Drive}, per realizzare casi d'uso, diagrammi e grafici UML. Rende possibile anche il versionamento dei file prodotti.
 
 \subparagraph{\textit{Gantt project}}
-Applicazione open source per costruire \glock{diagrammi di Gantt}, usati largamente nelle attività di pianificazione e presenti nel \dext{PianoDiProgetto\_1.0.0}.
+Applicazione open source per costruire \glock{diagrammi di Gantt}, usati largamente nelle attività di pianificazione e presenti nel \dext{PianoDiProgetto\_2.0.0}.
 
 \subparagraph{\textit{Google Drive}}
 Per la conservazione degli artefatti annessi alla documentazione (e.g. documenti compilati e immagini presenti all'interno della documentazione) e di qualunque altro file utile viene utilizzato \textit{Google Drive}, tramite l'account Google dell'organizzazione \textit{SWException}.
@@ -397,7 +415,7 @@ Per la numerazione dei codici identificativi descritti in \S\ref{_classificazion
 La finalità è quella di garantire la qualità prestabilita di prodotti e processi da sviluppare, rispettando le richieste del proponente.
 
 \subsubsection{Descrizione}
-Per esporre i valori di soglia delle metriche e gli standard da applicare al progetto, è stato introdotto il documento \dext{PianoDiQualifica\_1.0.0}.
+Per esporre i valori di soglia delle metriche e gli standard da applicare al progetto, è stato introdotto il documento \dext{PianoDiQualifica\_2.0.0}.
 In questa sezione ci proponiamo di illustrare come avviene il processo di gestione della qualità e l'istanziamento di un processo.
 
 \subsubsection{Aspettative}
@@ -457,20 +475,20 @@ dove:
 \end{itemize}
 
 \iffalse % maledetto latex che non ha i commenti multiriga
-\subsubsection{Denominazione obiettivi}
-Per la denominazione degli obiettivi, il team ha concordato:
-\begin{itemize}
-    \item per i prodotti:
-          \begin{center}
-              \textbf{O[PD]-[DOC/S][X]}
-          \end{center}
-    \item per i processi:
-          \begin{center}
-              \textbf{O[PR]-[DOC/S][X]}
-          \end{center}
-\end{itemize}
-La dicitura \textbf{DOC} sta ad indicare i documenti mentre \textbf{S} i prodotti software.
-In tutti i casi, il parametro \textbf{[X]} indica un numero intero che stabilisce la metrica, la numerazione inizia da 1.
+    \subsubsection{Denominazione obiettivi}
+    Per la denominazione degli obiettivi, il team ha concordato:
+    \begin{itemize}
+        \item per i prodotti:
+              \begin{center}
+                  \textbf{O[PD]-[DOC/S][X]}
+              \end{center}
+        \item per i processi:
+              \begin{center}
+                  \textbf{O[PR]-[DOC/S][X]}
+              \end{center}
+    \end{itemize}
+    La dicitura \textbf{DOC} sta ad indicare i documenti mentre \textbf{S} i prodotti software.
+    In tutti i casi, il parametro \textbf{[X]} indica un numero intero che stabilisce la metrica, la numerazione inizia da 1.
 \fi
 
 \subsubsection{Istanziazione di un processo}
@@ -490,7 +508,7 @@ dei cambiamenti attuati per sopperire a mancanze e adattare tutti i processi e g
 \subsubsection{Aspettative}
 Con l'avvio del processo di gestione dei cambiamenti, il gruppo di lavoro si aspetta la minimizzazione dei costi provocati da un cambiamento
 del \textit{way of working}, riuscendo ad elaborare risposte in tempi brevi ai vari problemi che potrebbero sorgere a livello gestionale.
-Inoltre questo processo assicura l'incapsulamento di tutte le informazioni relative a quel cambiamento, di conseguenza è norma del progetto adottare le 
+Inoltre questo processo assicura l'incapsulamento di tutte le informazioni relative a quel cambiamento, di conseguenza è norma del progetto adottare le
 pratiche qui definite nella gestione dell'Issue Tracking System.
 
 \subsubsection{Denominazione dei cambiamenti}
@@ -566,11 +584,11 @@ Questo tipo di analisi viene effettuata sul prodotto senza eseguirlo e serve per
 \end{figure}
 Il processo di verifica viene gestito con il meccanismo delle pull request, una sorta di issue avanzata messa a disposizione da \textit{Github} descritto in dettaglio in \S\ref{_cicloVitaTicket}.
 
-\subsubsection{Verifica del codice}
-Il codice viene verificato con test automatici e con misurazioni quantificabili specificate all'interno del \dext{PianoDiQualifica\_1.0.0}. Il codice quindi deve obbedire a questi criteri:
+\subsubsection{Verifica del codice} \label{_verificaCodice}
+Il codice viene verificato con test automatici e con misurazioni quantificabili specificate all'interno del \dext{PianoDiQualifica\_2.0.0}. Il codice quindi deve obbedire a questi criteri:
 \begin{itemize}
     \item deve essere corretto rispetto ai test definiti e alle metriche adottate per quantificare la sua qualità;
-    \item deve derivare dai requisiti richiesti in \dext{AnalisiDeiRequisiti\_1.0.0}.
+    \item deve derivare dai requisiti richiesti in \dext{AnalisiDeiRequisiti\_2.0.0}.
 \end{itemize}
 
 \paragraph{Analisi statica}
@@ -600,7 +618,7 @@ Anche i requisiti sono sottoposti al processo di verifica. Perché la verifica d
     \item siano coerenti con la loro implementazione;
     \item abbiano un grado di complessità adeguato rispetto al tempo e alle risorse pianificate per la riuscita del progetto;
     \item si dimostrino verificabili e quantificabili;
-    \item siano coerenti con gli accordi presi con il proponente, riportati all'interno del documento \\\dext{AnalisiDeiRequisiti\_1.0.0}.
+    \item siano coerenti con gli accordi presi con il proponente, riportati all'interno del documento \\\dext{AnalisiDeiRequisiti\_2.0.0}.
 \end{itemize}
 
 \paragraph{Analisi statica}
@@ -612,7 +630,7 @@ I requisiti devono rispettare le proprietà di:
 \end{itemize}
 
 \subsubsection{Test}
-I test costituiscono l'attività fondamentale dell'analisi dinamica: il loro utilizzo permette di individuare bug e di dimostrare che l'applicativo sviluppato è conforme rispetto a tutti i requisiti concordati nell'\dext{AnalisiDeiRequisiti\_1.0.0}.\\
+I test costituiscono l'attività fondamentale dell'analisi dinamica: il loro utilizzo permette di individuare bug e di dimostrare che l'applicativo sviluppato è conforme rispetto a tutti i requisiti concordati nell'\dext{AnalisiDeiRequisiti\_2.0.0}.\\
 Verranno implementati tipi di test descritti di seguito, ognuno con uno scopo diverso e con un oggetto di verifica differente.
 \paragraph{Test di unità}
 Consiste nel testare la partizione più piccola di software: l'unità. Il corretto funzionamento di ogni unità deve essere testato prima di procedere alla sua integrazione.
@@ -623,12 +641,18 @@ Necessari per testare che le diverse unità si interfaccino correttamente: quest
 Verranno normati e considerati nel processo di progettazione.
 
 \paragraph{Test di sistema}
-Dopo che tutte le unità sono state testate ed è stata testata la loro integrazione viene eseguito il test dell'intero sistema. In questa fase si verifica che tutte le componenti interagiscano nel modo atteso e che l'applicazione soddisfi ciò che è stato definito nell'\dext{AnalisiDeiRequisiti\_1.0.0}.
-I test di sistema dell'applicazione EmporioLambda saranno implementati con \glock{Selenium} e sono stati definiti nel \dext{PianoDiQualifica\_1.0.0} durante il processo di analisi dei requisiti.
+Dopo che tutte le unità sono state testate ed è stata testata la loro integrazione viene eseguito il test dell'intero sistema. In questa fase si verifica che tutte le componenti interagiscano nel modo atteso e che l'applicazione soddisfi ciò che è stato definito nell'\dext{AnalisiDeiRequisiti\_2.0.0}.
+I test di sistema dell'applicazione EmporioLambda saranno implementati con \glock{Selenium} e sono stati definiti nel \dext{PianoDiQualifica\_2.0.0} durante il processo di analisi dei requisiti.
 
 \paragraph{Test di regressione}
 Quando una o più unità vengono modificate si esegue questa tipologia di test che serve per accertarsi che le funzionalità precedentemente implementate e testate non siano state danneggiate dai cambiamenti apportati al software.
 
+\paragraph{Metriche}
+\subparagraph{MPD-S5: Maturità dei test (MATE)}
+Misura la percentuale di casi di test eseguiti con successo rispetto al numero totale previsto per garantire una copertura minima dei requisiti;
+\begin{itemize}
+    \item \textbf{Formula}: \(\frac{casi\ test\ eseguiti\ con\ successo}{casi\ test\ previsti}*100\)
+\end{itemize}
 
 \subsection{Validazione}
 \label{_validazione}
@@ -655,6 +679,9 @@ Per avviare il processo di validazione devono essere presenti questi elementi:
     \includegraphics[width=\linewidth]{res/images/processo_validazione.png}
     \caption{Processo di validazione documenti}
 \end{figure}
+
+
+
 
 % \subsubsection{Attività per la validazione}
 
