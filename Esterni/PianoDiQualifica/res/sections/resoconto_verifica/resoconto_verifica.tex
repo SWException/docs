@@ -128,3 +128,158 @@ La correttezza ortografica si è mantenuta stabile sul valore nullo.
     \includegraphics[width=0.8\textwidth]{res/images/metriche_costi/SV.png}
     \caption{Grafico contenente il valore dello schedule variance per periodo}
 \end{figure} 
+
+
+\newpage
+\subsection{Progettazione Architetturale} 
+
+\subsubsection{Analisi statica e automatizzata dei documenti}\label{resocontoProgettazione}
+Tutta la documentazione prodotta in ingresso alla Revisione di Progettazione è stata sottoposta ad una meticolosa attività di verifica
+basata su quanto previsto all'interno del documento delle \dext{NormeDiProgetto\_2.0.0}.
+Questa attività è stata espletata dai verificatori.
+Come avvenuto per la Revisione di Progettazione tutta la documentazione è stata sottoposta ad analisi automatizzata.
+La correttezza ortografica si è mantenuta stabile sul valore nullo.
+
+\begin{center}
+    \begin{figure}[!htb]
+        \centering
+        \includegraphics[scale=0.60]{res/images/grafico_gulpease_rp.png}
+        \caption{Grafico Indice di Gulpease DA AGGIORNARE}
+    \end{figure}
+    \begin{center}
+        \rowcolors{2}{white}{blue!20}
+        \begin{longtable}{|c|c|}
+            \hline
+            \rowcolor{lighter-grayer}
+            \textbf{Documento}         & \textbf{Indice di Gulpease} \\
+            \hline
+            \endfirsthead
+
+            \hline
+            Verbale Interno 2021-03-10 & 60                          \\
+            Verbale Esterno 2021-03-17 & 63                          \\      
+            Verbale Interno 2021-03-19 & 63                          \\     
+            Verbale Esterno 2021-03-25 & 65                          \\ 
+            Verbale Esterno 2021-03-22 & 63                          \\ 
+            Verbale Esterno 2021-04-01 & 63                          \\     
+            \hline
+            \rowcolor{white}
+            \caption{Indice di Gulpease dei verbali}
+        \end{longtable}
+    \end{center}
+\end{center}
+
+\subsubsection{Verifica del codice}
+Così come previsto nelle \dext{Norme di Progetto\_2.0.0} il codice prodotto sino ad ora è stato sottoposto ad un processo di verifica il quale 
+ha sfruttato strumenti software atti all'espletamento automatico delle operazioni di accertamento della conformità alle norme previste, nonchè
+al rispetto dei valori massimi accettabili dalle singole metriche.
+
+Al fine di rendere più fruibili al lettore i risultati ottenuti all'esito dell'esecuzioni delle attività di verifica è stato scelto di presentarli
+separatamente per il frontend e per i singoli micro-servizi implementati. Stante lo stato di sviluppo in corso alcuni risultati non sono ancora determinabili
+
+\begin{center}
+    \rowcolors{2}{white}{blue!20}
+    \begin{longtable}{|c|c|c|c|c|}
+        \hline
+        \rowcolor{lighter-grayer}
+        \textbf{Componente}         & \textbf{MPD-S1 COCI}  & \textbf{MPD-S2 COEB} & \textbf{MPD-S3 LRC} & \textbf{MPD-S4 CODCO}\\
+        \hline
+        \endfirsthead
+
+        \hline
+        Frontend & 60 & 60  & 60 & 60                       \\
+         & accettabile & accettabile  & accettabile & accettabile                       \\
+        
+        \hline
+        \rowcolor{white}
+        \caption{Prima rilevazione metriche frontend}
+    \end{longtable}
+
+    \rowcolors{2}{white}{blue!20}
+    \begin{longtable}{|c|c|c|c|c|}
+        \hline
+        \rowcolor{lighter-grayer}
+        \textbf{Componente}         & \textbf{MPD-S1 COCI}  & \textbf{MPD-S2 COEB} & \textbf{MPD-S3 LRC} & \textbf{MPD-S4 CODCO}\\
+        \hline
+        \endfirsthead
+
+        \hline
+        Frontend & 60 & 60  & 60 & 60                       \\
+        & accettabile & accettabile  & accettabile & accettabile                       \\
+
+        \hline
+        \rowcolor{white}
+        \caption{Seconda rilevazione metriche frontend}
+    \end{longtable}
+
+
+\end{center}
+
+\newpage
+
+\begin{center}
+    \rowcolors{2}{white}{blue!20}
+    \begin{longtable}{|c|c|c|c|c|}
+        \hline
+        \rowcolor{lighter-grayer}
+        \textbf{Componente}         & \textbf{MPD-S1 COCI}  & \textbf{MPD-S2 COEB} & \textbf{MPD-S3 LRC} & \textbf{MPD-S4 CODCO}\\
+        \hline
+        \endfirsthead
+
+        \hline
+        BE - Taxes & 60 & 60  & 60 & 60                       \\
+         & accettabile & accettabile  & accettabile & accettabile                       \\
+         BE - Addresses & 60 & 60  & 60 & 60                       \\
+         & accettabile & accettabile  & accettabile & accettabile                       \\
+         BE - Carts & 60 & 60  & 60 & 60                       \\
+         & accettabile & accettabile  & accettabile & accettabile                       \\
+         BE - Categories & 60 & 60  & 60 & 60                       \\
+         & accettabile & accettabile  & accettabile & accettabile                       \\
+         BE - Orders & 60 & 60  & 60 & 60                       \\
+         & accettabile & accettabile  & accettabile & accettabile                       \\
+         BE - Payments & 60 & 60  & 60 & 60                       \\
+         & accettabile & accettabile  & accettabile & accettabile                       \\
+         BE - Prodcuts & 60 & 60  & 60 & 60                       \\
+         & accettabile & accettabile  & accettabile & accettabile                       \\
+         BE - Users & 60 & 60  & 60 & 60                       \\
+         & accettabile & accettabile  & accettabile & accettabile                       \\
+        
+        \hline
+        \rowcolor{white}
+        \caption{Prima rilevazione metriche backend}
+    \end{longtable}
+
+    \rowcolors{2}{white}{blue!20}
+    \begin{longtable}{|c|c|c|c|c|}
+        \hline
+        \rowcolor{lighter-grayer}
+        \textbf{Componente}         & \textbf{MPD-S1 COCI}  & \textbf{MPD-S2 COEB} & \textbf{MPD-S3 LRC} & \textbf{MPD-S4 CODCO}\\
+        \hline
+        \endfirsthead
+
+        \hline
+        BE - Taxes & 60 & 60  & 60 & 60                       \\
+        & accettabile & accettabile  & accettabile & accettabile                       \\
+        BE - Addresses & 60 & 60  & 60 & 60                       \\
+        & accettabile & accettabile  & accettabile & accettabile                       \\
+        BE - Carts & 60 & 60  & 60 & 60                       \\
+        & accettabile & accettabile  & accettabile & accettabile                       \\
+        BE - Categories & 60 & 60  & 60 & 60                       \\
+        & accettabile & accettabile  & accettabile & accettabile                       \\
+        BE - Orders & 60 & 60  & 60 & 60                       \\
+        & accettabile & accettabile  & accettabile & accettabile                       \\
+        BE - Payments & 60 & 60  & 60 & 60                       \\
+        & accettabile & accettabile  & accettabile & accettabile                       \\
+        BE - Prodcuts & 60 & 60  & 60 & 60                       \\
+        & accettabile & accettabile  & accettabile & accettabile                       \\
+        BE - Users & 60 & 60  & 60 & 60                       \\
+        & accettabile & accettabile  & accettabile & accettabile                       \\
+
+        \hline
+        \rowcolor{white}
+        \caption{Seconda rilevazione metriche backend}
+    \end{longtable}
+
+    
+\end{center}
+
