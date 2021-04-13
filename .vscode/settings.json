@@ -1,7 +1,9 @@
 {
     // Parole aggiuntive per dizionario dell'estensione "Code Spell Checker" e "Italian - Code Spell Checker"
     "cSpell.words": [ 
-        "swexception"
+        "swexception",
+        "canovese",
+        "trolese"
     ],
     // Lista di file da non visualizzare nella scheda Explorer di vscode
     "files.exclude": {
