@@ -1,100 +1,212 @@
 \section{Customer guide} \label{_cliente}
 \subsection{Purpose of the section}
-The goal of this section of the document is to describe how a customer should use the interface that EmporioLambda provides.
+The goal of this section of the document is to describe what a customer can do using EmporioLambda.
 
-\subsection{Landing to the web-application}
+\subsection{How to land to the web-application}
 The only current way to access the application is by direct link: \url{https://d28yg0rufs9lo7.cloudfront.net/}
 After accessing the the application by link you will land in the homepage.
 
-\subsection{Layouts}
-The application has cross page layouts. The main layout is available in the Hompage, Product List Page, Product Details Page.
+\subsection{How to Sign up} \label{_signup}
+In order to create a new account you have to go to the following url: \url{https://d28yg0rufs9lo7.cloudfront.net/account/signup}. This action can also be done from the signin page by pressing the SignUp button.  To successfully register a new you have to submit the following info:
+\begin{itemize} 
+    \item \textbf{Email};
+    \item \textbf{Password}; 
+\end{itemize}
+To ensure the user to write the email and the password correctly, the application force to re-enter these data twice.
 
-\subsubsection{Main Layout} \label{_mainLayout}
-The main layout has two navigation bars:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{res/images/cliente/signup.png}
+    \caption{Signup}
+\end{figure}
+
+\subsection{How to Sign in} \label{_signin}
+If you want to login in the platform you have to go to the following url: \url{https://d28yg0rufs9lo7.cloudfront.net/account/signin}. To successfully login please submit the following info:
+Remember: if you don't have an account you can always register one following the \hyperref[_signup]{instructions}
 
 \begin{itemize} 
-    \item \textbf{Main NavBar:} this navigation bar contains: 
-    \begin{itemize}
-        \item \textbf{Company Logo:} when pressed it always redirects to the homepage;
-        \item \textbf{Searchbar:} allows to search a specific item in the store;
-        \item \textbf{Login button:} when pressed it redirects to the login page;
-        \item \textbf{Cart:} when pressed it redirects to the cart page;
-    \end{itemize}
-    \item \textbf{Categories NavBar:} contains all the categories that are present in the e-commerce. Each category can be pressed and then the application redirects to the products page showing only the products of the selected category;
+    \item \textbf{Email};
+    \item \textbf{Password}; 
 \end{itemize}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\linewidth]{res/images/cliente/navigationbars.png}
-    \caption{Navigation Bars}
+    \includegraphics[width=\linewidth]{res/images/cliente/signin.png}
+    \caption{Sign in}
 \end{figure}
 
-\subsubsection{Alternative Layout}
-The alternative layout has only the \textbf{Main NavBar}, refer to \hyperref[_mainLayout]{Main NavBar}. It is used in each other page.
 
-\subsubsection{Footer}
-Each page has a footer section where the customer can find useful information about the company.
+\subsection{How to Sign out} \label{_signout}
+In order to be able to sign out you have to be signed in. Then you will find the logout button in the Navigation Bar (Top right).
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\linewidth]{res/images/cliente/footer.png}
-    \caption{Footer}
+    \includegraphics[width=\linewidth]{res/images/cliente/signout.png}
+    \caption{Sign out}
 \end{figure}
-
-\subsection{Homepage}
-This is the first page the customer will see. It contains the highlighted products. Each product has the main image, name and price. When pressed it redirects to the detail page of the specific product.
+\subsection{How to look for a product} \label{_lookforproduct}
+There are several ways to find a product in the website. One way is to find the desired product in the \textbf{Best products} section that is in the \href{https://d28yg0rufs9lo7.cloudfront.net}{homepage}. Another way is to be in a Product Listing Page. You can reach this page by:
+\begin{itemize} 
+    \item \textbf{typing in the searchbar};
+    \item \textbf{clicking the category name}; 
+\end{itemize}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\linewidth]{res/images/cliente/homepage.png}
-    \caption{Homepage}
+    \includegraphics[width=\linewidth]{res/images/cliente/searchingbar.png}
+    \caption{Searching Bar}
 \end{figure}
 
-\subsection{Products Listing Page}
-In this page you can find all the products that match with the desired filters applied. To reach this page you have to select a category or just simply search a product by name in the Searchbar.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{res/images/cliente/categories.png}
+    \caption{Categories}
+\end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{res/images/cliente/plp.png}
-    \caption{Products Listing Page}
+    \caption{Product Listing Page}
 \end{figure}
 
-There are also two more filters that can be applied to the list of products.
-
+\subsection{How to buy a product} \label{_buyproduct}
+In order to buy a product, you have to follow these steps:
 \begin{itemize} 
-    \item \textbf{Filter by cost:} you can set a minimum cost or a maximum cost or both to get a more specific list of products;
-    \item \textbf{Order by cost:} you can order the listed products by price. The order can be:
-    \begin{itemize}
-        \item \textbf{Low to High:} orders the products from the cheapest to the more expensive;
-        \item \textbf{High to Low:} orders the products from the more expensive to the cheapest;
-    \end{itemize}
+    \item \textbf{Find the desired product}: this action can be done via these \hyperref[_lookforproduct]{instructions};
+    \item \textbf{Add the product to the cart}: this action can be done via these \hyperref[_addproduct]{instructions};
+    \item \textbf{Check the cart}: this action can be done via these \hyperref[_checkcart]{instructions};
+    \item \textbf{Proceed to the checkout}: this action can be done via these \hyperref[_checkout]{instructions};  
 \end{itemize}
 
-\subsection{Product Details Page}
-In this page you can find all the infos about the selected product.
-
+\subsubsection{How to add a product to the cart} \label{_addproduct}
+In order to add a product to your cart first you have to find the desired product/s. You can find here the \hyperref[_lookforproduct]{instructions}.
+Then you just simply select the number of items, using the + or - buttons. Then click the "Add to cart" button.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\linewidth]{res/images/cliente/pdp.png}
-    \caption{Product Details Page}
+    \includegraphics[width=\linewidth]{res/images/cliente/addtocart.png}
+    \caption{Add to cart}
 \end{figure}
 
-Main details are:
+\subsubsection{How to check your cart} \label{_checkcart}
+To check your cart you can simply press the cart icon in the top right corner.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{res/images/cliente/carticon.png}
+    \caption{Cart Icon}
+\end{figure}
+Here you can check your cart. If the cart is fine, you can proceed to the checkout by pressing the checkout button.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{res/images/cliente/checkoutbutton.png}
+    \caption{Checkout Button}
+\end{figure}
 
+\subsubsection{How to proceed to the checkout} \label{_checkout}
+In this page you have to insert all the info about the billing, shipping and payment sections.
+You can type by hand all the billing and shipping info or just use a previously stored address.
+Remember: if you are typing by hand the info, you can always automatically copy the billing info into the shipping info by pressing the "Autofill with Billing Data".
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{res/images/cliente/checkout.png}
+    \caption{Checkout}
+\end{figure}
+Once you have filled all the field about billing and shipping, you have to insert the info about your credit card.
+Remember: this platform will never handle payment data. Your data are securely used only by \href{https://stripe.com}{Stripe}; 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{res/images/cliente/payment.png}
+    \caption{Payment}
+\end{figure}
+
+\subsection{How to manage your cart} \label{_cart}
+In order to manage your cart you have to access to it. This action can be done via these \hyperref[_checkcart]{instructions}.
+Here you can:
 \begin{itemize} 
-    \item \textbf{Product Name}
-    \item \textbf{Images}
-    \item \textbf{Price} 
-    \item \textbf{Description} 
+    \item \textbf{Edit item quantity}: by pressing the + or - buttons;
+    \item \textbf{Remove completely the product}: by pressing the X button of the no more desired product;
+    \item \textbf{Remove completely all products}: by pressing the Remove all button;  
 \end{itemize}
-
-Here you can add/remove the product in/from your cart. You can increase the amount of products to add to the cart by pressing the plus (+) button. Same of decreasing the amount by pressing minus (-).
-
-\subsection{Cart}
-In this page you can find the cart with all products you added.
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{res/images/cliente/cart.png}
     \caption{Cart}
 \end{figure}
+
+\subsection{How to manage your addresses} \label{_addresses}
+In order to manage your cart you have to be signed in. This action can be done via these \hyperref[_signin]{instructions}.
+Then you have to access the profile page by clicking the profile button.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{res/images/cliente/profilebutton.png}
+    \caption{Profile Button}
+\end{figure}
+
+Here you can add a new address by filling the fields or just deleting an existing address. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{res/images/cliente/address.png}
+    \caption{Address}
+\end{figure}
+\subsection{How to manage your orders} \label{_orders}
+In order to be able to see your orders you have to be signed in. This action can be done via these \hyperref[_signin]{instructions}.
+To manage your orders you have to go to the page \href{https://d28yg0rufs9lo7.cloudfront.net/orders}{orders}. Here you will find the list of your past orders.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{res/images/cliente/orders.png}
+    \caption{Orders list}
+\end{figure}
+Each order has a detail page where you can:
+\begin{itemize} 
+    \item \textbf{Check all the info about the selected order};
+    \item \textbf{Ask assistance for the order}; 
+    \item \textbf{Ask to retur a product of the order}; 
+    \item \textbf{Ask to cancel the order}; 
+\end{itemize}
+The last 3 options are implemented via e-mail. This allows you to directly write with the seller.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{res/images/cliente/order.png}
+    \caption{Order detail}
+\end{figure}
+
+\subsection{How to manage your credentials} \label{_credentials}
+In order to be able to manage your credentials you have to be signed in. This action can be done via these \hyperref[_signin]{instructions}.
+Then you have to access the profile page by clicking the profile button.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{res/images/cliente/profilebutton.png}
+    \caption{Profile Button}
+\end{figure}
+
+Here you can edit your current password and your current e-mail.
+To edit the password:
+\begin{itemize} 
+    \item \textbf{Old password}: insert the old password;
+    \item \textbf{New password}: insert the new password; 
+    \item \textbf{Confirm new password}: re-insert the new password. This step ensure the user to not mistype the password; 
+\end{itemize}
+
+To edit the e-mail:
+\begin{itemize} 
+    \item \textbf{New password}: insert the new e-mail; 
+    \item \textbf{Confirm new password}: re-insert the new e-mail. This step ensure the user to not mistype the e-mail; 
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{res/images/cliente/credentials.png}
+    \caption{Credentials}
+\end{figure}
+\subsection{How to delete your account} \label{_delete}
+In order to be able to request an account deletion you have to be signed in. This action can be done via these \hyperref[_signin]{instructions}.
+Then you have to access the profile page by clicking the profile button.
+When you click the "Request account deletion" button, you will be sending a e-mail to the seller asking to delete the account from the platform.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{res/images/cliente/delete.png}
+    \caption{Delete Account Request}
+\end{figure}
+
+\subsection{How to contact the seller} \label{_contacts}
+To contact the seller you can find the link of the e-mail in the homepage. You can reach the page just clicking \href{https://d28yg0rufs9lo7.cloudfront.net/}{here}.
+
