@@ -34,7 +34,7 @@ Stripe simplifies and helps make all phases of the purchase and treasury process
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=45em]{res/images/EML-FE.jpg}
+    \includegraphics[width=45em]{res/images/frontend-diagrams/EML-FE.jpg}
 \end{figure}
 
 The architecture designed to represent the project's UI consists of two fundamental parts that manage its data input and output. The frontend in the case of Emporio Lambda must only present the data coming from the Backend and allow the user to interact with the system quickly and efficiently. 
@@ -48,3 +48,45 @@ In a usual React/Next application, the common way of sharing data between two co
 Context API is easy to is use as it has a short learning curve. It requires less code, and because there's no need of extra libraries, bundle sizes are reduced. Redux on the other hand requires adding more libraries to the application bundle. The syntax is complex and extensive creating unnecessary work and complexity. 
 
 For this reason, the group decided to implement data persistence through ContextAPI. This persistence layer is connected to the Authentication and Product fetch services and allows this data to be shared between the various pages of the UI. 
+
+\subsection{ContextAPI Overview}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=45em]{res/images/frontend-diagrams/ContextAPI.png}
+\end{figure}
+
+The ContextAPI shown in the figure defines in detail the operation of data persistence within the application. The ContextAPI consists of a Store that manages all the instances of the Providers that define a very particular application domain. Specifically, the Store consists of a StoreProvider, which provides the application with the data access point, and a ProviderComposer that combines the instances of the <Name>Provider in a single place then exposed to the UI by the StoreProvider.
+
+The actual Providers that provide instances are in the case of the application, the AuthProvider and the ProductProvider. Each of these defines a particular instance that manages precise data such as, for example, authentication and session management for the User.
+
+
+
+Specifically, a provider, such as the UserProvider, is made up of three fundamental parts:
+
+\begin{itemize}
+    \item \textbf{Context} where we find the persistent functions and data that are then made available to the application;
+    \item \textbf{Reducer} a particular function responsible for changing data within the Contex. The Reducer is the only way in which you can modify the Context data from the outside; 
+    \item \textbf{Types} define actions with which the Reducer can go to modify the Context.
+\end{itemize}
+
+The fetching of the data as explained above is done by the Services which specifically provide the data either directly to the Context or to specific pages in the application.
+
+\subsection{App Folder Strcture Overview}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=10em]{res/images/frontend-diagrams/app-folder-structure.png}
+\end{figure}
+
+The structure of the application with regard to folders and the division of tasks follows the typical pattern of any React application. Let's see what it is made of:
+
+\begin{itemize}
+    \item \textbf{aws-exports} contains the definitions of variables for the use of AWS services;
+    \item \textbf{components} contains all the reusable components of the application. Inside they are divided by scope and are accessible from all pages;
+    \item \textbf{context} contains the definition of the single Context and the Store;
+    \item \textbf{pages} represent the application url pages. Through Nextjs routing each of the defined pages creates a path reachable by the router;
+    \item \textbf{services} manage all api requests. They are like a bridge or an adapter between the database server APIs and the persistance/view layer (pages and components) of our application. It will take care of all the network calls of our app.
+    \item \textbf{styles} this module holds the application-level styles;
+    \item \textbf{types} contains the definition of the types used by the application and coming from the Backend. Using Typescript to write the code, the types are a fundamental part for compilation.
+\end{itemize}
