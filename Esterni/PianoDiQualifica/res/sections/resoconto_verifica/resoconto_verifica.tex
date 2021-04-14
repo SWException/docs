@@ -1,4 +1,4 @@
-\section{Resoconto attività di verifica} \label{_resocontoVerifica}
+\section{Resoconto processo di verifica} \label{_resocontoVerifica}
 
 \subsection{Analisi e consolidamento dei requisiti}
 
@@ -175,113 +175,75 @@ ha sfruttato strumenti software atti all'espletamento automatico delle operazion
 al rispetto dei valori massimi accettabili dalle singole metriche.
 
 Al fine di rendere più fruibili al lettore i risultati ottenuti all'esito dell'esecuzioni delle attività di verifica è stato scelto di presentarli
-separatamente per il frontend e per i singoli micro-servizi implementati. Stante lo stato di sviluppo in corso alcuni risultati non sono ancora determinabili
+separatamente per il frontend e per i singoli micro-servizi implementati.
+
 
 \begin{center}
-    \rowcolors{2}{white}{blue!20}
-    \begin{longtable}{|c|c|c|c|c|}
-        \hline
-        \rowcolor{lighter-grayer}
-        \textbf{Componente}         & \textbf{MPD-S1 COCI}  & \textbf{MPD-S2 COEB} & \textbf{MPD-S3 LRC} & \textbf{MPD-S4 CODCO}\\
-        \hline
-        \endfirsthead
-
-        \hline
-        Frontend & 60 & 60  & 60 & 60                       \\
-         & accettabile & accettabile  & accettabile & accettabile                       \\
+    \textbf{MPD-S1 COCI} \\
+    Grafo relativo ai valori della metrica relativa alla complessità ciclomatica, i risultati si intendono espressi come media dei singoli
+    micro servizi.
+    \begin{figure}[!htb]
+        \centering
+        \includegraphics[scale=0.60]{res/images/RQcoci.png}
+        \caption{Grafico metrica MPD-S1 COCI | Complessità ciclomatica}
+    \end{figure}
+    \begin{center}
+        \rowcolors{2}{white}{blue!20}
         
-        \hline
-        \rowcolor{white}
-        \caption{Prima rilevazione metriche frontend}
-    \end{longtable}
+    \end{center}
 
-    \rowcolors{2}{white}{blue!20}
-    \begin{longtable}{|c|c|c|c|c|}
-        \hline
-        \rowcolor{lighter-grayer}
-        \textbf{Componente}         & \textbf{MPD-S1 COCI}  & \textbf{MPD-S2 COEB} & \textbf{MPD-S3 LRC} & \textbf{MPD-S4 CODCO}\\
-        \hline
-        \endfirsthead
+    \begin{figure}[!htb]
+        \centering
+        \textbf{MPD-S2 COEB} \\
+        Grafo relativo ai valori della metrica relativa alla complessità delle espressioni booleane, valore desiderabile atteso è 1
+        \includegraphics[scale=0.60]{res/images/RQcoeb.png}
+        \caption{Grafico metrica MPD-S2 COEB}
+    \end{figure}
+    \begin{center}
+        \rowcolors{2}{white}{blue!20}
+        
+    \end{center}
 
-        \hline
-        Frontend & 60 & 60  & 60 & 60                       \\
-        & accettabile & accettabile  & accettabile & accettabile                       \\
+    \begin{figure}[!htb]
+        \centering
+        \textbf{MPD-S3 LRC} \\
+        Grafo relativo ai valori della metrica relativa alla lunghezza delle righe di codice, il grafo rappresenta con il valore 1 i micro-servizi
+        che rispettano quanto previsto nelle \dext{NormeDiProgetto\_2.0.0}, ovvero quando la lunghezza massima delle righe è pari a 100 
+        \includegraphics[scale=0.60]{res/images/RQlrc.png}
+        \caption{Grafico metrica MPD-S3 LRC}
+    \end{figure}
+    \begin{center}
+        \rowcolors{2}{white}{blue!20}
+        
+    \end{center}
 
-        \hline
-        \rowcolor{white}
-        \caption{Seconda rilevazione metriche frontend}
-    \end{longtable}
+
+
+
+    \begin{figure}[!htb]
+        \centering
+        \textbf{MPD-S4 CODCO} \\
+        Grafo relativo ai valori della metrica relativa alla code coverage con valori espressi in percentuale, come evidenziato nel 
+        grafico il dato minimo desiderabile previsto dalle \dext{NormeDiProgetto\_2.0.0} è superiore ad 80
+        \includegraphics[scale=0.60]{res/images/RQcodco.png}
+        \caption{Grafico metrica MPD-S4 CODCO}
+    \end{figure}
+    \begin{center}
+        \rowcolors{2}{white}{blue!20}
+        
+    \end{center}
 
 
 \end{center}
 
-\newpage
 
-\begin{center}
-    \rowcolors{2}{white}{blue!20}
-    \begin{longtable}{|c|c|c|c|c|}
-        \hline
-        \rowcolor{lighter-grayer}
-        \textbf{Componente}         & \textbf{MPD-S1 COCI}  & \textbf{MPD-S2 COEB} & \textbf{MPD-S3 LRC} & \textbf{MPD-S4 CODCO}\\
-        \hline
-        \endfirsthead
 
-        \hline
-        BE - Taxes & 60 & 60  & 60 & 60                       \\
-         & accettabile & accettabile  & accettabile & accettabile                       \\
-         BE - Addresses & 60 & 60  & 60 & 60                       \\
-         & accettabile & accettabile  & accettabile & accettabile                       \\
-         BE - Carts & 60 & 60  & 60 & 60                       \\
-         & accettabile & accettabile  & accettabile & accettabile                       \\
-         BE - Categories & 60 & 60  & 60 & 60                       \\
-         & accettabile & accettabile  & accettabile & accettabile                       \\
-         BE - Orders & 60 & 60  & 60 & 60                       \\
-         & accettabile & accettabile  & accettabile & accettabile                       \\
-         BE - Payments & 60 & 60  & 60 & 60                       \\
-         & accettabile & accettabile  & accettabile & accettabile                       \\
-         BE - Prodcuts & 60 & 60  & 60 & 60                       \\
-         & accettabile & accettabile  & accettabile & accettabile                       \\
-         BE - Users & 60 & 60  & 60 & 60                       \\
-         & accettabile & accettabile  & accettabile & accettabile                       \\
-        
-        \hline
-        \rowcolor{white}
-        \caption{Prima rilevazione metriche backend}
-    \end{longtable}
 
-    \rowcolors{2}{white}{blue!20}
-    \begin{longtable}{|c|c|c|c|c|}
-        \hline
-        \rowcolor{lighter-grayer}
-        \textbf{Componente}         & \textbf{MPD-S1 COCI}  & \textbf{MPD-S2 COEB} & \textbf{MPD-S3 LRC} & \textbf{MPD-S4 CODCO}\\
-        \hline
-        \endfirsthead
 
-        \hline
-        BE - Taxes & 60 & 60  & 60 & 60                       \\
-        & accettabile & accettabile  & accettabile & accettabile                       \\
-        BE - Addresses & 60 & 60  & 60 & 60                       \\
-        & accettabile & accettabile  & accettabile & accettabile                       \\
-        BE - Carts & 60 & 60  & 60 & 60                       \\
-        & accettabile & accettabile  & accettabile & accettabile                       \\
-        BE - Categories & 60 & 60  & 60 & 60                       \\
-        & accettabile & accettabile  & accettabile & accettabile                       \\
-        BE - Orders & 60 & 60  & 60 & 60                       \\
-        & accettabile & accettabile  & accettabile & accettabile                       \\
-        BE - Payments & 60 & 60  & 60 & 60                       \\
-        & accettabile & accettabile  & accettabile & accettabile                       \\
-        BE - Prodcuts & 60 & 60  & 60 & 60                       \\
-        & accettabile & accettabile  & accettabile & accettabile                       \\
-        BE - Users & 60 & 60  & 60 & 60                       \\
-        & accettabile & accettabile  & accettabile & accettabile                       \\
 
-        \hline
-        \rowcolor{white}
-        \caption{Seconda rilevazione metriche backend}
-    \end{longtable}
 
-    
-\end{center}
+
+
 
 
 \subsubsection{Dettaglio delle verifiche di processo}
