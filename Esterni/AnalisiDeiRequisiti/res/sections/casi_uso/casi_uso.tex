@@ -4,7 +4,7 @@
 
 %1
 \stepUserCase
-\subsection{\valueUserCase - Visualizzazione home page}
+\subsection{\valueUserCase - Visualizzazione informazioni azienda}
 \labelUserCase
 \begin{figure}[H]
     \centering
@@ -17,8 +17,9 @@
     \item \textbf{Precondizione:} nessuna;
     \item \textbf{Input:} il cliente accede all'e-commerce tramite link diretto;
     \item \textbf{Postcondizione:} il cliente si trova nella pagina principale;
-    \item \textbf{Scenario principale:} il cliente visualizza: elementi di identità del sito (logo, nome e-commerce), categorie presenti, prodotti in evidenza, informazioni sull'azienda venditrice (partita iva, indirizzo, ragione sociale, numero di telefono, email), pulsante per autenticarsi, pulsante per accedere al carrello.
+    \item \textbf{Scenario principale:} il cliente visualizza le informazioni sull'azienda venditrice (partita iva, indirizzo, ragione sociale, numero di telefono, etc.) tra cui l'email cliccabile.
 \end{itemize}
+
 
 %2
 \stepUserCase
@@ -76,37 +77,28 @@
           \end{itemize}
 \end{itemize}
 
-%5
-\stepUserCase
-\subsection{\valueUserCase - Filtri}
-\labelUserCase
+%4.1
+\stepsubUserCase
+\subsubsection{\valuesubUserCase - Visualizzazione singolo prodotto lista}
+\labelsubUserCase
 \begin{figure}[H]
     \centering
-    \includegraphics[width=30em]{res/images/UC/\valueUC.jpg}
-    \caption{Diagramma \valueUC}
+    \includegraphics[width=30em]{res/images/UC/\valuesubUC.jpg}
+    \caption{Diagramma \valuesubUC}
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore primario:} cliente generico;
-    \item \textbf{Descrizione:} il cliente può inserire ulteriori filtri per raffinare la visualizzazione dei prodotti;
-    \item \textbf{Precondizione:} il cliente si deve trovare in una PLP (\hyperref[UC4]{UC4});
-    \item \textbf{Postcondizione:} il cliente visualizza i prodotti con i filtri aggiornati;
-    \item \textbf{Scenario principale:}
-          \begin{enumerate}
-              \item il cliente seleziona il filtro;
-              \item il cliente modifica il valore del filtro;
-              \item il cliente visualizza i prodotti secondo le nuove politiche;
-          \end{enumerate}
-    \item \textbf{Specializzazioni: }
-          \begin{itemize}
-              \item il cliente filtra i prodotti per prezzo (\hyperref[UC5.1]{UC5.1.});
-              \item il cliente filtra i prodotti per categoria (\hyperref[UC5.2]{UC5.2}).
-          \end{itemize}
+    \item \textbf{Descrizione:} il cliente visualizza il singolo prodotto all'interno della lista;
+    \item \textbf{Precondizione:} il cliente deve trovarsi nella PLP;
+    \item \textbf{Postcondizione:} il cliente visualizza caratteristiche del prodotto;
+    \item \textbf{Scenario principale:} per ogni articolo il cliente visulizza titolo, foto principale e prezzo.
 \end{itemize}
 
-%5.1
-\stepsubUserCase
-\subsubsection{\valuesubUserCase - Inserimento filtro prezzo}
-\labelsubUserCase
+
+%5
+\stepUserCase
+\subsubsection{\valueUserCase - Filtro prezzo}
+\labelUserCase
 \begin{itemize}
     \item \textbf{Attore primario:} cliente generico;
     \item \textbf{Descrizione:} questa funzionalità permette al cliente di filtrare i prodotti visualizzati per prezzo;
@@ -115,26 +107,6 @@
     \item \textbf{Scenario principale:}
           \begin{enumerate}
               \item il cliente inserisce l'intervallo di prezzo desiderato;
-              \item il cliente visualizza i prodotti che corrispondono alla scelta;
-          \end{enumerate}
-    \item \textbf{Estensioni:}
-          \begin{itemize}
-              \item la pagina visualizza una PLP vuota perché nessun prodotto corrisponde alle politiche di visualizzazione.
-          \end{itemize}
-\end{itemize}
-
-%5.2
-\stepsubUserCase
-\subsubsection{\valuesubUserCase - Inserimento filtro categoria}
-\labelsubUserCase
-\begin{itemize}
-    \item \textbf{Attore primario:} cliente generico;
-    \item \textbf{Descrizione:} questa pagina visualizza tutti i prodotti che corrispondono ad una categoria o che corrispondono ad una parola cercata;
-    \item \textbf{Precondizione:} il cliente sceglie uno dei due modi per accedere alla PLP (\hyperref[UC2]{UC2} e \hyperref[UC3]{UC3});
-    \item \textbf{Postcondizione:} il cliente visualizza i prodotti che corrispondono alla scelta;
-    \item \textbf{Scenario principale:}
-          \begin{enumerate}
-              \item il cliente seleziona una categoria;
               \item il cliente visualizza i prodotti che corrispondono alla scelta;
           \end{enumerate}
     \item \textbf{Estensioni:}
@@ -198,13 +170,13 @@
 
 %7
 \stepUserCase
-\subsection{\valueUserCase - Apertura pagina dettagli prodotto (PDP)}
+\subsection{\valueUserCase - Visualizzazione pagina dettagli prodotto (PDP)}
 \labelUserCase
 \begin{figure}[H]
     \centering
     \includegraphics[width=30em]{res/images/UC/\valueUC.jpg}
     \caption{Diagramma \valueUC}
-\end{figure}
+\end{figure}8
 \begin{itemize}
     \item \textbf{Attore primario:} cliente generico;
     \item \textbf{Descrizione:} questa pagina visualizza tutti i dettagli del prodotto;
@@ -212,9 +184,10 @@
     \item \textbf{Postcondizione:} il cliente visualizza tutti i dettagli del prodotto;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
-              \item il cliente visualizza il codice, il titolo, le foto, il prezzo e la descrizione del prodotto.
+              \item il cliente visualizza il titolo, le foto, il prezzo e la descrizione del prodotto.
           \end{enumerate}
 \end{itemize}
+
 
 %8
 \stepUserCase
@@ -230,7 +203,7 @@
     \item \textbf{Descrizione:} questa azione serve ad aggiungere un prodotto in vendita nel sito
           all'interno del carrello personale del cliente, specificando in quale quantità;
     \item \textbf{Precondizione:} il cliente si trova nella PDP di un prodotto (\hyperref[UC7]{UC7});
-    \item \textbf{Input:} il cliente clicca sul pulsante "aggiungi al carrello" dopo aver selezionato la quantità (di default a 1);
+    \item \textbf{Input:} il cliente aggiunge al carrello dopo aver selezionato la quantità (di default a 1);
     \item \textbf{Postcondizione:} l'oggetto è stato inserito nel carrello nella quantità desiderata (se disponibile in magazzino);
     \item \textbf{Scenario principale:}
           \begin{enumerate}
@@ -258,7 +231,7 @@
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore primario:} cliente generico;
-    \item \textbf{Descrizione:} insieme di azioni fatte alla gestione degli articoli già presenti nel carrello;
+    \item \textbf{Descrizione:} insieme di azioni per la gestione degli articoli già presenti nel carrello;
     \item \textbf{Precondizione:} il cliente sta navigando il sito web;
     \item \textbf{Input:} il cliente esegue un'operazione gestionale sul carrello;
     \item \textbf{Postcondizione:} il cliente ha eseguito operazioni gestionali sul carrello;
@@ -288,12 +261,32 @@
     \item \textbf{Postcondizione:} il cliente visualizza un resoconto di tutti i prodotti inseriti nel carrello durante la sessione di utilizzo corrente (se non autenticato), altrimenti il carrello mantiene la consistenza su ogni dispositivo fino al checkout.
     \item \textbf{Scenario principale:}
           \begin{enumerate}
-              \item il cliente visualizza per ogni articolo codice, titolo, foto, prezzo e quantità;
+              \item il cliente visualizza ogni singolo prodotto con le sue acaratteristiche ;
               \item il cliente visualizza il totale dell'ordine con tasse incluse e senza costi di spedizione;
               \item il cliente visualizza il totale delle tasse.
           \end{enumerate}
-    
 \end{itemize}
+
+%9.1.1
+\stepsubsubUserCase
+\paragraph{\valuesubUserCase - Visualizzazione singolo articoli carrello}
+\labelsubsubUserCase
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/UC/\valuesubUC.jpg}
+    \caption{Diagramma \valuesubUC}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente generico;
+    \item \textbf{Descrizione:} scenario per la visualizzazione singolo articolo nel carrello;
+    \item \textbf{Precondizione:} il cliente si trova nel carrello;
+    \item \textbf{Postcondizione:} il cliente visualizza le caratteristiche del singolo prodotto.
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il cliente visualizza per ogni articolo codice, titolo, foto, prezzo e quantità e totale parziale;
+          \end{enumerate}
+\end{itemize}
+
 
 %9.2
 \stepsubUserCase
@@ -307,7 +300,7 @@
 \begin{itemize}
     \item \textbf{Attore primario:} cliente generico;
     \item \textbf{Descrizione:} scenario per la variazione della quantità di un singolo articolo presente nel carrello;
-    \item \textbf{Precondizione:} il cliente ha eseguito (\hyperref[UC9.1]{UC9.1});
+    \item \textbf{Precondizione:} il cliente si trova nel carrello;
     \item \textbf{Input:} il cliente inserisce la nuova quantità desiderata per quel determinato articolo;
     \item \textbf{Postcondizione:} se la quantità desiderata è disponibile, viene aggiornato l'articolo nel carrello;
     \item \textbf{Scenario principale:}
@@ -349,15 +342,15 @@
 \begin{itemize}
     \item \textbf{Attore primario:} cliente generico;
     \item \textbf{Descrizione:} caso d'uso per l'acquisto dei prodotti inseriti nel carrello;
-    \item \textbf{Precondizione:} il cliente ha eseguito (\hyperref[UC9.1]{UC9.1}) e il suo carrello contiene almeno un articolo;
+    \item \textbf{Precondizione:} il cliente si trova nel carrello che contiene almeno un articolo;
     \item \textbf{Input:} il cliente preme sul pulsante per avviare il checkout;
     \item \textbf{Postcondizione:} viene emesso un ordine contenente gli articoli precedentemente inseriti nel carrello. Vengono quindi rimossi dal magazzino;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
               \item il cliente preme sul pulsante per avviare il checkout;
-              \item inserisce gli indirizzi di fatturazione e spedizione (\hyperref[UC10.1]{UC10.1} - \hyperref[UC10.2]{10.2});
+              \item inserisce gli indirizzi di fatturazione e spedizione;
               \item vengono aggiunti i costi della spedizione all'importo totale, definiti come importo fisso;
-              \item si effettua il pagamento (\hyperref[UC10.3]{UC10.3});
+              \item si effettua il pagamento;
               \item l'ordine è stato emesso e contrassegnato come pagato;
           \end{enumerate}
     \item \textbf{Estensioni:}
@@ -390,6 +383,19 @@
                         \item scegliere tra gli indirizzi salvati (solo se autenticato).
                     \end{itemize}
           \end{enumerate}
+\end{itemize}
+
+%10.1.1
+\stepsubsubUserCase
+\paragraph{\valuesubsubUserCase - Scelta tra indirizzi salvati}
+\labelsubsubUserCase
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente autenticato;
+    \item \textbf{Descrizione:} il cliente può scegliere tra i vari indirizzi salvati;
+    \item \textbf{Precondizione:} il cliente ha avviato il processo di checkout;
+    \item \textbf{Input:} sceglie tra gli indirizzi personali già presenti;
+    \item \textbf{Postcondizione:} il cliente ha scelto un indirizzo;
+    \item \textbf{Scenario principale:}  il cliente seleziona dalla lista l'indirizzo di interesse.
 \end{itemize}
 
 %10.2
@@ -540,7 +546,7 @@
 
 %14
 \stepUserCase
-\subsection{\valueUserCase - Amministrazione account}
+\subsection{\valueUserCase - Gestione indirizzi account}
 \labelUserCase
 \begin{figure}[H]
     \centering
@@ -549,18 +555,14 @@
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore primario:} cliente autenticato;
-    \item \textbf{Descrizione:} caso d'uso per la gestione del profilo utente di un cliente;
+    \item \textbf{Descrizione:} il cliente vuole gestire i suoi indirizzi;
     \item \textbf{Precondizione:} il cliente ha eseguito il login (\hyperref[UC11]{UC11}) e si trova sulla pagina per la gestione del profilo;
-    \item \textbf{Input:} il cliente avvia un'operazione di gestione profilo;
-    \item \textbf{Postcondizione:} il cliente ha modificato il suo profilo o richiesto la modifica al venditore.
+    \item \textbf{Input:} il cliente ha cliccato sul pulsante per l'amministrazione dell'account;
+    \item \textbf{Postcondizione:} il cliente ha inserito o eliminato un indirizzo.
     \item \textbf{Scenario principale:}
           \begin{enumerate}
               \item il cliente può inserire un nuovo indirizzo (\hyperref[UC14.1]{UC14.1});
               \item il cliente può eliminare un indirizzo presente (\hyperref[UC14.2]{UC14.2});
-              \item il cliente può richiedere la cancellazione dell'account (\hyperref[UC14.3]{UC14.3});
-              \item il cliente può modificare la propria email (\hyperref[UC14.4]{UC14.4});
-              \item il cliente può modificare la propria password (\hyperref[UC14.5]{UC14.5}).
-            
           \end{enumerate}
 \end{itemize}
 
@@ -598,167 +600,30 @@
     \item \textbf{Postcondizione:} nel sistema non esiste più l'indirizzo rimosso.
 \end{itemize}
 
-%14.3
-\stepsubUserCase
-\subsubsection{\valuesubUserCase - Richiesta cancellazione account}
-\labelsubUserCase
-\begin{itemize}
-    \item \textbf{Attore primario:} cliente autenticato;
-    \item \textbf{Descrizione:} scenario per la richiesta di cancellazione del profilo cliente al venditore;
-    \item \textbf{Precondizione:} il cliente ha eseguito il login (\hyperref[UC11]{UC11}) e si trova sulla pagina per la gestione del profilo;
-    \item \textbf{Input:} il cliente preme il pulsante per richiedere la cancellazione dell'account;
-    \item \textbf{Postcondizione:} il sistema invia una email predefinita al venditore contenente la richiesta di cancellazione del relativo account.
-\end{itemize}
-
-%14.4
-\stepsubUserCase
-\subsubsection{\valuesubUserCase - Modifica email}
-\labelsubUserCase
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=30em]{res/images/UC/\valuesubUC.jpg}
-    \caption{Diagramma \valuesubUC}
-\end{figure}
-\begin{itemize}
-    \item \textbf{Attore primario:} cliente autenticato;
-    \item \textbf{Descrizione:} scenario per la modifica dell'email (username) dell'utente;
-    \item \textbf{Precondizione:} il cliente ha eseguito il login (\hyperref[UC11]{UC11}) e si trova sulla pagina per la gestione del profilo;
-    \item \textbf{Input:} il cliente sceglie l'opzione per modificare l'email che lo identifica univocamente all'interno del sito;
-    \item \textbf{Postcondizione:} l'email è stata modificata con quella nuova inserita;
-    \item \textbf{Scenario principale:}
-          \begin{enumerate}
-              \item il cliente inserisce l'email nel campo apposito;
-              \item il cliente reinserisce la stessa email in un altro campo per la verifica;
-              \item il cliente invia quindi i dati inseriti;
-              \item si ripete il processo di verifica email spiegato nel caso d'uso della registrazione.
-          \end{enumerate}
-    \item \textbf{Estensioni:} la modifica dell'email fallisce se:
-          \begin{itemize}
-              \item i due indirizzi email non corrispondono;
-              \item il nuovo indirizzo non viene verificato.
-          \end{itemize}
-\end{itemize}
-
-%14.5
-\stepsubUserCase
-\subsubsection{\valuesubUserCase - Modifica password}
-\labelsubUserCase
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=30em]{res/images/UC/\valuesubUC.jpg}
-    \caption{Diagramma \valuesubUC}
-\end{figure}
-\begin{itemize}
-    \item \textbf{Attore primario:} cliente autenticato;
-    \item \textbf{Descrizione:} scenario per la modifica della password del cliente;
-    \item \textbf{Precondizione:} il cliente ha eseguito il login (\hyperref[UC11]{UC11}) e si trova sulla pagina per la gestione del profilo;
-    \item \textbf{Input:} il cliente seleziona l'opzione per modificare la password di accesso;
-    \item \textbf{Postcondizione:} la password di accesso al sistema per quel cliente è stata modificata;
-    \item \textbf{Scenario principale:}
-          \begin{enumerate}
-              \item il cliente inserisce la vecchia password;
-              \item il cliente inserisce la nuova password;
-              \item il cliente reinserisce la nuova password;
-              \item il cliente invia quindi i dati inseriti.
-          \end{enumerate}
-    \item \textbf{Estensioni:} la modifica della password fallisce se:
-          \begin{itemize}
-              \item le password inserite non corrispondono;
-              \item la nuova password non rispetta i requisiti minimi di sicurezza.
-          \end{itemize}
-\end{itemize}
-
 %15
 \stepUserCase
-\subsection{\valueUserCase - Gestione ordini cliente}
+\subsection{\valueUserCase - Visualizzazione lista ordini}
 \labelUserCase
 \begin{figure}[H]
     \centering
     \includegraphics[width=30em]{res/images/UC/\valueUC.jpg}
-    \caption{Diagramma \valueUC}
+    \caption{Diagramma \valuesubUC}
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore primario:} cliente autenticato;
-    \item \textbf{Descrizione:} il cliente vuole accedere all'area di gestione degli ordini;
-    \item \textbf{Precondizione:} il cliente è autenticato nel sito;
-    \item \textbf{Postcondizione:} il cliente risulta nella pagina dove è possibile gestire gli ordini effettuati;
-    \item \textbf{Input:} il cliente preme il pulsante per visualizzare la lista degli ordini;
+    \item \textbf{Descrizione:} il cliente vuole visualizzare tutti gli ordini da lui effettuati;
+    \item \textbf{Precondizione:} il cliente ha effettuato il login;
+    \item \textbf{Input:} il cliente clicca sul pulsante per visualizzare gli ordini;
+    \item \textbf{Postcondizione:} il cliente visualizza tutti gli ordini effettuati in maniera sintetica;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
-              \item il cliente può annullare l'ordine (\hyperref[UC15.1]{UC15.1});
-              \item il cliente può richiedere assistenza per un ordine (\hyperref[UC15.2]{UC15.2});
-              \item il cliente può richiedere un reso (\hyperref[UC15.3]{UC15.3});
-              \item il cliente può visualizzare il riepilogo di un determinato ordine (\hyperref[UC15.4]{UC15.4});
-              \item il cliente può visualizzare la pagina con la lista degli ordini (\hyperref[UC15.4]{UC15.4}).
+              \item il cliente decide di aprire la lista ordini;
+              \item si apre la pagina contenente la lista degli ordini effettuati: per ognuno si visualizza data, totale, numero totale di articoli acquistati, numero identificativo dell'ordine, stato dell'ordine.
+              \item il cliente puo' accedere al riepilogo dell'ordine (\hyperref[UC15.1]{UC15.1})
           \end{enumerate}
 \end{itemize}
 
 %15.1
-\stepsubUserCase
-\subsubsection{\valuesubUserCase - Annullamento ordine}
-\labelsubUserCase
-\begin{itemize}
-    \item \textbf{Attore primario:} cliente autenticato;
-    \item \textbf{Descrizione:} il cliente vuole annullare un ordine effettuato;
-    \item \textbf{Precondizione:} il cliente deve aver effettuato un ordine e trovarsi nella sezione gestione degli ordini e visualizzare il dettaglio di un ordine (\hyperref[UC15.4]{UC15.4});
-    \item \textbf{Input:} il cliente clicca sul pulsante per l'annullamento dell'ordine;
-    \item \textbf{Postcondizione:} il cliente ha contatto il venditore per l'annullamento;
-    \item \textbf{Scenario principale:}
-          \begin{enumerate}
-              \item il cliente sceglie ordine da annullare;
-              \item il cliente viene portato al form di contatto dove sarà già precompilato il numero dell'ordine che si desidera annullare;
-              \item il cliente seleziona il motivo dell'annullamento;
-              \item il cliente scrive un messaggio per il venditore.
-          \end{enumerate}
-    \item \textbf{Inclusioni:}
-          \begin{itemize}
-              \item per annullare un ordine viene aperto il form di contatto che permette al cliente di contattare il venditore (\hyperref[UC17]{UC17}).
-          \end{itemize}
-\end{itemize}
-
-%15.2
-\stepsubUserCase
-\subsubsection{\valuesubUserCase - Assistenza cliente}
-\labelsubUserCase
-\begin{itemize}
-    \item \textbf{Attore primario:} cliente autenticato;
-    \item \textbf{Descrizione:} il cliente vuole contattare il venditore per un problema (errore indirizzo, domande, etc.);
-    \item \textbf{Precondizione:} il cliente deve trovarsi nella pagina della gestione degli ordini, aver effettuato l'ordine e visualizzarne il riepilogo (\hyperref[UC15.4]{UC15.4});
-    \item \textbf{Input:} il cliente clicca sul pulsante per l'assistenza;
-    \item \textbf{Postcondizione:} il cliente ha contatto il venditore per richiedere assistenza;
-    \item \textbf{Scenario principale:}
-          \begin{enumerate}
-              \item il cliente decide di contattare l'assistenza;
-              \item il cliente viene portato al form di contatto dove sarà già precompilato il numero dell'ordine al quale si desidera chiedere assistenza;
-          \end{enumerate}
-    \item \textbf{Inclusioni:}
-          \begin{itemize}
-              \item per l'assistenza su un ordine viene aperto il form di contatto che permette al cliente di contattare il venditore (\hyperref[UC17]{UC17}).
-          \end{itemize}
-\end{itemize}
-
-%15.3
-\stepsubUserCase
-\subsubsection{\valuesubUserCase - Richiesta reso}
-\labelsubUserCase
-\begin{itemize}
-    \item \textbf{Attore primario:} cliente autenticato;
-    \item \textbf{Descrizione:} il cliente vuole effettuare un reso di un ordine ricevuto;
-    \item \textbf{Precondizione:} il cliente deve aver effettuato un ordine, averlo ricevuto, ed essere nella pagina di visualizzazione dettaglio (\hyperref[UC15.4]{UC15.4});
-    \item \textbf{Input:} il cliente clicca sul pulsante per il reso dell'ordine;
-    \item \textbf{Postcondizione:} il cliente ha contatto il venditore per il reso;
-    \item \textbf{Scenario principale:}
-          \begin{enumerate}
-              \item il cliente decide di effettuare un reso;
-              \item il cliente viene portato al form di contatto dove sarà già precompilato il numero dell'ordine di cui si desidera effettuare il reso;
-          \end{enumerate}
-    \item \textbf{Inclusioni:}
-          \begin{itemize}
-              \item per il reso di un ordine viene aperto il form di contatto che permette al cliente di contattare il venditore (\hyperref[UC17]{UC17}).
-          \end{itemize}
-\end{itemize}
-
-%15.4
 \stepsubUserCase
 \subsubsection{\valuesubUserCase - Riepilogo ordine}
 \labelsubUserCase
@@ -770,35 +635,13 @@
 \begin{itemize}
     \item \textbf{Attore primario:} cliente autenticato;
     \item \textbf{Descrizione:} il cliente vuole visualizzare il riepilogo dell'ordine effettuato;
-    \item \textbf{Precondizione:} il cliente ha effettuato l'ordine e deve trovarsi nella pagina di gestione degli ordini;
+    \item \textbf{Precondizione:} il cliente ha effettuato l'ordine e deve trovarsi nella pagina lista degli ordini;
     \item \textbf{Input:} il cliente clicca sul pulsante per la visualizzazione del riepilogo dell'ordine;
     \item \textbf{Postcondizione:} il cliente visualizza il riepilogo;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
               \item il cliente decide di aprire il riepilogo dell'ordine;
               \item si apre la pagina dove è presentato il riepilogo: numero identificativo, data, importo totale, prodotti acquistati (per ognuno codice, titolo, prezzo e quantità), indirizzo di fatturazione e spedizione, stato dell'ordine.
-          \end{enumerate}
-\end{itemize}
-
-%15.5
-\stepsubUserCase
-\subsubsection{\valuesubUserCase - Visualizzazione lista ordini}
-\labelsubUserCase
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=30em]{res/images/UC/\valuesubUC.jpg}
-    \caption{Diagramma \valuesubUC}
-\end{figure}
-\begin{itemize}
-    \item \textbf{Attore primario:} cliente autenticato;
-    \item \textbf{Descrizione:} il cliente vuole visualizzare tutti gli ordini da lui effettuati;
-    \item \textbf{Precondizione:} il cliente si trova nella sezione di gestione ordini;
-    \item \textbf{Input:} il cliente clicca sul pulsante per visualizzare gli ordini;
-    \item \textbf{Postcondizione:} il cliente visualizza tutti gli ordini effettuati in maniera sintetica;
-    \item \textbf{Scenario principale:}
-          \begin{enumerate}
-              \item il cliente decide di aprire la lista ordini;
-              \item si apre la pagina contenente la lista degli ordini effettuati: per ognuno si visualizza data, totale, numero totale di articoli acquistati, numero identificativo dell'ordine, stato dell'ordine.
           \end{enumerate}
 \end{itemize}
 
@@ -831,19 +674,192 @@
 \begin{itemize}
     \item \textbf{Attore primario:} cliente generico;
     \item \textbf{Descrizione:} il cliente vuole contattare il venditore attraverso il form di contatto;
-    \item \textbf{Precondizione:} il cliente sta navigando il sito, o arriva da \hyperref[UC15.1]{UC15.1}, \hyperref[UC15.2]{UC15.2} o \hyperref[UC15.3]{UC15.3};
+    \item \textbf{Precondizione:} il cliente sta navigando il sito, o arriva ha richiesto assistenza o un reso o un annullamento;
     \item \textbf{Postcondizione:} il cliente riesce a contattare il venditore;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
               \item il cliente ha aperto il form di contatto;
               \item il cliente compila il form: oggetto della richiesta, email a cui rispondere, testo del messaggio;
-              \item eventualmente il cliente inserisce il numero dell'ordine a cui si vuole riferire (se non giunge da \hyperref[UC15.1]{UC15.1}, \hyperref[UC15.2]{UC15.2} o \hyperref[UC15.3]{UC15.3}, in quanto viene inserito in automatico.) ;
+              \item eventualmente il cliente inserisce il numero dell'ordine a cui si vuole riferire (se non ha richiesto assistenza o un reso o l'annullamento di un ordine, in quanto viene inserito in automatico.) ;
               \item il cliente contatta con successo il venditore.
           \end{enumerate}
 \end{itemize}
 
 
 %18
+\stepUserCase
+\subsection{\valueUserCase - Modifica credenziali}
+\labelUserCase
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/UC/\valueUC.jpg}
+    \caption{Diagramma \valueUC}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente autenticato;
+    \item \textbf{Descrizione:} il cliente vuole modificare le proprie credenziali;
+    \item \textbf{Precondizione:} il cliente ha eseguito il login (\hyperref[UC11]{UC11}) e si trova sulla pagina per la gestione del profilo;
+    \item \textbf{Input:} il cliente inserisce la nuova password e/o email nell'apposito spazio;
+    \item \textbf{Postcondizione:} il cliente ha modificato le credenziali.
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+        \item il cliente puo' modificare l'email;
+        \item il cliente puo' modificare la password;
+    \end{enumerate}
+\end{itemize}
+
+%18.1
+\stepsubUserCase
+\subsubsection{\valuesubUserCase - Modifica email}
+\labelsubUserCase
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/UC/\valuesubUC.jpg}
+    \caption{Diagramma \valuesubUC}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente autenticato;
+    \item \textbf{Descrizione:} scenario per la modifica dell'email (username) dell'utente;
+    \item \textbf{Precondizione:} il cliente ha eseguito il login (\hyperref[UC11]{UC11}) e si trova sulla pagina per la gestione del profilo;
+    \item \textbf{Input:} il cliente sceglie l'opzione per modificare l'email che lo identifica univocamente all'interno del sito;
+    \item \textbf{Postcondizione:} l'email è stata modificata con quella nuova inserita;
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il cliente inserisce l'email nel campo apposito;
+              \item il cliente reinserisce la stessa email in un altro campo per la verifica;
+              \item il cliente invia quindi i dati inseriti;
+              \item si ripete il processo di verifica email spiegato nel caso d'uso della registrazione.
+          \end{enumerate}
+    \item \textbf{Estensioni:} la modifica dell'email fallisce se:
+          \begin{itemize}
+              \item i due indirizzi email non corrispondono;
+              \item il nuovo indirizzo non viene verificato.
+          \end{itemize}
+\end{itemize}
+
+%18.2
+\stepsubUserCase
+\subsubsection{\valuesubUserCase - Modifica password}
+\labelsubUserCase
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/UC/\valuesubUC.jpg}
+    \caption{Diagramma \valuesubUC}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente autenticato;
+    \item \textbf{Descrizione:} scenario per la modifica della password del cliente;
+    \item \textbf{Precondizione:} il cliente ha eseguito il login (\hyperref[UC11]{UC11}) e si trova sulla pagina per la gestione del profilo;
+    \item \textbf{Input:} il cliente seleziona l'opzione per modificare la password di accesso;
+    \item \textbf{Postcondizione:} la password di accesso al sistema per quel cliente è stata modificata;
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il cliente inserisce la vecchia password;
+              \item il cliente inserisce la nuova password;
+              \item il cliente reinserisce la nuova password;
+              \item il cliente invia quindi i dati inseriti.
+          \end{enumerate}
+    \item \textbf{Estensioni:} la modifica della password fallisce se:
+          \begin{itemize}
+              \item le password inserite non corrispondono;
+              \item la nuova password non rispetta i requisiti minimi di sicurezza.
+          \end{itemize}
+\end{itemize}
+
+%19
+\stepUserCase
+\subsection{\valueUserCase - Richiesta cancellazione account}
+\labelUserCase
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente autenticato;
+    \item \textbf{Descrizione:} scenario per la richiesta di cancellazione del profilo cliente al venditore;
+    \item \textbf{Precondizione:} il cliente ha eseguito il login (\hyperref[UC11]{UC11}) e si trova sulla pagina per la gestione del profilo;
+    \item \textbf{Input:} il cliente preme il pulsante per richiedere la cancellazione dell'account;
+    \item \textbf{Postcondizione:} il sistema invia una email predefinita al venditore contenente la richiesta di cancellazione del relativo account.
+\end{itemize}
+
+
+%20
+\stepUserCase
+\subsection{\valueUserCase - Annullamento ordine}
+\labelUserCase
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/UC/\valueUC.jpg}
+    \caption{Diagramma \valueUC}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente autenticato;
+    \item \textbf{Descrizione:} il cliente vuole annullare un ordine effettuato;
+    \item \textbf{Precondizione:} il cliente deve aver effettuato un ordine e trovarsi nella sezione riepilogo ordine;
+    \item \textbf{Input:} il cliente clicca sul pulsante per l'annullamento dell'ordine;
+    \item \textbf{Postcondizione:} il cliente ha contatto il venditore per l'annullamento;
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il cliente sceglie ordine da annullare;
+              \item il cliente viene portato al form di contatto dove sarà già precompilato il numero dell'ordine che si desidera annullare;
+              \item il cliente seleziona il motivo dell'annullamento;
+              \item il cliente scrive un messaggio per il venditore.
+          \end{enumerate}
+    \item \textbf{Inclusioni:}
+          \begin{itemize}
+              \item per annullare un ordine viene aperto il form di contatto che permette al cliente di contattare il venditore (\hyperref[UC17]{UC17}).
+          \end{itemize}
+\end{itemize}
+
+%21
+\stepUserCase
+\subsection{\valueUserCase - Assistenza cliente}
+\labelUserCase
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/UC/\valueUC.jpg}
+    \caption{Diagramma \valueUC}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente autenticato;
+    \item \textbf{Descrizione:} il cliente vuole contattare il venditore per un problema (errore indirizzo, domande, etc.);
+    \item \textbf{Precondizione:}  il cliente deve aver effettuato un ordine e trovarsi nella sezione riepilogo ordine;
+    \item \textbf{Input:} il cliente clicca sul pulsante per l'assistenza;
+    \item \textbf{Postcondizione:} il cliente ha contatto il venditore per richiedere assistenza;
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il cliente decide di contattare l'assistenza;
+              \item il cliente viene portato al form di contatto dove sarà già precompilato il numero dell'ordine al quale si desidera chiedere assistenza;
+          \end{enumerate}
+    \item \textbf{Inclusioni:}
+          \begin{itemize}
+              \item per l'assistenza su un ordine viene aperto il form di contatto che permette al cliente di contattare il venditore (\hyperref[UC17]{UC17}).
+          \end{itemize}
+\end{itemize}
+
+%22
+\stepUserCase
+\subsection{\valueUserCase - Richiesta reso}
+\labelUserCase
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/UC/\valueUC.jpg}
+    \caption{Diagramma \valueUC}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente autenticato;
+    \item \textbf{Descrizione:} il cliente vuole effettuare un reso di un ordine ricevuto;
+    \item \textbf{Precondizione:}  il cliente deve aver effettuato un ordine e trovarsi nella sezione riepilogo ordine;
+    \item \textbf{Input:} il cliente clicca sul pulsante per il reso dell'ordine;
+    \item \textbf{Postcondizione:} il cliente ha contatto il venditore per il reso;
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il cliente decide di effettuare un reso;
+              \item il cliente viene portato al form di contatto dove sarà già precompilato il numero dell'ordine di cui si desidera effettuare il reso;
+          \end{enumerate}
+    \item \textbf{Inclusioni:}
+          \begin{itemize}
+              \item per il reso di un ordine viene aperto il form di contatto che permette al cliente di contattare il venditore (\hyperref[UC17]{UC17}).
+          \end{itemize}
+\end{itemize}t
+
+%23
 \stepUserCase
 \subsection{\valueUserCase - Contatta cliente}
 \labelUserCase
@@ -855,7 +871,7 @@
 \begin{itemize}
     \item \textbf{Attore primario:} venditore autenticato;
     \item \textbf{Descrizione:} il venditore deve poter contattare il cliente;
-    \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini (\hyperref[UC19.3]{UC19.3}) o nella lista clienti (\hyperref[UC20]{UC20});
+    \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini o nella lista clienti;
     \item \textbf{Postcondizione:} il venditore ha contattato il cliente con successo;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
@@ -865,15 +881,10 @@
           \end{enumerate}
 \end{itemize}
 
-%19
+%24
 \stepUserCase
 \subsection{\valueUserCase - Gestione ordini}
 \labelUserCase
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=30em]{res/images/UC/\valueUC.jpg}
-    \caption{Diagramma \valueUC}
-\end{figure}
 \begin{itemize}
     \item \textbf{Attore primario:} venditore autenticato;
     \item \textbf{Descrizione:} insieme di azioni atte alla gestione degli ordini effettuati dai clienti;
@@ -882,16 +893,16 @@
     \item \textbf{Postcondizione:} il venditore ha eseguito operazioni sugli ordini;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
-              \item il venditore può modificare lo stato di un ordine (\hyperref[UC19.1]{UC19.1});
-              \item il venditore può contattare il cliente che ha effettuato un determinato ordine (\hyperref[UC18]{UC18});
-              \item il venditore può stampare la bolla di un ordine (\hyperref[UC19.2]{UC19.2});
-              \item il venditore può visualizzare i dettagli di un determinato ordine (\hyperref[UC19.3]{UC19.3});
-              \item il venditore può cercare un determinato ordine nella lista (\hyperref[UC19.4]{UC19.4} tramite l'identificativo dell'ordine);
-              \item il venditore può visualizzare tutta la lista degli ordini effettuati dai clienti in ordine cronologico (dal più recente al più vecchio)(\hyperref[UC19.5]{UC19.5}).
+              \item il venditore può modificare lo stato di un ordine;
+              \item il venditore può contattare il cliente che ha effettuato un determinato ordine;
+              \item il venditore può stampare la bolla di un ordine;
+              \item il venditore può visualizzare i dettagli di un determinato ordine;
+              \item il venditore può cercare un determinato ordine nella lista, tramite l'identificativo dell'ordine;
+              \item il venditore può visualizzare tutta la lista degli ordini effettuati dai clienti in ordine cronologico (dal più recente al più vecchio).
             \end{enumerate}
 \end{itemize}
 
-%19.1
+%24.1
 \stepsubUserCase
 \subsubsection{\valuesubUserCase- Modifica stato ordine}
 \labelsubUserCase
@@ -908,7 +919,7 @@
           \end{enumerate}
 \end{itemize}
 
-%19.2
+%24.2
 \stepsubUserCase
 \subsubsection{\valuesubUserCase- Stampa bolla}
 \labelsubUserCase
@@ -925,15 +936,10 @@
           \end{enumerate}
 \end{itemize}
 
-%19.3
+%24.3
 \stepsubUserCase
 \subsubsection{\valuesubUserCase- Visualizzazione dettagli ordine}
 \labelsubUserCase
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=30em]{res/images/UC/\valuesubUC.jpg}
-    \caption{Diagramma \valuesubUC}
-\end{figure}
 \begin{itemize}
     \item \textbf{Attore primario:} venditore autenticato;
     \item \textbf{Descrizione:} il venditore vuole visualizzare i dettagli di un determinato ordine;
@@ -947,7 +953,7 @@
           \end{enumerate}
 \end{itemize}
 
-%19.4
+%24.4
 \stepsubUserCase
 \subsubsection{\valuesubUserCase- Ricerca nella lista ordini}
 \labelsubUserCase
@@ -968,15 +974,10 @@
     \end{itemize}
 \end{itemize}
 
-%19.5
+%24.5
 \stepsubUserCase
 \subsubsection{\valuesubUserCase - Lista ordini}
 \labelsubUserCase
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=30em]{res/images/UC/\valuesubUC.jpg}
-    \caption{Diagramma \valuesubUC}
-\end{figure}
 \begin{itemize}
     \item \textbf{Attore primario:} venditore autenticato;
     \item \textbf{Descrizione:} il venditore vuole visualizzare tutta la lista degli ordini effettuati dai clienti;
@@ -989,7 +990,7 @@
         \end{enumerate}
 \end{itemize}
 
-%20
+%25
 \stepUserCase
 \subsection{\valueUserCase - Lista clienti}
 \labelUserCase
@@ -1011,7 +1012,7 @@
           \end{enumerate}
 \end{itemize}
 
-%21
+%26
 \stepUserCase
 \subsection{\valueUserCase- Ricerca cliente tramite email}
 \labelUserCase
@@ -1034,7 +1035,7 @@
     \item \textbf{Estensioni:} nel caso in cui l'email inserita non rappresenti nessun cliente, dev'essere visualizzato il relativo messaggio d'errore.
 \end{itemize}
 
-%22
+%27
 \stepUserCase
 \subsection{\valueUserCase - Amministrazione tasse}
 \labelUserCase
@@ -1051,13 +1052,13 @@
     \item \textbf{Postcondizione:} il venditore ha visione della tabella relativa alle aliquote IVA già presenti nel sistema e può intraprendere una delle azioni disponibili;
     \item \textbf{Scenario principale:} il venditore ha cliccato nel bottone relativo alla gestione delle tasse e ha visione della tabella riepilogativa delle varie aliquote IVA presenti nel sistema, può scegliere di effettuare una delle seguenti azioni:
           \begin{enumerate}
-              \item aggiunta aliquote IVA (\hyperref[UC22.1]{UC22.1});
-              \item rimozione aliquote IVA (\hyperref[UC22.2]{UC22.2});
-              \item modifica aliquota IVA (\hyperref[UC22.3]{UC22.3}).
+              \item aggiunta aliquote IVA;
+              \item rimozione aliquote IVA;
+              \item modifica aliquota IVA.
           \end{enumerate}
 \end{itemize}
 
-%22.1
+%27.1
 \stepsubUserCase
 \subsubsection{\valuesubUserCase- Aggiunta aliquota IVA}
 \labelsubUserCase
@@ -1079,7 +1080,7 @@
           \end{enumerate}
 \end{itemize}
 
-%22.2
+%27.2
 \stepsubUserCase
 \subsubsection{\valuesubUserCase- Modifica aliquota IVA}
 \labelsubUserCase
@@ -1096,7 +1097,7 @@
           \end{enumerate}
 \end{itemize}
 
-%22.3
+%27.3
 \stepsubUserCase
 \subsubsection{\valuesubUserCase- Eliminazione aliquota IVA}
 \labelsubUserCase
@@ -1109,153 +1110,14 @@
     \item \textbf{Scenario principale:} il venditore ha cliccato nel bottone per eliminare un’aliquota IVA già presente nel sistema ed essa viene eliminata.
 \end{itemize}
 
-%23
+%28
 \stepUserCase
-\subsection{\valueUserCase - Amministrazione prodotti}
-\labelUserCase
-\begin{figure}[H]
+\subsection{\valueUserCase- Visualizzazione prodotti}
+\labelUserCase\begin{figure}[H]
     \centering
     \includegraphics[width=30em]{res/images/UC/\valueUC.jpg}
     \caption{Diagramma \valueUC}
 \end{figure}
-\begin{itemize}
-    \item \textbf{Attore primario:} venditore autenticato;
-    \item \textbf{Descrizione:} il venditore ha possibilità di visualizzare l’elenco prodotti inseriti nel sistema e di effettuare una delle azioni rese disponibili;
-    \item \textbf{Precondizione:} il venditore si trova nella dashboard di amministrazione;
-    \item \textbf{Input:} il venditore preme sul pulsante per l'accesso alla pagina di amministrazione prodotti;
-    \item \textbf{Postcondizione:} il venditore ha visione della tabella relativa dei prodotti già presenti nel sistema;
-    \item \textbf{Scenario principale:} il venditore ha cliccato nel bottone relativo alla gestione dei prodotti e può scegliere di effettuare una delle seguenti azioni:
-          \begin{enumerate}
-              \item aggiunta prodotto (\hyperref[UC23.1]{UC23.1});
-              \item modifica prodotto (\hyperref[UC23.2]{UC23.2});
-              \item rimozione prodotto (\hyperref[UC23.3]{UC23.3});
-              \item applicazione filtri prodotti (\hyperref[UC23.4]{UC23.4});
-              \item ricerca prodotto per nome (\hyperref[UC23.5]{UC23.5});
-              \item visualizzazione tabella prodotti (\hyperref[UC23.6]{UC23.6}).
-          \end{enumerate}
-\end{itemize}
-
-%23.1
-\stepsubUserCase
-\subsubsection{\valuesubUserCase- Aggiunta prodotto}
-\labelsubUserCase
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=30em]{res/images/UC/\valuesubUC.jpg}
-    \caption{Diagramma \valuesubUC}
-\end{figure}
-\begin{itemize}
-    \item \textbf{Attore primario:} venditore autenticato;
-    \item \textbf{Descrizione:} il venditore ha possibilità di aggiungere un nuovo prodotto all’interno del portale;
-    \item \textbf{Precondizione:} il venditore si trova nella pagina di gestione prodotti;
-    \item \textbf{Input:} click sul bottone per inserire un nuovo articolo;
-    \item \textbf{Postcondizione:} il nuovo prodotto è stato inserito nel sistema;
-    \item \textbf{Scenario principale:} il venditore ha cliccato nel bottone per inserire un nuovo prodotto all’interno del catalogo prodotti gestito dal sistema, le azioni da completare sono:
-          \begin{enumerate}
-              \item inserimento titolo prodotto;
-              \item inserimento descrizione prodotto;
-              \item inserimento immagine principale;
-              \item inserimento altre immagini (massimo 4);
-              \item selezione categorie prodotto;
-              \item inserimento prezzo netto prodotto;
-              \item selezione aliquota IVA;
-              \item selezione stato visibilità prodotto;
-              \item aggiungi attributi SEO prodotto;
-              \item inserimento dati giacenza magazzino del prodotto;
-              \item visualizzazione in home (dato che indica se visualizzare o meno il prodotto in vetrina);
-              \item inserimento giacenza prodotto;
-              \item salvataggio.
-          \end{enumerate}
-    \item \textbf{Estensione:}
-          \begin{itemize}
-              \item l'inserimento fallisce perché il titolo è vuoto (campo obbligatorio) ;
-              \item l'inserimento fallisce perché la quantità inserita non è valida (es. negativa o valore testuale).
-          \end{itemize}
-\end{itemize}
-
-%23.2
-\stepsubUserCase
-\subsubsection{\valuesubUserCase- Modifica prodotto}
-\labelsubUserCase
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=30em]{res/images/UC/\valuesubUC.jpg}
-    \caption{Diagramma \valuesubUC}
-\end{figure}
-\begin{itemize}
-    \item \textbf{Attore primario:} venditore autenticato;
-    \item \textbf{Descrizione:} il venditore ha possibilità di modificare un prodotto già inserito nel sistema;
-    \item \textbf{Precondizione:} il venditore si trova nella pagina di gestione prodotti;
-    \item \textbf{Input:} click sul bottone per la modifica di un determinato prodotto;
-    \item \textbf{Postcondizione:} il prodotto selezionato è stato modificato;
-    \item \textbf{Scenario principale:} il venditore ha cliccato nel bottone per modificare un prodotto all’interno del catalogo prodotti gestito dal sistema, le azioni che potrebbe attuare sono:
-          \begin{enumerate}
-              \item modifica titolo prodotto;
-              \item modifica descrizione prodotto;
-              \item modifica immagine principale;
-              \item modifica immagini secondarie;
-              \item modifica categorie prodotto;
-              \item modifica prezzo netto prodotto;
-              \item modifica aliquota IVA;
-              \item modifica stato visibilità prodotto;
-              \item modifica attributi SEO prodotto;
-              \item modifica visualizzazione in home (togliere o aggiungere il prodotto dalla home);
-              \item modifica giacenza prodotto.
-              \item salvataggio.
-          \end{enumerate}
-    \item \textbf{Estensione:}
-          \begin{itemize}
-              \item la modifica fallisce perché il titolo è vuoto (campo obbligatorio);
-              \item la modifica fallisce perché la quantità inserita non è valida (es. negativa o valore testuale).
-          \end{itemize}
-\end{itemize}
-
-%23.3
-\stepsubUserCase
-\subsubsection{\valuesubUserCase- Rimozione prodotto}
-\labelsubUserCase
-\begin{itemize}
-    \item \textbf{Attore primario:} venditore autenticato;
-    \item \textbf{Descrizione:} il venditore può rimuovere un prodotto;
-    \item \textbf{Precondizione:} il venditore si trova nella pagina di amministrazione prodotti;
-    \item \textbf{Input:} il venditore clicca sul pulsante di eliminazione per un determinato prodotto;
-    \item \textbf{Postcondizione:} il prodotto selezionato non è più presente nel sistema.
-\end{itemize}
-
-%23.4
-\stepsubUserCase
-\subsubsection{\valuesubUserCase- Applicazione filtri prodotti}
-\labelsubUserCase
-\begin{itemize}
-    \item \textbf{Attore primario:} venditore autenticato;
-    \item \textbf{Descrizione:} il venditore può filtrare i prodotti;
-    \item \textbf{Precondizione:} il venditore si trova nella pagina di amministrazione prodotti;
-    \item \textbf{Input:} il venditore seleziona un filtro;
-    \item \textbf{Postcondizione:} si visualizzano i prodotti che rispettano le condizioni;
-    \item \textbf{Scenario principale:}
-    \begin{itemize}
-        \item i prodotti possono essere filtrati per categoria.
-    \end{itemize}
-    \item \textbf{Estensioni:} il prodotto ricercato non è presente a sistema, si visualizza quindi il relativo messaggio d'errore.
-\end{itemize}
-
-%23.5
-\stepsubUserCase
-\subsubsection{\valuesubUserCase- Ricerca prodotto per nome}
-\labelsubUserCase
-\begin{itemize}
-    \item \textbf{Attore primario:} venditore autenticato;
-    \item \textbf{Descrizione:} il venditore può ricercare un prodotto per nome;
-    \item \textbf{Precondizione:} il venditore si trova nella pagina di amministrazione prodotti;
-    \item \textbf{Input:} il venditore clicca sul pulsante di ricerca prodotti;
-    \item \textbf{Postcondizione:} si visualizza il prodotto ricercato;
-    \item \textbf{Estensioni:} il prodotto ricercato non è presente a sistema, si visualizza quindi il relativo messaggio d'errore.
-\end{itemize}
-
-%23.6
-\stepsubUserCase
-\subsubsection{\valuesubUserCase- Visualizzazione prodotti}
-\labelsubUserCase
 \begin{itemize}
     \item \textbf{Attore primario:} venditore autenticato;
     \item \textbf{Descrizione:} il venditore può visualizzare la tabella dei prodotti presenti nel sistema;
@@ -1268,7 +1130,7 @@
         \end{enumerate}
 \end{itemize}
 
-%24
+%29
 \stepUserCase
 \subsection{\valueUserCase - Amministrazione categorie}
 \labelUserCase
@@ -1285,14 +1147,14 @@
     \item \textbf{Postcondizione:} il venditore si trova nella pagina per gestire le categorie;
     \item \textbf{Scenario principale:} il venditore visualizza può intraprendere una delle seguenti azioni:
           \begin{enumerate}
-              \item aggiungi categoria (\hyperref[UC24.1]{UC24.1});
-              \item modifica categoria (\hyperref[UC24.2]{UC24.2});
-              \item rimuovi categoria (\hyperref[UC24.3]{UC24.3});
-              \item visualizza categorie (\hyperref[UC24.4]{UC24.4}).
+              \item aggiungi categoria (\hyperref[UC29.1]{UC29.1});
+              \item modifica categoria (\hyperref[UC29.2]{UC29.2});
+              \item rimuovi categoria (\hyperref[UC29.3]{UC29.3});
+              \item visualizza categorie (\hyperref[UC29.4]{UC29.4}).
           \end{enumerate}
 \end{itemize}
 
-%24.1
+%29.1
 \stepsubUserCase
 \subsubsection{\valuesubUserCase- Aggiungi categoria}
 \labelsubUserCase
@@ -1319,7 +1181,7 @@
           \end{itemize}
 \end{itemize}
 
-%24.2
+%29.2
 \stepsubUserCase
 \subsubsection{\valuesubUserCase- Modifica categoria}
 \labelsubUserCase
@@ -1346,7 +1208,7 @@
           \end{itemize}
 \end{itemize}
 
-%24.3
+%29.3
 \stepsubUserCase
 \subsubsection{\valuesubUserCase- Rimozione categoria}
 \labelsubUserCase
@@ -1361,7 +1223,7 @@
           di inserire a quale categoria dirottare i prodotti coinvolti o se lasciarli senza categoria.
 \end{itemize}
 
-%24.4
+%29.4
 \stepsubUserCase
 \subsubsection{\valuesubUserCase- Visualizzazione categorie}
 \labelsubUserCase
@@ -1375,7 +1237,7 @@
     \item \textbf{Estensioni:} se non vi sono categorie presenti a sistema deve comparire il relativo messaggio.
 \end{itemize}
 
-%25
+%30
 \stepUserCase
 \subsection{\valueUserCase - Logout venditore}
 \labelUserCase
@@ -1387,7 +1249,7 @@
     \item \textbf{Postcondizione:} il venditore non è più autenticato nel backoffice e si trova sulla pagina per login del venditore.
 \end{itemize}
 
-%26
+%31
 \stepUserCase
 \subsection{\valueUserCase - Login venditore}
 \labelUserCase
@@ -1409,3 +1271,130 @@
           \end{enumerate}
     \item \textbf{Estensioni:} i dati di login sono errati, il login fallisce e si chiede il reinserimento dei dati.
 \end{itemize}
+
+%32
+\stepUserCase
+\subsection{\valueUserCase - Aggiunta prodotto}
+\labelUserCase
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/UC/\valueUC.jpg}
+    \caption{Diagramma \valueUC}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario:} venditore autenticato;
+    \item \textbf{Descrizione:} il venditore ha possibilità di aggiungere un nuovo prodotto all’interno del portale;
+    \item \textbf{Precondizione:} il venditore si trova nella pagina di gestione prodotti;
+    \item \textbf{Input:} click sul bottone per inserire un nuovo articolo;
+    \item \textbf{Postcondizione:} il nuovo prodotto è stato inserito nel sistema;
+    \item \textbf{Scenario principale:} il venditore ha cliccato nel bottone per inserire un nuovo prodotto all’interno del catalogo prodotti gestito dal sistema, le azioni da completare sono:
+          \begin{enumerate}
+              \item inserimento titolo prodotto;
+              \item inserimento descrizione prodotto;
+              \item inserimento immagine principale;
+              \item inserimento altre immagini (massimo 4);
+              \item selezione categorie prodotto;
+              \item inserimento prezzo netto prodotto;
+              \item selezione aliquota IVA;
+              \item selezione stato visibilità prodotto;
+              \item inserimento dati giacenza magazzino del prodotto;
+              \item visualizzazione in home (dato che indica se visualizzare o meno il prodotto in vetrina);
+              \item inserimento giacenza prodotto;
+              \item salvataggio.
+          \end{enumerate}
+    \item \textbf{Estensione:}
+          \begin{itemize}
+              \item l'inserimento fallisce perché il titolo è vuoto (campo obbligatorio) ;
+              \item l'inserimento fallisce perché la quantità inserita non è valida (es. negativa o valore testuale).
+          \end{itemize}
+\end{itemize}
+
+%33
+\stepUserCase
+\subsection{\valueUserCase- Modifica prodotto}
+\labelUserCase
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/UC/\valueUC.jpg}
+    \caption{Diagramma \valueUC}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario:} venditore autenticato;
+    \item \textbf{Descrizione:} il venditore ha possibilità di modificare un prodotto già inserito nel sistema;
+    \item \textbf{Precondizione:} il venditore si trova nella pagina di gestione prodotti;
+    \item \textbf{Input:} click sul bottone per la modifica di un determinato prodotto;
+    \item \textbf{Postcondizione:} il prodotto selezionato è stato modificato;
+    \item \textbf{Scenario principale:} il venditore ha cliccato nel bottone per modificare un prodotto all’interno del catalogo prodotti gestito dal sistema, le azioni che potrebbe attuare sono:
+          \begin{enumerate}
+              \item modifica titolo prodotto;
+              \item modifica descrizione prodotto;
+              \item modifica immagine principale;
+              \item modifica immagini secondarie;
+              \item modifica categorie prodotto;
+              \item modifica prezzo netto prodotto;
+              \item modifica aliquota IVA;
+              \item modifica stato visibilità prodotto;
+              \item modifica visualizzazione in home (togliere o aggiungere il prodotto dalla home);
+              \item modifica giacenza prodotto.
+              \item salvataggio.
+          \end{enumerate}
+    \item \textbf{Estensione:}
+          \begin{itemize}
+              \item la modifica fallisce perché il titolo è vuoto (campo obbligatorio);
+              \item la modifica fallisce perché la quantità inserita non è valida (es. negativa o valore testuale).
+          \end{itemize}
+\end{itemize}
+
+%34
+\stepUserCase
+\subsection{\valueUserCase- Rimozione prodotto}
+\labelUserCase
+\begin{itemize}
+    \item \textbf{Attore primario:} venditore autenticato;
+    \item \textbf{Descrizione:} il venditore può rimuovere un prodotto;
+    \item \textbf{Precondizione:} il venditore si trova nella pagina di amministrazione prodotti;
+    \item \textbf{Input:} il venditore clicca sul pulsante di eliminazione per un determinato prodotto;
+    \item \textbf{Postcondizione:} il prodotto selezionato non è più presente nel sistema.
+\end{itemize}
+
+%35
+\stepUserCase
+\subsection{\valueUserCase- Ricerca prodotto per nome}
+\labelUserCase
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/UC/\valueUC.jpg}
+    \caption{Diagramma \valueUC}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario:} venditore autenticato;
+    \item \textbf{Descrizione:} il venditore può ricercare un prodotto per nome;
+    \item \textbf{Precondizione:} il venditore si trova nella pagina di amministrazione prodotti;
+    \item \textbf{Input:} il venditore clicca sul pulsante di ricerca prodotti;
+    \item \textbf{Postcondizione:} si visualizza il prodotto ricercato;
+    \item \textbf{Estensioni:} il prodotto ricercato non è presente a sistema, si visualizza quindi il relativo messaggio d'errore.
+\end{itemize}
+
+%36
+\stepUserCase
+\subsection{\valueUserCase- Filtri prodotti}
+\labelUserCase
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/UC/\valueUC.jpg}
+    \caption{Diagramma \valueUC}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario:} venditore autenticato;
+    \item \textbf{Descrizione:} il venditore può filtrare i prodotti;
+    \item \textbf{Precondizione:} il venditore si trova nella pagina di amministrazione prodotti;
+    \item \textbf{Input:} il venditore seleziona un filtro;
+    \item \textbf{Postcondizione:} si visualizzano i prodotti che rispettano le condizioni;
+    \item \textbf{Scenario principale:}
+    \begin{itemize}
+        \item i prodotti possono essere filtrati per categoria.
+    \end{itemize}
+    \item \textbf{Estensioni:} il prodotto ricercato non è presente a sistema, si visualizza quindi il relativo messaggio d'errore.
+\end{itemize}
+
+
