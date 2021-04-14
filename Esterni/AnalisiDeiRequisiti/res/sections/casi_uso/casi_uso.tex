@@ -269,22 +269,14 @@
 
 %9.1.1
 \stepsubsubUserCase
-\paragraph{\valuesubUserCase - Visualizzazione singolo articoli carrello}
+\paragraph{\valuesubsubUserCase - Visualizzazione singolo articolo carrello}
 \labelsubsubUserCase
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=30em]{res/images/UC/\valuesubUC.jpg}
-    \caption{Diagramma \valuesubUC}
-\end{figure}
 \begin{itemize}
     \item \textbf{Attore primario:} cliente generico;
     \item \textbf{Descrizione:} scenario per la visualizzazione singolo articolo nel carrello;
     \item \textbf{Precondizione:} il cliente si trova nel carrello;
     \item \textbf{Postcondizione:} il cliente visualizza le caratteristiche del singolo prodotto.
-    \item \textbf{Scenario principale:}
-          \begin{enumerate}
-              \item il cliente visualizza per ogni articolo codice, titolo, foto, prezzo e quantità e totale parziale;
-          \end{enumerate}
+    \item \textbf{Scenario principale:} zil cliente visualizza per ogni articolo codice, titolo, foto, prezzo e quantità e totale parziale.
 \end{itemize}
 
 
@@ -618,12 +610,33 @@
     \item \textbf{Scenario principale:}
           \begin{enumerate}
               \item il cliente decide di aprire la lista ordini;
-              \item si apre la pagina contenente la lista degli ordini effettuati: per ognuno si visualizza data, totale, numero totale di articoli acquistati, numero identificativo dell'ordine, stato dell'ordine.
-              \item il cliente puo' accedere al riepilogo dell'ordine (\hyperref[UC15.1]{UC15.1})
+              \item si apre la pagina contenente la lista degli ordini effettuati.
+            \item il cliente puo' aprire il riepilogo di un ordine;
           \end{enumerate}
 \end{itemize}
 
 %15.1
+\stepsubUserCase
+\subsubsection{\valuesubUserCase - Visualizzazione singolo ordine lista }
+\labelsubUserCase
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/UC/\valuesubUC.jpg}
+    \caption{Diagramma \valuesubUC}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente autenticato;
+    \item \textbf{Descrizione:} il cliente vuole visualizzare le caratteristiche di ogni ordine nella lista;
+    \item \textbf{Precondizione:} il cliente ha effettuato l'ordine e deve trovarsi nella pagina lista degli ordini;
+    \item \textbf{Postcondizione:} il cliente visualizza le informazioni;
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item per ogni ordini viene visualizzato il codice identificativo, la data, lo stato, il numero totale di articoli ed il totale.
+          \end{enumerate}
+\end{itemize}
+
+
+%15.2
 \stepsubUserCase
 \subsubsection{\valuesubUserCase - Riepilogo ordine}
 \labelsubUserCase
@@ -883,66 +896,60 @@
 
 %24
 \stepUserCase
-\subsection{\valueUserCase - Gestione ordini}
+\subsection{\valueUserCase - Visualizzazione lista ordini dei clienti}
 \labelUserCase
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/UC/\valueUC.jpg}
+    \caption{Diagramma \valueUC}
+\end{figure}
 \begin{itemize}
     \item \textbf{Attore primario:} venditore autenticato;
-    \item \textbf{Descrizione:} insieme di azioni atte alla gestione degli ordini effettuati dai clienti;
+    \item \textbf{Descrizione:} il venditore visualizza la lista di tutti gli ordini ricevuti;
     \item \textbf{Precondizione:} il venditore deve essere autenticato;
     \item \textbf{Input:} il venditore esegue un'operazione sugli ordini;
-    \item \textbf{Postcondizione:} il venditore ha eseguito operazioni sugli ordini;
+    \item \textbf{Postcondizione:} il venditore visualizza la lista;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
-              \item il venditore può modificare lo stato di un ordine;
-              \item il venditore può contattare il cliente che ha effettuato un determinato ordine;
-              \item il venditore può stampare la bolla di un ordine;
-              \item il venditore può visualizzare i dettagli di un determinato ordine;
-              \item il venditore può cercare un determinato ordine nella lista, tramite l'identificativo dell'ordine;
-              \item il venditore può visualizzare tutta la lista degli ordini effettuati dai clienti in ordine cronologico (dal più recente al più vecchio).
+              \item il venditore visualizzare tutta la lista degli ordini ricevuti dai clienti in ordine cronologico (dal più recente al più vecchio).
+              \item il venditore visualizza le informazioni generali per ogni ordine
+              \item il venditore puo' visualizzare nel dettaglio un ordine
             \end{enumerate}
 \end{itemize}
 
 %24.1
 \stepsubUserCase
-\subsubsection{\valuesubUserCase- Modifica stato ordine}
+\subsubsection{\valuesubUserCase - Visualizzazione singolo ordine lista}
 \labelsubUserCase
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/UC/\valuesubUC.jpg}
+    \caption{Diagramma \valuesubUC}
+\end{figure}
 \begin{itemize}
     \item \textbf{Attore primario:} venditore autenticato;
-    \item \textbf{Descrizione:} il venditore vuole modificare lo stato di un ordine;
-    \item \textbf{Precondizione:} il venditore deve trovarsi nella sezione di gestione degli ordini;
-    \item \textbf{Input:} il venditore sceglie un ordine a cui modifica lo stato;
-    \item \textbf{Postcondizione:} il venditore ha modificato lo stato dell'ordine scelto;
+    \item \textbf{Descrizione:} il venditore vuole visualizzare le informazioni per ogni ordine;
+    \item \textbf{Precondizione:} il venditore deve essere autenticato e trovarsi nella lista degli ordini;
+    \item \textbf{Input:} il venditore clicca sul pulsante per la lista degli ordini;
+    \item \textbf{Postcondizione:} il venditore visualizza le informazioni di ogni ordine.
     \item \textbf{Scenario principale:}
-          \begin{enumerate}
-              \item il venditore seleziona un ordine dalla lista;
-              \item il venditore modifica lo stato dell'ordine scegliendo tra: accettato, in elaborazione, spedito, consegnato, cancellato.
-          \end{enumerate}
+        \begin{enumerate}
+            \item il venditore visualizza per ogni ordine codice, email cliente, stato, data e totale.
+        \end{enumerate}
 \end{itemize}
 
 %24.2
 \stepsubUserCase
-\subsubsection{\valuesubUserCase- Stampa bolla}
-\labelsubUserCase
-\begin{itemize}
-    \item \textbf{Attore primario:} venditore autenticato;
-    \item \textbf{Descrizione:} il venditore vuole stampare la bolla per l'ordine;
-    \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini;
-    \item \textbf{Input:} il venditore sceglie un ordine di cui stampare la bolla;
-    \item \textbf{Postcondizione:} il venditore ha stampato la bolla;
-    \item \textbf{Scenario principale:}
-          \begin{enumerate}
-              \item il venditore seleziona un determinato ordine;
-              \item il venditore stampa la bolla.
-          \end{enumerate}
-\end{itemize}
-
-%24.3
-\stepsubUserCase
 \subsubsection{\valuesubUserCase- Visualizzazione dettagli ordine}
 \labelsubUserCase
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/UC/\valuesubUC.jpg}
+    \caption{Diagramma \valuesubUC}
+\end{figure}
 \begin{itemize}
     \item \textbf{Attore primario:} venditore autenticato;
-    \item \textbf{Descrizione:} il venditore vuole visualizzare i dettagli di un determinato ordine;
+    \item \textbf{Descrizione:} il venditore vuole visualizzare tutti i dettagli di un determinato ordine;
     \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini e selezionarne uno;
     \item \textbf{Input:} il venditore sceglie un ordine di cui visualizzarne i dettagli;
     \item \textbf{Postcondizione:} il venditore visualizza tutti i dettagli dell'ordine;
@@ -953,42 +960,6 @@
           \end{enumerate}
 \end{itemize}
 
-%24.4
-\stepsubUserCase
-\subsubsection{\valuesubUserCase- Ricerca nella lista ordini}
-\labelsubUserCase
-\begin{itemize}
-    \item \textbf{Attore primario:} venditore autenticato;
-    \item \textbf{Descrizione}: il venditore vuole cercare un determinato ordine all'interno della lista;
-    \item \textbf{Precondizione:} il venditore deve trovarsi nella lista degli ordini;
-    \item \textbf{Input:} il venditore inserisce il numero dell'ordine da cercare;
-    \item \textbf{Postcondizione:} il venditore visualizza l'ordine richiesto;
-    \item \textbf{Scenario principale:}
-        \begin{enumerate}
-            \item il venditore inserisce nel campo per la ricerca il codice dell'ordine;
-            \item il venditore visualizza l'ordine richiesto.
-        \end{enumerate}
-    \item \textbf{Estensione:}
-    \begin{itemize}
-        \item il codice d'ordine inserito non esiste, quindi si visualizza il relativo messaggio di errore.
-    \end{itemize}
-\end{itemize}
-
-%24.5
-\stepsubUserCase
-\subsubsection{\valuesubUserCase - Lista ordini}
-\labelsubUserCase
-\begin{itemize}
-    \item \textbf{Attore primario:} venditore autenticato;
-    \item \textbf{Descrizione:} il venditore vuole visualizzare tutta la lista degli ordini effettuati dai clienti;
-    \item \textbf{Precondizione:} il venditore deve essere autenticato;
-    \item \textbf{Input:} il venditore clicca sul pulsante per la lista degli ordini;
-    \item \textbf{Postcondizione:} il venditore riesce a visualizzare la lista degli ordini dei clienti in ordine cronologico;
-    \item \textbf{Scenario principale:}
-        \begin{enumerate}
-            \item il venditore visualizza per ogni ordine codice, email cliente, stato, data e totale.
-        \end{enumerate}
-\end{itemize}
 
 %25
 \stepUserCase
@@ -1007,9 +978,28 @@
     \item \textbf{Postcondizione:} il venditore visualizza tutta la lista clienti;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
-              \item il venditore visualizza la lista: per ogni cliente si visualizza nome, cognome, email;
               \item il venditore può contattare un cliente (\hyperref[UC18]{UC18}):
           \end{enumerate}
+\end{itemize}
+
+%25.1
+\stepsubUserCase
+\subsubsection{\valuesubUserCase - Visualizzazione singolo cliente lista}
+\labelsubUserCase
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/UC/\valuesubUC.jpg}
+    \caption{Diagramma \valuesubUC}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario:} venditore autenticato;
+    \item \textbf{Descrizione:} il venditore vuole visualizzare le informazioni del clienti;
+    \item \textbf{Precondizione:} il venditore deve essere autenticato e trovarsi nella lista clienti;
+    \item \textbf{Postcondizione:} il venditore visualizza le informazioni del cliente.
+    \item \textbf{Scenario principale:}
+        \begin{enumerate}
+            \item il venditore visualizza per ogni cliente della lista il nome, il cognome e l'email;
+        \end{enumerate}
 \end{itemize}
 
 %26
@@ -1112,7 +1102,7 @@
 
 %28
 \stepUserCase
-\subsection{\valueUserCase- Visualizzazione prodotti}
+\subsection{\valueUserCase- Visualizzazione lista prodotti}
 \labelUserCase\begin{figure}[H]
     \centering
     \includegraphics[width=30em]{res/images/UC/\valueUC.jpg}
@@ -1126,7 +1116,27 @@
     \item \textbf{Postcondizione:} il venditore riesce a visualizzare la tabella dei prodotti;
     \item \textbf{Scenario principale:}
         \begin{enumerate}
-            \item per ogni prodotto viene visualizzato: codice, nome, prezzo, categoria.
+            \item il venditore visualizza la tabella dei prodotti al momento inseriti.
+        \end{enumerate}
+\end{itemize}
+
+%28.1
+\stepsubUserCase
+\subsubsection{\valuesubUserCase - Visualizzazione singolo prodotto lista}
+\labelsubUserCase
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/UC/\valuesubUC.jpg}
+    \caption{Diagramma \valuesubUC}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario:} venditore autenticato;
+    \item \textbf{Descrizione:} il venditore vuole visualizzare le informazioni di un prodotto;
+    \item \textbf{Precondizione:} il venditore deve essere autenticato e trovarsi nella lista dei prodotti;
+    \item \textbf{Postcondizione:} il venditore visualizza le informazioni del prodotto.
+    \item \textbf{Scenario principale:}
+        \begin{enumerate}
+            \item il venditore visualizza per ogni prodotto: codice, nome, prezzo, categoria.
         \end{enumerate}
 \end{itemize}
 
@@ -1397,4 +1407,62 @@
     \item \textbf{Estensioni:} il prodotto ricercato non è presente a sistema, si visualizza quindi il relativo messaggio d'errore.
 \end{itemize}
 
+%37
+\stepUserCase
+\subsection{\valueUserCase- Ricerca nella lista ordini}
+\labelUserCase
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/UC/\valueUC.jpg}
+    \caption{Diagramma \valueUC}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario:} venditore autenticato;
+    \item \textbf{Descrizione}: il venditore vuole cercare un determinato ordine all'interno della lista;
+    \item \textbf{Precondizione:} il venditore deve trovarsi nella pagina della lista degli ordini;
+    \item \textbf{Input:} il venditore inserisce il numero dell'ordine da cercare;
+    \item \textbf{Postcondizione:} il venditore visualizza l'ordine richiesto;
+    \item \textbf{Scenario principale:}
+        \begin{enumerate}
+            \item il venditore inserisce nel campo per la ricerca il codice dell'ordine;
+            \item il venditore visualizza l'ordine richiesto.
+        \end{enumerate}
+    \item \textbf{Estensione:}
+    \begin{itemize}
+        \item il codice d'ordine inserito non esiste, quindi si visualizza il relativo messaggio di errore.
+    \end{itemize}
+\end{itemize}
 
+%38
+\stepUserCase
+\subsection{\valueUserCase- Modifica stato ordine}
+\labelUserCase
+\begin{itemize}
+    \item \textbf{Attore primario:} venditore autenticato;
+    \item \textbf{Descrizione:} il venditore vuole modificare lo stato di un ordine;
+    \item \textbf{Precondizione:} il venditore deve trovarsi nella pagina con la lista degli ordini;
+    \item \textbf{Input:} il venditore sceglie un ordine a cui modifica lo stato;
+    \item \textbf{Postcondizione:} il venditore ha modificato lo stato dell'ordine scelto;
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il venditore seleziona un ordine dalla lista;
+              \item il venditore modifica lo stato dell'ordine scegliendo tra: accettato, in elaborazione, spedito, consegnato, cancellato.
+          \end{enumerate}
+\end{itemize}
+
+%39
+\stepUserCase
+\subsection{\valueUserCase- Stampa bolla}
+\labelUserCase
+\begin{itemize}
+    \item \textbf{Attore primario:} venditore autenticato;
+    \item \textbf{Descrizione:} il venditore vuole stampare la bolla per l'ordine;
+    \item \textbf{Precondizione:} il venditore deve trovarsi nella pagina con la lista degli ordini;
+    \item \textbf{Input:} il venditore sceglie un ordine di cui stampare la bolla;
+    \item \textbf{Postcondizione:} il venditore ha stampato la bolla;
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il venditore seleziona un determinato ordine;
+              \item il venditore stampa la bolla.
+          \end{enumerate}
+\end{itemize}
