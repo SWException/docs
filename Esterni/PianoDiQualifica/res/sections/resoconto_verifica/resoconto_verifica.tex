@@ -243,13 +243,6 @@ separatamente per il frontend e per i singoli micro-servizi implementati.
 
 
 
-
-
-
-
-
-
-
 \subsubsection{Dettaglio delle verifiche di processo}
 
 \paragraph{MPR-1: Budgeted Cost of Work Scheduled (BCWS)}\label{_BCWS}
@@ -289,3 +282,80 @@ separatamente per il frontend e per i singoli micro-servizi implementati.
     \includegraphics[width=0.8\textwidth]{res/images/metriche_costi/SV.png}
     \caption{Grafico contenente il valore dello schedule variance per periodo}
 \end{figure} 
+
+\newpage
+
+\paragraph{MPR-6: Requisiti obbligatori soddisfatti (PROS)}\label{_SV}
+\begin{figure}[!htb]
+    \centering
+    \begin{center}
+        \rowcolors{2}{white}{blue!20}
+        \begin{longtable}{|c|c|c|c|c|}
+            \hline
+            \rowcolor{lighter-grayer}
+            \textbf {Tipo Requisiti} & \textbf{Requisiti Obbligatori Individuati} & \textbf{Soddisfatti} & \textbf{Percentuale} & \textbf{Esito} \\
+            \hline
+            \endfirsthead
+
+            \hline
+           Funzionali & 37 & 23 & 62 \%  & non accettabile                \\
+           Qualità & 4 & 4 & 100 \% & accettabile                         \\
+           Vincolo & 8 & 8 & 100 \% & accettabile                          \\
+            \hline
+            \rowcolor{white}
+            \caption{Risultati metrica PROS}
+        \end{longtable}
+    \end{center}
+\end{figure} 
+
+
+
+\paragraph{MPR-7: Requisiti opzionali non soddisfatti (RONS)}\label{_SV}
+\begin{figure}[!htb]
+    \centering
+    \begin{center}
+        \rowcolors{2}{white}{blue!20}
+        \begin{longtable}{|c|c|c|c|c|}
+            \hline
+            \rowcolor{lighter-grayer}
+            \textbf {Tipo Requisiti} & \textbf{Requisiti Opzionali Individuati} & \textbf{Non Soddisfatti} & \textbf{Percentuale} & \textbf{Esito} \\
+            \hline
+            \endfirsthead
+
+            \hline
+           Funzionali & 1 & 0 & 0 \%  &  accettabile                \\
+           Qualità & 0 &  &  &                        \\
+           Vincolo & 0 & & &                        \\
+            \hline
+            \rowcolor{white}
+            \caption{Risultati metrica RONS}
+        \end{longtable}
+    \end{center}
+\end{figure} 
+
+\newpage
+
+\paragraph{MPR-7: Requisiti desiderabili non soddisfatti (RDNS)}\label{_SV}
+\begin{figure}[!htb]
+    \centering
+    \begin{center}
+        \rowcolors{2}{white}{blue!20}
+        \begin{longtable}{|c|c|c|c|c|}
+            \hline
+            \rowcolor{lighter-grayer}
+            \textbf {Tipo Requisiti} & \textbf{Requisiti Desiderabili Individuati} & \textbf{Non Soddisfatti} & \textbf{Percentuale} & \textbf{Esito} \\
+            \hline
+            \endfirsthead
+
+            \hline
+           Funzionali & 5 & 3 & 60 \%  &  accettabile                \\
+           Qualità & 0 &  &  &                        \\
+           Vincolo & 4 &  2 &  40 \%&    accettabile                    \\
+            \hline
+            \rowcolor{white}
+            \caption{Risultati metrica RDNS}
+        \end{longtable}
+    \end{center}
+\end{figure} 
+
+
