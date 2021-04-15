@@ -50,9 +50,43 @@ The microservices created and their respective responsabilities are:
 \end{itemize}
 
 \subsection{Class diagrams}
+All services are projected with the same architectural pattern, each one has three layer:
+\begin{itemize}
+    \item the first contains one handler for each API defined in swagger;
+    \item the second is the core and contains model logic;
+    \item the third and last is the repository layer, which has the responability to interface the
+          service with third part services, databases and other services of the backend module.
+\end{itemize}
+In the following paragraphs, we will present a class diagram for each service.
+
 \subsubsection{Taxes microservice}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/class-diagrams/taxes.png}
+\end{figure}
+
+\subsubsection{Categories microservice}
+\begin{figure}[H]
+    \includegraphics[width=0.9\textwidth]{res/images/class-diagrams/categories.png}
+\end{figure}
+
+\subsubsection{Orders microservice}
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{res/images/class-diagrams/orders.png}
+\end{figure}
+
+\subsubsection{Carts microservice}
+\begin{figure}[H]
+    \includegraphics[width=0.9\textwidth]{res/images/class-diagrams/carts.png}
+\end{figure}
+
+\subsubsection{Addresses microservice}
+\begin{figure}[H]
+    \includegraphics[width=0.9\textwidth]{res/images/class-diagrams/addresses.png}
+\end{figure}
+
+\subsubsection{Users microservice}
+\begin{figure}[H]
+    \includegraphics[width=0.45\textwidth]{res/images/class-diagrams/users.png}
 \end{figure}
 
 \subsection{Sequence diagrams}
