@@ -4,7 +4,7 @@
 \label{_processoDiFornitura}
 \subsubsection{Scopo}
 Secondo lo standard ISO/IEC/IEEE 12207:1995 lo scopo del processo di fornitura è quello di consegnare all'acquirente un prodotto o servizio che soddisfa i requisiti richiesti. Il fornitore determina l'esistenza di un acquirente che necessita di un prodotto o servizio e definisce una strategia di fornitura di quanto richiesto, dopo averne analizzato i rischi e le criticità mediante la redazione di uno Studio di Fattibilità.
-Il fornitore deve inoltre definire un accordo contrattuale che sancisca i rapporti con il \glock{committente} ed in particolare l'accettazione da parte di quest'ultimo dei requisiti e delle tempistiche di consegna. Si potrà quindi dare avvio alla parte esecutiva stabilendo le procedure e risorse che andranno definite nel \dext{PianoDiProgetto\_2.0.0}.
+Il fornitore deve inoltre definire un accordo contrattuale che sancisca i rapporti con il \glock{committente} ed in particolare l'accettazione da parte di quest'ultimo dei requisiti e delle tempistiche di consegna. Si potrà quindi dare avvio alla parte esecutiva stabilendo le procedure e risorse che andranno definite nel \dext{PianoDiProgetto\_3.0.0}.
 
 Il processo di fornitura è composto dalle seguenti attività:
 \begin{itemize}
@@ -72,10 +72,10 @@ Questo processo definisce le seguenti attività:
   \item Progettazione dell'architettura;
   \item Codifica.
 \end{itemize}
-\subsubsection{Processo di Analisi dei Requisiti}
+\subsubsection{Analisi dei Requisiti}
 \label{_processoAnalisiDeiRequisiti}
 \paragraph{Scopo}
-Lo scopo del processo di analisi dei requisiti è quello di individuare tutte le necessità del proponente e convertirle in requisiti espliciti e impliciti, nonché diretti e indiretti. Questa attività è svolta dagli analisti che come risultato redigono un documento in cui all'interno vi sono indicazioni su come:
+Lo scopo dell'attività di analisi dei requisiti è quello di individuare tutte le necessità del proponente e convertirle in requisiti espliciti e impliciti, nonché diretti e indiretti. Questa attività è svolta dagli analisti che come risultato redigono un documento in cui all'interno vi sono indicazioni su come:
 \begin{itemize}
   \item definire lo scopo del prodotto che si andrà a realizzare;
   \item definire le funzionalità e i requisiti concordati con il proponente;
@@ -102,7 +102,7 @@ Ogni requisito è identificato obbligatoriamente da un codice identificativo uni
 \textbf{R[Importanza][Tipologia][Codice]}
 
 \begin{itemize}
-  \item 	\textbf{Importanza} : indica l'importanza di tale requisito attraverso i seguenti valori:
+  \item 	\textbf{Importanza}: indica l'importanza di tale requisito attraverso i seguenti valori:
         \begin{itemize}
           \item 1: requisito obbligatorio;
           \item 2: requisito desiderabile;
@@ -180,15 +180,15 @@ Dove:
 \end{itemize}
 
 
-\subsubsection{Metriche} \label{_metricheDoc}
+\paragraph{Metriche} \label{_metricheDoc}
 
-\paragraph{MPD-DOC1: Indice di Gulpease (GULP)}
+\subparagraph{MPD-DOC1: Indice di Gulpease (GULP)}
 Indice che individua il grado di leggibilità di un testo in lingua italiana mediante la formula:
 \begin{center}
     \(GULP=89+\frac{300(totale\; frasi)-10(totale\; lettere)}{totale\; parole}\)
 \end{center}
 
-\paragraph{MPD-DOC2: Correttezza ortografica (CORT)}
+\subparagraph{MPD-DOC2: Correttezza ortografica (CORT)}
 Questa metrica permette di misurare la correttezza lessicografica del documento mediante un numero intero ottenuto come:
 \begin{center}
     \textit{CORT=\# errori ortografici}
@@ -199,7 +199,7 @@ Questa metrica permette di misurare la correttezza lessicografica del documento 
 
 \subsubsection{Progettazione dell'architettura}
 \paragraph{Scopo}
-L'attività di progettazione si basa su quanto svolto nel processo di analisi dei requisiti per definire le caratteristiche del prodotto software in grado di soddisfare i requisiti imposti dal proponente.  Tale fase deve garantire la qualità del prodotto sviluppato ed organizzare, ottimizzando l'uso delle risorse, la fase implementativa sezionando il problema in unità di complessità ridotta al fine di facilitare il lavoro di programmazione.
+L'attività di progettazione si basa su quanto svolto nell'attività di analisi dei requisiti per definire le caratteristiche del prodotto software in grado di soddisfare i requisiti imposti dal proponente. Tale fase deve garantire la qualità del prodotto sviluppato ed organizzare, ottimizzando l'uso delle risorse, la fase implementativa sezionando il problema in unità di complessità ridotta al fine di facilitare il lavoro di programmazione.
 
 \paragraph{Descrizione}
 Le parti principali sono le seguenti:
@@ -230,10 +230,10 @@ Le parti principali sono le seguenti:
 
 \subsubsection{Codifica} \label{_codifica}
 \paragraph{Scopo}
-Questa sezione ha lo scopo di normare l'effettiva realizzazione del prodotto software.  In questo processo si concretizza attraverso la programmazione quanto è stato progettato.
+Questa sezione ha lo scopo di normare l'effettiva realizzazione del prodotto software. In questa attività si concretizza, attraverso la programmazione, quanto è stato progettato.
 
 \paragraph{Descrizione}
-La scrittura del codice dovrà perseguire gli obiettivi di qualità definiti nel \dext{PianoDiQualifica\_2.0.0}.
+La scrittura del codice dovrà perseguire gli obiettivi di qualità definiti nel \dext{PianoDiQualifica\_3.0.0}.
 
 \paragraph{Aspettative}
 Obiettivo dell'attività è la creazione del prodotto software conforme alle aspettative e richieste del proponente.  L'adozione di regole specifiche in questa fase è fondamentale per perseguire gli obiettivi di qualità e poter agevolare le successive fasi di manutenzione.
@@ -282,12 +282,12 @@ Il suo calcolo è banale, e consiste nel conteggio degli operatori logici.
 Indice che misura la lunghezza di una singola riga di codice. Serve a garantire la leggibilità di esso anche in schermi
 con dimensioni e risoluzione minori.\\
 Si ottiene contando i caratteri di ogni singola riga, ci si assicura quindi che il valore ottenuto per ognuna stia sotto il valore
-definito nel \dext{PianoDiQualifica\_2.0.0}.
+definito nel \dext{PianoDiQualifica\_3.0.0}.
 
 \subparagraph{MPD-S4: Code coverage (CODCO)}
 Con questo indice si misura la percentuale di righe di codice coperte dai test automatici.\\
 È necessario cercare di avere la massima copertura possibile per ogni modulo, in quanto codice non testato
-può provocare comportamenti indesiderati e/o imprevisti dell'artefatto. La definizione della soglia minima viene rimandata al \dext{PianoDiQualifica\_2.0.0}.
+può provocare comportamenti indesiderati e/o imprevisti dell'artefatto. La definizione della soglia minima viene rimandata al \dext{PianoDiQualifica\_3.0.0}.
 
 \subparagraph{MPD-S6: Profondità strutturale dell'interfaccia (PSI)}
 Valore corrispondente alla profondità strutturale dell'interfaccia utente che valuta il numero di passaggi da compiere per raggiungere la funzionalità desiderata.
