@@ -21,3 +21,13 @@ The deployment system must be equipped with the following softwares/libraries, t
     \item Create a new serverless app using the command \textit{serverless}
     \item Start the deploy of EmporioLambda using the command \textit{serverless deploy}
 \end{itemize}
+
+\subsection{Testing}
+
+\subsubsection{Unit tests}
+For this purpose, Jest framework has been adopted by the working team. To run this type of dynamic tests
+you can launch the command \textit{npm run test}.
+
+\subsubsection{Static tests}
+The code is costantly controlled by a linter (EsLint). You should enable it in your IDE, the configuration file is
+located in each repository, the name is \textit{.eslintrc}
