@@ -39,7 +39,7 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         %requisiti ivan
         %
         %R1F1
-        \req{1}{F} & Il cliente deve poter visualizzare l'homepage & \refUserCase{UC1} \row
+        \req{1}{F} & Il cliente deve poter visualizzare l'homepage & \refUserCase{Capitolato} \row
         
         %R1F1.1
         \sreq{1}{F} & Il cliente deve visualizzare i prodotti messi in evidenza & \refUserCase{UC1} \row
@@ -91,28 +91,22 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \req{1}{F} & Il cliente deve poter applicare dei filtri alla PLP & \refUserCase{UC5} \row
         
         %R1F7.1
-        \sreq{1}{F} & Il cliente deve poter impostare un prezzo massimo & \refUserCase{UC5.1} \row
+        \sreq{1}{F} & Il cliente deve poter impostare un prezzo massimo & \refUserCase{UC5} \row
         
         %R1F7.2
-        \sreq{1}{F} & Il cliente deve poter impostare un prezzo minimo & \refUserCase{UC5.1} \row
+        \sreq{1}{F} & Il cliente deve poter impostare un prezzo minimo & \refUserCase{UC5} \row
         
         %R1F7.3
-        \sreq{1}{F} & Il cliente deve poter impostare un filtro su una categoria & \refUserCase{UC5.2} \row
-        
-        %R1F7.4
         \sreq{1}{F} & Il cliente deve poter rimuovere tutti i filtri applicati & \refUserCase{UC5} \row
         
-        %R2F7.5
+        %R2F7.4
         \sreq{2}{F} & Il cliente deve poter modificare un filtro già applicato & \refUserCase{UC5} \row
         
-        %R2F7.6
+        %R2F7.5
         \sreq{2}{F} & Il cliente deve visualizzare un messaggio se non ci sono prodotti corrispondenti ai filtri applicati & \refUserCase{UC5} \row
         
-        %R3F7.7
+        %R3F7.6
         \sreq{3}{F} & Il cliente deve poter rimuovere un singolo filtro già applicato & \refUserCase{UC5} \row
-        
-        %R3F7.8
-        \sreq{3}{F} & Il cliente deve poter impostare un filtro con una lista di categorie & \refUserCase{UC5.2} \row
         
         %R1F8
         \req{1}{F} & Il cliente deve poter aprire i dettagli di un prodotto (PDP) & \refUserCase{UC7} \row
@@ -271,7 +265,7 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \sreq{1}{F} & Il sistema deve confermare il cambio di password avvenuto con successo &\refUserCase{UC13}\row       
         
         %R1F18
-        \req{1}{F} & Il cliente deve poter gestire il suo account & \refUserCase{UC14}\row
+        \req{1}{F} & Il cliente deve poter gestire i suoi indirizzi & \refUserCase{UC14}\row
         
         %R1F18.1
         \sreq{1}{F} & Il cliente deve poter inserire un nuovo indirizzo & \refUserCase{UC14.1}\row
@@ -282,47 +276,11 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         %R1F18.3
         \sreq{1}{F} & Il cliente deve poter eliminare un indirizzo scelto & \refUserCase{UC14.2}\row
         
-        %R2F18.4
-        \sreq{2}{F} & Il cliente deve poter richiedere la cancellazione del suo account & \refUserCase{UC14.3}\row
-        
-        %R2F18.5
-        \sreq{2}{F} & Il sistema deve fare il display con la conferma dell'apertura di un ticket per l'assistenza & \refUserCase{UC14.3}\row
-        
-        %R1F18.6
-        \sreq{1}{F} &Il cliente deve poter modificare l'email del suo account & \refUserCase{UC14.4}\row
-        
-        %R1F18.7
-        \sreq{1}{F} & Il sistema deve fare il display dell'errore se le email inserite non sono corrette & \refUserCase{UC14.4}\row
-        
-        %R1F18.8
-        \sreq{1}{F} & Il sistema deve confermare il successo nel cambio dell'email & \refUserCase{UC14.4}\row
-        
-        %R1F18.9
-        \sreq{1}{F} & Il cliente deve poter modificare la password del suo account & \refUserCase{UC14.5}\row
-        
-        %R1F18.10
-        \sreq{1}{F} & Il sistema deve fare il display dell'errore se le password inserite non sono corrette & \refUserCase{UC14.5}\row
-        
-        %R1F18.11
-        \sreq{1}{F} & Il sistema deve confermare il successo nel cambio della password & \refUserCase{UC14.5}\row        
-        
         %R1F19
-        \req{1}{F} & Il cliente deve poter gestire i propri ordini & \refUserCase{UC15, UC15.5}\row
-        
+        \req{1}{F} & Il cliente deve poter visualizzare i propri ordini & \refUserCase{UC15, UC15.1}\row
+    
         %R1F19.1
-        \sreq{1}{F} & Il cliente deve poter compilare un form contenente il numero del relativo ordine per contattare il venditore in caso di reso, annullamento o problemi & \refUserCase{UC15.1, UC15.2, UC15.3} \row
-        
-        %R1F19.2
-        \sreq{1}{F} & Il cliente deve poter annullare un ordine & \refUserCase{UC15.1}\row
-        
-        %R1F19.3
-        \sreq{1}{F} & Il cliente deve poter segnalare dei problemi nell'ordine & \refUserCase{UC15.2}\row
-        
-        %R1F19.4
-        \sreq{1}{F} & Il cliente deve poter richiedere il reso dell'ordine & \refUserCase{UC15.3}\row
-        
-        %R1F19.5
-        \sreq{1}{F} & Il cliente deve poter visualizzare il riepilogo di un ordine & \refUserCase{UC15.4}\row       
+        \sreq{1}{F} & Il cliente deve poter visualizzare il riepilogo di un ordine & \refUserCase{UC15.2}\row       
         
         %R1F20
         \req{1}{F} & Il cliente autenticato deve poter fare il logout & \refUserCase{UC16}\row
@@ -334,86 +292,140 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \req{1}{F} & Il cliente deve poter contattare il venditore attraverso un form & \refUserCase{UC17} \row
 
         %R1F22
-        \req{1}{F} & Il venditore deve poter visualizzare e modificare la lista degli ordini effettuati dai clienti & \refUserCase{UC19, UC19.5} \row
+        \req{1}{F} & Il venditore deve poter visualizzare la lista degli ordini effettuati dai clienti & \refUserCase{UC24} \row
         
         %R1F22.1
-        \sreq{1}{F} & Il venditore deve poter cercare un ordine presente nel sistema & \refUserCase{UC19.4} \row
-        
-        %R1F22.2
-        \sreq{1}{F} & Il venditore deve poter modificare lo stato di un ordine  & \refUserCase{UC19.1} \row
-        
-        %R1F22.3
-        \sreq{1}{F} & Il venditore deve poter stampare la bolla per un ordine  & \refUserCase{UC19.2} \row
-        
-        %R1F22.4
-        \sreq{1}{F} & Il venditore deve poter visualizzare i dettagli di un determinato ordine  & \refUserCase{UC19.3} \row
+        \sreq{1}{F} & Il venditore deve poter visualizzare i dettagli di un determinato ordine  & \refUserCase{UC24.2} \row
         
         %R1F23
-        \req{1}{F} & Il venditore deve poter visualizzare la lista dei clienti del sito & \refUserCase{UC20} \row
-        
-        %R2F23.1
-        \sreq{2}{F} & Il venditore deve poter cercare un cliente presente nel sistema tramite il suo indirizzo email & \refUserCase{UC21} \row
-        
-        %R1F23.2
-        \sreq{1}{F} & Il venditore deve potere contattare il cliente tramite un form  & \refUserCase{UC18} \row
+        \req{1}{F} & Il venditore deve poter visualizzare la lista dei clienti del sito & \refUserCase{UC25} \row
         
         %R1F24
-        \req{1}{F} & Il venditore deve poter gestire le aliquote IVA per la tassazione dei prodotti & \refUserCase{UC22} \row
+        \req{1}{F} & Il venditore deve poter gestire le aliquote IVA per la tassazione dei prodotti & \refUserCase{UC27} \row
         
         %R1F24.1
-        \sreq{1}{F} & Il venditore deve poter visualizzare le aliquote IVA già presenti nel sistema & \refUserCase{UC22} \row
+        \sreq{1}{F} & Il venditore deve poter visualizzare le aliquote IVA già presenti nel sistema & \refUserCase{UC27} \row
         
         %R1F24.2
-        \sreq{1}{F} & Il venditore deve poter aggiungere un'aliquota IVA impostandone la percentuale e una breve descrizione & \refUserCase{UC22.1} \row
+        \sreq{1}{F} & Il venditore deve poter aggiungere un'aliquota IVA impostandone la percentuale e una breve descrizione & \refUserCase{UC27.1} \row
         
         %R1F24.3
-        \sreq{1}{F} & Il venditore deve poter modificare percentuale e descrizione delle aliquote IVA già presenti nel sistema & \refUserCase{UC22.2} \row
+        \sreq{1}{F} & Il venditore deve poter modificare percentuale e descrizione delle aliquote IVA già presenti nel sistema & \refUserCase{UC27.2} \row
         
         %R1F24.4
-        \sreq{1}{F} & Il venditore deve poter eliminare un'aliquota IVA presente nel sistema & \refUserCase{UC22.3} \row
+        \sreq{1}{F} & Il venditore deve poter eliminare un'aliquota IVA presente nel sistema & \refUserCase{UC27.3} \row
         
         %R1F25
-        \req{1}{F} & Il venditore deve poter gestire i prodotti del sistema & \refUserCase{UC23, UC23.6} \row
-        
-        %R2F25.1
-        \sreq{2}{F} & Il venditore deve poter cercare un prodotto presente nel sistema & \refUserCase{UC23.5} \row
-        
-        %R2F25.2
-        \sreq{2}{F} & Il venditore deve poter filtrare la lista di prodotti del negozio & \refUserCase{UC23.4}  \row
-        
-        %R1F25.3
-        \sreq{1}{F} & Il venditore deve poter aggiungere un prodotto al sistema & \refUserCase{UC23.1}  \row
-        
-        %R1F25.4
-        \sreq{1}{F} & Il venditore deve compilare tutti i campi obbligatori del form per aggiungere un prodotto al negozio & \refUserCase{UC23.1}  \row
-        
-        %R1F25.5
-        \sreq{1}{F} & Il venditore deve poter modificare un prodotto presente nel sistema, aggiornando i campi già presenti e/o inserendone di nuovi & \refUserCase{UC23.2}  \row
-        
-        %R1F25.6
-        \sreq{1}{F} & Il venditore deve poter eliminare un prodotto presente nel sistema & \refUserCase{UC23.3}  \row
-        
-        %R1F25.7
-        \sreq{1}{F} & Il venditore deve poter selezionare i prodotti da mostrare in HomePage al cliente & Capitolato \row        
+        \req{1}{F} & Il venditore deve visualizzare i prodotti del sistema & \refUserCase{UC28, UC28.1} \row
         
         %R1F26
-        \req{1}{F} & Il venditore deve poter gestire le categorie di prodotti & \refUserCase{UC24}  \row
+        \req{1}{F} & Il venditore deve poter gestire le categorie di prodotti & \refUserCase{UC29}  \row
         
         %R1F26.1
-        \sreq{1}{F} & Il venditore deve poter aggiungere una categoria di prodotti impostandone il nome & \refUserCase{UC24.1} \row
+        \sreq{1}{F} & Il venditore deve poter aggiungere una categoria di prodotti impostandone il nome & \refUserCase{UC29.1} \row
         
         %R1F26.2
-        \sreq{1}{F} & Il venditore deve poter rimuovere una categoria di prodotti & \refUserCase{UC24.3} \row
+        \sreq{1}{F} & Il venditore deve poter rimuovere una categoria di prodotti & \refUserCase{UC29.3} \row
         
         %R1F26.3
-        \sreq{1}{F} & Il venditore deve poter modificare il nome di una categoria di prodotti & \refUserCase{UC24.2} \row  
+        \sreq{1}{F} & Il venditore deve poter modificare il nome di una categoria di prodotti & \refUserCase{UC29.2} \row  
         
         %R1F27
-        \req{1}{F} & Il venditore deve poter effettuare il login & \refUserCase{UC26} \row  
+        \req{1}{F} & Il venditore deve poter effettuare il login & \refUserCase{UC31} \row  
         
         %R1F28
-        \req{1}{F} & Il venditore deve poter effettuare il logout & \refUserCase{UC25} \row
+        \req{1}{F} & Il venditore deve poter effettuare il logout & \refUserCase{UC30} \row
         
+        %R2F29
+        \req{2}{F} & Il cliente deve poter richiedere la cancellazione del suo account & \refUserCase{UC19}\row
+        
+        %R2F29.1
+        \sreq{2}{F} & Il sistema deve fare il display con la conferma dell'apertura di un ticket per l'assistenza & \refUserCase{UC29}\row
+         
+        %R1F30
+        \req{1}{F} &Il cliente deve poter modificare le proprie credenziali & \refUserCase{UC18}\row
+
+        %R1F30.1
+        \sreq{1}{F} &Il cliente deve poter modificare l'email del suo account & \refUserCase{UC18.1}\row
+         
+        %R1F30.2
+        \sreq{1}{F} & Il sistema deve fare il display dell'errore se le email inserite non sono corrette & \refUserCase{UC18.1}\row
+         
+        %R1F30.3
+        \sreq{1}{F} & Il sistema deve confermare il successo nel cambio dell'email & \refUserCase{UC18.1}\row
+         
+        %R1F30.4
+        \sreq{1}{F} & Il cliente deve poter modificare la password del suo account & \refUserCase{UC18.2}\row
+         
+        %R1F30.5
+        \sreq{1}{F} & Il sistema deve fare il display dell'errore se le password inserite non sono corrette & \refUserCase{UC18.2}\row
+         
+        %R1F30.6
+        \sreq{1}{F} & Il sistema deve confermare il successo nel cambio della password & \refUserCase{UC18.2}\row        
+        
+        %R1F31
+        \req{1}{F} & Il cliente deve poter annullare un ordine & \refUserCase{UC20}\row
+        
+        %R1F31.1
+        \sreq{1}{F} & Il cliente deve poter compilare il form per contattare venditore & \refUserCase{UC17}\row
+        
+        %R1F32
+        \req{1}{F} & Il cliente deve poter segnalare dei problemi nell'ordine (assistenza) & \refUserCase{UC21}\row
+        
+        %R1F32.1
+        \sreq{1}{F} & Il cliente deve poter compilare il form per contattare venditore & \refUserCase{UC17}\row
+        
+        %R1F33
+        \req{1}{F} & Il cliente deve poter richiedere il reso dell'ordine & \refUserCase{UC22}\row
+        
+        %R1F33.1
+        \sreq{1}{F} & Il cliente deve poter compilare il form per contattare venditore & \refUserCase{UC17}\row
+        
+        %R1F34
+        \req{1}{F} & Il venditore deve poter cercare un ordine presente nel sistema & \refUserCase{UC37} \row
+        
+        %R1F34.1
+        \sreq{1}{F} & Il venditore deve visualizzare un messaggio se id& \refUserCase{UC37}\row
+        
+        %R1F35
+        \req{1}{F} & Il venditore deve poter modificare lo stato di un ordine  & \refUserCase{UC38} \row
+        
+        %R1F36
+        \req{1}{F} & Il venditore deve poter stampare la bolla per un ordine  & \refUserCase{UC39} \row
+        
+        %R2F37
+        \req{2}{F} & Il venditore deve poter cercare un cliente presente nel sistema tramite il suo indirizzo email & \refUserCase{UC26} \row
+        
+        %R2F37.1
+        \sreq{2}{F} & Il venditore deve visualizzare un messagio se non viene trovato nessun cliente & \refUserCase{UC26}  \row
+
+        %R1F38
+        \req{1}{F} & Il venditore deve potere contattare il cliente tramite un form  & \refUserCase{UC23} \row
+        
+        %R2F39
+        \req{2}{F} & Il venditore deve poter cercare un prodotto presente nel sistema & \refUserCase{UC35} \row
+    
+        %R2F39.1
+        \sreq{2}{F} & Il venditore deve poter visualizzare un messagio se non viene trovato nessun prodotto & \refUserCase{UC35}  \row
+        
+        %R2F40
+        \req{2}{F} & Il venditore deve poter filtrare la lista di prodotti del negozio & \refUserCase{UC36}  \row
+
+        %R2F40.1
+        \sreq{2}{F} & Il venditore deve poter visualizzare un messagio se non viene trovato nessun prodotto & \refUserCase{UC36}  \row
+         
+        %R1F41
+        \req{1}{F} & Il venditore deve poter aggiungere un prodotto al sistema & \refUserCase{UC32}  \row
+         
+        %R1F41.1
+        \sreq{1}{F} & Il venditore deve compilare tutti i campi obbligatori del form per aggiungere un prodotto al negozio & \refUserCase{UC32}  \row
+         
+        %R1F42
+        \req{1}{F} & Il venditore deve poter modificare un prodotto presente nel sistema, aggiornando i campi già presenti e/o inserendone di nuovi & \refUserCase{UC33}  \row
+         
+        %R1F43
+        \req{1}{F} & Il venditore deve poter eliminare un prodotto presente nel sistema & \refUserCase{UC34}  \row
+         
         \rowcolor{white}
         \caption{Requisiti funzionali con rispettiva descrizione e fonte}
     \end{longtable}
@@ -516,7 +528,7 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         
         %R1V13
         \req{1}{V} & RedBabel deve essere menzionato nel README delle repositories del progetto & Capitolato \row
-
+        
         \rowcolor{white}
         \caption{Requisiti di vincolo con rispettiva descrizione e fonte}
     \end{longtable}
