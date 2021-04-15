@@ -59,56 +59,89 @@ All services are projected with the same architectural pattern, each one has thr
 \end{itemize}
 In the following paragraphs, we will present a class diagram for each service.
 
-\subsubsection{Taxes microservice}
+\subsubsection{Taxes service}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/class-diagrams/taxes.png}
 \end{figure}
 
-\subsubsection{Categories microservice}
+\subsubsection{Categories service}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/class-diagrams/categories.png}
 \end{figure}
 
-\subsubsection{Orders microservice}
+\subsubsection{Orders service}
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{res/images/class-diagrams/orders.png}
 \end{figure}
 
-\subsubsection{Carts microservice}
+\subsubsection{Carts service}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/class-diagrams/carts.png}
 \end{figure}
 
-\subsubsection{Addresses microservice}
+\subsubsection{Addresses service}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/class-diagrams/addresses.png}
 \end{figure}
 
-\subsubsection{Users microservice}
+\subsubsection{Users service}
 \begin{figure}[H]
     \includegraphics[width=0.45\textwidth]{res/images/class-diagrams/users.png}
 \end{figure}
 
 \subsection{Sequence diagrams}
 In this section we'll provide sequence diagrams for explaining how microservices communicates between each others
-when certains API's are called from the fronend service.
+when API's are called from the fronend service.
 
-\subsubsection{Checkout}
+\subsubsection{Taxes service}
 \begin{figure}[H]
-    \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/checkout.jpg}
+    \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/taxes/createTax.png}
 \end{figure}
 
-\subsubsection{Carts}
 \begin{figure}[H]
-    \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/carts.jpg}
+    \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/taxes/getTax.png}
 \end{figure}
 
-\subsubsection{Products}
 \begin{figure}[H]
-    \includegraphics[width=0.7\textwidth]{res/images/sequence-diagrams/products.jpg}
+    \includegraphics[width=0.8\textwidth]{res/images/sequence-diagrams/taxes/getTaxes.png}
 \end{figure}
 
-\subsubsection{Users}
 \begin{figure}[H]
-    \includegraphics[width=0.7\textwidth]{res/images/sequence-diagrams/users.jpg}
+    \includegraphics[width=0.8\textwidth]{res/images/sequence-diagrams/taxes/updateTax.png}
 \end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/taxes/deleteTax.png}
+\end{figure}
+
+\subsubsection{Categories service}
+
+
+\subsubsection{Orders service}
+
+
+\subsubsection{Carts service}
+
+
+\subsubsection{Addresses service}
+
+\begin{figure}[H]
+    \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/addresses/getAddresses.png}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/addresses/insertAddress.png}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/addresses/removeAddress.png}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/addresses/updateAddress.png}
+\end{figure}
+
+
+
+\subsubsection{Users service}
+
