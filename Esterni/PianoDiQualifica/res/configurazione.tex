@@ -1,2 +1,41 @@
 \input{\pathToTemplate/res/configurazione}
 % Aggiungere o modificare di seguito eventuali configuraioni valide solo per questo documento
+
+%contatore dei requisiti
+\newcounter{CR} % Contatore Requisiti 
+\setcounter{CR}{0}
+\newcounter{CSR} % Contatore Sotto-Requisiti
+\setcounter{CSR}{0}
+\newcommand{\stepCR}[0]{\stepcounter{CR}\setcounter{CSR}{0}} % incrementa il contatore CR
+\newcommand{\valueCR}[0]{\arabic{CR}} % ritorna il valore del contatore CR
+\newcommand{\stepsubCR}{\stepcounter{CSR}} % incrementa il contatore CSR
+\newcommand{\valuesubCR}[0]{\arabic{CR}.\arabic{CSR}} % ritorna il valore del contatore CSR
+\newcommand{\resetCR}{\setcounter{CR}{0}\setcounter{CSR}{0}}  % resetta il contatore CR e CSR
+
+% comandi per formattare il codice dei requisiti
+\newcommand{\creazioneCodiceRequisito}[3]{\textbf{R#1#2#3}}
+\newcommand{\creazioneCodiceSottoRequisito}[3]{\textcolor{black!75}{R#1#2#3}}
+
+%comando per creare i codici dei requisiti e una lable per poi riferirsi ad esso
+\makeatletter
+\newcommand{\creazioneCodiceRequisitoConLabel}[3]{%
+  \phantomsection
+  \creazioneCodiceRequisito{#1}{#2}{#3}\def\@currentlabel{\creazioneCodiceRequisito{#1}{#2}{#3}\label{Req#2#3}}
+}
+\makeatother
+
+% comando per creare i codici dei sottorequisiti e una lable per poi riferirsi ad esso
+\makeatletter
+\newcommand{\creazioneCodiceSottoRequisitoConLabel}[3]{%
+  \phantomsection
+  \creazioneCodiceSottoRequisito{#1}{#2}{#3}\def\@currentlabel{\creazioneCodiceSottoRequisito{#1}{#2}{#3}}\label{Req#2#3}%
+}
+\makeatother
+
+% comandi che generano automaticamente i codici dei requisiti e le relative lable
+% PARAMETRO 1: Importanza
+% PARAMETRO 2: Tipologia
+\newcommand{\req}[2]{\stepCR\creazioneCodiceRequisitoConLabel{#1}{#2}{\valueCR}}
+\newcommand{\sreq}[2]{\stepsubCR\creazioneCodiceSottoRequisitoConLabel{#1}{#2}{\valuesubCR}}
+
+\newcommand{\row}{\\ \hline}
