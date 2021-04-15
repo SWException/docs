@@ -142,7 +142,7 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \sreq{1}{F} & Il cliente deve poter selezionare la quantità da aggiungere & \refUserCase{UC8} \row
         
         %R1F9.2
-        \sreq{1}{F} & Il cliente deve visualizzare un messaggio se la quantità desiderata non è disponibile & \refUserCase{UC8} \row
+        \sreq{1}{F} & Il cliente deve visualizzare un messaggio se la quantità desiderata non è disponibile & \refUserCase{UC40} \row
         
         %R2F9.3
         \sreq{2}{F} & Il cliente deve poter aggiungere di default un solo prodotto se non specifica la quantità & \refUserCase{UC8} \row
@@ -217,7 +217,7 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \sreq{1}{F} & Il cliente deve poter selezionare il metodo di pagamento preferito & \refUserCase{UC10.3}\row
         
         %R1F14.8
-        \sreq{1}{F} & Il sistema deve avvisare il cliente che il pagamento non è stato completato & \refUserCase{UC10.3}\row
+        \sreq{1}{F} & Il sistema deve avvisare il cliente che il pagamento non è stato completato & \refUserCase{UC41}\row
         
         %R1F14.9
         \sreq{1}{F} & Il cliente deve poter inserire nuovamente gli estremi per il metodo di pagamento dopo l'errore & \refUserCase{UC10.3}\row
@@ -232,7 +232,7 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \sreq{1}{F} & Il sistema deve mostrare al cliente autenticato la HomePage & \refUserCase{UC11}\row
         
         %R1F15.2
-        \sreq{1}{F} & Il sistema deve fare il display nell'errore di autenticazione & \refUserCase{UC11}\row
+        \sreq{1}{F} & Il sistema deve fare il display nell'errore di autenticazione & \refUserCase{UC42, UC43}\row
         
         %R1F15.3
         \sreq{1}{F} & Il cliente deve poter inserire nuovamente le credenziali dopo l'errore & \refUserCase{UC11}\row
@@ -241,10 +241,10 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \req{1}{F} & Il cliente non autenticato deve potersi registrare & \refUserCase{UC12}\row
         
         %R1F16.1
-        \sreq{1}{F} & Il sistema deve visualizzare un messaggio d'errore se la mail inserita non è corretta &\refUserCase{UC12}\row
+        \sreq{1}{F} & Il sistema deve visualizzare un messaggio d'errore se la mail inserita non è corretta &\refUserCase{UC42}\row
         
         %R1F16.2
-        \sreq{1}{F} & Il sistema deve visualizzare un messaggio d'errore se la password non supera la lunghezza minima o se non corrisponde a quella inserita precedentemente &\refUserCase{UC12}\row
+        \sreq{1}{F} & Il sistema deve visualizzare un messaggio d'errore se la password non supera la lunghezza minima o se non corrisponde a quella inserita precedentemente &\refUserCase{UC43}\row
         
         %R1F16.3
         \sreq{1}{F} & Il cliente deve ricevere l'email di conferma per la creazione dell'account &\refUserCase{UC12}\row 
@@ -259,7 +259,7 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \sreq{1}{F} & Il cliente deve ricevere una mail con il link per reimpostare la password &\refUserCase{UC13}\row
         
         %R1F17.2
-        \sreq{1}{F} & Il sistema deve visualizzare un errore se l'inserimento della password non rispetta i parametri richiesti &\refUserCase{UC13}\row
+        \sreq{1}{F} & Il sistema deve visualizzare un errore se l'inserimento della password non rispetta i parametri richiesti &\refUserCase{UC44}\row
         
         %R1F17.3
         \sreq{1}{F} & Il sistema deve confermare il cambio di password avvenuto con successo &\refUserCase{UC13}\row       
@@ -315,6 +315,9 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         %R1F24.4
         \sreq{1}{F} & Il venditore deve poter eliminare un'aliquota IVA presente nel sistema & \refUserCase{UC27.3} \row
         
+        %R1F24.4
+        \sreq{1}{F} & Il venditore deve visualizzare il messaggio se alcuni prodotti hanno l'iva che sta andando ad eliminare & \refUserCase{UC46} \row
+        
         %R1F25
         \req{1}{F} & Il venditore deve visualizzare i prodotti del sistema & \refUserCase{UC28, UC28.1} \row
         
@@ -330,6 +333,15 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         %R1F26.3
         \sreq{1}{F} & Il venditore deve poter modificare il nome di una categoria di prodotti & \refUserCase{UC29.2} \row  
         
+        %R1F26.4
+        \sreq{1}{F} & Il venditore deve visualizzare un messaggio se rimozione fallita & \refUserCase{UC47} \row
+        
+        %R1F26.5
+        \sreq{1}{F} & Il venditore deve visualizzare un messaggio se inserimento fallito & \refUserCase{UC48} \row
+        
+        %R1F26.6
+        \sreq{1}{F} & Il venditore deve visualizzare messaggio se modifica fallita & \refUserCase{UC49} \row
+
         %R1F27
         \req{1}{F} & Il venditore deve poter effettuare il login & \refUserCase{UC31} \row  
         
@@ -349,7 +361,7 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \sreq{1}{F} &Il cliente deve poter modificare l'email del suo account & \refUserCase{UC18.1}\row
          
         %R1F30.2
-        \sreq{1}{F} & Il sistema deve fare il display dell'errore se le email inserite non sono corrette & \refUserCase{UC18.1}\row
+        \sreq{1}{F} & Il sistema deve fare il display dell'errore se le email inserite non sono corrette & \refUserCase{UC42}\row
          
         %R1F30.3
         \sreq{1}{F} & Il sistema deve confermare il successo nel cambio dell'email & \refUserCase{UC18.1}\row
@@ -358,7 +370,7 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \sreq{1}{F} & Il cliente deve poter modificare la password del suo account & \refUserCase{UC18.2}\row
          
         %R1F30.5
-        \sreq{1}{F} & Il sistema deve fare il display dell'errore se le password inserite non sono corrette & \refUserCase{UC18.2}\row
+        \sreq{1}{F} & Il sistema deve fare il display dell'errore se le password inserite non sono corrette & \refUserCase{UC43}\row
          
         %R1F30.6
         \sreq{1}{F} & Il sistema deve confermare il successo nel cambio della password & \refUserCase{UC18.2}\row        
@@ -385,7 +397,7 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \req{1}{F} & Il venditore deve poter cercare un ordine presente nel sistema & \refUserCase{UC37} \row
         
         %R1F34.1
-        \sreq{1}{F} & Il venditore deve visualizzare un messaggio se id& \refUserCase{UC37}\row
+        \sreq{1}{F} & Il venditore deve visualizzare un messaggio se id non trovato & \refUserCase{UC52}\row
         
         %R1F35
         \req{1}{F} & Il venditore deve poter modificare lo stato di un ordine  & \refUserCase{UC38} \row
@@ -397,7 +409,7 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \req{2}{F} & Il venditore deve poter cercare un cliente presente nel sistema tramite il suo indirizzo email & \refUserCase{UC26} \row
         
         %R2F37.1
-        \sreq{2}{F} & Il venditore deve visualizzare un messagio se non viene trovato nessun cliente & \refUserCase{UC26}  \row
+        \sreq{2}{F} & Il venditore deve visualizzare un messagio se non viene trovato nessun cliente & \refUserCase{UC45}  \row
 
         %R1F38
         \req{1}{F} & Il venditore deve potere contattare il cliente tramite un form  & \refUserCase{UC23} \row
@@ -406,13 +418,13 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         \req{2}{F} & Il venditore deve poter cercare un prodotto presente nel sistema & \refUserCase{UC35} \row
     
         %R2F39.1
-        \sreq{2}{F} & Il venditore deve poter visualizzare un messagio se non viene trovato nessun prodotto & \refUserCase{UC35}  \row
+        \sreq{2}{F} & Il venditore deve poter visualizzare un messagio se non viene trovato nessun prodotto & \refUserCase{UC51}  \row
         
         %R2F40
         \req{2}{F} & Il venditore deve poter filtrare la lista di prodotti del negozio & \refUserCase{UC36}  \row
 
         %R2F40.1
-        \sreq{2}{F} & Il venditore deve poter visualizzare un messagio se non viene trovato nessun prodotto & \refUserCase{UC36}  \row
+        \sreq{2}{F} & Il venditore deve poter visualizzare un messagio se non viene trovato nessun prodotto & \refUserCase{UC51}  \row
          
         %R1F41
         \req{1}{F} & Il venditore deve poter aggiungere un prodotto al sistema & \refUserCase{UC32}  \row
@@ -420,9 +432,21 @@ In seguito viene riportato, organizzato in forma tabellare, l'elenco dei requisi
         %R1F41.1
         \sreq{1}{F} & Il venditore deve compilare tutti i campi obbligatori del form per aggiungere un prodotto al negozio & \refUserCase{UC32}  \row
          
+        %R1F41.2
+        \sreq{1}{F} & Il venditore deve visualizzare un messaggio d'errore se manca titolo & \refUserCase{UC50}  \row
+        
+        %R1F41.3
+        \sreq{1}{F} & Il venditore deve visualizzare un messaggio d'errore se quantità non valida & \refUserCase{UC53}  \row
+         
         %R1F42
         \req{1}{F} & Il venditore deve poter modificare un prodotto presente nel sistema, aggiornando i campi già presenti e/o inserendone di nuovi & \refUserCase{UC33}  \row
          
+        %R1F42.1
+        \sreq{1}{F} & Il venditore deve visualizzare un messaggio d'errore se manca titolo & \refUserCase{UC50}  \row
+        
+        %R1F42.2
+        \sreq{1}{F} & Il venditore deve visualizzare un messaggio d'errore se quantità non valida & \refUserCase{UC53}  \row
+
         %R1F43
         \req{1}{F} & Il venditore deve poter eliminare un prodotto presente nel sistema & \refUserCase{UC34}  \row
          

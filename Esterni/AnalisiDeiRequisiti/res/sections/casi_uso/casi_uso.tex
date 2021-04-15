@@ -237,7 +237,7 @@
     \item \textbf{Postcondizione:} il cliente ha eseguito operazioni gestionali sul carrello;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
-              \item il cliente visualizza tutti gli articoli nel carrello (\hyperref[UC9.1]{UC9.1});
+              \item il cliente visualizza tutti gli articoli del carrello (\hyperref[UC9.1]{UC9.1});
               \item il cliente può variare la quantità di ogni articolo (\hyperref[UC9.2]{UC9.2});
               \item il cliente può rimuovere un articolo dal carrello (\hyperref[UC9.3]{UC9.3}).
           \end{enumerate}
@@ -259,18 +259,18 @@
     \item \textbf{Precondizione:} il cliente si trova su una qualunque pagina del sito web;
     \item \textbf{Input:} il cliente preme su un pulsante dedicato all'accesso al carrello;
     \item \textbf{Postcondizione:} il cliente visualizza un resoconto di tutti i prodotti inseriti nel carrello durante la sessione di utilizzo corrente (se non autenticato), altrimenti il carrello mantiene la consistenza su ogni dispositivo fino al checkout.
-    \item \textbf{Scenario principale:}
-          \begin{enumerate}
-              \item il cliente visualizza ogni singolo prodotto con le sue acaratteristiche ;
-              \item il cliente visualizza il totale dell'ordine con tasse incluse e senza costi di spedizione;
-              \item il cliente visualizza il totale delle tasse.
-          \end{enumerate}
+    \item \textbf{Scenario principale:} il cliente visualizza la lista dei prodotti con le loro caratteristiche.
 \end{itemize}
 
 %9.1.1
 \stepsubsubUserCase
 \paragraph{\valuesubsubUserCase - Visualizzazione singolo articolo carrello}
 \labelsubsubUserCase
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/UC/\valuesubsubUC.jpg}
+    \caption{Diagramma \valuesubsubUC}
+\end{figure}
 \begin{itemize}
     \item \textbf{Attore primario:} cliente generico;
     \item \textbf{Descrizione:} scenario per la visualizzazione singolo articolo nel carrello;
@@ -332,7 +332,7 @@
     \caption{Diagramma \valueUC}
 \end{figure}
 \begin{itemize}
-    \item \textbf{Attore primario:} cliente generico;
+    \item \textbf{Attore primario:} cliente autenticato;
     \item \textbf{Descrizione:} caso d'uso per l'acquisto dei prodotti inseriti nel carrello;
     \item \textbf{Precondizione:} il cliente si trova nel carrello che contiene almeno un articolo;
     \item \textbf{Input:} il cliente preme sul pulsante per avviare il checkout;
@@ -362,17 +362,17 @@
     \caption{Diagramma \valuesubUC}
 \end{figure}
 \begin{itemize}
-    \item \textbf{Attore primario:} cliente generico;
+    \item \textbf{Attore primario:} cliente autenticato;
     \item \textbf{Descrizione:} scenario per l'inserimento dell'indirizzo di fatturazione in fase di checkout;
     \item \textbf{Precondizione:} il cliente ha avviato il processo di checkout;
-    \item \textbf{Input:} il cliente inserisce i dati tramite l'apposito form oppure sceglie tra quelli personali già presenti (solo se autenticato);
+    \item \textbf{Input:} il cliente inserisce i dati tramite l'apposito form oppure sceglie tra quelli personali già presenti;
     \item \textbf{Postcondizione:} il cliente procede con la fase successiva del checkout;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
               \item il cliente ha 2 modi per inserire l'informazione:
                     \begin{itemize}
                         \item compilare il relativo form: nome, cognome, via/piazza, numero civico, codice avviamento postale, città, provincia, stato;
-                        \item scegliere tra gli indirizzi salvati (solo se autenticato).
+                        \item scegliere tra gli indirizzi salvati.
                     \end{itemize}
           \end{enumerate}
 \end{itemize}
@@ -400,17 +400,17 @@
     \caption{Diagramma \valuesubUC}
 \end{figure}
 \begin{itemize}
-    \item \textbf{Attore primario:} cliente generico;
+    \item \textbf{Attore primario:} cliente autenticato;
     \item \textbf{Descrizione:} scenario per l'inserimento dell'indirizzo di spedizione in fase di checkout;
     \item \textbf{Precondizione:} il cliente ha avviato il checkout;
-    \item \textbf{Input:} il cliente inserisce i dati tramite l'apposito form oppure sceglie tra quelli personali già presenti (solo se autenticato);
+    \item \textbf{Input:} il cliente inserisce i dati tramite l'apposito form oppure sceglie tra quelli personali già presenti;
     \item \textbf{Postcondizione:} il cliente procede con la fase successiva del checkout;
     \item \textbf{Scenario principale:}
           \begin{enumerate}
               \item il cliente ha 3 modi per inserire l'informazione:
                     \begin{itemize}
                         \item compilare il relativo form: nome, cognome, via/piazza, numero civico, codice avviamento postale, città, provincia, stato;
-                        \item scegliere tra gli indirizzi salvati (solo se autenticato);
+                        \item scegliere tra gli indirizzi salvati;
                         \item riutilizzare l'indirizzo di fatturazione precedentemente inserito.
                     \end{itemize}
           \end{enumerate}
@@ -421,7 +421,7 @@
 \subsubsection{\valuesubUserCase - Pagamento con servizio di terze parti}
 \labelsubUserCase
 \begin{itemize}
-    \item \textbf{Attore primario:} cliente generico;
+    \item \textbf{Attore primario:} cliente autenticato;
     \item \textbf{Attore secondario:} gestore dei pagamenti esterno;
     \item \textbf{Descrizione:} scenario per il pagamento del totale dell'ordine mediante un gestore di pagamenti esterno a EmporioLambda;
     \item \textbf{Precondizione:} sono stati eseguiti tutti i passi precedenti del checkout, ovvero sono stati applicati i costi della spedizione al totale;
@@ -1464,5 +1464,238 @@
           \begin{enumerate}
               \item il venditore seleziona un determinato ordine;
               \item il venditore stampa la bolla.
+          \end{enumerate}
+\end{itemize}
+
+%40
+\stepUserCase
+\subsection{\valueUserCase - Visualizzazione errore quantità disponibile}
+\labelUserCase
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente autenticato;
+    \item \textbf{Descrizione:} il cliente ha inserito una quantità non disponibile che deve essere notificata;
+    \item \textbf{Precondizione:} il cliente deve aver selezionato una quantità;
+    \item \textbf{Postcondizione:} il cliente visualizza messaggio d'errore per la quantità disponibile.
+    \item \textbf{Scenario principale:} il cliente ha selezionato 
+\end{itemize}
+
+%41
+\stepUserCase
+\subsection{\valueUserCase - Visualizzazione errore pagamento}
+\labelUserCase
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente autenticato;
+    \item \textbf{Descrizione:} il cliente vuole gestire i suoi indirizzi;
+    \item \textbf{Precondizione:} il cliente ha eseguito il login (\hyperref[UC11]{UC11}) e si trova sulla pagina per la gestione del profilo;
+    \item \textbf{Input:} il cliente ha cliccato sul pulsante per l'amministrazione dell'account;
+    \item \textbf{Postcondizione:} il cliente ha inserito o eliminato un indirizzo.
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il cliente può inserire un nuovo indirizzo (\hyperref[UC14.1]{UC14.1});
+              \item il cliente può eliminare un indirizzo presente (\hyperref[UC14.2]{UC14.2});
+          \end{enumerate}
+\end{itemize}
+
+%42
+\stepUserCase
+\subsection{\valueUserCase - Visualizzazione errore email}
+\labelUserCase
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente autenticato;
+    \item \textbf{Descrizione:} il cliente vuole gestire i suoi indirizzi;
+    \item \textbf{Precondizione:} il cliente ha eseguito il login (\hyperref[UC11]{UC11}) e si trova sulla pagina per la gestione del profilo;
+    \item \textbf{Input:} il cliente ha cliccato sul pulsante per l'amministrazione dell'account;
+    \item \textbf{Postcondizione:} il cliente ha inserito o eliminato un indirizzo.
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il cliente può inserire un nuovo indirizzo (\hyperref[UC14.1]{UC14.1});
+              \item il cliente può eliminare un indirizzo presente (\hyperref[UC14.2]{UC14.2});
+          \end{enumerate}
+\end{itemize}
+
+%43
+\stepUserCase
+\subsection{\valueUserCase - Visualizzazione errore password}
+\labelUserCase
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente autenticato;
+    \item \textbf{Descrizione:} il cliente vuole gestire i suoi indirizzi;
+    \item \textbf{Precondizione:} il cliente ha eseguito il login (\hyperref[UC11]{UC11}) e si trova sulla pagina per la gestione del profilo;
+    \item \textbf{Input:} il cliente ha cliccato sul pulsante per l'amministrazione dell'account;
+    \item \textbf{Postcondizione:} il cliente ha inserito o eliminato un indirizzo.
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il cliente può inserire un nuovo indirizzo (\hyperref[UC14.1]{UC14.1});
+              \item il cliente può eliminare un indirizzo presente (\hyperref[UC14.2]{UC14.2});
+          \end{enumerate}
+\end{itemize}
+
+%44
+\stepUserCase
+\subsection{\valueUserCase - Visualizzazione errore registrazione}
+\labelUserCase
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente autenticato;
+    \item \textbf{Descrizione:} il cliente vuole gestire i suoi indirizzi;
+    \item \textbf{Precondizione:} il cliente ha eseguito il login (\hyperref[UC11]{UC11}) e si trova sulla pagina per la gestione del profilo;
+    \item \textbf{Input:} il cliente ha cliccato sul pulsante per l'amministrazione dell'account;
+    \item \textbf{Postcondizione:} il cliente ha inserito o eliminato un indirizzo.
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il cliente può inserire un nuovo indirizzo (\hyperref[UC14.1]{UC14.1});
+              \item il cliente può eliminare un indirizzo presente (\hyperref[UC14.2]{UC14.2});
+          \end{enumerate}
+\end{itemize}
+
+%45
+\stepUserCase
+\subsection{\valueUserCase - Visualizzazione errore cambio password}
+\labelUserCase
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente autenticato;
+    \item \textbf{Descrizione:} il cliente vuole gestire i suoi indirizzi;
+    \item \textbf{Precondizione:} il cliente ha eseguito il login (\hyperref[UC11]{UC11}) e si trova sulla pagina per la gestione del profilo;
+    \item \textbf{Input:} il cliente ha cliccato sul pulsante per l'amministrazione dell'account;
+    \item \textbf{Postcondizione:} il cliente ha inserito o eliminato un indirizzo.
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il cliente può inserire un nuovo indirizzo (\hyperref[UC14.1]{UC14.1});
+              \item il cliente può eliminare un indirizzo presente (\hyperref[UC14.2]{UC14.2});
+          \end{enumerate}
+\end{itemize}
+
+%46
+\stepUserCase
+\subsection{\valueUserCase - Visualizzazione errore "nessun utente trovato"}
+\labelUserCase
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente autenticato;
+    \item \textbf{Descrizione:} il cliente vuole gestire i suoi indirizzi;
+    \item \textbf{Precondizione:} il cliente ha eseguito il login (\hyperref[UC11]{UC11}) e si trova sulla pagina per la gestione del profilo;
+    \item \textbf{Input:} il cliente ha cliccato sul pulsante per l'amministrazione dell'account;
+    \item \textbf{Postcondizione:} il cliente ha inserito o eliminato un indirizzo.
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il cliente può inserire un nuovo indirizzo (\hyperref[UC14.1]{UC14.1});
+              \item il cliente può eliminare un indirizzo presente (\hyperref[UC14.2]{UC14.2});
+          \end{enumerate}
+\end{itemize}
+
+%47
+\stepUserCase
+\subsection{\valueUserCase - Visualizzazione messaggio "alcuni prodotti con IVA" }
+\labelUserCase
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente autenticato;
+    \item \textbf{Descrizione:} il cliente vuole gestire i suoi indirizzi;
+    \item \textbf{Precondizione:} il cliente ha eseguito il login (\hyperref[UC11]{UC11}) e si trova sulla pagina per la gestione del profilo;
+    \item \textbf{Input:} il cliente ha cliccato sul pulsante per l'amministrazione dell'account;
+    \item \textbf{Postcondizione:} il cliente ha inserito o eliminato un indirizzo.
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il cliente può inserire un nuovo indirizzo (\hyperref[UC14.1]{UC14.1});
+              \item il cliente può eliminare un indirizzo presente (\hyperref[UC14.2]{UC14.2});
+          \end{enumerate}
+\end{itemize}
+
+%48
+\stepUserCase
+\subsection{\valueUserCase - Visualizzazione messaggio rimozione fallita}
+\labelUserCase
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente autenticato;
+    \item \textbf{Descrizione:} il cliente vuole gestire i suoi indirizzi;
+    \item \textbf{Precondizione:} il cliente ha eseguito il login (\hyperref[UC11]{UC11}) e si trova sulla pagina per la gestione del profilo;
+    \item \textbf{Input:} il cliente ha cliccato sul pulsante per l'amministrazione dell'account;
+    \item \textbf{Postcondizione:} il cliente ha inserito o eliminato un indirizzo.
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il cliente può inserire un nuovo indirizzo (\hyperref[UC14.1]{UC14.1});
+              \item il cliente può eliminare un indirizzo presente (\hyperref[UC14.2]{UC14.2});
+          \end{enumerate}
+\end{itemize}
+
+%49
+\stepUserCase
+\subsection{\valueUserCase - Visualizzazione messaggio inserimento fallita}
+\labelUserCase
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente autenticato;
+    \item \textbf{Descrizione:} il cliente vuole gestire i suoi indirizzi;
+    \item \textbf{Precondizione:} il cliente ha eseguito il login (\hyperref[UC11]{UC11}) e si trova sulla pagina per la gestione del profilo;
+    \item \textbf{Input:} il cliente ha cliccato sul pulsante per l'amministrazione dell'account;
+    \item \textbf{Postcondizione:} il cliente ha inserito o eliminato un indirizzo.
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il cliente può inserire un nuovo indirizzo (\hyperref[UC14.1]{UC14.1});
+              \item il cliente può eliminare un indirizzo presente (\hyperref[UC14.2]{UC14.2});
+          \end{enumerate}
+\end{itemize}
+
+%50
+\stepUserCase
+\subsection{\valueUserCase - Visualizzazione messaggio modifica fallita}
+\labelUserCase
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente autenticato;
+    \item \textbf{Descrizione:} il cliente vuole gestire i suoi indirizzi;
+    \item \textbf{Precondizione:} il cliente ha eseguito il login (\hyperref[UC11]{UC11}) e si trova sulla pagina per la gestione del profilo;
+    \item \textbf{Input:} il cliente ha cliccato sul pulsante per l'amministrazione dell'account;
+    \item \textbf{Postcondizione:} il cliente ha inserito o eliminato un indirizzo.
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il cliente può inserire un nuovo indirizzo (\hyperref[UC14.1]{UC14.1});
+              \item il cliente può eliminare un indirizzo presente (\hyperref[UC14.2]{UC14.2});
+          \end{enumerate}
+\end{itemize}
+
+%51
+\stepUserCase
+\subsection{\valueUserCase - Visualizzazione errore titolo mancante}
+\labelUserCase
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente autenticato;
+    \item \textbf{Descrizione:} il cliente vuole gestire i suoi indirizzi;
+    \item \textbf{Precondizione:} il cliente ha eseguito il login (\hyperref[UC11]{UC11}) e si trova sulla pagina per la gestione del profilo;
+    \item \textbf{Input:} il cliente ha cliccato sul pulsante per l'amministrazione dell'account;
+    \item \textbf{Postcondizione:} il cliente ha inserito o eliminato un indirizzo.
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il cliente può inserire un nuovo indirizzo (\hyperref[UC14.1]{UC14.1});
+              \item il cliente può eliminare un indirizzo presente (\hyperref[UC14.2]{UC14.2});
+          \end{enumerate}
+\end{itemize}
+
+%52
+\stepUserCase
+\subsection{\valueUserCase - Visualizzazione messaggio prodotto assente}
+\labelUserCase
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente autenticato;
+    \item \textbf{Descrizione:} il cliente vuole gestire i suoi indirizzi;
+    \item \textbf{Precondizione:} il cliente ha eseguito il login (\hyperref[UC11]{UC11}) e si trova sulla pagina per la gestione del profilo;
+    \item \textbf{Input:} il cliente ha cliccato sul pulsante per l'amministrazione dell'account;
+    \item \textbf{Postcondizione:} il cliente ha inserito o eliminato un indirizzo.
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il cliente può inserire un nuovo indirizzo (\hyperref[UC14.1]{UC14.1});
+              \item il cliente può eliminare un indirizzo presente (\hyperref[UC14.2]{UC14.2});
+          \end{enumerate}
+\end{itemize}
+
+%53
+\stepUserCase
+\subsection{\valueUserCase - Visualizzazione messaggio codice inesistente}
+\labelUserCase
+\begin{itemize}
+    \item \textbf{Attore primario:} cliente autenticato;
+    \item \textbf{Descrizione:} il cliente vuole gestire i suoi indirizzi;
+    \item \textbf{Precondizione:} il cliente ha eseguito il login (\hyperref[UC11]{UC11}) e si trova sulla pagina per la gestione del profilo;
+    \item \textbf{Input:} il cliente ha cliccato sul pulsante per l'amministrazione dell'account;
+    \item \textbf{Postcondizione:} il cliente ha inserito o eliminato un indirizzo.
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item il cliente può inserire un nuovo indirizzo (\hyperref[UC14.1]{UC14.1});
+              \item il cliente può eliminare un indirizzo presente (\hyperref[UC14.2]{UC14.2});
           \end{enumerate}
 \end{itemize}
