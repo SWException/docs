@@ -59,34 +59,48 @@ All services are projected with the same architectural pattern, each one has thr
 \end{itemize}
 In the following paragraphs, we will present a class diagram for each service.
 
+% ##### CLASS DIAGRAMS #####
+
 \subsubsection{Taxes service}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/class-diagrams/taxes.png}
+    \caption{Class UML for taxes service}
 \end{figure}
 
 \subsubsection{Categories service}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/class-diagrams/categories.png}
+    \caption{Class UML for categories service}
 \end{figure}
 
 \subsubsection{Orders service}
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{res/images/class-diagrams/orders.png}
+    \caption{Class UML for orders service}
 \end{figure}
 
 \subsubsection{Carts service}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/class-diagrams/carts.png}
+    \caption{Class UML for carts service}
 \end{figure}
 
 \subsubsection{Addresses service}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/class-diagrams/addresses.png}
+    \caption{Class UML for addresses service}
+\end{figure}
+
+\subsubsection{Products service}
+\begin{figure}[H]
+    \includegraphics[width=0.9\textwidth]{res/images/class-diagrams/products.png}
+    \caption{Class UML for products service}
 \end{figure}
 
 \subsubsection{Users service}
 \begin{figure}[H]
     \includegraphics[width=0.45\textwidth]{res/images/class-diagrams/users.png}
+    \caption{Class UML for users service}
 \end{figure}
 
 % #### SEQUENCE DIAGRAMS #######
@@ -97,119 +111,146 @@ In this section we'll provide sequence diagrams for explaining how microservices
 \subsubsection{Taxes service}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/taxes/createTax.png}
+    \caption{Sequence diagram for createTax API}
 \end{figure}
 
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/taxes/getTax.png}
+    \caption{Sequence diagram for getTax API}
 \end{figure}
 
 \begin{figure}[H]
     \includegraphics[width=0.8\textwidth]{res/images/sequence-diagrams/taxes/getTaxes.png}
+    \caption{Sequence diagram for getTaxes API}
 \end{figure}
 
 \begin{figure}[H]
     \includegraphics[width=0.8\textwidth]{res/images/sequence-diagrams/taxes/updateTax.png}
+    \caption{Sequence diagram for updateTax API}
 \end{figure}
 
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/taxes/deleteTax.png}
+    \caption{Sequence diagram for deleteTax API}
 \end{figure}
 
 \subsubsection{Categories service}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/categories/createCategory.png}
+    \caption{Sequence diagram for createCategory API}
 \end{figure}
 
 \begin{figure}[H]
     \includegraphics[width=0.8\textwidth]{res/images/sequence-diagrams/categories/getCategories.png}
+    \caption{Sequence diagram for getCategories API}
 \end{figure}
 
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/categories/removeCategory.png}
+    \caption{Sequence diagram for removeCategory API}
 \end{figure}
 
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/categories/updateCategory.png}
+    \caption{Sequence diagram for updateCategory API}
 \end{figure}
 
 \subsubsection{Orders service}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/orders/getOrderByID.png}
+    \caption{Sequence diagram for getOrderByID API}
 \end{figure}
 
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/orders/startCheckout.png}
+    \caption{Sequence diagram for startCheckout API}
 \end{figure}
 
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/orders/completeCheckout.png}
+    \caption{Sequence diagram for completeCheckout API}
 \end{figure}
 
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/orders/cancelCheckout.png}
+    \caption{Sequence diagram for cancelCheckout API}
 \end{figure}
 
 \subsubsection{Carts service}
 
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/carts/addToCart.png}
+    \caption{Sequence diagram for addToCart API}
 \end{figure}
 
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/carts/deleteCart.png}
+    \caption{Sequence diagram for deleteCart API}
 \end{figure}
 
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/carts/getCart.png}
+    \caption{Sequence diagram for getCart API}
 \end{figure}
 
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/carts/removeFromCart.png}
+    \caption{Sequence diagram for removeFromCart API}
 \end{figure}
 
 \subsubsection{Addresses service}
 
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/addresses/getAddresses.png}
+    \caption{Sequence diagram for getAddresses API}
 \end{figure}
 
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/addresses/insertAddress.png}
+    \caption{Sequence diagram for insertAddress API}
 \end{figure}
 
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/addresses/removeAddress.png}
+    \caption{Sequence diagram for removeAddress API}
 \end{figure}
 
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/addresses/updateAddress.png}
+    \caption{Sequence diagram for updateAddress API}
 \end{figure}
 
 
 \subsubsection{Products service}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/products/getPDP.png}
+    \caption{Sequence diagram for getPDP API}
 \end{figure}
 
 
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/products/getProducts.png}
+    \caption{Sequence diagram for getProducts API}
 \end{figure}
 
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/products/editProduct.png}
+    \caption{Sequence diagram for editProduct API}
 \end{figure}
 
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/products/createProduct.png}
+    \caption{Sequence diagram for createProduct API}
 \end{figure}
 
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/products/removeProduct.png}
+    \caption{Sequence diagram for removeProduct API}
 \end{figure}
 
 
 \subsubsection{Users service}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/users/checkCustomer.png}
+    \caption{Sequence diagram for checkCustomer API}
 \end{figure}
