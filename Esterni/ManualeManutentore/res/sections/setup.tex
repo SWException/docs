@@ -1,4 +1,4 @@
-\section{Setup}
+\section{Setup} \label{_setup}
 
 \subsection{Minimun Requirements}
 To deploy EmporioLambda you need to have a valid AWS account to obtain AIM credentials, to be included in the profile configuration of 
@@ -30,4 +30,7 @@ you can launch the command \textit{npm run test}.
 
 \subsubsection{Static tests}
 The code is constantly controlled by a linter (EsLint). You should enable it in your IDE, the configuration file is
-located in each repository, the name is \textit{.eslintrc}
+located in each repository, the name is \textit{.eslintrc}.
+
+\subsubsection{\glock{Github actions}}
+There exists a Github Actions workflow that automatically executes the above mentioned unit tests at each commit on the develop branch of the repository. The failure of the test suite is notified to the committer through e-mail.

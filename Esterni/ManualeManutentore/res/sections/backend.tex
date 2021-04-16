@@ -1,6 +1,6 @@
 \section{Backend}
 
-\subsection{Technologies and libraries}
+\subsection{Technologies and libraries}\label{_technologies}
 
 \subsubsection{NodeJs}
 Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user's web browser. Consequently, Node.js represents a "JavaScript everywhere" paradigm, unifying web-application development around a single programming language, rather than different languages for server-side and client-side scripts.
@@ -29,8 +29,8 @@ It is extremely configurable to support a wide variety of use cases. Most common
 Swagger is an Interface Description Language for describing RESTful APIs expressed using JSON. Swagger is used together with a set of open-source software tools to design, build, document, and use RESTful web services. Swagger includes automated documentation, code generation (into many programming languages), and test-case generation.
 
 
-\subsection{Architecture}
-We created a serverless and microservices oriented architecture. Each microservice is hosted in a different repository, with it's own persistence layer and CI rules.
+\subsection{Architecture}\label{_architecture}
+We created a serverless and microservices oriented architecture. Each microservice is hosted in a different repository, with its own persistence layer and CI rules.
 The microservices created and their respective responsabilities are:
 \begin{itemize}
     \item \textbf{products}: you can find the repo \href{https://github.com/SWException/products}{here}; it provides CRUD functionalities for products management,
@@ -49,7 +49,7 @@ The microservices created and their respective responsabilities are:
     \item \textbf{addresses}: you can find the repo \href{https://github.com/SWException/addresses}{here}; it provides CRUD functionalities to manage addresses information.
 \end{itemize}
 
-\subsection{Class diagrams}
+\subsection{Class diagrams}\label{_classDiagram}
 All services are projected with the same architectural pattern, each one has three layer:
 \begin{itemize}
     \item the first contains one handler for each API defined in swagger;
@@ -91,9 +91,8 @@ In the following paragraphs, we will present a class diagram for each service.
 
 % #### SEQUENCE DIAGRAMS #######
 
-\subsection{Sequence diagrams}
-In this section we'll provide sequence diagrams for explaining how microservices communicates between each others
-when API's are called from the frontend service.
+\subsection{Sequence diagrams} \label{_sequenceDiagram}
+In this section we'll provide sequence diagrams for explaining how microservices communicate between one each others when API's are called from the frontend service.
 
 \subsubsection{Taxes service}
 \begin{figure}[H]

@@ -1,6 +1,6 @@
 \section{Frontend}
 
-\subsection{Technologies and libraries}
+\subsection{Technologies and libraries} \label{_feTechnologies}
 
 \subsubsection{ReactJs}
 Reactjs is an open-source, front end, JavaScript library for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications. However, React is only concerned with state management and rendering that state to the DOM, so creating React applications usually requires the use of additional libraries for routing, as well as certain client-side functionality.
@@ -30,7 +30,7 @@ Stripe simplifies and helps make all phases of the purchase and treasury process
     \item \textbf{Used Version:} 8.137.0
 \end{itemize}
 
-\subsection{Architectural Overview}
+\subsection{Architectural Overview} \label{_feArchitecture}
 
 \begin{figure}[H]
     \centering
@@ -49,7 +49,7 @@ Context API is easy to is use as it has a short learning curve. It requires less
 
 For this reason, the group decided to implement data persistence through ContextAPI. This persistence layer is connected to the Authentication and Product fetch services and allows this data to be shared between the various pages of the UI.
 
-\subsection{ContextAPI Overview}
+\subsection{ContextAPI Overview} \label{_contextAPI}
 
 \begin{figure}[H]
     \centering
@@ -72,7 +72,7 @@ Specifically, a provider, such as the UserProvider, is made up of three fundamen
 
 The fetching of the data as explained above is done by the Services which specifically provide the data either directly to the Context or to specific pages in the application.
 
-\subsection{App Folder Structure Overview}
+\subsection{App Folder Structure Overview} \label{_folder}
 
 \begin{figure}[H]
     \centering
