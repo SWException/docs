@@ -110,7 +110,7 @@ autenticity of a token and get the relatively username, so the system can verify
     \includegraphics[width=0.9\textwidth]{res/images/class-diagrams/products.png}
     \caption{Class UML for products service}
 \end{figure}
-The Products service offers CRUD functionalities for managing products informations. It has been interfaced with Categories and Taxes servieces, so whether a tax value or a category name
+The Products service offers CRUD functionalities for managing products informations. It has been interfaced with Categories and Taxes services, so whether a tax value or a category name
 is updated it can be updated just in time as well.
 
 \subsubsection{Users service}
@@ -127,7 +127,7 @@ a token and/or get a username. It can also provide the information about the use
 In this section we'll provide sequence diagrams for explaining how microservices communicate between one each others when API's are called from the frontend service.
 
 \subsubsection{Taxes service}
-\paragraph*{Update tax}
+\paragraph*{Create tax}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/taxes/createTax.png}
     \caption{Sequence diagram for createTax API}
@@ -163,30 +163,34 @@ This API is called with a PATCH request to the path /taxes/{id}. It is used to u
 \end{figure}
 This API is invocated with a DELETE request to the path /taxes/{id}. It removes from the system the specified tax.
 
-\paragraph*{Create category}
 \subsubsection{Categories service}
+\paragraph*{Create category}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/categories/createCategory.png}
     \caption{Sequence diagram for createCategory API}
 \end{figure}
+This API is invocated with a POST request to the path /categories. It create a new category in the system.
 
 \paragraph*{Get categories}
 \begin{figure}[H]
     \includegraphics[width=0.8\textwidth]{res/images/sequence-diagrams/categories/getCategories.png}
     \caption{Sequence diagram for getCategories API}
 \end{figure}
+This API is invocated with a GET request to the path /categories. It returns all categories present in the system.
 
-\paragraph*{Remove categories}
+\paragraph*{Remove category}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/categories/removeCategory.png}
     \caption{Sequence diagram for removeCategory API}
 \end{figure}
+This API is invocated with a DELETE request to the path /categories/{id}. It removes from the system the specified category.
 
 \paragraph*{Update category}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/categories/updateCategory.png}
     \caption{Sequence diagram for updateCategory API}
 \end{figure}
+This API is invocated with a PATCH request to the path /categories/{id}. It is used to update the name of the specified category.
 
 
 \subsubsection{Orders service}
@@ -195,76 +199,86 @@ This API is invocated with a DELETE request to the path /taxes/{id}. It removes 
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/orders/getOrderByID.png}
     \caption{Sequence diagram for getOrderByID API}
 \end{figure}
+This API is invocated with a GET request to the path /orders/{id}. It returns all categories present in the system.
 
 \paragraph*{Start checkout}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/orders/startCheckout.png}
     \caption{Sequence diagram for startCheckout API}
 \end{figure}
+This API is invocated with a POST request to the path /checkout.
 
 \paragraph*{Complete checkout}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/orders/completeCheckout.png}
     \caption{Sequence diagram for completeCheckout API}
 \end{figure}
+This API is invocated with a PUT request to the path /checkout/{intent-id}.
 
 \paragraph*{Cancel checkout}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/orders/cancelCheckout.png}
     \caption{Sequence diagram for cancelCheckout API}
 \end{figure}
+This API is invocated with a DELETE request to the path /checkout/{intent-id}.
 
 \subsubsection{Carts service}
-
 \paragraph*{Add to cart}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/carts/addToCart.png}
     \caption{Sequence diagram for addToCart API}
 \end{figure}
+This API is invocated with a POST request to the path /cart.
 
 \paragraph*{Delete cart}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/carts/deleteCart.png}
     \caption{Sequence diagram for deleteCart API}
 \end{figure}
+This API is invocated with a DELETE request to the path /cart.
 
 \paragraph*{Get cart}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/carts/getCart.png}
     \caption{Sequence diagram for getCart API}
 \end{figure}
+This API is invocated with a GET request to the path /cart.
 
 \paragraph*{Remove from cart}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/carts/removeFromCart.png}
     \caption{Sequence diagram for removeFromCart API}
 \end{figure}
+This API is invocated with a DELETE request to the path /cart/product/{id}.
 
 \subsubsection{Addresses service}
-
 \paragraph*{Get addresses}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/addresses/getAddresses.png}
     \caption{Sequence diagram for getAddresses API}
 \end{figure}
+This API is invocated with a GET request to the path /addresses.
 
 \paragraph*{Insert address}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/addresses/insertAddress.png}
     \caption{Sequence diagram for insertAddress API}
 \end{figure}
+This API is invocated with a POST request to the path /addresses.
 
 \paragraph*{Remove address}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/addresses/removeAddress.png}
     \caption{Sequence diagram for removeAddress API}
 \end{figure}
+This API is invocated with a DELETE request to the path /addresses/{id}.
 
 \paragraph*{Update address}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/addresses/updateAddress.png}
     \caption{Sequence diagram for updateAddress API}
 \end{figure}
+This API is invocated with a PATCH request to the path /addresses/{id}.
 
 
 \subsubsection{Products service}
@@ -273,30 +287,35 @@ This API is invocated with a DELETE request to the path /taxes/{id}. It removes 
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/products/getPDP.png}
     \caption{Sequence diagram for getPDP API}
 \end{figure}
+This API is invocated with a GET request to the path /products/{id}.
 
 \paragraph*{Get products}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/products/getProducts.png}
     \caption{Sequence diagram for getProducts API}
 \end{figure}
+This API is invocated with a GET request to the path /products.
 
 \paragraph*{Edit product}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/products/editProduct.png}
     \caption{Sequence diagram for editProduct API}
 \end{figure}
+This API is invocated with a PATCH request to the path /products/{id}.
 
 \paragraph*{Create product}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/products/createProduct.png}
     \caption{Sequence diagram for createProduct API}
 \end{figure}
+This API is invocated with a POST request to the path /products.
 
 \paragraph*{Remove product}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/products/removeProduct.png}
     \caption{Sequence diagram for removeProduct API}
 \end{figure}
+This API is invocated with a DELETE request to the path /products/{id}.
 
 
 \subsubsection{Users service}
@@ -305,3 +324,4 @@ This API is invocated with a DELETE request to the path /taxes/{id}. It removes 
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/users/checkCustomer.png}
     \caption{Sequence diagram for checkCustomer API}
 \end{figure}
+This API is invocated with a GET request to the path /users/customers/check/{token}.
