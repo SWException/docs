@@ -21,9 +21,9 @@ JSON (JavaScript Object Notation) is an open standard file format, and data inte
 
 
 \subsubsection{DynamoDB}
-Amazon DynamoDB is a fully managed proprietary NoSQL database service that supports key-value and document data structures and is offered by Amazon.com as part of the Amazon Web Services portfolio
+Amazon DynamoDB is a fully managed proprietary NoSQL database service that supports key-value and document data structures and is offered by Amazon.com as part of the Amazon Web Services portfolio.
 \subsubsection{Npm}
-npm is the package manager for the Node JavaScript platform. It puts modules in place so that node can find them, and manages dependency conflicts intelligently.
+Npm is the package manager for the Node JavaScript platform. It puts modules in place so that node can find them, and manages dependency conflicts intelligently.
 It is extremely configurable to support a wide variety of use cases. Most commonly, it is used to publish, discover, install, and develop node programs.
 \subsubsection{Swagger}
 Swagger is an Interface Description Language for describing RESTful APIs expressed using JSON. Swagger is used together with a set of open-source software tools to design, build, document, and use RESTful web services. Swagger includes automated documentation, code generation (into many programming languages), and test-case generation.
@@ -66,42 +66,60 @@ In the following paragraphs, we will present a class diagram for each service.
     \includegraphics[width=0.9\textwidth]{res/images/class-diagrams/taxes.png}
     \caption{Class UML for taxes service}
 \end{figure}
+This is the architecture of the service with the responsability to offer CRUD functionalities for taxes management.
+The Model class offer to handler functions all the functionalities necessary for their scope. It relies on functionalities
+offered by the interfaces Users and Persistence, which have the task to get in touch respectively with the users service and the
+database.
 
 \subsubsection{Categories service}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/class-diagrams/categories.png}
     \caption{Class UML for categories service}
 \end{figure}
+This diagram shows the classes which exist in Categories service. The architecture is the same as the one in Taxes service,
+in fact it offers CRUD functionalities for products' categories.
 
 \subsubsection{Orders service}
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{res/images/class-diagrams/orders.png}
     \caption{Class UML for orders service}
 \end{figure}
+This service offers CRUD functionalities for orders management. It also exposes API's for managing the checkout process.
+The model contains the business logic for implementing all the mentioned functionalities. For these reasons, it relies on a repository layer
+which interfaces the service with a persistence layer, the Users service, the Stripe payment service (thirdy part), Carts service and Addresses service.
 
 \subsubsection{Carts service}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/class-diagrams/carts.png}
     \caption{Class UML for carts service}
 \end{figure}
+This service offers CRUD functionalities for carts management, furthermore EML-FE relies on it to add or remove a product in a user's cart.
+Since in the cart are saved only the product ID and the relatively quantity, it has to be interfaced with the product service to build an object with complete informations.
+This is because a product can be modified by the seller, so the cart must be updated. In this way it get informations just in time.
 
 \subsubsection{Addresses service}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/class-diagrams/addresses.png}
     \caption{Class UML for addresses service}
 \end{figure}
+This is the service which has to expose CRUD functionalities for Addresses management. Like other services, it has to be interfaced with Users service to verificate the
+autenticity of a token and get the relatively username, so the system can verify that a certain user can access to the requested address. 
 
 \subsubsection{Products service}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/class-diagrams/products.png}
     \caption{Class UML for products service}
 \end{figure}
+The Products service offers CRUD functionalities for managing products informations. It has been interfaced with Categories and Taxes servieces, so whether a tax value or a category name
+is updated it can be updated just in time as well.
 
 \subsubsection{Users service}
 \begin{figure}[H]
     \includegraphics[width=0.45\textwidth]{res/images/class-diagrams/users.png}
     \caption{Class UML for users service}
 \end{figure}
+The Users service has the responsability to get in touch with AWS Cognito service. Consequently, it is used by all service which have the necessity to verify
+a token and/or get a username. It can also provide the information about the user's role.
 
 % #### SEQUENCE DIAGRAMS #######
 
@@ -109,68 +127,88 @@ In the following paragraphs, we will present a class diagram for each service.
 In this section we'll provide sequence diagrams for explaining how microservices communicate between one each others when API's are called from the frontend service.
 
 \subsubsection{Taxes service}
+\paragraph*{Update tax}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/taxes/createTax.png}
     \caption{Sequence diagram for createTax API}
 \end{figure}
+This API is triggered by an HTTP request of type POST with the path /taxes. It is called to create a new tax type in the system. It contacts the Users service through the interface offered by the repository layer to verify
+whether a token represent an authenticated vendor.
 
+\paragraph*{Get tax}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/taxes/getTax.png}
     \caption{Sequence diagram for getTax API}
 \end{figure}
+This API is triggered with a GET request to the path /taxes/{id}, where id is a path parameter representing the tax requested. It returns the numeric value of the tax.
 
+\paragraph*{Get taxes}
 \begin{figure}[H]
     \includegraphics[width=0.8\textwidth]{res/images/sequence-diagrams/taxes/getTaxes.png}
     \caption{Sequence diagram for getTaxes API}
 \end{figure}
+This API is triggered by a GET request to the path /taxes. It returns all taxes present in the system.
 
+\paragraph*{Update tax}
 \begin{figure}[H]
     \includegraphics[width=0.8\textwidth]{res/images/sequence-diagrams/taxes/updateTax.png}
     \caption{Sequence diagram for updateTax API}
 \end{figure}
+This API is called with a PATCH request to the path /taxes/{id}. It is used to update the numeric value of a tax, represented by the id passed in the path parameter.
 
+\paragraph*{Delete tax}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/taxes/deleteTax.png}
     \caption{Sequence diagram for deleteTax API}
 \end{figure}
+This API is invocated with a DELETE request to the path /taxes/{id}. It removes from the system the specified tax.
 
+\paragraph*{Create category}
 \subsubsection{Categories service}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/categories/createCategory.png}
     \caption{Sequence diagram for createCategory API}
 \end{figure}
 
+\paragraph*{Get categories}
 \begin{figure}[H]
     \includegraphics[width=0.8\textwidth]{res/images/sequence-diagrams/categories/getCategories.png}
     \caption{Sequence diagram for getCategories API}
 \end{figure}
 
+\paragraph*{Remove categories}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/categories/removeCategory.png}
     \caption{Sequence diagram for removeCategory API}
 \end{figure}
 
+\paragraph*{Update category}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/categories/updateCategory.png}
     \caption{Sequence diagram for updateCategory API}
 \end{figure}
 
+
 \subsubsection{Orders service}
+\paragraph*{Get order}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/orders/getOrderByID.png}
     \caption{Sequence diagram for getOrderByID API}
 \end{figure}
 
+\paragraph*{Start checkout}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/orders/startCheckout.png}
     \caption{Sequence diagram for startCheckout API}
 \end{figure}
 
+\paragraph*{Complete checkout}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/orders/completeCheckout.png}
     \caption{Sequence diagram for completeCheckout API}
 \end{figure}
 
+\paragraph*{Cancel checkout}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/orders/cancelCheckout.png}
     \caption{Sequence diagram for cancelCheckout API}
@@ -178,21 +216,25 @@ In this section we'll provide sequence diagrams for explaining how microservices
 
 \subsubsection{Carts service}
 
+\paragraph*{Add to cart}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/carts/addToCart.png}
     \caption{Sequence diagram for addToCart API}
 \end{figure}
 
+\paragraph*{Delete cart}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/carts/deleteCart.png}
     \caption{Sequence diagram for deleteCart API}
 \end{figure}
 
+\paragraph*{Get cart}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/carts/getCart.png}
     \caption{Sequence diagram for getCart API}
 \end{figure}
 
+\paragraph*{Remove from cart}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/carts/removeFromCart.png}
     \caption{Sequence diagram for removeFromCart API}
@@ -200,21 +242,25 @@ In this section we'll provide sequence diagrams for explaining how microservices
 
 \subsubsection{Addresses service}
 
+\paragraph*{Get addresses}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/addresses/getAddresses.png}
     \caption{Sequence diagram for getAddresses API}
 \end{figure}
 
+\paragraph*{Insert address}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/addresses/insertAddress.png}
     \caption{Sequence diagram for insertAddress API}
 \end{figure}
 
+\paragraph*{Remove address}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/addresses/removeAddress.png}
     \caption{Sequence diagram for removeAddress API}
 \end{figure}
 
+\paragraph*{Update address}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/addresses/updateAddress.png}
     \caption{Sequence diagram for updateAddress API}
@@ -222,27 +268,31 @@ In this section we'll provide sequence diagrams for explaining how microservices
 
 
 \subsubsection{Products service}
+\paragraph*{Get PDP}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/products/getPDP.png}
     \caption{Sequence diagram for getPDP API}
 \end{figure}
 
-
+\paragraph*{Get products}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/products/getProducts.png}
     \caption{Sequence diagram for getProducts API}
 \end{figure}
 
+\paragraph*{Edit product}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/products/editProduct.png}
     \caption{Sequence diagram for editProduct API}
 \end{figure}
 
+\paragraph*{Create product}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/products/createProduct.png}
     \caption{Sequence diagram for createProduct API}
 \end{figure}
 
+\paragraph*{Remove product}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/products/removeProduct.png}
     \caption{Sequence diagram for removeProduct API}
@@ -250,6 +300,7 @@ In this section we'll provide sequence diagrams for explaining how microservices
 
 
 \subsubsection{Users service}
+\paragraph*{Check customer}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/sequence-diagrams/users/checkCustomer.png}
     \caption{Sequence diagram for checkCustomer API}
