@@ -20,8 +20,6 @@ In order to access to the dashboards that the service provides, you simply have 
     \includegraphics[width=\linewidth]{res/images/venditore/productmanagement.png}
     \caption{Products dashboard}
 \end{figure}
-
-\iffalse
 \subsubsection{Orders dashboard} \label{_ordermanagement}
 \begin{figure}[H]
     \centering
@@ -46,7 +44,7 @@ In order to access to the dashboards that the service provides, you simply have 
     \includegraphics[width=\linewidth]{res/images/venditore/customermanagement.png}
     \caption{Customers dashboard}
 \end{figure}
-\fi
+
 
 \subsection{How to add a product}\label{_addProduct}
 In order to add a product, you have to click on the "Add new product" button in the \hyperref[_productmanagement]{Product Dashboard}.
@@ -57,7 +55,21 @@ Here you have to fill each field with the correct data. Then press the "Save" bu
     \caption{Add product}
 \end{figure}
 
-\subsection{How to edit a product}
+\subsection{How to find a product}\label{_findProduct}
+There are three ways to find a product:
+\begin{itemize} 
+    \item \textbf{Selecting a category};
+    \item \textbf{Searching the name with the searchbar}. 
+    \item \textbf{Using both};
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=20em]{res/images/venditore/categoryandsearchbar.png}
+    \caption{Category Dropdown - Searchbar}
+\end{figure}
+
+\subsection{How to edit a product}\label{_editProduct}
 In order to edit a product, select the desired product from the product list. If you prefer you can also filter the list by category or by name. Then click "edit".
 Here you have to fill each field with the correct data. Then press the "Save" button that saves the changes of the selected product.
 \begin{figure}[H]
@@ -67,10 +79,68 @@ Here you have to fill each field with the correct data. Then press the "Save" bu
 \end{figure}
 
 \subsection{How to remove a product}\label{_removeProduct}
-In order to add a product, from the \hyperref[_dashboard]{dashboard} click the Manage your products button.
+In order to delete a product, select the desired product from the product list. If you prefer you can also filter the list by category or by name. Then click "remove".
+
+\subsection{How to find an order}\label{_findOrder}
+In order to find an order, you have to type the ID in the searchbar.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\linewidth]{res/images/venditore/productmanagement.png}
-    \caption{Manage products}
+    \includegraphics[width=20em]{res/images/venditore/ordersearchbar.png}
+    \caption{Order searchbar}
+\end{figure}
+Then will be displayed the order that has the desired ID. If there are no orders with the searched id, the table will be empty.
+
+\subsection{How to print shipping note of an order}\label{_shippingNote}
+In order to find an order, from the \hyperref[_ordermanagement]{Orders dashboard}, you have to simply click the Print Shipping Note button. If you prefer, you can search a product.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=10em]{res/images/venditore/printshippingnotebutton.png}
+    \caption{Print Shipping Note Button}
 \end{figure}
 
+\subsection{How to get an order summary}\label{_orderSummary}
+In order to find an order, from the \hyperref[_ordermanagement]{Orders dashboard}, you have to simply click the Order Summary button. If you prefer, you can search a product.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=10em]{res/images/venditore/ordersummarybutton.png}
+    \caption{Order Summary Button}
+\end{figure}
+
+\subsection{How to add a category}\label{_addCategory}
+In order to add a category, from the \hyperref[_categorymanagement]{Category dashboard}, you have to simply click the Add New Category button.
+A small popover will appear.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=15em]{res/images/venditore/addcategorypopover.png}
+    \caption{Add New Category Popover}
+\end{figure}
+
+\subsection{How to find a category}\label{_findCategory}
+In order to find a category, from the \hyperref[_categorymanagement]{Category dashboard}, you have to simply type the category name.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=15em]{res/images/venditore/categorysearchbar.png}
+    \caption{Category searchbar}
+\end{figure}
+
+\subsection{How to edit a category}\label{_editCategory}
+In order to edit a category, from the \hyperref[_categorymanagement]{Category dashboard}, you have to simply click the EDIT button.
+A small popover will appear.
+You can always search the desired category using the \hyperref[_findCategory]{searchbar}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=15em]{res/images/venditore/editcategorypopover.png}
+    \caption{Add New Category Popover}
+\end{figure}
+
+\subsection{How to remove a category}\label{_removeCategory}
+In order to delete a category, from the \hyperref[_categorymanagement]{Category dashboard}, you have to simply click the REMOVE button.
+You can always search the desired category using the \hyperref[_findCategory]{searchbar}.
+
+\subsection{How to add a tax}\label{_addTax}
+\subsection{How to find a tax}\label{_findTax}
+\subsection{How to edit a tax}\label{_editTax}
+\subsection{How to remove a tax}\label{_removeTax}
+\subsection{How to find a customer}\label{_findCustomer}
+\subsection{How to contact a customer}\label{_contactCustomer}
+\subsection{How to remove a customer}\label{_removeCustomer}
