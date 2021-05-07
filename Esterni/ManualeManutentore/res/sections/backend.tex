@@ -30,6 +30,8 @@ Swagger is an Interface Description Language for describing RESTful APIs express
 
 
 \subsection{Architecture}\label{_architecture}
+
+\subsubsection{Main components}
 We created a serverless and microservices oriented architecture. Each microservice is hosted in a different repository, with its own persistence layer and CI rules.
 The microservices created and their respective responsabilities are:
 \begin{itemize}
@@ -48,6 +50,16 @@ The microservices created and their respective responsabilities are:
     \item \textbf{taxes}: you can find the repo \href{https://github.com/SWException/taxes}{here}; it provides CRUD functionalities to manage taxes information;
     \item \textbf{addresses}: you can find the repo \href{https://github.com/SWException/addresses}{here}; it provides CRUD functionalities to manage addresses information.
 \end{itemize}
+
+\subsubsection{External service}\label{_architectureExternalServices}
+In this application, we relied on AWS Cognito service for authentication and Stripe Payment APIs for managing the checkout process.
+\paragraph*{AWS Cognito}
+Amazon Cognito allows us to implement easily the registratiomn, authentication and user managment.
+It can scale resources for milions of users and support thirdy part login (not implemented in our use case).
+
+\paragraph*{Stripe}
+Stripe provides APIs that web developers can use to integrate payment processing into their websites and mobile applications.
+The advantage of this choice is that our application can be not compliant to security standards required for managing payment card's informations.
 
 \subsection{Class diagrams}\label{_classDiagram}
 All services are projected with the same architectural pattern, each one has three layer:
