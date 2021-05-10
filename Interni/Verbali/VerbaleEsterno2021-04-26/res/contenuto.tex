@@ -1,0 +1,37 @@
+\section{Informazioni}
+\textbf{Data}: 2021-04-26 \\
+\textbf{Orario}: 18:00 - 19:00\\
+\textbf{Luogo}: piattaforma Google Meet \\\\
+\textbf{Partecipanti}:\begin{list}{*}{\setlength{\itemsep}{0cm}}
+	\item Marco Canovese
+	\item Nicole Davanzo
+	\item Ivan Furlan
+	\item Gianmarco Guazzo
+	\item Stefano Lazzaroni
+	\item Francesco Trolese
+	\item Michele Veronesi
+	\item proponente Red Babel
+\end{list}
+
+\section{Ordine del giorno}
+\begin{enumerate}
+	\item Test del prodotto da parte del proponente
+\end{enumerate}
+
+\section{Svolgimento}
+\subsection{Test del prodotto da parte del proponente} \label{_svolgimento}
+Viene consegnato al proponente il puntatore al prodotto ospitato su architettura cloud AWS.
+Dopo una serie di test di sistema, questo risulta sufficientemente robusto e i requisiti funzionali obbligatori stabiliti
+nell'analisi dei requisiti sono stati completamente soddisfatti.\\
+Tuttavia vengono suggerite un paio di migliorie da apportare in vista della Revisione di Accettazione, comunque entro i limiti
+delle risorse ancora disponibili:
+\begin{enumerate}
+	\item nel front-end l'utilizzo della funzione \textit{getStaticProp} per fare il rendering delle pagine con cadenza temporale, e non just-in-time
+		  ad ogni richiesta. Questo dovrebbe aumentare la reattività del sistema, tuttavia qualsiasi modifica attuata dal venditore sarà visibile solo quando
+		  è il momento di rifare il rendering delle pagine;
+	\item per i pagamenti con Stripe nel checkout, l'adozione del flusso webhook, il quale rende il sistema più robusto ai fallimenti di connessione durante il pagamento di un ordine.
+\end{enumerate}
+
+\section{Conclusione}
+Il gruppo SWException proverà a comprendere ed implementare le due migliorie suggerite dal proponente, tuttavia non ne assicura l'esito positivo viste le scarse risorse disponibili.
+Sarà meglio consegnare un prodotto con meno funzionalità ma che sia verificato a dovere, visto che queste non sono specificate nel documento di analisi dei requisiti.

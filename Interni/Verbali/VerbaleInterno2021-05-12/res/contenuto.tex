@@ -1,0 +1,35 @@
+\section{Informazioni}
+\textbf{Data}: 2021-05-12 \\
+\textbf{Orario}: 14:30-15:30 \\
+\textbf{Luogo}: piattaforma virtuale Zoom \\\\
+\textbf{Partecipanti}:\begin{list}{*}{\setlength{\itemsep}{0cm}}
+	\item Marco Canovese
+	\item Nicole Davanzo
+	\item Ivan Furlan
+	\item Gianmarco Guazzo
+	\item Stefano Lazzaroni
+	\item Francesco Trolese
+	\item Michele Veronesi
+\end{list}
+
+\section{Ordine del giorno}
+\begin{enumerate}
+	\item Cambiamento way of working team backend
+	\item Decisione architettura singolo componente backend
+\end{enumerate}
+
+\section{Svolgimento}
+\subsection{Cambiamento way of working team backend}
+Dopo un'attenta riflessione scaturita dalla lezione del 2021-03-15 del docente Cardin circa gli stili architetturali monilite e microservizi,
+il team dedicato allo sviluppo e alla progettazione si è reso conto di non aver compreso a pieno lo stile architetturale a microservizi richiesto dal proponente.\\
+Per cercare di rendere il lavoro più aderente a quanto compreso dalla lezione si decide di tracciare una netta definizione dei microservizi (definiti in base al paradigma
+domain driven development, su cui il gruppo ha cercato di acquisire una quanto meno superficiale conoscenza).\\
+Di conseguenza il way of working viene riadattato in questo modo: il codice sorgente di ogni microservizio sarà ospitato in una repository apposita, con un proprio processo di
+continuous integration indipendente. Grazie alla definizione dei contratti delle API, lo sviluppo delle singole componenti potrà avvenire indipendentemente dalle altre.
+
+\subsection{Decisione architettura singolo componente backend}
+Per il singolo componente si seguirà l'architettura a livelli, ovvero presentazione (composto dagli handler delle API), core (contente la business logic) e repository
+(per l'interfacciamento con eventuali basi di dati e in generale altre componenti, anche di terze parti).
+
+\section{Conclusione}
+Si decide di implementare quanto sopra riportato, e di effettuare un incontro con il proponente e il docente Cardin al fine di avere un riscontro esperto.
