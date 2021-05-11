@@ -1,8 +1,8 @@
 \section{Setup} \label{_setup}
 
-\subsection{Minimun Requirements}
+\subsection{Minimum Requirements}
 To deploy EmporioLambda you need to have a valid AWS account to obtain AIM credentials, to be included in the profile configuration of 
-the serverless framework, which must be installated on your computer.
+the serverless framework, which must be installed on your computer.
 
 The deployment system must be equipped with the following softwares/libraries, the success of the operation is not guaranteed if other versions are used
 
@@ -29,8 +29,8 @@ For this purpose, Jest framework has been adopted by the working team. To run th
 you can launch the command \textit{npm run test}.
 
 \subsubsection{Static tests}
-The code is constantly controlled by a linter (EsLint). You should enable it in your IDE, the configuration file is
-located in each repository, the name is \textit{.eslintrc}.
+The code is constantly controlled by a linter (EsLint). You should enable it in your IDE, the configuration file is located in each repository, the name is \textit{.eslintrc}.\\
+To execute the linter check you have to run \texttt{npm run lint}, and if you want also to automatically fix the autofixable problems you can launch \texttt{npm run lint-and-fix} 
 
 \subsubsection{\glock{Github actions}}
 There exists a Github Actions workflow that automatically executes the above mentioned unit tests at each commit on the develop branch of the repository. The failure of the test suite is notified to the committer through e-mail.

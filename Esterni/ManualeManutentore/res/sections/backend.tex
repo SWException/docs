@@ -33,7 +33,7 @@ Swagger is an Interface Description Language for describing RESTful APIs express
 
 \subsubsection{Main components}
 We created a serverless and microservices oriented architecture. Each microservice is hosted in a different repository, with its own persistence layer and CI rules.
-The microservices created and their respective responsabilities are:
+The microservices created and their respective responsibilities are:
 \begin{itemize}
     \item \textbf{products}: you can find the repo \href{https://github.com/SWException/products}{here}; it provides CRUD functionalities for products management,
           like create a new product, modify an existing one, etc... It has also the responsibility to manage images associated to a product, which are
@@ -42,8 +42,8 @@ The microservices created and their respective responsabilities are:
           added some products to their carts. Carts are identified by the user ID (provided by Amazon Cognito), so it communicates with users microservice for each call.
           Each cart contain only an array of tuples composed by a products ID and a quantity (integer);
     \item \textbf{orders}: you can find the repo \href{https://github.com/SWException/orders}{here}; it has the responsibility to provide CRUD functionalities for orders information.
-          It also has to provide API's to start and complete checkout process, communicating with Stripe to generate a payment intent;
-    \item \textbf{users}: you can find the repo \href{https://github.com/SWException/users}{here}; it provide the functionality to check a Cognito's token JWT to other microservices.
+          It also has to provide APIs to start and complete checkout process, communicating with Stripe to generate a payment intent;
+    \item \textbf{users}: you can find the repo \href{https://github.com/SWException/users}{here}; it provide the functionality to check a Cognito token JWT to other microservices.
           It also provides to the frontend service the possibility to get the customers list and details about a specific customer;
     \item \textbf{categories}: you can find the repo \href{https://github.com/SWException/categories}{here}; it provides CRUD functionalities to manage categories information.
           This is called, for example, each time that someone asks for product details to the products microservice;
@@ -54,12 +54,12 @@ The microservices created and their respective responsabilities are:
 \subsubsection{External service}\label{_architectureExternalServices}
 In this application, we relied on AWS Cognito service for authentication and Stripe Payment APIs for managing the checkout process.
 \paragraph*{AWS Cognito}
-Amazon Cognito allows us to implement easily the registratiomn, authentication and user managment.
-It can scale resources for milions of users and support thirdy part login (not implemented in our use case).
+Amazon Cognito allows us to implement easily the registration, authentication and user management.
+It can scale resources for millions of users and support third part login (not implemented in our use case).
 
 \paragraph*{Stripe}
 Stripe provides APIs that web developers can use to integrate payment processing into their websites and mobile applications.
-The advantage of this choice is that our application can be not compliant to security standards required for managing payment card's informations.
+The advantage of this choice is that our application can be not compliant to security standards required for managing payment card's information.
 
 \subsection{Class diagrams}\label{_classDiagram}
 All services are projected with the same architectural pattern, each one has three layer:
@@ -78,7 +78,7 @@ In the following paragraphs, we will present a class diagram for each service.
     \includegraphics[width=0.9\textwidth]{res/images/class-diagrams/taxes.png}
     \caption{Class UML for taxes service}
 \end{figure}
-This is the architecture of the service with the responsability to offer CRUD functionalities for taxes management.
+This is the architecture of the service with the responsibility to offer CRUD functionalities for taxes management.
 The Model class offer to handler functions all the functionalities necessary for their scope. It relies on functionalities
 offered by the interfaces Users and Persistence, which have the task to get in touch respectively with the users service and the
 database.
@@ -96,9 +96,9 @@ in fact it offers CRUD functionalities for products' categories.
     \includegraphics[width=\textwidth]{res/images/class-diagrams/orders.png}
     \caption{Class UML for orders service}
 \end{figure}
-This service offers CRUD functionalities for orders management. It also exposes API's for managing the checkout process.
+This service offers CRUD functionalities for orders management. It also exposes APIs for managing the checkout process.
 The model contains the business logic for implementing all the mentioned functionalities. For these reasons, it relies on a repository layer
-which interfaces the service with a persistence layer, the Users service, the Stripe payment service (thirdy part), Carts service and Addresses service.
+which interfaces the service with a persistence layer, the Users service, the Stripe payment service (third part), Carts service and Addresses service.
 
 \subsubsection{Carts service}
 \begin{figure}[H]
@@ -106,8 +106,8 @@ which interfaces the service with a persistence layer, the Users service, the St
     \caption{Class UML for carts service}
 \end{figure}
 This service offers CRUD functionalities for carts management, furthermore EML-FE relies on it to add or remove a product in a user's cart.
-Since in the cart are saved only the product ID and the relatively quantity, it has to be interfaced with the product service to build an object with complete informations.
-This is because a product can be modified by the seller, so the cart must be updated. In this way it get informations just in time.
+Since in the cart are saved only the product ID and the relatively quantity, it has to be interfaced with the product service to build an object with complete information.
+This is because a product can be modified by the seller, so the cart must be updated. In this way it get information just in time.
 
 \subsubsection{Addresses service}
 \begin{figure}[H]
@@ -115,14 +115,14 @@ This is because a product can be modified by the seller, so the cart must be upd
     \caption{Class UML for addresses service}
 \end{figure}
 This is the service which has to expose CRUD functionalities for Addresses management. Like other services, it has to be interfaced with Users service to verificate the
-autenticity of a token and get the relatively username, so the system can verify that a certain user can access to the requested address. 
+authenticity of a token and get the relatively username, so the system can verify that a certain user can access to the requested address. 
 
 \subsubsection{Products service}
 \begin{figure}[H]
     \includegraphics[width=0.9\textwidth]{res/images/class-diagrams/products.png}
     \caption{Class UML for products service}
 \end{figure}
-The Products service offers CRUD functionalities for managing products informations. It has been interfaced with Categories and Taxes services, so whether a tax value or a category name
+The Products service offers CRUD functionalities for managing products information. It has been interfaced with Categories and Taxes services, so whether a tax value or a category name
 is updated it can be updated just in time as well.
 
 \subsubsection{Users service}
@@ -130,13 +130,13 @@ is updated it can be updated just in time as well.
     \includegraphics[width=0.45\textwidth]{res/images/class-diagrams/users.png}
     \caption{Class UML for users service}
 \end{figure}
-The Users service has the responsability to get in touch with AWS Cognito service. Consequently, it is used by all service which have the necessity to verify
+The Users service has the responsibility to get in touch with AWS Cognito service. Consequently, it is used by all service which have the necessity to verify
 a token and/or get a username. It can also provide the information about the user's role.
 
 % #### SEQUENCE DIAGRAMS #######
 
 \subsection{Sequence diagrams} \label{_sequenceDiagram}
-In this section we'll provide sequence diagrams for explaining how microservices communicate between one each others when API's are called from the frontend service.
+In this section we'll provide sequence diagrams for explaining how microservices communicate between one each others when APIs are called from the frontend service.
 
 \subsubsection{Taxes service}
 \paragraph*{Create tax}
