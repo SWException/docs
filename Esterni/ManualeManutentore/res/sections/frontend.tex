@@ -48,7 +48,7 @@ In a usual React/Next application, the common way of sharing data between two co
 
 Context API is easy to is use as it has a short learning curve. It requires less code, and because there's no need of extra libraries, bundle sizes are reduced. Redux on the other hand requires adding more libraries to the application bundle. The syntax is complex and extensive creating unnecessary work and complexity.
 
-For this reason, the group decided to implement data persistence through ContextAPI. This persistence layer is connected to the Authentication and Product fetch services and allows this data to be shared between the various pages of the UI.
+For this reason, the group decided to implement data persistence through ContextAPI. This persistence layer is connected to the Authentication service and allows this data to be shared between the various pages of the UI.
 
 \subsection{ContextAPI Overview} \label{_contextAPI}
 
@@ -60,7 +60,7 @@ For this reason, the group decided to implement data persistence through Context
 
 The ContextAPI shown in the figure defines in detail the operation of data persistence within the application. The ContextAPI consists of a Store that manages all the instances of the Providers that define a very particular application domain. Specifically, the Store consists of a StoreProvider, which provides the application with the data access point, and a ProviderComposer that combines the instances of the <Name>Provider in a single place then exposed to the UI by the StoreProvider.
 
-The actual Providers that provide instances are in the case of the application, the AuthProvider and the ProductProvider. Each of these defines a particular instance that manages precise data such as, for example, authentication and session management for the User.
+The actual Provider that provide instances is, in the case of the application, the AuthProvider. It defines a particular instance that manages precise data such as authentication and session management for the User.
 
 
 
