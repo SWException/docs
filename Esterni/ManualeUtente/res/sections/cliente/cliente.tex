@@ -162,19 +162,35 @@ Here you can check your cart. If the cart is fine, you can proceed to the checko
 \end{figure}
 
 \subsubsection{How to proceed to the checkout} \label{_checkout}
-In this page you have to insert all the info about billing and shipping addresses and payment method.
-You can manually type  all the billing and shipping info or just use a previously stored address.
-Remember: if you are typing by hand the info, you can always automatically copy the billing info into the shipping info by pressing the "Autofill with Billing Data".
+After the click on "Checkout" button in the cart, you will be redirected to the wizard to enter information regarding the shipping address, billing address and payment details.
+You have only complete one page an click on "Next" button.
+
+In the first part you can manually type all the shipping informations or just use a previously stored address.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\linewidth]{res/images/cliente/checkout.png}
-    \caption{Checkout}
+    \includegraphics[width=30em]{res/images/cliente/checkoutshipping.png}
+    \caption{Checkout shipping info}
 \end{figure}
-Once you have filled all the field about billing and shipping, you have to insert the info about your credit card.
+Once you have complete the shipping page, you have to insert the informations about billing.
+You can use the shipping address as billing or choose another
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/cliente/checkoutbilling.png}
+    \caption{Checkout billing info}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=20em]{res/images/cliente/billingbutton.png}
+    \caption{Checkout billing info select}
+\end{figure}
+
+
+Once you have insert info about billing and shipping, you have to insert the informations about shipping.
 Remember: this platform will never handle payment data. Your data are securely used only by \href{https://stripe.com}{Stripe}.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\linewidth]{res/images/cliente/payment.png}
+    \includegraphics[width=30em]{res/images/cliente/checkoutpay.png}
     \caption{Payment}
 \end{figure}
 
@@ -192,21 +208,6 @@ Here you can:
     \caption{Cart}
 \end{figure}
 
-\subsection{How to manage your addresses} \label{_addresses}
-In order to manage your cart you have to be signed in. This action can be done via these \hyperref[_signin]{instructions}.
-Then you have to access the profile page by clicking the profile button.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=10em]{res/images/cliente/profileaccount.png}
-    \caption{Profile Button - Account settings}
-\end{figure}
-
-Here you can add a new address by filling the fields or just deleting an existing address. 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\linewidth]{res/images/cliente/address.png}
-    \caption{Address}
-\end{figure}
 \subsection{How to manage your orders} \label{_orders}
 In order to be able to see your orders you have to be signed in. This action can be done via these \hyperref[_signin]{instructions}.
 To manage your orders you have to go to click on the button of the profile and select "My orders".
@@ -235,7 +236,7 @@ The last 3 options are implemented via e-mail. This allows you to directly messa
     \caption{Order detail}
 \end{figure}
 
-\subsection{How to manage your credentials} \label{_credentials}
+\subsection{How to manage your credentials and personal informations} \label{_credentials}
 In order to be able to manage your credentials you have to be signed in. This action can be done via these \hyperref[_signin]{instructions}.
 Then you have to access the profile page by clicking the profile button.
 \begin{figure}[H]
@@ -252,6 +253,12 @@ To edit the password:
     \item \textbf{Confirm new password}: re-insert the new password. This step ensures the user not to  mistype the password.
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/cliente/credentialpwd.png}
+    \caption{Change password form}
+\end{figure}
+
 To edit the e-mail:
 \begin{itemize} 
     \item \textbf{New password}: insert the new e-mail; 
@@ -260,18 +267,48 @@ To edit the e-mail:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\linewidth]{res/images/cliente/credentials.png}
-    \caption{Credentials}
+    \includegraphics[width=30em]{res/images/cliente/credentialemail.png}
+    \caption{Change email form}
 \end{figure}
+
+To edit your personal informations:
+\begin{itemize} 
+    \item \textbf{New Name}: insert the new name; 
+    \item \textbf{New Surname}:insert the new surname.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/cliente/personalinfo.png}
+    \caption{Change personal informations form}
+\end{figure}
+
 \subsection{How to delete your account} \label{_delete}
 In order to be able to request an account deletion you have to be signed in. This action can be done via these \hyperref[_signin]{instructions}.
 Then you have to access the profile page by clicking the profile button.
-When you click the "Request account deletion" button, you will be sending a e-mail to the seller asking to delete the account from the platform.
+When you click the "Request account deletion" button, you will be delete from site.
 \begin{figure}[H]
     \centering
     \includegraphics[width=30em]{res/images/cliente/delete.png}
     \caption{Delete Account Request}
 \end{figure}
+
+\subsection{How to manage your device} \label{_device}
+In order to be able to request an account deletion you have to be signed in. This action can be done via these \hyperref[_signin]{instructions}.
+Then you have to access the profile page by clicking the profile button.
+Here you can:
+\begin{itemize} 
+    \item \textbf{Forget a device}: you have to click on the "Delete" button next to the selected device; 
+    \item \textbf{Forget all devices}:click on the "Froget all devices" button;
+    \item \textbf{logout from all devices}:click on the "Logout from all devices" button.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/cliente/device.png}
+    \caption{Device Management}
+\end{figure}
+
 
 \subsection{How to contact the seller} \label{_contacts}
 To contact the seller you can find the link of the e-mail in the footer of the \hyperref[_homepage]{homepage}.

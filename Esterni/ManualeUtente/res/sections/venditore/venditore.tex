@@ -90,14 +90,6 @@ In order to find an order, you have to type the ID in the search bar.
 \end{figure}
 Then will be displayed the order that has the desired ID. If there are no orders with the searched id, the table will be empty.
 
-\subsection{How to print shipping note of an order}\label{_shippingNote}
-In order to find an order, from the \hyperref[_ordermanagement]{Orders dashboard}, you have to simply click the Print Shipping Note button. If you prefer, you can search a product.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=10em]{res/images/venditore/printshippingnotebutton.png}
-    \caption{Print Shipping Note Button}
-\end{figure}
-
 \subsection{How to get an order summary}\label{_orderSummary}
 In order to find an order, from the \hyperref[_ordermanagement]{Orders dashboard}, you have to simply click the Order Summary button. If you prefer, you can search a product.
 \begin{figure}[H]
@@ -111,7 +103,7 @@ In order to add a category, from the \hyperref[_categorymanagement]{Category das
 A small popover will appear.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=15em]{res/images/venditore/addcategorypopover.png}
+    \includegraphics[width=15em]{res/images/venditore/addcategory.png}
     \caption{Add New Category Popover}
 \end{figure}
 
@@ -127,22 +119,22 @@ In order to find a category, from the \hyperref[_categorymanagement]{Category da
 In order to edit a category, from the \hyperref[_categorymanagement]{Category dashboard}, you have to simply click the EDIT button.
 A small popover will appear.
 You can always search the desired category using the \hyperref[_findCategory]{searchbar}.
-\begin{figure}[H]    \includegraphics[width=15em]{res/images/venditore/editcategorypopover.png}
-
+\begin{figure}[H]   
     \centering
-    \caption{Add New Category Popover}
+    \includegraphics[width=15em]{res/images/venditore/editcategory.png}
+    \caption{Edit Category Popover}
 \end{figure}
 
 \subsection{How to remove a category}\label{_removeCategory}
-In order to delete a category, from the \hyperref[_categorymanagement]{Category dashboard}, you have to simply click the REMOVE button.
+In order to delete a category, from the \hyperref[_categorymanagement]{Category dashboard}, you have to simply click the X button.
 You can always search the desired category using the \hyperref[_findCategory]{searchbar}.
 
 \subsection{How to add a tax}\label{_addTax}
 In order to add a tax to the tax list you have to click on the button "Add new tax". A small popover will appear and you will be able to set the description and the amount of the tax.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=15em]{res/images/venditore/addcategorypopover.png}
-    \caption{Add New Category Popover}
+    \includegraphics[width=15em]{res/images/venditore/addtax.png}
+    \caption{Add New Tax Popover}
 \end{figure}
 After you click on "Save" the tax will now be available to use on the products.
 
@@ -157,14 +149,14 @@ In order to find a tax, you have to simply type the category name in the Search 
 \subsection{How to edit a tax}\label{_editTax}
 In order to edit a tax, you have to simply click the EDIT button.
 A small popover will appear where you can change the amount and the description of that particular tax.
-\begin{figure}[H]    \includegraphics[width=15em]{res/images/venditore/editcategorypopover.png}
-
+\begin{figure}[H]    
     \centering
-    \caption{Add New Category Popover}
+    \includegraphics[width=15em]{res/images/venditore/edittax.png}
+    \caption{Edit Tax Popover}
 \end{figure}
 
 \subsection{How to remove a tax}\label{_removeTax}
-In order to delete a tax, select the desired product from the tax list. If you prefer you can also filter the list by tax name. Then click the "remove" button.
+In order to delete a tax, select the desired product from the tax list. If you prefer you can also filter the list by tax name. Then click the X button.
 
 \subsection{How to find a customer}\label{_findCustomer}
 In order to find a customer inside the web app you can search directly inside the list on the main page or you can click on "Search client by email.." and write the specific email of the customer you are searching. \hyperref[_categorymanagement]{Category dashboard}, you have to simply type the category name.
@@ -177,6 +169,76 @@ In order to find a customer inside the web app you can search directly inside th
 \subsection{How to contact a customer}\label{_contactCustomer}
 In order to contact a costumer, select the right one in the list and click on the email. The website will redirect you inside the default application you user to send email with the "To:" field already set up.
 
+\subsection{How to manage your credentials and personal informations} \label{_credentials}
+In order to be able to manage your credentials you have to be signed in. This action can be done via these \hyperref[_signin]{instructions}.
+Then you have to access the profile page by clicking the profile button.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=10em]{res/images/cliente/profileaccount.png}
+    \caption{Profile Button}
+\end{figure}
 
-\subsection{How to remove a customer}\label{_removeCustomer}
-In order to remove a customer, select the one you want to delete from the list. If you prefer you can filter the list searching for a specific email inside it.
+Here you can edit your current password and your current e-mail.
+To edit the password:
+\begin{itemize} 
+    \item \textbf{Old password}: insert the old password;
+    \item \textbf{New password}: insert the new password; 
+    \item \textbf{Confirm new password}: re-insert the new password. This step ensures the user not to  mistype the password.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/cliente/credentialpwd.png}
+    \caption{Change password form}
+\end{figure}
+
+To edit the e-mail:
+\begin{itemize} 
+    \item \textbf{New password}: insert the new e-mail; 
+    \item \textbf{Confirm new password}: re-insert the new e-mail. This step ensures the user not to  mistype the e-mail.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/cliente/credentialemail.png}
+    \caption{Change email form}
+\end{figure}
+
+To edit your personal informations:
+\begin{itemize} 
+    \item \textbf{New Name}: insert the new name; 
+    \item \textbf{New Surname}:insert the new surname.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/cliente/personalinfo.png}
+    \caption{Change personal informations form}
+\end{figure}
+
+\subsection{How to delete your account} \label{_delete}
+In order to be able to request an account deletion you have to be signed in. This action can be done via these \hyperref[_signin]{instructions}.
+Then you have to access the profile page by clicking the profile button.
+When you click the "Request account deletion" button, you will be delete from site.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/cliente/delete.png}
+    \caption{Delete Account Request}
+\end{figure}
+
+\subsection{How to manage your device} \label{_device}
+In order to be able to request an account deletion you have to be signed in. This action can be done via these \hyperref[_signin]{instructions}.
+Then you have to access the profile page by clicking the profile button.
+Here you can:
+\begin{itemize} 
+    \item \textbf{Forget a device}: you have to click on the "Delete" button next to the selected device; 
+    \item \textbf{Forget all devices}:click on the "Froget all devices" button;
+    \item \textbf{logout from all devices}:click on the "Logout from all devices" button.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=30em]{res/images/cliente/device.png}
+    \caption{Device Management}
+\end{figure}
+
